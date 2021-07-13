@@ -58,7 +58,7 @@ const Title = styled.span`
     margin-bottom: 55px;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal bold 38px montserrat-bold;
+    font: normal normal bold 28px montserrat-bold;
   }
 `;
 
@@ -72,7 +72,7 @@ const SubTitle = styled.span`
     opacity: 1;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 24px montserrat-regular;
+    font: normal normal normal 18px montserrat-regular;
   }
 `;
 
@@ -87,7 +87,7 @@ const SubTitleB = styled.span`
     opacity: 1;
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal bold 24px montserrat-bold;
+    font: normal normal bold 18px montserrat-bold;
   }
 `;
 
@@ -98,7 +98,7 @@ const RoadmapItemLeft = styled.p`
 
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 15px montserrat-regular;
+    font: normal normal normal 13px montserrat-regular;
     margin-left: 40px;
     text-align: left;
   }
@@ -110,7 +110,7 @@ const RoadmapItemRight = styled.p`
 
     @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 15px montserrat-regular;
+    font: normal normal normal 13px montserrat-regular;
   }
 `;
 const PrivacyElement = styled.p`
