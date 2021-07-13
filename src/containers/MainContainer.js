@@ -26,6 +26,7 @@ const TextContainer = styled.div`
 
 const RoadmapContainer = styled.div`
   display: flex;
+  margin-top: 10%;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -35,20 +36,30 @@ const RoadmapContainer = styled.div`
 
 const FooterContainer = styled.div`
   display: flex;
+  flex-flow: row;
   margin-bottom: 10px;
   color: #fff;
   flex-flow: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    margin-top: 40px;
+  }
 `;
 
 const Title = styled.span`
     text-align: center;
-    font: normal normal bold 56px/64px montserrat-regular;
+    font: normal normal bold 56px/64px montserrat-bold;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    margin-bottom: 55px;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    font: normal normal bold 38px montserrat-bold;
+  }
 `;
 
 const SubTitle = styled.span`
@@ -59,17 +70,51 @@ const SubTitle = styled.span`
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    font: normal normal normal 24px montserrat-regular;
+  }
+`;
+
+const SubTitleB = styled.span`
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding 0px;
+    text-align: center;
+    font: normal normal bold 32px/40px montserrat-bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    font: normal normal bold 24px montserrat-bold;
+  }
 `;
 
 const RoadmapItemLeft = styled.p`
     text-align: right;
     margin-right: 40px;
     font: normal normal normal 16px/24px montserrat-regular;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    font: normal normal normal 15px montserrat-regular;
+    margin-left: 40px;
+    text-align: left;
+  }
 `;
 const RoadmapItemRight = styled.p`
     text-align: left;
     margin-left: 40px;
     font: normal normal normal 16px/24px montserrat-regular;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    font: normal normal normal 15px montserrat-regular;
+  }
+`;
+const PrivacyElement = styled.p`
+    font: normal normal normal 14px/20px montserrat-regular;
 `;
 
 const MainContainer = () => {
@@ -82,9 +127,9 @@ const MainContainer = () => {
                 <SubTitle>
                     Powered by Kadena, the only scalable PoW blockchain,
                 </SubTitle>
-                <SubTitle>
-                    <strong>Kaddex is the first truly decentralised DEX</strong>
-                </SubTitle>
+                <SubTitleB>
+                    Kaddex is the first truly decentralised DEX
+                </SubTitleB>
             </TextContainer>
             <Button
               hover={true}
@@ -155,10 +200,18 @@ const MainContainer = () => {
                 </div>
             </RoadmapContainer>
             <FooterContainer>
-                <KaddexLogo
+                <KaddexLogo className= "mobile-none"
                     style={{ marginRight: "2%" }}
                 />
-                ©2021, Privacy Policy
+                <PrivacyElement className= "mobile-none">©2021, Privacy Policy</PrivacyElement>
+
+                <div className= "desktop-none">
+                    <KaddexLogo
+                        style={{ marginRight: "2%" }}
+                    />
+                    <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
+                </div>
+
                 <TwitterLogo
                     style={{ cursor: "pointer", marginLeft: "20%" }}
                     onClick={() =>
