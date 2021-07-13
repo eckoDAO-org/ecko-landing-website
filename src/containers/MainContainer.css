@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+}
+
+p {
+	color: #fff;
+}
+
+.timeline {
+	position: relative;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	box-shadow: 0 0 5px #ffffff;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -1px;
+}
+/* .timeline::before {
+	content: '';
+	position: absolute;
+	width: 2px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	box-shadow: 0 0 2px #ffffff;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	margin-right: -1px;
+} */
+
+.roadmap_container {
+	padding: 15px 30px;
+	position: relative;
+	background: inherit;
+	width: 50%;
+}
+
+.roadmap_container.left {
+	left: 0;
+}
+
+.roadmap_container.right {
+	left: 50%;
+}
+
+.roadmap_container::after {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: calc(50% - 8px);
+	right: -8px;
+	background: #ffffff;
+	box-shadow: 0 0 7px #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 16px;
+	z-index: 1;
+}
+
+.roadmap_container.right::after {
+	left: -8px;
+}
+
+.roadmap_container::before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	top: calc(50% - 1px);
+	right: 8px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	box-shadow: 0 0 5px #ffffff;
+	z-index: 1;
+}
+
+.roadmap_container.right::before {
+	left: 8px;
+}
+
+.roadmap_container .content {
+	padding-right: 10px;
+}
+
+.roadmap_container.right .content {
+	padding: 30px 30px 30px 90px;
+	border-radius: 500px 0 0 500px;
+}
+
+@media (max-width: 767.98px) {
+	.timeline::after {
+		left: 90px;
+	}
+
+	.roadmap_container {
+		width: 100%;
+		padding-left: 120px;
+		padding-right: 30px;
+	}
+
+	.roadmap_container.right {
+		left: 0%;
+	}
+
+	.roadmap_container.left::after,
+	.roadmap_container.right::after {
+		left: 82px;
+	}
+
+	.roadmap_container.left::before,
+	.roadmap_container.right::before {
+		left: 100px;
+		border-color: transparent #006e51 transparent transparent;
+	}
+
+	.roadmap_container.left .date,
+	.roadmap_container.right .date {
+		right: auto;
+		left: 15px;
+	}
+
+	.roadmap_container.left .icon,
+	.roadmap_container.right .icon {
+		right: auto;
+		left: 146px;
+	}
+
+	.roadmap_container.left .content,
+	.roadmap_container.right .content {
+		padding: 30px 30px 30px 90px;
+		border-radius: 500px 0 0 500px;
+	}
+}
