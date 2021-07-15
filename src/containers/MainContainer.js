@@ -150,7 +150,7 @@ const MainContainer = () => {
               Use Kaddex
             </Button>
             <RoadmapContainer>
-                <Title style={{marginBottom: "40px", marginTop: "20%"}}>Roadmap</Title>
+                <Title style={{marginBottom: "40px", marginTop: "20%"}}>Roadmap 2021</Title>
                 <div class="timeline">
                     <div class="roadmap_container left">
                         <RoadmapItemLeft>
