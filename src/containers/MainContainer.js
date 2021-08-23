@@ -152,19 +152,19 @@ const MainContainer = () => {
             <RoadmapContainer>
                 <Title style={{marginBottom: "40px", marginTop: "20%"}}>Roadmap</Title>
                 <div class="timeline">
-                    <div class="roadmap_container left">
+                    <div class="roadmap_container_completed left">
                         <RoadmapItemLeft>
-                             Kaddex Website Refresh
+                             Kaddex Beta on Mainnet
                         </RoadmapItemLeft>
                     </div>
                     <div class="roadmap_container right">
                         <RoadmapItemRight>
-                            Tokenomics Allocation and Deep Dive
+                            Kaddex Website Refresh
                         </RoadmapItemRight>
                     </div>
                     <div class="roadmap_container left">
                         <RoadmapItemLeft>
-                            Kaddex Beta on Mainnet
+                            Tokenomics Allocation and Deep Dive 
                         </RoadmapItemLeft>
                     </div>
                     <div class="roadmap_container right">

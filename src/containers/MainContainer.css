@@ -50,11 +50,26 @@ p {
 	width: 50%;
 }
 
+.roadmap_container_completed {
+	padding: 15px 30px;
+	position: relative;
+	background: inherit;
+	width: 50%;
+}
+
 .roadmap_container.left {
 	left: 0;
 }
 
 .roadmap_container.right {
+	left: 50%;
+}
+
+.roadmap_container_completed.left {
+	left: 0;
+}
+
+.roadmap_container_completed.right {
 	left: 50%;
 }
 
@@ -72,7 +87,22 @@ p {
 	z-index: 1;
 }
 
-.roadmap_container.right::after {
+.roadmap_container_completed::after {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: calc(50% - 8px);
+	right: -8px;
+	background: #ffffff;
+	box-shadow: 0 0 7px #ffffff;
+	border: 5px solid #ed1cb5;
+	border-radius: 16px;
+	z-index: 1;
+}
+
+.roadmap_container.right::after,
+.roadmap_container_completed.right::after {
 	left: -8px;
 }
 
@@ -88,15 +118,30 @@ p {
 	z-index: 1;
 }
 
-.roadmap_container.right::before {
+.roadmap_container_completed::before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	top: calc(50% - 1px);
+	right: 8px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	box-shadow: 0 0 5px #ffffff;
+	z-index: 1;
+}
+
+.roadmap_container.right::before,
+.roadmap_container_completed.right::before {
 	left: 8px;
 }
 
-.roadmap_container .content {
+.roadmap_container .content,
+.roadmap_container_completed .content {
 	padding-right: 10px;
 }
 
-.roadmap_container.right .content {
+.roadmap_container.right .content,
+.roadmap_container_completed.right .content {
 	padding: 30px 30px 30px 90px;
 	border-radius: 500px 0 0 500px;
 }
@@ -106,41 +151,50 @@ p {
 		left: 90px;
 	}
 
-	.roadmap_container {
+	.roadmap_container,
+	.roadmap_container_completed {
 		width: 100%;
 		padding-left: 120px;
 		padding-right: 30px;
 	}
-
-	.roadmap_container.right {
+	.roadmap_container.right,
+	.roadmap_container_completed.right {
 		left: 0%;
 	}
 
 	.roadmap_container.left::after,
-	.roadmap_container.right::after {
+	.roadmap_container.right::after,
+	.roadmap_container_completed.left::after,
+	.roadmap_container_completed.right::after {
 		left: 82px;
 	}
 
 	.roadmap_container.left::before,
-	.roadmap_container.right::before {
+	.roadmap_container.right::before,
+	.roadmap_container_completed.left::before,
+	.roadmap_container_completed.right::before {
 		left: 100px;
 		border-color: transparent #006e51 transparent transparent;
 	}
 
-	.roadmap_container.left .date,
-	.roadmap_container.right .date {
+	.roadmap_container_completed.left .date,
+	.roadmap_container_completed.right .date {
 		right: auto;
 		left: 15px;
 	}
 
 	.roadmap_container.left .icon,
-	.roadmap_container.right .icon {
+	.roadmap_container.right .icon,
+	.roadmap_container_completed.left .icon,
+	.roadmap_container_completed.right .icon {
 		right: auto;
 		left: 146px;
 	}
 
 	.roadmap_container.left .content,
-	.roadmap_container.right .content {
+	.roadmap_container.right .content,
+	.roadmap_container_completed.left .content,
+	.roadmap_container_completed.right .content {
 		padding: 30px 30px 30px 90px;
 		border-radius: 500px 0 0 500px;
 	}
