@@ -4,6 +4,8 @@ import Button from "../shared/Button";
 import { KaddexLogo} from "../assets";
 import "./MainContainer.css"
 import { ReactComponent as TwitterLogo } from "../assets/images/shared/twitter.svg";
+import { ReactComponent as TelegramLogo } from "../assets/images/shared/telegram.svg";
+import { ReactComponent as DiscordLogo } from "../assets/images/shared/discord.svg";
 
 const OuterContainer = styled.div`
   display: flex;
@@ -36,17 +38,26 @@ const RoadmapContainer = styled.div`
 
 const FooterContainer = styled.div`
   display: flex;
-  flex-flow: row;
-  margin-bottom: 10px;
+  flex-flow: column;
   color: #fff;
-  flex-flow: row;
   align-items: center;
   justify-content: center;
   width: 100%;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     margin-top: 40px;
+    flex-flow: column;
   }
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+  margin-top: 1%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4%;
+  width: 100%;
 `;
 
 const Title = styled.span`
@@ -117,6 +128,8 @@ const PrivacyElement = styled.p`
     font: normal normal normal 14px/20px montserrat-regular;
 `;
 
+
+
 const MainContainer = () => {
     return (
         <OuterContainer>
@@ -157,6 +170,16 @@ const MainContainer = () => {
                              Kaddex Beta on Mainnet
                         </RoadmapItemLeft>
                     </div>
+                    <div class="roadmap_container_completed right">
+                        <RoadmapItemRight>
+                            1M TVL 
+                        </RoadmapItemRight>
+                    </div>
+                    <div class="roadmap_container_completed left">
+                        <RoadmapItemLeft>
+                            Tokenomics Deep Dive
+                        </RoadmapItemLeft>
+                    </div>
                     <div class="roadmap_container right">
                         <RoadmapItemRight>
                             Kaddex Website Refresh
@@ -164,7 +187,7 @@ const MainContainer = () => {
                     </div>
                     <div class="roadmap_container left">
                         <RoadmapItemLeft>
-                            Tokenomics Allocation and Deep Dive 
+                            Lite Paper
                         </RoadmapItemLeft>
                     </div>
                     <div class="roadmap_container right">
@@ -201,19 +224,18 @@ const MainContainer = () => {
             </RoadmapContainer>
             <FooterContainer>
                 <KaddexLogo className= "mobile-none"
-                    style={{ marginRight: "2%" }}
                 />
                 <PrivacyElement className= "mobile-none">©2021, Privacy Policy</PrivacyElement>
 
                 <div className= "desktop-none">
-                    <KaddexLogo
-                        style={{ marginRight: "2%" }}
-                    />
+                    <KaddexLogo/>
                     <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
                 </div>
 
+                  
+                <IconsContainer>
                 <TwitterLogo
-                    style={{ cursor: "pointer", marginLeft: "20%" }}
+                    style={{ cursor: "pointer" }}
                     onClick={() =>
                         window.open(
                         `https://twitter.com/KaddeXofficial`,
@@ -222,7 +244,30 @@ const MainContainer = () => {
                         )
                     }
                 />
+                
+                <TelegramLogo
+                    style={{ cursor: "pointer", marginLeft: "4%" }}
+                    onClick={() =>
+                        window.open(
+                        `https://t.me/KaddeXofficial`,
+                        "_blank",
+                        "noopener,noreferrer"
+                        )
+                    }
+                />
+                <DiscordLogo
+                    style={{ cursor: "pointer", marginLeft: "4%" }}
+                    onClick={() =>
+                        window.open(
+                        `https://discord.gg/gXPpB9Ud`,
+                        "_blank",
+                        "noopener,noreferrer"
+                        )
+                    }
+                />
+                </IconsContainer>
             </FooterContainer>
+            
       </OuterContainer>
   );
 };
