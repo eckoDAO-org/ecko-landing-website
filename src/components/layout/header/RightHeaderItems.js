@@ -111,7 +111,7 @@ const RightHeaderItems = ({ pact }) => {
                   to="/"
                   onClick={() =>
                     window.open(
-                      `https://discord.gg/gXPpB9Ud`,
+                      `https://discord.gg/QSJpHRFDcv`,
                       "_blank",
                       "noopener,noreferrer"
                     )

@@ -259,7 +259,7 @@ const MainContainer = () => {
                     style={{ cursor: "pointer", marginLeft: "4%" }}
                     onClick={() =>
                         window.open(
-                        `https://discord.gg/gXPpB9Ud`,
+                        `https://discord.gg/QSJpHRFDcv`,
                         "_blank",
                         "noopener,noreferrer"
                         )
