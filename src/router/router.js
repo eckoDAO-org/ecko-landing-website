@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch , Redirect} from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import MainContainer from "../containers/MainContainer";
 
@@ -29,7 +29,7 @@ export default () => {
           
           <Switch>
             <Route exact path={ROUTE_INDEX} component={MainContainer} />
-        
+            <Redirect to={ROUTE_INDEX} />
           </Switch>
         </Container>
       </Layout>
