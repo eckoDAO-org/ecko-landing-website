@@ -19,6 +19,7 @@ export const theme = {
     pink: '#D20790',
     purple: '#240b2f',
     white: '#FFFFFF',
+    purpleKDX: '#471155',
   },
   fontFamily: {
     regular: 'montserrat-regular',
