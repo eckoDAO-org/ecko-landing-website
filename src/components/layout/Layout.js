@@ -13,7 +13,7 @@ const MainContainer = styled.div`
 
 const WrapperContainer = styled(Wrapper)`
   height: 100vh;
-  width: calc(100% - 3em);
+  width: 100%;
   padding: 0 5em;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
@@ -42,7 +42,7 @@ const StripesContainer = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <MainContainer>
+    <MainContainer id='main-container'>
       <CustomParticles />
       <WrapperContainer>
         <DesktopHeader />

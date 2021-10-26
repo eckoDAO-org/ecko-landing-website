@@ -10,6 +10,7 @@ import GameEditionContainer from '../components/game-edition/GameEditionContaine
 import IntroductionSection from './IntroductionSection';
 import RoadmapSection from './RoadmapSection';
 import FooterSection from './FooterSection';
+import FeatureSection from './FeaturesSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const MainContainer = () => {
   return (
     <OuterContainer>
       <IntroductionSection />
+      <FeatureSection />
       <RoadmapSection />
       <FooterSection />
     </OuterContainer>

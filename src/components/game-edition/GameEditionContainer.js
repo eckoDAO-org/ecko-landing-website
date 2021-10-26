@@ -55,10 +55,10 @@ const GameEditionContainer = ({ children }) => {
         <ContentContainer>
           <ButtonContainer>
             <ButtonGroup>
-              <CustomButton buttonStyle={{ width: '100%', height: '15vh' }}>
+              <CustomButton buttonStyle={{ width: '100%', minHeight: '120px' }}>
                 Launch App
               </CustomButton>
-              <CustomButton buttonStyle={{ width: '100%', height: '15vh' }}>
+              <CustomButton buttonStyle={{ width: '100%', minHeight: '120px' }}>
                 Read Docs
               </CustomButton>
             </ButtonGroup>
