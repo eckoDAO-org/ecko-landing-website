@@ -11,6 +11,8 @@ import IntroductionSection from './IntroductionSection';
 import RoadmapSection from './RoadmapSection';
 import FooterSection from './FooterSection';
 import FeatureSection from './FeaturesSection';
+import ProofDexContainer from './ProofDexContainer';
+import DiscordContainer from './DiscordContainer';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -27,10 +29,13 @@ const MainContainer = () => {
   return (
     <OuterContainer>
       <IntroductionSection />
+      <ProofDexContainer />
+      <DiscordContainer />
       <FeatureSection />
       <RoadmapSection />
       <FooterSection />
     </OuterContainer>
+      
   );
 };
 
