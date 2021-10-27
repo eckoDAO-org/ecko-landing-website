@@ -8,6 +8,7 @@ import { ReactComponent as TelegramLogo } from '../assets/images/shared/telegram
 import { ReactComponent as DiscordLogo } from '../assets/images/shared/discord.svg';
 import ProofDexContainer from './ProofDexContainer';
 import DiscordContainer from './DiscordContainer';
+import TokenomicsContainer from './TokenomicsContainer';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -161,6 +162,7 @@ const MainContainer = () => {
       {/* {second section} */}
       <ProofDexContainer />
       <DiscordContainer />
+      <TokenomicsContainer />
       <RoadmapContainer>
         <Title style={{ marginBottom: '40px', marginTop: '20%' }}>
           Roadmap 2021

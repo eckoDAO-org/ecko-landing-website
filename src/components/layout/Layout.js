@@ -1,20 +1,19 @@
-import React from "react";
-import styled from "styled-components/macro";
-import Wrapper from "../../shared/Wrapper";
-import CustomParticles from "./CustomParticles";
-import DesktopHeader from "./header/DesktopHeader";
-import { ReactComponent as Stripes } from "../../assets/images/shared/stripes.svg";
+import React from 'react';
+import styled from 'styled-components/macro';
+import Wrapper from '../../shared/Wrapper';
+import CustomParticles from './CustomParticles';
+import DesktopHeader from './header/DesktopHeader';
+import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
 
 const MainContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  
 `;
 
 const WrapperContainer = styled(Wrapper)`
   height: 100vh;
-  width: calc(100% - 3em);
+  /* width: calc(100% - 3em); */
   padding: 0 5em;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
