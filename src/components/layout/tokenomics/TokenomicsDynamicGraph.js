@@ -11,11 +11,11 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
     <AnimationGlowContainer>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='407.316'
-        height='410.792'
-        viewBox='0 0 407.316 410.792'
+        width='410.793'
+        height='407.316'
+        viewBox='0 0 410.793 407.316'
       >
-        <g id='Graph' transform='translate(-24.004 -24.46)'>
+        <g id='Graph' transform='translate(-24.46 431.32) rotate(-90)'>
           <g
             id='Group_53947'
             data-name='Group 53947'
@@ -40,10 +40,10 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               r='173.557'
               fill='none'
               stroke='#ffa900'
-              filter={isHover === '40' ? 'drop-shadow( 0 0 5px #ffa900)' : null}
               stroke-linecap='round'
               stroke-width='8'
               stroke-dasharray='500 910'
+              filter={isHover === '40' ? 'drop-shadow( 0 0 5px #ffa900)' : null}
             />
             <circle
               id='Ellipse_617'
@@ -196,8 +196,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
           <g
             id='Group_67618'
             data-name='Group 67618'
-            className='rotate'
-            transform='translate(-63.512 -59.592)'
+            transform='translate(521.435 -59.512) rotate(90)'
           >
             <path
               id='Path_899'
