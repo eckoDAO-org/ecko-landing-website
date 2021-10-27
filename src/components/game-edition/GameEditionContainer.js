@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { GameEditionWrapper } from './GameEditionWrapper';
 import CustomButton from '../../shared/Button';
@@ -7,6 +7,11 @@ import { Button } from 'semantic-ui-react';
 const MainContainer = styled.div`
   display: flex;
   width: 35%;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    width: 100%;
+  }
   margin-bottom: 30px;
   justify-content: center;
 `;
@@ -55,10 +60,28 @@ const GameEditionContainer = ({ children }) => {
         <ContentContainer>
           <ButtonContainer>
             <ButtonGroup>
-              <CustomButton buttonStyle={{ width: '100%', minHeight: '120px' }}>
+              <CustomButton
+                buttonStyle={{ width: '100%', minHeight: '120px' }}
+                onClick={() =>
+                  window.open(
+                    `https://swap.kaddex.com`,
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
                 Launch App
               </CustomButton>
-              <CustomButton buttonStyle={{ width: '100%', minHeight: '120px' }}>
+              <CustomButton
+                buttonStyle={{ width: '100%', minHeight: '120px' }}
+                onClick={() =>
+                  window.open(
+                    `https://github.com/kaddex-org/swap-v2`,
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
+              >
                 Read Docs
               </CustomButton>
             </ButtonGroup>

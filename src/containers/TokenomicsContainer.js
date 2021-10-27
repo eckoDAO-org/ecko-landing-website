@@ -13,9 +13,10 @@ const ImageUrlWrapper = styled.div`
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: auto;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    margin-top: 40%;
+    margin-top: 140%;
   }
 `;
 

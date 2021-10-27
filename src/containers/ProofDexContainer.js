@@ -20,7 +20,12 @@ const TitleContainer = styled.div`
 
 const Title = styled.div`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 48px;
+  font-size: 42px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel + 1}px`}) {
+    font-size: 32px;
+    text-align: center;
+  }
   color: ${({ theme: { colors } }) => colors.white};
   margin-bottom: 24px;
 `;
@@ -58,12 +63,14 @@ const ProofDexContainer = () => {
             title='Swap'
             description='Swap safely with no transaction cost'
             link='Enter DEX'
+            hferLink='https://swap.kaddex.com/'
             customBorder='#FFA900'
           />
           <ProofDexCard
             title='Pool'
             description='Provide liquidity for any SPL token'
             link='Add Liquidity'
+            hferLink='https://swap.kaddex.com/pool'
             customBorder='#ED1CB5'
           />
         </GridRow>
