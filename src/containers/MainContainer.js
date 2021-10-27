@@ -22,6 +22,7 @@ const OuterContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 30px;
+  padding-bottom: 0;
   /* overflow: auto; */
 `;
 
@@ -30,12 +31,11 @@ const MainContainer = () => {
     <OuterContainer>
       <IntroductionSection />
       <ProofDexContainer />
-      <DiscordContainer />
       <FeatureSection />
+      <DiscordContainer />
       <RoadmapSection />
       <FooterSection />
     </OuterContainer>
-      
   );
 };
 

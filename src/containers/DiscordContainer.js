@@ -6,6 +6,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 164px;
+  margin-top: 10%;
   align-items: center;
   flex-direction: column;
   background: transparent
