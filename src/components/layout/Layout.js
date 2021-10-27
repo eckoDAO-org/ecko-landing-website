@@ -13,7 +13,7 @@ const MainContainer = styled.div`
 
 const WrapperContainer = styled(Wrapper)`
   height: 100vh;
-  /* width: calc(100% - 3em); */
+  width: 100%;
   padding: 0 5em;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
@@ -22,7 +22,7 @@ const WrapperContainer = styled(Wrapper)`
 `;
 
 const MainContent = styled.div`
-  margin-top: 10%;
+  /* margin-top: 10%; */
   /* height: ${({ theme: { header } }) => `calc(100% - ${header.height}px)`};
   & > div:first-child {
     height: ${({ theme: { header } }) => `calc(100% - ${header.height}px)`};
@@ -42,7 +42,7 @@ const StripesContainer = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <MainContainer>
+    <MainContainer id='main-container'>
       <CustomParticles />
       <WrapperContainer>
         <DesktopHeader />

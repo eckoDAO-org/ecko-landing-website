@@ -1,39 +1,37 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
-import styled from "styled-components/macro";
-import { Button as SUIButton } from "semantic-ui-react";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { Button as SUIButton } from 'semantic-ui-react';
 
 const StyledButton = styled(SUIButton)`
   font-family: montserrat-bold !important;
   font-size: ${({ fontSize }) =>
-    fontSize ? fontSize + " !important" : "16px !important"};
-  color: ${({ color }) => (color ? color + " !important" : "white !important")};
+    fontSize ? fontSize + ' !important' : '46px !important'};
+  color: ${({ color }) =>
+    color ? color + ' !important' : '#000000 !important'};
   background: ${({
     disabled,
     background,
     theme: { buttonBackgroundGradient },
   }) => {
-    if (background) return background + " !important";
-    if (disabled) return "transparent !important";
-    return buttonBackgroundGradient + "!important";
+    if (background) return background + ' !important';
+    if (disabled) return 'transparent !important';
+    return buttonBackgroundGradient + '!important';
   }};
   border-radius: 10px !important;
   opacity: 1 !important;
-  border: ${({
-    border,
-  }) => {
-    if (border) return border + " !important";
-    return "1px solid #FFFFFF !important";
+  border: ${({ border }) => {
+    if (border) return border + ' !important';
+    return '5px dashed #000000 !important';
   }};
-  box-shadow: ${({
-    boxShadow,
-  }) => {
-    if (boxShadow) return boxShadow + " !important";
-    return "0 0 4px #FFFFFF !important";
+  box-shadow: ${({ boxShadow }) => {
+    if (boxShadow) return boxShadow + ' !important';
+    return 'none !important';
   }};
+  --dash-size: 10px;
   /* box-shadow: 0 0 4px #FFFFFF !important; */
   /* :hover {
-    opacity: ${({ hover }) => (hover ? 0.7 : 1.0) + " !important"};
+    opacity: ${({ hover }) => (hover ? 0.7 : 1.0) + ' !important'};
     cursor: pointer;
   } */
 `;

@@ -1,16 +1,19 @@
-import React, { useContext } from "react";
-import { BrowserRouter as Router, Route, Switch , Redirect} from "react-router-dom";
-import Layout from "../components/layout/Layout";
-import MainContainer from "../containers/MainContainer";
+import React, { useContext } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
+import Layout from '../components/layout/Layout';
+import MainContainer from '../containers/MainContainer';
 
 // import RedeemGuide from "../modals/RedeemGuide";
 // import ConnectWalletModal from "../modals/kdaModal/ConnectWalletModal";
 // import { WalletContext } from "../contexts/WalletContext";
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
-import {
-  ROUTE_INDEX,
-} from "./routes";
+import { ROUTE_INDEX } from './routes';
 
 const Container = styled.div`
   display: flex;
@@ -21,12 +24,10 @@ const Container = styled.div`
 `;
 
 export default () => {
-
   return (
     <Router>
       <Layout>
         <Container>
-          
           <Switch>
             <Route exact path={ROUTE_INDEX} component={MainContainer} />
             <Redirect to={ROUTE_INDEX} />
