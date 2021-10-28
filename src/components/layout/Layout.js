@@ -52,7 +52,6 @@ const Layout = ({ children }) => {
     } else {
       setIsFooterVisible(false);
     }
-    console.log(`Hidden element is now visible`);
   };
 
   return (
