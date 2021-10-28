@@ -17,6 +17,7 @@ const OuterContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 30px;
+  padding-bottom: 0;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 0;
@@ -30,8 +31,6 @@ const MainContainer = () => {
       <IntroductionSection />
       <ProofDexContainer />
       <FeatureSection />
-      <DiscordContainer />
-      <TokenomicsContainer />
       <RoadmapSection />
       <FooterSection />
     </OuterContainer>

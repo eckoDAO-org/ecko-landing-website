@@ -13,6 +13,7 @@ const Container = styled.div`
   flex-flow: column;
   width: 100%;
   height: 100%;
+  background: #171b29;
   padding: 30px;
   /* overflow: auto; */
 `;
