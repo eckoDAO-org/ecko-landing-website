@@ -22,15 +22,6 @@ const RightContainerHeader = styled.div`
   }
 `;
 
-const Label = styled.span`
-  font-size: 13px;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  text-transform: capitalize;
-  padding: 10px 16px;
-  color: white;
-  fontsize: 16;
-`;
-
 const HamburgerListContainer = styled.div`
   border-radius: 4px;
   background: #240b2f 0% 0% no-repeat padding-box;

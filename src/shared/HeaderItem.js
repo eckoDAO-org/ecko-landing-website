@@ -17,7 +17,14 @@ const Item = styled.a`
     height: 3px;
   }
 `;
-const HeaderItem = ({ id, className, href, children, disabledHover }) => {
+const HeaderItem = ({
+  id,
+  className,
+  href,
+  children,
+  disabledHover,
+  style,
+}) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -28,9 +35,12 @@ const HeaderItem = ({ id, className, href, children, disabledHover }) => {
       isHover={disabledHover ? false : isHover}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      style={style}
     >
-      {children}
-      <div className='underline'></div>
+      <>
+        {children}
+        {!disabledHover && <div className='underline'></div>}
+      </>
     </Item>
   );
 };
