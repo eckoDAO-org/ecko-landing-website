@@ -10,6 +10,7 @@ export const theme = {
   mediaQueries: {
     mobileBreakpoint: '48rem',
     mobilePixel: 768,
+    smallMobilePixel: 320,
     desktopPixel: 1024,
     footerMinWidth: '50rem',
   },

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  width: 100%;
+  top: 20%;
   display: flex;
   justify-content: center;
-  width: 100%;
   height: 164px;
-  margin-top: 10%;
   align-items: center;
   flex-direction: column;
   background: transparent
@@ -24,12 +24,22 @@ const TitleContainer = styled.div`
     transition: width 0.3s;
     background: ${({ theme: { colors } }) => colors.purpleKDX};
     height: 6px;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+        `${mediaQueries.mobilePixel}px`}) {
+      width: 0;
+    }
   }
 `;
 
 const Title = styled.div`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
   font-size: 48px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 24px !important;
+  }
+
   color: ${({ theme: { colors } }) => colors.purpleKDX};
   margin: 24px 0;
 `;
@@ -37,11 +47,18 @@ const Title = styled.div`
 const Link = styled.a`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
   font-size: 48px;
+  text-align: center;
   color: ${({ theme: { colors } }) => colors.purpleKDX};
   margin-bottom: 0px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 24px !important;
+    text-decoration: underline;
+  }
 `;
 
 const DiscordContainer = () => {

@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   flex-flow: column;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 56px);
   padding: 30px;
   /* overflow: auto; */
 `;
@@ -58,24 +58,6 @@ const IntroductionSection = () => {
         <SubTitle>Safe DeFi begins with our Gas free DEX</SubTitle>
         <GameEditionContainer />
       </TextContainer>
-      <Button
-        hover={true}
-        background='#FFFFFF 0% 0% no-repeat padding-box'
-        border='1px solid #FFFFFF'
-        color='#4C125A'
-        buttonStyle={{ padding: '8px 45px' }}
-        boxShadow='0 0 3px #FFFFFF'
-        fontSize={14}
-        onClick={() =>
-          window.open(
-            `https://swap.kaddex.com`,
-            '_blank',
-            'noopener,noreferrer'
-          )
-        }
-      >
-        Use Kaddex
-      </Button>
     </Container>
   );
 };

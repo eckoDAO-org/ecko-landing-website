@@ -69,12 +69,13 @@ const LinkContainer = styled.div`
     height: 3px;
   }
 `;
-const Link = styled.p`
+const Link = styled.a`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
   font-size: 16px;
   margin-bottom: 2px;
   color: ${({ theme: { colors } }) => colors.white};
 
+  text-decoration: none;
   display: inline-block;
   cursor: pointer;
 `;
@@ -103,7 +104,9 @@ const ProofDexCard = ({
         <Title>{title}</Title>
         <Description>{description}</Description>
         <LinkContainer isHover={disabled ? false : isHover}>
-          <Link href={hferLink || '#'}>{link}</Link>
+          <Link target='black' href={hferLink || '#'}>
+            {link}
+          </Link>
           <div className='underline'></div>
         </LinkContainer>
       </CardContainer>

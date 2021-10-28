@@ -1,18 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import Button from '../shared/Button';
-import { KaddexLogo } from '../assets';
 import './MainContainer.css';
-import { ReactComponent as TwitterLogo } from '../assets/images/shared/twitter.svg';
-import { ReactComponent as TelegramLogo } from '../assets/images/shared/telegram.svg';
-import { ReactComponent as DiscordLogo } from '../assets/images/shared/discord.svg';
-import GameEditionContainer from '../components/game-edition/GameEditionContainer';
 import IntroductionSection from './IntroductionSection';
 import RoadmapSection from './RoadmapSection';
 import FooterSection from './FooterSection';
 import FeatureSection from './FeaturesSection';
 import ProofDexContainer from './ProofDexContainer';
 import DiscordContainer from './DiscordContainer';
+import TokenomicsContainer from './TokenomicsContainer';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -21,8 +16,12 @@ const OuterContainer = styled.div`
   flex-flow: column;
   width: 100%;
   height: 100%;
-  padding: 30px;
+  /* padding: 30px; */
   padding-bottom: 0;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 0;
+  }
   /* overflow: auto; */
 `;
 
@@ -33,6 +32,7 @@ const MainContainer = () => {
       <ProofDexContainer />
       <FeatureSection />
       <DiscordContainer />
+      <TokenomicsContainer />
       <RoadmapSection />
       <FooterSection />
     </OuterContainer>

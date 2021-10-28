@@ -335,7 +335,7 @@ const FeatureSection = () => {
           let offset = 0;
           if (screenWidth > theme.mediaQueries.mobilePixel) {
             const element = document
-              .getElementById('container-title')
+              .getElementById('features')
               .getBoundingClientRect();
             offset = element.height;
           }
@@ -394,7 +394,7 @@ const FeatureSection = () => {
         </nav>
 
         <SectionsContainer>
-          <ContainerTitle id='container-title' isSafari={isSafari}>
+          <ContainerTitle id='features' isSafari={isSafari}>
             Unique Features
           </ContainerTitle>
           <SectionContainer visibleSection={visibleSection}>
