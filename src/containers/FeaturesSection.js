@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import './MainContainer.css';
 import { ReactComponent as ZeroGasIcon } from '../assets/images/shared/gru-feature.svg';
 import { ReactComponent as BestLPsIcon } from '../assets/images/shared/cup-feature.svg';
@@ -10,6 +10,7 @@ import { ReactComponent as MultiProtocolIcon } from '../assets/images/shared/mul
 import { ReactComponent as StakingIcon } from '../assets/images/shared/staking-feature.svg';
 import { ReactComponent as GovernanceIcon } from '../assets/images/shared/governance-feature.svg';
 import theme from '../styles/theme';
+import useWindowSize from '../hooks/useWindowSize';
 
 const Container = styled.div`
   display: flex;
@@ -52,7 +53,7 @@ const Container = styled.div`
   /* Sidebar Navigation */
   .section-nav {
     padding-left: 0;
-    border-left: 3.5px solid #ffffff60;
+    /* border-left: 3.5px solid #ffffff60; */
     @media (max-width: ${({ theme: { mediaQueries } }) =>
         `${mediaQueries.mobilePixel}px`}) {
       display: none !important;
@@ -90,7 +91,7 @@ const Container = styled.div`
 
   div {
     /* margin-top: 60px; */
-    margin-left: -0.2rem;
+    /* margin-left: -0.2rem; */
     padding: 10px;
   }
 
@@ -105,16 +106,15 @@ const Container = styled.div`
 
   /** page layout **/
   main {
-    display: grid;
+    display: flex;
 
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
+    @media (min-width: ${({ theme: { mediaQueries } }) =>
         `${mediaQueries.mobilePixel}px`}) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1.2fr 2fr;
+      max-width: 100em;
+      margin: 0 auto;
     }
-
-    grid-template-columns: 1.2fr 2fr;
-    max-width: 100em;
-    margin: 0 auto;
   }
 
   /** enlarge the sections for this demo, so that we have a long scrollable page **/
@@ -150,26 +150,50 @@ const ContainerTitle = styled.div`
   padding: 20px;
   margin-bottom: 30px;
   font: normal normal bold 48px/58px ${theme.fontFamily.bold};
-  height: 80px;
+  min-height: 80px;
   color: #fff;
   z-index: 10;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    position: relative;
+    text-align: center;
+  }
 `;
 
 const ImageContainer = styled.div``;
 
 const SectionsContainer = styled.div`
-  -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%);
-  margin-bottom: 530px;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    margin-bottom: 0px;
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    margin-bottom: 530px;
   }
+`;
+
+const SectionContainer = styled.div`
+  /* -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%); */
+  ${({ visibleSection }) => {
+    if (!visibleSection) {
+      return css`
+        opacity: 0;
+      `;
+    }
+  }}
 `;
 
 const SectionMenuContainer = styled.div`
   a {
     font: normal normal bold 28px/38px ${theme.fontFamily.bold};
+  }
+`;
+
+const Section = styled.section`
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0.3')};
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    /* transition: opacity 0.2s linear 0.1s; */
+    opacity: ${({ isVisible, isBeforeActive }) =>
+      isVisible ? '1' : isBeforeActive ? '0' : '0.3'};
   }
 `;
 
@@ -195,6 +219,7 @@ const scrollTo = (ele) => {
 const FeatureSection = () => {
   const [visibleSection, setVisibleSection] = useState();
   const [position, setPosition] = useState();
+  const [screenWidth] = useWindowSize();
 
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
@@ -297,7 +322,7 @@ const FeatureSection = () => {
       text: 'Kaddex is built on community, our governance system will give the users control of network incentives, protocol mechanics, and pool rewards, all while maintaining our approach to safe DeFi.',
     },
   ];
-  console.log('vsection', visibleSection);
+
   useEffect(() => {
     const handleScroll = () => {
       const { height: headerHeight } = getDimensions(ref1.current);
@@ -307,13 +332,22 @@ const FeatureSection = () => {
         const ele = ref.current;
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
-          console.log('scrollPosition', scrollPosition);
-          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+          let offset = 0;
+          if (screenWidth > theme.mediaQueries.mobilePixel) {
+            const element = document
+              .getElementById('container-title')
+              .getBoundingClientRect();
+            offset = element.height;
+          }
+          return (
+            scrollPosition + offset > offsetTop &&
+            scrollPosition + offset < offsetBottom
+          );
         }
       });
 
-      if (selected && selected.section !== visibleSection) {
-        setVisibleSection(selected.section);
+      if (selected && selected.sectionID !== visibleSection) {
+        setVisibleSection(selected.sectionID);
       } else if (!selected && visibleSection) {
         setVisibleSection(undefined);
       }
@@ -326,31 +360,6 @@ const FeatureSection = () => {
     };
   }, [visibleSection]);
 
-  console.log('visible section', visibleSection);
-
-  /* window.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log('entry', entry);
-        const id = entry.target.getAttribute('id');
-        if (entry.intersectionRatio > 0) {
-          document
-            .querySelector(`nav li a[href="#${id}"]`)
-            .parentElement.classList.add('active');
-        } else {
-          document
-            .querySelector(`nav li a[href="#${id}"]`)
-            .parentElement.classList.remove('active');
-        }
-      });
-    });
-
-    // Track all sections that have an `id` applied
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-  }); */
-
   return (
     <Container>
       <main>
@@ -360,17 +369,21 @@ const FeatureSection = () => {
               <SectionMenuContainer
                 key={i}
                 color={s.color}
-                className={visibleSection === s.id ? 'active' : ''}
-                onClick={() => setVisibleSection(s.id)}
+                className={visibleSection === s.sectionID ? 'active' : ''}
+                onClick={() => setVisibleSection(s.sectionID)}
                 style={{
                   transition: 'opacity 0.2s linear 0.1s',
-                  borderLeft: visibleSection === s.id && `5px solid ${s.color}`,
+                  borderLeft:
+                    visibleSection === s.sectionID
+                      ? `5px solid ${s.color}`
+                      : '3.5px solid #ffffff60',
                 }}
               >
                 <a
                   href={`#${s.sectionID}`}
                   style={{
-                    color: visibleSection === s.id ? s.color : '#FFFFFF60',
+                    color:
+                      visibleSection === s.sectionID ? s.color : '#FFFFFF60',
                   }}
                 >
                   {s.title}
@@ -381,32 +394,34 @@ const FeatureSection = () => {
         </nav>
 
         <SectionsContainer>
-          <ContainerTitle id='features' isSafari={isSafari}>
+          <ContainerTitle id='container-title' isSafari={isSafari}>
             Unique Features
           </ContainerTitle>
-          {sections.map((s, i) => {
-            return (
-              <section
-                id={s.sectionID}
-                ref={s.ref}
-                key={i}
-                style={{
-                  transition: 'opacity 0.2s linear 0.1s',
-                  opacity: visibleSection === s.id ? '1' : '0.3',
-                }}
-              >
-                <ImageContainer
-                  style={{ filter: `drop-shadow( 0 0 3px ${s.color})` }}
+          <SectionContainer visibleSection={visibleSection}>
+            {sections.map((s, i) => {
+              const isBeforeActive =
+                Number(s.sectionID) < Number(visibleSection);
+              return (
+                <Section
+                  isBeforeActive={isBeforeActive}
+                  isVisible={visibleSection === s.sectionID}
+                  id={s.sectionID}
+                  ref={s.ref}
+                  key={i}
                 >
-                  {s.image}
-                </ImageContainer>
-                <FeatureTitle style={{ color: s.color }}>
-                  {s.title}
-                </FeatureTitle>
-                <FeatureText>{s.text}</FeatureText>
-              </section>
-            );
-          })}
+                  <ImageContainer
+                    style={{ filter: `drop-shadow( 0 0 3px ${s.color})` }}
+                  >
+                    {s.image}
+                  </ImageContainer>
+                  <FeatureTitle style={{ color: s.color }}>
+                    {s.title}
+                  </FeatureTitle>
+                  <FeatureText>{s.text}</FeatureText>
+                </Section>
+              );
+            })}
+          </SectionContainer>
         </SectionsContainer>
       </main>
     </Container>
