@@ -154,7 +154,7 @@ const FeatureText = styled.span`
 `;
 
 const ContainerTitle = styled.div`
-  position: ${({ isSafari }) => (isSafari ? '-webkit-sticky' : 'sticky')};
+  position: relative;
   top: 0;
   padding: 20px;
   margin-bottom: 30px;
@@ -181,19 +181,19 @@ const SectionsContainer = styled.div`
 
 const SectionContainer = styled.div`
   /* -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%); */
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
+    `${mediaQueries.mobilePixel}px`}) {
     ${({ visibleSection }) => {
-      if (!visibleSection) {
-        return css`
-          opacity: 0.5;
-          & > *:nth-last-child(-n + 2) {
-            opacity: 0;
-          }
-        `;
-      }
-    }}
-  }
+    if (!visibleSection) {
+      return css`
+        opacity: 0.5;
+        & > *:nth-last-child(-n + 2) {
+          opacity: 0;
+        }
+      `;
+    }
+  }}
+  } */
 `;
 
 const SectionMenuContainer = styled.div`
@@ -207,8 +207,7 @@ const Section = styled.section`
   @media (min-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel}px`}) {
     transition: opacity 0.2s linear 0.1s;
-    opacity: ${({ isVisible, isBeforeActive }) =>
-      isVisible ? '1' : isBeforeActive ? '0' : '0.3'};
+    opacity: ${({ isVisible, isBeforeActive }) => (isVisible ? '1' : '0.3')};
   }
 `;
 
@@ -382,12 +381,12 @@ const FeatureSection = () => {
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           let offset = 0;
-          if (screenWidth > theme.mediaQueries.mobilePixel) {
+          /* if (screenWidth > theme.mediaQueries.mobilePixel) {
             const element = document
               .getElementById('features')
               .getBoundingClientRect();
             offset = element.height;
-          }
+          } */
           return (
             scrollPosition + offset > offsetTop &&
             scrollPosition + offset < offsetBottom
@@ -421,6 +420,9 @@ const FeatureSection = () => {
       sectionNavHeight={sectionNavHeight}
       ref={ref}
     >
+      <ContainerTitle id='features' isSafari={isSafari}>
+        Unique Features
+      </ContainerTitle>
       <main>
         <nav class='section-nav' id='section-nav'>
           {sections.map((s, i) => {
@@ -454,9 +456,6 @@ const FeatureSection = () => {
         </nav>
 
         <SectionsContainer id='sections-container'>
-          <ContainerTitle id='features' isSafari={isSafari}>
-            Unique Features
-          </ContainerTitle>
           <SectionContainer visibleSection={visibleSection}>
             {sections.map((s, i) => {
               const isBeforeActive =
