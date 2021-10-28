@@ -11,6 +11,7 @@ import { ReactComponent as StakingIcon } from '../assets/images/shared/staking-f
 import { ReactComponent as GovernanceIcon } from '../assets/images/shared/governance-feature.svg';
 import theme from '../styles/theme';
 import useWindowSize from '../hooks/useWindowSize';
+import useOnScreen from '../hooks/useOnScreen';
 
 const Container = styled.div`
   display: flex;
@@ -39,6 +40,7 @@ const Container = styled.div`
   /* 2. Make nav sticky */
   main > nav {
     margin-top: 100px;
+
     position: sticky;
     top: 100px;
     align-self: start;
@@ -52,10 +54,17 @@ const Container = styled.div`
 
   /* Sidebar Navigation */
   .section-nav {
-    padding-left: 0;
+    ${({ screenHeight, sectionNavHeight }) => {
+      if (screenHeight < sectionNavHeight + 200) {
+        return css`
+          padding-left: 180px;
+        `;
+      }
+    }}
+
     /* border-left: 3.5px solid #ffffff60; */
     @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+      `${mediaQueries.mobilePixel}px`}) {
       display: none !important;
     }
   }
@@ -164,10 +173,10 @@ const ContainerTitle = styled.div`
 const ImageContainer = styled.div``;
 
 const SectionsContainer = styled.div`
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
+    `${mediaQueries.mobilePixel}px`}) {
     margin-bottom: 530px;
-  }
+  } */
 `;
 
 const SectionContainer = styled.div`
@@ -177,7 +186,10 @@ const SectionContainer = styled.div`
     ${({ visibleSection }) => {
       if (!visibleSection) {
         return css`
-          opacity: 0;
+          opacity: 0.5;
+          & > *:nth-last-child(-n + 2) {
+            opacity: 0;
+          }
         `;
       }
     }}
@@ -212,78 +224,81 @@ const getDimensions = (ele) => {
   };
 };
 
-const scrollTo = (ele) => {
-  ele.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-};
-
 const FeatureSection = () => {
-  const [visibleSection, setVisibleSection] = useState();
-  const [position, setPosition] = useState();
-  const [screenWidth] = useWindowSize();
-
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const ref5 = useRef(null);
-  const ref6 = useRef(null);
-  const ref7 = useRef(null);
-  const ref8 = useRef(null);
-
   const sections = [
     {
       section: 'ref1',
       id: 'ref1',
-      ref: ref1,
       sectionID: '1',
       color: '#FFA900',
       title: 'Zero Gas, Forever',
       image: (
         <ZeroGasIcon id='zerogas' style={{ width: '104px', height: '120px' }} />
       ),
-      text: 'Thanks to Kadena’s gas stations, users will never have to pay gas to utilize Kaddex. \n Gas will always stay free because the Kadena blockchain scales horizontally, which means as the demand for block space goes up, we can increase the number of chains, increasing the number of available blocks.',
+      text: (
+        <span>
+          Thanks to Kadena’s gas stations, users will never have to pay gas to
+          utilize Kaddex. <br /> Gas will always stay free because the Kadena
+          blockchain scales horizontally, which means as the demand for block
+          space goes up, we can increase the number of chains, increasing the
+          number of available blocks.
+        </span>
+      ),
     },
     {
       section: 'ref2',
       id: 'ref2',
-      ref: ref2,
       sectionID: '2',
       color: '#ED1CB5',
       title: 'The Best LPs Rewards',
       image: <BestLPsIcon style={{ width: '93px', height: '120px' }} />,
-      text: 'Kaddex provides unique LPs incentives that will attract new DeFi customers to our new network, thanks to the 40% of tokens allocated for incentivizing the network. When a swap is performed the user is charged a standard 0.3% trading fee, of which 100% goes to Liquidity Providers.',
+      text: (
+        <span>
+          Kaddex provides unique LPs incentives that will attract new DeFi
+          customers to our new network, thanks to the 40% of tokens allocated
+          for incentivizing the network. When a swap is performed the user is
+          charged a standard 0.3% trading fee, of which 100% goes to Liquidity
+          Providers.
+        </span>
+      ),
     },
     {
       section: 'ref3',
       id: 'ref3',
-      ref: ref3,
       sectionID: '3',
       color: '#39FFFC',
       title: 'Fastest Settlements',
       image: (
         <FastestSettlementsIcon style={{ width: '110px', height: '128px' }} />
       ),
-      text: 'Because Kadena has the ability to scale TPS infinitively, network congestion will never be a problem. This coupled with gas free transactions will ensure quick settlements and security, while providing the best possible users experience.',
+      text: (
+        <span>
+          Because Kadena has the ability to scale TPS infinitively, network
+          congestion will never be a problem. This coupled with gas free
+          transactions will ensure quick settlements and security, while
+          providing the best possible users experience.
+        </span>
+      ),
     },
     {
       section: 'ref4',
       id: 'ref4',
-      ref: ref4,
       sectionID: '4',
       color: '#FFA900',
       title: 'DAO Powered',
       image: <DaoPowerIcon style={{ width: '183px', height: '120px' }} />,
-      text: 'The Kaddex DAO will play a large role in how Kaddex operates, controlling the parameters for individual pools. On top of this, the DAO will have a strong focus on ecosystem development, working to help growing the entire Kadena blockchain.',
+      text: (
+        <span>
+          The Kaddex DAO will play a large role in how Kaddex operates,
+          controlling the parameters for individual pools. On top of this, the
+          DAO will have a strong focus on ecosystem development, working to help
+          growing the entire Kadena blockchain.
+        </span>
+      ),
     },
     {
       section: 'ref5',
       id: 'ref5',
-      ref: ref5,
       sectionID: '5',
       color: '#ED1CB5',
       title: 'Decentralized Infrastructure',
@@ -292,47 +307,78 @@ const FeatureSection = () => {
           style={{ width: '99px', height: '120px' }}
         />
       ),
-      text: 'Kaddex lives up to the decentralized claim: everything from liquidity provision, pricing to swapping is done entirely on-chain, requires no intervention from off chain authorities or oracles, and is fully autonomous with no control by any central on-chain authority either.',
+      text: (
+        <span>
+          Kaddex lives up to the decentralized claim: everything from liquidity
+          provision, pricing to swapping is done entirely on-chain, requires no
+          intervention from off chain authorities or oracles, and is fully
+          autonomous with no control by any central on-chain authority either.
+        </span>
+      ),
     },
     {
       section: 'ref6',
       id: 'ref6',
-      ref: ref6,
       sectionID: '6',
       color: '#39FFFC',
       title: 'Multi-Protocol',
       image: <MultiProtocolIcon style={{ width: '211px', height: '120px' }} />,
-      text: 'Kaddex will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about protocols, but just access value wherever it is.',
+      text: (
+        <span>
+          Kaddex will be the only multi-protocol DEX with native decentralised
+          bridges, leading to a future where users won’t have to even think
+          about protocols, but just access value wherever it is.
+        </span>
+      ),
     },
     {
       section: 'ref7',
       id: 'ref7',
-      ref: ref7,
       sectionID: '7',
       color: '#FFA900',
       title: 'Staking',
       image: <StakingIcon style={{ width: '76px', height: '120px' }} />,
-      text: 'KDX Stakers will earn 0.05% of all swaps happening on Kaddex, giving holders a simple way to earn passive income while still participating in governance.',
+      text: (
+        <span>
+          KDX Stakers will earn 0.05% of all swaps happening on Kaddex, giving
+          holders a simple way to earn passive income while still participating
+          in governance.
+        </span>
+      ),
     },
     {
       section: 'ref8',
       id: 'ref8',
-      ref: ref8,
       sectionID: '8',
       color: '#ED1CB5',
       title: 'Governance',
       image: <GovernanceIcon style={{ width: '140px', height: '120px' }} />,
-      text: 'Kaddex is built on community, our governance system will give the users control of network incentives, protocol mechanics, and pool rewards, all while maintaining our approach to safe DeFi.',
+      text: (
+        <span>
+          Kaddex is built on community, our governance system will give the
+          users control of network incentives, protocol mechanics, and pool
+          rewards, all while maintaining our approach to safe DeFi.
+        </span>
+      ),
     },
   ];
 
+  const ref = useRef();
+  const [visibleSection, setVisibleSection] = useState(sections[0].sectionID);
+  const [sectionNavHeight, setSectionNavHeight] = useState();
+  const [screenWidth, screenHeight] = useWindowSize();
+
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   useEffect(() => {
     const handleScroll = () => {
-      const { height: headerHeight } = getDimensions(ref1.current);
+      const { height: headerHeight } = getDimensions(
+        document.getElementById(sections[0].sectionID)
+      );
       const scrollPosition = window.scrollY + headerHeight;
 
-      const selected = sections.find(({ section, ref }) => {
-        const ele = ref.current;
+      const selected = sections.find(({ section, sectionID }) => {
+        const ele = document.getElementById(sectionID);
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           let offset = 0;
@@ -356,17 +402,27 @@ const FeatureSection = () => {
       }
     };
 
-    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [visibleSection]);
 
+  useEffect(() => {
+    const sectionNav = document.getElementById('section-nav');
+    if (sectionNav) {
+      setSectionNavHeight(sectionNav.getBoundingClientRect().height);
+    }
+  }, [screenHeight, screenWidth]);
+
   return (
-    <Container>
+    <Container
+      screenHeight={screenHeight}
+      sectionNavHeight={sectionNavHeight}
+      ref={ref}
+    >
       <main>
-        <nav class='section-nav'>
+        <nav class='section-nav' id='section-nav'>
           {sections.map((s, i) => {
             return (
               <SectionMenuContainer
@@ -385,6 +441,7 @@ const FeatureSection = () => {
                 <a
                   href={`#${s.sectionID}`}
                   style={{
+                    whiteSpace: 'nowrap',
                     color:
                       visibleSection === s.sectionID ? s.color : '#FFFFFF60',
                   }}
@@ -396,7 +453,7 @@ const FeatureSection = () => {
           })}
         </nav>
 
-        <SectionsContainer>
+        <SectionsContainer id='sections-container'>
           <ContainerTitle id='features' isSafari={isSafari}>
             Unique Features
           </ContainerTitle>
@@ -409,7 +466,6 @@ const FeatureSection = () => {
                   isBeforeActive={isBeforeActive}
                   isVisible={visibleSection === s.sectionID}
                   id={s.sectionID}
-                  ref={s.ref}
                   key={i}
                 >
                   <ImageContainer
