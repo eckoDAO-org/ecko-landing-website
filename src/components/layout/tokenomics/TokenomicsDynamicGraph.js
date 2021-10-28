@@ -32,7 +32,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               data-name='Ellipse 616'
               fill='none'
               stroke='rgba(255,255,255,0.5)'
-              stroke-width='1'
+              strokeWidth='1'
             >
               <circle cx='173.557' cy='173.557' r='173.557' stroke='none' />
               <circle cx='173.557' cy='173.557' r='173.057' fill='none' />
@@ -45,8 +45,8 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               r='173.557'
               fill='none'
               stroke='#ffa900'
-              stroke-linecap='round'
-              stroke-width='8'
+              strokeLinecap='round'
+              strokeWidth='8'
               stroke-dasharray='500 910'
               filter={isHover === '40' ? 'drop-shadow( 0 0 5px #ffa900)' : null}
             />
@@ -59,7 +59,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               fill='none'
               stroke='#ffa900'
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='500 910'
             />
           </g>
@@ -75,7 +75,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               transform='translate(2.423 2.423)'
               fill='none'
               stroke='rgba(255,255,255,0.5)'
-              stroke-width='1'
+              strokeWidth='1'
             >
               <circle cx='140.029' cy='140.029' r='140.029' stroke='none' />
               <circle cx='140.029' cy='140.029' r='139.529' fill='none' />
@@ -91,7 +91,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               stroke='#ed1cb5'
               filter={isHover === '25' ? 'drop-shadow( 0 0 5px #ed1cb5)' : null}
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='130 1130'
             />
             <circle
@@ -104,7 +104,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               fill='none'
               stroke='#ed1cb5'
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='130 1130'
             />
           </g>
@@ -120,7 +120,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               transform='translate(44.114 44.114)'
               fill='none'
               stroke='rgba(255,255,255,0.5)'
-              stroke-width='1'
+              strokeWidth='1'
             >
               <circle cx='106.501' cy='106.501' r='106.501' stroke='none' />
               <circle cx='106.501' cy='106.501' r='106.001' fill='none' />
@@ -136,7 +136,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               stroke='#39fffc'
               filter={isHover === '30' ? 'drop-shadow( 0 0 5px #39fffc)' : null}
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='160 910'
             />
             <circle
@@ -149,7 +149,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               fill='none'
               stroke='#39fffc'
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='160 930'
             />
           </g>
@@ -165,7 +165,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               transform='translate(25.856 25.856)'
               fill='none'
               stroke='rgba(255,255,255,0.5)'
-              stroke-width='1'
+              strokeWidth='1'
             >
               <circle cx='74.945' cy='74.945' r='74.945' stroke='none' />
               <circle cx='74.945' cy='74.945' r='74.445' fill='none' />
@@ -181,7 +181,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               stroke='#fff'
               filter={isHover === '5' ? 'drop-shadow( 0 0 5px #fff)' : null}
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='50 430'
             />
             <circle
@@ -194,7 +194,7 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
               fill='none'
               stroke='#fff'
               stroke-linecap='round'
-              stroke-width='8'
+              strokeWidth='8'
               stroke-dasharray='50 430'
             />
           </g>

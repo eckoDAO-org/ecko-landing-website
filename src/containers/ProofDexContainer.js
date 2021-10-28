@@ -7,6 +7,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100vh;
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.smallMobilePixel}px`}) {
+    height: 100%;
+  }
   align-items: center;
   flex-direction: column;
 `;

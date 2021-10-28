@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   flex-flow: column;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 56px);
   padding: 30px;
   /* overflow: auto; */
 `;

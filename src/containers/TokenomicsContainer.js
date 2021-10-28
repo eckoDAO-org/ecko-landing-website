@@ -13,12 +13,12 @@ const ImageUrlWrapper = styled.div`
       `${mediaQueries.mobilePixel + 1}px`}) {
     height: 100%;
     margin-top: 20px;
-    background-size: cover;
   }
   align-items: center;
+
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 `;
 
 const Container = styled.div`
@@ -89,10 +89,9 @@ const TokenomicsContainer = () => {
 
   return (
     <ImageUrlWrapper
-      id='tokenomics'
       style={{ backgroundImage: `url(${TokenomicsBackground})` }}
     >
-      <Container>
+      <Container id='tokenomics'>
         <TitleContainer>
           <Title>Tokenomics</Title>
           <Description>
