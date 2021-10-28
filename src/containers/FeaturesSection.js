@@ -172,13 +172,16 @@ const SectionsContainer = styled.div`
 
 const SectionContainer = styled.div`
   /* -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%); */
-  ${({ visibleSection }) => {
-    if (!visibleSection) {
-      return css`
-        opacity: 0;
-      `;
-    }
-  }}
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    ${({ visibleSection }) => {
+      if (!visibleSection) {
+        return css`
+          opacity: 0;
+        `;
+      }
+    }}
+  }
 `;
 
 const SectionMenuContainer = styled.div`
@@ -191,7 +194,7 @@ const Section = styled.section`
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0.3')};
   @media (min-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel}px`}) {
-    /* transition: opacity 0.2s linear 0.1s; */
+    transition: opacity 0.2s linear 0.1s;
     opacity: ${({ isVisible, isBeforeActive }) =>
       isVisible ? '1' : isBeforeActive ? '0' : '0.3'};
   }
@@ -335,7 +338,7 @@ const FeatureSection = () => {
           let offset = 0;
           if (screenWidth > theme.mediaQueries.mobilePixel) {
             const element = document
-              .getElementById('container-title')
+              .getElementById('features')
               .getBoundingClientRect();
             offset = element.height;
           }
@@ -394,7 +397,7 @@ const FeatureSection = () => {
         </nav>
 
         <SectionsContainer>
-          <ContainerTitle id='container-title' isSafari={isSafari}>
+          <ContainerTitle id='features' isSafari={isSafari}>
             Unique Features
           </ContainerTitle>
           <SectionContainer visibleSection={visibleSection}>
