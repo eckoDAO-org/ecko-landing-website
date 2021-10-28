@@ -61,7 +61,7 @@ const GridRow = styled.div`
 
 const ProofDexContainer = () => {
   return (
-    <Container>
+    <Container id='ProofofDex'>
       <TitleContainer>
         <Title>The most powerful Proof of Work DEX</Title>
       </TitleContainer>
@@ -93,7 +93,7 @@ const ProofDexContainer = () => {
             title='Build'
             description='Leverage our upcoming DeFi tools: lending, farming and beyond'
             link='Coming soon'
-            customBorder='#CCCCCC33'
+            customBorder='#CCCCCC '
             disabled
           />
         </GridRow>

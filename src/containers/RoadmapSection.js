@@ -92,8 +92,8 @@ const RoadmapSection = () => {
               Native and Bridged ERC-20 Token Pairs
             </RoadmapItemRight>
           </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft>Kaddex Full Launch on Mainnet</RoadmapItemLeft>
+          <div class='roadmap_container right'>
+            <RoadmapItemRight>Code Auditing</RoadmapItemRight>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight>Institutional Collaboration</RoadmapItemRight>
@@ -102,7 +102,10 @@ const RoadmapSection = () => {
             <RoadmapItemLeft>DEX Whitepaper</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
-            <RoadmapItemRight>ERC-20 Public Sale</RoadmapItemRight>
+            <RoadmapItemRight>Pre Launch Public Sale</RoadmapItemRight>
+          </div>
+          <div class='roadmap_container left'>
+            <RoadmapItemLeft>Kaddex Full Launch on Mainnet</RoadmapItemLeft>
           </div>
           <div class='roadmap_container left'>
             <RoadmapItemLeft>Transition to a DAO</RoadmapItemLeft>

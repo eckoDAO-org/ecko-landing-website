@@ -8,27 +8,12 @@ import { ITEM_LINKS } from '../../../constants/itemLinks';
 const RightContainerHeader = styled.div`
   display: flex;
   align-items: center;
-  & > *:first-child {
-    margin-right: 18px;
-  }
-  & > *:not(:first-child):not(:last-child) {
-    margin-right: 18px;
-  }
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      mediaQueries.mobileBreakpoint}) {
+  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
+    mediaQueries.mobileBreakpoint}) {
     & > *:not(:first-child):not(:last-child) {
       margin-right: 18px;
     }
-  }
-`;
-
-const Label = styled.span`
-  font-size: 13px;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  text-transform: capitalize;
-  padding: 10px 16px;
-  color: white;
-  fontsize: 16;
+  } */
 `;
 
 const HamburgerListContainer = styled.div`
@@ -61,17 +46,25 @@ const HamburgerItem = styled.div`
 const RightHeaderItems = ({ pact }) => {
   return (
     <RightContainerHeader>
-      <HeaderItem className='mobile-none' href='/#features'>
+      <HeaderItem
+        style={{ marginRight: 24 }}
+        className='mobile-none'
+        href='/#features'
+      >
         Features
       </HeaderItem>
-      <HeaderItem className='mobile-none' href='#tokenomics'>
+      <HeaderItem
+        style={{ marginRight: 24 }}
+        className='mobile-none'
+        href='#tokenomics'
+      >
         Tokenomics
       </HeaderItem>
       <HeaderItem className='mobile-none' href='/#roadmap'>
         Roadmap
       </HeaderItem>
 
-      <HeaderItem style={{ marginLeft: '45px' }} disabledHover>
+      <HeaderItem style={{ marginLeft: '32px' }} disabledHover>
         <Popup
           basic
           trigger={<HamburgerIcon />}
