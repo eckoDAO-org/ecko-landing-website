@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 const AnimationGlowContainer = styled.div`
   display: flex;
@@ -11,7 +12,11 @@ const TokenomicsDynamicGraph = ({ isHover }) => {
     <AnimationGlowContainer>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='410.793'
+        width={
+          window.innerWidth <= theme.mediaQueries.smallMobilePixel
+            ? '300'
+            : '410.793'
+        }
         height='407.316'
         viewBox='0 0 410.793 407.316'
       >

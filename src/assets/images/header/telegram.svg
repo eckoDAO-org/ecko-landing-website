@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Telegram_Icon" data-name="Telegram Icon" transform="translate(6.08 6)">
+    <g id="Rectangle_8688" data-name="Rectangle 8688" transform="translate(-0.08)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="40" height="40" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" rx="3.5" fill="none"/>
+    </g>
+    <g id="Rectangle_4986" data-name="Rectangle 4986" transform="translate(-0.08 0)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="40" height="40" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" rx="3.5" fill="none"/>
+    </g>
+    <path id="Path_34860" data-name="Path 34860" d="M-384.266-793.377l-3.62,16.966c-.268,1.2-.988,1.5-1.995.929l-5.518-4.042-2.658,2.547a1.394,1.394,0,0,1-1.113.54l.391-5.581,10.227-9.184c.446-.389-.1-.61-.685-.221l-12.637,7.909-5.444-1.69c-1.183-.377-1.21-1.177.254-1.743l21.28-8.156c.987-.354,1.851.239,1.53,1.724Z" transform="translate(416.186 805.204)" fill="#fff"/>
+  </g>
+</svg>

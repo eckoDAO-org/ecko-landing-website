@@ -26,6 +26,10 @@ const Title = styled.div`
     font-size: 32px;
     text-align: center;
   }
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.smallMobilePixel}px`}) {
+    padding: 20px;
+  }
   color: ${({ theme: { colors } }) => colors.white};
   margin-bottom: 24px;
 `;
@@ -33,8 +37,7 @@ const Title = styled.div`
 const ProofDexCardContainer = styled(Grid)`
   display: flex;
   flex-direction: row;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.desktopPixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `1200px`}) {
     flex-flow: column;
   }
 `;

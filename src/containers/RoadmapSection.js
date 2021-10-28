@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-flow: column;
   width: 100%;
   height: 100%;
-  padding: 30px;
+  /* padding: 30px; */
   /* overflow: auto; */
 `;
 
@@ -61,11 +61,9 @@ const RoadmapItemRight = styled.p`
 
 const RoadmapSection = () => {
   return (
-    <Container>
+    <Container id='roadmap'>
       <RoadmapContainer className='mobile-none'>
-        <Title style={{ marginBottom: '40px', marginTop: '20%' }}>
-          Kaddex Roadmap
-        </Title>
+        <Title style={{ marginBottom: '40px' }}>Kaddex Roadmap</Title>
         <DesktopRoadmap />
       </RoadmapContainer>
 

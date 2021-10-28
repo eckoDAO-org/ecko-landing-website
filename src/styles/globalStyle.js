@@ -15,6 +15,8 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       box-sizing: border-box;
+      scroll-behavior: smooth;
+
     };
 
     body {

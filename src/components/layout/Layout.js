@@ -11,17 +11,19 @@ const MainContainer = styled.div`
   width: 100%;
 `;
 
-const WrapperContainer = styled(Wrapper)`
-  height: 100vh;
-  width: 100%;
-  padding: 0 5em;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0 1.5em;
-  }
-`;
+// const WrapperContainer = styled(Wrapper)`
+//   height: 100vh;
+//   width: 100%;
+//   padding: 0 5em;
+//   @media (max-width: ${({ theme: { mediaQueries } }) =>
+//       `${mediaQueries.mobilePixel + 1}px`}) {
+//     padding: 0 1.5em;
+//   }
+// `;
 
 const MainContent = styled.div`
+  height: 100%;
+  width: 100%;
   /* margin-top: 10%; */
   /* height: ${({ theme: { header } }) => `calc(100% - ${header.height}px)`};
   & > div:first-child {
@@ -44,10 +46,8 @@ const Layout = ({ children }) => {
   return (
     <MainContainer id='main-container'>
       <CustomParticles />
-      <WrapperContainer>
-        <DesktopHeader />
-        <MainContent>{children}</MainContent>
-      </WrapperContainer>
+      <DesktopHeader />
+      <MainContent>{children}</MainContent>
       <StripesContainer>
         <Stripes />
       </StripesContainer>

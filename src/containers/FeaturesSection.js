@@ -106,6 +106,12 @@ const Container = styled.div`
   /** page layout **/
   main {
     display: grid;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+        `${mediaQueries.mobilePixel}px`}) {
+      display: flex;
+    }
+
     grid-template-columns: 1.2fr 2fr;
     max-width: 100em;
     margin: 0 auto;
@@ -154,7 +160,13 @@ const ImageContainer = styled.div``;
 const SectionsContainer = styled.div`
   -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%);
   margin-bottom: 530px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    margin-bottom: 0px;
+  }
 `;
+
 const SectionMenuContainer = styled.div`
   a {
     font: normal normal bold 28px/38px ${theme.fontFamily.bold};
@@ -369,7 +381,9 @@ const FeatureSection = () => {
         </nav>
 
         <SectionsContainer>
-          <ContainerTitle isSafari={isSafari}>Unique Features</ContainerTitle>
+          <ContainerTitle id='features' isSafari={isSafari}>
+            Unique Features
+          </ContainerTitle>
           {sections.map((s, i) => {
             return (
               <section

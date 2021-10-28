@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 100vw;
-  position: relative;
+  width: 100%;
   top: 20%;
   display: flex;
   justify-content: center;
   height: 164px;
-  margin-top: 10%;
   align-items: center;
   flex-direction: column;
   background: transparent

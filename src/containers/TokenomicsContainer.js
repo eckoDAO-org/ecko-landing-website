@@ -7,17 +7,18 @@ import TokenomicsPercentualText from '../components/layout/tokenomics/Tokenomics
 const ImageUrlWrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
-  position: relative;
-  height: 100vw;
+  width: 100%;
+  height: 75vw;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    height: 100%;
+    margin-top: 20px;
+    background-size: cover;
+  }
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    margin-top: 140%;
-  }
 `;
 
 const Container = styled.div`
@@ -88,6 +89,7 @@ const TokenomicsContainer = () => {
 
   return (
     <ImageUrlWrapper
+      id='tokenomics'
       style={{ backgroundImage: `url(${TokenomicsBackground})` }}
     >
       <Container>

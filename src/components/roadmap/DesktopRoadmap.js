@@ -13,8 +13,8 @@ const DesktopRoadmap = () => {
     <Container>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='1292.002'
-        height='342'
+        width='6000'
+        height='600'
         viewBox='0 0 1292.002 342'
       >
         <g id='Roadmap' transform='translate(12.001 -3656.001)'>
