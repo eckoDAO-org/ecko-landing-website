@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components/macro';
-import Wrapper from '../../shared/Wrapper';
 import CustomParticles from './CustomParticles';
 import DesktopHeader from './header/DesktopHeader';
 import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
+import FooterSection from '../../containers/FooterSection';
+import useIntersection from '../../hooks/useOnScreen';
+import useOnScreen from '../../hooks/useOnScreen';
 
 const MainContainer = styled.div`
   display: flex;
@@ -11,28 +13,18 @@ const MainContainer = styled.div`
   width: 100%;
 `;
 
-// const WrapperContainer = styled(Wrapper)`
-//   height: 100vh;
-//   width: 100%;
-//   padding: 0 5em;
-//   @media (max-width: ${({ theme: { mediaQueries } }) =>
-//       `${mediaQueries.mobilePixel + 1}px`}) {
-//     padding: 0 1.5em;
-//   }
-// `;
+const PageContent = styled.div`
+  position: relative;
+`;
 
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
-  /* margin-top: 10%; */
-  /* height: ${({ theme: { header } }) => `calc(100% - ${header.height}px)`};
-  & > div:first-child {
-    height: ${({ theme: { header } }) => `calc(100% - ${header.height}px)`};
-  } */
 `;
 
 const StripesContainer = styled.div`
-  position: fixed;
+  position: ${({ isFooterVisible }) =>
+    isFooterVisible ? 'absolute' : 'fixed'};
   bottom: 0px;
   left: 0;
   line-height: 0;
@@ -43,14 +35,37 @@ const StripesContainer = styled.div`
 `;
 
 const Layout = ({ children }) => {
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, []);
+
+  const scrollHandler = () => {
+    if (
+      window.innerHeight >=
+      document.getElementById('footer').getBoundingClientRect().top
+    ) {
+      setIsFooterVisible(true);
+    } else {
+      setIsFooterVisible(false);
+    }
+    console.log(`Hidden element is now visible`);
+  };
+
   return (
     <MainContainer id='main-container'>
       <CustomParticles />
-      <DesktopHeader />
-      <MainContent>{children}</MainContent>
-      <StripesContainer>
-        <Stripes />
-      </StripesContainer>
+      <PageContent>
+        <DesktopHeader />
+        <MainContent>{children}</MainContent>
+        <StripesContainer isFooterVisible={isFooterVisible}>
+          <Stripes />
+        </StripesContainer>
+      </PageContent>
+      <FooterSection />
     </MainContainer>
   );
 };

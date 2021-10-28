@@ -36,8 +36,8 @@ const Title = styled.span`
 `;
 
 const SubTitle = styled.span`
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin-top: 16px;
+  margin-bottom: 60px;
   padding: 0px;
   text-align: center;
   font: normal normal normal 32px/40px montserrat-regular;

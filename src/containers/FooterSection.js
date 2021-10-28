@@ -1,8 +1,10 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Divider, Grid } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
 import { KaddexLogo } from '../assets';
 import AboutList from '../components/layout/footer/AboutList';
+import LearnList from '../components/layout/footer/LearnList';
+import SupportList from '../components/layout/footer/SupportList';
 import { ITEM_LINKS } from '../constants/itemLinks';
 import './MainContainer.css';
 
@@ -49,20 +51,24 @@ const PrivacyElement = styled.p`
 const FooterGrid = styled(Grid)`
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+      `${mediaQueries.mobilePixel}px`}) {
     flex-direction: column;
   }
 `;
 
-const GridRow = styled.div`
+const FooterBottomContainer = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  & > *:not(:last-child) {
-    margin-right: 25px;
-  }
+  flex-direction: column;
+`;
+
+const BottomContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     flex-flow: column;
@@ -70,16 +76,14 @@ const GridRow = styled.div`
 `;
 
 const Title = styled.div`
+  text-align: left;
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 24px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.desktopPixel + 1}px`}) {
+  font-size: 32px;
+  /* @media (max-width: ${({ theme: { mediaQueries } }) =>
+    `${mediaQueries.desktopPixel + 1}px`}) {
     text-align: center;
-  }
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.smallMobilePixel}px`}) {
-    padding: 20px;
-  }
+  } */
+
   color: ${({ theme: { colors } }) => colors.white};
   margin-bottom: 24px;
 `;
@@ -111,22 +115,31 @@ const IconItem = styled.div`
   }
 `;
 
+const GridColumn = styled(Grid.Column)`
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    margin-bottom: 32px;
+  }
+`;
+
 const FooterSection = () => {
   return (
-    <Container>
+    <Container id='footer'>
       <FooterContainer>
         <FooterGrid>
-          <Grid.Column>
+          <GridColumn>
             <Title>About</Title>
             <AboutList />
-          </Grid.Column>
-          <Grid.Column>
+          </GridColumn>
+          <GridColumn>
             <Title>Support</Title>
-          </Grid.Column>
-          <Grid.Column>
+            <SupportList />
+          </GridColumn>
+          <GridColumn>
             <Title>Learn</Title>
-          </Grid.Column>
-          <Grid.Column>
+            <LearnList />
+          </GridColumn>
+          <GridColumn>
             <Title>Community</Title>
             <IconListListContainer>
               {Object.values(ITEM_LINKS).map((social, index) => (
@@ -143,10 +156,22 @@ const FooterSection = () => {
                 </IconItem>
               ))}
             </IconListListContainer>
-          </Grid.Column>
+          </GridColumn>
         </FooterGrid>
-
-        {/* ADD BASE SITE */}
+        <FooterBottomContainer>
+          <Divider
+            style={{
+              margin: ' 24px 0',
+              backgroundColor: '#FFFFFF',
+              height: 3,
+              boxShadow: '0 0 5px #ffffff',
+            }}
+          />
+          <BottomContainer>
+            <KaddexLogo />
+            <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
+          </BottomContainer>
+        </FooterBottomContainer>
       </FooterContainer>
     </Container>
   );

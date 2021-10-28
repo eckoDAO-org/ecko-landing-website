@@ -3,7 +3,6 @@ import styled from 'styled-components/macro';
 import './MainContainer.css';
 import IntroductionSection from './IntroductionSection';
 import RoadmapSection from './RoadmapSection';
-import FooterSection from './FooterSection';
 import FeatureSection from './FeaturesSection';
 import ProofDexContainer from './ProofDexContainer';
 import DiscordContainer from './DiscordContainer';
@@ -34,7 +33,6 @@ const MainContainer = () => {
       <DiscordContainer />
       <TokenomicsContainer />
       <RoadmapSection />
-      <FooterSection />
     </OuterContainer>
   );
 };

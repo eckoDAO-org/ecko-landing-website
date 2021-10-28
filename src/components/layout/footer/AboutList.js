@@ -2,42 +2,41 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderItem from '../../../shared/HeaderItem';
 
-const IconListContainer = styled.div`
+const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   & > *:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 `;
 
 const AboutList = () => {
   return (
-    <IconListContainer>
+    <ListContainer>
       <HeaderItem
         disabledHover
+        textRegular
+        shadowHover
         onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
       >
         Documentation
       </HeaderItem>
-      <HeaderItem
-        disabledHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
-      >
-        The evolution of DeFi <br />
-        on Kadena
+      <HeaderItem disabledHover textRegular shadowHover href='/#ProofofDex'>
+        The most powerful
+        <br /> Proof of Work DEX
       </HeaderItem>
-      <HeaderItem disabledHover href='/#features'>
+      <HeaderItem disabledHover shadowHover textRegular href='/#1'>
         Unique Features{' '}
       </HeaderItem>
-      <HeaderItem disabledHover href='/#tokenomics'>
+      <HeaderItem disabledHover shadowHover textRegular href='/#tokenomics'>
         Tokenomics
       </HeaderItem>
-      <HeaderItem disabledHover href='/#roadmap'>
+      <HeaderItem disabledHover shadowHover textRegular href='/#roadmap'>
         Kaddex Roadmap
       </HeaderItem>
-    </IconListContainer>
+    </ListContainer>
   );
 };
 

@@ -9,6 +9,7 @@ const ImageUrlWrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 75vw;
+  margin-top: 114px;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     height: 100%;
