@@ -8,8 +8,8 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.smallMobilePixel}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
     height: 100%;
   }
   align-items: center;
