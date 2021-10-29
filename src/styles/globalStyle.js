@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     *, *:before, *:after {
@@ -15,6 +15,8 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       box-sizing: border-box;
+      scroll-behavior: smooth;
+
     };
 
     body {
@@ -24,7 +26,7 @@ export default createGlobalStyle`
       line-height: inherit;
       /* overflow: auto; */
       min-width: 0;
-      font-family: montserrat-regular;
+      font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
       color: ${({ theme: { colors } }) => colors.primary};
       background: linear-gradient(122deg, #070610 0%, #4C125A 100%);
       background-attachment: fixed;

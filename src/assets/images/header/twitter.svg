@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Group_68471" data-name="Group 68471" transform="translate(6.08 6)">
+    <g id="Rectangle_8687" data-name="Rectangle 8687" transform="translate(-0.08)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="40" height="40" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" rx="3.5" fill="none"/>
+    </g>
+    <g id="Rectangle_4985" data-name="Rectangle 4985" transform="translate(-0.08)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="40" height="40" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" rx="3.5" fill="none"/>
+    </g>
+    <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M21.533,8.239c.015.213.015.426.015.64A13.9,13.9,0,0,1,7.553,22.873,13.9,13.9,0,0,1,0,20.665a10.176,10.176,0,0,0,1.188.061,9.851,9.851,0,0,0,6.107-2.1,4.927,4.927,0,0,1-4.6-3.411,6.2,6.2,0,0,0,.929.076,5.2,5.2,0,0,0,1.294-.167A4.919,4.919,0,0,1,.975,10.294v-.061a4.954,4.954,0,0,0,2.223.624A4.926,4.926,0,0,1,1.675,4.279,13.981,13.981,0,0,0,11.817,9.426,5.553,5.553,0,0,1,11.7,8.3a4.923,4.923,0,0,1,8.513-3.365A9.684,9.684,0,0,0,23.33,3.746a4.906,4.906,0,0,1-2.162,2.711A9.861,9.861,0,0,0,24,5.7a10.573,10.573,0,0,1-2.467,2.543Z" transform="translate(7.92 6.873)" fill="#fff"/>
+  </g>
+</svg>

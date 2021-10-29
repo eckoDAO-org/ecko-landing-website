@@ -1,26 +1,55 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styled from "styled-components/macro";
+import React, { useState } from 'react';
+import styled from 'styled-components/macro';
 
-const Item = styled(NavLink)`
+const Item = styled.a`
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   text-transform: capitalize;
   background: transparent;
-  &.active {
-    font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  }
+  cursor: pointer;
+  font-family: ${({ theme: { fontFamily }, textRegular }) =>
+    textRegular ? fontFamily.regular : fontFamily.bold};
+
   &:hover {
-    color: white;
-    opacity: 0.7;
-    cursor: pointer;
+    text-shadow: ${({ shadowHover }) => shadowHover && '0 0 5px #ffffff'};
+  }
+
+  .underline {
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    transition: width 0.3s;
+    background: #fff;
+    height: 3px;
   }
 `;
-const HeaderItem = ({ id, className, route, children }) => {
+const HeaderItem = ({
+  id,
+  className,
+  href,
+  children,
+  disabledHover,
+  style,
+  textRegular,
+  shadowHover,
+}) => {
+  const [isHover, setIsHover] = useState(false);
+
   return (
-    <Item id={id} className={className} exact to={route ? route : "#"}>
-      {children}
+    <Item
+      id={id}
+      className={className}
+      href={href}
+      isHover={disabledHover ? false : isHover}
+      onMouseOver={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      style={style}
+      textRegular={textRegular}
+      shadowHover={shadowHover}
+    >
+      <>
+        {children}
+        {!disabledHover && <div className='underline'></div>}
+      </>
     </Item>
   );
 };

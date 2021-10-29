@@ -1,40 +1,24 @@
-import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
-import styled from "styled-components";
-import HeaderItem from "../../../shared/HeaderItem";
-import Button from "../../../shared/Button";
-import { HamburgerIcon, CodeIcon, DiscordIcon } from "../../../assets";
-import { Popup } from "semantic-ui-react";
+import React from 'react';
+import styled from 'styled-components';
+import HeaderItem from '../../../shared/HeaderItem';
+import { HamburgerIcon, CodeIcon, DiscordIcon } from '../../../assets';
+import { Popup } from 'semantic-ui-react';
+import { ITEM_LINKS } from '../../../constants/itemLinks';
 
 const RightContainerHeader = styled.div`
   display: flex;
   align-items: center;
-  & > *:first-child {
-    margin-right: 13px;
-  }
-  & > *:not(:first-child):not(:last-child) {
-    margin-right: 14px;
-  }
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      mediaQueries.mobileBreakpoint}) {
+  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
+    mediaQueries.mobileBreakpoint}) {
     & > *:not(:first-child):not(:last-child) {
-      margin-right: 16px;
+      margin-right: 18px;
     }
-  }
-`;
-
-const Label = styled.span`
-  font-size: 13px;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  text-transform: capitalize;
-  padding: 10px 16px;
-  color: white;
-  fontsize: 16;
+  } */
 `;
 
 const HamburgerListContainer = styled.div`
   border-radius: 4px;
-  background: #240B2F 0% 0% no-repeat padding-box;
+  background: #240b2f 0% 0% no-repeat padding-box;
 `;
 
 const HamburgerItem = styled.div`
@@ -42,15 +26,15 @@ const HamburgerItem = styled.div`
   align-items: center;
   font-family: montserrat-regular;
   font-size: 16px;
-  background: #240B2F 0% 0% no-repeat padding-box;
-  color: #FFFFFF;
+  background: #240b2f 0% 0% no-repeat padding-box;
+  color: #ffffff;
   &:hover {
-    color: #FFFFFF;
-    text-shadow: 0 0 5px #FFFFFF;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
     & svg {
       margin-right: 10px;
       & path {
-        fill: #FFFFFF;
+        fill: #ffffff;
       }
     }
   }
@@ -62,70 +46,56 @@ const HamburgerItem = styled.div`
 const RightHeaderItems = ({ pact }) => {
   return (
     <RightContainerHeader>
-     
-          <HeaderItem className="mobile-none">
-            <Button
-              hover={true}
-              buttonStyle={{ padding: "6px 22px" }}
-              fontSize={14}
-              onClick={() =>
-                  window.open(
-                    `https://swap.kaddex.com`,
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
+      <HeaderItem
+        style={{ marginRight: 24 }}
+        className='mobile-none'
+        href='/#features'
+      >
+        Features
+      </HeaderItem>
+      <HeaderItem
+        style={{ marginRight: 24 }}
+        className='mobile-none'
+        href='#tokenomics'
+      >
+        Tokenomics
+      </HeaderItem>
+      <HeaderItem className='mobile-none' href='/#roadmap'>
+        Roadmap
+      </HeaderItem>
+
+      <HeaderItem style={{ marginLeft: '32px' }} disabledHover>
+        <Popup
+          basic
+          trigger={<HamburgerIcon />}
+          on='click'
+          offset={[8, 20]}
+          position='bottom right'
+          style={{
+            padding: 13,
+            background: '#240B2F 0% 0% no-repeat padding-box',
+            border: '2px solid #FFFFFF',
+            boxShadow: '0 0 5px #FFFFFF',
+            borderRadius: '10px',
+          }}
+        >
+          <HamburgerListContainer>
+            {Object.values(ITEM_LINKS).map((social, index) => (
+              <HamburgerItem
+                to='/'
+                key={index}
+                style={{ paddingBottom: 9 }}
+                onClick={() =>
+                  window.open(social.link, '_blank', 'noopener,noreferrer')
                 }
-            >
-              Use Kaddex
-            </Button>
-          </HeaderItem>
-      
-      
-        <HeaderItem style={{ marginLeft: "45px"}}>
-          
-            <Popup
-              basic
-              trigger={<HamburgerIcon />}
-              on="click"
-              offset={[8, 20]}
-              position="bottom right"
-              style={{ padding: 13, background: "#240B2F 0% 0% no-repeat padding-box", border: "2px solid #FFFFFF", boxShadow: "0 0 5px #FFFFFF", borderRadius: "10px"}}
-            >
-              
-              <HamburgerListContainer>
-                <HamburgerItem
-                  to="/"
-                  style={{ paddingBottom: 9 }}
-                  onClick={() =>
-                    window.open(
-                      `https://github.com/sportelliguglielmo/kaddex-home-page`,
-                      "_blank",
-                      "noopener,noreferrer"
-                    )
-                  }
-                >
-                  <CodeIcon />
-                  Code
-                </HamburgerItem>
-                <HamburgerItem
-                  to="/"
-                  onClick={() =>
-                    window.open(
-                      `https://discord.gg/QSJpHRFDcv`,
-                      "_blank",
-                      "noopener,noreferrer"
-                    )
-                  }
-                >
-                  <DiscordIcon />
-                  Discord
-                </HamburgerItem>
-              </HamburgerListContainer>
-            </Popup>
-          
-        </HeaderItem>
-      
-      
+              >
+                {social.icon}
+                {social.label}
+              </HamburgerItem>
+            ))}
+          </HamburgerListContainer>
+        </Popup>
+      </HeaderItem>
     </RightContainerHeader>
   );
 };
