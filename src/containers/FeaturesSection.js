@@ -39,7 +39,6 @@ const Container = styled.div`
   /* 2. Make nav sticky */
   main > nav {
     margin-top: 100px;
-
     position: sticky;
     top: 100px;
     align-self: start;
@@ -74,11 +73,6 @@ const Container = styled.div`
     padding: 0.125rem 0;
     color: #ffffff60;
     transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
-  }
-
-  .section-nav a.active:hover,
-  .section-nav a.active:focus {
-    color: blue;
   }
 
   /** Poor man's reset **/
@@ -129,7 +123,28 @@ const Container = styled.div`
   section {
     padding: 20px;
     scroll-margin-top: 100px;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+        `${mediaQueries.mobilePixel}px`}) {
+      padding-left: 0;
+    }
     /* width: 180%; */
+  }
+`;
+
+const ContainerTitle = styled.div`
+  position: relative;
+  top: 0;
+  padding: 20px 0px;
+  font: normal normal bold 48px/58px ${theme.fontFamily.bold};
+  min-height: 80px;
+  color: #fff;
+  z-index: 10;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    position: relative;
+    text-align: center;
   }
 `;
 
@@ -152,48 +167,11 @@ const FeatureText = styled.span`
   opacity: 1;
 `;
 
-const ContainerTitle = styled.div`
-  position: relative;
-  top: 0;
-  padding: 20px;
-  margin-bottom: 30px;
-  font: normal normal bold 48px/58px ${theme.fontFamily.bold};
-  min-height: 80px;
-  color: #fff;
-  z-index: 10;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
-    position: relative;
-    text-align: center;
-  }
-`;
-
 const ImageContainer = styled.div``;
 
-const SectionsContainer = styled.div`
-  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
-    `${mediaQueries.mobilePixel}px`}) {
-    margin-bottom: 530px;
-  } */
-`;
+const SectionsContainer = styled.div``;
 
-const SectionContainer = styled.div`
-  /* -webkit-mask-image: linear-gradient(to top, red 100%, transparent 0%); */
-  /* @media (min-width: ${({ theme: { mediaQueries } }) =>
-    `${mediaQueries.mobilePixel}px`}) {
-    ${({ visibleSection }) => {
-    if (!visibleSection) {
-      return css`
-        opacity: 0.5;
-        & > *:nth-last-child(-n + 2) {
-          opacity: 0;
-        }
-      `;
-    }
-  }}
-  } */
-`;
+const SectionContainer = styled.div``;
 
 const SectionMenuContainer = styled.div`
   a {
@@ -203,11 +181,7 @@ const SectionMenuContainer = styled.div`
 
 const Section = styled.section`
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0.3')};
-  @media (min-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
-    transition: opacity 0.2s linear 0.1s;
-    opacity: ${({ isVisible, isBeforeActive }) => (isVisible ? '1' : '0.3')};
-  }
+  transition: opacity 0.2s linear 0.1s;
 `;
 
 const getDimensions = (ele) => {
@@ -379,17 +353,7 @@ const FeatureSection = () => {
         const ele = document.getElementById(sectionID);
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
-          let offset = 0;
-          /* if (screenWidth > theme.mediaQueries.mobilePixel) {
-            const element = document
-              .getElementById('features')
-              .getBoundingClientRect();
-            offset = element.height;
-          } */
-          return (
-            scrollPosition + offset > offsetTop &&
-            scrollPosition + offset < offsetBottom
-          );
+          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
       });
 
@@ -432,7 +396,7 @@ const FeatureSection = () => {
                 className={visibleSection === s.sectionID ? 'active' : ''}
                 onClick={() => setVisibleSection(s.sectionID)}
                 style={{
-                  transition: 'opacity 0.2s linear 0.1s',
+                  transition: 'all 100ms ease-in-out',
                   borderLeft:
                     visibleSection === s.sectionID
                       ? `5px solid ${s.color}`
@@ -457,11 +421,8 @@ const FeatureSection = () => {
         <SectionsContainer id='sections-container'>
           <SectionContainer visibleSection={visibleSection}>
             {sections.map((s, i) => {
-              const isBeforeActive =
-                Number(s.sectionID) < Number(visibleSection);
               return (
                 <Section
-                  isBeforeActive={isBeforeActive}
                   isVisible={visibleSection === s.sectionID}
                   id={s.sectionID}
                   key={i}
