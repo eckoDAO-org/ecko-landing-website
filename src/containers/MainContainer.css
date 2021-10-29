@@ -24,7 +24,7 @@ p {
   content: '';
   position: absolute;
   width: 3px;
-  background: linear-gradient(to top, #ffffff 70%, #ec1bb4 70%);
+  background: linear-gradient(to top, #ffffff 68%, #ec1bb4 68%);
 
   /* background: #ffffff 0% 0% no-repeat padding-box; */
   /* box-shadow: 0 0 5px #ffffff; */
