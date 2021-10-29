@@ -18,7 +18,7 @@ const SupportList = () => {
       <HeaderItem
         disabledHover
         textRegular
-        shadowHover
+        // shadowHover
         onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
       >
         Getting Started on <br /> Kaddex
@@ -26,7 +26,7 @@ const SupportList = () => {
       <HeaderItem
         disabledHover
         textRegular
-        shadowHover
+        // shadowHover
         onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
       >
         Auditing

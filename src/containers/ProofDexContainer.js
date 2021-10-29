@@ -86,8 +86,9 @@ const ProofDexContainer = () => {
           <ProofDexCard
             title='Stake'
             description='Stake KDX and earn 0.05% of all trades'
-            link='Enter Farms'
-            customBorder='#39FCF9'
+            link='Coming soon'
+            customBorder='#CCCCCC '
+            disabled
           />
           <ProofDexCard
             title='Build'

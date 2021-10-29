@@ -846,7 +846,7 @@ const GameEditionWrapperWithButtons = () => {
             style={{ cursor: 'pointer' }}
             onClick={() =>
               window.open(
-                `https://github.com/kaddex-org/swap-v2`,
+                `https://github.com/kaddex-org`,
                 '_blank',
                 'noopener,noreferrer'
               )

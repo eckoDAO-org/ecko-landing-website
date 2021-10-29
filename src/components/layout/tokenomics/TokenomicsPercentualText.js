@@ -17,10 +17,6 @@ const TitleContainer = styled.div`
   align-items: baseline;
   flex-direction: row;
 
-  color: ${({ isMobile, textColor }) => (isMobile ? textColor : '#FFF')};
-  text-shadow: 0 0 5px
-    ${({ isMobile, textColor }) => (isMobile ? textColor : 'none')};
-
   .hover {
     color: ${({ textColor }) => (textColor ? textColor : '#FFFFFF')};
     text-shadow: 0 0 5px
@@ -62,19 +58,9 @@ const TokenomicsPercentualText = ({
   onMouseLeave,
   isHover,
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= theme.mediaQueries.mobilePixel) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, []);
   return (
     <Container>
       <TitleContainer
-        isMobile={isMobile}
         textColor={textColor}
         onMouseOver={onMouseOver}
         onMouseLeave={onMouseLeave}

@@ -163,7 +163,6 @@ const FeatureText = styled.span`
   font: normal normal medium 16px/26px ${theme.fontFamily.regular};
   letter-spacing: 0px;
   color: #ffffff;
-  text-transform: capitalize;
   margin-top: 16px;
   opacity: 1;
 `;

@@ -18,7 +18,7 @@ const LearnList = () => {
       <HeaderItem
         disabledHover
         textRegular
-        shadowHover
+        // shadowHover
         onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
       >
         Lite Paper
@@ -26,7 +26,7 @@ const LearnList = () => {
       <HeaderItem
         disabledHover
         textRegular
-        shadowHover
+        // shadowHover
         onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
       >
         FAQ

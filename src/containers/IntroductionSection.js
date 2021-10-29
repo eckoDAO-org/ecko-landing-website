@@ -98,12 +98,12 @@ const IntroductionSection = () => {
   return (
     <Container id='intro'>
       <TextContainer>
-        <Title>Kaddex: the evolution of DeFi on Kadena</Title>
+        <Title>Kaddex the evolution of DeFi on Kadena</Title>
         <SubTitle>Safe DeFi begins with our Gas free DEX</SubTitle>
         <GameEditionContainer />
       </TextContainer>
       <BottomTitle isHover={isHover}>
-        Build on{' '}
+        Built on{' '}
         <Link
           onMouseOver={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
