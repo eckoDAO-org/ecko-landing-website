@@ -69,7 +69,7 @@ const RoadmapSection = () => {
   return (
     <Container id='roadmap'>
       <RoadmapContainer className='mobile-none'>
-        <Title style={{ marginBottom: '40px' }}>Kaddex Roadmap</Title>
+        <Title>Kaddex Roadmap</Title>
         <DesktopRoadmap />
       </RoadmapContainer>
 

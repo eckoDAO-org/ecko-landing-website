@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
+  margin-top: 60px;
   top: 20%;
   display: flex;
   justify-content: center;
@@ -12,6 +13,11 @@ const Container = styled.div`
   background: transparent
     linear-gradient(90deg, #e0fffe 0%, #ecfffe 63%, #f4e7e2 85%, #fff3db 100%)
     0% 0% no-repeat padding-box;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    margin-top: 30px;
+  }
 `;
 const TitleContainer = styled.div`
   display: flex;

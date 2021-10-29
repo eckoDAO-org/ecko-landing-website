@@ -13,7 +13,7 @@ const ImageUrlWrapper = styled.div`
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     height: 100%;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   align-items: center;
 
