@@ -139,7 +139,6 @@ const ContainerTitle = styled.div`
   font: normal normal bold 48px/58px ${theme.fontFamily.bold};
   min-height: 80px;
   color: #fff;
-  z-index: 10;
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel}px`}) {
