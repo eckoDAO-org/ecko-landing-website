@@ -648,7 +648,7 @@ export const GameEditionWrapper = ({ children }) => {
             transform='translate(22.806 25.624) rotate(13)'
             fill='#e3e3e3'
             fontSize='14'
-            fontFamily='press-start-regular'
+            fontFamily='rt-regular'
             fontWeight='500'
             letterSpacing='0.01em'
           >

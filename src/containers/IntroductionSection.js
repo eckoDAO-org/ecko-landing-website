@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import Button from '../shared/Button';
 import './MainContainer.css';
 import GameEditionContainer from '../components/game-edition/GameEditionContainer';
 
@@ -52,7 +51,7 @@ const SubTitle = styled.span`
 
 const IntroductionSection = () => {
   return (
-    <Container>
+    <Container id='intro'>
       <TextContainer>
         <Title>Kaddex: the evolution of DeFi on Kadena</Title>
         <SubTitle>Safe DeFi begins with our Gas free DEX</SubTitle>

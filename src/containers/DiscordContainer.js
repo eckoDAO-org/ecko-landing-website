@@ -85,10 +85,3 @@ const DiscordContainer = () => {
 };
 
 export default DiscordContainer;
-
-{
-  /* <LinkContainer isHover={disabled ? false : isHover}>
-<Link href={hferLink || '#'}>{link}</Link>
-<div className='underline'></div>
-</LinkContainer> */
-}

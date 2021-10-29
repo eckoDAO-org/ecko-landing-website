@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
 const Item = styled.a`
   color: #ffffff;

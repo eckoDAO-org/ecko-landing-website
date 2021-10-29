@@ -251,14 +251,14 @@ const DesktopRoadmap = () => {
               fill='#fff'
             />
           </g>
-          <line
+          {/* <line
             id='Active'
-            x2='696'
+            x2='800'
             transform='translate(-12 3665.001)'
             fill='none'
             stroke='#ec1bb4'
             stroke-width='5'
-          />
+          /> */}
           <g
             id='Kaddex_Website_Refresh'
             data-name='Kaddex Website Refresh'
@@ -268,7 +268,7 @@ const DesktopRoadmap = () => {
               id='Kaddex_Website_Refresh-2'
               data-name='Kaddex Website Refresh'
               transform='translate(0.301 39.432)'
-              fill='#fff'
+              fill='#ec1bb4'
               font-size='16'
               fontFamily={theme.fontFamily.bold}
               font-weight='500'
@@ -287,7 +287,7 @@ const DesktopRoadmap = () => {
               cy='8'
               r='8'
               transform='translate(0.301 0.432)'
-              fill='#fff'
+              fill='#ec1bb4'
             />
           </g>
           <g
@@ -448,11 +448,11 @@ const DesktopRoadmap = () => {
           />
           <line
             id='Active'
-            x2='830'
+            x2='897'
             transform='translate(-12 3665.001)'
             fill='none'
             stroke='#ec1bb4'
-            stroke-width='4'
+            stroke-width='5'
           />
           {/* <line
             id='Active_2'

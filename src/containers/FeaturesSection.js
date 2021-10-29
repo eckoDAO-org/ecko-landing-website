@@ -11,7 +11,6 @@ import { ReactComponent as StakingIcon } from '../assets/images/shared/staking-f
 import { ReactComponent as GovernanceIcon } from '../assets/images/shared/governance-feature.svg';
 import theme from '../styles/theme';
 import useWindowSize from '../hooks/useWindowSize';
-import useOnScreen from '../hooks/useOnScreen';
 
 const Container = styled.div`
   display: flex;
