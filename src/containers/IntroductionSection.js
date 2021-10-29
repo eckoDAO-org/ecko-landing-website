@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import Button from '../shared/Button';
 import './MainContainer.css';
 import GameEditionContainer from '../components/game-edition/GameEditionContainer';
 

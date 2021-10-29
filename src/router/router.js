@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -8,9 +8,6 @@ import {
 import Layout from '../components/layout/Layout';
 import MainContainer from '../containers/MainContainer';
 
-// import RedeemGuide from "../modals/RedeemGuide";
-// import ConnectWalletModal from "../modals/kdaModal/ConnectWalletModal";
-// import { WalletContext } from "../contexts/WalletContext";
 import styled from 'styled-components/macro';
 
 import { ROUTE_INDEX } from './routes';
@@ -36,5 +33,4 @@ export default () => {
       </Layout>
     </Router>
   );
-  // }
 };

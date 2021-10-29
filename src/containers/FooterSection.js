@@ -34,16 +34,6 @@ const FooterContainer = styled.div`
   }
 `;
 
-const IconsContainer = styled.div`
-  display: flex;
-  margin-top: 1%;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4%;
-  width: 100%;
-`;
-
 const PrivacyElement = styled.p`
   font: normal normal normal 14px/20px montserrat-regular;
 `;
