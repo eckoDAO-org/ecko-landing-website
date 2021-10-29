@@ -9,7 +9,7 @@ const ImageUrlWrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 75vw;
-  margin-top: 114px;
+  margin-top: 104px;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     height: 100%;
@@ -28,6 +28,10 @@ const Container = styled.div`
   width: 90%;
   align-items: center;
   flex-direction: column;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 140px 0;
+  }
 `;
 
 const TitleContainer = styled.div`

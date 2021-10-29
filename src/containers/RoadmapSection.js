@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
 import DesktopRoadmap from '../components/roadmap/DesktopRoadmap';
+import theme from '../styles/theme';
 
 const Container = styled.div`
   display: flex;
@@ -22,6 +23,11 @@ const RoadmapContainer = styled.div`
   justify-content: center;
   margin-bottom: 6%;
   width: 100%;
+
+  .completed {
+    color: #ec1bb4;
+    font-weight: bold;
+  }
 `;
 
 const Title = styled.span`
@@ -39,11 +45,11 @@ const Title = styled.span`
 const RoadmapItemLeft = styled.p`
   text-align: right;
   margin-right: 40px;
-  font: normal normal normal 16px/24px montserrat-regular;
+  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 13px montserrat-regular;
+    font: normal normal normal 16px ${theme.fontFamily.bold};
     margin-left: 40px;
     text-align: left;
   }
@@ -51,11 +57,11 @@ const RoadmapItemLeft = styled.p`
 const RoadmapItemRight = styled.p`
   text-align: left;
   margin-left: 40px;
-  font: normal normal normal 16px/24px montserrat-regular;
+  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 13px montserrat-regular;
+    font: normal normal normal 16px ${theme.fontFamily.bold};
   }
 `;
 
@@ -73,19 +79,25 @@ const RoadmapSection = () => {
         </Title>
         <div class='timeline'>
           <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft>Kaddex Beta on Mainnet</RoadmapItemLeft>
+            <RoadmapItemLeft className='completed'>
+              Kaddex Beta on Mainnet
+            </RoadmapItemLeft>
           </div>
           <div class='roadmap_container_completed right'>
-            <RoadmapItemRight>1M TVL</RoadmapItemRight>
+            <RoadmapItemRight className='completed'>1,5m TVL</RoadmapItemRight>
           </div>
           <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft>Tokenomics Deep Dive</RoadmapItemLeft>
+            <RoadmapItemLeft className='completed'>
+              Tokenomics Deep Dive
+            </RoadmapItemLeft>
           </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>Kaddex Website Refresh</RoadmapItemRight>
+          <div class='roadmap_container_completed right'>
+            <RoadmapItemRight className='completed'>
+              Kaddex Website Refresh
+            </RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft>Lite Paper</RoadmapItemLeft>
+            <RoadmapItemLeft>Dex Lite Paper</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight>

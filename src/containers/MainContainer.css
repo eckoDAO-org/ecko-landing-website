@@ -24,7 +24,9 @@ p {
   content: '';
   position: absolute;
   width: 3px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: linear-gradient(to top, #ffffff 70%, #ec1bb4 70%);
+
+  /* background: #ffffff 0% 0% no-repeat padding-box; */
   /* box-shadow: 0 0 5px #ffffff; */
   top: 0;
   bottom: 0;
@@ -146,7 +148,7 @@ p {
   border-radius: 500px 0 0 500px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .timeline::after {
     left: 90px;
   }

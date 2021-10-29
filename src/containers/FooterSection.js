@@ -36,6 +36,7 @@ const FooterContainer = styled.div`
 
 const PrivacyElement = styled.p`
   font: normal normal normal 14px/20px montserrat-regular;
+  margin: 0;
 `;
 
 const FooterGrid = styled(Grid)`
@@ -53,12 +54,18 @@ const FooterBottomContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 50px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) {
+    padding: 0;
+  }
 `;
 
 const BottomContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     flex-flow: column;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +16,10 @@ const TitleContainer = styled.div`
   width: 100%;
   align-items: baseline;
   flex-direction: row;
+
+  color: ${({ isMobile, textColor }) => (isMobile ? textColor : '#FFF')};
+  text-shadow: 0 0 5px
+    ${({ isMobile, textColor }) => (isMobile ? textColor : 'none')};
 
   .hover {
     color: ${({ textColor }) => (textColor ? textColor : '#FFFFFF')};
@@ -57,9 +62,19 @@ const TokenomicsPercentualText = ({
   onMouseLeave,
   isHover,
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= theme.mediaQueries.mobilePixel) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
   return (
     <Container>
       <TitleContainer
+        isMobile={isMobile}
         textColor={textColor}
         onMouseOver={onMouseOver}
         onMouseLeave={onMouseLeave}

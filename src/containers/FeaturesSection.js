@@ -111,7 +111,7 @@ const Container = styled.div`
     display: flex;
 
     @media (min-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+        `${mediaQueries.mobilePixel + 1}px`}) {
       display: grid;
       grid-template-columns: 1.2fr 2fr;
       max-width: 100em;
@@ -135,11 +135,11 @@ const Container = styled.div`
 const ContainerTitle = styled.div`
   position: relative;
   top: 0;
+  margin-bottom: 40px;
   padding: 20px 0px;
   font: normal normal bold 48px/58px ${theme.fontFamily.bold};
   min-height: 80px;
   color: #fff;
-  z-index: 10;
 
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel}px`}) {
@@ -164,10 +164,13 @@ const FeatureText = styled.span`
   letter-spacing: 0px;
   color: #ffffff;
   text-transform: capitalize;
+  margin-top: 16px;
   opacity: 1;
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  margin-bottom: 6px;
+`;
 
 const SectionsContainer = styled.div``;
 

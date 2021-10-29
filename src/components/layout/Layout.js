@@ -16,9 +16,14 @@ const PageContent = styled.div`
 
   .sticky {
     position: fixed;
-    background-color: ${({ theme: { colors } }) => colors.purple};
+    background-color: rgba(7, 6, 16, 0.5);
     top: 0;
     width: 100%;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* background-color: rgba(255, 255, 255, 0.5);  */
+
     transition: all 0.5s ease;
     animation: smoothScrollIn 1s forwards;
   }
