@@ -148,7 +148,7 @@ p {
   border-radius: 500px 0 0 500px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .timeline::after {
     left: 90px;
   }

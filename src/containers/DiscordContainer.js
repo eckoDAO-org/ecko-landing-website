@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 74px;
   top: 20%;
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@ const Title = styled.div`
 
 const Link = styled.a`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
   color: ${({ theme: { colors } }) => colors.purpleKDX};
   margin-bottom: 0px;
@@ -74,16 +74,16 @@ const DiscordContainer = () => {
     <Container>
       <TitleContainer isHover={isHover}>
         <Title>
-          Join our{' '}
+          {' '}
           <Link
             onMouseOver={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
             href='https://discord.com/invite/QSJpHRFDcv'
             target='_blank'
           >
-            Discord<div className='underline'></div>
+            Join our Discord community
+            <div className='underline'></div>
           </Link>{' '}
-          community
         </Title>
       </TitleContainer>
     </Container>

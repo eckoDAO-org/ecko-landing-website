@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
 import GameEditionContainer from '../components/game-edition/GameEditionContainer';
+import { ArrowDownIcon } from '../assets';
 
 const Container = styled.div`
   display: flex;
@@ -49,7 +50,51 @@ const SubTitle = styled.span`
   }
 `;
 
+const BottomTitle = styled.div`
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
+  font-size: 16px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 16px !important;
+  }
+
+  color: #ffffff;
+  margin-top: 32px;
+  margin-bottom: 24px;
+
+  .underline {
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    transition: width 0.3s;
+    background: #ffffff;
+    height: 3px;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) =>
+        `${mediaQueries.mobilePixel}px`}) {
+      width: 0;
+    }
+  }
+`;
+
+const Link = styled.a`
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 0px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 16px !important;
+    text-decoration: underline;
+  }
+`;
+
 const IntroductionSection = () => {
+  const [isHover, setIsHover] = useState(false);
+
   return (
     <Container id='intro'>
       <TextContainer>
@@ -57,6 +102,20 @@ const IntroductionSection = () => {
         <SubTitle>Safe DeFi begins with our Gas free DEX</SubTitle>
         <GameEditionContainer />
       </TextContainer>
+      <BottomTitle isHover={isHover}>
+        Build on{' '}
+        <Link
+          onMouseOver={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          href='https://kadena.io/'
+          target='_blank'
+        >
+          Kadena <div className='underline'></div>
+        </Link>
+      </BottomTitle>
+      <a href='#ProofofDex'>
+        <ArrowDownIcon />
+      </a>
     </Container>
   );
 };
