@@ -20,6 +20,10 @@ const RightContainerHeader = styled.div`
 const HamburgerListContainer = styled.div`
   border-radius: 4px;
   background: #240b2f 0% 0% no-repeat padding-box;
+
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
 `;
 
 const HamburgerItem = styled.div`
@@ -95,7 +99,7 @@ const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
               <HamburgerItem
                 to='/'
                 key={index}
-                style={{ paddingBottom: 8 }}
+                // style={{ paddingBottom: 8 }}
                 onClick={() =>
                   window.open(social.link, '_blank', 'noopener,noreferrer')
                 }
