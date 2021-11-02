@@ -13,3 +13,4 @@ export { ReactComponent as GithubIcon } from './images/header/github.svg';
 export { ReactComponent as TokenomicsBackground } from './images/tokenomics/tokenomics_background.svg';
 export { ReactComponent as TokenomicsGraph } from './images/tokenomics/tokenomics_graph.svg';
 export { ReactComponent as ArrowDownIcon } from './images/shared/arrow-down-white.svg';
+export { ReactComponent as TopUpIcon } from './images/shared/go_top.svg';

@@ -4,6 +4,7 @@ import CustomParticles from './CustomParticles';
 import DesktopHeader from './header/DesktopHeader';
 import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
 import FooterSection from '../../containers/FooterSection';
+import { TopUpIcon } from '../../assets';
 
 const MainContainer = styled.div`
   display: flex;
@@ -72,9 +73,38 @@ const StripesContainer = styled.div`
   }
 `;
 
+const GoTopContainer = styled.div`
+  display: ${({ topUpIconIsVisible }) =>
+    topUpIconIsVisible ? 'block' : 'none'};
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  line-height: 0;
+  opacity: 0.8;
+
+  transition: all 0.5s ease;
+  animation: smoothOut 1s;
+
+  @keyframes smoothOut {
+    0% {
+      transform: translateY(142px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffffff;
+  }
+`;
+
 const Layout = ({ children }) => {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
   const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [topUpIconIsVisible, setTopUpIconIsVisible] = useState(false);
 
   useEffect(() => {
     const threshold = 0;
@@ -86,13 +116,18 @@ const Layout = ({ children }) => {
       const proof = document
         .getElementById('proof_of_dex')
         .getBoundingClientRect().top;
-
+      const features = document
+        .getElementById('proof_of_dex')
+        .getBoundingClientRect().top;
       if (Math.abs(scrollY - lastScrollY) < threshold) {
         ticking = false;
         return;
       }
       if (proof >= 0) setIsHeaderVisible(false);
       else setIsHeaderVisible(scrollY > lastScrollY ? false : true);
+
+      if (features >= 0) setTopUpIconIsVisible(false);
+      else setTopUpIconIsVisible(true);
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
@@ -145,6 +180,12 @@ const Layout = ({ children }) => {
           <Stripes />
         </StripesContainer>
       </PageContent>
+      <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
+        <a href='#header'>
+          <TopUpIcon />
+        </a>
+      </GoTopContainer>
+
       <FooterSection />
     </MainContainer>
   );
