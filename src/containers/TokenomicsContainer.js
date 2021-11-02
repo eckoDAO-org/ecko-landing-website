@@ -96,7 +96,11 @@ const TokenomicsContainer = () => {
     <ImageUrlWrapper
       style={{ backgroundImage: `url(${TokenomicsBackground})` }}
     >
-      <Container id='tokenomics'>
+      <Container>
+        <div
+          id='tokenomics'
+          style={{ position: 'relative', color: 'trasparent', height: 30 }}
+        ></div>
         <TitleContainer>
           <Title>Tokenomics</Title>
           <Description>
@@ -144,7 +148,7 @@ const TokenomicsContainer = () => {
               textColor='#FFA900'
               percentual='40'
               subTitle='NETWORK REWARDS'
-              description='To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX'
+              description={`To ensure highly lucrative early LP boosts Network rewards receives the largest tranche of KDX`}
             />
           </PercetualContainer>
         </ContentContainer>
