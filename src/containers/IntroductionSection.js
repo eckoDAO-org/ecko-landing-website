@@ -113,7 +113,7 @@ const IntroductionSection = () => {
           Kadena <div className='underline'></div>
         </Link>
       </BottomTitle>
-      <a href='#ProofofDex'>
+      <a href='#proof_of_dex'>
         <ArrowDownIcon />
       </a>
     </Container>

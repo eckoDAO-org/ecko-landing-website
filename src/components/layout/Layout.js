@@ -84,7 +84,7 @@ const Layout = ({ children }) => {
     const updateScrollDir = () => {
       const scrollY = window.pageYOffset;
       const proof = document
-        .getElementById('ProofofDex')
+        .getElementById('proof_of_dex')
         .getBoundingClientRect().top;
 
       if (Math.abs(scrollY - lastScrollY) < threshold) {

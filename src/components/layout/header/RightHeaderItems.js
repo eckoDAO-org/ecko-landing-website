@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeaderItem from '../../../shared/HeaderItem';
-import { HamburgerIcon, CodeIcon, DiscordIcon } from '../../../assets';
+import { HamburgerIcon } from '../../../assets';
 import { Popup } from 'semantic-ui-react';
 import { ITEM_LINKS } from '../../../constants/itemLinks';
 
