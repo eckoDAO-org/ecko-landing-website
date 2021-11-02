@@ -32,7 +32,7 @@ const RightContainer = styled.div`
   display: flex;
 `;
 
-const DesktopHeader = ({ className }) => {
+const DesktopHeader = ({ className, menuWithMarginBottom }) => {
   const history = useHistory();
 
   return (
@@ -44,7 +44,10 @@ const DesktopHeader = ({ className }) => {
         />
       </LeftContainer>
       <RightContainer>
-        <RightHeaderItems pact={[]} />
+        <RightHeaderItems
+          pact={[]}
+          menuWithMarginBottom={menuWithMarginBottom}
+        />
       </RightContainer>
     </Container>
   );

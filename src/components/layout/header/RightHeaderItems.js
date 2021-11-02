@@ -43,7 +43,7 @@ const HamburgerItem = styled.div`
   }
 `;
 
-const RightHeaderItems = ({ pact }) => {
+const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
   return (
     <RightContainerHeader>
       <HeaderItem
@@ -64,12 +64,17 @@ const RightHeaderItems = ({ pact }) => {
         Roadmap
       </HeaderItem>
 
-      <HeaderItem style={{ marginLeft: '32px' }} disabledHover>
+      <HeaderItem
+        style={{
+          marginLeft: '32px',
+        }}
+        disabledHover
+      >
         <Popup
           basic
           trigger={<HamburgerIcon />}
           on='click'
-          offset={[8, 20]}
+          offset={menuWithMarginBottom ? [8, 35] : [8, 20]}
           position='bottom right'
           style={{
             padding: 13,

@@ -134,8 +134,9 @@ const Layout = ({ children }) => {
       <PageContent>
         {IsHeaderVisible && (
           <DesktopHeader
-            IsHeaderVisible={IsHeaderVisible}
+            // IsHeaderVisible={IsHeaderVisible}
             className={IsHeaderVisible ? 'sticky' : 'out'}
+            menuWithMarginBottom
           />
         )}
         <DesktopHeader IsHeaderVisible={IsHeaderVisible} />
