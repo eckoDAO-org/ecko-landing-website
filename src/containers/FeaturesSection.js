@@ -176,6 +176,7 @@ const SectionsContainer = styled.div``;
 const SectionContainer = styled.div``;
 
 const SectionMenuContainer = styled.div`
+  cursor: pointer;
   a {
     font: normal normal bold 28px/38px ${theme.fontFamily.bold};
   }
@@ -203,7 +204,7 @@ const FeatureSection = () => {
     {
       section: 'ref1',
       id: 'ref1',
-      sectionID: '1',
+      sectionID: 'zero_gas',
       color: '#FFA900',
       title: 'Zero Gas, Forever',
       image: (
@@ -222,7 +223,7 @@ const FeatureSection = () => {
     {
       section: 'ref2',
       id: 'ref2',
-      sectionID: '2',
+      sectionID: 'best_lp',
       color: '#ED1CB5',
       title: 'The Best LPs Rewards',
       image: <BestLPsIcon style={{ width: '93px', height: '120px' }} />,
@@ -239,7 +240,7 @@ const FeatureSection = () => {
     {
       section: 'ref3',
       id: 'ref3',
-      sectionID: '3',
+      sectionID: 'fastest_settlements',
       color: '#39FFFC',
       title: 'Fastest Settlements',
       image: (
@@ -257,7 +258,7 @@ const FeatureSection = () => {
     {
       section: 'ref4',
       id: 'ref4',
-      sectionID: '4',
+      sectionID: 'DAO_powered',
       color: '#FFA900',
       title: 'DAO Powered',
       image: <DaoPowerIcon style={{ width: '183px', height: '120px' }} />,
@@ -273,7 +274,7 @@ const FeatureSection = () => {
     {
       section: 'ref5',
       id: 'ref5',
-      sectionID: '5',
+      sectionID: 'decentalized_infrastructure',
       color: '#ED1CB5',
       title: 'Decentralized Infrastructure',
       image: (
@@ -293,7 +294,7 @@ const FeatureSection = () => {
     {
       section: 'ref6',
       id: 'ref6',
-      sectionID: '6',
+      sectionID: 'multi_protocol',
       color: '#39FFFC',
       title: 'Multi-Protocol',
       image: <MultiProtocolIcon style={{ width: '211px', height: '120px' }} />,
@@ -308,7 +309,7 @@ const FeatureSection = () => {
     {
       section: 'ref7',
       id: 'ref7',
-      sectionID: '7',
+      sectionID: 'staking',
       color: '#FFA900',
       title: 'Staking',
       image: <StakingIcon style={{ width: '76px', height: '120px' }} />,
@@ -323,7 +324,7 @@ const FeatureSection = () => {
     {
       section: 'ref8',
       id: 'ref8',
-      sectionID: '8',
+      sectionID: 'governance',
       color: '#ED1CB5',
       title: 'Governance',
       image: <GovernanceIcon style={{ width: '140px', height: '120px' }} />,
@@ -392,30 +393,32 @@ const FeatureSection = () => {
         <nav class='section-nav' id='section-nav'>
           {sections.map((s, i) => {
             return (
-              <SectionMenuContainer
-                key={i}
-                color={s.color}
-                className={visibleSection === s.sectionID ? 'active' : ''}
-                onClick={() => setVisibleSection(s.sectionID)}
-                style={{
-                  transition: 'all 100ms ease-in-out',
-                  borderLeft:
-                    visibleSection === s.sectionID
-                      ? `5px solid ${s.color}`
-                      : '3.5px solid #ffffff60',
-                }}
-              >
-                <a
-                  href={`#${s.sectionID}`}
+              <a href={`#${s.sectionID}`} style={{ padding: 0 }}>
+                <SectionMenuContainer
+                  key={i}
+                  color={s.color}
+                  className={visibleSection === s.sectionID ? 'active' : ''}
+                  onClick={() => setVisibleSection(s.sectionID)}
                   style={{
-                    whiteSpace: 'nowrap',
-                    color:
-                      visibleSection === s.sectionID ? s.color : '#FFFFFF60',
+                    transition: 'all 100ms ease-in-out',
+                    borderLeft:
+                      visibleSection === s.sectionID
+                        ? `5px solid ${s.color}`
+                        : '3.5px solid #ffffff60',
                   }}
                 >
-                  {s.title}
-                </a>
-              </SectionMenuContainer>
+                  <a
+                    href={`#${s.sectionID}`}
+                    style={{
+                      whiteSpace: 'nowrap',
+                      color:
+                        visibleSection === s.sectionID ? s.color : '#FFFFFF60',
+                    }}
+                  >
+                    {s.title}
+                  </a>
+                </SectionMenuContainer>
+              </a>
             );
           })}
         </nav>

@@ -61,7 +61,7 @@ const GridRow = styled.div`
 
 const ProofDexContainer = () => {
   return (
-    <Container id='ProofofDex'>
+    <Container id='proof_of_dex'>
       <TitleContainer>
         <Title>The most powerful Proof of Work DEX</Title>
       </TitleContainer>

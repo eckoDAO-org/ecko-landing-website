@@ -23,7 +23,7 @@ const AboutList = () => {
       >
         Documentation
       </HeaderItem>
-      <HeaderItem disabledHover textRegular shadowHover href='/#ProofofDex'>
+      <HeaderItem disabledHover textRegular shadowHover href='/#proof_of_dex'>
         The most powerful
         <br /> Proof of Work DEX
       </HeaderItem>

@@ -783,6 +783,14 @@ const GameEditionWrapperWithButtons = () => {
           id='Group_68508'
           data-name='Group 68508'
           transform='translate(94 48.348)'
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://swap.kaddex.com`,
+              '_blank',
+              'noopener,noreferrer'
+            )
+          }
         >
           <g
             id='Rectangle_25'
@@ -804,14 +812,6 @@ const GameEditionWrapperWithButtons = () => {
             font-size='12'
             fontFamily='press-start-regular'
             letter-spacing='0.1em'
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://swap.kaddex.com`,
-                '_blank',
-                'noopener,noreferrer'
-              )
-            }
           >
             <tspan x='-65.4' y='0'>
               Launch App
@@ -822,6 +822,14 @@ const GameEditionWrapperWithButtons = () => {
           id='Group_68509'
           data-name='Group 68509'
           transform='translate(94 100.348)'
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://github.com/kaddex-org`,
+              '_blank',
+              'noopener,noreferrer'
+            )
+          }
         >
           <g
             id='Rectangle_25-2'
@@ -843,14 +851,6 @@ const GameEditionWrapperWithButtons = () => {
             fontSize='12'
             fontFamily='press-start-regular'
             letterSpacing='0.1em'
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://github.com/kaddex-org`,
-                '_blank',
-                'noopener,noreferrer'
-              )
-            }
           >
             <tspan x='-58.8' y='0'>
               Read Docs

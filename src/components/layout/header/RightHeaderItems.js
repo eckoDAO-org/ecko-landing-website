@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeaderItem from '../../../shared/HeaderItem';
-import { HamburgerIcon, CodeIcon, DiscordIcon } from '../../../assets';
+import { HamburgerIcon } from '../../../assets';
 import { Popup } from 'semantic-ui-react';
 import { ITEM_LINKS } from '../../../constants/itemLinks';
+import theme from '../../../styles/theme';
 
 const RightContainerHeader = styled.div`
   display: flex;
@@ -19,6 +20,10 @@ const RightContainerHeader = styled.div`
 const HamburgerListContainer = styled.div`
   border-radius: 4px;
   background: #240b2f 0% 0% no-repeat padding-box;
+
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
 `;
 
 const HamburgerItem = styled.div`
@@ -43,7 +48,7 @@ const HamburgerItem = styled.div`
   }
 `;
 
-const RightHeaderItems = ({ pact }) => {
+const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
   return (
     <RightContainerHeader>
       <HeaderItem
@@ -64,7 +69,12 @@ const RightHeaderItems = ({ pact }) => {
         Roadmap
       </HeaderItem>
 
-      <HeaderItem style={{ marginLeft: '32px' }} disabledHover>
+      <HeaderItem
+        style={{
+          marginLeft: '32px',
+        }}
+        disabledHover
+      >
         <Popup
           basic
           trigger={<HamburgerIcon />}
@@ -72,11 +82,16 @@ const RightHeaderItems = ({ pact }) => {
           offset={[8, 20]}
           position='bottom right'
           style={{
-            padding: 13,
+            padding: 16,
             background: '#240B2F 0% 0% no-repeat padding-box',
             border: '2px solid #FFFFFF',
             boxShadow: '0 0 5px #FFFFFF',
             borderRadius: '10px',
+            marginTop: menuWithMarginBottom
+              ? window.innerWidth <= theme.mediaQueries.mobilePixel
+                ? '1em'
+                : '2em'
+              : '0',
           }}
         >
           <HamburgerListContainer>
@@ -84,7 +99,7 @@ const RightHeaderItems = ({ pact }) => {
               <HamburgerItem
                 to='/'
                 key={index}
-                style={{ paddingBottom: 9 }}
+                // style={{ paddingBottom: 8 }}
                 onClick={() =>
                   window.open(social.link, '_blank', 'noopener,noreferrer')
                 }
