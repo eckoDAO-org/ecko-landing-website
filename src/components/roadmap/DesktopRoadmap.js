@@ -122,7 +122,10 @@ const DesktopRoadmap = () => {
               font-weight='500'
             >
               <tspan x='0' y='0'>
-                DEX Whitepaper
+                Whitepaper
+              </tspan>
+              <tspan x='0' y='26'>
+                Lite Paper
               </tspan>
             </text>
             <circle
@@ -136,39 +139,9 @@ const DesktopRoadmap = () => {
             />
           </g>
           <g
-            id='Institutional_Collaboration'
-            data-name='Institutional  Collaboration'
-            transform='translate(274 3791.001)'
-          >
-            <text
-              id='Institutional_Collaboration-2'
-              data-name='Institutional  Collaboration'
-              transform='translate(0 39)'
-              fill='#fff'
-              font-size='16'
-              fontFamily={theme.fontFamily.bold}
-              font-weight='500'
-            >
-              <tspan x='0' y='0'>
-                Institutional{' '}
-              </tspan>
-              <tspan x='0' y='26'>
-                Collaboration
-              </tspan>
-            </text>
-            <circle
-              id='Circle-5'
-              data-name='Circle'
-              cx='8'
-              cy='8'
-              r='8'
-              fill='#fff'
-            />
-          </g>
-          <g
             id='Code_Auditing'
             data-name='Code Auditing'
-            transform='translate(457 3791.001)'
+            transform='translate(274 3791.001)'
           >
             <text
               id='Code_Auditing-2'
@@ -184,7 +157,7 @@ const DesktopRoadmap = () => {
               </tspan>
             </text>
             <circle
-              id='Circle-6'
+              id='Circle-5'
               data-name='Circle'
               cx='8'
               cy='8'
@@ -195,12 +168,12 @@ const DesktopRoadmap = () => {
           <g
             id='Native_and_Bridged_ERC-20_Token_Pairs'
             data-name='Native and Bridged  ERC-20 Token Pairs'
-            transform='translate(648.43 3790.591)'
+            transform='translate(457 3791.001)'
           >
             <text
               id='Native_and_Bridged_ERC-20_Token_Pairs-2'
               data-name='Native and Bridged  ERC-20 Token Pairs'
-              transform='translate(-0.43 39.41)'
+              transform='translate(0 39)'
               fill='#fff'
               font-size='16'
               fontFamily={theme.fontFamily.bold}
@@ -214,6 +187,36 @@ const DesktopRoadmap = () => {
               </tspan>
             </text>
             <circle
+              id='Circle-6'
+              data-name='Circle'
+              cx='8'
+              cy='8'
+              r='8'
+              fill='#fff'
+            />
+          </g>
+          <g
+            id='X-wallet_by_kaddex'
+            data-name='X Wallet by Kaddex'
+            transform='translate(690 3790.591)'
+          >
+            <text
+              id='X-wallet_by_kaddex-2'
+              data-name='X Wallet by Kaddex'
+              transform='translate(-0.43 39.41)'
+              fill='#fff'
+              font-size='16'
+              fontFamily={theme.fontFamily.bold}
+              font-weight='500'
+            >
+              <tspan x='0' y='0'>
+                X Wallet
+              </tspan>
+              <tspan x='0' y='26'>
+                by Kaddex
+              </tspan>
+            </text>
+            <circle
               id='Circle-7'
               data-name='Circle'
               cx='8'
@@ -223,14 +226,15 @@ const DesktopRoadmap = () => {
               fill='#fff'
             />
           </g>
+          {/* STAKING PROGRAMME */}
           <g
-            id='DEX_Lite_Paper'
-            data-name='DEX Lite Paper'
-            transform='translate(922.525 3790.591)'
+            id='Staking_programme'
+            data-name='Staking Programme'
+            transform='translate(880 3790.591)'
           >
             <text
-              id='DEX_Lite_Paper-2'
-              data-name='DEX Lite Paper'
+              id='Staking_programme'
+              data-name='Staking Programme'
               transform='translate(82.475 39.408)'
               fill='#fff'
               font-size='16'
@@ -238,8 +242,9 @@ const DesktopRoadmap = () => {
               font-weight='500'
             >
               <tspan x='-121' y='0'>
-                DEX Lite Paper
+                Staking Programme
               </tspan>
+              <tspan x='-121' y='26'></tspan>
             </text>
             <circle
               id='Circle-8'
