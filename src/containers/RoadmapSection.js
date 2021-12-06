@@ -67,8 +67,12 @@ const RoadmapItemRight = styled.p`
 
 const RoadmapSection = () => {
   return (
-    <Container id='roadmap'>
+    <Container>
       <RoadmapContainer className='mobile-none'>
+        <div
+          id='roadmap'
+          style={{ position: 'relative', color: 'trasparent', height: 50 }}
+        ></div>
         <Title>Kaddex Roadmap</Title>
         <DesktopRoadmap />
       </RoadmapContainer>
@@ -97,7 +101,10 @@ const RoadmapSection = () => {
             </RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft>Dex Lite Paper</RoadmapItemLeft>
+            <RoadmapItemLeft>Staking programme</RoadmapItemLeft>
+          </div>
+          <div class='roadmap_container right'>
+            <RoadmapItemRight>X Wallet by Kaddex</RoadmapItemRight>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight>
@@ -107,11 +114,8 @@ const RoadmapSection = () => {
           <div class='roadmap_container right'>
             <RoadmapItemRight>Code Auditing</RoadmapItemRight>
           </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>Institutional Collaboration</RoadmapItemRight>
-          </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft>DEX Whitepaper</RoadmapItemLeft>
+            <RoadmapItemLeft>Whitepaper & Lite Paper</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight>Pre Launch Public Sale</RoadmapItemRight>
