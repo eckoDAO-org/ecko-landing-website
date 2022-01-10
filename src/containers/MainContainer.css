@@ -12,7 +12,7 @@ p {
   color: #fff;
 }
 
-.timeline {
+.timeline_2021 {
   position: relative;
   width: 100%;
   max-width: 1140px;
@@ -20,7 +20,7 @@ p {
   padding: 15px 0;
 }
 
-.timeline::after {
+.timeline_2021::after {
   content: '';
   position: absolute;
   width: 3px;
@@ -149,7 +149,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .timeline::after {
+  .timeline_2021::after {
     left: 90px;
   }
 
