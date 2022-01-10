@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components/macro';
+import React, { useState } from "react";
+import styled from "styled-components/macro";
 
 const Item = styled.a`
   color: #ffffff;
@@ -12,11 +12,11 @@ const Item = styled.a`
     textRegular ? fontFamily.regular : fontFamily.bold};
 
   &:hover {
-    text-shadow: ${({ shadowHover }) => shadowHover && '0 0 5px #ffffff'};
+    text-shadow: ${({ shadowHover }) => shadowHover && "0 0 5px #ffffff"};
   }
 
   .underline {
-    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    width: ${({ isHover }) => (isHover ? "100%" : 0)};
     transition: width 0.3s;
     background: #fff;
     height: 3px;
@@ -26,6 +26,7 @@ const HeaderItem = ({
   id,
   className,
   href,
+  target,
   children,
   disabledHover,
   style,
@@ -39,6 +40,7 @@ const HeaderItem = ({
       id={id}
       className={className}
       href={href}
+      target={target}
       isHover={disabledHover ? false : isHover}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
@@ -48,7 +50,7 @@ const HeaderItem = ({
     >
       <>
         {children}
-        {!disabledHover && <div className='underline'></div>}
+        {!disabledHover && <div className="underline"></div>}
       </>
     </Item>
   );
