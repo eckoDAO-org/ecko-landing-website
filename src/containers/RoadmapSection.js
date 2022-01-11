@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
-import theme from '../styles/theme';
 import RoadmapTabs from '../components/roadmap/RoadmapTabs';
 import MobileRoadmapTabs from '../components/roadmap/MobileRoadmapTabs';
-import { TokenomicsRing2 } from '../assets';
 
 const Container = styled.div`
   display: flex;
@@ -44,28 +42,6 @@ const Title = styled.span`
   }
 `;
 
-const RoadmapItemLeft = styled.p`
-  text-align: right;
-  margin-right: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-    margin-left: 40px;
-    text-align: left;
-  }
-`;
-const RoadmapItemRight = styled.p`
-  text-align: left;
-  margin-left: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-  }
-`;
 
 const RoadmapSection = () => {
   return (

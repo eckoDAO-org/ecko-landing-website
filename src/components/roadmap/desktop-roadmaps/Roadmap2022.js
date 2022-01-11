@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { TokenomicsRing2 } from '../../../assets';
+
 import theme from '../../../styles/theme';
 
 const Container = styled.div`
@@ -16,6 +17,9 @@ const Roadmap2022 = () => {
             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1800.837" height="600.157" viewBox="0 0 1291.837 369.157">
 
             <g id="_2022" dataName="2022" transform="translate(12 -3656.001)">
+                <g id="ring" transform="translate(230 3920)" >
+                    <TokenomicsRing2/>
+                </g>
                 <g id="Roadmap_2022" dataName="Roadmap 2022">
                 <path id="Roadmap_line" d="M-6091.943-1552.257h812.456a49.9,49.9,0,0,0,49.773-49.9v-35.175a49.9,49.9,0,0,0-49.773-49.9h-1046.4l1046.4.332a49.563,49.563,0,0,1,49.441,49.573v35.175a49.563,49.563,0,0,1-49.441,49.573h-812.456a49.9,49.9,0,0,0-49.771,49.9v38.539a49.9,49.9,0,0,0,49.771,49.9h1047.065l-1047.065-.332a49.563,49.563,0,0,1-49.441-49.573v-38.539A49.563,49.563,0,0,1-6091.943-1552.257Z" transform="translate(6324.714 5352.241)" fill="none" stroke="#fff" stroke-width="4"/>
                 </g>
@@ -27,9 +31,7 @@ const Roadmap2022 = () => {
                 <text id="Transition_to_a_DAO-4" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Lending &amp; borrowing </tspan><tspan x="0" y="41">functionalities</tspan></text>
                 <circle id="Circle-2" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill="#fff"/>
                 </g>
-                <g id="ring" transform="translate(230 3920)">
-                 <TokenomicsRing2/>
-                </g>
+
                 <g id="kaddex-v1-svg" dataName="DEX Whitepaper" transform="translate(274.317 3928.083)">
                 <text id="DEX_Whitepaper-2" dataName="DEX Whitepaper" transform="translate(-4.317 28.918)" fill="#fff" fontSize="16" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="15" xmlSpace="preserve">Kaddex v1  </tspan><tspan x="0" y="41">full launch</tspan></text>
                 <circle id="Circle-3" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-4.316 0.918)" fill="#fff"/>

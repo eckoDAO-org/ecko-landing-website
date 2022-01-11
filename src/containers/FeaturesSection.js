@@ -315,9 +315,8 @@ const FeatureSection = () => {
       image: <StakingIcon style={{ width: '76px', height: '120px' }} />,
       text: (
         <span>
-          KDX Stakers will earn 0.05% of all swaps happening on Kaddex, giving
-          holders a simple way to earn passive income while still participating
-          in governance.
+         KDX Stakers will earn 0.05% of all swaps happening on Kaddex, 
+         giving holders a simple way to earn passive income while still participating in governance.
         </span>
       ),
     },

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import  TokenomicsRing  from '../../../assets/images/tokenomics/tokenomics_ring.svg';
+import  TokenomicsRing  from '../../../assets/images/tokenomics/token_ring_2.svg';
 import theme from '../../../styles/theme';
 
 const RoadmapContainer = styled.div`
