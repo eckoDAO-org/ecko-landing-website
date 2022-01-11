@@ -385,7 +385,11 @@ const FeatureSection = () => {
       sectionNavHeight={sectionNavHeight}
       ref={ref}
     >
-      <ContainerTitle id='features' isSafari={isSafari}>
+        <div
+          id='features'
+          style={{ position: 'relative', color: 'trasparent', height: 100 }}
+        ></div>
+      <ContainerTitle isSafari={isSafari}>
         Unique Features
       </ContainerTitle>
       <main>

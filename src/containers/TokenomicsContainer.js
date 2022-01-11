@@ -99,7 +99,7 @@ const TokenomicsContainer = () => {
       <Container>
         <div
           id='tokenomics'
-          style={{ position: 'relative', color: 'trasparent', height: 20 }}
+          style={{ position: 'relative', color: 'trasparent', height: 100 }}
         ></div>
         <TitleContainer>
           <Title>Tokenomics</Title>
