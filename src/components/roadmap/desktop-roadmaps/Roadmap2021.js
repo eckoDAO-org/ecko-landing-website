@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TokenomicsRing2 } from '../../../assets';
 import theme from '../../../styles/theme';
 
 const Container = styled.div`

@@ -82,10 +82,6 @@ const GoTopContainer = styled.div`
   line-height: 0;
   opacity: 0.8;
 
-  .disabled-link {
-  pointer-events: none;
-}
-
   transition: all 0.5s ease;
   animation: smoothOut 1s;
 
@@ -105,11 +101,20 @@ const GoTopContainer = styled.div`
   }
 `;
 
+const ButtonIcon = styled("button")`
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+`;
+
+
 const Layout = ({ children }) => {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
   const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
   const [topUpIconIsVisible, setTopUpIconIsVisible] = useState(false);
-  const [linkClicked, setLinkClicked] = useState(false);
   
 
   useEffect(() => {
@@ -132,10 +137,7 @@ const Layout = ({ children }) => {
       if (proof >= 0) setIsHeaderVisible(false);
       else setIsHeaderVisible(scrollY > lastScrollY ? false : true);
 
-      if (features >= 0){ 
-        setTopUpIconIsVisible(false)
-        setLinkClicked(false)
-      }
+      if (features >= 0) setTopUpIconIsVisible(false)
       else setTopUpIconIsVisible(true);
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
@@ -172,6 +174,13 @@ const Layout = ({ children }) => {
     }
   };
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <MainContainer id='main-container'>
       <CustomParticles />
@@ -190,9 +199,9 @@ const Layout = ({ children }) => {
         </StripesContainer>
       </PageContent>
       <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
-        <a href='#header' onClick={()=>{setLinkClicked(true)}} className={linkClicked ? 'disabled-link' : ''} >
+      <ButtonIcon onClick={goToTop}>
           <TopUpIcon />
-        </a>
+        </ButtonIcon>
       </GoTopContainer>
 
       <FooterSection />

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import theme from '../../../styles/theme';
 
 const Container = styled.div`
   display: flex;
