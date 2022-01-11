@@ -152,7 +152,6 @@ const Layout = ({ children }) => {
     };
 
     window.addEventListener('scroll', onScroll);
-    // console.log(IsHeaderVisible);
 
     return () => window.removeEventListener('scroll', onScroll);
   }, [IsHeaderVisible]);

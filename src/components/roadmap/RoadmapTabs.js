@@ -63,7 +63,7 @@ const RoadmapTabs = () => {
       ]
       
         return(
-        <RoadMapTab menu={{ text: true }} panes={panes} defaultActiveIndex={0} onTabChange={(data)=>console.log(data)}/>
+        <RoadMapTab menu={{ text: true }} panes={panes} defaultActiveIndex={1} />
         )
 }
 

@@ -14,7 +14,7 @@ const Container = styled.div`
 const Roadmap2022 = () => {
     return (
         <Container>   
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1800.837" height="600.157" viewBox="0 0 1291.837 369.157">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1800.837" height="550" viewBox="0 0 1291.837 369.157">
 
             <g id="_2022" dataName="2022" transform="translate(12 -3656.001)">
                 <g id="ring" transform="translate(230 3920)" >

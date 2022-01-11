@@ -6,13 +6,14 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
+  margin-bottom:100px;
 `;
 
 
 const Ongoing = () => {
     return (
         <Container>
-            <svg xmlns="http://www.w3.org/2000/svg" width="3000.823" height="203.157" viewBox="0 0 1288.823 69">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3000.823" height="200.157" viewBox="0 0 1288.823 69">
   <g id="ONGOING" transform="translate(1.172 -3656.001)">
   <line id="Active" x2="8000" transform="translate(-700 3665.001)" fill="none" stroke="#FFF" stroke-width="5"/>
 

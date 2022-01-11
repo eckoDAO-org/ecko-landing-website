@@ -19,7 +19,7 @@ const Container = styled.div`
 const Roadmap2021 = () => {
     return (
         <Container>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="369" viewBox="0 0 1109 369">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="555.157" viewBox="0 0 1109 369">
 
                 <g id="_2021" data-name="2021" transform="translate(12 -3656.001)">
                     <path id="Roadmap_line" d="M-6331.943-1552.257h1052.456a49.9,49.9,0,0,0,49.773-49.9v-35.175a49.9,49.9,0,0,0-49.773-49.9h-1046.4l1046.4.332a49.563,49.563,0,0,1,49.441,49.573v35.175a49.563,49.563,0,0,1-49.441,49.573C-6119.387-1552.589-6359.205-1552.257-6331.943-1552.257Z" transform="translate(6324.714 5352.241)" fill="none" stroke="#ec1bb4" stroke-width="4"/>
