@@ -82,6 +82,10 @@ const GoTopContainer = styled.div`
   line-height: 0;
   opacity: 0.8;
 
+  .disabled-link {
+  pointer-events: none;
+}
+
   transition: all 0.5s ease;
   animation: smoothOut 1s;
 
@@ -105,6 +109,8 @@ const Layout = ({ children }) => {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
   const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
   const [topUpIconIsVisible, setTopUpIconIsVisible] = useState(false);
+  const [linkClicked, setLinkClicked] = useState(false);
+  
 
   useEffect(() => {
     const threshold = 0;
@@ -126,7 +132,10 @@ const Layout = ({ children }) => {
       if (proof >= 0) setIsHeaderVisible(false);
       else setIsHeaderVisible(scrollY > lastScrollY ? false : true);
 
-      if (features >= 0) setTopUpIconIsVisible(false);
+      if (features >= 0){ 
+        setTopUpIconIsVisible(false)
+        setLinkClicked(false)
+      }
       else setTopUpIconIsVisible(true);
 
       lastScrollY = scrollY > 0 ? scrollY : 0;
@@ -181,7 +190,7 @@ const Layout = ({ children }) => {
         </StripesContainer>
       </PageContent>
       <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
-        <a href='#header'>
+        <a href='#header' onClick={()=>{setLinkClicked(true)}} className={linkClicked ? 'disabled-link' : ''} >
           <TopUpIcon />
         </a>
       </GoTopContainer>

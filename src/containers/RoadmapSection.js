@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
-import DesktopRoadmap from '../components/roadmap/DesktopRoadmap';
-import theme from '../styles/theme';
+import RoadmapTabs from '../components/roadmap/RoadmapTabs';
+import MobileRoadmapTabs from '../components/roadmap/MobileRoadmapTabs';
 
 const Container = styled.div`
   display: flex;
@@ -42,28 +42,6 @@ const Title = styled.span`
   }
 `;
 
-const RoadmapItemLeft = styled.p`
-  text-align: right;
-  margin-right: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-    margin-left: 40px;
-    text-align: left;
-  }
-`;
-const RoadmapItemRight = styled.p`
-  text-align: left;
-  margin-left: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-  }
-`;
 
 const RoadmapSection = () => {
   return (
@@ -74,60 +52,18 @@ const RoadmapSection = () => {
           style={{ position: 'relative', color: 'trasparent', height: 50 }}
         ></div>
         <Title>Kaddex Roadmap</Title>
-        <DesktopRoadmap />
+        <RoadmapTabs/>
       </RoadmapContainer>
-
       <RoadmapContainer className='desktop-none'>
         <Title style={{ marginBottom: '40px', marginTop: '20%' }}>
           Roadmap 2021
         </Title>
-        <div class='timeline'>
-          <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft className='completed'>
-              Kaddex Beta on Mainnet
-            </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container_completed right'>
-            <RoadmapItemRight className='completed'>1,5m TVL</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft className='completed'>
-              Tokenomics Deep Dive
-            </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container_completed right'>
-            <RoadmapItemRight className='completed'>
-              Kaddex Website Refresh
-            </RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft>Staking programme</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>X Wallet by Kaddex</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>
-              Native and Bridged ERC-20 Token Pairs
-            </RoadmapItemRight>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>Code Auditing</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft>Whitepaper & Lite Paper</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>Pre Launch Public Sale</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft>Kaddex Full Launch on Mainnet</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft>Transition to a DAO</RoadmapItemLeft>
-          </div>
-        </div>
+        <MobileRoadmapTabs/>
+
+
       </RoadmapContainer>
+
+
     </Container>
   );
 };

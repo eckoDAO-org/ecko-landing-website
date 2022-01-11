@@ -99,15 +99,14 @@ const TokenomicsContainer = () => {
       <Container>
         <div
           id='tokenomics'
-          style={{ position: 'relative', color: 'trasparent', height: 20 }}
+          style={{ position: 'relative', color: 'trasparent', height: 100 }}
         ></div>
         <TitleContainer>
           <Title>Tokenomics</Title>
           <Description>
-            KDX has a fixed supply of a 100 millions tokens. The KDX Token is
-            used to incentivize all the liquidity stakeholders on the Kaddex
-            platform, while also rewarding its holders for supporting the
-            network.
+          KDX has a fixed supply of a 1,000,000,000.00 tokens.
+           The KDX Token is used to incentivize all the liquidity stakeholders on the Kaddex platform,
+            while also rewarding its holders for supporting the network.
           </Description>
         </TitleContainer>
         <ContentContainer>
@@ -121,7 +120,7 @@ const TokenomicsContainer = () => {
               onMouseLeave={() => setIsHover(null)}
               percentual='5'
               subTitle='TEAM'
-              description='Team tokens will only account for 5% of the total KDX supply, on a 2 year lockup.'
+              description='Team tokens will only account for 5% of the total KDX supply, on a 4 years vesting schedule.'
             />
             <TokenomicsPercentualText
               isHover={isHover}
@@ -130,7 +129,7 @@ const TokenomicsContainer = () => {
               textColor='#39FFFC'
               percentual='30'
               subTitle='COMMUNITY SALES'
-              description='The token sales will finance operations of the Kaddex team, and offer early supporters discounts on KDX.'
+              description='The token sales will finance operations of the Kaddex team, and offer early access to KDX.'
             />
             <TokenomicsPercentualText
               isHover={isHover}
@@ -139,7 +138,7 @@ const TokenomicsContainer = () => {
               textColor='#ED1CB5'
               percentual='25'
               subTitle='COMMUNITY REWARDS'
-              description='Pursuing a long term vision, the DAO will be allocated 25% of tokens to ensure community led development of the Kaddex ecosystem'
+              description='Pursuing a long term vision, the DAO will be allocated 25% of tokens to ensure community led development of the Kaddex ecosystem.'
             />
             <TokenomicsPercentualText
               isHover={isHover}
@@ -148,7 +147,7 @@ const TokenomicsContainer = () => {
               textColor='#FFA900'
               percentual='40'
               subTitle='NETWORK REWARDS'
-              description={`To ensure highly lucrative early LP boosts Network rewards receives the largest tranche of KDX`}
+              description={`To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.`}
             />
           </PercetualContainer>
         </ContentContainer>
