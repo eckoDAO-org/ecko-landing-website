@@ -7,6 +7,7 @@ import FeatureSection from './FeaturesSection';
 import ProofDexContainer from './ProofDexContainer';
 import DiscordContainer from './DiscordContainer';
 import TokenomicsContainer from './TokenomicsContainer';
+import PartnershipSection from './PartnershipSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ const MainContainer = () => {
       <DiscordContainer />
       <TokenomicsContainer />
       <RoadmapSection />
+      <PartnershipSection/>
     </OuterContainer>
   );
 };

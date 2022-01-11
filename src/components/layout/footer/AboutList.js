@@ -36,6 +36,9 @@ const AboutList = () => {
       <HeaderItem disabledHover shadowHover textRegular href="/#roadmap">
         Kaddex Roadmap
       </HeaderItem>
+      <HeaderItem disabledHover shadowHover textRegular href="/#partnership">
+        Partnership
+      </HeaderItem>
       <HeaderItem
         disabledHover
         shadowHover

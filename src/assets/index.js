@@ -17,3 +17,28 @@ export { ReactComponent as TokenomicsRing2 } from './images/tokenomics/token_rin
 export { ReactComponent as ArrowDownIcon } from './images/shared/arrow-down-white.svg';
 export { ReactComponent as TopUpIcon } from './images/shared/go_top.svg';
 
+//PARTNER
+
+export { ReactComponent as OVCsLogo } from './images/partner/0VCs.svg';
+export { ReactComponent as ARLogo } from './images/partner/AR.svg';
+export { ReactComponent as DefinerLogo } from './images/partner/Definer.svg';
+export { ReactComponent as FluxLogo } from './images/partner/flux.svg';
+export { ReactComponent as GenesisBlockLogo } from './images/partner/Genesis Block.svg';
+export { ReactComponent as HypercentLogo } from './images/partner/hypercent.svg';
+export { ReactComponent as RoboswapLogo } from './images/partner/Roboswap.svg';
+export { ReactComponent as SpotLogo } from './images/partner/Spot.svg';
+export { ReactComponent as TokensoftLogo } from './images/partner/Tokensoft.svg';
+export { ReactComponent as UfoGamingLogo } from './images/partner/Ufo Gaming.svg';
+export { ReactComponent as ZelcoreLogo } from './images/partner/ZelCore-Round.svg';
+
+
+
+
+
+
+
+
+
+
+
+

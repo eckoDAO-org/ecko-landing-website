@@ -53,7 +53,7 @@ const Container = styled.div`
   /* Sidebar Navigation */
   .section-nav {
     ${({ screenHeight, sectionNavHeight }) => {
-      if (screenHeight < sectionNavHeight + 200) {
+      if (screenHeight < sectionNavHeight + 230) {
         return css`
           padding-left: 180px;
         `;
@@ -276,7 +276,7 @@ const FeatureSection = () => {
       id: 'ref5',
       sectionID: 'decentalized_infrastructure',
       color: '#ED1CB5',
-      title: 'Decentralized Infrastructure',
+      title: `Decentralized Infrastructure`,
       image: (
         <DecentralizedInfrastructureIcon
           style={{ width: '99px', height: '120px' }}
@@ -413,7 +413,6 @@ const FeatureSection = () => {
                   <a
                     href={`#${s.sectionID}`}
                     style={{
-                      whiteSpace: 'nowrap',
                       color:
                         visibleSection === s.sectionID ? s.color : '#FFFFFF60',
                     }}
