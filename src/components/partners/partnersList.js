@@ -123,8 +123,9 @@ export const partnersList = [
     image: <ZelcoreLogo />,
     text: (
       <span>
-        Zelcore will empower true Decentralization of Kaddex by providing a
-        decentralized computing network.
+        Zelcore will help bridge Kadena network tokens with a non-custodial
+        multi-asset platform, it will also connect directly to Kaddex dAPP to
+        provide easy-to-use user experience.
       </span>
     ),
   },
