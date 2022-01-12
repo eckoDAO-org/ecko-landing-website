@@ -65,9 +65,17 @@ const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
       >
         Tokenomics
       </HeaderItem>
-      <HeaderItem className='mobile-none' href='/#roadmap' style={{ marginRight: 24 }}
->
+      <HeaderItem className='mobile-none' 
+        href='/#roadmap' 
+        style={{ marginRight: 24 }}
+      >
         Roadmap
+      </HeaderItem>
+      <HeaderItem className='mobile-none'
+       href='/#partnership' 
+       style={{ marginRight: 24 }}
+>
+        Partnership
       </HeaderItem>
       <HeaderItem
         className="mobile-none"

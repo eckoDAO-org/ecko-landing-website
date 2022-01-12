@@ -1,0 +1,11 @@
+<svg id="Flux" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <g id="Group_68514" data-name="Group 68514" transform="translate(0 0)">
+    <path id="Path_81" data-name="Path 81" d="M72.49,26.3A60.279,60.279,0,0,1,132.1,86.69c0,33.117-27.273,59.61-60.39,59.61-32.727-.39-59.61-26.883-59.61-60C12.1,52.793,38.983,26.3,72.49,26.3Z" transform="translate(-12.1 -26.3)" fill="#2b61d1"/>
+    <g id="Group_179" data-name="Group 179" transform="translate(28.437 22.363)">
+      <path id="Path_73" data-name="Path 73" d="M44.9,56.6l-6.779,3.766L23.811,52.081l6.4-3.766h.377Z" transform="translate(-6.11 14.204)" fill="#fff"/>
+      <path id="Path_74" data-name="Path 74" d="M82.86,50.923v7.532L68.925,50.169l-3.766-2.26-3.766,2.26-17.7,10.169L39.925,62.6v4.519l-6.779-4.143-3.766-2.26-3.766,2.26-6.4,3.766V50.169L51.224,31.715Z" transform="translate(-18.834 -31.715)" fill="#fff"/>
+      <path id="Path_75" data-name="Path 75" d="M62.113,48.684V69.4l-17.7,10.169h0L26.711,69.4V48.684l17.7-10.169Z" transform="translate(1.912 -12.905)" fill="#fff"/>
+      <path id="Path_76" data-name="Path 76" d="M39.449,47.941V59.616L29.28,65.642,19.111,59.616V47.941L29.28,41.915Z" transform="translate(-19.111 -3.5)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

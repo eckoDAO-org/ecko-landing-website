@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="153.205" height="120" viewBox="0 0 153.205 120">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.995" y1="1.828" x2="0.001" y2="1.828" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4171f7"/>
+      <stop offset="1" stop-color="#f74bda"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.129" y1="2.404" x2="0.752" y2="2.185" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f14cdb" stop-opacity="0.031"/>
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.087" y1="2.152" x2="0.879" y2="2.384" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#231f20" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#231f20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ebe9fb"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.331" y1="2.547" x2="0.61" y2="3.347" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eae8fc"/>
+      <stop offset="1" stop-color="#eae9f0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.636" y1="2.694" x2="0.364" y2="3.349" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dad4f4"/>
+      <stop offset="1" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.197" y1="0.133" x2="0.719" y2="0.764" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eae8fc"/>
+      <stop offset="1" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="0.636" y1="2.694" x2="0.364" y2="3.349" xlink:href="#linear-gradient-6"/>
+    <linearGradient id="linear-gradient-9" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f7f6fa"/>
+      <stop offset="1" stop-color="#ebe9fb"/>
+    </linearGradient>
+  </defs>
+  <g id="ZelCore-Round" transform="translate(46.391 83.458)">
+    <path id="polygon63" d="M79.6,85.208l48.687,28.126,48.687-28.126V28.991L128.287.9,79.6,28.991Z" transform="translate(-98.11 -84.358)" fill="url(#linear-gradient)"/>
+    <path id="polygon65" d="M79.6,137.577l48.651,28.091V109.591L79.6,81.5Z" transform="translate(-98.11 -136.727)" opacity="0.56" fill="url(#linear-gradient-2)" style="mix-blend-mode: normal;isolation: isolate"/>
+    <path id="polygon67" d="M267.187,81.4,218.5,109.526V165.6l.035.035,48.687-28.126V81.435Z" transform="translate(-188.358 -136.662)" opacity="0.56" fill="url(#linear-gradient-3)" style="mix-blend-mode: normal;isolation: isolate"/>
+    <path id="polygon69" d="M242.6,138.285,276.716,118.6l34.116,19.685v39.37l-34.116,19.72L242.6,177.654Z" transform="translate(-204.017 -160.832)" fill="#f0f0f0"/>
+    <path id="polygon71" d="M242.6,138.285,276.716,118.6l34.116,19.685v39.37l-34.116,19.72L242.6,177.654Z" transform="translate(-204.017 -160.832)" fill="#fff"/>
+    <path id="polygon73" d="M276.716,118.6l34.116,19.685L276.716,157.97,242.6,138.285Z" transform="translate(-204.017 -160.832)" fill="url(#linear-gradient-4)"/>
+    <path id="polygon75" d="M242.6,174.8l34.116,19.685v39.4L242.6,214.17Z" transform="translate(-204.017 -197.348)" fill="url(#linear-gradient-5)"/>
+    <path id="polygon77" d="M340,194.485,374.116,174.8v39.37L340,233.889Z" transform="translate(-267.301 -197.348)" fill="url(#linear-gradient-6)"/>
+    <path id="polygon79" d="M0,138.285,34.116,118.6l34.116,19.685v39.37l-34.116,19.72L0,177.654Z" transform="translate(-46.391 -160.832)" fill="#f0f0f0"/>
+    <path id="polygon81" d="M0,174.8l34.116,19.685v39.4L0,214.17Z" transform="translate(-46.391 -197.348)" fill="url(#linear-gradient-7)"/>
+    <path id="polygon83" d="M97.4,194.485,131.516,174.8v39.37L97.4,233.889Z" transform="translate(-109.675 -197.348)" fill="url(#linear-gradient-8)"/>
+    <path id="polygon85" d="M34.116,118.6l34.116,19.685L34.116,157.97,0,138.285Z" transform="translate(-46.391 -160.832)" fill="url(#linear-gradient-9)"/>
+  </g>
+</svg>

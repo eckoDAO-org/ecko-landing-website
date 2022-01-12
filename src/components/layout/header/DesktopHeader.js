@@ -16,6 +16,13 @@ const Container = styled.div`
       `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 0 1.5em;
   }
+
+  @media (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel + 1}px`}) and (max-width:916px)  {
+    padding: 2em 1.5em;
+  }
+
+
   z-index: 1000;
 `;
 
