@@ -9,7 +9,7 @@ export const FeaturesContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 30px;
-  margin-bottom:100px;
+  margin-bottom: 100px;
 
   h1 {
     margin-bottom: 60px;
@@ -25,7 +25,7 @@ export const FeaturesContainer = styled.div`
     align-self: start;
   }
   /* Sidebar Navigation */
-  .partnership-nav {
+  .partners-nav {
     ${({ screenHeight, sectionNavHeight }) => {
       if (screenHeight < sectionNavHeight + 200) {
         return css`
@@ -39,12 +39,12 @@ export const FeaturesContainer = styled.div`
     }
   }
 
-  .partnership-nav a {
+  .partners-nav a {
     text-decoration: none;
     display: block;
     padding: 0.125rem 0;
     color: #ffffff60;
-    transition: all 50ms ease-in-out; 
+    transition: all 50ms ease-in-out;
   }
 
   * {
@@ -57,9 +57,9 @@ export const FeaturesContainer = styled.div`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
   }
 
   div {
@@ -146,6 +146,6 @@ export const SectionMenuContainer = styled.div`
 `;
 
 export const Section = styled.section`
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0.3')};
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0.3")};
   transition: opacity 0.2s linear 0.1s;
 `;

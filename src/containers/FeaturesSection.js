@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled, { css } from 'styled-components/macro';
-import './MainContainer.css';
-import { ReactComponent as ZeroGasIcon } from '../assets/images/shared/gru-feature.svg';
-import { ReactComponent as BestLPsIcon } from '../assets/images/shared/cup-feature.svg';
-import { ReactComponent as DaoPowerIcon } from '../assets/images/shared/dao-feature.svg';
-import { ReactComponent as DecentralizedInfrastructureIcon } from '../assets/images/shared/decentralized-feature.svg';
-import { ReactComponent as FastestSettlementsIcon } from '../assets/images/shared/fastest-feature.svg';
-import { ReactComponent as MultiProtocolIcon } from '../assets/images/shared/multi-protocol-feature.svg';
-import { ReactComponent as StakingIcon } from '../assets/images/shared/staking-feature.svg';
-import { ReactComponent as GovernanceIcon } from '../assets/images/shared/governance-feature.svg';
-import theme from '../styles/theme';
-import useWindowSize from '../hooks/useWindowSize';
+import React, { useEffect, useRef, useState } from "react";
+import styled, { css } from "styled-components/macro";
+import "./MainContainer.css";
+import { ReactComponent as ZeroGasIcon } from "../assets/images/shared/gru-feature.svg";
+import { ReactComponent as BestLPsIcon } from "../assets/images/shared/cup-feature.svg";
+import { ReactComponent as DaoPowerIcon } from "../assets/images/shared/dao-feature.svg";
+import { ReactComponent as DecentralizedInfrastructureIcon } from "../assets/images/shared/decentralized-feature.svg";
+import { ReactComponent as FastestSettlementsIcon } from "../assets/images/shared/fastest-feature.svg";
+import { ReactComponent as MultiProtocolIcon } from "../assets/images/shared/multi-protocol-feature.svg";
+import { ReactComponent as StakingIcon } from "../assets/images/shared/staking-feature.svg";
+import { ReactComponent as GovernanceIcon } from "../assets/images/shared/governance-feature.svg";
+import theme from "../styles/theme";
+import useWindowSize from "../hooks/useWindowSize";
 
 const Container = styled.div`
   display: flex;
@@ -86,9 +86,9 @@ const Container = styled.div`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
   }
 
   div {
@@ -183,7 +183,7 @@ const SectionMenuContainer = styled.div`
 `;
 
 const Section = styled.section`
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0.3')};
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0.3")};
   transition: opacity 0.2s linear 0.1s;
 `;
 
@@ -202,13 +202,13 @@ const getDimensions = (ele) => {
 const FeatureSection = () => {
   const sections = [
     {
-      section: 'ref1',
-      id: 'ref1',
-      sectionID: 'zero_gas',
-      color: '#FFA900',
-      title: 'Zero Gas, Forever',
+      section: "ref1",
+      id: "ref1",
+      sectionID: "zero_gas",
+      color: "#FFA900",
+      title: "Zero Gas, Forever",
       image: (
-        <ZeroGasIcon id='zerogas' style={{ width: '104px', height: '120px' }} />
+        <ZeroGasIcon id="zerogas" style={{ width: "104px", height: "120px" }} />
       ),
       text: (
         <span>
@@ -221,12 +221,12 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref2',
-      id: 'ref2',
-      sectionID: 'best_lp',
-      color: '#ED1CB5',
-      title: 'The Best LPs Rewards',
-      image: <BestLPsIcon style={{ width: '93px', height: '120px' }} />,
+      section: "ref2",
+      id: "ref2",
+      sectionID: "best_lp",
+      color: "#ED1CB5",
+      title: "The Best LPs Rewards",
+      image: <BestLPsIcon style={{ width: "93px", height: "120px" }} />,
       text: (
         <span>
           Kaddex provides unique LPs incentives that will attract new DeFi
@@ -238,13 +238,13 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref3',
-      id: 'ref3',
-      sectionID: 'fastest_settlements',
-      color: '#39FFFC',
-      title: 'Fastest Settlements',
+      section: "ref3",
+      id: "ref3",
+      sectionID: "fastest_settlements",
+      color: "#39FFFC",
+      title: "Fastest Settlements",
       image: (
-        <FastestSettlementsIcon style={{ width: '110px', height: '128px' }} />
+        <FastestSettlementsIcon style={{ width: "110px", height: "128px" }} />
       ),
       text: (
         <span>
@@ -256,12 +256,12 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref4',
-      id: 'ref4',
-      sectionID: 'DAO_powered',
-      color: '#FFA900',
-      title: 'DAO Powered',
-      image: <DaoPowerIcon style={{ width: '183px', height: '120px' }} />,
+      section: "ref4",
+      id: "ref4",
+      sectionID: "DAO_powered",
+      color: "#FFA900",
+      title: "DAO Powered",
+      image: <DaoPowerIcon style={{ width: "183px", height: "120px" }} />,
       text: (
         <span>
           The Kaddex DAO will play a large role in how Kaddex operates,
@@ -272,14 +272,14 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref5',
-      id: 'ref5',
-      sectionID: 'decentalized_infrastructure',
-      color: '#ED1CB5',
+      section: "ref5",
+      id: "ref5",
+      sectionID: "decentalized_infrastructure",
+      color: "#ED1CB5",
       title: `Decentralized Infrastructure`,
       image: (
         <DecentralizedInfrastructureIcon
-          style={{ width: '99px', height: '120px' }}
+          style={{ width: "99px", height: "120px" }}
         />
       ),
       text: (
@@ -292,12 +292,12 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref6',
-      id: 'ref6',
-      sectionID: 'multi_protocol',
-      color: '#39FFFC',
-      title: 'Multi-Protocol',
-      image: <MultiProtocolIcon style={{ width: '211px', height: '120px' }} />,
+      section: "ref6",
+      id: "ref6",
+      sectionID: "multi_protocol",
+      color: "#39FFFC",
+      title: "Multi-Protocol",
+      image: <MultiProtocolIcon style={{ width: "211px", height: "120px" }} />,
       text: (
         <span>
           Kaddex will be the only multi-protocol DEX with native decentralised
@@ -307,26 +307,27 @@ const FeatureSection = () => {
       ),
     },
     {
-      section: 'ref7',
-      id: 'ref7',
-      sectionID: 'staking',
-      color: '#FFA900',
-      title: 'Staking',
-      image: <StakingIcon style={{ width: '76px', height: '120px' }} />,
+      section: "ref7",
+      id: "ref7",
+      sectionID: "staking",
+      color: "#FFA900",
+      title: "Staking",
+      image: <StakingIcon style={{ width: "76px", height: "120px" }} />,
       text: (
         <span>
-         KDX Stakers will earn 0.05% of all swaps happening on Kaddex, 
-         giving holders a simple way to earn passive income while still participating in governance.
+          KDX Stakers will earn 0.05% of all swaps happening on Kaddex, giving
+          holders a simple way to earn passive income while still participating
+          in governance.
         </span>
       ),
     },
     {
-      section: 'ref8',
-      id: 'ref8',
-      sectionID: 'governance',
-      color: '#ED1CB5',
-      title: 'Governance',
-      image: <GovernanceIcon style={{ width: '140px', height: '120px' }} />,
+      section: "ref8",
+      id: "ref8",
+      sectionID: "governance",
+      color: "#ED1CB5",
+      title: "Governance",
+      image: <GovernanceIcon style={{ width: "140px", height: "120px" }} />,
       text: (
         <span>
           Kaddex is built on community, our governance system will give the
@@ -357,6 +358,7 @@ const FeatureSection = () => {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
+        return null;
       });
 
       if (selected && selected.sectionID !== visibleSection) {
@@ -366,14 +368,14 @@ const FeatureSection = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [visibleSection]);
 
   useEffect(() => {
-    const sectionNav = document.getElementById('section-nav');
+    const sectionNav = document.getElementById("section-nav");
     if (sectionNav) {
       setSectionNavHeight(sectionNav.getBoundingClientRect().height);
     }
@@ -385,36 +387,34 @@ const FeatureSection = () => {
       sectionNavHeight={sectionNavHeight}
       ref={ref}
     >
-        <div
-          id='features'
-          style={{ position: 'relative', color: 'trasparent', height: 100 }}
-        ></div>
-      <ContainerTitle isSafari={isSafari}>
-        Unique Features
-      </ContainerTitle>
+      <div
+        id="features"
+        style={{ position: "relative", color: "trasparent", height: 100 }}
+      ></div>
+      <ContainerTitle isSafari={isSafari}>Unique Features</ContainerTitle>
       <main>
-        <nav class='section-nav' id='section-nav'>
+        <nav class="section-nav" id="section-nav">
           {sections.map((s, i) => {
             return (
               <a href={`#${s.sectionID}`} style={{ padding: 0 }}>
                 <SectionMenuContainer
                   key={i}
                   color={s.color}
-                  className={visibleSection === s.sectionID ? 'active' : ''}
+                  className={visibleSection === s.sectionID ? "active" : ""}
                   onClick={() => setVisibleSection(s.sectionID)}
                   style={{
-                    transition: 'all 100ms ease-in-out',
+                    transition: "all 100ms ease-in-out",
                     borderLeft:
                       visibleSection === s.sectionID
                         ? `5px solid ${s.color}`
-                        : '3.5px solid #ffffff60',
+                        : "3.5px solid #ffffff60",
                   }}
                 >
                   <a
                     href={`#${s.sectionID}`}
                     style={{
                       color:
-                        visibleSection === s.sectionID ? s.color : '#FFFFFF60',
+                        visibleSection === s.sectionID ? s.color : "#FFFFFF60",
                     }}
                   >
                     {s.title}
@@ -425,7 +425,7 @@ const FeatureSection = () => {
           })}
         </nav>
 
-        <SectionsContainer id='sections-container'>
+        <SectionsContainer id="sections-container">
           <SectionContainer visibleSection={visibleSection}>
             {sections.map((s, i) => {
               return (

@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import './MainContainer.css';
-import IntroductionSection from './IntroductionSection';
-import RoadmapSection from './RoadmapSection';
-import FeatureSection from './FeaturesSection';
-import ProofDexContainer from './ProofDexContainer';
-import DiscordContainer from './DiscordContainer';
-import TokenomicsContainer from './TokenomicsContainer';
-import PartnershipSection from './PartnershipSection';
+import React from "react";
+import styled from "styled-components/macro";
+import "./MainContainer.css";
+import IntroductionSection from "./IntroductionSection";
+import RoadmapSection from "./RoadmapSection";
+import FeatureSection from "./FeaturesSection";
+import ProofDexContainer from "./ProofDexContainer";
+import DiscordContainer from "./DiscordContainer";
+import TokenomicsContainer from "./TokenomicsContainer";
+import PartnersSection from "./PartnersSection";
 
 const OuterContainer = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ const MainContainer = () => {
       <DiscordContainer />
       <TokenomicsContainer />
       <RoadmapSection />
-      <PartnershipSection/>
+      <PartnersSection />
     </OuterContainer>
   );
 };
