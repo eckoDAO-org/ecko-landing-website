@@ -70,9 +70,7 @@ export const partnershipList =  [
               ),
               text: (
                 <span>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                    sed diam voluptua. At vero eos et accusam et justo.
+                    Roboswap is building the Software Development Kit for the Kaddex swap contract.
                 </span>
               ),
             },
@@ -96,9 +94,7 @@ export const partnershipList =  [
               image: <HypercentLogo  />,
               text: (
                 <span>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                    sed diam voluptua. At vero eos et accusam et justo.
+                    Hypercent will serve as the official Kaddex onboarding platform to identify new projects entering the ecosystem.
                 </span>
               ),
             },
@@ -123,9 +119,7 @@ export const partnershipList =  [
               image: <ZelcoreLogo  />,
               text: (
                 <span>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                        sed diam voluptua. At vero eos et accusam et justo.
+                    Zelcore will empower true Decentralization of Kaddex by providing a decentralized computing network.
                 </span>
               ),
             },
@@ -137,9 +131,7 @@ export const partnershipList =  [
               image: <DefinerLogo  />,
               text: (
                 <span>
-                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                        sed diam voluptua. At vero eos et accusam et justo.
+                   Definer will cooperate to expand Kaddex tools: starting from lending and borrowing possibilities.
                 </span>
               ),
             },
