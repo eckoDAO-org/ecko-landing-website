@@ -89,19 +89,19 @@ export const partnersList = [
     image: <SpotLogo />,
     text: <span>Spot is engaged in the development of the Kaddex DAO.</span>,
   },
-  {
-    section: "par7",
-    id: "par7",
-    sectionID: "hypercent",
-    title: "Hypercent",
-    image: <HypercentLogo />,
-    text: (
-      <span>
-        Hypercent will serve as the official Kaddex onboarding platform to
-        identify new projects entering the ecosystem.
-      </span>
-    ),
-  },
+  // {
+  //   section: "par7",
+  //   id: "par7",
+  //   sectionID: "hypercent",
+  //   title: "Hypercent",
+  //   image: <HypercentLogo />,
+  //   text: (
+  //     <span>
+  //       Hypercent will serve as the official Kaddex onboarding platform to
+  //       identify new projects entering the ecosystem.
+  //     </span>
+  //   ),
+  // },
   {
     section: "par8",
     id: "par8",
@@ -129,19 +129,19 @@ export const partnersList = [
       </span>
     ),
   },
-  {
-    section: "par10",
-    id: "par10",
-    sectionID: "definer",
-    title: "DeFiner",
-    image: <DefinerLogo />,
-    text: (
-      <span>
-        Definer will cooperate to expand Kaddex tools: starting from lending and
-        borrowing possibilities.
-      </span>
-    ),
-  },
+  // {
+  //   section: "par10",
+  //   id: "par10",
+  //   sectionID: "definer",
+  //   title: "DeFiner",
+  //   image: <DefinerLogo />,
+  //   text: (
+  //     <span>
+  //       Definer will cooperate to expand Kaddex tools: starting from lending and
+  //       borrowing possibilities.
+  //     </span>
+  //   ),
+  // },
   {
     section: "par11",
     id: "par11",
