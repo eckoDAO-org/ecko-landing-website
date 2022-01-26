@@ -18,8 +18,9 @@ const LearnList = () => {
       <HeaderItem
         disabledHover
         textRegular
-        // shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        shadowHover
+        href="/kaddex litepaper.pdf"
+        target="_blank"
       >
         Lite Paper
       </HeaderItem>
