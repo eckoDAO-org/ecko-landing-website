@@ -24,7 +24,7 @@ const Roadmap2022 = () => {
                 <path id="Roadmap_line" d="M-6091.943-1552.257h812.456a49.9,49.9,0,0,0,49.773-49.9v-35.175a49.9,49.9,0,0,0-49.773-49.9h-1046.4l1046.4.332a49.563,49.563,0,0,1,49.441,49.573v35.175a49.563,49.563,0,0,1-49.441,49.573h-812.456a49.9,49.9,0,0,0-49.771,49.9v38.539a49.9,49.9,0,0,0,49.771,49.9h1047.065l-1047.065-.332a49.563,49.563,0,0,1-49.441-49.573v-38.539A49.563,49.563,0,0,1-6091.943-1552.257Z" transform="translate(6324.714 5352.241)" fill="none" stroke="#fff" stroke-width="4"/>
                 </g>
                 <g id="Transition_to_a_DAO" dataName="Transition to a DAO" transform="translate(663.699 3928.259)">
-                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Single Sided </tspan><tspan x="0" y="41">Liquidity</tspan></text>
+                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Whitepaper</tspan></text>
                 <circle id="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill="#fff"/>
                 </g>
                 <g id="Transition_to_a_DAO-3" dataName="Transition to a DAO" transform="translate(830.699 3928.259)">
@@ -48,25 +48,32 @@ const Roadmap2022 = () => {
                 <text id="Native_and_Bridged_ERC-20_Token_Pairs-2" dataName="Native and Bridged  ERC-20 Token Pairs" transform="translate(-0.43 39.41)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">3d Swapping </tspan><tspan x="0" y="26">Interface</tspan></text>
                 <circle id="Circle-6" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.43 0.41)" fill="#fff"/>
                 </g>
-                <g id="DEX_Lite_Paper" dataName="DEX Lite Paper" transform="translate(908.525 3790.591)">
-                <text id="DEX_Lite_Paper-2" dataName="DEX Lite Paper" transform="translate(-38.525 24.408)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Litepaper &amp; </tspan><tspan x="0" y="41">Whitepaper</tspan></text>
+                <g id="DEX_Lite_Paper" dataName="DEX Lite Paper" transform="translate(870.525 3790.591)">
+                <text id="DEX_Lite_Paper-2" dataName="DEX Lite Paper" transform="translate(-38.525 24.408)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Vaulting Programme </tspan><tspan x="0" y="41" fontFamily={theme.fontFamily.regular} font-weight="400">available for early investors</tspan></text>
                 <circle id="Circle-7" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-38.525 0.41)" fill="#fff"/>
                 </g>
-                <line id="Active" x2="295" transform="translate(-12 3665.001)" fill="none" stroke="#ec1bb4" stroke-width="5"/>
-                <g id="Kaddex_Website_Refresh" dataName="Kaddex Website Refresh" transform="translate(780.699 3655.569)">
-                <text id="Kaddex_Website_Refresh-2" dataName="Kaddex Website Refresh" transform="translate(0.301 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Vaulting Programme </tspan><tspan x="0" y="41" fontFamily={theme.fontFamily.regular} font-weight="400">available for early investors</tspan></text>
+                <line id="Active" x2="460" transform="translate(-12 3665.001)" fill="none" stroke="#ec1bb4" stroke-width="5"/>
+                <g id="Kaddex_Website_Refresh" dataName="Kaddex Website Refresh" transform="translate(830.699 3655.569)">
+                <text id="Kaddex_Website_Refresh-2" dataName="Kaddex Website Refresh" transform="translate(0.301 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Public Sale</tspan></text>
                 <circle id="Circle-8" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.432)" fill="#fff"/>
                 </g>
-                <g id="Tokenomics_Deep_Drive" dataName="Tokenomics Deep Drive" transform="translate(609.422 3655.569)">
-                <text id="Tokenomics_Deep_Drive-2" dataName="Tokenomics Deep Drive" transform="translate(-0.421 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Public Sale</tspan></text>
+                <g id="Tokenomics_Deep_Drive" dataName="Tokenomics Deep Drive" transform="translate(690.422 3655.569)">
+                <text id="Tokenomics_Deep_Drive-2" dataName="Tokenomics Deep Drive" transform="translate(-0.421 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Single Sided </tspan><tspan x="0" y="41">Liquidity</tspan></text>
                 <g id="Circle-9" dataName="Circle" transform="translate(-0.422 0.432)" fill="#fff" stroke="#fff" stroke-width="8">
                     <circle cx="8" cy="8" r="8" stroke="none"/>
                     <circle cx="8" cy="8" r="4" fill="none"/>
                 </g>
                 </g>
-                <g id="_1_5m_TVL" dataName="1,5m TVL" transform="translate(454.596 3655.569)">
-                <text id="_1_5m_TVL-2" dataName="1,5m TVL" transform="translate(0.406 39.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">X-Wallet v1</tspan></text>
-                <g id="Circle-10" dataName="Circle" transform="translate(0.405 0.432)" fill="#fff" stroke="#fff" stroke-width="8">
+                <g id="X-wallet-v1" dataName="Tokenomics Deep Drive" transform="translate(560.422 3655.569)">
+                <text id="Tokenomics_Deep_Drive-2" dataName="Tokenomics Deep Drive" transform="translate(-0.421 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">X-Wallet v1</tspan></text>
+                <g id="Circle-9" dataName="Circle" transform="translate(-0.422 0.432)" fill="#fff" stroke="#fff" stroke-width="8">
+                    <circle cx="8" cy="8" r="8" stroke="none"/>
+                    <circle cx="8" cy="8" r="4" fill="none"/>
+                </g>
+                </g>
+                <g id="_1_5m_TVL" dataName="1,5m TVL" transform="translate(440.596 3655.569)">
+                <text id="_1_5m_TVL-2" dataName="1,5m TVL" transform="translate(0.406 39.432)" fill="#ec1bb4" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">Litepaper</tspan></text>
+                <g id="Circle-10" dataName="Circle" transform="translate(0.405 0.432)" fill="#ec1bb4" stroke="#ec1bb4" stroke-width="8">
                     <circle cx="8" cy="8" r="8" stroke="none"/>
                     <circle cx="8" cy="8" r="4" fill="none"/>
                 </g>

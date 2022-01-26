@@ -56,7 +56,7 @@ const RoadmapSection = () => {
       </RoadmapContainer>
       <RoadmapContainer className='desktop-none'>
         <Title style={{ marginBottom: '40px', marginTop: '20%' }}>
-          Roadmap 2021
+          Roadmap
         </Title>
         <MobileRoadmapTabs/>
 

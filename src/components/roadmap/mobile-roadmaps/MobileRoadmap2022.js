@@ -15,7 +15,7 @@ const RoadmapContainer = styled.div`
   content: '';
   position: absolute;
   width: 3px;
-  background: linear-gradient(to bottom, #ec1bb4 5%,#FFFFFF 5%);
+  background: linear-gradient(to bottom, #ec1bb4 11%,#FFFFFF 11%);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -97,8 +97,18 @@ const MobileRoadmap2022 = () => {
               X-Wallet Beta
             </RoadmapItemLeft>
           </div>
+          <div class='roadmap_container_completed left'>
+            <RoadmapItemLeft className='completed'>
+               Litepaper
+            </RoadmapItemLeft>
+          </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight>X-Wallet v1</RoadmapItemRight>
+          </div>
+          <div class='roadmap_container left'>
+            <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
+            <RoadmapItemLeft  >Liquidity</RoadmapItemLeft>
+
           </div>
           <div class='roadmap_container left'>
           <RoadmapItemLeft>
@@ -112,9 +122,6 @@ const MobileRoadmap2022 = () => {
             <RoadmapItemLeft regular >
                 available for early investors          
             </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  > Litepaper & Whitepaper</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight  >Bridge ERC-20 Token Pairs</RoadmapItemRight>
@@ -135,9 +142,7 @@ const MobileRoadmap2022 = () => {
             <RoadmapItemRight  >Mining Programme</RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
-            <RoadmapItemLeft  >Liquidity</RoadmapItemLeft>
-
+            <RoadmapItemLeft  >Whitepaper</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight  >Lending & borrowing</RoadmapItemRight>
