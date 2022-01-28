@@ -15,7 +15,7 @@ const RoadmapContainer = styled.div`
   content: '';
   position: absolute;
   width: 3px;
-  background: linear-gradient(to bottom, #ec1bb4 11%,#FFFFFF 11%);
+  background: linear-gradient(to bottom, #ec1bb4 18%,#FFFFFF 18%);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -102,8 +102,8 @@ const MobileRoadmap2022 = () => {
                Litepaper
             </RoadmapItemLeft>
           </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight>X-Wallet v1</RoadmapItemRight>
+          <div class='roadmap_container_completed right'>
+            <RoadmapItemRight className='completed'>X-Wallet v1</RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
           <RoadmapItemLeft>
