@@ -106,11 +106,6 @@ const MobileRoadmap2022 = () => {
             <RoadmapItemRight>X-Wallet v1</RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
-            <RoadmapItemLeft  >Liquidity</RoadmapItemLeft>
-
-          </div>
-          <div class='roadmap_container left'>
           <RoadmapItemLeft>
              Public Sale
             </RoadmapItemLeft>
@@ -135,7 +130,10 @@ const MobileRoadmap2022 = () => {
           <div class='roadmap_container left image'  style={{ backgroundImage: `url(${TokenomicsRing})` }}>
             <RoadmapItemLeft  >Kaddex v1</RoadmapItemLeft>
             <RoadmapItemLeft  >full launch</RoadmapItemLeft>
-
+          </div>
+          <div class='roadmap_container left'>
+            <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
+            <RoadmapItemLeft  >Liquidity</RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight  >KDX Liquidity</RoadmapItemRight>
