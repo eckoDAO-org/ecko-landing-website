@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import HeaderItem from '../../../shared/HeaderItem';
+import React from "react";
+import styled from "styled-components";
+import HeaderItem from "../../../components/shared/HeaderItem";
 
 const ListContainer = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const SupportList = () => {
         disabledHover
         textRegular
         // shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        onClick={() => window.open("", "_blank", "noopener,noreferrer")}
       >
         Getting Started on <br /> Kaddex
       </HeaderItem>
@@ -27,7 +27,7 @@ const SupportList = () => {
         disabledHover
         textRegular
         // shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        onClick={() => window.open("", "_blank", "noopener,noreferrer")}
       >
         Auditing
       </HeaderItem>

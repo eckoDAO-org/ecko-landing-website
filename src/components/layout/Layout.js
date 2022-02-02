@@ -10,6 +10,7 @@ const MainContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
+  padding: 0 50px;
 `;
 
 const PageContent = styled.div`
@@ -62,20 +63,17 @@ const MainContent = styled.div`
 `;
 
 const StripesContainer = styled.div`
-  position: ${({ isFooterVisible }) =>
-    isFooterVisible ? 'absolute' : 'fixed'};
+  position: ${({ isFooterVisible }) => (isFooterVisible ? 'absolute' : 'fixed')};
   bottom: 0px;
   left: 0;
   line-height: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     display: none;
   }
 `;
 
 const GoTopContainer = styled.div`
-  display: ${({ topUpIconIsVisible }) =>
-    topUpIconIsVisible ? 'block' : 'none'};
+  display: ${({ topUpIconIsVisible }) => (topUpIconIsVisible ? 'block' : 'none')};
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -101,7 +99,7 @@ const GoTopContainer = styled.div`
   }
 `;
 
-const ButtonIcon = styled("button")`
+const ButtonIcon = styled('button')`
   border: none;
   padding: 0;
   cursor: pointer;
@@ -110,98 +108,15 @@ const ButtonIcon = styled("button")`
   background: transparent;
 `;
 
-
 const Layout = ({ children }) => {
-  const [isFooterVisible, setIsFooterVisible] = useState(false);
-  const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
-  const [topUpIconIsVisible, setTopUpIconIsVisible] = useState(false);
-  
-
-  useEffect(() => {
-    const threshold = 0;
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
-
-    const updateScrollDir = () => {
-      const scrollY = window.pageYOffset;
-      const proof = document
-        .getElementById('proof_of_dex')
-        .getBoundingClientRect().top;
-      const features = document
-        .getElementById('proof_of_dex')
-        .getBoundingClientRect().top;
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false;
-        return;
-      }
-      if (proof >= 0) setIsHeaderVisible(false);
-      else setIsHeaderVisible(scrollY > lastScrollY ? false : true);
-
-      if (features >= 0) setTopUpIconIsVisible(false)
-      else setTopUpIconIsVisible(true);
-
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [IsHeaderVisible]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
-
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, []);
-
-  const scrollHandler = () => {
-    if (
-      window.innerHeight >=
-      document.getElementById('footer').getBoundingClientRect().top
-    ) {
-      setIsFooterVisible(true);
-    } else {
-      setIsFooterVisible(false);
-    }
-  };
-
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <MainContainer id='main-container'>
+    <MainContainer id="main-container">
       <CustomParticles />
       <PageContent>
-        {IsHeaderVisible && (
-          <DesktopHeader
-            // IsHeaderVisible={IsHeaderVisible}
-            className={IsHeaderVisible ? 'sticky' : 'out'}
-            menuWithMarginBottom
-          />
-        )}
-        <DesktopHeader IsHeaderVisible={IsHeaderVisible} />
+        <DesktopHeader />
+
         <MainContent>{children}</MainContent>
-        <StripesContainer isFooterVisible={isFooterVisible}>
-          <Stripes />
-        </StripesContainer>
       </PageContent>
-      <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
-      <ButtonIcon onClick={goToTop}>
-          <TopUpIcon />
-        </ButtonIcon>
-      </GoTopContainer>
 
       <FooterSection />
     </MainContainer>

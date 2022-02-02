@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import HeaderItem from '../../../shared/HeaderItem';
+import React from "react";
+import styled from "styled-components";
+import HeaderItem from "../../../components/shared/HeaderItem";
 
 const ListContainer = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const LearnList = () => {
         disabledHover
         textRegular
         // shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        onClick={() => window.open("", "_blank", "noopener,noreferrer")}
       >
         FAQ
       </HeaderItem>

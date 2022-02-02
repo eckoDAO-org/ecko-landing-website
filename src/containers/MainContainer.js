@@ -1,13 +1,15 @@
-import React from "react";
-import styled from "styled-components/macro";
-import "./MainContainer.css";
-import IntroductionSection from "./IntroductionSection";
-import RoadmapSection from "./RoadmapSection";
-import FeatureSection from "./FeaturesSection";
-import ProofDexContainer from "./ProofDexContainer";
-import DiscordContainer from "./DiscordContainer";
-import TokenomicsContainer from "./TokenomicsContainer";
-import PartnersSection from "./PartnersSection";
+import React from 'react';
+import styled from 'styled-components/macro';
+import './MainContainer.css';
+import IntroductionSection from './IntroductionSection';
+import RoadmapSection from './RoadmapSection';
+import FeatureSection from './FeaturesSection';
+import ProofDexContainer from '../components/shared/ProofDexCard';
+import DiscordContainer from './DiscordContainer';
+import TokenomicsContainer from './TokenomicsContainer';
+import PartnersSection from './PartnersSection';
+import Introduction from '../components/section-introduction/Introduction';
+import ProofCard from '../components/section-proof/ProofCard';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -18,8 +20,7 @@ const OuterContainer = styled.div`
   height: 100%;
   /* padding: 30px; */
   padding-bottom: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 0;
   }
   /* overflow: auto; */
@@ -28,13 +29,14 @@ const OuterContainer = styled.div`
 const MainContainer = () => {
   return (
     <OuterContainer>
-      <IntroductionSection />
-      <ProofDexContainer />
+      <Introduction />
+      <ProofCard />
+      {/* <ProofDexContainer />
       <FeatureSection />
       <DiscordContainer />
       <TokenomicsContainer />
       <RoadmapSection />
-      <PartnersSection />
+      <PartnersSection /> */}
     </OuterContainer>
   );
 };

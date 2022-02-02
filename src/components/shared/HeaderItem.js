@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import styled from "styled-components/macro";
+import React, { useState } from 'react';
+import styled from 'styled-components/macro';
+import Label from './Label';
 
 const Item = styled.a`
   color: #ffffff;
@@ -8,31 +9,19 @@ const Item = styled.a`
   text-transform: capitalize;
   background: transparent;
   cursor: pointer;
-  font-family: ${({ theme: { fontFamily }, textRegular }) =>
-    textRegular ? fontFamily.regular : fontFamily.bold};
 
   &:hover {
-    text-shadow: ${({ shadowHover }) => shadowHover && "0 0 5px #ffffff"};
+    text-shadow: ${({ shadowHover }) => shadowHover && '0 0 5px #ffffff'};
   }
 
   .underline {
-    width: ${({ isHover }) => (isHover ? "100%" : 0)};
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
     transition: width 0.3s;
     background: #fff;
     height: 3px;
   }
 `;
-const HeaderItem = ({
-  id,
-  className,
-  href,
-  target,
-  children,
-  disabledHover,
-  style,
-  textRegular,
-  shadowHover,
-}) => {
+const HeaderItem = ({ id, className, href, target, children, disabledHover, style, shadowHover }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -45,11 +34,10 @@ const HeaderItem = ({
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       style={style}
-      textRegular={textRegular}
       shadowHover={shadowHover}
     >
       <>
-        {children}
+        <Label fontSize={20}>{children}</Label>
         {!disabledHover && <div className="underline"></div>}
       </>
     </Item>
