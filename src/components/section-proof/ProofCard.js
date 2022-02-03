@@ -28,14 +28,14 @@ const ProofCard = () => {
     <STYCard id="proof-dex" className="relative">
       <STYRowContainer gap={60}>
         <STYColumnContainer className="justify-ce" gap={32}>
-          <Label fontSize={40}>
+          <Label fontSize={40} lineHeight={50} fontFamily="syncopate">
             The most
             <br />
             powerful Proof
             <br />
             of Work DEX
           </Label>
-          <Label fontSize={15} color="light-blue">
+          <Label fontSize={15} color="light-blue" lineHeight={26.25}>
             Safe DeFi begins with our Gas free DEX.
             <br />
             Gas will always stay free because the Kadena

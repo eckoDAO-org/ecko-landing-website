@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
-import IntroductionSection from './IntroductionSection';
-import RoadmapSection from './RoadmapSection';
-import ProofDexContainer from '../components/shared/ProofDexCard';
-import DiscordContainer from './DiscordContainer';
-import TokenomicsContainer from './TokenomicsContainer';
-import PartnersSection from './PartnersSection';
+
 import Introduction from '../components/section-introduction/Introduction';
 import ProofCard from '../components/section-proof/ProofCard';
-import RadiusBackground from '../components/shared/RadiusBackground';
 import FeatureSection from '../components/section-features/FeaturesSection';
 
 const OuterContainer = styled.div`

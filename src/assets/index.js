@@ -38,5 +38,11 @@ export { ReactComponent as StakeIcon } from './images/proof-dex/stake.svg';
 export { ReactComponent as BuildIcon } from './images/proof-dex/build.svg';
 
 // features
-export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
+export { ReactComponent as DaoIcon } from './images/features/dao.svg';
+export { ReactComponent as DecentralizedIcon } from './images/features/decentralized.svg';
+export { ReactComponent as GovernanceIcon } from './images/features/governance.svg';
 export { ReactComponent as LpsIcon } from './images/features/lps.svg';
+export { ReactComponent as MultiProtocolIcon } from './images/features/multi-protocol.svg';
+export { ReactComponent as SettlementsIcon } from './images/features/settlements.svg';
+export { ReactComponent as StakingIcon } from './images/features/staking.svg';
+export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';

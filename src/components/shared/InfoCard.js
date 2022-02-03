@@ -7,6 +7,7 @@ import Label from './Label';
 
 const STYCard = styled(STYColumnContainer)`
   width: 210px;
+  letter-spacing: -0.1em;
   ${({ type, color, theme: { colors } }) => {
     if (type === 'features') {
       return css`
@@ -35,7 +36,7 @@ const STYCard = styled(STYColumnContainer)`
   }}
 `;
 
-const InfoCard = ({ type, color, icon, title, description }) => {
+const InfoCard = ({ type, color, icon, title, description, style }) => {
   const getColor = () => {
     switch (color) {
       case 'white':
@@ -58,9 +59,9 @@ const InfoCard = ({ type, color, icon, title, description }) => {
   const getTitleStyle = () => {
     switch (type) {
       case 'proof':
-        return { color, fontSize: 30, labelStyle: { marginTop: 55, marginBottom: 34 } };
+        return { color, fontSize: 30, labelStyle: { marginTop: 55, marginBottom: 34, lineHeight: '37.5px' } };
       case 'features':
-        return { color: theme.colors.yellow, fontSize: 20 };
+        return { color: 'yellow', fontSize: 20, labelStyle: { marginTop: 55, marginBottom: 22, lineHeight: '35px' } };
       case 'partners':
         return { color: getColor(), fontSize: 20 };
       default:
@@ -71,9 +72,15 @@ const InfoCard = ({ type, color, icon, title, description }) => {
   const getDescriptionStyle = () => {
     switch (type) {
       case 'proof':
-        return { color: theme.colors.grey, fontSize: 13 };
+        return { color: 'grey', fontSize: 13, labelStyle: { lineHeight: '22.75px' } };
       case 'features':
-        return { color: theme.colors.lightBlue, fontSize: 12 };
+        return {
+          color: 'light-blue',
+          fontSize: 12,
+          labelStyle: {
+            lineHeight: '21px',
+          },
+        };
       case 'partners':
         return { color: getColor(), fontSize: 13 };
       default:
@@ -81,9 +88,9 @@ const InfoCard = ({ type, color, icon, title, description }) => {
     }
   };
   return (
-    <STYCard className="align-ce" type={type} color={getColor}>
+    <STYCard className="align-ce" type={type} color={getColor} style={style}>
       {icon}
-      <Label {...getTitleStyle()} fontFamily="syncopate">
+      <Label className="text-center" {...getTitleStyle()} fontFamily="syncopate">
         {title}
       </Label>
       <Label className="text-center" {...getDescriptionStyle()}>

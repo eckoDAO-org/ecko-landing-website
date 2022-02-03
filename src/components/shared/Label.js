@@ -9,6 +9,13 @@ const STYText = styled.span`
   cursor: ${({ onClick }) => onClick && 'pointer'};
   z-index: 1;
   color: ${({ color }) => color};
+  ${({ lineHeight }) => {
+    if (lineHeight) {
+      return css`
+        line-height: ${lineHeight}px;
+      `;
+    }
+  }}
   ${({ inverted, theme: { colors } }) =>
     inverted &&
     css`
@@ -39,9 +46,13 @@ const STYText = styled.span`
   &.text-center {
     text-align: center;
   }
+
+  &.align-fs {
+    align-items: flex-start;
+  }
 `;
 
-const Label = ({ className, children, fontFamily, fontSize = 13, labelStyle, color, inverted, withShade, onClick }) => {
+const Label = ({ className, children, fontFamily, fontSize = 13, lineHeight, labelStyle, color, inverted, withShade, onClick }) => {
   const getColor = () => {
     switch (color) {
       case 'white':
@@ -69,6 +80,7 @@ const Label = ({ className, children, fontFamily, fontSize = 13, labelStyle, col
       fontSize={fontSize}
       onClick={onClick}
       withShade={withShade}
+      lineHeight={lineHeight}
       style={{ fontFamily: theme.fontFamily[fontFamily], ...labelStyle }}
     >
       {children}
