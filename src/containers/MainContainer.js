@@ -4,6 +4,7 @@ import './MainContainer.css';
 import Introduction from '../components/section-introduction/Introduction';
 import ProofCard from '../components/section-proof/ProofCard';
 import FeatureSection from '../components/section-features/FeaturesSection';
+import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const MainContainer = () => {
       <Introduction />
       <ProofCard />
       <FeatureSection />
+      <TokenomicsSection/>
       {/* <RadiusBackground idRef="proof-dex" /> */}
     </OuterContainer>
   );

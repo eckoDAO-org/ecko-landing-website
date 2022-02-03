@@ -46,3 +46,7 @@ export { ReactComponent as MultiProtocolIcon } from './images/features/multi-pro
 export { ReactComponent as SettlementsIcon } from './images/features/settlements.svg';
 export { ReactComponent as StakingIcon } from './images/features/staking.svg';
 export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
+
+// tokenomics
+export { ReactComponent as TokenomicsCircleIcon } from './images/tokenomics/tokenomics-circle.svg';
+export { ReactComponent as TokenomicsKaddexLogoIcon } from './images/tokenomics/tokenomics-kaddex-logo.svg';

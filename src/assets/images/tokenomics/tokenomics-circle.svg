@@ -1,0 +1,93 @@
+<svg width="921" height="921" viewBox="0 0 921 921" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="123" y="123" width="675" height="675">
+<circle cx="460.499" cy="460.501" r="336" transform="rotate(-150 460.499 460.501)" fill="#C4C4C4"/>
+<circle cx="460.499" cy="460.501" r="336" transform="rotate(-150 460.499 460.501)" stroke="white"/>
+<circle cx="460.499" cy="460.501" r="336" transform="rotate(-150 460.499 460.501)" stroke="white"/>
+</mask>
+<g mask="url(#mask0_1855_2994)">
+<g filter="url(#filter0_b_1855_2994)">
+<circle cx="460.499" cy="460.501" r="336.5" transform="rotate(-150 460.499 460.501)" fill="white" fill-opacity="0.01"/>
+<circle cx="460.499" cy="460.501" r="335" transform="rotate(-150 460.499 460.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="460.499" cy="460.501" r="335" transform="rotate(-150 460.499 460.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+</g>
+<mask id="mask1_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="-58" width="521" height="813">
+<path d="M457.433 466.813L291.183 754.766L191.209 740.925L5.26541 367.989L525.446 -57.9909L457.433 466.813Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask1_1855_2994)">
+<circle cx="460.499" cy="460.501" r="332.5" transform="rotate(-150 460.499 460.501)" stroke="url(#paint0_linear_1855_2994)" stroke-width="8"/>
+</g>
+</g>
+<mask id="mask2_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="194" y="194" width="533" height="533">
+<circle cx="460.5" cy="460.5" r="265" transform="rotate(15 460.5 460.5)" fill="#C4C4C4"/>
+<circle cx="460.5" cy="460.5" r="265" transform="rotate(15 460.5 460.5)" stroke="white"/>
+<circle cx="460.5" cy="460.5" r="265" transform="rotate(15 460.5 460.5)" stroke="white"/>
+</mask>
+<g mask="url(#mask2_1855_2994)">
+<circle cx="460.5" cy="460.5" r="264" transform="rotate(15 460.5 460.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="460.5" cy="460.5" r="264" transform="rotate(15 460.5 460.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask3_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="461" y="119" width="345" height="551">
+<path d="M461.828 453.609L547.886 132.439L648.035 119.933L805.024 355.077L780.331 669.396L461.828 453.609Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask3_1855_2994)">
+<circle cx="460.5" cy="460.5" r="261.5" transform="rotate(15 460.5 460.5)" stroke="url(#paint1_linear_1855_2994)" stroke-width="8"/>
+</g>
+</g>
+<mask id="mask4_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="266" y="266" width="389" height="389">
+<circle cx="460.5" cy="460.5" r="194" transform="rotate(90 460.5 460.5)" fill="#C4C4C4"/>
+<circle cx="460.5" cy="460.5" r="194" transform="rotate(90 460.5 460.5)" stroke="white"/>
+<circle cx="460.5" cy="460.5" r="194" transform="rotate(90 460.5 460.5)" stroke="white"/>
+</mask>
+<g mask="url(#mask4_1855_2994)">
+<circle cx="460.5" cy="460.5" r="193" transform="rotate(90 460.5 460.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="460.5" cy="460.5" r="193" transform="rotate(90 460.5 460.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask5_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="467" y="460" width="371" height="317">
+<path d="M467.5 460L800 460L838 553.5L576.5 777L467.5 460Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask5_1855_2994)">
+<circle cx="460.5" cy="460.5" r="190.5" transform="rotate(90 460.5 460.5)" stroke="url(#paint2_linear_1855_2994)" stroke-width="8"/>
+</g>
+</g>
+<mask id="mask6_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="344" y="344" width="233" height="233">
+<circle cx="460.5" cy="460.5" r="116" fill="#C4C4C4"/>
+<circle cx="460.5" cy="460.5" r="116" stroke="white"/>
+<circle cx="460.5" cy="460.5" r="116" stroke="white"/>
+</mask>
+<g mask="url(#mask6_1855_2994)">
+<circle cx="460.5" cy="460.5" r="115" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="460.5" cy="460.5" r="115" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask7_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="460" y="83" width="151" height="371">
+<path d="M460 453.5V121L553.5 83L610.5 131.5L460 453.5Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask7_1855_2994)">
+<circle cx="460.5" cy="460.5" r="112.5" stroke="url(#paint3_linear_1855_2994)" stroke-width="8"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_b_1855_2994" x="39.9434" y="39.9444" width="841.112" height="841.112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="42"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1855_2994"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1855_2994" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_1855_2994" x1="327.385" y1="-1063.06" x2="460.499" y2="797.001" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04C9E4"/>
+<stop offset="0.479167" stop-color="#FA41A5"/>
+<stop offset="1" stop-color="#F3BD2F"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1855_2994" x1="511.555" y1="-260.792" x2="553.951" y2="1120.29" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04C9E4"/>
+<stop offset="0.479167" stop-color="#FA41A5"/>
+<stop offset="1" stop-color="#F3BD2F"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1855_2994" x1="460.5" y1="266" x2="902.5" y2="476" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04C9E4"/>
+<stop offset="0.479167" stop-color="#FA41A5"/>
+<stop offset="1" stop-color="#F3BD2F"/>
+</linearGradient>
+<linearGradient id="paint3_linear_1855_2994" x1="460.5" y1="344" x2="460.5" y2="577" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04C9E4"/>
+<stop offset="0.479167" stop-color="#FA41A5"/>
+<stop offset="1" stop-color="#F3BD2F"/>
+</linearGradient>
+</defs>
+</svg>
