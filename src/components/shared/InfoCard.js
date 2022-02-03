@@ -9,7 +9,7 @@ const STYCard = styled(STYColumnContainer)`
   width: 210px;
   letter-spacing: -0.1em;
   ${({ type, color, theme: { colors } }) => {
-    if (type === 'features') {
+    if (type === 'features' || type === 'percentage') {
       return css`
         svg {
           path {
@@ -36,7 +36,7 @@ const STYCard = styled(STYColumnContainer)`
   }}
 `;
 
-const InfoCard = ({ type, color, icon, title, description, style }) => {
+const InfoCard = ({ type, color, icon, title, description, gradientColors, titleClassName, descriptionClassName, style }) => {
   const getColor = () => {
     switch (color) {
       case 'white':
@@ -64,6 +64,8 @@ const InfoCard = ({ type, color, icon, title, description, style }) => {
         return { color: 'yellow', fontSize: 20, labelStyle: { marginTop: 55, marginBottom: 22, lineHeight: '35px' } };
       case 'partners':
         return { color: getColor(), fontSize: 20 };
+      case 'percentage':
+        return { fontSize: 15, labelStyle: { lineHeight: '26px', marginTop: 20, marginBottom: 20 } };
       default:
         return;
     }
@@ -83,6 +85,8 @@ const InfoCard = ({ type, color, icon, title, description, style }) => {
         };
       case 'partners':
         return { color: getColor(), fontSize: 13 };
+      case 'percentage':
+        return { color: 'light-blue', fontSize: 12, labelStyle: { lineHeight: '21px' } };
       default:
         return;
     }
@@ -90,10 +94,10 @@ const InfoCard = ({ type, color, icon, title, description, style }) => {
   return (
     <STYCard className="align-ce" type={type} color={getColor} style={style}>
       {icon}
-      <Label className="text-center" {...getTitleStyle()} fontFamily="syncopate">
+      <Label className={`text-center ${titleClassName}`} gradientColors={gradientColors} {...getTitleStyle()} fontFamily="syncopate">
         {title}
       </Label>
-      <Label className="text-center" {...getDescriptionStyle()}>
+      <Label className={`text-center ${descriptionClassName}`} {...getDescriptionStyle()}>
         {description}
       </Label>
     </STYCard>
@@ -103,7 +107,7 @@ const InfoCard = ({ type, color, icon, title, description, style }) => {
 export default InfoCard;
 
 InfoCard.propTypes = {
-  type: PropTypes.oneOf(['proof', 'feature', 'partners']).isRequired,
+  type: PropTypes.oneOf(['proof', 'feature', 'partners', 'percentage']).isRequired,
 };
 
 InfoCard.defaultProps = {};

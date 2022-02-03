@@ -29,7 +29,10 @@ const STYText = styled.span`
   }
 
   &.rainbow {
-    background-image: linear-gradient(94.39deg, #55bade 0.84%, #cf7098 44.14%, #f7cb79 90.22%);
+    background-image: ${({ gradientColors }) => {
+      console.log('gradientColors', gradientColors);
+      return `linear-gradient(94.39deg,${gradientColors[0]} 0.84%, ${gradientColors[1]} 44.14%, ${gradientColors[2]} 90.22%)`;
+    }};
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -52,7 +55,7 @@ const STYText = styled.span`
   }
 `;
 
-const Label = ({ className, children, fontFamily, fontSize = 13, lineHeight, labelStyle, color, inverted, withShade, onClick }) => {
+const Label = ({ className, gradientColors, children, fontFamily, fontSize, lineHeight, labelStyle, color, inverted, withShade, onClick }) => {
   const getColor = () => {
     switch (color) {
       case 'white':
@@ -82,6 +85,7 @@ const Label = ({ className, children, fontFamily, fontSize = 13, lineHeight, lab
       withShade={withShade}
       lineHeight={lineHeight}
       style={{ fontFamily: theme.fontFamily[fontFamily], ...labelStyle }}
+      gradientColors={gradientColors}
     >
       {children}
     </STYText>
@@ -96,6 +100,7 @@ Label.propTypes = {
   fontFamily: PropTypes.oneOf(['basier', 'syncopate']),
   onClose: PropTypes.func,
   color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),
+  gradientColors: PropTypes.arrayOf(PropTypes.string),
 };
 
 Label.defaultProps = {
@@ -103,4 +108,5 @@ Label.defaultProps = {
   fontFamily: 'basier',
   onClick: null,
   color: 'white',
+  gradientColors: ['#55bade', '#cf7098', '#f7cb79'],
 };

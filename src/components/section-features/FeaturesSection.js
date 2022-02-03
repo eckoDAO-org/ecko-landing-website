@@ -7,7 +7,7 @@ import RadiusBackground from '../shared/RadiusBackground';
 
 const FeatureSection = () => {
   return (
-    <STYColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap' }}>
+    <STYColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
       <STYRowContainer className="justify-sb">
         <Label className="align-fs" fontSize={40} fontFamily="syncopate" lineHeight={50}>
           unique
