@@ -25,6 +25,14 @@ export const STYRowContainer = styled.div`
     position: fixed;
   }
 
+  &.relative {
+    position: relative;
+  }
+
+  &.w-100 {
+    width: 100%;
+  }
+
   ${({ gap }) => {
     if (gap) {
       return css`

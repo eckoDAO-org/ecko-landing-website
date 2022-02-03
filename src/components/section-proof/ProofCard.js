@@ -25,7 +25,7 @@ const STYStripesContainer = styled.div`
 
 const ProofCard = () => {
   return (
-    <STYCard id="proof-dex">
+    <STYCard id="proof-dex" className="relative">
       <STYRowContainer gap={60}>
         <STYColumnContainer className="justify-ce" gap={32}>
           <Label fontSize={40}>

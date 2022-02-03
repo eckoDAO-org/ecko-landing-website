@@ -36,3 +36,7 @@ export { ReactComponent as SwapIcon } from './images/proof-dex/swap.svg';
 export { ReactComponent as PoolIcon } from './images/proof-dex/pool.svg';
 export { ReactComponent as StakeIcon } from './images/proof-dex/stake.svg';
 export { ReactComponent as BuildIcon } from './images/proof-dex/build.svg';
+
+// features
+export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
+export { ReactComponent as LpsIcon } from './images/features/lps.svg';
