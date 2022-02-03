@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import CustomParticles from './CustomParticles';
 import DesktopHeader from './header/DesktopHeader';
-import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
 import FooterSection from '../../containers/FooterSection';
 
 const MainContainer = styled.div`

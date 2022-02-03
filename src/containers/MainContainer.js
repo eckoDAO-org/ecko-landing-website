@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
-
 import Introduction from '../components/section-introduction/Introduction';
 import ProofCard from '../components/section-proof/ProofCard';
 import FeatureSection from '../components/section-features/FeaturesSection';
@@ -28,12 +27,6 @@ const MainContainer = () => {
       <ProofCard />
       <FeatureSection />
       {/* <RadiusBackground idRef="proof-dex" /> */}
-      {/* <ProofDexContainer />
-      <FeatureSection />
-      <DiscordContainer />
-      <TokenomicsContainer />
-      <RoadmapSection />
-      <PartnersSection /> */}
     </OuterContainer>
   );
 };

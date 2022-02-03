@@ -1,5 +1,5 @@
 import React from 'react';
-import { FEATURES } from '../../constants/features';
+import { FEATURES, LPS, ZERO_GAS } from '../../constants/features';
 import { STYColumnContainer, STYRowContainer } from '../shared/Container';
 import InfoCard from '../shared/InfoCard';
 import Label from '../shared/Label';
@@ -7,8 +7,8 @@ import RadiusBackground from '../shared/RadiusBackground';
 
 const FeatureSection = () => {
   return (
-    <STYRowContainer className="relative w-100 align-fs" style={{ marginTop: 170, flexWrap: 'wrap' }}>
-      <STYRowContainer>
+    <STYColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap' }}>
+      <STYRowContainer className="justify-sb">
         <Label className="align-fs" fontSize={40} fontFamily="syncopate" lineHeight={50}>
           unique
           <br />
@@ -29,15 +29,16 @@ const FeatureSection = () => {
           focus on ecosystem development, working to help growing the entire Kadena blockchain.
         </Label>
 
-        {FEATURES.map((feature, i) => (
-          <InfoCard key={i} type="features" {...feature} style={{ marginRight: 40 }} />
-        ))}
+        <InfoCard type="features" {...ZERO_GAS} />
+        <InfoCard type="features" {...LPS} />
       </STYRowContainer>
 
-      {/* <STYRowContainer gap={40}>
-      
-      </STYRowContainer> */}
-    </STYRowContainer>
+      <STYRowContainer className="justify-sb">
+        {FEATURES.slice(2).map((feature, i) => (
+          <InfoCard key={i} type="features" {...feature} />
+        ))}
+      </STYRowContainer>
+    </STYColumnContainer>
   );
 };
 
