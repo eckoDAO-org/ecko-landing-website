@@ -24,16 +24,14 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       line-height: inherit;
+      overflow-x: hidden;
       /* overflow: auto; */
       min-width: 0;
       font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
       color: ${({ theme: { colors } }) => colors.primary};
-      background: linear-gradient(122deg, #070610 0%, #4C125A 100%);
       background-attachment: fixed;
-      /* background: -webkit-gradient(linear, left top, left bottom, from(#070610), to(#4C125A)) fixed; */
       opacity: 1;
-      
-      
+      background-color: #0A0B1D;
       
     };
 
@@ -66,15 +64,13 @@ export default createGlobalStyle`
     }
 
     .desktop-none {
-      @media (min-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel + 1}px`}) {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
         display: none !important;
       }
     }
 
     .mobile-none {
-      @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
         display: none !important;
       }
     }

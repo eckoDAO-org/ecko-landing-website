@@ -31,14 +31,8 @@ export { ReactComponent as TokensoftLogo } from './images/partner/Tokensoft.svg'
 export { ReactComponent as UfoGamingLogo } from './images/partner/Ufo Gaming.svg';
 export { ReactComponent as ZelcoreLogo } from './images/partner/ZelCore-Round.svg';
 
-
-
-
-
-
-
-
-
-
-
-
+// PROOF DEX
+export { ReactComponent as SwapIcon } from './images/proof-dex/swap.svg';
+export { ReactComponent as PoolIcon } from './images/proof-dex/pool.svg';
+export { ReactComponent as StakeIcon } from './images/proof-dex/stake.svg';
+export { ReactComponent as BuildIcon } from './images/proof-dex/build.svg';

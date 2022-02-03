@@ -35,6 +35,10 @@ const STYText = styled.span`
   &.capitalize {
     text-transform: capitalize;
   }
+
+  &.text-center {
+    text-align: center;
+  }
 `;
 
 const Label = ({ className, children, fontFamily, fontSize = 13, labelStyle, color, inverted, withShade, onClick }) => {
@@ -44,7 +48,7 @@ const Label = ({ className, children, fontFamily, fontSize = 13, labelStyle, col
         return theme.colors.white;
       case 'primary':
         return theme.colors.primary;
-      case 'lightBlue':
+      case 'light-blue':
         return theme.colors.lightBlue;
       case 'pink':
         return theme.colors.pink;
@@ -79,7 +83,7 @@ Label.propTypes = {
   fontSize: PropTypes.number,
   fontFamily: PropTypes.oneOf(['basier', 'syncopate']),
   onClose: PropTypes.func,
-  color: PropTypes.oneOf(['white', 'primary', 'lightBlue', 'pink', 'yellow', 'grey']),
+  color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),
 };
 
 Label.defaultProps = {

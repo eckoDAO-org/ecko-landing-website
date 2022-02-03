@@ -3,13 +3,14 @@ import styled from 'styled-components/macro';
 import './MainContainer.css';
 import IntroductionSection from './IntroductionSection';
 import RoadmapSection from './RoadmapSection';
-import FeatureSection from './FeaturesSection';
 import ProofDexContainer from '../components/shared/ProofDexCard';
 import DiscordContainer from './DiscordContainer';
 import TokenomicsContainer from './TokenomicsContainer';
 import PartnersSection from './PartnersSection';
 import Introduction from '../components/section-introduction/Introduction';
 import ProofCard from '../components/section-proof/ProofCard';
+import RadiusBackground from '../components/shared/RadiusBackground';
+import FeatureSection from '../components/section-features/FeaturesSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -31,6 +32,8 @@ const MainContainer = () => {
     <OuterContainer>
       <Introduction />
       <ProofCard />
+      <FeatureSection />
+      {/* <RadiusBackground idRef="proof-dex" /> */}
       {/* <ProofDexContainer />
       <FeatureSection />
       <DiscordContainer />

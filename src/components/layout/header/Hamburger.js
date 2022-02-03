@@ -8,7 +8,6 @@ import Label from '../../shared/Label';
 const HamburgerListContainer = styled.div`
   border-radius: 4px;
   background: #240b2f 0% 0% no-repeat padding-box;
-
   & > *:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -19,6 +18,7 @@ const HamburgerItem = styled.div`
   align-items: center;
   background: #240b2f 0% 0% no-repeat padding-box;
   color: #ffffff;
+  cursor: pointer;
   &:hover {
     span {
       text-shadow: 0 0 5px #ffffff;
@@ -45,6 +45,7 @@ const Hamburger = () => {
         offset={[8, 20]}
         position="bottom right"
         style={{
+          zIndex: 11,
           padding: 16,
           background: '#240B2F 0% 0% no-repeat padding-box',
           border: '2px solid #FFFFFF',

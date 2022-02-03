@@ -19,7 +19,7 @@ const IntroductionHeader = () => {
       </STYColumnContainer>
 
       <STYColumnContainer style={{ flex: 1, marginLeft: 60 }}>
-        <Label fontSize={20} color="lightBlue" labelStyle={{ lineHeight: '175%', letterSpacing: '-0.1em' }}>
+        <Label fontSize={20} color="light-blue" labelStyle={{ lineHeight: '175%', letterSpacing: '-0.1em' }}>
           Safe DeFi begins with our Gas free DEX.
           <br />
           Gas will always stay free because the Kadena <br /> blockchain scales horizontally,
