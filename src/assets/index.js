@@ -5,11 +5,6 @@ export { ReactComponent as CogIcon } from './images/header/cog.svg';
 export { ReactComponent as HamburgerIcon } from './images/header/hamburger.svg';
 export { ReactComponent as AboutIcon } from './images/header/about.svg';
 export { ReactComponent as CodeIcon } from './images/header/code.svg';
-export { ReactComponent as DiscordIcon } from './images/header/discord_2.svg';
-export { ReactComponent as TwitterIcon } from './images/header/twitter.svg';
-export { ReactComponent as TelegramIcon } from './images/header/telegram.svg';
-export { ReactComponent as MediumIcon } from './images/header/medium.svg';
-export { ReactComponent as GithubIcon } from './images/header/github.svg';
 export { ReactComponent as TokenomicsBackground } from './images/tokenomics/tokenomics_background.svg';
 export { ReactComponent as TokenomicsGraph } from './images/tokenomics/tokenomics_graph.svg';
 export { ReactComponent as TokenomicsRing } from './images/tokenomics/tokenomics_ring.svg';
@@ -50,3 +45,10 @@ export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
 // TOKENOMICS
 export { ReactComponent as TokenomicsCircleIcon } from './images/tokenomics/tokenomics-circle.svg';
 export { ReactComponent as TokenomicsKaddexLogoIcon } from './images/tokenomics/tokenomics-kaddex-logo.svg';
+
+// SOCIAL MEDIA
+export { ReactComponent as DiscordIcon } from './images/social-media/discord.svg';
+export { ReactComponent as GithubIcon } from './images/social-media/github.svg';
+export { ReactComponent as MediumIcon } from './images/social-media/medium.svg';
+export { ReactComponent as TelegramIcon } from './images/social-media/telegram.svg';
+export { ReactComponent as TwitterIcon } from './images/social-media/twitter.svg';

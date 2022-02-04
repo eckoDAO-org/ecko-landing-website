@@ -1,39 +1,9 @@
 import React from 'react';
 import { Popup } from 'semantic-ui-react';
-import styled from 'styled-components/macro';
 import { HamburgerIcon } from '../../../assets';
-import { ITEM_LINKS } from '../../../constants/itemLinks';
-import Label from '../../shared/Label';
-
-const HamburgerListContainer = styled.div`
-  border-radius: 4px;
-  background: #240b2f 0% 0% no-repeat padding-box;
-  & > *:not(:last-child) {
-    margin-bottom: 8px;
-  }
-`;
-
-const HamburgerItem = styled.div`
-  display: flex;
-  align-items: center;
-  background: #240b2f 0% 0% no-repeat padding-box;
-  color: #ffffff;
-  cursor: pointer;
-  &:hover {
-    span {
-      text-shadow: 0 0 5px #ffffff;
-    }
-    & svg {
-      margin-right: 10px;
-      & path {
-        fill: #ffffff;
-      }
-    }
-  }
-  & svg {
-    margin-right: 10px;
-  }
-`;
+import { SOCIAL_MEDIA } from '../../../constants/social-media';
+import { STYColumnContainer } from '../../shared/Container';
+import SocialMediaItem from '../../shared/SocialMediaItem';
 
 const Hamburger = () => {
   return (
@@ -53,14 +23,11 @@ const Hamburger = () => {
           borderRadius: '10px',
         }}
       >
-        <HamburgerListContainer>
-          {Object.values(ITEM_LINKS).map((social, index) => (
-            <HamburgerItem to="/" key={index} onClick={() => window.open(social.link, '_blank', 'noopener,noreferrer')}>
-              {social.icon}
-              <Label fontSize={16}>{social.label}</Label>
-            </HamburgerItem>
+        <STYColumnContainer gap={12}>
+          {SOCIAL_MEDIA.map((social, i) => (
+            <SocialMediaItem key={i} {...social} />
           ))}
-        </HamburgerListContainer>
+        </STYColumnContainer>
       </Popup>
     </div>
   );

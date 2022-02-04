@@ -3,6 +3,20 @@ import styled, { css } from 'styled-components/macro';
 export const STYFlexContainer = styled.div`
   display: flex;
 
+  &.mobile-column {
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+      flex-direction: column;
+      ${({ mobileColumnGap }) => {
+        if (mobileColumnGap) {
+          return css`
+            & > *:not(:last-child) {
+              margin-bottom: ${mobileColumnGap}px;
+            }
+          `;
+        }
+      }}
+    }
+  }
   &.align-fs {
     align-items: flex-start;
   }

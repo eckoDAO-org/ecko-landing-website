@@ -18,6 +18,17 @@ const STYText = styled.span`
   }}
 
   font-size: ${({ fontSize }) => fontSize}px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+    font-size: ${({ mobileFontSize }) => mobileFontSize}px;
+    ${({ mobileLineHeight }) => {
+      if (mobileLineHeight) {
+        return css`
+          line-height: ${mobileLineHeight}px;
+        `;
+      }
+    }}
+  }
+
   svg {
     path {
       fill: ${({ theme: { colors } }) => colors.white};
@@ -50,16 +61,32 @@ const STYText = styled.span`
   }
 `;
 
-const Label = ({ className, gradientColors, children, fontFamily, fontSize, lineHeight, labelStyle, color, inverted, withShade, onClick }) => {
+const Label = ({
+  className,
+  gradientColors,
+  children,
+  fontFamily,
+  fontSize,
+  mobileFontSize,
+  lineHeight,
+  mobileLineHeight,
+  labelStyle,
+  color,
+  inverted,
+  withShade,
+  onClick,
+}) => {
   return (
     <STYText
       className={className}
       inverted={inverted}
       color={getColor(color)}
       fontSize={fontSize}
+      mobileFontSize={mobileFontSize}
       onClick={onClick}
       withShade={withShade}
       lineHeight={lineHeight}
+      mobileLineHeight={mobileLineHeight}
       style={{ fontFamily: theme.fontFamily[fontFamily], ...labelStyle }}
       gradientColors={gradientColors}
     >

@@ -5,21 +5,29 @@ import Label from '../shared/Label';
 
 const IntroductionHeader = () => {
   return (
-    <STYFlexContainer className="align-fs">
+    <STYFlexContainer mobileColumnGap={25} className="align-fs mobile-column">
       <STYColumnContainer style={{ flex: 1 }}>
-        <Label fontSize={60} fontFamily="syncopate" lineHeight={75}>
+        <Label fontSize={60} mobileFontSize={25} fontFamily="syncopate" lineHeight={75} mobileLineHeight={31.25}>
           the evolution
         </Label>
-        <Label fontSize={60} fontFamily="syncopate" lineHeight={75}>
+        <Label fontSize={60} mobileFontSize={25} fontFamily="syncopate" lineHeight={75} mobileLineHeight={31.25}>
           of defi on
         </Label>
-        <Label className="rainbow" fontSize={60} fontFamily="syncopate" lineHeight={75} labelStyle={{ width: 'fit-content' }}>
+        <Label
+          className="rainbow"
+          fontSize={60}
+          mobileFontSize={25}
+          fontFamily="syncopate"
+          lineHeight={75}
+          mobileLineHeight={31.25}
+          labelStyle={{ width: 'fit-content' }}
+        >
           Kadena
         </Label>
       </STYColumnContainer>
 
-      <STYColumnContainer style={{ flex: 1, marginLeft: 60 }}>
-        <Label fontSize={20} color="light-blue" lineHeight={35}>
+      <STYColumnContainer style={{ flex: 1 }}>
+        <Label fontSize={20} mobileFontSize={10} color="light-blue" lineHeight={35} mobileLineHeight={17.5}>
           Safe DeFi begins with our Gas free DEX.
           <br />
           Gas will always stay free because the Kadena <br /> blockchain scales horizontally,
