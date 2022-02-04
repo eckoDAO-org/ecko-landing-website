@@ -1,11 +1,9 @@
 import React from 'react';
 import { TokenomicsCircleIcon, TokenomicsKaddexLogoIcon } from '../../assets';
-import { FEATURES } from '../../constants/features';
 import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
 import { STYColumnContainer, STYFlexContainer } from '../shared/Container';
 import InfoCard from '../shared/InfoCard';
 import Label from '../shared/Label';
-import RadiusBackground from '../shared/RadiusBackground';
 
 const TokenomicsSection = () => {
   return (

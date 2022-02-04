@@ -26,7 +26,6 @@ const STYText = styled.span`
 
   &.rainbow {
     background-image: ${({ gradientColors }) => {
-      console.log('gradientColors', gradientColors);
       return `linear-gradient(94.39deg,${gradientColors[0]} 0.84%, ${gradientColors[1]} 44.14%, ${gradientColors[2]} 90.22%)`;
     }};
     color: transparent;

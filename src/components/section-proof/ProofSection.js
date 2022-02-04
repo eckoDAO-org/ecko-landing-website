@@ -1,26 +1,16 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { STYColumnContainer, STYFlexContainer } from '../shared/Container';
-import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
 import Label from '../shared/Label';
 import { PROOF_DEX } from '../../constants/proof-dex';
 import InfoCard from '../shared/InfoCard';
+import Stripes from '../shared/Stripes';
 
 const STYCard = styled(STYFlexContainer)`
   background: linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%);
   border-radius: 60px;
   padding: 63px 65px 75px 80px;
   width: 100%;
-`;
-
-const STYStripesContainer = styled.div`
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  line-height: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    display: none;
-  }
 `;
 
 const ProofSection = () => {
@@ -50,9 +40,7 @@ const ProofSection = () => {
           ))}
         </STYFlexContainer>
       </STYFlexContainer>
-      <STYStripesContainer>
-        <Stripes />
-      </STYStripesContainer>
+      <Stripes />
     </STYCard>
   );
 };

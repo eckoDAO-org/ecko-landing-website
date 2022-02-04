@@ -16,6 +16,9 @@ export { ReactComponent as TokenomicsRing } from './images/tokenomics/tokenomics
 export { ReactComponent as TokenomicsRing2 } from './images/tokenomics/token_ring_2.svg';
 export { ReactComponent as ArrowDownIcon } from './images/shared/arrow-down-white.svg';
 export { ReactComponent as TopUpIcon } from './images/shared/go_top.svg';
+export { ReactComponent as StripeIcon } from './images/shared/stripes.svg';
+export { ReactComponent as KaddexLogoFooterIcon } from './images/shared/kaddex-logo-footer.svg';
+export { ReactComponent as KaddexFooterIcon } from './images/shared/kaddex-footer.svg';
 
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';
