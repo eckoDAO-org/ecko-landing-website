@@ -1,20 +1,26 @@
 import styled, { css } from 'styled-components/macro';
 
-export const STYRowContainer = styled.div`
+export const STYFlexContainer = styled.div`
   display: flex;
-  flex: 1;
+
   &.align-fs {
     align-items: flex-start;
   }
+
   &.align-fe {
     align-items: flex-end;
   }
+
   &.justify-ce {
     justify-content: center;
   }
 
   &.justify-sb {
     justify-content: space-between;
+  }
+
+  &.justify-fe {
+    justify-content: flex-end;
   }
 
   &.absolute {
@@ -33,6 +39,9 @@ export const STYRowContainer = styled.div`
     width: 100%;
   }
 
+  &.flex-1 {
+    flex: 1;
+  }
   ${({ gap }) => {
     if (gap) {
       return css`
@@ -51,6 +60,10 @@ export const STYColumnContainer = styled.div`
     align-items: center;
   }
 
+  &.justify-fe {
+    justify-content: flex-end;
+  }
+
   &.justify-sb {
     justify-content: space-between;
   }
@@ -65,6 +78,10 @@ export const STYColumnContainer = styled.div`
 
   &.w-100 {
     width: 100%;
+  }
+
+  &.h-fit-content {
+    height: fit-content;
   }
 
   ${({ gap }) => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { STYColumnContainer, STYRowContainer } from '../shared/Container';
+import { STYColumnContainer, STYFlexContainer } from '../shared/Container';
 import { ReactComponent as Stripes } from '../../assets/images/shared/stripes.svg';
 import Label from '../shared/Label';
 import { PROOF_DEX } from '../../constants/proof-dex';
 import InfoCard from '../shared/InfoCard';
 
-const STYCard = styled(STYRowContainer)`
+const STYCard = styled(STYFlexContainer)`
   background: linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%);
   border-radius: 60px;
   padding: 63px 65px 75px 80px;
@@ -23,10 +23,10 @@ const STYStripesContainer = styled.div`
   }
 `;
 
-const ProofCard = () => {
+const ProofSection = () => {
   return (
     <STYCard id="proof-dex" className="relative">
-      <STYRowContainer gap={60}>
+      <STYFlexContainer className="flex-1" gap={60}>
         <STYColumnContainer className="justify-ce" gap={32}>
           <Label fontSize={40} lineHeight={50} fontFamily="syncopate">
             The most
@@ -44,12 +44,12 @@ const ProofCard = () => {
           </Label>
         </STYColumnContainer>
 
-        <STYRowContainer className="justify-sb">
+        <STYFlexContainer className="justify-sb flex-1">
           {PROOF_DEX.map((proofDex, i) => (
             <InfoCard key={i} type="proof" {...proofDex} />
           ))}
-        </STYRowContainer>
-      </STYRowContainer>
+        </STYFlexContainer>
+      </STYFlexContainer>
       <STYStripesContainer>
         <Stripes />
       </STYStripesContainer>
@@ -57,4 +57,4 @@ const ProofCard = () => {
   );
 };
 
-export default ProofCard;
+export default ProofSection;

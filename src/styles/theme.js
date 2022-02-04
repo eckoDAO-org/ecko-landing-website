@@ -1,3 +1,22 @@
+export const getColor = (color) => {
+  switch (color) {
+    case 'white':
+      return theme.colors.white;
+    case 'primary':
+      return theme.colors.primary;
+    case 'light-blue':
+      return theme.colors.lightBlue;
+    case 'pink':
+      return theme.colors.pink;
+    case 'yellow':
+      return theme.colors.yellow;
+    case 'grey':
+      return theme.colors.grey;
+    default:
+      return '#ffffff';
+  }
+};
+
 export const theme = {
   layout: {
     desktopWidth: '80%',

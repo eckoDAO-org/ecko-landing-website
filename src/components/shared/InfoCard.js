@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components/macro';
 import PropTypes from 'prop-types';
-import theme from '../../styles/theme';
+import { getColor } from '../../styles/theme';
 import { STYColumnContainer } from './Container';
 import Label from './Label';
 
@@ -17,18 +17,24 @@ const STYCard = styled(STYColumnContainer)`
           }
         }
       `;
+    } else if (type === 'partners') {
+      return css`
+        padding: 95px 17px;
+        border: 1px solid ${getColor(color)};
+        border-radius: 250px;
+        height: fit-content;
+      `;
     } else {
       return css`
-        padding: 20px;
-        border: 1px solid ${color};
+        padding: 105px 20px 125px 20px;
+        border: 1px solid ${getColor(color)};
         border-radius: 250px;
         height: 468px;
-        padding: 105px 20px 125px 20px;
         svg {
           height: 64px;
           width: 64px;
           path {
-            fill: ${color};
+            fill: ${getColor(color)};
           }
         }
       `;
@@ -36,26 +42,7 @@ const STYCard = styled(STYColumnContainer)`
   }}
 `;
 
-const InfoCard = ({ type, color, icon, title, description, gradientColors, titleClassName, descriptionClassName, style }) => {
-  const getColor = () => {
-    switch (color) {
-      case 'white':
-        return theme.colors.white;
-      case 'primary':
-        return theme.colors.primary;
-      case 'light-blue':
-        return theme.colors.lightBlue;
-      case 'pink':
-        return theme.colors.pink;
-      case 'yellow':
-        return theme.colors.yellow;
-      case 'grey':
-        return theme.colors.grey;
-      default:
-        return '#ffffff';
-    }
-  };
-
+const InfoCard = ({ type, color, icon, title, description, gradientColors, className, titleClassName, descriptionClassName, style }) => {
   const getTitleStyle = () => {
     switch (type) {
       case 'proof':
@@ -63,7 +50,15 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, title
       case 'features':
         return { color: 'yellow', fontSize: 20, labelStyle: { marginTop: 55, marginBottom: 22, lineHeight: '35px' } };
       case 'partners':
-        return { color: getColor(), fontSize: 20 };
+        return {
+          color,
+          fontSize: 20,
+          labelStyle: {
+            marginTop: 55,
+            marginBottom: 40,
+            lineHeight: '25px',
+          },
+        };
       case 'percentage':
         return { fontSize: 15, labelStyle: { lineHeight: '26px', marginTop: 20, marginBottom: 20 } };
       default:
@@ -84,7 +79,7 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, title
           },
         };
       case 'partners':
-        return { color: getColor(), fontSize: 13 };
+        return { color, fontSize: 13, labelStyle: { lineHeight: '22.75px' } };
       case 'percentage':
         return { color: 'light-blue', fontSize: 12, labelStyle: { lineHeight: '21px' } };
       default:
@@ -92,8 +87,8 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, title
     }
   };
   return (
-    <STYCard className="align-ce" type={type} color={getColor} style={style}>
-      {icon}
+    <STYCard className={`align-ce ${className}`} type={type} color={color} style={style}>
+      <div>{icon}</div>
       <Label className={`text-center ${titleClassName}`} gradientColors={gradientColors} {...getTitleStyle()} fontFamily="syncopate">
         {title}
       </Label>

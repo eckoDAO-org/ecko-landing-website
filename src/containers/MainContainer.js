@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
-import Introduction from '../components/section-introduction/Introduction';
-import ProofCard from '../components/section-proof/ProofCard';
+import IntroductionSection from '../components/section-introduction/IntroductionSection';
+import ProofSection from '../components/section-proof/ProofSection';
 import FeatureSection from '../components/section-features/FeaturesSection';
 import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
+import PartnersSection from '../components/section-partners/PartnersSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -24,10 +25,12 @@ const OuterContainer = styled.div`
 const MainContainer = () => {
   return (
     <OuterContainer>
-      <Introduction />
-      <ProofCard />
+      <IntroductionSection />
+      <ProofSection />
       <FeatureSection />
-      <TokenomicsSection/>
+      <TokenomicsSection />
+      <PartnersSection />
+
       {/* <RadiusBackground idRef="proof-dex" /> */}
     </OuterContainer>
   );

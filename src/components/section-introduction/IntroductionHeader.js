@@ -1,11 +1,11 @@
 import React from 'react';
-import { STYRowContainer, STYColumnContainer } from '../shared/Container';
+import { STYFlexContainer, STYColumnContainer } from '../shared/Container';
 import GradientContainer from '../shared/GradientContainer';
 import Label from '../shared/Label';
 
 const IntroductionHeader = () => {
   return (
-    <STYRowContainer className="align-fs">
+    <STYFlexContainer className="align-fs">
       <STYColumnContainer style={{ flex: 1 }}>
         <Label fontSize={60} fontFamily="syncopate" lineHeight={75}>
           the evolution
@@ -31,7 +31,7 @@ const IntroductionHeader = () => {
           </Label>
         </GradientContainer>
       </STYColumnContainer>
-    </STYRowContainer>
+    </STYFlexContainer>
   );
 };
 

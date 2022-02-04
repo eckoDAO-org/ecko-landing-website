@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components/macro';
 import PropTypes from 'prop-types';
-import { theme } from '../../styles/theme';
+import { getColor, theme } from '../../styles/theme';
 
 const STYText = styled.span`
   display: flex;
@@ -16,11 +16,7 @@ const STYText = styled.span`
       `;
     }
   }}
-  ${({ inverted, theme: { colors } }) =>
-    inverted &&
-    css`
-      color: ${colors.primary};
-    `}
+
   font-size: ${({ fontSize }) => fontSize}px;
   svg {
     path {
@@ -56,30 +52,11 @@ const STYText = styled.span`
 `;
 
 const Label = ({ className, gradientColors, children, fontFamily, fontSize, lineHeight, labelStyle, color, inverted, withShade, onClick }) => {
-  const getColor = () => {
-    switch (color) {
-      case 'white':
-        return theme.colors.white;
-      case 'primary':
-        return theme.colors.primary;
-      case 'light-blue':
-        return theme.colors.lightBlue;
-      case 'pink':
-        return theme.colors.pink;
-      case 'yellow':
-        return theme.colors.yellow;
-      case 'grey':
-        return theme.colors.grey;
-      default:
-        return '#ffffff';
-    }
-  };
-
   return (
     <STYText
       className={className}
       inverted={inverted}
-      color={getColor()}
+      color={getColor(color)}
       fontSize={fontSize}
       onClick={onClick}
       withShade={withShade}

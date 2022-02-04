@@ -1,6 +1,6 @@
 import React from 'react';
 import { FEATURES, LPS, ZERO_GAS } from '../../constants/features';
-import { STYColumnContainer, STYRowContainer } from '../shared/Container';
+import { STYColumnContainer, STYFlexContainer } from '../shared/Container';
 import InfoCard from '../shared/InfoCard';
 import Label from '../shared/Label';
 import RadiusBackground from '../shared/RadiusBackground';
@@ -8,7 +8,7 @@ import RadiusBackground from '../shared/RadiusBackground';
 const FeatureSection = () => {
   return (
     <STYColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
-      <STYRowContainer className="justify-sb">
+      <STYFlexContainer className="justify-sb">
         <Label className="align-fs" fontSize={40} fontFamily="syncopate" lineHeight={50}>
           unique
           <br />
@@ -31,13 +31,13 @@ const FeatureSection = () => {
 
         <InfoCard type="features" {...ZERO_GAS} />
         <InfoCard type="features" {...LPS} />
-      </STYRowContainer>
+      </STYFlexContainer>
 
-      <STYRowContainer className="justify-sb">
+      <STYFlexContainer className="justify-sb">
         {FEATURES.slice(2).map((feature, i) => (
           <InfoCard key={i} type="features" {...feature} />
         ))}
-      </STYRowContainer>
+      </STYFlexContainer>
     </STYColumnContainer>
   );
 };

@@ -3,7 +3,7 @@ import { STYColumnContainer } from '../shared/Container';
 import GameBoy from './GameBoy';
 import IntroductionHeader from './IntroductionHeader';
 
-const Introduction = () => {
+const IntroductionSection = () => {
   return (
     <STYColumnContainer id="introduction" style={{ width: '100%', marginTop: 100 }}>
       <IntroductionHeader />
@@ -12,4 +12,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default IntroductionSection;
