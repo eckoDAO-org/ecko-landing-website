@@ -68,7 +68,7 @@ const TokenomicsSection = () => {
         </STYColumnContainer>
         <STYFlexContainer className="relative">
           <TokenomicsCircleIcon />
-          <TokenomicsKaddexLogoIcon style={{ position: 'absolute', top: '49.5%', left: '46.5%', transform: 'translate(-50%, -50%)' }} />
+          <TokenomicsKaddexLogoIcon style={{ position: 'absolute', top: '49.5%', left: '50.5%', transform: 'translate(-50%, -50%)' }} />
         </STYFlexContainer>
       </STYFlexContainer>
     </STYColumnContainer>
