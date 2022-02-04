@@ -21,7 +21,11 @@ const SocialMediaItem = ({ icon, name, hideName, link }) => {
   return (
     <Social gap={10} onClick={() => window.open(link, '_blank', 'noopener,noreferrer')}>
       {icon}
-      {!hideName && <Label fontFamily="sincopate">{name}</Label>}
+      {!hideName && (
+        <Label size="normal" fontFamily="sincopate">
+          {name}
+        </Label>
+      )}
     </Social>
   );
 };

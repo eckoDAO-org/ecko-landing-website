@@ -3,30 +3,27 @@ import styled, { css } from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { getColor, theme } from '../../styles/theme';
 
+const getConfiguration = (configuration, size, type) => {
+  return theme[configuration][size][type];
+};
+
 const STYText = styled.span`
   display: flex;
   align-items: center;
   cursor: ${({ onClick }) => onClick && 'pointer'};
   z-index: 1;
   color: ${({ color }) => color};
-  ${({ lineHeight }) => {
-    if (lineHeight) {
-      return css`
-        line-height: ${lineHeight}px;
-      `;
-    }
-  }}
 
-  font-size: ${({ fontSize }) => fontSize}px;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
-    font-size: ${({ mobileFontSize }) => mobileFontSize}px;
-    ${({ mobileLineHeight }) => {
-      if (mobileLineHeight) {
-        return css`
-          line-height: ${mobileLineHeight}px;
-        `;
-      }
-    }}
+  font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'desktop') : fontSize)}px;
+  line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'desktop')}px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'tablet') : fontSize)}px;
+    line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'tablet')}px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'mobile') : fontSize)}px;
+    line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'mobile')}px;
   }
 
   svg {
@@ -67,6 +64,7 @@ const Label = ({
   children,
   fontFamily,
   fontSize,
+  size,
   mobileFontSize,
   lineHeight,
   mobileLineHeight,
@@ -76,13 +74,15 @@ const Label = ({
   withShade,
   onClick,
 }) => {
+  console.log('fontSize', fontSize);
+  console.log('lineHeight', lineHeight);
   return (
     <STYText
       className={className}
       inverted={inverted}
       color={getColor(color)}
       fontSize={fontSize}
-      mobileFontSize={mobileFontSize}
+      size={size}
       onClick={onClick}
       withShade={withShade}
       lineHeight={lineHeight}
@@ -100,6 +100,7 @@ export default Label;
 Label.propTypes = {
   children: PropTypes.any.isRequired,
   fontSize: PropTypes.number,
+  size: PropTypes.oneOf(['huge', 'big', 'medium', 'normal', 'small', 'tiny', 'nano']),
   fontFamily: PropTypes.oneOf(['basier', 'syncopate']),
   onClose: PropTypes.func,
   color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),
@@ -107,7 +108,7 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  fontSize: 13,
+  fontSize: null,
   fontFamily: 'basier',
   onClick: null,
   color: 'white',

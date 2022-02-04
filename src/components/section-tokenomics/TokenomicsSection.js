@@ -13,13 +13,12 @@ const TokenomicsSection = () => {
           className="rainbow"
           fontSize={110}
           fontFamily="syncopate"
-          lineHeight={0}
           labelStyle={{ width: 'fit-content' }}
           gradientColors={['#b766b6', '#f95197', '#f68861']}
         >
           1,000,000,000
         </Label>
-        <Label className="align-fs" fontSize={34} fontFamily="syncopate" lineHeight={50} labelStyle={{ marginLeft: 43 }}>
+        <Label className="align-fs" fontFamily="syncopate" size="large" labelStyle={{ marginLeft: 43 }}>
           KDX tokens
           <br />
           fixed supply
@@ -27,7 +26,7 @@ const TokenomicsSection = () => {
       </STYFlexContainer>
       <STYFlexContainer>
         <STYColumnContainer>
-          <Label className="align-fs" color="light-blue" fontSize={15} lineHeight={26.25} labelStyle={{ marginTop: 32, maxWidth: 650 }}>
+          <Label className="align-fs" color="light-blue" size="small" labelStyle={{ marginTop: 32, maxWidth: 650 }}>
             The KDX Token is used to incentivize all the liquidity stakeholders on
             <br />
             the Kaddex platform, while also rewarding its holders for supporting

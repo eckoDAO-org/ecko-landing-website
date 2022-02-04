@@ -37,7 +37,7 @@ const HeaderItem = ({ id, className, href, target, children, disabledHover, styl
       shadowHover={shadowHover}
     >
       <>
-        <Label fontSize={20}>{children}</Label>
+        <Label size="small">{children}</Label>
         {!disabledHover && <div className="underline"></div>}
       </>
     </Item>

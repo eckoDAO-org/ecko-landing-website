@@ -9,18 +9,12 @@ const FeatureSection = () => {
   return (
     <STYColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
       <STYFlexContainer className="justify-sb">
-        <Label className="align-fs" fontSize={40} fontFamily="syncopate" lineHeight={50}>
+        <Label className="align-fs" fontFamily="syncopate" size="big">
           unique
           <br />
           features
         </Label>
-        <Label
-          className="align-fs"
-          color="light-blue"
-          fontSize={15}
-          lineHeight={26.25}
-          labelStyle={{ marginLeft: 100, marginTop: 16, marginRight: 100, maxWidth: 584 }}
-        >
+        <Label className="align-fs" color="light-blue" size="small" labelStyle={{ marginLeft: 100, marginTop: 16, marginRight: 100, maxWidth: 584 }}>
           Safe DeFi begins with our Gas free DEX.
           <br />
           Gas will always stay free because the Kadena blockchain scales horizontally.

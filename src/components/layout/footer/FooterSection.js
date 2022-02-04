@@ -20,7 +20,7 @@ const FooterSection = () => {
       <STYColumnContainer style={{ marginTop: 40 }}>
         <KaddexLogoFooterIcon />
         <KaddexFooterIcon style={{ marginTop: 53, marginBottom: 34 }} />
-        <Label color="grey" lineHeight={22.75}>
+        <Label color="grey" fontSize={13}>
           © Copyright 2022.
           <br />
           All rights reserved.

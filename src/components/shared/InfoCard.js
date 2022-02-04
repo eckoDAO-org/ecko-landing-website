@@ -46,21 +46,20 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, class
   const getTitleStyle = () => {
     switch (type) {
       case 'proof':
-        return { color, fontSize: 30, labelStyle: { marginTop: 55, marginBottom: 34, lineHeight: '37.5px' } };
+        return { color, size: 'medium', labelStyle: { marginTop: 55, marginBottom: 34 } };
       case 'features':
-        return { color: 'yellow', fontSize: 20, labelStyle: { marginTop: 55, marginBottom: 22, lineHeight: '35px' } };
+        return { color: 'yellow', size: 'normal', labelStyle: { marginTop: 55, marginBottom: 22 } };
       case 'partners':
         return {
           color,
-          fontSize: 20,
+          size: 'normal',
           labelStyle: {
             marginTop: 55,
             marginBottom: 40,
-            lineHeight: '25px',
           },
         };
       case 'percentage':
-        return { fontSize: 15, labelStyle: { lineHeight: '26px', marginTop: 20, marginBottom: 20 } };
+        return { size: 'small', labelStyle: { lineHeight: '26px', marginTop: 20 } };
       default:
         return;
     }
@@ -69,19 +68,19 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, class
   const getDescriptionStyle = () => {
     switch (type) {
       case 'proof':
-        return { color: 'grey', fontSize: 13, labelStyle: { lineHeight: '22.75px' } };
+        return { color: 'grey', size: 'tiny' };
       case 'features':
         return {
           color: 'light-blue',
-          fontSize: 12,
+          size: 'nano',
           labelStyle: {
             lineHeight: '21px',
           },
         };
       case 'partners':
-        return { color, fontSize: 13, labelStyle: { lineHeight: '22.75px' } };
+        return { color, size: 'tiny' };
       case 'percentage':
-        return { color: 'light-blue', fontSize: 12, labelStyle: { lineHeight: '21px' } };
+        return { color: 'light-blue', size: 'nano' };
       default:
         return;
     }
