@@ -99,6 +99,17 @@ export const STYFlexContainer = styled.div`
       `;
     }
   }}
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    ${({ mobileGap }) => {
+      if (mobileGap) {
+        return css`
+          & > *:not(:last-child) {
+            margin-right: ${mobileGap}px;
+          }
+        `;
+      }
+    }}
+  }
 
   &.mobile-column,
   &.tablet-column {

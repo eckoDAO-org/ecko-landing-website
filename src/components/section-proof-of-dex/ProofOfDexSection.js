@@ -3,20 +3,31 @@ import styled from 'styled-components/macro';
 import { ColumnContainer, FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import { PROOF_DEX } from '../../constants/proof-dex';
-import InfoCard from '../shared/InfoCard';
 import Stripes from '../shared/Stripes';
+import ProofOfDexCard from './ProofOfDexCard';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const STYCard = styled(FlexContainer)`
   background: linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%);
   border-radius: 60px;
-  padding: 63px 65px 75px 80px;
   width: 100%;
+  padding: 63px 65px 75px 80px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    padding: 50px 32px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    padding: 100px 32px;
+  }
 `;
 
-const ProofSection = () => {
+const CardsContainer = styled(FlexContainer)``;
+
+const ProofOfDexSection = () => {
+  const [width] = useWindowSize();
   return (
-    <STYCard id="proof-dex" className="relative">
-      <FlexContainer className="flex-1 tablet-column" gap={60}>
+    <STYCard id="proof-dex" className="relative" tabletStyle={{ width: 'calc(100% - 40px)' }} mobileStyle={{ width: 'calc(100% - 40px)' }}>
+      <FlexContainer className="flex-1 tablet-column tablet-align-ce" gap={60}>
         <ColumnContainer className="justify-ce" gap={32}>
           <Label size="big" fontFamily="syncopate">
             The most
@@ -34,9 +45,9 @@ const ProofSection = () => {
           </Label>
         </ColumnContainer>
 
-        <FlexContainer gap={30} className="justify-sb flex-1">
+        <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1">
           {PROOF_DEX.map((proofDex, i) => (
-            <InfoCard key={i} type="proof" {...proofDex} />
+            <ProofOfDexCard key={i} proofDex={proofDex} />
           ))}
         </FlexContainer>
       </FlexContainer>
@@ -45,4 +56,4 @@ const ProofSection = () => {
   );
 };
 
-export default ProofSection;
+export default ProofOfDexSection;

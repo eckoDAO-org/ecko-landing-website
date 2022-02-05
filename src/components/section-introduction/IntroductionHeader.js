@@ -20,7 +20,7 @@ const IntroductionHeader = () => {
         <Label size="huge" fontFamily="syncopate">
           of defi on
         </Label>
-        <Label className="rainbow" fontFamily="syncopate" size="huge" labelStyle={{ width: 'fit-content' }}>
+        <Label className="rainbow" fontFamily="syncopate" size="huge">
           Kadena
         </Label>
       </ColumnContainer>

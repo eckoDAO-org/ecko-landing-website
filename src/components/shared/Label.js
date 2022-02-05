@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { getColor, theme } from '../../styles/theme';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const getConfiguration = (configuration, size, type) => {
   return theme[configuration][size][type];
@@ -71,27 +72,30 @@ const Label = ({
   fontFamily,
   fontSize,
   size,
-  mobileFontSize,
   lineHeight,
-  mobileLineHeight,
-  labelStyle,
   color,
-  inverted,
-  withShade,
+  style,
+  desktopStyle,
+  tabletStyle,
+  mobileStyle,
   onClick,
 }) => {
+  const [width] = useWindowSize();
   return (
     <STYText
       className={className}
-      inverted={inverted}
       color={getColor(color)}
       fontSize={fontSize}
       size={size}
       onClick={onClick}
-      withShade={withShade}
       lineHeight={lineHeight}
-      mobileLineHeight={mobileLineHeight}
-      style={{ fontFamily: theme.fontFamily[fontFamily], ...labelStyle }}
+      style={{
+        fontFamily: theme.fontFamily[fontFamily],
+        ...style,
+        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
+        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
+      }}
       gradientColors={gradientColors}
     >
       {children}

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import './MainContainer.css';
 import IntroductionSection from '../components/section-introduction/IntroductionSection';
-import ProofSection from '../components/section-proof/ProofSection';
 import FeatureSection from '../components/section-features/FeaturesSection';
 import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
 import PartnersSection from '../components/section-partners/PartnersSection';
+import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const MainContainer = () => {
   return (
     <OuterContainer>
       <IntroductionSection />
-      <ProofSection />
+      <ProofOfDexSection />
       <FeatureSection />
       <TokenomicsSection />
       <PartnersSection />
