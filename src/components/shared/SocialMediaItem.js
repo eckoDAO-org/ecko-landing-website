@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { STYFlexContainer } from './Container';
+import { FlexContainer } from './Container';
 import Label from './Label';
 
-const Social = styled(STYFlexContainer)`
+const Social = styled(FlexContainer)`
   cursor: pointer;
   &:hover {
     span {

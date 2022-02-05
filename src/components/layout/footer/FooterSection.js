@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { KaddexFooterIcon, KaddexLogoFooterIcon } from '../../../assets';
-import { STYColumnContainer, STYFlexContainer } from '../../shared/Container';
+import { ColumnContainer, FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
@@ -13,7 +13,7 @@ import theme from '../../../styles/theme';
 import Socials from './Socials';
 import Copyrights from './Copyrights';
 
-const FooterContainer = styled(STYFlexContainer)`
+const FooterContainer = styled(FlexContainer)`
   padding: 80px 90px;
   background-color: #000000;
 `;
@@ -24,22 +24,22 @@ const FooterSection = () => {
     <FooterContainer className="relative justify-sb tablet-column tablet-align-ce">
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
-      <STYFlexContainer gap={80} style={{ margin: width >= theme.mediaQueries.desktopPixel && '0 50px' }}>
+      <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>
         <FooterItemsList {...FOOTER_ABOUT} />
-        <STYFlexContainer className="tablet-column" gap={80} columnGap={50}>
+        <FlexContainer className="tablet-column" gap={80} columnGap={50}>
           <FooterItemsList {...FOOTER_SUPPORT} />
           <FooterItemsList {...FOOTER_LEARN} />
-        </STYFlexContainer>
-      </STYFlexContainer>
+        </FlexContainer>
+      </FlexContainer>
 
       {width >= theme.mediaQueries.desktopPixel && <Socials />}
 
       {width < theme.mediaQueries.desktopPixel && (
-        <STYColumnContainer style={{ marginTop: 70 }} gap={20}>
+        <ColumnContainer style={{ marginTop: 70 }} gap={20}>
           <Socials />
 
           <Copyrights />
-        </STYColumnContainer>
+        </ColumnContainer>
       )}
       <Stripes iconStyle={{ height: 112, width: 115 }} />
     </FooterContainer>

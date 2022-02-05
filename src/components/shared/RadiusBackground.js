@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
-import { STYFlexContainer } from './Container';
+import { FlexContainer } from './Container';
 
 const RadiusBox = styled.div`
   height: 100%;
@@ -24,12 +24,12 @@ const RadiusBackground = ({ idRef }) => {
 
   console.log('top', top);
   return (
-    <STYFlexContainer className="absolute" style={{ width: '100%', height: 2000, top }}>
+    <FlexContainer className="absolute" style={{ width: '100%', height: 2000, top }}>
       <RadiusBox style={{ width: '200%' }} />
       <RadiusBox style={{ width: '200%', left: 143 }} />
       <RadiusBox style={{ width: '200%', left: 272 }} />
       <RadiusBox style={{ width: '200%', left: 383 }} />
-    </STYFlexContainer>
+    </FlexContainer>
   );
 };
 

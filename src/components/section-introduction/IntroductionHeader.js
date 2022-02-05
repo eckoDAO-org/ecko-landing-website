@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { STYFlexContainer, STYColumnContainer } from '../shared/Container';
+import { FlexContainer, ColumnContainer } from '../shared/Container';
 import GradientContainer from '../shared/GradientContainer';
 import Label from '../shared/Label';
 
-const Container = styled(STYFlexContainer)`
+const Container = styled(FlexContainer)`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     padding: 0 50px;
   }
@@ -13,7 +13,7 @@ const Container = styled(STYFlexContainer)`
 const IntroductionHeader = () => {
   return (
     <Container columnGap={25} className="align-fs mobile-column">
-      <STYColumnContainer style={{ flex: 1 }}>
+      <ColumnContainer style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
           the evolution
         </Label>
@@ -23,9 +23,9 @@ const IntroductionHeader = () => {
         <Label className="rainbow" fontFamily="syncopate" size="huge" labelStyle={{ width: 'fit-content' }}>
           Kadena
         </Label>
-      </STYColumnContainer>
+      </ColumnContainer>
 
-      <STYColumnContainer style={{ flex: 1 }}>
+      <ColumnContainer style={{ flex: 1 }} desktopStyle={{ marginLeft: 40 }}>
         <Label size="normal" color="light-blue">
           Safe DeFi begins with our Gas free DEX.
           <br />
@@ -37,7 +37,7 @@ const IntroductionHeader = () => {
             Learn more
           </Label>
         </GradientContainer>
-      </STYColumnContainer>
+      </ColumnContainer>
     </Container>
   );
 };

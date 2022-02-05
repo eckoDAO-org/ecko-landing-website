@@ -4,11 +4,11 @@ import { useState } from 'react/cjs/react.development';
 import styled, { css } from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import { ROUTE_INDEX } from '../../../router/routes';
-import { STYFlexContainer } from '../../shared/Container';
+import { FlexContainer } from '../../shared/Container';
 import Hamburger from './Hamburger';
 import HeaderItems from './HeaderItems';
 
-const Container = styled(STYFlexContainer)`
+const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
   padding: 2em 0px;

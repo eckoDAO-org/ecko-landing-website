@@ -1,4 +1,40 @@
 import styled, { css } from 'styled-components/macro';
+import useWindowSize from '../../hooks/useWindowSize';
+import theme from '../../styles/theme';
+
+export const FlexContainer = ({ children, desktopStyle, style, tabletStyle, mobileStyle, ...rest }) => {
+  const [width] = useWindowSize();
+  return (
+    <STYFlexContainer
+      {...rest}
+      style={{
+        ...style,
+        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
+        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
+      }}
+    >
+      {children}
+    </STYFlexContainer>
+  );
+};
+
+export const ColumnContainer = ({ children, desktopStyle, style, tabletStyle, mobileStyle, ...rest }) => {
+  const [width] = useWindowSize();
+  return (
+    <STYColumnContainer
+      {...rest}
+      style={{
+        ...style,
+        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
+        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
+      }}
+    >
+      {children}
+    </STYColumnContainer>
+  );
+};
 
 export const STYFlexContainer = styled.div`
   display: flex;

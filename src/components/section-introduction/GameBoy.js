@@ -1,12 +1,12 @@
 import React from 'react';
 import gameboy from '../../assets/images/gameboy.png';
-import { STYFlexContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 
 const GameBoy = () => {
   return (
-    <STYFlexContainer className="justify-ce">
+    <FlexContainer className="justify-ce">
       <img src={gameboy} alt="" />
-    </STYFlexContainer>
+    </FlexContainer>
   );
 };
 

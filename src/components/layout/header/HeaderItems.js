@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { STYFlexContainer } from '../../shared/Container';
+import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 
 const Item = styled.a`
@@ -16,7 +16,7 @@ const Item = styled.a`
 
 const HeaderItems = () => {
   return (
-    <STYFlexContainer className="align-ce" gap={24}>
+    <FlexContainer className="align-ce" gap={24}>
       <HeaderItem className="mobile-none" href="/#features">
         Features
       </HeaderItem>
@@ -32,7 +32,7 @@ const HeaderItems = () => {
       <HeaderItem className="mobile-none" href="https://xwallet.kaddex.com" target="_blank">
         X-Wallet
       </HeaderItem>
-    </STYFlexContainer>
+    </FlexContainer>
   );
 };
 

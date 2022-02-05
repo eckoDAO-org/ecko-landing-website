@@ -2,7 +2,7 @@ import React from 'react';
 import { Popup } from 'semantic-ui-react';
 import { HamburgerIcon } from '../../../assets';
 import { SOCIAL_MEDIA } from '../../../constants/social-media';
-import { STYColumnContainer } from '../../shared/Container';
+import { ColumnContainer } from '../../shared/Container';
 import SocialMediaItem from '../../shared/SocialMediaItem';
 
 const Hamburger = () => {
@@ -23,11 +23,11 @@ const Hamburger = () => {
           borderRadius: '10px',
         }}
       >
-        <STYColumnContainer gap={12}>
+        <ColumnContainer gap={12}>
           {SOCIAL_MEDIA.map((social, i) => (
             <SocialMediaItem key={i} {...social} />
           ))}
-        </STYColumnContainer>
+        </ColumnContainer>
       </Popup>
     </div>
   );

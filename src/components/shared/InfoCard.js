@@ -2,10 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { getColor } from '../../styles/theme';
-import { STYColumnContainer } from './Container';
+import { ColumnContainer } from './Container';
 import Label from './Label';
 
-const STYCard = styled(STYColumnContainer)`
+const STYCard = styled(ColumnContainer)`
   width: 210px;
   letter-spacing: -0.1em;
   ${({ type, color, theme: { colors } }) => {
