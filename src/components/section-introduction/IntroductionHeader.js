@@ -1,11 +1,18 @@
 import React from 'react';
+import styled from 'styled-components/macro';
 import { STYFlexContainer, STYColumnContainer } from '../shared/Container';
 import GradientContainer from '../shared/GradientContainer';
 import Label from '../shared/Label';
 
+const Container = styled(STYFlexContainer)`
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    padding: 0 50px;
+  }
+`;
+
 const IntroductionHeader = () => {
   return (
-    <STYFlexContainer mobileColumnGap={25} className="align-fs mobile-column">
+    <Container columnGap={25} className="align-fs mobile-column">
       <STYColumnContainer style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
           the evolution
@@ -25,13 +32,13 @@ const IntroductionHeader = () => {
           Gas will always stay free because the Kadena <br /> blockchain scales horizontally,
         </Label>
 
-        <GradientContainer style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>
+        <GradientContainer className="desktop-none" style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>
           <Label className="rainbow" size="small" fontFamily="syncopate">
             Learn more
           </Label>
         </GradientContainer>
       </STYColumnContainer>
-    </STYFlexContainer>
+    </Container>
   );
 };
 

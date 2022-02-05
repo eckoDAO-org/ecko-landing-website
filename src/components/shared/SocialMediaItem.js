@@ -19,7 +19,7 @@ const Social = styled(STYFlexContainer)`
 
 const SocialMediaItem = ({ icon, name, hideName, link }) => {
   return (
-    <Social gap={10} onClick={() => window.open(link, '_blank', 'noopener,noreferrer')}>
+    <Social className="h-fit-content" gap={10} onClick={() => window.open(link, '_blank', 'noopener,noreferrer')}>
       {icon}
       {!hideName && (
         <Label size="normal" fontFamily="sincopate">

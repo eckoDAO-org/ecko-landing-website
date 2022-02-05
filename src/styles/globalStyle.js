@@ -64,7 +64,7 @@ export default createGlobalStyle`
     }
 
     .desktop-none {
-      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
         display: none !important;
       }
     }

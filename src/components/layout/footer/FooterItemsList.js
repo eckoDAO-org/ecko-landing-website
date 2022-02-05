@@ -3,8 +3,6 @@ import { STYColumnContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 
 const FooterItemsList = ({ title, items, color }) => {
-  console.log('color', color);
-  console.log('items', items);
   return (
     <STYColumnContainer gap={30}>
       <Label fontFamily="syncopate" fontSize={15} style={{ marginBottom: 10 }}>

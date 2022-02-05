@@ -30,6 +30,7 @@ const STYCard = styled(STYColumnContainer)`
         border: 1px solid ${getColor(color)};
         border-radius: 250px;
         height: 468px;
+
         svg {
           height: 64px;
           width: 64px;
@@ -101,7 +102,7 @@ const InfoCard = ({ type, color, icon, title, description, gradientColors, class
 export default InfoCard;
 
 InfoCard.propTypes = {
-  type: PropTypes.oneOf(['proof', 'feature', 'partners', 'percentage']).isRequired,
+  type: PropTypes.oneOf(['proof', 'features', 'partners', 'percentage']).isRequired,
 };
 
 InfoCard.defaultProps = {};

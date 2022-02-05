@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
 import { getColor, theme } from '../../styles/theme';
 
@@ -56,6 +56,12 @@ const STYText = styled.span`
   &.align-fs {
     align-items: flex-start;
   }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    &.tablet-text-center {
+      text-align: center;
+    }
+  }
 `;
 
 const Label = ({
@@ -74,8 +80,6 @@ const Label = ({
   withShade,
   onClick,
 }) => {
-  console.log('fontSize', fontSize);
-  console.log('lineHeight', lineHeight);
   return (
     <STYText
       className={className}
@@ -100,7 +104,7 @@ export default Label;
 Label.propTypes = {
   children: PropTypes.any.isRequired,
   fontSize: PropTypes.number,
-  size: PropTypes.oneOf(['huge', 'big', 'medium', 'normal', 'small', 'tiny', 'nano']),
+  size: PropTypes.oneOf(['huge', 'big', 'large', 'medium', 'normal', 'small', 'tiny', 'nano']),
   fontFamily: PropTypes.oneOf(['basier', 'syncopate']),
   onClose: PropTypes.func,
   color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),

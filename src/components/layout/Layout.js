@@ -11,7 +11,9 @@ const MainContainer = styled.div`
 `;
 
 const PageContent = styled.div`
-  padding: 0 50px;
+  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+    padding: 0 50px;
+  }
 `;
 
 const MainContent = styled.div`

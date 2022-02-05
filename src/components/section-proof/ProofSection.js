@@ -16,7 +16,7 @@ const STYCard = styled(STYFlexContainer)`
 const ProofSection = () => {
   return (
     <STYCard id="proof-dex" className="relative">
-      <STYFlexContainer className="flex-1" gap={60}>
+      <STYFlexContainer className="flex-1 tablet-column" gap={60}>
         <STYColumnContainer className="justify-ce" gap={32}>
           <Label size="big" fontFamily="syncopate">
             The most
@@ -34,7 +34,7 @@ const ProofSection = () => {
           </Label>
         </STYColumnContainer>
 
-        <STYFlexContainer className="justify-sb flex-1">
+        <STYFlexContainer gap={30} className="justify-sb flex-1">
           {PROOF_DEX.map((proofDex, i) => (
             <InfoCard key={i} type="proof" {...proofDex} />
           ))}

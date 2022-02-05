@@ -4,18 +4,20 @@ import { useState } from 'react/cjs/react.development';
 import styled, { css } from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import { ROUTE_INDEX } from '../../../router/routes';
+import { STYFlexContainer } from '../../shared/Container';
 import Hamburger from './Hamburger';
 import HeaderItems from './HeaderItems';
 
-const Container = styled.div`
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+const Container = styled(STYFlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
   padding: 2em 0px;
 
   z-index: 10;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    padding: 2em 50px;
+  }
 
   ${({ isSticky }) => {
     if (isSticky) {
@@ -40,7 +42,7 @@ const Container = styled.div`
   }
 `;
 
-const DesktopHeader = ({ className }) => {
+const DesktopHeader = () => {
   const history = useHistory();
 
   const [isSticky, setIsSticky] = useState(false);
@@ -58,14 +60,14 @@ const DesktopHeader = ({ className }) => {
   };
   return (
     <div>
-      <Container id="header-section">
+      <Container className="justify-sb" id="header-section">
         <KaddexLogo style={{ cursor: 'pointer' }} onClick={() => history.push(ROUTE_INDEX)} />
         <HeaderItems />
         <Hamburger />
       </Container>
 
       {isSticky && (
-        <Container isSticky={isSticky}>
+        <Container className="justify-sb" isSticky={isSticky}>
           <KaddexLogo style={{ cursor: 'pointer' }} onClick={() => history.push(ROUTE_INDEX)} />
           <HeaderItems />
           <Hamburger />

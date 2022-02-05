@@ -3,26 +3,16 @@ import styled, { css } from 'styled-components/macro';
 export const STYFlexContainer = styled.div`
   display: flex;
 
-  &.mobile-column {
-    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
-      flex-direction: column;
-      ${({ mobileColumnGap }) => {
-        if (mobileColumnGap) {
-          return css`
-            & > *:not(:last-child) {
-              margin-bottom: ${mobileColumnGap}px;
-            }
-          `;
-        }
-      }}
-    }
-  }
   &.align-fs {
     align-items: flex-start;
   }
 
   &.align-fe {
     align-items: flex-end;
+  }
+
+  &.align-ce {
+    align-items: center;
   }
 
   &.justify-ce {
@@ -56,6 +46,14 @@ export const STYFlexContainer = styled.div`
   &.flex-1 {
     flex: 1;
   }
+
+  &.h-fit-content {
+    height: fit-content;
+  }
+
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
   ${({ gap }) => {
     if (gap) {
       return css`
@@ -65,6 +63,26 @@ export const STYFlexContainer = styled.div`
       `;
     }
   }}
+
+  &.mobile-column,
+  &.tablet-column {
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+      &.tablet-align-ce {
+        align-items: center;
+      }
+      flex-direction: column;
+      ${({ columnGap }) => {
+        if (columnGap) {
+          return css`
+            & > *:not(:last-child) {
+              margin-bottom: ${columnGap}px;
+              margin-right: 0px;
+            }
+          `;
+        }
+      }}
+    }
+  }
 `;
 
 export const STYColumnContainer = styled.div`
@@ -107,4 +125,10 @@ export const STYColumnContainer = styled.div`
       `;
     }
   }}
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    &.tablet-align-ce {
+      align-items: center;
+    }
+  }
 `;
