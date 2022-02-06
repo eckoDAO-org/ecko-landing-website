@@ -31,7 +31,6 @@ const Container = styled(FlexContainer)`
 
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        /* background-color: rgba(255, 255, 255, 0.5);  */
 
         transition: all 0.5s ease;
         animation: smoothScrollIn 1s forwards;

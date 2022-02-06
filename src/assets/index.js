@@ -1,19 +1,8 @@
-export { ReactComponent as KDALogo } from './images/header/kadena-logo.svg';
-export { ReactComponent as KaddexLogo } from './images/header/kaddex_logo.svg';
-export { ReactComponent as PowerIcon } from './images/header/power.svg';
-export { ReactComponent as CogIcon } from './images/header/cog.svg';
-export { ReactComponent as HamburgerIcon } from './images/header/hamburger.svg';
-export { ReactComponent as AboutIcon } from './images/header/about.svg';
-export { ReactComponent as CodeIcon } from './images/header/code.svg';
-export { ReactComponent as TokenomicsBackground } from './images/tokenomics/tokenomics_background.svg';
-export { ReactComponent as TokenomicsGraph } from './images/tokenomics/tokenomics_graph.svg';
-export { ReactComponent as TokenomicsRing } from './images/tokenomics/tokenomics_ring.svg';
-export { ReactComponent as TokenomicsRing2 } from './images/tokenomics/token_ring_2.svg';
-export { ReactComponent as ArrowDownIcon } from './images/shared/arrow-down-white.svg';
-export { ReactComponent as TopUpIcon } from './images/shared/go_top.svg';
-export { ReactComponent as StripeIcon } from './images/shared/stripes.svg';
-export { ReactComponent as KaddexLogoFooterIcon } from './images/shared/kaddex-logo-footer.svg';
-export { ReactComponent as KaddexFooterIcon } from './images/shared/kaddex-footer.svg';
+export { ReactComponent as HamburgerIcon } from './images/layout/hamburger.svg';
+export { ReactComponent as KaddexLogo } from './images/layout/kaddex-logo.svg';
+export { ReactComponent as StripeIcon } from './images/layout/stripes.svg';
+export { ReactComponent as KaddexLogoFooterIcon } from './images/layout/kaddex-logo-footer.svg';
+export { ReactComponent as KaddexFooterIcon } from './images/layout/kaddex-footer.svg';
 
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';

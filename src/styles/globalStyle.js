@@ -24,19 +24,20 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       line-height: inherit;
-      overflow-x: hidden;
-      /* overflow: auto; */
       min-width: 0;
       font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
       color: ${({ theme: { colors } }) => colors.primary};
       background-attachment: fixed;
       opacity: 1;
       background-color: #0A0B1D;
+      overflow-x: hidden;
+
       
     };
 
     #root {
       height: 100%;
+      overflow-x: hidden;
       & > div:first-child {
         display: flex;
         flex-flow: column;
