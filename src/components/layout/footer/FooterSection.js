@@ -21,12 +21,12 @@ const FooterContainer = styled(FlexContainer)`
 const FooterSection = () => {
   const [width] = useWindowSize();
   return (
-    <FooterContainer className="relative justify-sb tablet-column tablet-align-ce">
+    <FooterContainer gap={40} className="relative justify-sb" tabletClassName="column align-ce" mobileClassName="column align-ce">
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>
         <FooterItemsList {...FOOTER_ABOUT} />
-        <FlexContainer className="tablet-column" gap={80} columnGap={50}>
+        <FlexContainer gap={80} columnGap={50} tabletClassName="column" mobileClassName="column">
           <FooterItemsList {...FOOTER_SUPPORT} />
           <FooterItemsList {...FOOTER_LEARN} />
         </FlexContainer>

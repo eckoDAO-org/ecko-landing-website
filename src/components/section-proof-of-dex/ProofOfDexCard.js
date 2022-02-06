@@ -24,6 +24,10 @@ const STYCard = styled(ColumnContainer)`
     height: auto;
     padding: 40px 15px;
   }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    width: 130px;
+  }
 `;
 
 const ProofOfDexCard = ({ proofDex }) => {

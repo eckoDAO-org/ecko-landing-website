@@ -12,7 +12,7 @@ const Container = styled(FlexContainer)`
 
 const IntroductionHeader = () => {
   return (
-    <Container columnGap={25} className="align-fs mobile-column">
+    <Container columnGap={25} className="align-fs" tabletClassName="column" mobileClassName="column">
       <ColumnContainer style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
           the evolution
@@ -32,7 +32,7 @@ const IntroductionHeader = () => {
           Gas will always stay free because the Kadena <br /> blockchain scales horizontally,
         </Label>
 
-        <GradientContainer className="desktop-none" style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>
+        <GradientContainer className="desktop-only" style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>
           <Label className="rainbow" size="small" fontFamily="syncopate">
             Learn more
           </Label>

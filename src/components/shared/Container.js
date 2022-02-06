@@ -2,15 +2,44 @@ import styled, { css } from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 
-export const FlexContainer = ({ children, desktopStyle, style, tabletStyle, mobileStyle, ...rest }) => {
+export const FlexContainer = ({
+  className,
+  desktopClassName,
+  desktopPixel,
+  tabletClassName,
+  tabletPixel,
+  mobileClassName,
+  tabletBreakpoint,
+  children,
+  desktopStyle,
+  style,
+  tabletStyle,
+  mobileStyle,
+  ...rest
+}) => {
   const [width] = useWindowSize();
+
+  const getClassName = () => {
+    let classname = className;
+    if (width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopClassName) {
+      classname = `${classname} ${desktopClassName} `;
+    }
+    if (width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
+      classname = `${classname} ${tabletClassName} `;
+    }
+    if (width < theme.mediaQueries.mobilePixel && mobileClassName) {
+      classname = `${classname} ${mobileClassName} `;
+    }
+    return classname;
+  };
   return (
     <STYFlexContainer
       {...rest}
+      className={getClassName()}
       style={{
         ...style,
-        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
-        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width >= (desktopPixel && theme.mediaQueries.desktopPixel) && desktopStyle),
+        ...(width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
         ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
       }}
     >
@@ -111,24 +140,19 @@ export const STYFlexContainer = styled.div`
     }}
   }
 
-  &.mobile-column,
-  &.tablet-column {
-    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
-      &.tablet-align-ce {
-        align-items: center;
+  &.column {
+    flex-direction: column;
+    ${({ columnGap }) => {
+      if (columnGap) {
+        return css`
+          flex-direction: column;
+          & > *:not(:last-child) {
+            margin-bottom: ${columnGap}px;
+            margin-right: 0px;
+          }
+        `;
       }
-      flex-direction: column;
-      ${({ columnGap }) => {
-        if (columnGap) {
-          return css`
-            & > *:not(:last-child) {
-              margin-bottom: ${columnGap}px;
-              margin-right: 0px;
-            }
-          `;
-        }
-      }}
-    }
+    }}
   }
 `;
 

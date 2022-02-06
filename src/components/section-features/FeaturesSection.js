@@ -7,7 +7,7 @@ import FeatureCard from './FeatureCard';
 const FeatureSection = () => {
   return (
     <ColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
-      <FlexContainer className="justify-sb tablet-column">
+      <FlexContainer className="justify-sb" tabletStyle={{ flexDirection: 'column' }} mobileStyle={{ flexDirection: 'column' }}>
         <Label className="align-fs" fontFamily="syncopate" size="big">
           unique
           <br />

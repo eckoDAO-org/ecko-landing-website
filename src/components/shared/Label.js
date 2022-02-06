@@ -58,6 +58,10 @@ const STYText = styled.span`
     align-items: flex-start;
   }
 
+  &.justify-ce {
+    justify-content: center;
+  }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
       text-align: center;
@@ -67,6 +71,11 @@ const STYText = styled.span`
 
 const Label = ({
   className,
+  desktopClassName,
+  tabletClassName,
+  mobileClassName,
+  desktopPixel,
+  tabletPixel,
   gradientColors,
   children,
   fontFamily,
@@ -81,9 +90,24 @@ const Label = ({
   onClick,
 }) => {
   const [width] = useWindowSize();
+
+  const getClassName = () => {
+    let classname = className;
+    if (width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopClassName) {
+      classname = `${classname} ${desktopClassName} `;
+    }
+    if (width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
+      classname = `${classname} ${tabletClassName} `;
+    }
+    if (width < theme.mediaQueries.mobilePixel && mobileClassName) {
+      classname = `${classname} ${mobileClassName} `;
+    }
+    return classname;
+  };
+
   return (
     <STYText
-      className={className}
+      className={getClassName()}
       color={getColor(color)}
       fontSize={fontSize}
       size={size}

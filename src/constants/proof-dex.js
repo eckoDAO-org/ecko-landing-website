@@ -1,27 +1,27 @@
 import { BuildIcon, PoolIcon, StakeIcon, SwapIcon } from '../assets';
 
-const PROOF_DEX_SWAP = {
+export const PROOF_DEX_SWAP = {
   key: 'SWAP',
   icon: <SwapIcon />,
   title: 'Swap',
   description: 'Swap safely with no transaction cost',
   color: 'pink',
 };
-const PROOF_DEX_POOL = {
+export const PROOF_DEX_POOL = {
   key: 'POOL',
   icon: <PoolIcon />,
   title: 'Pool',
   description: 'Provide liquidity for any SPL token',
   color: 'yellow',
 };
-const PROOF_DEX_STAKE = {
+export const PROOF_DEX_STAKE = {
   key: 'STAKE',
   icon: <StakeIcon />,
   title: 'Stake',
   description: 'Stake KDX and earn 0.05% of all trades',
   color: 'grey',
 };
-const PROOF_DEX_BUILD = {
+export const PROOF_DEX_BUILD = {
   key: 'BUILD',
   icon: <BuildIcon />,
   title: 'Build',

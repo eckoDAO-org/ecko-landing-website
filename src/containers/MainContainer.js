@@ -27,9 +27,9 @@ const MainContainer = () => {
     <OuterContainer>
       <IntroductionSection />
       <ProofOfDexSection />
-      <FeatureSection />
-      <TokenomicsSection />
-      <PartnersSection />
+      {/* <FeatureSection /> */}
+      {/* <TokenomicsSection /> */}
+      {/* <PartnersSection /> */}
 
       {/* <RadiusBackground idRef="proof-dex" /> */}
     </OuterContainer>
