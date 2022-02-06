@@ -11,6 +11,10 @@ const STYCard = styled(FlexContainer)`
       fill: ${({ theme: { colors } }) => colors.pink};
     }
   }
+  @media (max-width: 1700px) {
+    width: 130px;
+    height: auto;
+  }
 `;
 
 const PercentageCard = ({ tokenomics }) => {

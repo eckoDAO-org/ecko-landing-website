@@ -115,6 +115,10 @@ export const STYFlexContainer = styled.div`
     column-gap: 0px;
   }
 
+  &.column-reverse {
+    flex-direction: column-reverse;
+  }
+
   &.wrap {
     flex-wrap: wrap;
   }

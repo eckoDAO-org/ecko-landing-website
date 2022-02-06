@@ -62,6 +62,14 @@ const STYText = styled.span`
     justify-content: center;
   }
 
+  &.block {
+    display: block;
+  }
+
+  &.nowrap {
+    white-space: nowrap;
+  }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
       text-align: center;
