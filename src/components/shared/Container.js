@@ -7,7 +7,6 @@ export const FlexContainer = ({
   desktopClassName,
   desktopPixel,
   tabletClassName,
-  tabletPixel,
   mobileClassName,
   tabletBreakpoint,
   children,
@@ -24,7 +23,7 @@ export const FlexContainer = ({
     if (width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopClassName) {
       classname = `${classname} ${desktopClassName} `;
     }
-    if (width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
+    if (width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
       classname = `${classname} ${tabletClassName} `;
     }
     if (width < theme.mediaQueries.mobilePixel && mobileClassName) {
@@ -32,14 +31,15 @@ export const FlexContainer = ({
     }
     return classname;
   };
+
   return (
     <STYFlexContainer
       {...rest}
       className={getClassName()}
       style={{
         ...style,
-        ...(width >= (desktopPixel && theme.mediaQueries.desktopPixel) && desktopStyle),
-        ...(width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
+        ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
         ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
       }}
     >
@@ -119,40 +119,17 @@ export const STYFlexContainer = styled.div`
   &.f-wrap {
     flex-wrap: wrap;
   }
-  ${({ gap }) => {
-    if (gap) {
-      return css`
-        & > *:not(:last-child) {
-          margin-right: ${gap}px;
-        }
-      `;
-    }
-  }}
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
-    ${({ mobileGap }) => {
-      if (mobileGap) {
-        return css`
-          & > *:not(:last-child) {
-            margin-right: ${mobileGap}px;
-          }
-        `;
-      }
-    }}
-  }
+
+  column-gap: ${({ gap }) => gap}px;
 
   &.column {
     flex-direction: column;
-    ${({ columnGap }) => {
-      if (columnGap) {
-        return css`
-          flex-direction: column;
-          & > *:not(:last-child) {
-            margin-bottom: ${columnGap}px;
-            margin-right: 0px;
-          }
-        `;
-      }
-    }}
+    row-gap: ${({ columnGap }) => columnGap}px;
+    column-gap: 0px;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
   }
 `;
 
@@ -186,16 +163,7 @@ export const STYColumnContainer = styled.div`
   &.h-fit-content {
     height: fit-content;
   }
-
-  ${({ gap }) => {
-    if (gap) {
-      return css`
-        & > *:not(:last-child) {
-          margin-bottom: ${gap}px;
-        }
-      `;
-    }
-  }}
+  row-gap: ${({ gap }) => gap}px;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-align-ce {

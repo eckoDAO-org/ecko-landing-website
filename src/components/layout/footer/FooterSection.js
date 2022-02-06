@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { KaddexFooterIcon, KaddexLogoFooterIcon } from '../../../assets';
 import { ColumnContainer, FlexContainer } from '../../shared/Container';
-import Label from '../../shared/Label';
 import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
 import { FOOTER_ABOUT, FOOTER_LEARN, FOOTER_SUPPORT } from '../../../constants/footer';
-import { SOCIAL_MEDIA } from '../../../constants/social-media';
-import SocialMediaItem from '../../shared/SocialMediaItem';
 import useWindowSize from '../../../hooks/useWindowSize';
 import theme from '../../../styles/theme';
 import Socials from './Socials';

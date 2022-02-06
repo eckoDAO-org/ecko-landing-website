@@ -24,17 +24,23 @@ const STYCard = styled(FlexContainer)`
 const ProofOfDexSection = () => {
   const [width] = useWindowSize();
   return (
-    <STYCard id="proof-dex" className="relative" tabletStyle={{ width: 'calc(100% - 40px)' }} mobileStyle={{ width: 'calc(100% - 40px)' }}>
-      <FlexContainer className="flex-1" tabletClassName="align-ce column" tabletPixel={1300} mobileClassName="align-ce column">
+    <STYCard
+      id="proof-dex"
+      className="relative"
+      desktopStyle={{ marginTop: 90 }}
+      tabletStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
+      mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
+    >
+      <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={1300} mobileClassName="align-ce column">
         <ColumnContainer className="justify-ce" gap={32} desktopPixel={1300} desktopStyle={{ marginRight: 60 }}>
-          <Label size="big" fontFamily="syncopate" tabletPixel={1300} tabletClassName="text-center">
+          <Label size="big" fontFamily="syncopate" desktopPixel={1300} tabletClassName="text-center">
             The most
             <br />
             powerful Proof
             <br />
             of Work DEX
           </Label>
-          <Label size="small" color="light-blue" tabletPixel={1300} tabletClassName="text-center justify-ce">
+          <Label size="small" color="light-blue" desktopPixel={1300} tabletClassName="text-center justify-ce">
             Safe DeFi begins with our Gas free DEX.
             <br />
             Gas will always stay free because the Kadena

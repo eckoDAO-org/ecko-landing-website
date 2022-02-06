@@ -75,7 +75,7 @@ const Label = ({
   tabletClassName,
   mobileClassName,
   desktopPixel,
-  tabletPixel,
+
   gradientColors,
   children,
   fontFamily,
@@ -96,7 +96,7 @@ const Label = ({
     if (width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopClassName) {
       classname = `${classname} ${desktopClassName} `;
     }
-    if (width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
+    if (width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
       classname = `${classname} ${tabletClassName} `;
     }
     if (width < theme.mediaQueries.mobilePixel && mobileClassName) {
@@ -116,8 +116,8 @@ const Label = ({
       style={{
         fontFamily: theme.fontFamily[fontFamily],
         ...style,
-        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
-        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
+        ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
         ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
       }}
       gradientColors={gradientColors}

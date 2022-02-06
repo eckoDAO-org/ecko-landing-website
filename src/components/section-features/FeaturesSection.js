@@ -1,13 +1,22 @@
 import React from 'react';
 import { FEATURES, LPS, ZERO_GAS } from '../../constants/features';
+import useWindowSize from '../../hooks/useWindowSize';
 import { ColumnContainer, FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import FeatureCard from './FeatureCard';
 
 const FeatureSection = () => {
+  const [width] = useWindowSize();
   return (
-    <ColumnContainer className="relative w-100 align-fs" gap={100} style={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
-      <FlexContainer className="justify-sb" tabletStyle={{ flexDirection: 'column' }} mobileStyle={{ flexDirection: 'column' }}>
+    <ColumnContainer
+      className="relative w-100 align-fs"
+      gap={100}
+      desktopPixel={1700}
+      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
+      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+      mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+    >
+      <FlexContainer className="wrap  justify-sb" tabletClassName="column" mobileClassName="column">
         <Label className="align-fs" fontFamily="syncopate" size="big">
           unique
           <br />
@@ -17,6 +26,7 @@ const FeatureSection = () => {
           className="align-fs"
           color="light-blue"
           size="small"
+          desktopPixel={1700}
           desktopStyle={{ marginLeft: 100, marginTop: 16, marginRight: 100, maxWidth: 584 }}
           tabletStyle={{ marginTop: 35 }}
           mobileStyle={{ marginTop: 35 }}
@@ -28,16 +38,21 @@ const FeatureSection = () => {
           The Kaddex DAO will play a large role in how Kaddex operates, controlling the parameters for individual pools. The DAO will have a strong
           focus on ecosystem development, working to help growing the entire Kadena blockchain.
         </Label>
-
-        <FeatureCard feature={ZERO_GAS} />
-        <FeatureCard feature={LPS} />
+        {width >= 1700 && (
+          <>
+            <FeatureCard feature={ZERO_GAS} />
+            <FeatureCard feature={LPS} />
+          </>
+        )}
       </FlexContainer>
 
-      <FlexContainer className="justify-sb">
-        {FEATURES.slice(2).map((feature, i) => (
-          <FeatureCard key={i} feature={feature} />
-        ))}
-      </FlexContainer>
+      {width >= 1700 && (
+        <FlexContainer className="wrap justify-sb">
+          {FEATURES.slice(2).map((feature, i) => (
+            <FeatureCard key={i} feature={feature} />
+          ))}
+        </FlexContainer>
+      )}
     </ColumnContainer>
   );
 };

@@ -11,15 +11,15 @@ const STYStripesContainer = styled.div`
   line-height: 0;
 `;
 
-const Stripes = ({ desktopPixel, tabletPixel, iconStyle, desktopIconStyle, tabletIconStyle, mobileIconStyle }) => {
+const Stripes = ({ desktopPixel, iconStyle, desktopIconStyle, tabletIconStyle, mobileIconStyle }) => {
   const [width] = useWindowSize();
   return (
     <STYStripesContainer>
       <StripeIcon
         style={{
           ...iconStyle,
-          ...(width >= (desktopPixel && theme.mediaQueries.desktopPixel) && desktopIconStyle),
-          ...(width < (tabletPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletIconStyle),
+          ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopIconStyle),
+          ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletIconStyle),
           ...(width < theme.mediaQueries.mobilePixel && mobileIconStyle),
         }}
       />

@@ -27,7 +27,7 @@ const MainContainer = () => {
     <OuterContainer>
       <IntroductionSection />
       <ProofOfDexSection />
-      {/* <FeatureSection /> */}
+      <FeatureSection />
       {/* <TokenomicsSection /> */}
       {/* <PartnersSection /> */}
 
