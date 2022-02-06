@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
-import { PROOF_DEX, PROOF_DEX_BUILD, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_SWAP } from '../../constants/proof-dex';
 import Stripes from '../shared/Stripes';
 import ProofOfDexCard from './ProofOfDexCard';
-import useWindowSize from '../../hooks/useWindowSize';
+import { PROOF_DEX, PROOF_DEX_BUILD, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_SWAP } from '../../constants/proof-dex';
+
+const DESKTOP_PIXEL = 1300;
 
 const STYCard = styled(FlexContainer)`
   background: linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%);
@@ -31,16 +33,16 @@ const ProofOfDexSection = () => {
       tabletStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
       mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
     >
-      <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={1300} mobileClassName="align-ce column">
-        <FlexContainer className="column justify-ce" gap={32} desktopPixel={1300} desktopStyle={{ marginRight: 60 }}>
-          <Label size="big" fontFamily="syncopate" desktopPixel={1300} tabletClassName="text-center">
+      <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={DESKTOP_PIXEL} mobileClassName="align-ce column">
+        <FlexContainer className="column justify-ce" gap={32} desktopPixel={DESKTOP_PIXEL} desktopStyle={{ marginRight: 60 }}>
+          <Label size="big" fontFamily="syncopate" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center">
             The most
             <br />
             powerful Proof
             <br />
             of Work DEX
           </Label>
-          <Label size="small" color="primary" desktopPixel={1300} tabletClassName="text-center justify-ce">
+          <Label size="small" color="primary" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center justify-ce">
             Safe DeFi begins with our Gas free DEX.
             <br />
             Gas will always stay free because the Kadena
@@ -50,7 +52,7 @@ const ProofOfDexSection = () => {
         </FlexContainer>
 
         {width >= 840 ? (
-          <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1" style={{ marginTop: width < 1300 && 32 }}>
+          <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1" style={{ marginTop: width < DESKTOP_PIXEL && 32 }}>
             {PROOF_DEX.map((proofDex, i) => (
               <ProofOfDexCard key={i} proofDex={proofDex} />
             ))}

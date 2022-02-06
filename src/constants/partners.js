@@ -52,3 +52,14 @@ export const PARTNER_ZELCORE = {
     'Zelcore will help bridge Kadena network tokens with a non-custodial multi-asset platform, it will also connect directly to Kaddex dAPP to provide easy-to-use user experience.',
   color: 'primary',
 };
+
+export const PARTNERS = [
+  PARTNER_ARCHITECH,
+  PARTNER_UFO_GAMING,
+  PARTNER_ZELCORE,
+  PARTNER_FLUX,
+  PARTNER_GENESIS_BLOCK,
+  PARTNER_TOKENSOFT,
+  PARTNER_SPOT,
+  PARTNER_ROBOSWAP,
+];

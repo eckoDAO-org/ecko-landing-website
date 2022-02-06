@@ -7,7 +7,7 @@ const IntroductionSection = () => {
   return (
     <FlexContainer id="introduction" className="column w-100" style={{ marginTop: 100 }}>
       <IntroductionHeader />
-      {/* <GameBoy /> */}
+      <GameBoy />
     </FlexContainer>
   );
 };

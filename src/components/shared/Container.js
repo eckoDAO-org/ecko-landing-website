@@ -1,6 +1,6 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
-import theme from '../../styles/theme';
+import { theme } from '../../styles/theme';
 
 export const FlexContainer = ({
   className,
@@ -107,12 +107,24 @@ export const STYFlexContainer = styled.div`
     height: fit-content;
   }
 
-  column-gap: ${({ gap }) => gap}px;
+  ${({ gap }) => {
+    if (gap) {
+      return css`
+        column-gap: ${({ gap }) => gap}px;
+      `;
+    }
+  }}
 
   &.column {
     flex-direction: column;
-    row-gap: ${({ gap }) => gap}px;
-    column-gap: 0px;
+    ${({ gap }) => {
+      if (gap) {
+        return css`
+          row-gap: ${({ gap }) => gap}px;
+          column-gap: 0px;
+        `;
+      }
+    }}
   }
 
   &.column-reverse {
@@ -121,5 +133,19 @@ export const STYFlexContainer = styled.div`
 
   &.wrap {
     flex-wrap: wrap;
+  }
+
+  &.grid {
+    display: grid;
+    grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
+    row-gap: 30px;
+  }
+
+  &.x-auto {
+    overflow-x: auto;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
   }
 `;

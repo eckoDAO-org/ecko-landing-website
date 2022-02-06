@@ -5,7 +5,7 @@ import { FlexContainer } from '../shared/Container';
 const GameBoy = () => {
   return (
     <FlexContainer className="justify-ce">
-      <img src={gameboy} alt="" />
+      <img src={gameboy} alt="" style={{ width: '100%' }} />
     </FlexContainer>
   );
 };
