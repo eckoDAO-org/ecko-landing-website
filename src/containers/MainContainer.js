@@ -6,6 +6,8 @@ import FeatureSection from '../components/section-features/FeaturesSection';
 import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
 import PartnersSection from '../components/section-partners/PartnersSection';
 import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
+import DesktopRoadmap from '../components/roadmap/DesktopRoadmap';
+import { FlexContainer } from '../components/shared/Container';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -24,15 +26,17 @@ const OuterContainer = styled.div`
 
 const MainContainer = () => {
   return (
-    <OuterContainer>
-      <IntroductionSection />
+    <FlexContainer className="column">
+      <OuterContainer>
+        {/* <IntroductionSection />
       <ProofOfDexSection />
       <FeatureSection />
       <TokenomicsSection />
-      <PartnersSection />
-
-      {/* <RadiusBackground idRef="proof-dex" /> */}
-    </OuterContainer>
+      <PartnersSection /> */}
+        {/* <RadiusBackground idRef="proof-dex" /> */}
+      </OuterContainer>
+      <DesktopRoadmap />
+    </FlexContainer>
   );
 };
 
