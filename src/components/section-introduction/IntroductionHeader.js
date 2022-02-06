@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { FlexContainer, ColumnContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import GradientContainer from '../shared/GradientContainer';
 import Label from '../shared/Label';
 
@@ -13,7 +13,7 @@ const Container = styled(FlexContainer)`
 const IntroductionHeader = () => {
   return (
     <Container columnGap={25} className="align-fs" tabletClassName="column" mobileClassName="column">
-      <ColumnContainer style={{ flex: 1 }}>
+      <FlexContainer className="column" style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
           the evolution
         </Label>
@@ -23,9 +23,15 @@ const IntroductionHeader = () => {
         <Label className="rainbow" fontFamily="syncopate" size="huge">
           Kadena
         </Label>
-      </ColumnContainer>
+      </FlexContainer>
 
-      <ColumnContainer style={{ flex: 1 }} desktopStyle={{ marginLeft: 40 }}>
+      <FlexContainer
+        className="column"
+        style={{ flex: 1 }}
+        desktopStyle={{ marginLeft: 40 }}
+        tabletStyle={{ marginTop: 25 }}
+        mobileStyle={{ marginTop: 25 }}
+      >
         <Label size="normal" color="light-blue">
           Safe DeFi begins with our Gas free DEX.
           <br />
@@ -37,7 +43,7 @@ const IntroductionHeader = () => {
             Learn more
           </Label>
         </GradientContainer>
-      </ColumnContainer>
+      </FlexContainer>
     </Container>
   );
 };

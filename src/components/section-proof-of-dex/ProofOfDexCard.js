@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { getColor } from '../../styles/theme';
-import { ColumnContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
-const STYCard = styled(ColumnContainer)`
+const STYCard = styled(FlexContainer)`
   width: 210px;
   padding: 105px 20px 125px 20px;
   border: ${({ color }) => `1px solid ${getColor(color)}`};
@@ -32,7 +32,7 @@ const STYCard = styled(ColumnContainer)`
 
 const ProofOfDexCard = ({ proofDex }) => {
   return (
-    <STYCard className="align-ce" color={proofDex.color}>
+    <STYCard className="column align-ce" color={proofDex.color}>
       <div>{proofDex.icon}</div>
       <Label
         className="text-center"

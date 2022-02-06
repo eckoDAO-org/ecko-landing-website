@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { STYColumnContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
-const STYCard = styled(STYColumnContainer)`
+const STYCard = styled(FlexContainer)`
   width: 210px;
 
   svg {
@@ -15,7 +15,7 @@ const STYCard = styled(STYColumnContainer)`
 
 const FeatureCard = ({ feature }) => {
   return (
-    <STYCard className="align-ce" color={feature.color}>
+    <STYCard className="column align-ce" color={feature.color}>
       <div>{feature.icon}</div>
       <Label
         className="text-center"
@@ -28,7 +28,7 @@ const FeatureCard = ({ feature }) => {
       >
         {feature.title}
       </Label>
-      <Label className="text-center" color="light-blue" size="nano">
+      <Label className="text-center" color="primary" size="nano">
         {feature.description}
       </Label>
     </STYCard>

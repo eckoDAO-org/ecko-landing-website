@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { ColumnContainer, FlexContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import { PROOF_DEX, PROOF_DEX_BUILD, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_SWAP } from '../../constants/proof-dex';
 import Stripes from '../shared/Stripes';
@@ -32,7 +32,7 @@ const ProofOfDexSection = () => {
       mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
     >
       <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={1300} mobileClassName="align-ce column">
-        <ColumnContainer className="justify-ce" gap={32} desktopPixel={1300} desktopStyle={{ marginRight: 60 }}>
+        <FlexContainer className="column justify-ce" gap={32} desktopPixel={1300} desktopStyle={{ marginRight: 60 }}>
           <Label size="big" fontFamily="syncopate" desktopPixel={1300} tabletClassName="text-center">
             The most
             <br />
@@ -40,14 +40,14 @@ const ProofOfDexSection = () => {
             <br />
             of Work DEX
           </Label>
-          <Label size="small" color="light-blue" desktopPixel={1300} tabletClassName="text-center justify-ce">
+          <Label size="small" color="primary" desktopPixel={1300} tabletClassName="text-center justify-ce">
             Safe DeFi begins with our Gas free DEX.
             <br />
             Gas will always stay free because the Kadena
             <br />
             blockchain scales horizontally.
           </Label>
-        </ColumnContainer>
+        </FlexContainer>
 
         {width >= 840 ? (
           <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1" style={{ marginTop: width < 1300 && 32 }}>
@@ -56,7 +56,7 @@ const ProofOfDexSection = () => {
             ))}
           </FlexContainer>
         ) : (
-          <ColumnContainer gap={24} style={{ marginTop: 50 }} mobileStyle={{ width: '100%', alignItems: 'center' }}>
+          <FlexContainer className="column" gap={24} style={{ marginTop: 50 }} mobileStyle={{ width: '100%', alignItems: 'center' }}>
             <FlexContainer gap={18}>
               {[PROOF_DEX_SWAP, PROOF_DEX_POOL].map((proofDex, i) => (
                 <ProofOfDexCard key={i} proofDex={proofDex} />
@@ -67,7 +67,7 @@ const ProofOfDexSection = () => {
                 <ProofOfDexCard key={i} proofDex={proofDex} />
               ))}
             </FlexContainer>
-          </ColumnContainer>
+          </FlexContainer>
         )}
       </FlexContainer>
       <Stripes mobileIconStyle={{ width: 84.51, height: 87 }} />

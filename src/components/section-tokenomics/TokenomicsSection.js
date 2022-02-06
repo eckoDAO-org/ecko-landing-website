@@ -1,13 +1,13 @@
 import React from 'react';
 import { TokenomicsCircleIcon, TokenomicsKaddexLogoIcon } from '../../assets';
 import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
-import { ColumnContainer, FlexContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import PercentageCard from './PercentageCard';
 
 const TokenomicsSection = () => {
   return (
-    <ColumnContainer className="relative w-100 align-fs" desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
+    <FlexContainer className="column relative w-100 align-fs" desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}>
       <FlexContainer className="align-fs">
         <Label
           className="rainbow"
@@ -25,8 +25,8 @@ const TokenomicsSection = () => {
         </Label>
       </FlexContainer>
       <FlexContainer>
-        <ColumnContainer>
-          <Label className="align-fs" color="light-blue" size="small" desktopStyle={{ marginTop: 32, maxWidth: 650 }}>
+        <FlexContainer className="column">
+          <Label className="align-fs" color="primary" size="small" desktopStyle={{ marginTop: 32, maxWidth: 650 }}>
             The KDX Token is used to incentivize all the liquidity stakeholders on
             <br />
             the Kaddex platform, while also rewarding its holders for supporting
@@ -44,13 +44,13 @@ const TokenomicsSection = () => {
               <PercentageCard key={i} tokenomics={tokenomics} />
             ))}
           </FlexContainer>
-        </ColumnContainer>
+        </FlexContainer>
         <FlexContainer className="relative">
           <TokenomicsCircleIcon />
           <TokenomicsKaddexLogoIcon style={{ position: 'absolute', top: '49.5%', left: '50.5%', transform: 'translate(-50%, -50%)' }} />
         </FlexContainer>
       </FlexContainer>
-    </ColumnContainer>
+    </FlexContainer>
   );
 };
 

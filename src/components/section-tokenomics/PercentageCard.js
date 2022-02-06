@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { ColumnContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
-const STYCard = styled(ColumnContainer)`
+const STYCard = styled(FlexContainer)`
   width: 210px;
 
   svg {
@@ -15,7 +15,7 @@ const STYCard = styled(ColumnContainer)`
 
 const PercentageCard = ({ tokenomics }) => {
   return (
-    <STYCard className="align-ce h-fit-content" color={tokenomics.color}>
+    <STYCard className="column align-ce h-fit-content" color={tokenomics.color}>
       <div>
         <Label className="rainbow" fontFamily="syncopate" size="big" gradientColors={tokenomics.gradientColors}>
           {tokenomics.icon}
@@ -30,7 +30,7 @@ const PercentageCard = ({ tokenomics }) => {
       >
         {tokenomics.title}
       </Label>
-      <Label className="text-center" color="light-blue" size="nano">
+      <Label className="text-center" color="primary" size="nano">
         {tokenomics.description}
       </Label>
     </STYCard>

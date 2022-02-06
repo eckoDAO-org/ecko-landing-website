@@ -1,10 +1,10 @@
 import React from 'react';
-import { ColumnContainer } from '../../shared/Container';
+import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 
 const FooterItemsList = ({ title, items, color }) => {
   return (
-    <ColumnContainer gap={30}>
+    <FlexContainer className="column" columnGap={30} gap={30}>
       <Label fontFamily="syncopate" fontSize={15} style={{ marginBottom: 10 }}>
         {title}
       </Label>
@@ -14,7 +14,7 @@ const FooterItemsList = ({ title, items, color }) => {
           {item.text}
         </Label>
       ))}
-    </ColumnContainer>
+    </FlexContainer>
   );
 };
 

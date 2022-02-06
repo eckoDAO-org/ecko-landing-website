@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 
@@ -45,23 +45,6 @@ export const FlexContainer = ({
     >
       {children}
     </STYFlexContainer>
-  );
-};
-
-export const ColumnContainer = ({ children, desktopStyle, style, tabletStyle, mobileStyle, ...rest }) => {
-  const [width] = useWindowSize();
-  return (
-    <STYColumnContainer
-      {...rest}
-      style={{
-        ...style,
-        ...(width >= theme.mediaQueries.desktopPixel && desktopStyle),
-        ...(width < theme.mediaQueries.desktopPixel && width >= theme.mediaQueries.mobilePixel && tabletStyle),
-        ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
-      }}
-    >
-      {children}
-    </STYColumnContainer>
   );
 };
 
@@ -120,54 +103,19 @@ export const STYFlexContainer = styled.div`
     flex-wrap: wrap;
   }
 
+  &.h-fit-content {
+    height: fit-content;
+  }
+
   column-gap: ${({ gap }) => gap}px;
 
   &.column {
     flex-direction: column;
-    row-gap: ${({ columnGap }) => columnGap}px;
+    row-gap: ${({ gap }) => gap}px;
     column-gap: 0px;
   }
 
   &.wrap {
     flex-wrap: wrap;
-  }
-`;
-
-export const STYColumnContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  &.align-ce {
-    align-items: center;
-  }
-
-  &.justify-fe {
-    justify-content: flex-end;
-  }
-
-  &.justify-sb {
-    justify-content: space-between;
-  }
-
-  &.justify-ce {
-    justify-content: center;
-  }
-
-  &.relative {
-    position: relative;
-  }
-
-  &.w-100 {
-    width: 100%;
-  }
-
-  &.h-fit-content {
-    height: fit-content;
-  }
-  row-gap: ${({ gap }) => gap}px;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
-    &.tablet-align-ce {
-      align-items: center;
-    }
   }
 `;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { getColor } from '../../styles/theme';
-import { ColumnContainer } from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
-const STYCard = styled(ColumnContainer)`
+const STYCard = styled(FlexContainer)`
   width: 210px;
   padding: 95px 17px;
   border: ${({ color }) => `1px solid ${getColor(color)}`};
@@ -14,7 +14,7 @@ const STYCard = styled(ColumnContainer)`
 const PartnerCard = ({ partner }) => {
   return (
     <STYCard
-      className="align-ce h-fit-content"
+      className="column align-ce h-fit-content"
       color={partner.color}
       tabletStyle={{ justifyContent: 'space-between' }}
       mobileStyle={{ justifyContent: 'space-between' }}

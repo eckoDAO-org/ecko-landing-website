@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { ColumnContainer, FlexContainer } from '../../shared/Container';
+import { FlexContainer } from '../../shared/Container';
 import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
 import { FOOTER_ABOUT, FOOTER_LEARN, FOOTER_SUPPORT } from '../../../constants/footer';
@@ -31,11 +31,11 @@ const FooterSection = () => {
       {width >= theme.mediaQueries.desktopPixel && <Socials />}
 
       {width < theme.mediaQueries.desktopPixel && (
-        <ColumnContainer style={{ marginTop: 70 }} gap={20}>
+        <FlexContainer className="column" style={{ marginTop: 70 }} gap={20}>
           <Socials />
 
           <Copyrights />
-        </ColumnContainer>
+        </FlexContainer>
       )}
       <Stripes iconStyle={{ height: 112, width: 115 }} />
     </FooterContainer>
