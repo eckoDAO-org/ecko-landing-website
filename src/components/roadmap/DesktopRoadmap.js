@@ -35,6 +35,7 @@ const RoadmapContainer = styled(FlexContainer)`
   scrollbar-width: none;
   svg {
     min-width: 100%;
+    max-width: 100%;
     height: auto;
   }
 `;
