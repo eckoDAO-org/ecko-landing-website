@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
 
-const Container = styled.div``;
-
 const Roadmap2021 = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1675" height="501" viewBox="0 0 1675 501">
@@ -90,7 +88,7 @@ const Roadmap2021 = () => {
           transform="translate(-7935 5459)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="0" y="0">
@@ -105,7 +103,7 @@ investors"
           transform="translate(-7552 5459)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="-58.09" y="0">
@@ -126,7 +124,7 @@ investors"
           transform="translate(-7199 5459)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="-73.66" y="0">
@@ -140,7 +138,7 @@ Deepdive"
           transform="translate(-7902 5650)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="-52.9" y="0">
@@ -156,7 +154,7 @@ Deepdive"
           transform="translate(-7551 5650)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="-52.9" y="0">
@@ -170,7 +168,7 @@ Formation"
           transform="translate(-7551 5865)"
           fill="#39fffc"
           font-size="20"
-          font-family="BasierSquareMono-Regular, Basier Square Mono"
+          font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
           <tspan x="-21.76" y="0">

@@ -7,22 +7,34 @@ import Label from '../shared/Label';
 import Roadmap2021 from './desktop-roadmaps/Roadmap2021';
 import Roadmap2022 from './desktop-roadmaps/Roadmap2022';
 import RoadmapOngoing from './desktop-roadmaps/RoadmapOngoing';
+import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.png';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
   border-radius: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-image: ${`url(${backgroundroadmap})`};
+  border-radius: 60px;
+  padding-top: 150px;
+  padding-bottom: 90px;
 `;
 
 const RoadmapContainer = styled(FlexContainer)`
-  width: ${({ width }) => width}px;
   overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
   }
   scrollbar-width: none;
   svg {
-    min-width: ${({ width }) => width}px;
+    min-width: 100%;
+    height: auto;
   }
 `;
 
@@ -78,11 +90,12 @@ const DesktopRoadmap = () => {
 
   return (
     <RoadmapWrapper className="column" gap={120}>
-      <Label size="big" color="white" fontFamily="syncopate">
+      <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
         Kaddex
         <br />
         Roadmap
       </Label>
+      {/* <img style={{ position: 'absolute', height: '100%', width: '100%' }} src={backgroundroadmap} alt="" /> */}
       <RoadmapContainer id="roadmaps-container" width={width} translateX={translateX} style={{ width: width + 40 }}>
         {ROADMAPS.map((roadmap, i) => (
           <React.Fragment id={`roadmap-${roadmap.id}`} key={i}>

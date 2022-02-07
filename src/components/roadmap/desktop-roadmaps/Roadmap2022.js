@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 const Container = styled.div``;
 
 const Roadmap2022 = () => {
+  const whiteGrey = '#666666';
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501">
       <g id="Roadmap" transform="translate(5 -190)">
@@ -12,19 +15,27 @@ const Roadmap2022 = () => {
             id="Path_43816"
             data-name="Path 43816"
             d="M753.5,613.005H369a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005H1588a77.624,77.624,0,0,0,43.608-13.32,78.237,78.237,0,0,0,28.263-34.319A77.507,77.507,0,0,0,1666,317.005v-31a77.693,77.693,0,0,0-77.77-78H289L-5,208v-4l294,.005H1588.23a82.45,82.45,0,0,1,16.514,1.666,81.161,81.161,0,0,1,29.263,12.341,81.886,81.886,0,0,1,34.338,51.471A83.059,83.059,0,0,1,1670,286.005v31a82.6,82.6,0,0,1-1.666,16.524,81.564,81.564,0,0,1-12.34,29.325,82.238,82.238,0,0,1-36.076,29.707,81.6,81.6,0,0,1-15.395,4.779A82.59,82.59,0,0,1,1588,399.005H369a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005H753.5Z"
-            fill="#fff"
+            fill={whiteGrey}
           />
-          <circle id="Ellipse_X-Wallet_Beta" data-name="Ellipse X-Wallet_Beta" cx="15" cy="15" r="15" transform="translate(490 190)" fill="#39fffc" />
+          <circle
+            id="Ellipse_X-Wallet_Beta"
+            data-name="Ellipse X-Wallet_Beta"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(490 190)"
+            fill={theme.colors.primary}
+          />
           <text
             id="X-Wallet_Beta"
             data-name="X-Wallet Beta"
             transform="translate(437.17 255)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
-            <tspan x="0" y="0" fill="#39fffc">
+            <tspan x="0" y="0" fill={theme.colors.primary}>
               X-Wallet Beta
             </tspan>
           </text>
@@ -36,16 +47,15 @@ const Roadmap2022 = () => {
             cy="15"
             r="15"
             transform="translate(490 381)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="_3d_Swapping_Interface"
-            data-name="3d Swapping
-Interface"
+            data-name="3d Swapping Interface"
             transform="translate(506.17 446)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-58.09" y="0">
@@ -63,16 +73,15 @@ Interface"
             cy="15"
             r="15"
             transform="translate(490 596)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="Single_Sided_Liquidity"
-            data-name="Single Sided
-Liquidity"
+            data-name="Single Sided Liquidity"
             transform="translate(506.17 661)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-63.28" y="0">
@@ -83,14 +92,14 @@ Liquidity"
             </tspan>
           </text>
 
-          <circle id="Ellipse_X-Wallet_v1" data-name="Ellipse X-Wallet_v1" cx="15" cy="15" r="15" transform="translate(740 190)" fill="#fff" />
+          <circle id="Ellipse_X-Wallet_v1" data-name="Ellipse X-Wallet_v1" cx="15" cy="15" r="15" transform="translate(740 190)" fill={whiteGrey} />
           <text
             id="X-Wallet_v1"
             data-name="X-Wallet v1"
             transform="translate(697.17 255)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="0" y="0">
@@ -98,14 +107,14 @@ Liquidity"
             </tspan>
           </text>
 
-          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(740 381)" fill="#fff" />
+          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(740 381)" fill={whiteGrey} />
           <text
             id="Website_v2"
             data-name="Website v2"
             transform="translate(707.17 446)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="0" y="0">
@@ -120,16 +129,15 @@ Liquidity"
             cy="15"
             r="15"
             transform="translate(740 596)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="Lending_borrowing_functionalities"
-            data-name="Lending &amp; borrowing
-functionalities"
+            data-name="Lending &amp; borrowing functionalities"
             transform="translate(756.17 662)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-99.61" y="0">
@@ -140,14 +148,14 @@ functionalities"
             </tspan>
           </text>
 
-          <circle id="Ellipse_Public_Sale" data-name="Ellipse Public_Sale" cx="15" cy="15" r="15" transform="translate(990 190)" fill="#fff" />
+          <circle id="Ellipse_Public_Sale" data-name="Ellipse Public_Sale" cx="15" cy="15" r="15" transform="translate(990 190)" fill={whiteGrey} />
           <text
             id="Public_Sale"
             data-name="Public Sale"
             transform="translate(947.17 255)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="0" y="0">
@@ -162,31 +170,27 @@ functionalities"
             cy="15"
             r="15"
             transform="translate(990 381)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="KDX_Vaulting_programme_available_for_early_investors"
-            data-name="KDX Vaulting
-programme
-available for early
-investors"
+            data-name="KDX Vaulting programme available for early investors"
             transform="translate(1007.17 446)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
-            letter-spacing="-0.1em"
+            font-family={theme.fontFamily.basier}
           >
-            <tspan x="-63.28" y="0">
+            <tspan letter-spacing="-0.1em" x="-63.28" y="0">
               KDX Vaulting
             </tspan>
-            <tspan x="-47.71" y="25">
+            <tspan letter-spacing="-0.1em" x="-47.71" y="25">
               programme
             </tspan>
             <tspan font-size="13">
-              <tspan x="-64.746" y="50">
+              <tspan x="-78.746" y="50">
                 available for early
               </tspan>
-              <tspan x="-31.012" y="75">
+              <tspan x="-43.012" y="75">
                 investors
               </tspan>
             </tspan>
@@ -199,16 +203,15 @@ investors"
             cy="15"
             r="15"
             transform="translate(1240 190)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="Litepaper_Whitepaper"
-            data-name="Litepaper
-&amp; Whitepaper"
+            data-name="Litepaper &amp; Whitepaper"
             transform="translate(1255.17 255)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-47.71" y="0">
@@ -226,16 +229,15 @@ investors"
             cy="15"
             r="15"
             transform="translate(1240 381)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="Kaddex_v1_full_launch"
-            data-name="Kaddex v1
-full launch"
+            data-name="Kaddex v1 full launch"
             transform="translate(1250.17 446)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-47.71" y="0">
@@ -246,15 +248,22 @@ full launch"
             </tspan>
           </text>
 
-          <circle id="Ellipse_20_Token_Pairs" data-name="Ellipse 20_Token_Pairs" cx="15" cy="15" r="15" transform="translate(1490 190)" fill="#fff" />
+          <circle
+            id="Ellipse_20_Token_Pairs"
+            data-name="Ellipse 20_Token_Pairs"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(1490 190)"
+            fill={whiteGrey}
+          />
           <text
             id="Bridged_ERC-20_Token_Pairs"
-            data-name="Bridged ERC-20
-Token Pairs"
+            data-name="Bridged ERC-20 Token Pairs"
             transform="translate(1506.17 255)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-73.66" y="0">
@@ -272,16 +281,16 @@ Token Pairs"
             cy="15"
             r="15"
             transform="translate(1490 381)"
-            fill="#fff"
+            fill={whiteGrey}
           />
           <text
             id="KDX_Liquidity_Mining_Programme"
             data-name="KDX Liquidity
 Mining Programme"
             transform="translate(1499.17 446)"
-            fill="#fff"
+            fill={whiteGrey}
             font-size="20"
-            font-family="BasierSquareMono-Regular, Basier Square Mono"
+            font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
           >
             <tspan x="-68.47" y="0">
@@ -291,6 +300,15 @@ Mining Programme"
               Mining Programme
             </tspan>
           </text>
+          <line
+            id="Line_585"
+            data-name="Line 585"
+            x2="502"
+            transform="translate(-5 206)"
+            fill="none"
+            stroke={theme.colors.primary}
+            stroke-width="4"
+          />
         </g>
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">
@@ -298,7 +316,7 @@ Mining Programme"
               id="Path_43817"
               data-name="Path 43817"
               d="M1738.17,612h-6.049v-2h6.049Zm-14.049,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Z"
-              fill="#fff"
+              fill={whiteGrey}
             />
           </g>
         </g>
