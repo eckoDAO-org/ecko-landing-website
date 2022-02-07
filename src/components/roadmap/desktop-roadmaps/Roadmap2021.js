@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import theme from '../../../styles/theme';
 
 const Roadmap2021 = () => {
@@ -135,9 +134,9 @@ const Roadmap2021 = () => {
           data-name="2M TVL"
           transform="translate(-7935 5459)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="0" y="0">
             2M TVL
@@ -148,14 +147,14 @@ const Roadmap2021 = () => {
           data-name="Kaddex Beta available for early investors"
           transform="translate(-7552 5459)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-58.09" y="0">
             Kaddex Beta
           </tspan>
-          <tspan font-size="13">
+          <tspan fontSize="13">
             <tspan x="-64.746" y="25">
               available for early
             </tspan>
@@ -169,9 +168,9 @@ const Roadmap2021 = () => {
           data-name="Community Sale"
           transform="translate(-7199 5459)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-73.66" y="0">
             Community Sale
@@ -182,9 +181,9 @@ const Roadmap2021 = () => {
           data-name="Tokenomics Deepdive"
           transform="translate(-7902 5650)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-52.9" y="0">
             Tokenomics
@@ -198,9 +197,9 @@ const Roadmap2021 = () => {
           data-name="Website v1"
           transform="translate(-7551 5650)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-52.9" y="0">
             Website v1
@@ -211,9 +210,9 @@ const Roadmap2021 = () => {
           data-name="Team Formation"
           transform="translate(-7551 5865)"
           fill={theme.colors.primary}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-61.76" y="0">
             Team Formation

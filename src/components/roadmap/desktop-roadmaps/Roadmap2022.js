@@ -1,4 +1,5 @@
 import React from 'react';
+import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
 const Roadmap2022 = () => {
@@ -28,9 +29,9 @@ const Roadmap2022 = () => {
             data-name="X-Wallet Beta"
             transform="translate(437.17 255)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="0" y="0" fill={theme.colors.primary}>
               X-Wallet Beta
@@ -51,9 +52,9 @@ const Roadmap2022 = () => {
             data-name="3d Swapping Interface"
             transform="translate(506.17 446)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-58.09" y="0">
               3d Swapping
@@ -77,9 +78,9 @@ const Roadmap2022 = () => {
             data-name="Single Sided Liquidity"
             transform="translate(506.17 661)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-63.28" y="0">
               Single Sided
@@ -95,9 +96,9 @@ const Roadmap2022 = () => {
             data-name="X-Wallet v1"
             transform="translate(697.17 255)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="0" y="0">
               X-Wallet v1
@@ -110,9 +111,9 @@ const Roadmap2022 = () => {
             data-name="Website v2"
             transform="translate(707.17 446)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="0" y="0">
               Website v2
@@ -133,9 +134,9 @@ const Roadmap2022 = () => {
             data-name="Lending &amp; borrowing functionalities"
             transform="translate(756.17 662)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-99.61" y="0">
               Lending &amp; borrowing
@@ -151,9 +152,9 @@ const Roadmap2022 = () => {
             data-name="Public Sale"
             transform="translate(947.17 255)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="0" y="0">
               Public Sale
@@ -174,16 +175,16 @@ const Roadmap2022 = () => {
             data-name="KDX Vaulting programme available for early investors"
             transform="translate(1007.17 446)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
           >
-            <tspan letter-spacing="-0.1em" x="-63.28" y="0">
+            <tspan letterSpacing="-0.1em" x="-63.28" y="0">
               KDX Vaulting
             </tspan>
-            <tspan letter-spacing="-0.1em" x="-47.71" y="25">
+            <tspan letterSpacing="-0.1em" x="-47.71" y="25">
               programme
             </tspan>
-            <tspan font-size="13">
+            <tspan fontSize="13">
               <tspan x="-78.746" y="50">
                 available for early
               </tspan>
@@ -207,9 +208,9 @@ const Roadmap2022 = () => {
             data-name="Litepaper &amp; Whitepaper"
             transform="translate(1255.17 255)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-47.71" y="0">
               Litepaper
@@ -226,16 +227,22 @@ const Roadmap2022 = () => {
             cy="15"
             r="15"
             transform="translate(1240 381)"
-            fill={theme.colors.pink}
+            fill="#FA41A5"
           />
+          <g id="ring" transform="translate(1254 353)">
+            <RoadmapFlagcon />
+          </g>
+          <g id="ring" transform="translate(1235 374)">
+            <RoadmapEllipseShadowIcon />
+          </g>
           <text
             id="Kaddex_v1_full_launch"
             data-name="Kaddex v1 full launch"
             transform="translate(1250.17 446)"
-            fill={theme.colors.pink}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fill="#FA41A5"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-47.71" y="0">
               Kaddex v1
@@ -259,9 +266,9 @@ const Roadmap2022 = () => {
             data-name="Bridged ERC-20 Token Pairs"
             transform="translate(1506.17 255)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-73.66" y="0">
               Bridged ERC-20
@@ -285,9 +292,9 @@ const Roadmap2022 = () => {
             data-name="KDX Liquidity Mining Programme"
             transform="translate(1499.17 446)"
             fill={whiteGrey}
-            font-size="20"
-            font-family={theme.fontFamily.basier}
-            letter-spacing="-0.1em"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
           >
             <tspan x="-68.47" y="0">
               KDX Liquidity
@@ -296,15 +303,7 @@ const Roadmap2022 = () => {
               Mining Programme
             </tspan>
           </text>
-          <line
-            id="Line_585"
-            data-name="Line 585"
-            x2="502"
-            transform="translate(-5 206)"
-            fill="none"
-            stroke={theme.colors.primary}
-            stroke-width="4"
-          />
+          <line id="Line_585" data-name="Line 585" x2="502" transform="translate(-5 206)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
         </g>
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">

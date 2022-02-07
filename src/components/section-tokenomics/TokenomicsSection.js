@@ -122,7 +122,7 @@ const TokenomicsSection = () => {
         <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" tabletStyle={{ marginTop: 50 }}>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel && 70} className="justify-sb">
             {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (
-              <PercentageCard tokenomics={tokenomics} />
+              <PercentageCard key={i} tokenomics={tokenomics} />
             ))}
           </FlexContainer>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel && 70} className="justify-sb" style={{ marginTop: 84 }}>

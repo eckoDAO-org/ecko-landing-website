@@ -25,9 +25,9 @@ const RoadmapOngoing = () => {
           data-name="DAO Transition"
           transform="translate(225.5 65)"
           fill={whiteGrey}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="0" y="0">
             DAO Transition
@@ -38,9 +38,9 @@ const RoadmapOngoing = () => {
           data-name="New Strategic Partnerships"
           transform="translate(299.5 256)"
           fill={whiteGrey}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-68.47" y="0">
             New Strategic
@@ -54,9 +54,9 @@ const RoadmapOngoing = () => {
           data-name="Team Expansion"
           transform="translate(651.5 256)"
           fill={whiteGrey}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-73.66" y="0">
             Team Expansion
@@ -67,9 +67,9 @@ const RoadmapOngoing = () => {
           data-name="Multiplecode autiding"
           transform="translate(651.5 471)"
           fill={whiteGrey}
-          font-size="20"
-          font-family={theme.fontFamily.basier}
-          letter-spacing="-0.1em"
+          fontSize="20"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
         >
           <tspan x="-103.28" y="0">
             Multiplecode autiding
