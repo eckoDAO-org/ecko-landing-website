@@ -8,24 +8,14 @@ import styled from 'styled-components/macro';
 
 import { ROUTE_INDEX } from './routes';
 
-const Container = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-`;
-
 export default () => {
   return (
     <Router>
       <Layout>
-        <Container>
-          <Switch>
-            <Route exact path={ROUTE_INDEX} component={MainContainer} />
-            <Redirect to={ROUTE_INDEX} />
-          </Switch>
-        </Container>
+        <Switch>
+          <Route exact path={ROUTE_INDEX} component={MainContainer} />
+          <Redirect to={ROUTE_INDEX} />
+        </Switch>
       </Layout>
     </Router>
   );

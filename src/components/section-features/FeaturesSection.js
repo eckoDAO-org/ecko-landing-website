@@ -11,7 +11,7 @@ const FeatureSection = () => {
   const [width] = useWindowSize();
   return (
     <FlexContainer
-      className="column relative w-100 align-fs"
+      className="column relative w-100 align-ce"
       gap={100}
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
@@ -51,6 +51,14 @@ const FeatureSection = () => {
       {width >= DESKTOP_PIXEL && (
         <FlexContainer className="w-100 wrap justify-sb">
           {FEATURES.slice(2).map((feature, i) => (
+            <FeatureCard key={i} feature={feature} />
+          ))}
+        </FlexContainer>
+      )}
+
+      {width < DESKTOP_PIXEL && (
+        <FlexContainer className="grid" columns={Math.round((width - 200) / 240)}>
+          {FEATURES.map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}
         </FlexContainer>

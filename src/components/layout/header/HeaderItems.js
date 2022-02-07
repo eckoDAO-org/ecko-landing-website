@@ -5,7 +5,7 @@ import Label from '../../shared/Label';
 
 const Item = styled.a`
   cursor: pointer;
-
+  text-decoration: none;
   .underline {
     width: ${({ hover }) => (hover ? '100%' : 0)};
     transition: width 0.3s;

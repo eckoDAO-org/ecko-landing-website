@@ -28,14 +28,14 @@ const MainContainer = () => {
   return (
     <FlexContainer className="column">
       <OuterContainer>
-        {/* <IntroductionSection />
-      <ProofOfDexSection />
-      <FeatureSection />
-      <TokenomicsSection />
-      <PartnersSection /> */}
+        <IntroductionSection />
+        <ProofOfDexSection />
+        <FeatureSection />
+        <TokenomicsSection />
+        <PartnersSection />
         {/* <RadiusBackground idRef="proof-dex" /> */}
       </OuterContainer>
-      <DesktopRoadmap />
+      {/* <DesktopRoadmap /> */}
     </FlexContainer>
   );
 };

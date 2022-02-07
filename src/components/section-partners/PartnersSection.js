@@ -4,7 +4,6 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { PartnersIcon } from '../../assets';
 import { FlexContainer } from '../shared/Container';
 import PartnerCard from './PartnerCard';
-import { theme } from '../../styles/theme';
 import {
   PARTNERS,
   PARTNER_ARCHITECH,
@@ -16,7 +15,7 @@ import {
   PARTNER_UFO_GAMING,
   PARTNER_ZELCORE,
 } from '../../constants/partners';
-import PartnersCarousel from './PartnersCarousel';
+import theme from '../../styles/theme';
 
 const DESKTOP_PIXEL = 1520;
 const PartnersContainer = styled(FlexContainer)`
@@ -47,30 +46,32 @@ const PartnersSection = () => {
         <>
           <FlexContainer className="column justify-fe" gap={50} style={{ marginBottom: 50 }}>
             {[PARTNER_ARCHITECH, PARTNER_UFO_GAMING].map((partner, i) => (
-              <PartnerCard key={i} type="partners" partner={partner} />
+              <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
           <FlexContainer className="column justify-fe" gap={50}>
             {[PARTNER_SPOT, PARTNER_ZELCORE, PARTNER_FLUX].map((partner, i) => (
-              <PartnerCard key={i} type="partners" partner={partner} />
+              <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
           <FlexContainer className="column" gap={50} style={{ marginBottom: 250 }}>
             {[PARTNER_TOKENSOFT, PARTNER_GENESIS_BLOCK, PARTNER_ROBOSWAP].map((partner, i) => (
-              <PartnerCard key={i} type="partners" partner={partner} />
+              <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
         </>
       )}
-      {width < DESKTOP_PIXEL && width >= theme.mediaQueries.mobilePixel && (
-        <FlexContainer className="grid" columns={2} style={{ justifyItems: 'center' }}>
+      {width < DESKTOP_PIXEL && (
+        <FlexContainer
+          className="grid"
+          columns={Math.round((width - 100) / (width < theme.mediaQueries.mobilePixel ? 200 : 240))}
+          style={{ justifyItems: 'center' }}
+        >
           {PARTNERS.map((partner, i) => (
-            <PartnerCard key={i} type="partners" partner={partner} />
+            <PartnerCard key={i} partner={partner} />
           ))}
         </FlexContainer>
       )}
-
-      {width < theme.mediaQueries.mobilePixel && <PartnersCarousel />}
     </PartnersContainer>
   );
 };
