@@ -14,6 +14,7 @@ export const FlexContainer = ({
   style,
   tabletStyle,
   mobileStyle,
+  backgroundImage,
   ...rest
 }) => {
   const [width] = useWindowSize();
@@ -31,11 +32,11 @@ export const FlexContainer = ({
     }
     return classname;
   };
-
   return (
     <STYFlexContainer
       {...rest}
       className={getClassName()}
+      backgroundImage={backgroundImage}
       style={{
         ...style,
         ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
@@ -90,6 +91,9 @@ export const STYFlexContainer = styled.div`
   &.w-100 {
     width: 100%;
   }
+  &.h-100 {
+    height: 100%;
+  }
 
   &.flex-1 {
     flex: 1;
@@ -106,6 +110,17 @@ export const STYFlexContainer = styled.div`
   &.h-fit-content {
     height: fit-content;
   }
+
+  ${({ backgroundImage }) => {
+    if (backgroundImage) {
+      return css`
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(${backgroundImage});
+      `;
+    }
+  }}
 
   ${({ gap }) => {
     if (gap) {

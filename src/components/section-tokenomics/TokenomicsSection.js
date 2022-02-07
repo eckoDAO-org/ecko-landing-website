@@ -7,6 +7,7 @@ import PercentageCard from './PercentageCard';
 import { FlexContainer } from '../shared/Container';
 import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
 import { theme } from '../../styles/theme';
+import tokenomicsBackground from '../../assets/images/backgrounds/tokenomics-background.png';
 
 const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;
@@ -55,6 +56,7 @@ const TokenomicsSection = () => {
       tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
       mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
+      <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (
         <FlexContainer className="column w-100" gap={30} desktopPixel={1430}>
           <FlexContainer className="align-fs wrap" style={{ rowGap: 24 }}>

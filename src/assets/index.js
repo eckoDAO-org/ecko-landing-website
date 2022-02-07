@@ -3,7 +3,7 @@ export { ReactComponent as KaddexLogo } from './images/layout/kaddex-logo.svg';
 export { ReactComponent as StripeIcon } from './images/layout/stripes.svg';
 export { ReactComponent as KaddexLogoFooterIcon } from './images/layout/kaddex-logo-footer.svg';
 export { ReactComponent as KaddexFooterIcon } from './images/layout/kaddex-footer.svg';
-
+export { ReactComponent as ArrowsDownIcon } from './images/layout/arrows-down.svg';
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';
 export { ReactComponent as FluxLogo } from './images/partners/flux.svg';

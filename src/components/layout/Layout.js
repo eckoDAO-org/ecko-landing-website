@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import CustomParticles from './CustomParticles';
 import DesktopHeader from './header/DesktopHeader';
 import FooterSection from './footer/FooterSection';
-
-const MainContainer = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100%;
-`;
+import introductionBackground from '../../assets/images/backgrounds/introduction-background.png';
+import { FlexContainer } from '../shared/Container';
 
 const MainContent = styled.div`
   height: 100%;
@@ -17,14 +12,14 @@ const MainContent = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <MainContainer id="main-container">
-      <CustomParticles />
+    <FlexContainer className="w-100 h-100 relative" id="main-container">
+      <img src={introductionBackground} style={{ position: 'absolute', zIndex: -1, height: 1375, width: '100%' }} alt="" />
       <DesktopHeader />
 
       <MainContent>{children}</MainContent>
 
       <FooterSection />
-    </MainContainer>
+    </FlexContainer>
   );
 };
 
