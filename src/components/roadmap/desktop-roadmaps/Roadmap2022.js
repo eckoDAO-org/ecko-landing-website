@@ -56,10 +56,10 @@ const Roadmap2022 = () => {
                 <text id="DEX_Lite_Paper-2" dataName="DEX Lite Paper" transform="translate(-38.525 24.408)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Vaulting Programme </tspan><tspan x="0" y="41" fontFamily={theme.fontFamily.regular} font-weight="400">available for early investors</tspan></text>
                 <circle id="Circle-7" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-38.525 0.41)" fill="#fff"/>
                 </g>
-                <line id="Active" x2="680" transform="translate(-12 3665.001)" fill="none" stroke="#ec1bb4" stroke-width="5"/>
+                <line id="Active" x2="850" transform="translate(-12 3665.001)" fill="none" stroke="#ec1bb4" stroke-width="5"/>
                 <g id="Kaddex_Website_Refresh" dataName="Kaddex Website Refresh" transform="translate(830.699 3655.569)">
-                <text id="Kaddex_Website_Refresh-2" dataName="Kaddex Website Refresh" transform="translate(0.301 24.432)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Public Sale</tspan></text>
-                <circle id="Circle-8" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.432)" fill="#fff"/>
+                <text id="Kaddex_Website_Refresh-2" dataName="Kaddex Website Refresh" transform="translate(0.301 24.432)" fill="#ec1bb4" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Public Sale</tspan></text>
+                <circle id="Circle-8" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.432)" fill="#ec1bb4"/>
                 </g>
                 <g id="X-wallet-v1" dataName="Tokenomics Deep Drive" transform="translate(655.422 3655.569)">
                 <text id="Tokenomics_Deep_Drive-2" dataName="Tokenomics Deep Drive" transform="translate(-0.421 24.432)" fill="#ec1bb4" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">X-Wallet v1</tspan></text>
