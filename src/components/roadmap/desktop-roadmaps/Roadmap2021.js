@@ -97,9 +97,7 @@ const Roadmap2021 = () => {
         </text>
         <text
           id="Kaddex_Beta_available_for_early_investors"
-          data-name="Kaddex Beta
-available for early
-investors"
+          data-name="Kaddex Beta available for early investors"
           transform="translate(-7552 5459)"
           fill="#39fffc"
           font-size="20"
@@ -133,8 +131,7 @@ investors"
         </text>
         <text
           id="Tokenomics_Deepdive"
-          data-name="Tokenomics
-Deepdive"
+          data-name="Tokenomics Deepdive"
           transform="translate(-7902 5650)"
           fill="#39fffc"
           font-size="20"
@@ -163,19 +160,15 @@ Deepdive"
         </text>
         <text
           id="Team_Formation"
-          data-name="Team
-Formation"
+          data-name="Team Formation"
           transform="translate(-7551 5865)"
           fill="#39fffc"
           font-size="20"
           font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
-          <tspan x="-21.76" y="0">
-            Team
-          </tspan>
-          <tspan x="-47.71" y="25">
-            Formation
+          <tspan x="-61.76" y="0">
+            Team Formation
           </tspan>
         </text>
       </g>

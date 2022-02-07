@@ -1,8 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
 import theme from '../../../styles/theme';
-
-const Container = styled.div``;
 
 const Roadmap2022 = () => {
   const whiteGrey = '#666666';
@@ -285,8 +282,7 @@ const Roadmap2022 = () => {
           />
           <text
             id="KDX_Liquidity_Mining_Programme"
-            data-name="KDX Liquidity
-Mining Programme"
+            data-name="KDX Liquidity Mining Programme"
             transform="translate(1499.17 446)"
             fill={whiteGrey}
             font-size="20"

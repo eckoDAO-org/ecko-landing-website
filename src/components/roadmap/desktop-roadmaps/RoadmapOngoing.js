@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import theme from '../../../styles/theme';
 
 const RoadmapOngoing = () => {
@@ -36,8 +35,7 @@ const RoadmapOngoing = () => {
         </text>
         <text
           id="New_Strategic_Partnerships"
-          data-name="New Strategic
-  Partnerships"
+          data-name="New Strategic Partnerships"
           transform="translate(299.5 256)"
           fill={whiteGrey}
           font-size="20"
@@ -66,8 +64,7 @@ const RoadmapOngoing = () => {
         </text>
         <text
           id="Multiplecode_autiding"
-          data-name="Multiplecode
-  autiding"
+          data-name="Multiplecode autiding"
           transform="translate(651.5 471)"
           fill={whiteGrey}
           font-size="20"
