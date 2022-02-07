@@ -11,13 +11,9 @@ import HeaderItems from './HeaderItems';
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
-  padding: 2em 0px;
+  padding: 2em 50px;
 
   z-index: 10;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
-    padding: 2em 50px;
-  }
 
   ${({ isSticky }) => {
     if (isSticky) {

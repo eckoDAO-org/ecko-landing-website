@@ -10,12 +10,6 @@ const MainContainer = styled.div`
   width: 100%;
 `;
 
-const PageContent = styled.div`
-  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
-    padding: 0 50px;
-  }
-`;
-
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
@@ -25,11 +19,9 @@ const Layout = ({ children }) => {
   return (
     <MainContainer id="main-container">
       <CustomParticles />
-      <PageContent>
-        <DesktopHeader />
+      <DesktopHeader />
 
-        <MainContent>{children}</MainContent>
-      </PageContent>
+      <MainContent>{children}</MainContent>
 
       <FooterSection />
     </MainContainer>

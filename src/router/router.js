@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import Layout from '../components/layout/Layout';
 import MainContainer from '../containers/MainContainer';
 
-import styled from 'styled-components/macro';
-
 import { ROUTE_INDEX } from './routes';
 
 export default () => {

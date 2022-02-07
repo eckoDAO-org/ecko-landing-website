@@ -4,6 +4,9 @@ import { Roadmap2021Icon, Roadmap2022Icon, RoadmapOnGoingIcon } from '../../asse
 import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
+import Roadmap2021 from './desktop-roadmaps/Roadmap2021';
+import Roadmap2022 from './desktop-roadmaps/Roadmap2022';
+import RoadmapOngoing from './desktop-roadmaps/RoadmapOngoing';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
@@ -11,27 +14,31 @@ const RoadmapWrapper = styled(FlexContainer)`
 `;
 
 const RoadmapContainer = styled(FlexContainer)`
-  transition: transform 0.5s;
-  transform: ${({ translateX }) => `translateX(${translateX}px)`};
+  width: ${({ width }) => width}px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
   svg {
-    width: ${({ width }) => width}px;
-    height: 551px;
+    min-width: ${({ width }) => width}px;
   }
 `;
 
 const ROADMAPS = [
   {
-    image: <Roadmap2021Icon />,
+    image: <Roadmap2021 />,
     id: '2021',
     order: 0,
   },
   {
-    image: <Roadmap2022Icon />,
+    image: <Roadmap2022 />,
     id: '2022',
     order: 1,
   },
   {
-    image: <RoadmapOnGoingIcon />,
+    image: <RoadmapOngoing />,
     id: 'ongoing',
     order: 2,
   },
@@ -44,22 +51,31 @@ const DesktopRoadmap = () => {
   const [translateX, setTranslateX] = useState(0);
 
   useEffect(() => {
-    const element = document.getElementById('roadmap-2022');
-    console.log('element', element.offsetLeft);
-    setTranslateX(-element.offsetLeft + 25);
-  }, []);
-
+    if (width && !translateX) {
+      setTranslateX(width);
+    }
+  }, [width]);
+  console.log('translateX', translateX);
   const onSelectRoadmap = (rm) => {
     if (rm.id !== selectedRoadmap.id) {
       const diff = Math.abs(rm.order - selectedRoadmap.order);
+
       if (rm.order > selectedRoadmap.order) {
-        setTranslateX((prev) => prev + -(diff * width) + 25);
+        setTranslateX((prev) => prev + diff * width);
       } else {
-        setTranslateX((prev) => prev + diff * width + 25);
+        setTranslateX((prev) => prev - diff * width);
       }
-      setSelectedRoadmap(rm);
     }
+    setSelectedRoadmap(rm);
   };
+
+  useEffect(() => {
+    const elementContainer = document.getElementById('roadmaps-container');
+    if (elementContainer) {
+      elementContainer.scrollTo(translateX, 0);
+    }
+  }, [translateX]);
+
   return (
     <RoadmapWrapper className="column" gap={120}>
       <Label size="big" color="white" fontFamily="syncopate">
@@ -67,11 +83,11 @@ const DesktopRoadmap = () => {
         <br />
         Roadmap
       </Label>
-      <RoadmapContainer width={width} translateX={translateX} style={{ width: width + 40 }}>
+      <RoadmapContainer id="roadmaps-container" width={width} translateX={translateX} style={{ width: width + 40 }}>
         {ROADMAPS.map((roadmap, i) => (
-          <div id={`roadmap-${roadmap.id}`} key={i}>
+          <React.Fragment id={`roadmap-${roadmap.id}`} key={i}>
             {roadmap.image}
-          </div>
+          </React.Fragment>
         ))}
       </RoadmapContainer>
       <FlexContainer className="justify-sb">
