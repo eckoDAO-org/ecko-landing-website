@@ -26,7 +26,9 @@ const RoadmapContainer = styled(FlexContainer)`
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
-
+  & > *:first-child {
+    padding-left: 90px;
+  }
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
@@ -60,33 +62,21 @@ const DesktopRoadmap = () => {
   const [width] = useWindowSize();
   const [selectedRoadmap, setSelectedRoadmap] = useState(ROADMAPS[1]);
 
-  const [translateX, setTranslateX] = useState(0);
-
-  useEffect(() => {
-    if (width && !translateX) {
-      setTranslateX(width);
-    }
-  }, [width]);
-  console.log('translateX', translateX);
   const onSelectRoadmap = (rm) => {
     if (rm.id !== selectedRoadmap.id) {
-      const diff = Math.abs(rm.order - selectedRoadmap.order);
-
-      if (rm.order > selectedRoadmap.order) {
-        setTranslateX((prev) => prev + diff * width);
-      } else {
-        setTranslateX((prev) => prev - diff * width);
-      }
+      setSelectedRoadmap(rm);
     }
-    setSelectedRoadmap(rm);
   };
 
+  const elementContainer = document.getElementById('roadmaps-container');
+
   useEffect(() => {
-    const elementContainer = document.getElementById('roadmaps-container');
-    if (elementContainer) {
-      elementContainer.scrollTo(translateX, 0);
+    if (selectedRoadmap && elementContainer) {
+      const element = document.getElementById(`roadmap-${selectedRoadmap.id}`);
+
+      elementContainer.scrollTo(element.offsetLeft, 0);
     }
-  }, [translateX]);
+  }, [selectedRoadmap, elementContainer]);
 
   return (
     <RoadmapWrapper className="column" gap={120}>
@@ -95,12 +85,11 @@ const DesktopRoadmap = () => {
         <br />
         Roadmap
       </Label>
-      {/* <img style={{ position: 'absolute', height: '100%', width: '100%' }} src={backgroundroadmap} alt="" /> */}
-      <RoadmapContainer id="roadmaps-container" width={width} translateX={translateX} style={{ width: width + 40 }}>
+      <RoadmapContainer id="roadmaps-container" width={width} style={{ width: width + 40 }}>
         {ROADMAPS.map((roadmap, i) => (
-          <React.Fragment id={`roadmap-${roadmap.id}`} key={i}>
+          <div style={{ minWidth: width }} id={`roadmap-${roadmap.id}`} key={i}>
             {roadmap.image}
-          </React.Fragment>
+          </div>
         ))}
       </RoadmapContainer>
       <FlexContainer className="justify-sb">

@@ -5,7 +5,7 @@ const RoadmapOngoing = () => {
   const whiteGrey = '#666666';
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1816.5" height="501" viewBox="0 0 1816.5 501">
-      <g id="Roadamp_Ongoing" data-name="Roadamp Ongoing" transform="translate(7 7.3)">
+      <g id="Roadamp_Ongoing" data-name="Roadamp Ongoing" transform="translate(7 17.8)">
         <path
           id="Path_43858"
           data-name="Path 43858"
@@ -71,11 +71,8 @@ const RoadmapOngoing = () => {
           font-family={theme.fontFamily.basier}
           letter-spacing="-0.1em"
         >
-          <tspan x="-63.28" y="0">
-            Multiplecode
-          </tspan>
-          <tspan x="-42.52" y="25">
-            autiding
+          <tspan x="-103.28" y="0">
+            Multiplecode autiding
           </tspan>
         </text>
       </g>
