@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useWindowSize from '../../hooks/useWindowSize';
@@ -40,10 +41,10 @@ const TabsContainer = styled(FlexContainer)`
   overflow-x: auto;
   overflow-y: hidden;
   & > *:first-child {
-    margin-left: 40%;
+    margin-left: 35%;
   }
   & > *:last-child {
-    margin-right: 40%;
+    margin-right: 25%;
   }
 `;
 
@@ -69,21 +70,23 @@ const DesktopRoadmap = () => {
   const [width] = useWindowSize();
   const [selectedRoadmap, setSelectedRoadmap] = useState(ROADMAPS[1]);
 
-  const onSelectRoadmap = (rm) => {
-    if (rm.id !== selectedRoadmap.id) {
-      setSelectedRoadmap(rm);
-    }
-  };
-
-  const elementContainer = document.getElementById('roadmaps-container');
+  const roadmapsContainer = document.getElementById('roadmaps-container');
+  const tabsContainer = document.getElementById('tabs-container');
 
   useEffect(() => {
-    if (selectedRoadmap && elementContainer) {
-      const element = document.getElementById(`roadmap-${selectedRoadmap.id}`);
+    if (selectedRoadmap && roadmapsContainer) {
+      const roadmap = document.getElementById(`roadmap-${selectedRoadmap.id}`);
 
-      elementContainer.scrollTo(element.offsetLeft, 0);
+      roadmapsContainer.scrollTo(roadmap.offsetLeft, 0);
+      if (selectedRoadmap.order === 0) {
+        tabsContainer.scrollTo(0, 0);
+      } else if (selectedRoadmap.order === 2) {
+        tabsContainer.scrollTo(width, 0);
+      } else {
+        tabsContainer.scrollTo(width / 2 - 200, 0);
+      }
     }
-  }, [selectedRoadmap, elementContainer]);
+  }, [selectedRoadmap, roadmapsContainer, tabsContainer]);
 
   return (
     <RoadmapWrapper id="roadmap" className="column" gap={120}>
@@ -92,26 +95,29 @@ const DesktopRoadmap = () => {
         <br />
         Roadmap
       </Label>
-      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width: width + 40 }}>
+      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width: width }}>
         {ROADMAPS.map((roadmap, i) => (
           <div style={{ minWidth: width }} id={`roadmap-${roadmap.id}`} key={i}>
             {roadmap.image}
           </div>
         ))}
       </RoadmapContainer>
-      <TabsContainer style={{ width }} className="hide-scrollbar justify-sb">
-        {ROADMAPS.map((roadmap, i) => (
-          <Label
-            key={i}
-            fontFamily="syncopate"
-            color={selectedRoadmap.id === roadmap.id ? 'pink' : 'white'}
-            fontSize={80}
-            onClick={() => onSelectRoadmap(roadmap)}
-            style={{ minWidth: '40%' }}
-          >
-            {roadmap.id}
-          </Label>
-        ))}
+      <TabsContainer id="tabs-container" className="hide-scrollbar justify-sb" width={width} style={{ width: width }}>
+        {ROADMAPS.map((roadmap, i) => {
+          return (
+            <Label
+              id={`tab-${roadmap.id}`}
+              key={i}
+              fontFamily="syncopate"
+              color={selectedRoadmap.id === roadmap.id ? 'pink' : 'white'}
+              fontSize={80}
+              onClick={() => setSelectedRoadmap(roadmap)}
+              style={{ minWidth: '40%' }}
+            >
+              {roadmap.id}
+            </Label>
+          );
+        })}
       </TabsContainer>
     </RoadmapWrapper>
   );

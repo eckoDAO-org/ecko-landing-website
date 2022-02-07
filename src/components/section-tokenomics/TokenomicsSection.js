@@ -7,7 +7,7 @@ import PercentageCard from './PercentageCard';
 import { FlexContainer } from '../shared/Container';
 import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
 import { theme } from '../../styles/theme';
-import tokenomicsBackground from '../../assets/images/backgrounds/tokenomics-background.png';
+import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 
 const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;

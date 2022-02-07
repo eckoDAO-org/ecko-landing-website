@@ -53,17 +53,25 @@ const DesktopHeader = () => {
     const scrollTop = window.scrollY;
     scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
+  const goToTop = () => {
+    history.push(ROUTE_INDEX);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div>
       <Container className="justify-sb" id="header-section">
-        <KaddexLogo style={{ cursor: 'pointer' }} onClick={() => history.push(ROUTE_INDEX)} />
+        <KaddexLogo style={{ cursor: 'pointer' }} onClick={goToTop} />
         <HeaderItems />
         <Hamburger />
       </Container>
 
       {isSticky && (
         <Container className="justify-sb" isSticky={isSticky}>
-          <KaddexLogo style={{ cursor: 'pointer' }} onClick={() => history.push(ROUTE_INDEX)} />
+          <KaddexLogo style={{ cursor: 'pointer' }} onClick={goToTop} />
           <HeaderItems />
           <Hamburger />
         </Container>

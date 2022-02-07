@@ -78,12 +78,12 @@ const STYText = styled.span`
 `;
 
 const Label = ({
+  id,
   className,
   desktopClassName,
   tabletClassName,
   mobileClassName,
   desktopPixel,
-
   gradientColors,
   children,
   fontFamily,
@@ -115,6 +115,7 @@ const Label = ({
 
   return (
     <STYText
+      id={id}
       className={getClassName()}
       color={getColor(color)}
       fontSize={fontSize}
