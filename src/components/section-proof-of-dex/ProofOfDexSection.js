@@ -26,54 +26,56 @@ const STYCard = styled(FlexContainer)`
 const ProofOfDexSection = () => {
   const [width] = useWindowSize();
   return (
-    <STYCard
-      id="proof-dex"
-      className="relative"
-      desktopStyle={{ marginTop: 90 }}
-      tabletStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
-      mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
-    >
-      <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={DESKTOP_PIXEL} mobileClassName="align-ce column">
-        <FlexContainer className="column justify-ce" gap={32} desktopPixel={DESKTOP_PIXEL} desktopStyle={{ marginRight: 60 }}>
-          <Label size="big" fontFamily="syncopate" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center">
-            The most
-            <br />
-            powerful Proof
-            <br />
-            of Work DEX
-          </Label>
-          <Label size="small" color="primary" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center justify-ce">
-            Safe DeFi begins with our Gas free DEX.
-            <br />
-            Gas will always stay free because the Kadena
-            <br />
-            blockchain scales horizontally.
-          </Label>
-        </FlexContainer>
+    <FlexContainer style={{ padding: '0 50px' }}>
+      <STYCard
+        id="proof-dex"
+        className="relative"
+        desktopStyle={{ marginTop: 90 }}
+        tabletStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
+        mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
+      >
+        <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={DESKTOP_PIXEL} mobileClassName="align-ce column">
+          <FlexContainer className="column justify-ce" gap={32} desktopPixel={DESKTOP_PIXEL} desktopStyle={{ marginRight: 60 }}>
+            <Label size="big" fontFamily="syncopate" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center">
+              The most
+              <br />
+              powerful Proof
+              <br />
+              of Work DEX
+            </Label>
+            <Label size="small" color="primary" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center justify-ce">
+              Safe DeFi begins with our Gas free DEX.
+              <br />
+              Gas will always stay free because the Kadena
+              <br />
+              blockchain scales horizontally.
+            </Label>
+          </FlexContainer>
 
-        {width >= 840 ? (
-          <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1" style={{ marginTop: width < DESKTOP_PIXEL && 32 }}>
-            {PROOF_DEX.map((proofDex, i) => (
-              <ProofOfDexCard key={i} proofDex={proofDex} />
-            ))}
-          </FlexContainer>
-        ) : (
-          <FlexContainer className="column" gap={24} style={{ marginTop: 50 }} mobileStyle={{ width: '100%', alignItems: 'center' }}>
-            <FlexContainer gap={18}>
-              {[PROOF_DEX_SWAP, PROOF_DEX_POOL].map((proofDex, i) => (
+          {width >= 840 ? (
+            <FlexContainer gap={width >= 1520 ? 30 : 20} className="justify-sb flex-1" style={{ marginTop: width < DESKTOP_PIXEL && 32 }}>
+              {PROOF_DEX.map((proofDex, i) => (
                 <ProofOfDexCard key={i} proofDex={proofDex} />
               ))}
             </FlexContainer>
-            <FlexContainer gap={18}>
-              {[PROOF_DEX_STAKE, PROOF_DEX_BUILD].map((proofDex, i) => (
-                <ProofOfDexCard key={i} proofDex={proofDex} />
-              ))}
+          ) : (
+            <FlexContainer className="column" gap={24} style={{ marginTop: 50 }} mobileStyle={{ width: '100%', alignItems: 'center' }}>
+              <FlexContainer gap={18}>
+                {[PROOF_DEX_SWAP, PROOF_DEX_POOL].map((proofDex, i) => (
+                  <ProofOfDexCard key={i} proofDex={proofDex} />
+                ))}
+              </FlexContainer>
+              <FlexContainer gap={18}>
+                {[PROOF_DEX_STAKE, PROOF_DEX_BUILD].map((proofDex, i) => (
+                  <ProofOfDexCard key={i} proofDex={proofDex} />
+                ))}
+              </FlexContainer>
             </FlexContainer>
-          </FlexContainer>
-        )}
-      </FlexContainer>
-      <Stripes mobileIconStyle={{ width: 84.51, height: 87 }} />
-    </STYCard>
+          )}
+        </FlexContainer>
+        <Stripes mobileIconStyle={{ width: 84.51, height: 87 }} />
+      </STYCard>
+    </FlexContainer>
   );
 };
 

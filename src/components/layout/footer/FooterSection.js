@@ -17,7 +17,13 @@ const FooterContainer = styled(FlexContainer)`
 const FooterSection = () => {
   const [width] = useWindowSize();
   return (
-    <FooterContainer gap={40} className="relative justify-sb" tabletClassName="column align-ce" mobileClassName="column align-ce">
+    <FooterContainer
+      gap={40}
+      className="relative justify-sb"
+      tabletClassName="column align-ce"
+      mobileClassName="column align-ce"
+      style={{ marginTop: 165 }}
+    >
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>

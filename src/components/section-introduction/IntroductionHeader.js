@@ -1,18 +1,11 @@
 import React from 'react';
-import styled from 'styled-components/macro';
 import { FlexContainer } from '../shared/Container';
 import GradientContainer from '../shared/GradientContainer';
 import Label from '../shared/Label';
 
-const Container = styled(FlexContainer)`
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
-    padding: 0 50px;
-  }
-`;
-
 const IntroductionHeader = () => {
   return (
-    <Container columnGap={25} className="align-fs" tabletClassName="column" mobileClassName="column">
+    <FlexContainer columnGap={25} className="align-fs" tabletClassName="column" mobileClassName="column" style={{ padding: '0 50px' }}>
       <FlexContainer className="column" style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
           the evolution
@@ -44,7 +37,7 @@ const IntroductionHeader = () => {
           </Label>
         </GradientContainer>
       </FlexContainer>
-    </Container>
+    </FlexContainer>
   );
 };
 

@@ -24,6 +24,7 @@ const PartnersContainer = styled(FlexContainer)`
     padding: 0 20px;
     @media (min-width: ${`${DESKTOP_PIXEL}px`}) {
       position: absolute;
+      top: 80px;
       left: 70px;
       width: auto;
       padding: 0px;
@@ -36,10 +37,11 @@ const PartnersSection = () => {
   return (
     <PartnersContainer
       gap={50}
+      className="relative justify-ce"
       desktopPixel={DESKTOP_PIXEL}
       tabletClassName="column"
       mobileClassName="column"
-      style={{ margin: '0 auto', marginTop: 50 }}
+      style={{ marginTop: 100 }}
     >
       <PartnersIcon className="partners-icon" />
       {width >= DESKTOP_PIXEL && (

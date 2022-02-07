@@ -226,13 +226,13 @@ const Roadmap2022 = () => {
             cy="15"
             r="15"
             transform="translate(1240 381)"
-            fill={whiteGrey}
+            fill={theme.colors.pink}
           />
           <text
             id="Kaddex_v1_full_launch"
             data-name="Kaddex v1 full launch"
             transform="translate(1250.17 446)"
-            fill={whiteGrey}
+            fill={theme.colors.pink}
             font-size="20"
             font-family={theme.fontFamily.basier}
             letter-spacing="-0.1em"
