@@ -16,6 +16,7 @@ const Roadmap2022 = () => {
             fill={whiteGrey}
           />
 
+          {/* X wallet beta */}
           <circle
             id="Ellipse_X-Wallet_Beta"
             data-name="Ellipse X-Wallet_Beta"
@@ -28,7 +29,7 @@ const Roadmap2022 = () => {
           <text
             id="X-Wallet_Beta"
             data-name="X-Wallet Beta"
-            transform="translate(437.17 255)"
+            transform="translate(437 255)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -39,64 +40,45 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
+          {/* litepaper */}
           <circle
-            id="Ellipse_3d_Swapping_Interface"
-            data-name="Ellipse 3d_Swapping_Interface"
+            id="Ellipse_Litepape"
+            data-name="Ellipse Litepape"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(490 381)"
-            fill={whiteGrey}
+            transform="translate(740 190)"
+            fill={theme.colors.primary}
           />
           <text
-            id="_3d_Swapping_Interface"
-            data-name="3d Swapping Interface"
-            transform="translate(506.17 446)"
-            fill={whiteGrey}
+            id="Litepaper"
+            data-name="Litepaper"
+            transform="translate(750 255)"
+            fill={theme.colors.primary}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
           >
-            <tspan x="-58.09" y="0">
-              3d Swapping
-            </tspan>
-            <tspan x="-47.71" y="25">
-              Interface
+            <tspan x="-47.71" y="0">
+              Litepaper
             </tspan>
           </text>
 
+          {/* x wallet v1 */}
           <circle
-            id="Ellipse_Single_Sided_Liquidity"
-            data-name="Ellipse Single_Sided_Liquidity"
+            id="Ellipse_X-Wallet_v1"
+            data-name="Ellipse X-Wallet_v1"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(490 596)"
-            fill={whiteGrey}
+            transform="translate(990 190)"
+            fill={theme.colors.primary}
           />
-          <text
-            id="Single_Sided_Liquidity"
-            data-name="Single Sided Liquidity"
-            transform="translate(506.17 661)"
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-63.28" y="0">
-              Single Sided
-            </tspan>
-            <tspan x="-47.71" y="25">
-              Liquidity
-            </tspan>
-          </text>
-
-          <circle id="Ellipse_X-Wallet_v1" data-name="Ellipse X-Wallet_v1" cx="15" cy="15" r="15" transform="translate(740 190)" fill={whiteGrey} />
           <text
             id="X-Wallet_v1"
             data-name="X-Wallet v1"
-            transform="translate(697.17 255)"
-            fill={whiteGrey}
+            transform="translate(950 255)"
+            fill={theme.colors.primary}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -106,53 +88,21 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
-          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(740 381)" fill={whiteGrey} />
-          <text
-            id="Website_v2"
-            data-name="Website v2"
-            transform="translate(707.17 446)"
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0">
-              Website v2
-            </tspan>
-          </text>
-
+          {/* public sale */}
           <circle
-            id="Ellipse_Lending_borrowing_functionalities"
-            data-name="Ellipse Lending_borrowing_functionalities"
+            id="Ellipse_Public_Sale"
+            data-name="Ellipse Public_Sale"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(740 596)"
-            fill={whiteGrey}
+            transform="translate(1240 190)"
+            fill={theme.colors.primary}
           />
-          <text
-            id="Lending_borrowing_functionalities"
-            data-name="Lending &amp; borrowing functionalities"
-            transform="translate(756.17 662)"
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-99.61" y="0">
-              Lending &amp; borrowing
-            </tspan>
-            <tspan x="-78.85" y="24">
-              functionalities
-            </tspan>
-          </text>
-
-          <circle id="Ellipse_Public_Sale" data-name="Ellipse Public_Sale" cx="15" cy="15" r="15" transform="translate(990 190)" fill={whiteGrey} />
           <text
             id="Public_Sale"
             data-name="Public Sale"
-            transform="translate(947.17 255)"
-            fill={whiteGrey}
+            transform="translate(1200.17 255)"
+            fill={theme.colors.primary}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -162,19 +112,20 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
+          {/* kdx vaulting program */}
           <circle
             id="Ellipse_KDX_Vaulting_programme_available_for_early_investors"
             data-name="Ellipse KDX_Vaulting_programme_available_for_early_investors"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(990 381)"
+            transform="translate(1490 190)"
             fill={whiteGrey}
           />
           <text
             id="KDX_Vaulting_programme_available_for_early_investors"
             data-name="KDX Vaulting programme available for early investors"
-            transform="translate(1007.17 446)"
+            transform="translate(1506.17 255)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -195,77 +146,20 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
-          <circle
-            id="Ellipse_Litepaper_Whitepaper"
-            data-name="Ellipse Litepaper_Whitepaper"
-            cx="15"
-            cy="15"
-            r="15"
-            transform="translate(1240 190)"
-            fill={whiteGrey}
-          />
-          <text
-            id="Litepaper_Whitepaper"
-            data-name="Litepaper &amp; Whitepaper"
-            transform="translate(1255.17 255)"
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-47.71" y="0">
-              Litepaper
-            </tspan>
-            <tspan x="-63.28" y="25">
-              &amp; Whitepaper
-            </tspan>
-          </text>
-
-          <circle
-            id="Ellipse_Kaddex_v1_full_launch"
-            data-name="Ellipse Kaddex_v1_full_launch"
-            cx="15"
-            cy="15"
-            r="15"
-            transform="translate(1240 381)"
-            fill="#FA41A5"
-          />
-          <g id="ring" transform="translate(1254 353)">
-            <RoadmapFlagcon />
-          </g>
-          <g id="ring" transform="translate(1235 374)">
-            <RoadmapEllipseShadowIcon />
-          </g>
-          <text
-            id="Kaddex_v1_full_launch"
-            data-name="Kaddex v1 full launch"
-            transform="translate(1250.17 446)"
-            fill="#FA41A5"
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-47.71" y="0">
-              Kaddex v1
-            </tspan>
-            <tspan x="-58.09" y="25">
-              full launch
-            </tspan>
-          </text>
-
+          {/* bridge erc-20 */}
           <circle
             id="Ellipse_20_Token_Pairs"
             data-name="Ellipse 20_Token_Pairs"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1490 190)"
+            transform="translate(1490 381)"
             fill={whiteGrey}
           />
           <text
             id="Bridged_ERC-20_Token_Pairs"
             data-name="Bridged ERC-20 Token Pairs"
-            transform="translate(1506.17 255)"
+            transform="translate(1499.17 446)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -279,19 +173,123 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
+          {/* 3d swapping interface */}
+          <circle
+            id="Ellipse_3d_Swapping_Interface"
+            data-name="Ellipse 3d_Swapping_Interface"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(1240 381)"
+            fill={whiteGrey}
+          />
+          <text
+            id="_3d_Swapping_Interface"
+            data-name="3d Swapping Interface"
+            transform="translate(1250.17 446)"
+            fill={whiteGrey}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
+          >
+            <tspan x="-58.09" y="0">
+              3d Swapping
+            </tspan>
+            <tspan x="-47.71" y="25">
+              Interface
+            </tspan>
+          </text>
+
+          {/* website v2 */}
+          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(990 381)" fill={whiteGrey} />
+          <text
+            id="Website_v2"
+            data-name="Website v2"
+            transform="translate(950 446)"
+            fill={whiteGrey}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
+          >
+            <tspan x="0" y="0">
+              Website v2
+            </tspan>
+          </text>
+
+          {/* kaddex v1 full launch */}
+          <circle
+            id="Ellipse_Kaddex_v1_full_launch"
+            data-name="Ellipse Kaddex_v1_full_launch"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(740 381)"
+            fill="#FA41A5"
+          />
+          <g id="ring" transform="translate(754 353)">
+            <RoadmapFlagcon />
+          </g>
+          <g id="ring" transform="translate(735 374)">
+            <RoadmapEllipseShadowIcon />
+          </g>
+          <text
+            id="Kaddex_v1_full_launch"
+            data-name="Kaddex v1 full launch"
+            transform="translate(750 446)"
+            fill="#FA41A5"
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
+          >
+            <tspan x="-47.71" y="0">
+              Kaddex v1
+            </tspan>
+            <tspan x="-58.09" y="25">
+              full launch
+            </tspan>
+          </text>
+
+          {/* single sided liquidityu */}
+          <circle
+            id="Ellipse_Single_Sided_Liquidity"
+            data-name="Ellipse Single_Sided_Liquidity"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(490 381)"
+            fill={whiteGrey}
+          />
+          <text
+            id="Single_Sided_Liquidity"
+            data-name="Single Sided Liquidity"
+            transform="translate(500 446)"
+            fill={whiteGrey}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
+          >
+            <tspan x="-63.28" y="0">
+              Single Sided
+            </tspan>
+            <tspan x="-47.71" y="25">
+              Liquidity
+            </tspan>
+          </text>
+
+          {/* kdx mining programme */}
           <circle
             id="Ellipse_KDX_Liquidity_Mining_Programme"
             data-name="Ellipse KDX_Liquidity_Mining_Programme"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1490 381)"
+            transform="translate(490 596)"
             fill={whiteGrey}
           />
           <text
             id="KDX_Liquidity_Mining_Programme"
             data-name="KDX Liquidity Mining Programme"
-            transform="translate(1499.17 446)"
+            transform="translate(500 662)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -305,14 +303,15 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
-          <circle id="Ellipse_1199" data-name="Ellipse 1199" cx="15" cy="15" r="15" transform="translate(995 596)" fill={whiteGrey} />
+          {/* whitepaper */}
+          <circle id="Ellipse_1199" data-name="Ellipse 1199" cx="15" cy="15" r="15" transform="translate(740 596)" fill={whiteGrey} />
 
           <text
             id="Whitepaper"
             data-name="Whitepaper"
-            transform="translate(1011.17 662)"
             fill={whiteGrey}
             fontSize="20"
+            transform="translate(756.17 662)"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
           >
@@ -320,7 +319,43 @@ const Roadmap2022 = () => {
               Whitepaper
             </tspan>
           </text>
-          <line id="Line_585" data-name="Line 585" x2="502" transform="translate(-5 206)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+
+          <circle
+            id="Ellipse_Lending_borrowing_functionalities"
+            data-name="Ellipse Lending_borrowing_functionalities"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(995 596)"
+            fill={whiteGrey}
+          />
+          <text
+            id="Lending_borrowing_functionalities"
+            data-name="Lending &amp; borrowing functionalities"
+            transform="translate(1011.17 662)"
+            fill={whiteGrey}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+            letterSpacing="-0.1em"
+          >
+            <tspan x="-99.61" y="0">
+              Lending &amp; borrowing
+            </tspan>
+            <tspan x="-78.85" y="24">
+              functionalities
+            </tspan>
+          </text>
+
+          {/* blue line */}
+          <line
+            id="Line_585"
+            data-name="Line 585"
+            x2="1275"
+            transform="translate(-5 206)"
+            fill="none"
+            stroke={theme.colors.primary}
+            strokeWidth="4"
+          />
         </g>
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">
