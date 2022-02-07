@@ -9,7 +9,7 @@ import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDI
 import { theme } from '../../styles/theme';
 
 const DESKTOP_PIXEL = 1700;
-const MOBILE_PIXEL = 1260;
+const MOBILE_PIXEL = 860;
 
 const IconContainer = styled(FlexContainer)`
   width: 100%;
@@ -44,28 +44,30 @@ const IconContainer = styled(FlexContainer)`
 `;
 
 const TokenomicsSection = () => {
-  const [width] = useWindowSize();
+  const [width, height] = useWindowSize();
+  console.log('window', width / height);
+
   return (
     <FlexContainer
       className="column relative w-100 align-ce"
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
-      tabletStyle={{ marginTop: 45, flexWrap: 'wrap', padding: '0 50px' }}
-      mobileStyle={{ marginTop: 45, flexWrap: 'wrap', padding: '0 50px' }}
+      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+      mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
-      {width >= DESKTOP_PIXEL ? (
-        <FlexContainer className="column">
-          <FlexContainer className="align-fs">
+      {width >= theme.mediaQueries.mobilePixel ? (
+        <FlexContainer className="column w-100" gap={30} desktopPixel={1430}>
+          <FlexContainer className="align-fs wrap" style={{ rowGap: 24 }}>
             <Label
               className="rainbow"
-              fontSize={110}
+              fontSize={65 * (width / height) > 100 ? 100 : 65 * (width / height)}
               fontFamily="syncopate"
-              desktopStyle={{ width: 'fit-content' }}
+              desktopStyle={{ width: 'fit-content', marginRight: 40 }}
               gradientColors={['#b766b6', '#f95197', '#f68861']}
             >
               1,000,000,000
             </Label>
-            <Label className="align-fs" fontFamily="syncopate" size="large" desktopStyle={{ marginLeft: 43 }}>
+            <Label className="align-fs" fontFamily="syncopate" size="large">
               KDX tokens
               <br />
               fixed supply
@@ -119,13 +121,13 @@ const TokenomicsSection = () => {
         </FlexContainer>
       )}
       <FlexContainer className="align-ce" desktopPixel={MOBILE_PIXEL} tabletClassName="column-reverse" mobileClassName="column-reverse">
-        <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" tabletStyle={{ marginTop: 50 }}>
-          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel && 70} className="justify-sb">
+        <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
+          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">
             {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (
               <PercentageCard key={i} tokenomics={tokenomics} />
             ))}
           </FlexContainer>
-          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel && 70} className="justify-sb" style={{ marginTop: 84 }}>
+          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb" style={{ marginTop: 84 }}>
             {[TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING].map((tokenomics, i) => (
               <PercentageCard key={i} tokenomics={tokenomics} />
             ))}
