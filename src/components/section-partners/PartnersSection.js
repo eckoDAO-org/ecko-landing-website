@@ -66,8 +66,10 @@ const PartnersSection = () => {
       {width < DESKTOP_PIXEL && (
         <FlexContainer
           className="grid"
-          columns={Math.round((width - 100) / (width < theme.mediaQueries.mobilePixel ? 200 : 240))}
+          columns={Math.round((width - 100) / ((width < theme.mediaQueries.mobilePixel ? 170 : 210) + 20))}
           style={{ justifyItems: 'center' }}
+          mobileStyle={{ padding: '0 20px' }}
+          gridColumnGap={width < theme.mediaQueries.mobilePixel ? 10 : 30}
         >
           {PARTNERS.map((partner, i) => (
             <PartnerCard key={i} partner={partner} />

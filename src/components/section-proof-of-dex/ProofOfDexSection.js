@@ -26,14 +26,8 @@ const STYCard = styled(FlexContainer)`
 const ProofOfDexSection = () => {
   const [width] = useWindowSize();
   return (
-    <FlexContainer style={{ padding: '0 50px' }}>
-      <STYCard
-        id="proof-dex"
-        className="relative"
-        desktopStyle={{ marginTop: 90 }}
-        tabletStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
-        mobileStyle={{ width: 'calc(100% - 40px)', marginTop: 30 }}
-      >
+    <FlexContainer style={{ padding: '0 50px' }} mobileStyle={{ padding: '0 20px' }}>
+      <STYCard id="proof-dex" className="relative w-100" desktopStyle={{ marginTop: 90 }}>
         <FlexContainer className="flex-1" tabletClassName="align-ce column" desktopPixel={DESKTOP_PIXEL} mobileClassName="align-ce column">
           <FlexContainer className="column justify-ce" gap={32} desktopPixel={DESKTOP_PIXEL} desktopStyle={{ marginRight: 60 }}>
             <Label size="big" fontFamily="syncopate" desktopPixel={DESKTOP_PIXEL} tabletClassName="text-center">

@@ -139,7 +139,7 @@ export const STYFlexContainer = styled.div`
     display: grid;
     grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
     row-gap: 30px;
-    column-gap: 30px;
+    column-gap: ${({ gridColumnGap = 30 }) => gridColumnGap}px;
   }
 
   &.x-auto {
