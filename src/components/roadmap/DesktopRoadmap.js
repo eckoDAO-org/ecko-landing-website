@@ -28,15 +28,22 @@ const RoadmapContainer = styled(FlexContainer)`
   & > *:first-child {
     padding-left: 90px;
   }
-  scroll-behavior: smooth;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  scrollbar-width: none;
+
   svg {
     min-width: 100%;
     max-width: 100%;
     height: auto;
+  }
+`;
+
+const TabsContainer = styled(FlexContainer)`
+  overflow-x: auto;
+  overflow-y: hidden;
+  & > *:first-child {
+    margin-left: 40%;
+  }
+  & > *:last-child {
+    margin-right: 40%;
   }
 `;
 
@@ -79,20 +86,20 @@ const DesktopRoadmap = () => {
   }, [selectedRoadmap, elementContainer]);
 
   return (
-    <RoadmapWrapper className="column" gap={120}>
+    <RoadmapWrapper id="roadmap" className="column" gap={120}>
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
         Kaddex
         <br />
         Roadmap
       </Label>
-      <RoadmapContainer id="roadmaps-container" width={width} style={{ width: width + 40 }}>
+      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width: width + 40 }}>
         {ROADMAPS.map((roadmap, i) => (
           <div style={{ minWidth: width }} id={`roadmap-${roadmap.id}`} key={i}>
             {roadmap.image}
           </div>
         ))}
       </RoadmapContainer>
-      <FlexContainer className="justify-sb">
+      <TabsContainer style={{ width }} className="hide-scrollbar justify-sb">
         {ROADMAPS.map((roadmap, i) => (
           <Label
             key={i}
@@ -100,11 +107,12 @@ const DesktopRoadmap = () => {
             color={selectedRoadmap.id === roadmap.id ? 'pink' : 'white'}
             fontSize={80}
             onClick={() => onSelectRoadmap(roadmap)}
+            style={{ minWidth: '40%' }}
           >
             {roadmap.id}
           </Label>
         ))}
-      </FlexContainer>
+      </TabsContainer>
     </RoadmapWrapper>
   );
 };

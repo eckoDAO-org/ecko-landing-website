@@ -7,10 +7,11 @@ import { FEATURES, LPS, ZERO_GAS } from '../../constants/features';
 
 const DESKTOP_PIXEL = 1700;
 
-const FeatureSection = () => {
+const FeaturesSection = () => {
   const [width] = useWindowSize();
   return (
     <FlexContainer
+      id="features"
       className="column relative w-100 align-ce"
       gap={100}
       desktopPixel={DESKTOP_PIXEL}
@@ -67,4 +68,4 @@ const FeatureSection = () => {
   );
 };
 
-export default FeatureSection;
+export default FeaturesSection;

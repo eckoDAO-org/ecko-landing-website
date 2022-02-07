@@ -49,8 +49,8 @@ const IntroductionHeader = () => {
           </Label>
         </GradientContainer>
       </FlexContainer>
-      <FlexContainer className="w-100 justify-ce" style={{ marginTop: 25 }}>
-        <ArrowsDownIcon className="desktop-none" />
+      <FlexContainer className="w-100 justify-ce desktop-none" style={{ marginTop: 25 }}>
+        <ArrowsDownIcon />
       </FlexContainer>
     </FlexContainer>
   );

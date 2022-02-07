@@ -1,6 +1,6 @@
 import React from 'react';
 import IntroductionSection from '../components/section-introduction/IntroductionSection';
-import FeatureSection from '../components/section-features/FeaturesSection';
+import FeaturesSection from '../components/section-features/FeaturesSection';
 import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
 import PartnersSection from '../components/section-partners/PartnersSection';
 import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
@@ -12,7 +12,7 @@ const MainContainer = () => {
     <FlexContainer className="column">
       <IntroductionSection />
       <ProofOfDexSection />
-      <FeatureSection />
+      <FeaturesSection />
       <TokenomicsSection />
       <DesktopRoadmap />
       <PartnersSection />

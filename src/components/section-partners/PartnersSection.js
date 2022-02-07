@@ -36,6 +36,7 @@ const PartnersSection = () => {
   const [width] = useWindowSize();
   return (
     <PartnersContainer
+      id="partners"
       gap={50}
       className="relative justify-ce"
       desktopPixel={DESKTOP_PIXEL}

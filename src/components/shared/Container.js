@@ -52,6 +52,14 @@ export const FlexContainer = ({
 export const STYFlexContainer = styled.div`
   display: flex;
 
+  &.hide-scrollbar {
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+  }
+
   &.align-fs {
     align-items: flex-start;
   }

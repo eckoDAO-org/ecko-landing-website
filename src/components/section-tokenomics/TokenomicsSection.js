@@ -50,6 +50,7 @@ const TokenomicsSection = () => {
 
   return (
     <FlexContainer
+      id="tokenomics"
       className="column relative w-100 align-ce"
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
