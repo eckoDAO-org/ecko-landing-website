@@ -13,7 +13,7 @@ const FeaturesSection = () => {
   return (
     <FlexContainer
       id="features"
-      className="column relative w-100 align-ce"
+      className="column relative w-100 align-ce scroll-mt"
       gap={100}
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 130px' }}

@@ -65,7 +65,7 @@ const DesktopRoadmap = () => {
   }, [selectedRoadmap, roadmapsContainer]);
 
   return (
-    <RoadmapWrapper id="roadmap" className="column" gap={120} desktopPixel={1460} tabletStyle={{ marginTop: 100 }}>
+    <RoadmapWrapper id="roadmap" className="column scroll-mt" gap={120} desktopPixel={1460} tabletStyle={{ marginTop: 100 }}>
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
         Kaddex
         <br />

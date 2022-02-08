@@ -60,6 +60,9 @@ export const STYFlexContainer = styled.div`
     scrollbar-width: none;
   }
 
+  &.scroll-mt {
+    scroll-margin-top: 100px;
+  }
   &.align-fs {
     align-items: flex-start;
   }

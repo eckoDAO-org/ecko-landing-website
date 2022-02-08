@@ -46,7 +46,7 @@ const PartnersSection = () => {
     <PartnersContainer
       id="partners"
       gap={50}
-      className="relative justify-ce"
+      className="relative justify-ce scroll-mt"
       desktopPixel={theme.mediaQueries.desktopPixel}
       tabletClassName="column"
       mobileClassName="column"
