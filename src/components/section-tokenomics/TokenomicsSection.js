@@ -8,6 +8,7 @@ import { FlexContainer } from '../shared/Container';
 import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
 import { theme } from '../../styles/theme';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
+import RadiusBackground from '../shared/RadiusBackground';
 
 const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;
@@ -70,6 +71,7 @@ const TokenomicsSection = () => {
       <marquee scrollamount="20" style={{ position: 'absolute', top: -300 }}>
         <TokenomicsIcon />
       </marquee>
+
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (
         <FlexContainer className="column w-100" gap={30} desktopPixel={1430}>
@@ -137,11 +139,13 @@ const TokenomicsSection = () => {
         </FlexContainer>
       )}
       <FlexContainer
-        className="align-ce w-100 justify-sb"
+        className="align-ce w-100 justify-sb relative"
         desktopPixel={MOBILE_PIXEL}
         tabletClassName="column-reverse"
         mobileClassName="column-reverse"
       >
+        <RadiusBackground style={{ top: 150, left: -50 }} />
+
         <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">
             {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (
