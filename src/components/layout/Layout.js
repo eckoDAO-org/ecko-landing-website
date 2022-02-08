@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
   return (
     <FlexContainer className="w-100 h-100 relative" id="main-container">
       <img src={introductionBackground} style={{ position: 'absolute', zIndex: -1, height: 1375, width: '100%' }} alt="" />
+
       <DesktopHeader />
 
       <MainContent>{children}</MainContent>

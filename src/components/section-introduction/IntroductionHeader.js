@@ -16,7 +16,7 @@ const IntroductionHeader = () => {
       mobileClassName="column"
       style={{ padding: '0 50px' }}
       desktopStyle={{ marginTop: 100 }}
-      mobileStyle={{ marginTop: 50, marginBottom: 30 }}
+      mobileStyle={{ margin: '30px 0' }}
     >
       <FlexContainer className="column" style={{ flex: 1 }}>
         <Label size="huge" fontFamily="syncopate">
@@ -51,13 +51,17 @@ const IntroductionHeader = () => {
         </Label>
 
         <GradientContainer className="desktop-only" style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>
-          <Label className="rainbow" size="small" fontFamily="syncopate">
-            Learn more
-          </Label>
+          <a href="/#proof-of-dex">
+            <Label className="rainbow" size="small" fontFamily="syncopate">
+              Learn more
+            </Label>
+          </a>
         </GradientContainer>
       </FlexContainer>
       <FlexContainer className="w-100 justify-ce desktop-none" style={{ marginTop: 25 }}>
-        <ArrowsDownIcon />
+        <a href="/#proof-of-dex">
+          <ArrowsDownIcon />
+        </a>
       </FlexContainer>
     </FlexContainer>
   );

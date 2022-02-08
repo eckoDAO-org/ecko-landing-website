@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
-import { TokenomicsCircleIcon, TokenomicsKaddexLogoIcon } from '../../assets';
+import { TokenomicsCircleIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '../../assets';
 import Label from '../shared/Label';
 import PercentageCard from './PercentageCard';
 import { FlexContainer } from '../shared/Container';
@@ -63,10 +63,13 @@ const TokenomicsSection = () => {
       id="tokenomics"
       className="column relative w-100 align-ce"
       desktopPixel={DESKTOP_PIXEL}
-      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 130px' }}
-      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 130px' }}
+      desktopStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
+      tabletStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
       mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
+      <marquee scrollamount="20" style={{ position: 'absolute', top: -300 }}>
+        <TokenomicsIcon />
+      </marquee>
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (
         <FlexContainer className="column w-100" gap={30} desktopPixel={1430}>

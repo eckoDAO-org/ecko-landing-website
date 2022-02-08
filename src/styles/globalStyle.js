@@ -45,6 +45,10 @@ export default createGlobalStyle`
       }
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .ui.input>input {
       background: transparent 0% 0% no-repeat padding-box;
       color: #fff;

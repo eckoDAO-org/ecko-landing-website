@@ -4,6 +4,7 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import FeatureCard from './FeatureCard';
 import { FEATURES, LIQUIDITY_MINING, ZERO_GAS } from '../../constants/features';
+import RadiusBackground from '../shared/RadiusBackground';
 
 const DESKTOP_PIXEL = 1700;
 
@@ -19,6 +20,7 @@ const FeaturesSection = () => {
       tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 130px' }}
       mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
+      <RadiusBackground style={{ top: -550, left: 50 }} />
       <FlexContainer className="w-100 wrap justify-sb" tabletClassName="column" mobileClassName="column">
         <Label className="align-fs" fontFamily="syncopate" size="big">
           unique

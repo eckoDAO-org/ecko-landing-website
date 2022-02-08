@@ -5,7 +5,7 @@ import IntroductionHeader from './IntroductionHeader';
 
 const IntroductionSection = () => {
   return (
-    <FlexContainer id="introduction" className="column w-100" mobileClassName="column-reverse">
+    <FlexContainer id="introduction" className="column w-100">
       <IntroductionHeader />
       <GameBoy />
     </FlexContainer>
