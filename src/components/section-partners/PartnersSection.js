@@ -17,17 +17,12 @@ import {
 } from '../../constants/partners';
 import theme from '../../styles/theme';
 
-const DESKTOP_PIXEL = 1520;
 const PartnersContainer = styled(FlexContainer)`
+  padding: 0 70px;
   .partners-icon {
     width: 100%;
-    padding: 0 20px;
-    @media (min-width: ${`${DESKTOP_PIXEL}px`}) {
-      position: absolute;
-      top: 80px;
-      left: 70px;
-      width: auto;
-      padding: 0px;
+    @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+      margin-bottom: 170px;
     }
   }
 `;
@@ -38,16 +33,17 @@ const PartnersSection = () => {
     <PartnersContainer
       id="partners"
       gap={50}
-      className="relative justify-ce"
-      desktopPixel={DESKTOP_PIXEL}
+      className="relative justify-fs"
       tabletClassName="column"
       mobileClassName="column"
       style={{ marginTop: 100 }}
     >
-      <PartnersIcon className="partners-icon" />
-      {width >= DESKTOP_PIXEL && (
+      {width < theme.mediaQueries.desktopPixel && <PartnersIcon className="partners-icon" />}
+      {width >= theme.mediaQueries.desktopPixel && (
         <>
-          <FlexContainer className="column justify-fe" gap={50} style={{ marginBottom: 50 }}>
+          <FlexContainer className="column justify-fe align-fe" gap={50} style={{ marginBottom: 50 }}>
+            <PartnersIcon className="partners-icon" />
+
             {[PARTNER_ARCHITECH, PARTNER_UFO_GAMING].map((partner, i) => (
               <PartnerCard key={i} partner={partner} />
             ))}
@@ -64,7 +60,7 @@ const PartnersSection = () => {
           </FlexContainer>
         </>
       )}
-      {width < DESKTOP_PIXEL && (
+      {width < theme.mediaQueries.desktopPixel && (
         <FlexContainer
           className="grid"
           columns={Math.round((width - 100) / ((width < theme.mediaQueries.mobilePixel ? 170 : 240) + 20))}

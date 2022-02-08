@@ -84,6 +84,10 @@ export const STYFlexContainer = styled.div`
     justify-content: flex-end;
   }
 
+  &.justify-fs {
+    justify-content: flex-start;
+  }
+
   &.absolute {
     position: absolute;
   }

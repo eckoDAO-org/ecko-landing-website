@@ -4,8 +4,6 @@ import { getColor } from '../../styles/theme';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
-const DESKTOP_PIXEL = 1520;
-
 const STYCard = styled(FlexContainer)`
   width: 210px;
   padding: 95px 17px;
@@ -20,7 +18,8 @@ const STYCard = styled(FlexContainer)`
     padding: 60px 17px;
   }
 
-  @media (max-width: ${`${DESKTOP_PIXEL}px`}) and (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (min-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
     height: 100% !important;
     min-width: 210px !important;
     max-width: 210px !important;
