@@ -112,40 +112,6 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
-          {/* kdx vaulting program */}
-          <circle
-            id="Ellipse_KDX_Vaulting_programme_available_for_early_investors"
-            data-name="Ellipse KDX_Vaulting_programme_available_for_early_investors"
-            cx="15"
-            cy="15"
-            r="15"
-            transform="translate(1490 190)"
-            fill={whiteGrey}
-          />
-          <text
-            id="KDX_Vaulting_programme_available_for_early_investors"
-            data-name="KDX Vaulting programme available for early investors"
-            transform="translate(1506.17 255)"
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-          >
-            <tspan letterSpacing="-0.1em" x="-63.28" y="0">
-              KDX Vaulting
-            </tspan>
-            <tspan letterSpacing="-0.1em" x="-47.71" y="25">
-              programme
-            </tspan>
-            <tspan fontSize="13">
-              <tspan x="-78.746" y="50">
-                available for early
-              </tspan>
-              <tspan x="-43.012" y="75">
-                investors
-              </tspan>
-            </tspan>
-          </text>
-
           {/* bridge erc-20 */}
           <circle
             id="Ellipse_20_Token_Pairs"
@@ -153,13 +119,13 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1490 381)"
+            transform="translate(1490 190)"
             fill={whiteGrey}
           />
           <text
             id="Bridged_ERC-20_Token_Pairs"
             data-name="Bridged ERC-20 Token Pairs"
-            transform="translate(1499.17 446)"
+            transform="translate(1506.17 255)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -180,13 +146,13 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1240 381)"
+            transform="translate(1490 381)"
             fill={whiteGrey}
           />
           <text
             id="_3d_Swapping_Interface"
             data-name="3d Swapping Interface"
-            transform="translate(1250.17 446)"
+            transform="translate(1499.17 446)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -201,11 +167,11 @@ const Roadmap2022 = () => {
           </text>
 
           {/* website v2 */}
-          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(990 381)" fill={whiteGrey} />
+          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(1240 381)" fill={whiteGrey} />
           <text
             id="Website_v2"
             data-name="Website v2"
-            transform="translate(950 446)"
+            transform="translate(1200.17 446)"
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
@@ -213,6 +179,40 @@ const Roadmap2022 = () => {
           >
             <tspan x="0" y="0">
               Website v2
+            </tspan>
+          </text>
+
+          {/* kdx vaulting program */}
+          <circle
+            id="Ellipse_KDX_Vaulting_programme_available_for_early_investors"
+            data-name="Ellipse KDX_Vaulting_programme_available_for_early_investors"
+            cx="15"
+            cy="15"
+            r="15"
+            transform="translate(990 381)"
+            fill={whiteGrey}
+          />
+          <text
+            id="KDX_Vaulting_programme_available_for_early_investors"
+            data-name="KDX Vaulting programme available for early investors"
+            transform="translate(1000 446)"
+            fill={whiteGrey}
+            fontSize="20"
+            fontFamily={theme.fontFamily.basier}
+          >
+            <tspan letterSpacing="-0.1em" x="-63.28" y="0">
+              KDX Vaulting
+            </tspan>
+            <tspan letterSpacing="-0.1em" x="-47.71" y="25">
+              programme
+            </tspan>
+            <tspan fontSize="13">
+              <tspan x="-78.746" y="50">
+                available for early
+              </tspan>
+              <tspan x="-43.012" y="75">
+                investors
+              </tspan>
             </tspan>
           </text>
 

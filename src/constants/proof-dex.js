@@ -1,4 +1,4 @@
-import { BuildIcon, PoolIcon, StakeIcon, SwapIcon } from '../assets';
+import { LendingIcon, PoolIcon, StakeIcon, SwapIcon } from '../assets';
 
 export const PROOF_DEX_SWAP = {
   key: 'SWAP',
@@ -21,12 +21,12 @@ export const PROOF_DEX_STAKE = {
   description: 'Stake KDX and earn 0.05% of all trades',
   color: 'grey',
 };
-export const PROOF_DEX_BUILD = {
-  key: 'BUILD',
-  icon: <BuildIcon />,
-  title: 'Build',
-  description: 'Leverage our upcoming DeFi tools: lending, farming and beyond',
+export const PROOF_DEX_LENDING = {
+  key: 'LENDING',
+  icon: <LendingIcon />,
+  title: 'Lend',
+  description: 'Leverage our upcoming DeFi tools',
   color: 'grey',
 };
 
-export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_BUILD];
+export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_LENDING];

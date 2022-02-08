@@ -19,13 +19,13 @@ export { ReactComponent as PartnersIcon } from './images/partners/partners.svg';
 export { ReactComponent as SwapIcon } from './images/proof-dex/swap.svg';
 export { ReactComponent as PoolIcon } from './images/proof-dex/pool.svg';
 export { ReactComponent as StakeIcon } from './images/proof-dex/stake.svg';
-export { ReactComponent as BuildIcon } from './images/proof-dex/build.svg';
+export { ReactComponent as LendingIcon } from './images/proof-dex/lending.svg';
 
 // FEATURES
 export { ReactComponent as DaoIcon } from './images/features/dao.svg';
 export { ReactComponent as DecentralizedIcon } from './images/features/decentralized.svg';
 export { ReactComponent as GovernanceIcon } from './images/features/governance.svg';
-export { ReactComponent as LpsIcon } from './images/features/lps.svg';
+export { ReactComponent as LiquidityMiningIcon } from './images/features/liquidity-mining.svg';
 export { ReactComponent as MultiProtocolIcon } from './images/features/multi-protocol.svg';
 export { ReactComponent as SettlementsIcon } from './images/features/settlements.svg';
 export { ReactComponent as StakingIcon } from './images/features/staking.svg';

@@ -115,7 +115,7 @@ const TokenomicsSection = () => {
                 desktopStyle={{ width: 'fit-content' }}
                 gradientColors={['#b766b6', '#f95197', '#f68861']}
               >
-                mln
+                bln
               </Label>
               <Label className="align-fs nowrap" fontFamily="syncopate" fontSize={22} style={{ lineHeight: '33px' }}>
                 KDX tokens
@@ -133,7 +133,12 @@ const TokenomicsSection = () => {
           </Label>
         </FlexContainer>
       )}
-      <FlexContainer className="align-ce w-100" desktopPixel={MOBILE_PIXEL} tabletClassName="column-reverse" mobileClassName="column-reverse">
+      <FlexContainer
+        className="align-ce w-100 justify-sb"
+        desktopPixel={MOBILE_PIXEL}
+        tabletClassName="column-reverse"
+        mobileClassName="column-reverse"
+      >
         <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">
             {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (

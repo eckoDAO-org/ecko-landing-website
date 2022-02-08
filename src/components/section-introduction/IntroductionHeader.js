@@ -43,9 +43,11 @@ const IntroductionHeader = () => {
         mobileStyle={{ marginTop: 25 }}
       >
         <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'normal'} color="light-blue">
-          Safe DeFi begins with our Gas free DEX.
+          A revolutionary 0 Gas-Fee DEX.
           <br />
-          Gas will always stay free because the Kadena <br /> blockchain scales horizontally,
+          Free and safe DeFi starts with
+          <br />
+          Kadena’s infinite scalability PoW.
         </Label>
 
         <GradientContainer className="desktop-only" style={{ marginTop: 46, height: 50, width: 240, cursor: 'pointer' }}>

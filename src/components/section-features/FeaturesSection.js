@@ -3,7 +3,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import FeatureCard from './FeatureCard';
-import { FEATURES, LPS, ZERO_GAS } from '../../constants/features';
+import { FEATURES, LIQUIDITY_MINING, ZERO_GAS } from '../../constants/features';
 
 const DESKTOP_PIXEL = 1700;
 
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
           color="primary"
           size="small"
           desktopPixel={DESKTOP_PIXEL}
-          desktopStyle={{ marginLeft: 100, marginTop: 16, marginRight: 100, maxWidth: 584 }}
+          desktopStyle={{ marginTop: 16, maxWidth: 584 }}
           tabletStyle={{ marginTop: 35 }}
           mobileStyle={{ marginTop: 35 }}
         >
@@ -44,7 +44,7 @@ const FeaturesSection = () => {
         {width >= DESKTOP_PIXEL && (
           <>
             <FeatureCard feature={ZERO_GAS} />
-            <FeatureCard feature={LPS} />
+            <FeatureCard feature={LIQUIDITY_MINING} />
           </>
         )}
       </FlexContainer>
@@ -58,7 +58,7 @@ const FeaturesSection = () => {
       )}
 
       {width < DESKTOP_PIXEL && (
-        <FlexContainer className="grid" columns={Math.round((width - 200) / 240)}>
+        <FlexContainer className="grid" columns={Math.round((width - 260) / 240)}>
           {FEATURES.map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}

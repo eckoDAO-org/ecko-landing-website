@@ -35,7 +35,7 @@ export const configuration = {
     normal: { desktop: 35, tablet: 30, mobile: 17.5 },
     small: { desktop: 26.25, tablet: 30, mobile: 22.75 },
     tiny: { desktop: 22.75, tablet: 30, mobile: 17.5 },
-    nano: { desktop: 21, tablet: 30, mobile: 17.5 },
+    nano: { desktop: 21, tablet: 20, mobile: 17.5 },
   },
 };
 
