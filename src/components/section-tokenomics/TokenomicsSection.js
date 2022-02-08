@@ -144,7 +144,7 @@ const TokenomicsSection = () => {
         tabletClassName="column-reverse"
         mobileClassName="column-reverse"
       >
-        <RadiusBackground style={{ top: 150, left: -50 }} />
+        {width > MOBILE_PIXEL && <RadiusBackground style={{ top: 150, left: -50 }} />}
 
         <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">

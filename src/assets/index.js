@@ -49,3 +49,4 @@ export { ReactComponent as Roadmap2021Icon } from './images/roadmap/roadmap-2021
 export { ReactComponent as RoadmapOnGoingIcon } from './images/roadmap/roadmap-ongoing.svg';
 export { ReactComponent as RoadmapFlagcon } from './images/roadmap/roadmap-flag.svg';
 export { ReactComponent as RoadmapEllipseShadowIcon } from './images/roadmap/roadmap-ellipse-shadow.svg';
+export { ReactComponent as RoadmapArrowsIcon } from './images/roadmap/roadmap-arrows.svg';

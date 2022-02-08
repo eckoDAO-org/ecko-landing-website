@@ -16,7 +16,6 @@ const MainContainer = () => {
       <TokenomicsSection />
       <DesktopRoadmap />
       <PartnersSection />
-      {/* <RadiusBackground idRef="proof-dex" /> */}
     </FlexContainer>
   );
 };
