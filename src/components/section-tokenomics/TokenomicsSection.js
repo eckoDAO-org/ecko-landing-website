@@ -13,9 +13,11 @@ const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;
 
 const IconContainer = styled(FlexContainer)`
-  width: 100%;
+  width: fit-content;
   height: 100%;
   .tokenomics-circle {
+    max-width: 919px;
+    max-height: 919px;
     width: 100%;
     height: 100%;
     @media (max-width: ${`${MOBILE_PIXEL}px`}) {
@@ -34,11 +36,20 @@ const IconContainer = styled(FlexContainer)`
     top: 49.5%;
     left: 50.5%;
     transform: translate(-50%, -50%);
-  }
-  @media (max-width: ${`${MOBILE_PIXEL}px`}) {
-    .tokenomics-triangle {
-      width: 51px;
-      height: 45px;
+    @media (max-width: 1400px) and (min-width: 1200px) {
+      width: 60px;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: 1200px) and (min-width: 1000px) {
+      width: 50px;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: 1000px) and (min-width: ${`${MOBILE_PIXEL}px`}) {
+      width: 40px;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: ${`${MOBILE_PIXEL}px`}) {
+      width: 36px;
       transform: translate(-50%, -50%);
     }
   }
@@ -52,8 +63,8 @@ const TokenomicsSection = () => {
       id="tokenomics"
       className="column relative w-100 align-ce"
       desktopPixel={DESKTOP_PIXEL}
-      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
-      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 130px' }}
+      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 130px' }}
       mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
@@ -122,7 +133,7 @@ const TokenomicsSection = () => {
           </Label>
         </FlexContainer>
       )}
-      <FlexContainer className="align-ce" desktopPixel={MOBILE_PIXEL} tabletClassName="column-reverse" mobileClassName="column-reverse">
+      <FlexContainer className="align-ce w-100" desktopPixel={MOBILE_PIXEL} tabletClassName="column-reverse" mobileClassName="column-reverse">
         <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
           <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">
             {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (

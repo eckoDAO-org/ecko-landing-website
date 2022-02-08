@@ -25,7 +25,12 @@ const IntroductionHeader = () => {
         <Label size="huge" fontFamily="syncopate">
           of defi on
         </Label>
-        <Label className="rainbow" gradientColors={['#55BCDD', '#E9787B', '#f7cb79']} fontFamily="syncopate" size="huge">
+        <Label
+          className="rainbow fit-content"
+          gradient="linear-gradient(102deg, #61CFE8 0%, #9580B9 33%, #E37480 55%, #ED8473 70%, #F7D186 100%)"
+          fontFamily="syncopate"
+          size="huge"
+        >
           Kadena
         </Label>
       </FlexContainer>

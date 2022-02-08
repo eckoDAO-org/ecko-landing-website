@@ -15,8 +15,8 @@ const FeaturesSection = () => {
       className="column relative w-100 align-ce"
       gap={100}
       desktopPixel={DESKTOP_PIXEL}
-      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 80px' }}
-      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+      desktopStyle={{ marginTop: 170, flexWrap: 'wrap', padding: '0 130px' }}
+      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 130px' }}
       mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
       <FlexContainer className="w-100 wrap justify-sb" tabletClassName="column" mobileClassName="column">

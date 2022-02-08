@@ -34,7 +34,10 @@ const STYText = styled.span`
   }
 
   &.rainbow {
-    background-image: ${({ gradientColors }) => {
+    background-image: ${({ gradient, gradientColors }) => {
+      if (gradient) {
+        return gradient;
+      }
       return `linear-gradient(94.39deg,${gradientColors[0]} 0.84%, ${gradientColors[1]} 44.14%, ${gradientColors[2]} 90.22%)`;
     }};
     color: transparent;
@@ -42,6 +45,9 @@ const STYText = styled.span`
     background-clip: text;
   }
 
+  &.fit-content {
+    width: fit-content;
+  }
   &.uppercase {
     text-transform: uppercase;
   }
@@ -85,6 +91,7 @@ const Label = ({
   mobileClassName,
   desktopPixel,
   gradientColors,
+  gradient,
   children,
   fontFamily,
   fontSize,
@@ -116,6 +123,7 @@ const Label = ({
   return (
     <STYText
       id={id}
+      gradient={gradient}
       className={getClassName()}
       color={getColor(color)}
       fontSize={fontSize}
