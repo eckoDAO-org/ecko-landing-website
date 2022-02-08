@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
-import Roadmap2021 from './desktop-roadmaps/Roadmap2021';
-import Roadmap2022 from './desktop-roadmaps/Roadmap2022';
-import RoadmapOngoing from './desktop-roadmaps/RoadmapOngoing';
 import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.png';
+import { ROADMAPS, R_2021, R_2022, R_ONGOING } from '../../constants/roadmaps';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
@@ -38,55 +36,33 @@ const RoadmapContainer = styled(FlexContainer)`
 `;
 
 const TabsContainer = styled(FlexContainer)`
-  overflow-x: auto;
-  overflow-y: hidden;
-  & > *:first-child {
-    margin-left: 35%;
-  }
-  & > *:last-child {
-    margin-right: 25%;
-  }
+  transition: transform 0.5s;
+  transform: ${({ translateX }) => `translateX(${translateX})`};
 `;
 
-const ROADMAPS = [
-  {
-    image: <Roadmap2021 />,
-    id: '2021',
-    order: 0,
-  },
-  {
-    image: <Roadmap2022 />,
-    id: '2022',
-    order: 1,
-  },
-  {
-    image: <RoadmapOngoing />,
-    id: 'ongoing',
-    order: 2,
-  },
-];
+const TRANSLATE_X_OFFSET = 64;
 
 const DesktopRoadmap = () => {
   const [width] = useWindowSize();
-  const [selectedRoadmap, setSelectedRoadmap] = useState(ROADMAPS[1]);
+  const [selectedRoadmap, setSelectedRoadmap] = useState(R_2022);
+  const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
-  const tabsContainer = document.getElementById('tabs-container');
 
   useEffect(() => {
     if (selectedRoadmap && roadmapsContainer) {
       const roadmap = document.getElementById(`roadmap-${selectedRoadmap.id}`);
 
       roadmapsContainer.scrollTo(roadmap.offsetLeft, 0);
-      if (selectedRoadmap.order === 0) {
-        tabsContainer.scrollTo(0, 0);
-      } else if (selectedRoadmap.order === 2) {
-        tabsContainer.scrollTo(width, 0);
+      if (selectedRoadmap.id === R_2021.id) {
+        setTranslateX(`calc(50% - ${TRANSLATE_X_OFFSET}px)`);
+      } else if (selectedRoadmap.id === R_ONGOING.id) {
+        setTranslateX(`calc(-50% - ${TRANSLATE_X_OFFSET}px)`);
       } else {
-        tabsContainer.scrollTo(width / 2 - 200, 0);
+        setTranslateX(`-${TRANSLATE_X_OFFSET}px`);
       }
     }
-  }, [selectedRoadmap, roadmapsContainer, tabsContainer]);
+  }, [selectedRoadmap, roadmapsContainer]);
 
   return (
     <RoadmapWrapper id="roadmap" className="column" gap={120}>
@@ -102,22 +78,37 @@ const DesktopRoadmap = () => {
           </div>
         ))}
       </RoadmapContainer>
-      <TabsContainer id="tabs-container" className="hide-scrollbar justify-sb" width={width} style={{ width: width }}>
-        {ROADMAPS.map((roadmap, i) => {
-          return (
-            <Label
-              id={`tab-${roadmap.id}`}
-              key={i}
-              fontFamily="syncopate"
-              color={selectedRoadmap.id === roadmap.id ? 'pink' : 'white'}
-              fontSize={80}
-              onClick={() => setSelectedRoadmap(roadmap)}
-              style={{ minWidth: '40%' }}
-            >
-              {roadmap.id}
-            </Label>
-          );
-        })}
+      <TabsContainer id="tabs-container" translateX={translateX} style={{ width: width }}>
+        <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
+          <Label
+            fontFamily="syncopate"
+            color={selectedRoadmap.id === R_2021.id ? 'pink' : 'white'}
+            fontSize={80}
+            onClick={() => setSelectedRoadmap(R_2021)}
+          >
+            {R_2021.id}
+          </Label>
+        </FlexContainer>
+        <FlexContainer className="justify-ce" id={`tab-${R_2022.id}`} style={{ minWidth: width - 400 }}>
+          <Label
+            fontFamily="syncopate"
+            color={selectedRoadmap.id === R_2022.id ? 'pink' : 'white'}
+            fontSize={80}
+            onClick={() => setSelectedRoadmap(R_2022)}
+          >
+            {R_2022.id}
+          </Label>
+        </FlexContainer>
+        <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
+          <Label
+            fontFamily="syncopate"
+            color={selectedRoadmap.id === R_ONGOING.id ? 'pink' : 'white'}
+            fontSize={80}
+            onClick={() => setSelectedRoadmap(R_ONGOING)}
+          >
+            {R_ONGOING.id}
+          </Label>
+        </FlexContainer>
       </TabsContainer>
     </RoadmapWrapper>
   );

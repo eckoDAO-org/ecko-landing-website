@@ -46,7 +46,6 @@ const IconContainer = styled(FlexContainer)`
 
 const TokenomicsSection = () => {
   const [width, height] = useWindowSize();
-  console.log('window', width / height);
 
   return (
     <FlexContainer

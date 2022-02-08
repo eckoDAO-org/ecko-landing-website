@@ -5,7 +5,6 @@ import styled, { css } from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
-import Hamburger from './Hamburger';
 import HeaderItems from './HeaderItems';
 
 const Container = styled(FlexContainer)`
@@ -63,17 +62,15 @@ const DesktopHeader = () => {
 
   return (
     <div>
-      <Container className="justify-sb" id="header-section">
-        <KaddexLogo style={{ cursor: 'pointer' }} onClick={goToTop} />
+      <Container id="header-section">
+        <KaddexLogo style={{ cursor: 'pointer', marginRight: '30%' }} onClick={goToTop} />
         <HeaderItems />
-        <Hamburger />
       </Container>
 
       {isSticky && (
-        <Container className="justify-sb" isSticky={isSticky}>
-          <KaddexLogo style={{ cursor: 'pointer' }} onClick={goToTop} />
+        <Container isSticky={isSticky}>
+          <KaddexLogo style={{ cursor: 'pointer', marginRight: '30%' }} onClick={goToTop} />
           <HeaderItems />
-          <Hamburger />
         </Container>
       )}
     </div>
