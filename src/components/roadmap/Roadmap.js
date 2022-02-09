@@ -70,7 +70,7 @@ const Roadmap = () => {
         Roadmap
       </Label>
 
-      {width >= theme.mediaQueries.mobilePixel && (
+      {width <= theme.mediaQueries.mobilePixel && (
         <RoadmapTabs selectedRoadmap={selectedRoadmap} setSelectedRoadmap={setSelectedRoadmap} translateX={translateX} />
       )}
 
