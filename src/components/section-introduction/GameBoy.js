@@ -5,6 +5,8 @@ import { FlexContainer } from '../shared/Container';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 
+import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
+
 const GameBoy = () => {
   const [width] = useWindowSize();
   const [play, setPlay] = useState(false);
@@ -17,7 +19,9 @@ const GameBoy = () => {
     return () => window.removeEventListener(width < theme.mediaQueries.desktopPixel ? 'scroll' : 'wheel', setEvent);
   }, [width]);
   return (
-    <FlexContainer className="relative justify-ce">
+    <FlexContainer id="gameboy-container" className="relative justify-ce">
+      <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
+
       <Lottie loop={false} animationData={gameboy} play={play} style={{ width: 843, height: width >= theme.mediaQueries.mobilePixel && 556 }} />
     </FlexContainer>
   );

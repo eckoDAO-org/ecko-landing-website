@@ -3,10 +3,10 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import FeatureCard from './FeatureCard';
-import { FEATURES, LIQUIDITY_MINING, ZERO_GAS } from '../../constants/features';
+import { FEATURES, ZERO_GAS } from '../../constants/features';
 import RadiusBackground from '../shared/RadiusBackground';
 
-const DESKTOP_PIXEL = 1700;
+const DESKTOP_PIXEL = 1400;
 
 const FeaturesSection = () => {
   const [width] = useWindowSize();
@@ -38,17 +38,12 @@ const FeaturesSection = () => {
         >
           Innovative and game-changing characteristics as never seen before on any other dex.
         </Label>
-        {width >= DESKTOP_PIXEL && (
-          <>
-            <FeatureCard feature={ZERO_GAS} />
-            <FeatureCard feature={LIQUIDITY_MINING} />
-          </>
-        )}
+        {width >= DESKTOP_PIXEL && <FeatureCard feature={ZERO_GAS} />}
       </FlexContainer>
 
-      {width >= DESKTOP_PIXEL && (
+      {width >= 1400 && (
         <FlexContainer className="w-100 wrap justify-sb">
-          {FEATURES.slice(2).map((feature, i) => (
+          {FEATURES.slice(1).map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}
         </FlexContainer>

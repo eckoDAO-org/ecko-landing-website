@@ -28,7 +28,7 @@ const RoadmapContainer = styled(FlexContainer)`
   overflow-y: hidden;
   width: 100%;
   & > *:first-child {
-    padding-left: 90px;
+    margin-left: 90px;
   }
 
   svg {
