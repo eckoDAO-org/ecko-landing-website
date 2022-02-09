@@ -34,6 +34,17 @@ const Container = styled(FlexContainer)`
   }}
   &.is-sticky {
   }
+
+  .kaddex-logo {
+    cursor: pointer;
+    margin-right: 30%;
+    @media (max-width: 960px) and (min-width: 800px) {
+      margin-right: 20%;
+    }
+    @media (max-width: 800px) {
+      margin-right: 10%;
+    }
+  }
 `;
 
 const DesktopHeader = () => {
@@ -63,13 +74,13 @@ const DesktopHeader = () => {
   return (
     <div>
       <Container id="header-section">
-        <KaddexLogo style={{ cursor: 'pointer', marginRight: '30%' }} onClick={goToTop} />
+        <KaddexLogo className="kaddex-logo" onClick={goToTop} />
         <HeaderItems />
       </Container>
 
       {isSticky && (
         <Container isSticky={isSticky}>
-          <KaddexLogo style={{ cursor: 'pointer', marginRight: '30%' }} onClick={goToTop} />
+          <KaddexLogo className="kaddex-logo" onClick={goToTop} />
           <HeaderItems />
         </Container>
       )}

@@ -36,12 +36,7 @@ const FeaturesSection = () => {
           tabletStyle={{ marginTop: 35 }}
           mobileStyle={{ marginTop: 35 }}
         >
-          Safe DeFi begins with our Gas free DEX.
-          <br />
-          Gas will always stay free because the Kadena blockchain scales horizontally.
-          <br /> <br />
-          The Kaddex DAO will play a large role in how Kaddex operates, controlling the parameters for individual pools. The DAO will have a strong
-          focus on ecosystem development, working to help growing the entire Kadena blockchain.
+          Innovative and game-changing characteristics as never seen before on any other dex.
         </Label>
         {width >= DESKTOP_PIXEL && (
           <>

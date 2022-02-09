@@ -13,6 +13,26 @@ import RadiusBackground from '../shared/RadiusBackground';
 const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;
 
+const TokenomicsContainer = styled(FlexContainer)`
+  marquee {
+    position: absolute;
+    top: -300px;
+    @media (max-width: 1024px) and (min-width: ${MOBILE_PIXEL}px) {
+      svg {
+        width: 2100px;
+        height: 150px;
+      }
+    }
+    @media (max-width: ${MOBILE_PIXEL}px) {
+      top: -200px;
+      svg {
+        width: 1800px;
+        height: 100px;
+      }
+    }
+  }
+`;
+
 const IconContainer = styled(FlexContainer)`
   width: fit-content;
   height: 100%;
@@ -60,15 +80,15 @@ const TokenomicsSection = () => {
   const [width, height] = useWindowSize();
 
   return (
-    <FlexContainer
+    <TokenomicsContainer
       id="tokenomics"
       className="column relative w-100 align-ce scroll-mt"
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
       tabletStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
-      mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
+      mobileStyle={{ marginTop: 300, flexWrap: 'wrap', padding: '0 50px' }}
     >
-      <marquee scrollamount="20" style={{ position: 'absolute', top: -300 }}>
+      <marquee className="marquee" scrollamount="20">
         <TokenomicsIcon />
       </marquee>
 
@@ -163,7 +183,7 @@ const TokenomicsSection = () => {
           <TokenomicsKaddexLogoIcon className="tokenomics-triangle" />
         </IconContainer>
       </FlexContainer>
-    </FlexContainer>
+    </TokenomicsContainer>
   );
 };
 

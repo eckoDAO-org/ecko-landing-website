@@ -11,7 +11,7 @@ const IntroductionHeader = () => {
   return (
     <FlexContainer
       columnGap={25}
-      className="align-fs"
+      className="align-ce"
       tabletClassName="column"
       mobileClassName="column"
       style={{ padding: '0 50px' }}
