@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import { theme } from '../../styles/theme';
+import browserDetection from '../utils/browserDetection';
 
 export const FlexContainer = ({
   className,
@@ -139,9 +140,18 @@ export const STYFlexContainer = styled.div`
 
   ${({ gap }) => {
     if (gap) {
-      return css`
-        column-gap: ${({ gap }) => gap}px;
-      `;
+      const browser = browserDetection();
+
+      if (browser === 'SAFARI') {
+        return css`
+          & > *:not(:last-child) {
+            margin-right: ${gap}px;
+          }
+        `;
+      } else
+        return css`
+          column-gap: ${({ gap }) => gap}px;
+        `;
     }
   }}
 
@@ -149,10 +159,20 @@ export const STYFlexContainer = styled.div`
     flex-direction: column;
     ${({ gap }) => {
       if (gap) {
-        return css`
-          row-gap: ${({ gap }) => gap}px;
-          column-gap: 0px;
-        `;
+        const browser = browserDetection();
+
+        if (browser === 'SAFARI') {
+          return css`
+            & > *:not(:last-child) {
+              margin-bottom: ${gap}px;
+              margin-right: 0px;
+            }
+          `;
+        } else
+          return css`
+            row-gap: ${({ gap }) => gap}px;
+            column-gap: 0px;
+          `;
       }
     }}
   }

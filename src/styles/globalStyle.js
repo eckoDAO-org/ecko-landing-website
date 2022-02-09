@@ -37,7 +37,7 @@ export default createGlobalStyle`
 
     #root {
       height: 100%;
-      overflow-x: hidden;
+      overflow: hidden;
       & > div:first-child {
         display: flex;
         flex-flow: column;
