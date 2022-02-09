@@ -9,11 +9,11 @@
     <circle id="Ellipse_1116" data-name="Ellipse 1116" cx="15" cy="15" r="15" transform="translate(314 30) rotate(180)" fill="#fff"/>
     <circle id="Ellipse_1117" data-name="Ellipse 1117" cx="15" cy="15" r="15" transform="translate(314 221) rotate(180)" fill="#fff"/>
     <circle id="Ellipse_1118" data-name="Ellipse 1118" cx="15" cy="15" r="15" transform="translate(284)" fill="#fff"/>
-    <text id="DAO_Transition" data-name="DAO Transition" transform="translate(225.5 65)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">DAO Transition</tspan></text>
+    <text id="DAO_Transition" data-name="DAO Transition" transform="translate(225.5 65)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">DAO Transition</tspan></text>
     <text id="New_Strategic_Partnerships" data-name="New Strategic
-Partnerships" transform="translate(299.5 256)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-68.47" y="0">New Strategic</tspan><tspan x="-63.28" y="25">Partnerships</tspan></text>
-    <text id="Team_Expansion" data-name="Team Expansion" transform="translate(651.5 256)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-73.66" y="0">Team Expansion</tspan></text>
+Partnerships" transform="translate(299.5 256)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-68.47" y="0">New Strategic</tspan><tspan x="-63.28" y="25">Partnerships</tspan></text>
+    <text id="Team_Expansion" data-name="Team Expansion" transform="translate(651.5 256)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-73.66" y="0">Team Expansion</tspan></text>
     <text id="Multiplecode_autiding" data-name="Multiplecode
-autiding" transform="translate(651.5 471)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-63.28" y="0">Multiplecode</tspan><tspan x="-42.52" y="25">autiding</tspan></text>
+autiding" transform="translate(651.5 471)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-63.28" y="0">Multiplecode</tspan><tspan x="-42.52" y="25">autiding</tspan></text>
   </g>
 </svg>

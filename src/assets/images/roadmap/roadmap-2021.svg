@@ -70,15 +70,15 @@
       <path id="Path_43979" data-name="Path 43979" d="M651,1047l-4-2v4Z" fill="#39fffc"/>
       <path id="Path_43980" data-name="Path 43980" d="M657,1047l-4-2v4Z" fill="#39fffc"/>
     </g>
-    <text id="_2M_TVL" data-name="2M TVL" transform="translate(-7935 5459)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">2M TVL</tspan></text>
+    <text id="_2M_TVL" data-name="2M TVL" transform="translate(-7935 5459)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">2M TVL</tspan></text>
     <text id="Kaddex_Beta_available_for_early_investors" data-name="Kaddex Beta
 available for early
-investors" transform="translate(-7552 5459)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-58.09" y="0">Kaddex Beta</tspan><tspan font-size="13"><tspan x="-64.746" y="25">available for early</tspan><tspan x="-31.012" y="50">investors</tspan></tspan></text>
-    <text id="Community_Sale" data-name="Community Sale" transform="translate(-7199 5459)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-73.66" y="0">Community Sale</tspan></text>
+investors" transform="translate(-7552 5459)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-58.09" y="0">Kaddex Beta</tspan><tspan font-size="13"><tspan x="-64.746" y="25">available for early</tspan><tspan x="-31.012" y="50">investors</tspan></tspan></text>
+    <text id="Community_Sale" data-name="Community Sale" transform="translate(-7199 5459)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-73.66" y="0">Community Sale</tspan></text>
     <text id="Tokenomics_Deepdive" data-name="Tokenomics
-Deepdive" transform="translate(-7902 5650)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-52.9" y="0">Tokenomics</tspan><tspan x="-42.52" y="25">Deepdive</tspan></text>
-    <text id="Website_v1" data-name="Website v1" transform="translate(-7551 5650)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-52.9" y="0">Website v1</tspan></text>
+Deepdive" transform="translate(-7902 5650)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-52.9" y="0">Tokenomics</tspan><tspan x="-42.52" y="25">Deepdive</tspan></text>
+    <text id="Website_v1" data-name="Website v1" transform="translate(-7551 5650)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-52.9" y="0">Website v1</tspan></text>
     <text id="Team_Formation" data-name="Team
-Formation" transform="translate(-7551 5865)" fill="#39fffc" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-21.76" y="0">Team</tspan><tspan x="-47.71" y="25">Formation</tspan></text>
+Formation" transform="translate(-7551 5865)" fill="#39fffc" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-21.76" y="0">Team</tspan><tspan x="-47.71" y="25">Formation</tspan></text>
   </g>
 </svg>

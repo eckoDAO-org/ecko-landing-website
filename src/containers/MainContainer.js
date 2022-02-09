@@ -4,7 +4,7 @@ import FeaturesSection from '../components/section-features/FeaturesSection';
 import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
 import PartnersSection from '../components/section-partners/PartnersSection';
 import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
-import DesktopRoadmap from '../components/roadmap/DesktopRoadmap';
+import Roadmap from '../components/roadmap/Roadmap';
 import { FlexContainer } from '../components/shared/Container';
 
 const MainContainer = () => {
@@ -14,7 +14,7 @@ const MainContainer = () => {
       <ProofOfDexSection />
       <FeaturesSection />
       <TokenomicsSection />
-      <DesktopRoadmap />
+      <Roadmap />
       <PartnersSection />
     </FlexContainer>
   );

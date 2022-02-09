@@ -4,7 +4,7 @@ import theme from '../../../styles/theme';
 const Roadmap2021 = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1675" height="501" viewBox="0 0 1675 501">
-      <g id="Roadmap_2021" data-name="Roadmap 2021" transform="translate(8068 -5394)">
+      <g id="Roadmap_2021" data-name="Roadmap 2021" transform="translate(8068 -5396)">
         <path
           id="Path_43913"
           data-name="Path 43913"

@@ -186,8 +186,8 @@ const Roadmap2022 = () => {
 
           {/* bridged erc-20 */}
           <circle
-            id="Ellipse_20_Token_Pairs"
-            data-name="Ellipse 20_Token_Pairs"
+            id="Ellipse_Bridged_ERC_20_Token_Pairs"
+            data-name="Ellipse Bridged_ERC_20_Token_Pairs"
             cx="15"
             cy="15"
             r="15"
@@ -195,8 +195,8 @@ const Roadmap2022 = () => {
             fill={CONFIGURATION.BRIDGED_ERC20.color}
           />
           <text
-            id="Bridged_ERC-20_Token_Pairs"
-            data-name="Bridged ERC-20 Token Pairs"
+            id="Bridged_ERC_20_Token_Pairs"
+            data-name="Bridged ERC 20 Token Pairs"
             transform={CONFIGURATION.BRIDGED_ERC20.text}
             fill={CONFIGURATION.BRIDGED_ERC20.color}
             fontSize="20"
@@ -306,10 +306,10 @@ const Roadmap2022 = () => {
             transform={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle}
             fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
           />
-          <g id="ring" transform="translate(754 353)">
+          <g id="ring" transform={CONFIGURATION.FLAG.flag}>
             <RoadmapFlagcon />
           </g>
-          <g id="ring" transform="translate(735 374)">
+          <g id="ring" transform={CONFIGURATION.FLAG.shadow}>
             <RoadmapEllipseShadowIcon />
           </g>
           <text

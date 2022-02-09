@@ -20,28 +20,28 @@
       </g>
     </g>
     <circle id="Ellipse_1069" data-name="Ellipse 1069" cx="15" cy="15" r="15" transform="translate(490 190)" fill="#fff"/>
-    <text id="X-Wallet_Beta" data-name="X-Wallet Beta" transform="translate(437.17 255)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">X-Wallet Beta</tspan></text>
-    <text id="Website_v2" data-name="Website v2" transform="translate(707.17 446)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">Website v2</tspan></text>
+    <text id="X-Wallet_Beta" data-name="X-Wallet Beta" transform="translate(437.17 255)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">X-Wallet Beta</tspan></text>
+    <text id="Website_v2" data-name="Website v2" transform="translate(707.17 446)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">Website v2</tspan></text>
     <text id="Lending_borrowing_functionalities" data-name="Lending &amp; borrowing
-functionalities" transform="translate(756.17 662)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-99.61" y="0">Lending &amp; borrowing</tspan><tspan x="-78.85" y="24">functionalities</tspan></text>
-    <text id="X-Wallet_v1" data-name="X-Wallet v1" transform="translate(697.17 255)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">X-Wallet v1</tspan></text>
-    <text id="Public_Sale" data-name="Public Sale" transform="translate(947.17 255)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="0" y="0">Public Sale</tspan></text>
+functionalities" transform="translate(756.17 662)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-99.61" y="0">Lending &amp; borrowing</tspan><tspan x="-78.85" y="24">functionalities</tspan></text>
+    <text id="X-Wallet_v1" data-name="X-Wallet v1" transform="translate(697.17 255)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">X-Wallet v1</tspan></text>
+    <text id="Public_Sale" data-name="Public Sale" transform="translate(947.17 255)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="0" y="0">Public Sale</tspan></text>
     <text id="Litepaper_Whitepaper" data-name="Litepaper
-&amp; Whitepaper" transform="translate(1255.17 255)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-47.71" y="0">Litepaper</tspan><tspan x="-63.28" y="25">&amp; Whitepaper</tspan></text>
+&amp; Whitepaper" transform="translate(1255.17 255)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-47.71" y="0">Litepaper</tspan><tspan x="-63.28" y="25">&amp; Whitepaper</tspan></text>
     <text id="Bridged_ERC-20_Token_Pairs" data-name="Bridged ERC-20
-Token Pairs" transform="translate(1506.17 255)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-73.66" y="0">Bridged ERC-20</tspan><tspan x="-58.09" y="25">Token Pairs</tspan></text>
+Token Pairs" transform="translate(1506.17 255)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-73.66" y="0">Bridged ERC-20</tspan><tspan x="-58.09" y="25">Token Pairs</tspan></text>
     <text id="_3d_Swapping_Interface" data-name="3d Swapping
-Interface" transform="translate(506.17 446)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-58.09" y="0">3d Swapping</tspan><tspan x="-47.71" y="25">Interface</tspan></text>
+Interface" transform="translate(506.17 446)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-58.09" y="0">3d Swapping</tspan><tspan x="-47.71" y="25">Interface</tspan></text>
     <text id="Kaddex_v1_full_launch" data-name="Kaddex v1
-full launch" transform="translate(1250.17 446)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-47.71" y="0">Kaddex v1</tspan><tspan x="-58.09" y="25">full launch</tspan></text>
+full launch" transform="translate(1250.17 446)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-47.71" y="0">Kaddex v1</tspan><tspan x="-58.09" y="25">full launch</tspan></text>
     <text id="KDX_Liquidity_Mining_Programme" data-name="KDX Liquidity
-Mining Programme" transform="translate(1499.17 446)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-68.47" y="0">KDX Liquidity</tspan><tspan x="-84.04" y="25">Mining Programme</tspan></text>
+Mining Programme" transform="translate(1499.17 446)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-68.47" y="0">KDX Liquidity</tspan><tspan x="-84.04" y="25">Mining Programme</tspan></text>
     <text id="KDX_Vaulting_programme_available_for_early_investors" data-name="KDX Vaulting
 programme
 available for early
-investors" transform="translate(1007.17 446)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-63.28" y="0">KDX Vaulting</tspan><tspan x="-47.71" y="25">programme</tspan><tspan font-size="13"><tspan x="-64.746" y="50">available for early</tspan><tspan x="-31.012" y="75">investors</tspan></tspan></text>
+investors" transform="translate(1007.17 446)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-63.28" y="0">KDX Vaulting</tspan><tspan x="-47.71" y="25">programme</tspan><tspan font-size="13"><tspan x="-64.746" y="50">available for early</tspan><tspan x="-31.012" y="75">investors</tspan></tspan></text>
     <text id="Single_Sided_Liquidity" data-name="Single Sided
-Liquidity" transform="translate(506.17 661)" fill="#fff" font-size="20" font-family="BasierSquareMono-Regular, Basier Square Mono" letter-spacing="-0.1em"><tspan x="-63.28" y="0">Single Sided</tspan><tspan x="-47.71" y="25">Liquidity</tspan></text>
+Liquidity" transform="translate(506.17 661)" fill="#fff" font-size="20" fontFamily={theme.fontFamily.basier} letter-spacing="-0.1em"><tspan x="-63.28" y="0">Single Sided</tspan><tspan x="-47.71" y="25">Liquidity</tspan></text>
     <line id="Line_585" data-name="Line 585" x2="62" transform="translate(-5 206)" fill="none" stroke="#707070" stroke-width="4"/>
   </g>
 </svg>
