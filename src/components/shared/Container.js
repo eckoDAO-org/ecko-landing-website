@@ -121,6 +121,20 @@ export const STYFlexContainer = styled.div`
 
   &.f-wrap {
     flex-wrap: wrap;
+
+    ${({ gap }) => {
+      if (gap) {
+        const browser = browserDetection();
+
+        if (browser === 'SAFARI') {
+          return css`
+            & > *:not(:last-child) {
+              margin-bottom: ${gap}px;
+            }
+          `;
+        }
+      }
+    }}
   }
 
   &.h-fit-content {

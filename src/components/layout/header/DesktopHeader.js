@@ -38,8 +38,11 @@ const Container = styled(FlexContainer)`
   .kaddex-logo {
     cursor: pointer;
     margin-right: 30%;
-    @media (max-width: 960px) and (min-width: 800px) {
+    @media (max-width: 960px) and (min-width: 860px) {
       margin-right: 20%;
+    }
+    @media (max-width: 860px) and (min-width: 800px) {
+      margin-right: 15%;
     }
     @media (max-width: 800px) {
       margin-right: 10%;
