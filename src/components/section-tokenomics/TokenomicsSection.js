@@ -3,9 +3,15 @@ import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import { TokenomicsCircleIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '../../assets';
 import Label from '../shared/Label';
-import PercentageCard from './PercentageCard';
+import TokenomicsCard from './TokenomicsCard';
 import { FlexContainer } from '../shared/Container';
-import { TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING, TOKENOMICS_TEAM } from '../../constants/tokenomics';
+import {
+  TOKENOMICS,
+  TOKENOMICS_COMMUNITY_SALES,
+  TOKENOMICS_DAO_TREASURY,
+  TOKENOMICS_LIQUIDITY_MINING,
+  TOKENOMICS_TEAM,
+} from '../../constants/tokenomics';
 import { theme } from '../../styles/theme';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 import RadiusBackground from '../shared/RadiusBackground';
@@ -166,17 +172,18 @@ const TokenomicsSection = () => {
       >
         {width > MOBILE_PIXEL && <RadiusBackground style={{ top: 150, left: -50 }} />}
 
-        <FlexContainer className="column" desktopPixel={MOBILE_PIXEL} tabletClassName="w-100" mobileClassName="w-100" style={{ marginTop: 50 }}>
-          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb">
-            {[TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES].map((tokenomics, i) => (
-              <PercentageCard key={i} tokenomics={tokenomics} />
-            ))}
-          </FlexContainer>
-          <FlexContainer gap={width >= theme.mediaQueries.desktopPixel ? 70 : 40} className="justify-sb" style={{ marginTop: 84 }}>
-            {[TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING].map((tokenomics, i) => (
-              <PercentageCard key={i} tokenomics={tokenomics} />
-            ))}
-          </FlexContainer>
+        <FlexContainer
+          className="column"
+          gap={24}
+          desktopPixel={MOBILE_PIXEL}
+          style={{ marginTop: 32 }}
+          desktopStyle={{ width: '40%' }}
+          tabletClassName="w-100"
+          mobileClassName="w-100"
+        >
+          {TOKENOMICS.map((tokenomics, i) => (
+            <TokenomicsCard key={i} tokenomics={tokenomics} />
+          ))}
         </FlexContainer>
         <IconContainer className="relative">
           <TokenomicsCircleIcon className="tokenomics-circle" />

@@ -4,41 +4,32 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
 const STYCard = styled(FlexContainer)`
-  width: 210px;
-
   svg {
     path {
       fill: ${({ theme: { colors } }) => colors.pink};
     }
   }
   @media (max-width: 1700px) {
-    width: 130px;
     height: auto;
   }
 `;
 
-const PercentageCard = ({ tokenomics }) => {
+const TokenomicsCard = ({ tokenomics }) => {
   return (
-    <STYCard className="column align-ce h-fit-content" color={tokenomics.color}>
+    <STYCard className="column align-fs h-fit-content" color={tokenomics.color}>
       <div>
         <Label className="rainbow" fontFamily="syncopate" size="big" gradientColors={tokenomics.gradientColors}>
           {tokenomics.icon}
         </Label>
       </div>
-      <Label
-        className="text-center rainbow"
-        gradientColors={tokenomics.gradientColors}
-        size="small"
-        style={{ marginBottom: 20, marginTop: 15 }}
-        fontFamily="syncopate"
-      >
+      <Label className="text-fs rainbow" gradientColors={tokenomics.gradientColors} size="small" fontFamily="syncopate">
         {tokenomics.title}
       </Label>
-      <Label className="text-center" color="primary" size="nano">
+      <Label className="text-fs" color="primary" size="nano">
         {tokenomics.description}
       </Label>
     </STYCard>
   );
 };
 
-export default PercentageCard;
+export default TokenomicsCard;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getColor } from '../../styles/theme';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
@@ -8,7 +9,7 @@ const STYCard = styled(FlexContainer)`
 
   svg {
     path {
-      fill: ${({ theme: { colors } }) => colors.pink};
+      fill: ${({ color }) => getColor(color)};
     }
   }
 `;
@@ -19,7 +20,7 @@ const FeatureCard = ({ feature }) => {
       <div>{feature.icon}</div>
       <Label
         className="text-center"
-        color="yellow"
+        color={feature.color}
         size="normal"
         desktopStyle={{ marginTop: 55, marginBottom: 22 }}
         tabletStyle={{ marginTop: 20, marginBottom: 15 }}
@@ -28,7 +29,7 @@ const FeatureCard = ({ feature }) => {
       >
         {feature.title}
       </Label>
-      <Label className="text-center" color="primary" size="nano">
+      <Label className="text-center" color="white" size="nano">
         {feature.description}
       </Label>
     </STYCard>

@@ -1,3 +1,9 @@
+export const TOKENOMICS_VCS = {
+  icon: '0%',
+  title: 'VCS',
+  description: 'Kaddex believes that large buyers go against the basic principles of Decentralization.',
+  gradientColors: ['#FFF', '#FFF', '#FFF'],
+};
 export const TOKENOMICS_TEAM = {
   icon: '5%',
   title: 'TEAM',
@@ -23,4 +29,4 @@ export const TOKENOMICS_LIQUIDITY_MINING = {
   gradientColors: ['#F77772', '#F58861', '#F49E4B'],
 };
 
-export const TOKENOMICS = [TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING];
+export const TOKENOMICS = [TOKENOMICS_VCS, TOKENOMICS_TEAM, TOKENOMICS_COMMUNITY_SALES, TOKENOMICS_DAO_TREASURY, TOKENOMICS_LIQUIDITY_MINING];
