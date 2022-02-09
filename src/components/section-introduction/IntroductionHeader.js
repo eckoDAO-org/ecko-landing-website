@@ -15,6 +15,7 @@ const IntroductionHeader = () => {
       mobileClassName="column"
       style={{ padding: '0 50px' }}
       desktopStyle={{ marginTop: 100 }}
+      tabletStyle={{ marginTop: 50 }}
       mobileStyle={{ margin: '30px 0' }}
     >
       <FlexContainer className="column">
