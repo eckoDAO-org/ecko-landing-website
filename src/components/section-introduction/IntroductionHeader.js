@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowsDownIcon } from '../../assets';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 import { FlexContainer } from '../shared/Container';
@@ -11,15 +10,15 @@ const IntroductionHeader = () => {
   return (
     <FlexContainer
       columnGap={25}
-      className="align-ce"
+      className="justify-ce"
       tabletClassName="column"
       mobileClassName="column"
       style={{ padding: '0 50px' }}
       desktopStyle={{ marginTop: 100 }}
       mobileStyle={{ margin: '30px 0' }}
     >
-      <FlexContainer className="column" style={{ flex: 1 }}>
-        <Label size="huge" fontFamily="syncopate">
+      <FlexContainer className="column">
+        <Label size="huge" className="nowrap" fontFamily="syncopate">
           the evolution
         </Label>
         <Label size="huge" fontFamily="syncopate">
@@ -35,13 +34,7 @@ const IntroductionHeader = () => {
         </Label>
       </FlexContainer>
 
-      <FlexContainer
-        className="column"
-        style={{ flex: 1 }}
-        desktopStyle={{ marginLeft: 40 }}
-        tabletStyle={{ marginTop: 25 }}
-        mobileStyle={{ marginTop: 25 }}
-      >
+      <FlexContainer className="column" desktopStyle={{ marginLeft: 120 }} tabletStyle={{ marginTop: 25 }} mobileStyle={{ marginTop: 25 }}>
         <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'normal'} color="light-blue">
           A revolutionary 0 Gas-Fee DEX.
           <br />
@@ -57,11 +50,6 @@ const IntroductionHeader = () => {
             </Label>
           </a>
         </GradientContainer>
-      </FlexContainer>
-      <FlexContainer className="w-100 justify-ce desktop-none" style={{ marginTop: 25 }}>
-        <a href="/#proof-of-dex">
-          <ArrowsDownIcon />
-        </a>
       </FlexContainer>
     </FlexContainer>
   );

@@ -3,8 +3,19 @@ import theme from '../../../styles/theme';
 
 const Roadmap2021 = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1675" height="501" viewBox="0 0 1675 501">
-      <g id="Roadmap_2021" data-name="Roadmap 2021" transform="translate(8068 -5384.8)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1760" height="501" viewBox="0 0 1760 501">
+      <g id="Roadmap_OLD" data-name="Roadmap OLD" transform="translate(8153 -5396.5)">
+        <g id="Group_69201" data-name="Group 69201" transform="translate(-8217 4768)">
+          <g id="Group_69198" data-name="Group 69198" opacity="0.1">
+            <path id="Path_44497" data-name="Path 44497" d="M136,1047l-72-36v72Z" fill={theme.colors.primary} />
+            <path id="Path_44498" data-name="Path 44498" d="M244,1047l-72-36v72Z" transform="translate(-2)" fill={theme.colors.primary} />
+            <path id="Path_44499" data-name="Path 44499" d="M352,1047l-72-36v72Z" transform="translate(-5)" fill={theme.colors.primary} />
+            <path id="Path_44500" data-name="Path 44500" d="M460,1047l-72-36v72Z" transform="translate(-7)" fill={theme.colors.primary} />
+            <path id="Path_44501" data-name="Path 44501" d="M568,1047l-72-36v72Z" transform="translate(-10)" fill={theme.colors.primary} />
+            <path id="Path_44502" data-name="Path 44502" d="M676,1047l-72-36v72Z" transform="translate(-12)" fill={theme.colors.primary} />
+            <path id="Path_44503" data-name="Path 44503" d="M784,1047l-72-36v72Z" transform="translate(-15)" fill={theme.colors.primary} />
+          </g>
+        </g>
         <path
           id="Path_43913"
           data-name="Path 43913"
@@ -214,8 +225,11 @@ const Roadmap2021 = () => {
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
-          <tspan x="-61.76" y="0">
-            Team Formation
+          <tspan x="-21.76" y="0">
+            Team
+          </tspan>
+          <tspan x="-47.71" y="25">
+            Formation
           </tspan>
         </text>
       </g>

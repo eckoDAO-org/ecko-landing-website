@@ -50,7 +50,7 @@ const FeaturesSection = () => {
       )}
 
       {width < DESKTOP_PIXEL && (
-        <FlexContainer className="grid" columns={Math.round((width - 260) / 240)}>
+        <FlexContainer className="grid" columns={Math.round((width - 260) / 240)} style={{ rowGap: 24 }}>
           {FEATURES.map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}

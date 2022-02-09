@@ -12,6 +12,16 @@ const STYCard = styled(FlexContainer)`
       fill: ${({ color }) => getColor(color)};
     }
   }
+
+  &:hover {
+    .feature-title {
+      text-shadow: ${({ color }) => `0 0 5px ${getColor(color)}`};
+    }
+    svg {
+      -webkit-filter: ${({ color }) => `drop-shadow( 0 0 5px ${getColor(color)})`};
+      filter: ${({ color }) => `drop-shadow( 0 0 5px ${getColor(color)})`};
+    }
+  }
 `;
 
 const FeatureCard = ({ feature }) => {
@@ -19,7 +29,7 @@ const FeatureCard = ({ feature }) => {
     <STYCard className="column align-ce" color={feature.color}>
       <div>{feature.icon}</div>
       <Label
-        className="text-center"
+        className="feature-title text-center"
         color={feature.color}
         size="normal"
         desktopStyle={{ marginTop: 55, marginBottom: 22 }}

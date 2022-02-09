@@ -27,8 +27,10 @@ const RoadmapContainer = styled(FlexContainer)`
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
-  & > *:first-child {
-    margin-left: 90px;
+  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+    & > *:first-child {
+      margin-left: 90px;
+    }
   }
 
   svg {
@@ -75,8 +77,7 @@ const Roadmap = () => {
       )}
 
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
-        <FlexContainer className="relative" style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
-          <RoadmapArrowsIcon style={{ position: 'absolute', bottom: 50, left: 0, width }} />
+        <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2021.desktopImage : R_2021.mobileImage}
         </FlexContainer>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2022.id}`}>

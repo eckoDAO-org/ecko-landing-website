@@ -88,8 +88,8 @@ const MobileRoadmap2022 = () => {
             transform="translate(0 -4328)"
             fill="none"
             stroke={whiteGrey}
-            stroke-width="2"
-            stroke-dasharray="8 8"
+            strokeWidth="2"
+            strokeDasharray="8 8"
           />
           {/* X_WALLET_BETA */}
           <circle
@@ -441,7 +441,7 @@ const MobileRoadmap2022 = () => {
             transform="translate(699.527 274.555)"
             fill="none"
             stroke={whiteGrey}
-            stroke-width="3"
+            strokeWidth="3"
           />
         </g>
       </g>

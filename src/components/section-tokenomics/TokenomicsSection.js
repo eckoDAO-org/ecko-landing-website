@@ -5,13 +5,7 @@ import { TokenomicsCircleIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '
 import Label from '../shared/Label';
 import TokenomicsCard from './TokenomicsCard';
 import { FlexContainer } from '../shared/Container';
-import {
-  TOKENOMICS,
-  TOKENOMICS_COMMUNITY_SALES,
-  TOKENOMICS_DAO_TREASURY,
-  TOKENOMICS_LIQUIDITY_MINING,
-  TOKENOMICS_TEAM,
-} from '../../constants/tokenomics';
+import { TOKENOMICS } from '../../constants/tokenomics';
 import { theme } from '../../styles/theme';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 import RadiusBackground from '../shared/RadiusBackground';

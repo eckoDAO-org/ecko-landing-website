@@ -14,8 +14,8 @@ const MobileRoadmapOngoing = () => {
           transform="translate(700.528 274.555)"
           fill="none"
           stroke={whiteGrey}
-          stroke-width="2"
-          stroke-dasharray="8"
+          strokeWidth="2"
+          strokeDasharray="8"
         />
         <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="7" cy="7" r="7" transform="translate(260 804)" fill={whiteGrey} />
         <circle id="Mobile-Ellipse_1261" data-name="Ellipse 1261" cx="7" cy="7" r="7" transform="translate(260 649)" fill={whiteGrey} />
