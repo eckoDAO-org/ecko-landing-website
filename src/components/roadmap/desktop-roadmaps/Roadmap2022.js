@@ -2,9 +2,81 @@ import React from 'react';
 import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
-const Roadmap2022 = () => {
-  const whiteGrey = '#666666';
+const whiteGrey = '#666666';
 
+const CONFIGURATION = {
+  X_WALLET_BETA: {
+    circle: 'translate(490 190)',
+    text: 'translate(437 255)',
+    color: theme.colors.primary,
+  },
+  LITEPAPER: {
+    circle: 'translate(740 190)',
+    text: 'translate(750 255)',
+    color: theme.colors.primary,
+  },
+  X_WALLET_V1: {
+    circle: 'translate(990 190)',
+    text: 'translate(950 255)',
+    color: theme.colors.primary,
+  },
+  PUBLIC_SALE: {
+    circle: 'translate(1240 190)',
+    text: 'translate(1200 255)',
+    color: theme.colors.primary,
+  },
+  BRIDGED_ERC20: {
+    circle: 'translate(1490 190)',
+    text: 'translate(1506 255)',
+    color: whiteGrey,
+  },
+  SWAPPING_INTERFACE: {
+    circle: 'translate(1490 381)',
+    text: 'translate(1499 446)',
+    color: whiteGrey,
+  },
+  WEBSITE_V2: {
+    circle: 'translate(1240 381)',
+    text: 'translate(1200 446)',
+    color: whiteGrey,
+  },
+  KDX_VAULTING_PROGRAMME: {
+    circle: 'translate(990 381)',
+    text: 'translate(1000 446)',
+    color: whiteGrey,
+  },
+  KADDEX_V1_FULL_LAUNCH: {
+    circle: 'translate(740 381)',
+    text: 'translate(750 446)',
+    color: '#FA41A5',
+  },
+  SINGLE_SIDED_LIQUIDITY: {
+    circle: 'translate(490 381)',
+    text: 'translate(500 446)',
+    color: whiteGrey,
+  },
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    circle: 'translate(490 596)',
+    text: 'translate(500 662)',
+    color: whiteGrey,
+  },
+  WHITEPAPER: {
+    circle: 'translate(990 596)',
+    text: 'translate(1000 662)',
+    color: whiteGrey,
+  },
+  LENDING_AND_BORROWING_FUNCTIONALITIES: {
+    circle: 'translate(740 596)',
+    text: 'translate(756 662)',
+    color: whiteGrey,
+  },
+  FLAG: {
+    flag: 'translate(754 353)',
+    shadow: 'translate(735 374)',
+  },
+};
+
+const Roadmap2022 = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501">
       <g id="Roadmap" transform="translate(5 -190)">
@@ -23,19 +95,19 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(490 190)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.X_WALLET_BETA.circle}
+            fill={CONFIGURATION.X_WALLET_BETA.color}
           />
           <text
             id="X-Wallet_Beta"
             data-name="X-Wallet Beta"
-            transform="translate(437 255)"
+            transform={CONFIGURATION.X_WALLET_BETA.text}
             fill={whiteGrey}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
           >
-            <tspan x="0" y="0" fill={theme.colors.primary}>
+            <tspan x="0" y="0" fill={CONFIGURATION.X_WALLET_BETA.color}>
               X-Wallet Beta
             </tspan>
           </text>
@@ -47,14 +119,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(740 190)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.LITEPAPER.circle}
+            fill={CONFIGURATION.LITEPAPER.color}
           />
           <text
             id="Litepaper"
             data-name="Litepaper"
-            transform="translate(750 255)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.LITEPAPER.text}
+            fill={CONFIGURATION.X_WALLET_BETA.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -71,14 +143,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(990 190)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.X_WALLET_V1.circle}
+            fill={CONFIGURATION.X_WALLET_V1.color}
           />
           <text
             id="X-Wallet_v1"
             data-name="X-Wallet v1"
-            transform="translate(950 255)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.X_WALLET_V1.text}
+            fill={CONFIGURATION.X_WALLET_V1.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -95,14 +167,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1240 190)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.PUBLIC_SALE.circle}
+            fill={CONFIGURATION.PUBLIC_SALE.color}
           />
           <text
             id="Public_Sale"
             data-name="Public Sale"
-            transform="translate(1200.17 255)"
-            fill={theme.colors.primary}
+            transform={CONFIGURATION.PUBLIC_SALE.text}
+            fill={CONFIGURATION.PUBLIC_SALE.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -112,21 +184,21 @@ const Roadmap2022 = () => {
             </tspan>
           </text>
 
-          {/* bridge erc-20 */}
+          {/* bridged erc-20 */}
           <circle
             id="Ellipse_20_Token_Pairs"
             data-name="Ellipse 20_Token_Pairs"
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1490 190)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.BRIDGED_ERC20.circle}
+            fill={CONFIGURATION.BRIDGED_ERC20.color}
           />
           <text
             id="Bridged_ERC-20_Token_Pairs"
             data-name="Bridged ERC-20 Token Pairs"
-            transform="translate(1506.17 255)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.BRIDGED_ERC20.text}
+            fill={CONFIGURATION.BRIDGED_ERC20.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -146,14 +218,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(1490 381)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.SWAPPING_INTERFACE.circle}
+            fill={CONFIGURATION.SWAPPING_INTERFACE.color}
           />
           <text
             id="_3d_Swapping_Interface"
             data-name="3d Swapping Interface"
-            transform="translate(1499.17 446)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.SWAPPING_INTERFACE.text}
+            fill={CONFIGURATION.SWAPPING_INTERFACE.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -167,12 +239,20 @@ const Roadmap2022 = () => {
           </text>
 
           {/* website v2 */}
-          <circle id="Ellipse_Website_v2" data-name="Ellipse Website_v2" cx="15" cy="15" r="15" transform="translate(1240 381)" fill={whiteGrey} />
+          <circle
+            id="Ellipse_Website_v2"
+            data-name="Ellipse Website_v2"
+            cx="15"
+            cy="15"
+            r="15"
+            transform={CONFIGURATION.WEBSITE_V2.circle}
+            fill={CONFIGURATION.WEBSITE_V2.color}
+          />
           <text
             id="Website_v2"
             data-name="Website v2"
-            transform="translate(1200.17 446)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.WEBSITE_V2.text}
+            fill={CONFIGURATION.WEBSITE_V2.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -189,14 +269,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(990 381)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.KDX_VAULTING_PROGRAMME.circle}
+            fill={CONFIGURATION.KDX_VAULTING_PROGRAMME.color}
           />
           <text
             id="KDX_Vaulting_programme_available_for_early_investors"
             data-name="KDX Vaulting programme available for early investors"
-            transform="translate(1000 446)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.KDX_VAULTING_PROGRAMME.text}
+            fill={CONFIGURATION.KDX_VAULTING_PROGRAMME.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
           >
@@ -223,8 +303,8 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(740 381)"
-            fill="#FA41A5"
+            transform={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle}
+            fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
           />
           <g id="ring" transform="translate(754 353)">
             <RoadmapFlagcon />
@@ -235,8 +315,8 @@ const Roadmap2022 = () => {
           <text
             id="Kaddex_v1_full_launch"
             data-name="Kaddex v1 full launch"
-            transform="translate(750 446)"
-            fill="#FA41A5"
+            transform={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.text}
+            fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -256,14 +336,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(490 381)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle}
+            fill={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.color}
           />
           <text
             id="Single_Sided_Liquidity"
             data-name="Single Sided Liquidity"
-            transform="translate(500 446)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.text}
+            fill={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -283,14 +363,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(490 596)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle}
+            fill={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.color}
           />
           <text
             id="KDX_Liquidity_Mining_Programme"
             data-name="KDX Liquidity Mining Programme"
-            transform="translate(500 662)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.text}
+            fill={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -304,14 +384,22 @@ const Roadmap2022 = () => {
           </text>
 
           {/* whitepaper */}
-          <circle id="Ellipse_1199" data-name="Ellipse 1199" cx="15" cy="15" r="15" transform="translate(740 596)" fill={whiteGrey} />
+          <circle
+            id="Ellipse_1199"
+            data-name="Ellipse 1199"
+            cx="15"
+            cy="15"
+            r="15"
+            transform={CONFIGURATION.WHITEPAPER.circle}
+            fill={CONFIGURATION.WHITEPAPER.color}
+          />
 
           <text
             id="Whitepaper"
             data-name="Whitepaper"
-            fill={whiteGrey}
+            fill={CONFIGURATION.WHITEPAPER.color}
             fontSize="20"
-            transform="translate(756.17 662)"
+            transform={CONFIGURATION.WHITEPAPER.text}
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
           >
@@ -326,14 +414,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform="translate(995 596)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle}
+            fill={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.color}
           />
           <text
             id="Lending_borrowing_functionalities"
             data-name="Lending &amp; borrowing functionalities"
-            transform="translate(1011.17 662)"
-            fill={whiteGrey}
+            transform={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.text}
+            fill={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
