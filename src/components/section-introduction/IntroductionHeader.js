@@ -18,7 +18,7 @@ const IntroductionHeader = () => {
       tabletStyle={{ marginTop: 50 }}
       mobileStyle={{ margin: '30px 0' }}
     >
-      <FlexContainer className="column">
+      <FlexContainer className="column" style={{ paddingRight: 64 }}>
         <Label size="huge" className="nowrap" fontFamily="syncopate">
           the evolution
         </Label>

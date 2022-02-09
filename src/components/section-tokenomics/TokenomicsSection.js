@@ -90,6 +90,8 @@ const TokenomicsSection = () => {
     >
       <marquee className="marquee" scrollamount="20">
         <TokenomicsIcon />
+
+        <TokenomicsIcon />
       </marquee>
 
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />

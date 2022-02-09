@@ -57,7 +57,7 @@ const ProofOfDexCard = ({ proofDex }) => {
       >
         {proofDex.title}
       </Label>
-      <Label className="text-center" color="grey" size="tiny">
+      <Label className="text-center" color={proofDex.color} size="tiny">
         {proofDex.description}
       </Label>
     </STYCard>

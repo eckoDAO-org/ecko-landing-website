@@ -24,6 +24,17 @@ const STYCard = styled(FlexContainer)`
     min-width: 210px !important;
     max-width: 210px !important;
   }
+
+  &:hover {
+    .partners-title {
+      text-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
+    }
+    box-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
+    svg {
+      -webkit-filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
+      filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
+    }
+  }
 `;
 
 const PartnerCard = ({ partner }) => {
@@ -31,7 +42,7 @@ const PartnerCard = ({ partner }) => {
     <STYCard className="column align-ce" color={partner.color} tabletClassName="justify-sb">
       <div>{partner.icon}</div>
       <Label
-        className="text-center"
+        className="partners-title text-center"
         color={partner.color}
         size="normal"
         desktopStyle={{ marginTop: 55, marginBottom: 40 }}

@@ -25,7 +25,7 @@ const TokenomicsCard = ({ tokenomics }) => {
       <Label className="text-fs rainbow" gradientColors={tokenomics.gradientColors} size="small" fontFamily="syncopate">
         {tokenomics.title}
       </Label>
-      <Label className="text-fs" color="primary" size="nano">
+      <Label className="text-fs" color="white" size="nano">
         {tokenomics.description}
       </Label>
     </STYCard>
