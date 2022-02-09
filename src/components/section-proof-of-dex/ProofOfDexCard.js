@@ -18,6 +18,18 @@ const STYCard = styled(FlexContainer)`
       fill: ${({ color }) => `${getColor(color)}`};
     }
   }
+  :not(&.disabled) {
+    &:hover {
+      .proof-title {
+        text-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
+      }
+      box-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
+      svg {
+        -webkit-filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
+        filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
+      }
+    }
+  }
 
   @media (max-width: 1520px) {
     width: 160px;
@@ -32,10 +44,10 @@ const STYCard = styled(FlexContainer)`
 
 const ProofOfDexCard = ({ proofDex }) => {
   return (
-    <STYCard className="column align-ce" color={proofDex.color}>
+    <STYCard className={`column align-ce ${proofDex.className}`} color={proofDex.color}>
       <div>{proofDex.icon}</div>
       <Label
-        className="text-center"
+        className="proof-title text-center"
         color={proofDex.color}
         size="medium"
         desktopStyle={{ marginTop: 55, marginBottom: 34 }}

@@ -15,11 +15,11 @@ const STYCard = styled(FlexContainer)`
 
   &:hover {
     .feature-title {
-      text-shadow: ${({ color }) => `0 0 5px ${getColor(color)}`};
+      text-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
     }
     svg {
-      -webkit-filter: ${({ color }) => `drop-shadow( 0 0 5px ${getColor(color)})`};
-      filter: ${({ color }) => `drop-shadow( 0 0 5px ${getColor(color)})`};
+      -webkit-filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
+      filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
     }
   }
 `;

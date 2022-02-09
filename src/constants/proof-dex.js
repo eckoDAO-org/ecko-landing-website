@@ -20,6 +20,7 @@ export const PROOF_DEX_STAKE = {
   title: 'Stake',
   description: 'Stake KDX and earn 0.05% of all trades',
   color: 'grey',
+  className: 'disabled',
 };
 export const PROOF_DEX_LENDING = {
   key: 'LENDING',
@@ -27,6 +28,7 @@ export const PROOF_DEX_LENDING = {
   title: 'Lend',
   description: 'Leverage our upcoming DeFi tools',
   color: 'grey',
+  className: 'disabled',
 };
 
 export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_LENDING];

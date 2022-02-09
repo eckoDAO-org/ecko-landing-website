@@ -85,4 +85,10 @@ export default createGlobalStyle`
         display: none !important;
       }
     }
+
+    .mobile-only {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+        display: none !important;
+      }
+    }
 `;
