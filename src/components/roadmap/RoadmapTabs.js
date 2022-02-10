@@ -25,7 +25,11 @@ const RoadmapTabs = ({ translateX, selectedRoadmap, setSelectedRoadmap }) => {
           {R_2021.id}
         </Label>
       </FlexContainer>
-      <FlexContainer className="justify-ce" id={`tab-${R_2022.id}`} style={{ minWidth: width - 400 }}>
+      <FlexContainer
+        className="justify-ce"
+        id={`tab-${R_2022.id}`}
+        style={{ minWidth: width <= theme.mediaQueries.mobilePixel ? width - 100 : width - 400 }}
+      >
         <Label
           fontFamily="syncopate"
           color={selectedRoadmap.id === R_2022.id ? 'pink' : 'white'}

@@ -472,29 +472,29 @@ const MobileRoadmap2022 = () => {
         id="Mobile-Line_585"
         data-name="Line 585"
         x2="331"
-        transform="translate(0 9.5)"
+        transform="translate(0 10)"
         fill="none"
         stroke={theme.colors.primary}
-        strokeWidth="3"
+        strokeWidth="2"
       />
       <path
         id="Path_44414"
         data-name="Path 44414"
         d="M-369.859-11.545a20.282,20.282,0,0,1,20.331,20v71a20,20,0,0,1-20,20"
-        transform="translate(700 21)"
+        transform="translate(700 21.5)"
         fill="none"
         stroke="#7efbfa"
-        strokeWidth="3"
+        strokeWidth="2"
       />
 
       <line
         id="Mobile-Line_585"
         data-name="Line 585"
         x2="289"
-        transform="translate(42 120.5)"
+        transform="translate(42 121)"
         fill="none"
         stroke={theme.colors.primary}
-        strokeWidth="3"
+        strokeWidth="2"
       />
     </svg>
   );

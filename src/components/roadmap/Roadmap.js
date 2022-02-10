@@ -39,10 +39,9 @@ const RoadmapContainer = styled(FlexContainer)`
   }
 `;
 
-const TRANSLATE_X_OFFSET = 64;
-
 const Roadmap = () => {
   const [width] = useWindowSize();
+  const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
   const [selectedRoadmap, setSelectedRoadmap] = useState(R_2022);
   const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
 

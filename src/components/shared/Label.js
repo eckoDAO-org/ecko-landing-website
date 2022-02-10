@@ -96,7 +96,6 @@ const Label = ({
   fontFamily,
   fontSize,
   size,
-  lineHeight,
   color,
   style,
   desktopStyle,
@@ -129,7 +128,6 @@ const Label = ({
       fontSize={fontSize}
       size={size}
       onClick={onClick}
-      lineHeight={lineHeight}
       style={{
         fontFamily: theme.fontFamily[fontFamily],
         ...style,
