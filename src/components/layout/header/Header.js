@@ -54,7 +54,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const DesktopHeader = () => {
+const Header = () => {
   const history = useHistory();
 
   const [isSticky, setIsSticky] = useState(false);
@@ -97,4 +97,4 @@ const DesktopHeader = () => {
   );
 };
 
-export default DesktopHeader;
+export default Header;

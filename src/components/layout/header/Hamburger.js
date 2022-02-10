@@ -10,7 +10,7 @@ const Container = styled(FlexContainer)`
   background: linear-gradient(114.43deg, rgba(29, 36, 47, 0.9) 5.17%, rgba(15, 16, 36, 0.9) 65.62%);
   backdrop-filter: blur(10px);
   /* Note: backdrop-filter has minimal browser support */
-
+  z-index: 100;
   border-radius: 40px;
   top: 0px;
   left: 0px;

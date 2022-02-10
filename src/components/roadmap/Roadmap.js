@@ -20,6 +20,10 @@ const RoadmapWrapper = styled(FlexContainer)`
   border-radius: 60px;
   padding-top: 150px;
   padding-bottom: 90px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    padding: 80px 0px;
+  }
 `;
 
 const RoadmapContainer = styled(FlexContainer)`

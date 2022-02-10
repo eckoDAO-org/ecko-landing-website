@@ -92,7 +92,7 @@ const MobileRoadmap2022 = () => {
           transform="translate(0 -4328)"
           fill="none"
           stroke={whiteGrey}
-          strokeWidth="2"
+          strokeWidth="3"
           strokeDasharray="8 8"
         />
         <path
@@ -475,7 +475,7 @@ const MobileRoadmap2022 = () => {
         transform="translate(0 10)"
         fill="none"
         stroke={theme.colors.primary}
-        strokeWidth="2"
+        strokeWidth="3"
       />
       <path
         id="Path_44414"
@@ -484,7 +484,7 @@ const MobileRoadmap2022 = () => {
         transform="translate(700 21.5)"
         fill="none"
         stroke={theme.colors.primary}
-        strokeWidth="2"
+        strokeWidth="3"
       />
 
       <line
@@ -494,7 +494,7 @@ const MobileRoadmap2022 = () => {
         transform="translate(42 121)"
         fill="none"
         stroke={theme.colors.primary}
-        strokeWidth="2"
+        strokeWidth="3"
       />
     </svg>
   );
