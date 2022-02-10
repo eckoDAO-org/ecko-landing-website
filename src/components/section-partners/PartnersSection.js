@@ -15,7 +15,7 @@ import {
   PARTNER_UFO_GAMING,
   PARTNER_ZELCORE,
 } from '../../constants/partners';
-import theme, { getColor } from '../../styles/theme';
+import theme from '../../styles/theme';
 import { useEffect, useState } from 'react/cjs/react.development';
 
 const PartnersContainer = styled(FlexContainer)`

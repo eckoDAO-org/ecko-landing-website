@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React from 'react';
 import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';

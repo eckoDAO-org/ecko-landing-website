@@ -4,7 +4,7 @@ import theme from '../../../styles/theme';
 const MobileRoadmap2021 = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="354.999" height="550" viewBox="0 0 354.999 550">
-      <g id="Mobile-Roadmap_2021_mobile" data-name="Roadmap 2021_mobile" transform="translate(-20 -413)">
+      <g id="Mobile-Roadmap_2021_mobile" data-name="Roadmap 2021_mobile" transform="translate(-20 -413.2)">
         <text
           id="Mobile-Team_Formation"
           data-name="Team Formation"
