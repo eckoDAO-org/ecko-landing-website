@@ -44,9 +44,5 @@ export { ReactComponent as TelegramIcon } from './images/social-media/telegram.s
 export { ReactComponent as TwitterIcon } from './images/social-media/twitter.svg';
 
 // ROADMAP
-export { ReactComponent as Roadmap2022Icon } from './images/roadmap/roadmap-2022.svg';
-export { ReactComponent as Roadmap2021Icon } from './images/roadmap/roadmap-2021.svg';
-export { ReactComponent as RoadmapOnGoingIcon } from './images/roadmap/roadmap-ongoing.svg';
 export { ReactComponent as RoadmapFlagcon } from './images/roadmap/roadmap-flag.svg';
 export { ReactComponent as RoadmapEllipseShadowIcon } from './images/roadmap/roadmap-ellipse-shadow.svg';
-export { ReactComponent as RoadmapArrowsIcon } from './images/roadmap/roadmap-arrows.svg';

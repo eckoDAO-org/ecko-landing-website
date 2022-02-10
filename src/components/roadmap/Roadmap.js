@@ -6,7 +6,6 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.png';
 import { R_2021, R_2022, R_ONGOING } from '../../constants/roadmaps';
-import { RoadmapArrowsIcon } from '../../assets';
 import theme from '../../styles/theme';
 import RoadmapTabs from './RoadmapTabs';
 
