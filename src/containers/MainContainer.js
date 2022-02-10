@@ -6,6 +6,7 @@ import PartnersSection from '../components/section-partners/PartnersSection';
 import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
 import Roadmap from '../components/roadmap/Roadmap';
 import { FlexContainer } from '../components/shared/Container';
+import TeamsSection from '../components/section-teams/TeamsSection';
 
 const MainContainer = () => {
   return (
@@ -16,6 +17,7 @@ const MainContainer = () => {
       <TokenomicsSection />
       <Roadmap />
       <PartnersSection />
+      <TeamsSection />
     </FlexContainer>
   );
 };
