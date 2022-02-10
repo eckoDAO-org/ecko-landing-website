@@ -483,7 +483,7 @@ const MobileRoadmap2022 = () => {
         d="M-369.859-11.545a20.282,20.282,0,0,1,20.331,20v71a20,20,0,0,1-20,20"
         transform="translate(700 21.5)"
         fill="none"
-        stroke="#7efbfa"
+        stroke={theme.colors.primary}
         strokeWidth="2"
       />
 

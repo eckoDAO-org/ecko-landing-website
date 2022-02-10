@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
+import Hamburger from './Hamburger';
 import HeaderItems from './HeaderItems';
 
 const Container = styled(FlexContainer)`
@@ -44,8 +45,11 @@ const Container = styled(FlexContainer)`
     @media (max-width: 860px) and (min-width: 800px) {
       margin-right: 15%;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 800px) and (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
       margin-right: 10%;
+    }
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+      margin-right: unset;
     }
   }
 `;
@@ -76,15 +80,17 @@ const DesktopHeader = () => {
 
   return (
     <div>
-      <Container id="header-section">
+      <Container mobileClassName="justify-ce" id="header-section">
         <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-        <HeaderItems />
+        <HeaderItems className="mobile-none" />
+        <Hamburger />
       </Container>
 
       {isSticky && (
-        <Container isSticky={isSticky}>
+        <Container mobileClassName="justify-ce" isSticky={isSticky}>
           <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-          <HeaderItems />
+          <HeaderItems className="mobile-none" />
+          <Hamburger />
         </Container>
       )}
     </div>

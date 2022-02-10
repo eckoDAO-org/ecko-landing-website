@@ -14,35 +14,35 @@ const Item = styled.a`
   }
 `;
 
-const HeaderItems = () => {
+const HeaderItems = ({ className }) => {
   return (
-    <FlexContainer className="align-ce" gap={24}>
-      <HeaderItem className="mobile-none" href="/#features">
-        Features
-      </HeaderItem>
-      <HeaderItem className="mobile-none" href="#tokenomics">
-        Tokenomics
-      </HeaderItem>
-      <HeaderItem className="mobile-none" href="/#roadmap">
-        Roadmap
-      </HeaderItem>
-      <HeaderItem className="mobile-none" href="/#partners">
-        Partners
-      </HeaderItem>
-      <HeaderItem className="mobile-none" href="https://xwallet.kaddex.com" target="_blank">
+    <FlexContainer className={`align-ce ${className}`} gap={24}>
+      <HeaderItem href="/#features">Features</HeaderItem>
+      <HeaderItem href="#tokenomics">Tokenomics</HeaderItem>
+      <HeaderItem href="/#roadmap">Roadmap</HeaderItem>
+      <HeaderItem href="/#partners">Partners</HeaderItem>
+      <HeaderItem href="https://xwallet.kaddex.com" target="_blank">
         X-Wallet
       </HeaderItem>
     </FlexContainer>
   );
 };
 
-const HeaderItem = ({ id, className, href, children }) => {
+export const HeaderItem = ({ id, className, href, children, fontSize, onClick }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <Item id={id} className={className} href={href} hover={hover} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <Item
+      id={id}
+      className={className}
+      href={href}
+      hover={hover}
+      onClick={onClick}
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
       <>
-        <Label className="capitalize" size="small">
+        <Label className="capitalize" size="small" fontSize={fontSize}>
           {children}
         </Label>
         <div className="underline"></div>
