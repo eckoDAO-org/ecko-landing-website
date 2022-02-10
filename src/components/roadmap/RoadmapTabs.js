@@ -11,16 +11,16 @@ const TabsContainer = styled(FlexContainer)`
   transform: ${({ translateX }) => `translateX(${translateX})`};
 `;
 
-const RoadmapTabs = ({ translateX, selectedRoadmap, setSelectedRoadmap }) => {
+const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId }) => {
   const [width] = useWindowSize();
   return (
     <TabsContainer id="tabs-container" translateX={translateX} style={{ width }}>
       <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmap.id === R_2021.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_2021.id ? 'pink' : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmap(R_2021)}
+          onClick={() => setSelectedRoadmapId(R_2021.id)}
         >
           {R_2021.id}
         </Label>
@@ -32,9 +32,9 @@ const RoadmapTabs = ({ translateX, selectedRoadmap, setSelectedRoadmap }) => {
       >
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmap.id === R_2022.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_2022.id ? 'pink' : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmap(R_2022)}
+          onClick={() => setSelectedRoadmapId(R_2022.id)}
         >
           {R_2022.id}
         </Label>
@@ -42,9 +42,9 @@ const RoadmapTabs = ({ translateX, selectedRoadmap, setSelectedRoadmap }) => {
       <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmap.id === R_ONGOING.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_ONGOING.id ? 'pink' : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmap(R_ONGOING)}
+          onClick={() => setSelectedRoadmapId(R_ONGOING.id)}
         >
           {R_ONGOING.id}
         </Label>

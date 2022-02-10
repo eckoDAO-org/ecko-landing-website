@@ -46,25 +46,38 @@ const RoadmapContainer = styled(FlexContainer)`
 const Roadmap = () => {
   const [width] = useWindowSize();
   const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
-  const [selectedRoadmap, setSelectedRoadmap] = useState(R_2022);
   const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
+
+  const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2022.id);
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
 
-  useEffect(() => {
-    if (selectedRoadmap && roadmapsContainer) {
-      const roadmap = document.getElementById(`roadmap-${selectedRoadmap.id}`);
+  // const onRoadmapScroll = () => {
+  //   console.log('roadmapsContainer.scrollLeft', roadmapsContainer.scrollLeft);
+  //   if (roadmapsContainer.scrollLeft < width / 2 - width / 4) {
+  //     setSelectedRoadmapId(R_2021.id);
+  //   } else if (roadmapsContainer.scrollLeft > width * 2 - width / 6) {
+  //     setSelectedRoadmapId(R_ONGOING.id);
+  //   } else {
+  //     setSelectedRoadmapId(R_2022.id);
+  //   }
+  // };
 
+  useEffect(() => {
+    if (roadmapsContainer) {
+      // roadmapsContainer.addEventListener('scroll', onRoadmapScroll);
+      const roadmap = document.getElementById(`roadmap-${selectedRoadmapId}`);
       roadmapsContainer.scrollTo(roadmap.offsetLeft, 0);
-      if (selectedRoadmap.id === R_2021.id) {
+      if (selectedRoadmapId === R_2021.id) {
         setTranslateX(`calc(50% - ${TRANSLATE_X_OFFSET}px)`);
-      } else if (selectedRoadmap.id === R_ONGOING.id) {
+      } else if (selectedRoadmapId === R_ONGOING.id) {
         setTranslateX(`calc(-50% - ${TRANSLATE_X_OFFSET}px)`);
       } else {
         setTranslateX(`-${TRANSLATE_X_OFFSET}px`);
       }
+      // return () => roadmapsContainer.removeEventListener('scroll', onRoadmapScroll);
     }
-  }, [selectedRoadmap, roadmapsContainer]);
+  }, [selectedRoadmapId, roadmapsContainer]);
 
   return (
     <RoadmapWrapper id="roadmap" className="column scroll-mt relative" gap={120} desktopPixel={1460} style={{ marginTop: 100 }}>
@@ -75,7 +88,7 @@ const Roadmap = () => {
       </Label>
 
       {width <= theme.mediaQueries.mobilePixel && (
-        <RoadmapTabs selectedRoadmap={selectedRoadmap} setSelectedRoadmap={setSelectedRoadmap} translateX={translateX} />
+        <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
 
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
@@ -90,7 +103,7 @@ const Roadmap = () => {
         </FlexContainer>
       </RoadmapContainer>
       {width >= theme.mediaQueries.mobilePixel && (
-        <RoadmapTabs selectedRoadmap={selectedRoadmap} setSelectedRoadmap={setSelectedRoadmap} translateX={translateX} />
+        <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
     </RoadmapWrapper>
   );
