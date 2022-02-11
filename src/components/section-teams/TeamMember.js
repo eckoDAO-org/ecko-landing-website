@@ -29,7 +29,7 @@ const TeamMember = ({ selectedMember }) => {
           {selectedMember.role}
         </Label>
 
-        <Label color="white" size="normal">
+        <Label color="white" size="normal" style={{ lineHeight: '32px', letterSpacing: '-2.4px' }}>
           {selectedMember.description}
         </Label>
       </FlexContainer>
