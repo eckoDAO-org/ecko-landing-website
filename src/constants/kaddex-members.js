@@ -243,7 +243,7 @@ const CARLES_ALONSO = {
   id: 19,
   firstname: 'Carles',
   lastname: 'Alonso',
-  role: ROLE_ADVISOR.role,
+  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
   description:
     'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
 };
@@ -252,7 +252,7 @@ const BRANDON_CHONG = {
   id: 20,
   firstname: 'Brandon',
   lastname: 'Chong',
-  role: ROLE_ADVISOR.role,
+  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
   description:
     'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
   linkedin: 'https://www.linkedin.com/in/brandonwchong/',
@@ -262,7 +262,7 @@ const EMILIY_PILLMORE = {
   id: 17,
   firstname: 'Emily',
   lastname: 'Pillmore',
-  role: ROLE_ADVISOR.role,
+  role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
   description: '',
   linkedin: 'https://www.linkedin.com/in/emily-pillmore-453630ab/',
   twitter: 'https://twitter.com/bkmlep',
@@ -272,7 +272,7 @@ const FRANCESCO_MELPIGNANO = {
   id: 18,
   firstname: 'Francesco',
   lastname: 'Melpignano',
-  role: ROLE_ADVISOR.role,
+  role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
   description: '',
   twitter: 'https://twitter.com/fmelp',
 };
