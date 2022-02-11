@@ -27,9 +27,9 @@ const ROLE_BD = {
   short: 'BD',
   role: 'Business Development',
 };
-const ROLE_HoC = {
-  short: 'HoC',
-  role: 'Head of Community',
+const ROLE_CGO = {
+  short: 'CGO',
+  role: 'Chief Governance Officer',
 };
 const ROLE_CMO = {
   short: 'CMO',
@@ -88,7 +88,7 @@ const GRANT_GERBGER = {
   id: 3,
   firstname: 'Grant',
   lastname: 'Gerber',
-  role: ROLE_HoC.role,
+  role: ROLE_CGO.role,
   description:
     'Hey everyone! My name is Grant Gerber, Aka KDX Frogman, I run Community for Kaddex! I manage the social channels, communications, and have been working closely with the rest of the team to design a powerful and robust governance system. My background is in communications, with an emphasis on community management in dynamic environments. I have worked on a few other DeFi projects and DAOs such as Fei Protocol on the community side of things and have been semi involved in crypto since 2018. I firmly believe that DeFi and DAO’s are a means to revolutionize how we think about work and the future of management. My main interest in DeFi is truly democratizing the governance process through trust signaling, and deterministically recognizing meaningful contributions. Too often systems only recognize those already in power and not the ones who seek to create positive change, I will change that! Outside of Kaddex you can find me spinning records (I’m not DJ Kaddex), working on vintage motorbikes and vehicles, and helping to build the metaverse!',
   photo: grantGerberPhoto,
