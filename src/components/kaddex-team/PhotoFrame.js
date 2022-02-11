@@ -28,7 +28,7 @@ const PhotoFrame = ({ photo, size }) => {
         };
       case 'nano':
         return {
-          frameSize: 60,
+          frameSize: 70,
           photoSize: 'calc(100% - 4px)',
         };
       default:

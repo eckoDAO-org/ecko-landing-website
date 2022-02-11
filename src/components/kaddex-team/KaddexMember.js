@@ -23,6 +23,26 @@ const Container = styled(FlexContainer)`
 
 const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   const [width] = useWindowSize();
+
+  const getSize = () => {
+    if (width >= 1200) {
+      return 'huge';
+    }
+    if (width < 1200 && width >= DESKTOP_PIXEL) {
+      return 'big';
+    }
+
+    if (width < DESKTOP_PIXEL && width >= MOBILE_PIXEL) {
+      return 'normal';
+    }
+
+    if (width < MOBILE_PIXEL && width >= 420) {
+      return 'small';
+    }
+    if (width < 420) {
+      return 'nano';
+    }
+  };
   return (
     <Container
       gap={50}
@@ -34,12 +54,12 @@ const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
     >
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
-          <PhotoFrame photo={selectedMember.photo} size={width >= 1200 ? 'huge' : 'big'} />
+          <PhotoFrame photo={selectedMember.photo} size={getSize()} />
           <KaddexMemberSocials selectedMember={selectedMember} style={{ marginTop: 48 }} />
         </FlexContainer>
       ) : (
         <FlexContainer gap={24}>
-          <PhotoFrame size={width >= MOBILE_PIXEL ? 'small' : 'tiny'} photo={selectedMember.photo} />
+          <PhotoFrame size={getSize()} photo={selectedMember.photo} />
           <FlexContainer className="column justify-sa">
             <KaddexMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />
             <KaddexMemberSocials selectedMember={selectedMember} />
