@@ -60,6 +60,9 @@ export const STYFlexContainer = styled.div`
     }
     scrollbar-width: none;
   }
+  &.pointer {
+    cursor: pointer;
+  }
 
   &.scroll-mt {
     scroll-margin-top: 100px;
@@ -201,7 +204,7 @@ export const STYFlexContainer = styled.div`
 
   &.grid {
     display: grid;
-    grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
+    grid-template-columns: ${({ columns, px }) => `repeat(${columns}, ${px ? `${px}px` : '1fr'})`};
     row-gap: 30px;
     column-gap: ${({ gridColumnGap = 30 }) => gridColumnGap}px;
   }

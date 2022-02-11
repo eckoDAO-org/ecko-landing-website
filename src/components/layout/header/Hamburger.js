@@ -21,19 +21,19 @@ const Hamburger = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [width, height] = useWindowSize();
   return (
-    <FlexContainer className="mobile-only absolute pointer" style={{ right: 24 }}>
+    <FlexContainer className="absolute pointer" style={{ right: 24 }}>
       <HamburgerIcon onClick={() => setShowPopup((prev) => !prev)} />
 
       {showPopup && (
         <Container className="column fixed justify-sb align-ce" style={{ width, height }} gap={12}>
-          <FlexContainer className="absolute cursor" style={{ right: 20, top: 60 }} onClick={() => setShowPopup(false)}>
+          <FlexContainer className="absolute cursor" style={{ right: 40, top: 60 }} onClick={() => setShowPopup(false)}>
             <CloseIcon />
           </FlexContainer>
 
           <HeaderItem href="/#features" fontSize={25} onClick={() => setShowPopup(false)}>
             Features
           </HeaderItem>
-          <HeaderItem href="#tokenomics" fontSize={25} onClick={() => setShowPopup(false)}>
+          <HeaderItem href="/#tokenomics" fontSize={25} onClick={() => setShowPopup(false)}>
             Tokenomics
           </HeaderItem>
           <HeaderItem href="/#roadmap" fontSize={25} onClick={() => setShowPopup(false)}>
@@ -42,6 +42,10 @@ const Hamburger = () => {
           <HeaderItem href="/#partners" fontSize={25} onClick={() => setShowPopup(false)}>
             Partners
           </HeaderItem>
+          <HeaderItem href="/#team" fontSize={25} onClick={() => setShowPopup(false)}>
+            Team
+          </HeaderItem>
+
           <HeaderItem href="https://xwallet.kaddex.com" target="_blank" fontSize={25} onClick={() => setShowPopup(false)}>
             X-Wallet
           </HeaderItem>

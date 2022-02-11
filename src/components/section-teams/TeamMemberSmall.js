@@ -1,24 +1,25 @@
 import React from 'react';
-import { TwitterIcon } from '../../assets';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import PhotoFrame from './PhotoFrame';
 
-const TeamMemberSmall = ({ member }) => {
+const TeamMemberSmall = ({ member, onClick }) => {
   return (
-    <FlexContainer gap={16} className="column align-ce">
-      <PhotoFrame style={{ height: 148, width: 148 }} />
+    <a href="/#team">
+      <FlexContainer className="column align-ce pointer" style={{ width: 206 }} onClick={onClick}>
+        <PhotoFrame photo={member.photo} size="small" />
 
-      <Label color="yellow" fontFamily="syncopate" fontSize={20}>
-        {member.firstname}
-      </Label>
-      <Label color="yellow" fontFamily="syncopate" fontSize={20}>
-        {member.lastname}
-      </Label>
-      <Label color="yellow" fontSize={15}>
-        {member.role}
-      </Label>
-    </FlexContainer>
+        <Label color="yellow" fontFamily="syncopate" size="normal" style={{ marginTop: 8 }}>
+          {member.firstname}
+        </Label>
+        <Label color="yellow" fontFamily="syncopate" size="normal">
+          {member.lastname}
+        </Label>
+        <Label className="text-center" color="yellow" size="nano">
+          {member.role}
+        </Label>
+      </FlexContainer>
+    </a>
   );
 };
 

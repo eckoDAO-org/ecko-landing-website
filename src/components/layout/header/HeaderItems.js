@@ -18,9 +18,10 @@ const HeaderItems = ({ className }) => {
   return (
     <FlexContainer className={`align-ce ${className}`} gap={24}>
       <HeaderItem href="/#features">Features</HeaderItem>
-      <HeaderItem href="#tokenomics">Tokenomics</HeaderItem>
+      <HeaderItem href="/#tokenomics">Tokenomics</HeaderItem>
       <HeaderItem href="/#roadmap">Roadmap</HeaderItem>
       <HeaderItem href="/#partners">Partners</HeaderItem>
+      <HeaderItem href="/#team">Team</HeaderItem>
       <HeaderItem href="https://xwallet.kaddex.com" target="_blank">
         X-Wallet
       </HeaderItem>

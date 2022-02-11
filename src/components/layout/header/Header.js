@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import styled, { css } from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
+import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
 import Hamburger from './Hamburger';
@@ -39,16 +40,22 @@ const Container = styled(FlexContainer)`
   .kaddex-logo {
     cursor: pointer;
     margin-right: 30%;
-    @media (max-width: 960px) and (min-width: 860px) {
+    @media (max-width: 1120px) and (min-width: 1050px) {
+      margin-right: 25%;
+    }
+    @media (max-width: 1050px) and (min-width: 960px) {
       margin-right: 20%;
     }
-    @media (max-width: 860px) and (min-width: 800px) {
+    @media (max-width: 960px) and (min-width: 870px) {
       margin-right: 15%;
     }
-    @media (max-width: 800px) and (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    @media (max-width: 870px) and (min-width: 830px) {
       margin-right: 10%;
     }
-    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+    @media (max-width: 830px) and (min-width: 800px) {
+      margin-right: 5%;
+    }
+    @media (max-width: 799px) {
       margin-right: unset;
     }
   }
@@ -56,6 +63,7 @@ const Container = styled(FlexContainer)`
 
 const Header = () => {
   const history = useHistory();
+  const [width] = useWindowSize();
 
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
@@ -80,17 +88,17 @@ const Header = () => {
 
   return (
     <div>
-      <Container mobileClassName="justify-ce" id="header-section">
+      <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" id="header-section">
         <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-        <HeaderItems className="mobile-none" />
-        <Hamburger />
+        {width >= 800 && <HeaderItems />}
+        {width < 800 && <Hamburger />}
       </Container>
 
       {isSticky && (
-        <Container mobileClassName="justify-ce" isSticky={isSticky}>
+        <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
           <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-          <HeaderItems className="mobile-none" />
-          <Hamburger />
+          {width >= 800 && <HeaderItems />}
+          {width < 800 && <Hamburger />}
         </Container>
       )}
     </div>

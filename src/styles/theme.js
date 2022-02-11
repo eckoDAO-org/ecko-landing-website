@@ -71,6 +71,7 @@ export const theme = {
     bold: 'montserrat-bold',
     boldItalic: 'montserrat-bold-italic',
     syncopate: 'syncopate-bold',
+    'syncopate-regular': 'syncopate-regular',
     basier: 'basier-square-mono-regular',
   },
   ...configuration,
