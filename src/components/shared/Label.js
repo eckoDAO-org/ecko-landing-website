@@ -5,7 +5,7 @@ import { getColor, theme } from '../../styles/theme';
 import useWindowSize from '../../hooks/useWindowSize';
 
 const getConfiguration = (configuration, size, type) => {
-  return theme[configuration][size][type];
+  return theme?.[configuration]?.[size]?.[type] || -1;
 };
 
 const STYText = styled.span`
@@ -22,7 +22,7 @@ const STYText = styled.span`
     font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'tablet') : fontSize)}px;
     line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'tablet')}px;
   }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries }, mobilePixel }) => (mobilePixel ? `${mobilePixel - 1}px` : `${mediaQueries.mobilePixel - 1}px`)}) {
     font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'mobile') : fontSize)}px;
     line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'mobile')}px;
   }
@@ -90,6 +90,7 @@ const Label = ({
   tabletClassName,
   mobileClassName,
   desktopPixel,
+  mobilePixel,
   gradientColors,
   gradient,
   children,
@@ -113,7 +114,7 @@ const Label = ({
     if (width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
       classname = `${classname} ${tabletClassName} `;
     }
-    if (width < theme.mediaQueries.mobilePixel && mobileClassName) {
+    if (width < (mobilePixel || theme.mediaQueries.mobilePixel) && mobileClassName) {
       classname = `${classname} ${mobileClassName} `;
     }
     return classname;
@@ -128,12 +129,13 @@ const Label = ({
       fontSize={fontSize}
       size={size}
       onClick={onClick}
+      mobilePixel={mobilePixel}
       style={{
         fontFamily: theme.fontFamily[fontFamily],
         ...style,
         ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
         ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
-        ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
+        ...(width < (mobilePixel || theme.mediaQueries.mobilePixel) && mobileStyle),
       }}
       gradientColors={gradientColors}
     >

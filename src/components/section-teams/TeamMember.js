@@ -6,11 +6,17 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import PhotoFrame from './PhotoFrame';
 
+const MOBILE_PIXEL = 560;
+
 const Container = styled(FlexContainer)`
   .social-icon {
     cursor: pointer;
     width: 32px;
     height: 32px;
+    @media (max-width: ${MOBILE_PIXEL}px) {
+      width: 16px;
+      height: 16px;
+    }
     path {
       fill: #fff;
     }
@@ -23,12 +29,12 @@ const TeamMember = ({ DESKTOP_PIXEL, selectedMember }) => {
     <Container gap={50} style={{ marginTop: 56 }} desktopPixel={DESKTOP_PIXEL} tabletClassName="column" mobileClassName="column">
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
-          <PhotoFrame photo={selectedMember.photo} />
+          <PhotoFrame photo={selectedMember.photo} size={width >= 1200 ? 'huge' : 'big'} />
           <TeamMemberSocials selectedMember={selectedMember} style={{ marginTop: 48 }} />
         </FlexContainer>
       ) : (
-        <FlexContainer gap={16}>
-          <PhotoFrame size="small" photo={selectedMember.photo} />
+        <FlexContainer gap={24}>
+          <PhotoFrame size={width >= MOBILE_PIXEL ? 'small' : 'tiny'} photo={selectedMember.photo} />
           <FlexContainer className="column justify-sa">
             <TeamMemberHeader selectedMember={selectedMember} />
             <TeamMemberSocials selectedMember={selectedMember} />
@@ -39,7 +45,7 @@ const TeamMember = ({ DESKTOP_PIXEL, selectedMember }) => {
       <FlexContainer gap={16} className="column">
         {width >= DESKTOP_PIXEL && <TeamMemberHeader selectedMember={selectedMember} />}
 
-        <Label color="white" size="normal" style={{ lineHeight: '32px' }}>
+        <Label color="white" size="normal" style={{ lineHeight: '28px' }} mobilePixel={MOBILE_PIXEL}>
           {selectedMember.description}
         </Label>
       </FlexContainer>
@@ -60,15 +66,15 @@ const TeamMemberHeader = ({ selectedMember }) => {
   return (
     <>
       <FlexContainer>
-        <Label color="yellow" fontFamily="syncopate-regular" size="large">
+        <Label color="yellow" fontFamily="syncopate-regular" mobilePixel={MOBILE_PIXEL} size="medium">
           {selectedMember.firstname}&nbsp;
         </Label>
-        <Label color="yellow" fontFamily="syncopate" size="large">
+        <Label color="yellow" fontFamily="syncopate" mobilePixel={MOBILE_PIXEL} size="medium">
           {selectedMember.lastname}
         </Label>
       </FlexContainer>
 
-      <Label color="primary" size="normal">
+      <Label color="primary" size="normal" mobilePixel={MOBILE_PIXEL}>
         {selectedMember.role}
       </Label>
     </>

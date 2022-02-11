@@ -27,7 +27,14 @@ const TeamsSection = () => {
       </Label>
       <TeamMember DESKTOP_PIXEL={DESKTOP_PIXEL} selectedMember={selectedMember} />
 
-      <FlexContainer className="justify-sb f-wrap" style={{ marginTop: 140, rowGap: 54 }} mobileStyle={{ marginTop: 26 }}>
+      <FlexContainer
+        className="grid justify-sb"
+        columns="auto-fill"
+        px={width > DESKTOP_PIXEL ? 210 : 150}
+        gridColumnGap={20}
+        style={{ marginTop: 140, rowGap: 54 }}
+        mobileStyle={{ marginTop: 26 }}
+      >
         {TEAM_MEMBERS.sort((a, b) => a.id - b.id).map((member, i) => (
           <TeamMemberSmall
             key={i}

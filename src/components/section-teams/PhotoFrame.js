@@ -5,15 +5,25 @@ import photoFrame from '../../assets/images/teams/photo-frame.png';
 const PhotoFrame = ({ photo, size }) => {
   const getConfig = () => {
     switch (size) {
-      case 'small':
+      case 'big':
+        return {
+          frameSize: 200,
+          photoSize: 'calc(100% - 14px)',
+        };
+      case 'normal':
         return {
           frameSize: 148,
           photoSize: 'calc(100% - 10px)',
         };
-      case 'tiny':
+      case 'small':
         return {
           frameSize: 120,
           photoSize: 'calc(100% - 8px)',
+        };
+      case 'tiny':
+        return {
+          frameSize: 80,
+          photoSize: 'calc(100% - 4px)',
         };
       default:
         return {

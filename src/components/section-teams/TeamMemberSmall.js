@@ -18,7 +18,7 @@ const TeamMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick
   return (
     <a href="/#team">
       <Container DESKTOP_PIXEL={DESKTOP_PIXEL} className="column align-ce pointer" isActive={selectedMember.id === member.id} onClick={onClick}>
-        <PhotoFrame photo={member.photo} size={width >= DESKTOP_PIXEL ? 'small' : 'tiny'} />
+        <PhotoFrame photo={member.photo} size={width >= DESKTOP_PIXEL ? 'normal' : 'small'} />
 
         <Label color={color} fontFamily="syncopate" size="normal" style={{ marginTop: 8 }}>
           {member.firstname}
