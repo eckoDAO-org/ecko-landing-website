@@ -13,7 +13,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const TeamMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
+const KaddexMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
   const [width] = useWindowSize();
 
   const getSize = () => {
@@ -46,4 +46,4 @@ const TeamMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick
   );
 };
 
-export default TeamMemberSmall;
+export default KaddexMemberSmall;

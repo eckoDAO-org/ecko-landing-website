@@ -25,7 +25,7 @@ export default createGlobalStyle`
       min-height: 100%;
       line-height: inherit;
       min-width: 0;
-      font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
+      font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
       color: ${({ theme: { colors } }) => colors.primary};
       background-attachment: fixed;
       opacity: 1;

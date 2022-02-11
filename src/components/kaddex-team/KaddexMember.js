@@ -21,7 +21,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const TeamMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
+const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   const [width] = useWindowSize();
   return (
     <Container
@@ -35,20 +35,20 @@ const TeamMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
           <PhotoFrame photo={selectedMember.photo} size={width >= 1200 ? 'huge' : 'big'} />
-          <TeamMemberSocials selectedMember={selectedMember} style={{ marginTop: 48 }} />
+          <KaddexMemberSocials selectedMember={selectedMember} style={{ marginTop: 48 }} />
         </FlexContainer>
       ) : (
         <FlexContainer gap={24}>
           <PhotoFrame size={width >= MOBILE_PIXEL ? 'small' : 'tiny'} photo={selectedMember.photo} />
           <FlexContainer className="column justify-sa">
-            <TeamMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />
-            <TeamMemberSocials selectedMember={selectedMember} />
+            <KaddexMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />
+            <KaddexMemberSocials selectedMember={selectedMember} />
           </FlexContainer>
         </FlexContainer>
       )}
 
       <FlexContainer gap={16} className="column">
-        {width >= DESKTOP_PIXEL && <TeamMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />}
+        {width >= DESKTOP_PIXEL && <KaddexMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />}
 
         <Label color="white" size="normal" style={{ lineHeight: '28px' }} mobilePixel={MOBILE_PIXEL}>
           {selectedMember.description}
@@ -58,7 +58,7 @@ const TeamMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   );
 };
 
-const TeamMemberSocials = ({ selectedMember, style }) => {
+const KaddexMemberSocials = ({ selectedMember, style }) => {
   return (
     <FlexContainer gap={24} style={style}>
       {selectedMember?.twitter && <TwitterIcon className="social-icon" />}
@@ -67,7 +67,7 @@ const TeamMemberSocials = ({ selectedMember, style }) => {
   );
 };
 
-const TeamMemberHeader = ({ selectedMember, MOBILE_PIXEL }) => {
+const KaddexMemberHeader = ({ selectedMember, MOBILE_PIXEL }) => {
   return (
     <>
       <FlexContainer>
@@ -86,4 +86,4 @@ const TeamMemberHeader = ({ selectedMember, MOBILE_PIXEL }) => {
   );
 };
 
-export default TeamMember;
+export default KaddexMember;

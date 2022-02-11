@@ -62,8 +62,6 @@ export const theme = {
     pink: '#DA3DB0',
     yellow: '#F4AC3C',
     grey: '#879BA8',
-    border: '#ECEBEC',
-    purple: '#240b2f',
   },
   fontFamily: {
     regular: 'montserrat-regular',

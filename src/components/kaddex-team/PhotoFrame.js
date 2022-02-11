@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlexContainer } from '../shared/Container';
-import photoFrame from '../../assets/images/teams/photo-frame.png';
+import photoFrame from '../../assets/images/kaddex-team/photo-frame.png';
+import user from '../../assets/images/kaddex-team/user.png';
 
 const PhotoFrame = ({ photo, size }) => {
   const getConfig = () => {
@@ -46,9 +47,9 @@ const PhotoFrame = ({ photo, size }) => {
     >
       <FlexContainer
         className="justify-ce align-ce"
-        style={{ background: 'blue', height: getConfig().photoSize, width: getConfig().photoSize, borderRadius: '50%' }}
+        style={{ background: '#909090', height: getConfig().photoSize, width: getConfig().photoSize, borderRadius: '50%' }}
       >
-        <img src={photo} style={{ height: '100%', width: '100%', borderRadius: '50%' }} alt="" />
+        <img src={photo || user} style={{ height: '100%', width: '100%', borderRadius: '50%' }} alt={''} />
       </FlexContainer>
     </FlexContainer>
   );

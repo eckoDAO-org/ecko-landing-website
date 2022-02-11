@@ -1,18 +1,18 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import { TEAM_MEMBERS } from '../../constants/team-members';
+import { KADDEX_TEAM_MEMBERS } from '../../constants/kaddex-members';
 import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
-import TeamMember from './TeamMember';
-import TeamMemberSmall from './TeamMemberSmall';
+import TeamMember from './KaddexMember';
+import TeamMemberSmall from './KaddexMemberSmall';
 
 const DESKTOP_PIXEL = 960;
 const MOBILE_PIXEL = 560;
 
-const TeamsSection = () => {
+const KaddexTeamSection = () => {
   const [width] = useWindowSize();
-  const [selectedMember, seSelectedMember] = useState(TEAM_MEMBERS[0]);
+  const [selectedMember, seSelectedMember] = useState(KADDEX_TEAM_MEMBERS[0]);
 
   const getColor = (i) => {
     if (i % 3 === 0) {
@@ -23,7 +23,12 @@ const TeamsSection = () => {
     return 'primary';
   };
   return (
-    <FlexContainer id="team" className="column" style={{ padding: '0 90px', marginTop: 150 }} mobileStyle={{ padding: '0 20px', marginTop: 100 }}>
+    <FlexContainer
+      id="team"
+      className="scroll-mt column"
+      style={{ padding: '0 90px', marginTop: 150 }}
+      mobileStyle={{ padding: '0 20px', marginTop: 100 }}
+    >
       <Label fontFamily="syncopate" size="big">
         Team
       </Label>
@@ -37,7 +42,7 @@ const TeamsSection = () => {
         style={{ marginTop: 140, rowGap: 54 }}
         mobileStyle={{ marginTop: 26 }}
       >
-        {TEAM_MEMBERS.sort((a, b) => a.id - b.id).map((member, i) => (
+        {KADDEX_TEAM_MEMBERS.sort((a, b) => a.id - b.id).map((member, i) => (
           <TeamMemberSmall
             key={i}
             color={getColor(i)}
@@ -53,4 +58,4 @@ const TeamsSection = () => {
   );
 };
 
-export default TeamsSection;
+export default KaddexTeamSection;

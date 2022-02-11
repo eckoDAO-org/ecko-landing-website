@@ -10,7 +10,7 @@ const FooterItemsList = ({ title, items, color, children }) => {
       </Label>
       {children ||
         items.map((item, i) => (
-          <Label color={color} fontSize={13}>
+          <Label key={i} color={color} fontSize={13}>
             {item.text}
           </Label>
         ))}

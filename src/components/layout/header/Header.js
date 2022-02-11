@@ -6,7 +6,7 @@ import { KaddexLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
-import NavigationItems, { NavigationItem } from '../footer/NavigationItems';
+import NavigationItems from '../footer/NavigationItems';
 import Hamburger from './Hamburger';
 
 const Container = styled(FlexContainer)`
