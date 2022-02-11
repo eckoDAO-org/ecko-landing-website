@@ -30,9 +30,9 @@ const KaddexTeamSection = () => {
         {KADDEX_TEAM_MEMBERS.sort((a, b) => a.id - b.id).map((member, i) => (
           <TeamMemberSmall
             key={i}
-            color="primary"
-            selectedMember={selectedMember}
+            gradientColors={colors[i]}
             member={member}
+            selectedMember={selectedMember}
             onClick={() => seSelectedMember(member)}
             DESKTOP_PIXEL={DESKTOP_PIXEL}
             MOBILE_PIXEL={MOBILE_PIXEL}
@@ -42,5 +42,29 @@ const KaddexTeamSection = () => {
     </FlexContainer>
   );
 };
+
+const colors = [
+  ['#66C7E3', '#71BEDA'],
+  ['#71BEDA', '#7BB6D2'],
+  ['#7BB6D2', '#86ADC9'],
+  ['#86ADC9', '#90A4C1'],
+  ['#90A4C1', '#9B9CB8'],
+  ['#9B9CB8', '#A593B0'],
+  ['#A593B0', '#B08AA7'],
+  ['#B08AA7', '#BA829F'],
+  ['#BA829F', '#BC809D'],
+  ['#BC809D', '#C57996'],
+  ['#C57996', '#C57596'],
+  ['#C57596', '#CB8294'],
+  ['#CB8294', '#D08C92'],
+  ['#D08C92', '#D69590'],
+  ['#D69590', '#DB9F8E'],
+  ['#DB9F8E', '#E1A88D'],
+  ['#E1A88D', '#E6B28B'],
+  ['#E6B28B', '#ECBB89'],
+  ['#ECBB89', '#F1C587'],
+  ['#F1C587', '#F7CE85'],
+  ['#F7CE85', '#F7EA99'],
+];
 
 export default KaddexTeamSection;

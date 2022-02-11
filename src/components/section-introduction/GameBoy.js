@@ -22,7 +22,15 @@ const GameBoy = () => {
   return (
     <FlexContainer id="gameboy-container" className="relative justify-ce">
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
-      <CircleBackground style={{ width: '90%', height: 326, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
+      <CircleBackground
+        style={{
+          width: width < theme.mediaQueries.mobilePixel ? '100%' : '90%',
+          height: width < theme.mediaQueries.mobilePixel ? 120 : 326,
+          top: '50%',
+          left: '50%',
+          transform: `translate(-50%, -50%)${width < theme.mediaQueries.mobilePixel ? ' rotate(90deg)' : ''}`,
+        }}
+      />
       <Lottie loop={false} animationData={gameboy} play={play} style={{ width: 843, height: width >= theme.mediaQueries.mobilePixel && 556 }} />
     </FlexContainer>
   );

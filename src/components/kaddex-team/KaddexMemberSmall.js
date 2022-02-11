@@ -13,7 +13,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const KaddexMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
+const KaddexMemberSmall = ({ gradientColors, DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
   const [width] = useWindowSize();
 
   const getSize = () => {
@@ -27,15 +27,32 @@ const KaddexMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onCli
       return 'nano';
     }
   };
+
   return (
     <a href="/#team">
-      <Container DESKTOP_PIXEL={DESKTOP_PIXEL} className="column align-ce pointer" isActive={selectedMember?.id === member.id} onClick={onClick}>
+      <Container
+        DESKTOP_PIXEL={DESKTOP_PIXEL}
+        className="column align-ce pointer"
+        isActive={!selectedMember || selectedMember?.id === member.id}
+        onClick={onClick}
+      >
         <PhotoFrame photo={member.photo} size={getSize()} />
 
-        <Label color={color} fontFamily="syncopate" size="normal" style={{ marginTop: 8 }}>
+        <Label
+          className="rainbow"
+          gradient={`linear-gradient(102deg, ${gradientColors[0]} 0%, ${gradientColors[1]})`}
+          fontFamily="syncopate"
+          size="normal"
+          style={{ marginTop: 8 }}
+        >
           {member.firstname}
         </Label>
-        <Label color={color} fontFamily="syncopate" size="normal">
+        <Label
+          className="rainbow"
+          gradient={`linear-gradient(102deg, ${gradientColors[0]} 0%, ${gradientColors[1]})`}
+          fontFamily="syncopate"
+          size="normal"
+        >
           {member.lastname}
         </Label>
         <Label className="text-center" color="white" size="nano">

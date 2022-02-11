@@ -84,7 +84,7 @@ const ANDREA_TULLI = {
 };
 
 const GRANT_GERBGER = {
-  id: 2,
+  id: 13,
   firstname: 'Grant',
   lastname: 'Gerber',
   role: ROLE_CGO.role,
@@ -96,7 +96,7 @@ const GRANT_GERBGER = {
 };
 
 const STEVE_D_AGOSTINO = {
-  id: 4,
+  id: 12,
   firstname: 'Steve',
   lastname: "D'Agostino",
   role: ROLE_CMO.role,
@@ -107,7 +107,7 @@ const STEVE_D_AGOSTINO = {
 };
 
 const COSIMO_BELLINI = {
-  id: 5,
+  id: 11,
   firstname: 'Cosimo',
   lastname: 'Bellini',
   role: ROLE_DESIGN.role,
@@ -118,7 +118,7 @@ const COSIMO_BELLINI = {
 };
 
 const DON_D_AGOSTINO = {
-  id: 6,
+  id: 14,
   firstname: 'Don',
   lastname: "D'Agostino",
   role: ROLE_MARKETING.role,
@@ -129,7 +129,7 @@ const DON_D_AGOSTINO = {
 };
 
 const CONRAD_BENJAMIN = {
-  id: 7,
+  id: 15,
   firstname: 'Conrad',
   lastname: 'Benjamin',
   role: ROLE_MARKETING.role,
@@ -140,7 +140,7 @@ const CONRAD_BENJAMIN = {
 };
 
 const ZEKE_TELL = {
-  id: 8,
+  id: 16,
   firstname: 'Zeke',
   lastname: 'Tell',
   role: ROLE_MARKETING.role,
@@ -150,7 +150,7 @@ const ZEKE_TELL = {
 };
 
 const ADRIAN_CARDOSO = {
-  id: 9,
+  id: 3,
   firstname: 'Adrian',
   lastname: 'Cardoso',
   role: ROLE_ENGINEERING.role,
@@ -160,7 +160,7 @@ const ADRIAN_CARDOSO = {
 };
 
 const GIUSEPPE_PACE = {
-  id: 10,
+  id: 6,
   firstname: 'Giuseppe',
   lastname: 'Pace',
   role: ROLE_ENGINEERING.role,
@@ -171,7 +171,7 @@ const GIUSEPPE_PACE = {
 };
 
 const GUGLIELMO_SPORTELLI = {
-  id: 11,
+  id: 8,
   firstname: 'Guglielmo',
   lastname: 'Sportelli',
   role: ROLE_ENGINEERING.role,
@@ -182,7 +182,7 @@ const GUGLIELMO_SPORTELLI = {
 };
 
 const FELICE_ANGELINI = {
-  id: 12,
+  id: 9,
   firstname: 'Felice',
   lastname: 'Angelini',
   role: ROLE_ENGINEERING.role,
@@ -193,7 +193,7 @@ const FELICE_ANGELINI = {
 };
 
 const ANTONIO_SEMERARO = {
-  id: 13,
+  id: 7,
   firstname: 'Antonio',
   lastname: 'Semeraro',
   role: ROLE_ENGINEERING.role,
@@ -204,7 +204,7 @@ const ANTONIO_SEMERARO = {
 };
 
 const GUSTAVO_SPELZON = {
-  id: 14,
+  id: 4,
   firstname: 'Gustavo',
   lastname: 'Spelzon',
   role: 'Smart Contracts',
@@ -214,7 +214,7 @@ const GUSTAVO_SPELZON = {
 };
 
 const KATE_OZTUNC = {
-  id: 16,
+  id: 5,
   firstname: 'Kate',
   lastname: 'Oztunc',
   role: 'Smart Contracts',
@@ -225,7 +225,7 @@ const KATE_OZTUNC = {
 };
 
 const AGOSTINO_NAPPO = {
-  id: 16,
+  id: 10,
   firstname: 'Agostino',
   lastname: 'Nappo',
   role: ROLE_ENGINEERING.role,
@@ -236,7 +236,7 @@ const AGOSTINO_NAPPO = {
 };
 
 const CARLES_ALONSO = {
-  id: 17,
+  id: 19,
   firstname: 'Carles',
   lastname: 'Alonso',
   role: ROLE_BD.role,
@@ -245,7 +245,7 @@ const CARLES_ALONSO = {
 };
 
 const BRANDON_CHONG = {
-  id: 18,
+  id: 20,
   firstname: 'Brandon',
   lastname: 'Chong',
   role: ROLE_BD.role,
@@ -255,7 +255,7 @@ const BRANDON_CHONG = {
 };
 
 const EMILIY_PILLMORE = {
-  id: 19,
+  id: 17,
   firstname: 'Emily',
   lastname: 'Pillmore',
   role: ROLE_ENGINEERING.role,
@@ -265,7 +265,7 @@ const EMILIY_PILLMORE = {
 };
 
 const FRANCESCO_MELPIGNANO = {
-  id: 20,
+  id: 18,
   firstname: 'Francesco',
   lastname: 'Melpignano',
   role: ROLE_ENGINEERING.role,
