@@ -6,7 +6,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
-import RadiusBackground, { CircleBackground } from '../shared/RadiusBackground';
+import { CircleBackground } from '../shared/RadiusBackground';
 
 const GameBoy = () => {
   const [width] = useWindowSize();
