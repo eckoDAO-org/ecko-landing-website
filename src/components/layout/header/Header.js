@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
@@ -16,25 +16,18 @@ const Container = styled(FlexContainer)`
 
   z-index: 10;
 
-  ${({ isSticky }) => {
-    if (isSticky) {
-      return css`
-        left: 0px;
-        padding: 2em 50px;
-        width: 100%;
-        position: fixed;
-        background-color: rgba(7, 6, 16, 0.5);
-        top: 0;
+  transition: all 0.5s ease;
 
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+  &.sticky {
+    z-index: 100;
+    transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-200px)')};
+    position: fixed;
+    background-color: rgba(7, 6, 16, 0.5);
+    z-index: 50;
+    width: 100%;
 
-        transition: all 0.5s ease;
-        animation: smoothScrollIn 1s forwards;
-      `;
-    }
-  }}
-  &.is-sticky {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 
   .kaddex-logo {
@@ -62,9 +55,6 @@ const Container = styled(FlexContainer)`
 `;
 
 const Header = () => {
-  const history = useHistory();
-  const [width] = useWindowSize();
-
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', handleIsSticky);
@@ -73,11 +63,23 @@ const Header = () => {
     };
   }, []);
 
-  /* Method that will fix header after a specific scrollable */
   const handleIsSticky = () => {
     const scrollTop = window.scrollY;
     scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
+
+  return (
+    <div>
+      <CommonHeader />
+      <CommonHeader className="sticky" isSticky={isSticky} />
+    </div>
+  );
+};
+
+const CommonHeader = ({ className, isSticky }) => {
+  const history = useHistory();
+  const [width] = useWindowSize();
+
   const goToTop = () => {
     history.push(ROUTE_INDEX);
     window.scrollTo({
@@ -85,31 +87,16 @@ const Header = () => {
       behavior: 'smooth',
     });
   };
-
   return (
-    <div>
-      <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" id="header-section">
-        <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-        {width >= 800 && (
-          <FlexContainer className="align-ce" gap={24}>
-            <NavigationItems />
-          </FlexContainer>
-        )}
-        {width < 800 && <Hamburger />}
-      </Container>
-
-      {isSticky && (
-        <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
-          <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-          {width >= 800 && (
-            <FlexContainer className="align-ce" gap={24}>
-              <NavigationItems />
-            </FlexContainer>
-          )}
-          {width < 800 && <Hamburger />}
-        </Container>
+    <Container desktopPixel={800} className={`align-ce ${className}`} tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
+      <KaddexLogo className="kaddex-logo" onClick={goToTop} />
+      {width >= 800 && (
+        <FlexContainer className="align-ce" gap={24}>
+          <NavigationItems />
+        </FlexContainer>
       )}
-    </div>
+      {width < 800 && <Hamburger />}
+    </Container>
   );
 };
 
