@@ -86,6 +86,9 @@ export const STYFlexContainer = styled.div`
   &.justify-sb {
     justify-content: space-between;
   }
+  &.justify-sa {
+    justify-content: space-around;
+  }
 
   &.justify-fe {
     justify-content: flex-end;

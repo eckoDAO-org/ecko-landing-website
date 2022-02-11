@@ -148,7 +148,7 @@ Label.propTypes = {
   children: PropTypes.any.isRequired,
   fontSize: PropTypes.number,
   size: PropTypes.oneOf(['huge', 'big', 'large', 'medium', 'normal', 'small', 'tiny', 'nano']),
-  fontFamily: PropTypes.oneOf(['basier', 'syncopate']),
+  fontFamily: PropTypes.oneOf(['basier', 'syncopate', 'syncopate-regular']),
   onClose: PropTypes.func,
   color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),
   gradientColors: PropTypes.arrayOf(PropTypes.string),

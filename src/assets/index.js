@@ -40,6 +40,7 @@ export { ReactComponent as TokenomicsIcon } from './images/tokenomics/tokenomics
 // SOCIAL MEDIA
 export { ReactComponent as DiscordIcon } from './images/social-media/discord.svg';
 export { ReactComponent as GithubIcon } from './images/social-media/github.svg';
+export { ReactComponent as LinkedinIcon } from './images/social-media/linkedin.svg';
 export { ReactComponent as MediumIcon } from './images/social-media/medium.svg';
 export { ReactComponent as TelegramIcon } from './images/social-media/telegram.svg';
 export { ReactComponent as TwitterIcon } from './images/social-media/twitter.svg';
