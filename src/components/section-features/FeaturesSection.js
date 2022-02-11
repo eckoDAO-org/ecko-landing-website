@@ -50,7 +50,13 @@ const FeaturesSection = () => {
       )}
 
       {width < DESKTOP_PIXEL && (
-        <FlexContainer className="w-100 grid justify-sb" columns="auto-fill" px={210} style={{ rowGap: 24 }}>
+        <FlexContainer
+          className="w-100 grid justify-sb"
+          columns="auto-fill"
+          mobileStyle={{ justifyContent: 'center' }}
+          px={210}
+          style={{ rowGap: 24 }}
+        >
           {FEATURES.map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}

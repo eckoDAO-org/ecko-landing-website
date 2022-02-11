@@ -1,6 +1,6 @@
 export const TOKENOMICS_VCS = {
   icon: '0%',
-  title: 'VCS',
+  title: 'VCs',
   description: 'Kaddex believes that large buyers go against the basic principles of Decentralization.',
   gradientColors: ['#FFF', '#FFF', '#FFF'],
 };

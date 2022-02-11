@@ -16,8 +16,8 @@ const MainContainer = () => {
       <FeaturesSection />
       <TokenomicsSection />
       <Roadmap />
-      <PartnersSection />
       <KaddexTeamSection />
+      <PartnersSection />
     </FlexContainer>
   );
 };

@@ -85,7 +85,7 @@ const ANDREA_TULLI = {
 };
 
 const GRANT_GERBGER = {
-  id: 3,
+  id: 2,
   firstname: 'Grant',
   lastname: 'Gerber',
   role: ROLE_CGO.role,

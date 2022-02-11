@@ -29,7 +29,7 @@ const KaddexMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onCli
   };
   return (
     <a href="/#team">
-      <Container DESKTOP_PIXEL={DESKTOP_PIXEL} className="column align-ce pointer" isActive={selectedMember.id === member.id} onClick={onClick}>
+      <Container DESKTOP_PIXEL={DESKTOP_PIXEL} className="column align-ce pointer" isActive={selectedMember?.id === member.id} onClick={onClick}>
         <PhotoFrame photo={member.photo} size={getSize()} />
 
         <Label color={color} fontFamily="syncopate" size="normal" style={{ marginTop: 8 }}>

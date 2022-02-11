@@ -26,12 +26,13 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover }) => {
       <NavigationItem href="/#roadmap" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Roadmap
       </NavigationItem>
-      <NavigationItem href="/#partners" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
-        Partners
-      </NavigationItem>
       <NavigationItem href="/#team" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Team
       </NavigationItem>
+      <NavigationItem href="/#partners" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
+        Partners
+      </NavigationItem>
+
       <NavigationItem
         href="https://xwallet.kaddex.com"
         target="_blank"

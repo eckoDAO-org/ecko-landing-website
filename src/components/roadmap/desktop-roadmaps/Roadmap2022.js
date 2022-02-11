@@ -294,10 +294,10 @@ const Roadmap2022 = () => {
               programme
             </tspan>
             <tspan fontSize="13">
-              <tspan x="-78.746" y="50">
+              <tspan x="-74.746" y="50">
                 available for early
               </tspan>
-              <tspan x="-43.012" y="75">
+              <tspan x="-40.012" y="75">
                 investors
               </tspan>
             </tspan>

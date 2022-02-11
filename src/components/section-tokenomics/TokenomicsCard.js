@@ -17,12 +17,14 @@ const STYCard = styled(FlexContainer)`
 const TokenomicsCard = ({ tokenomics }) => {
   return (
     <STYCard className="column align-fs h-fit-content" color={tokenomics.color}>
-      <div>
-        <Label className="rainbow" fontFamily="syncopate" size="big" gradientColors={tokenomics.gradientColors}>
-          {tokenomics.icon}
-        </Label>
-      </div>
-      <Label className="text-fs rainbow" gradientColors={tokenomics.gradientColors} size="small" fontFamily="syncopate">
+      {/* <div>
+          <Label className="rainbow" fontFamily="syncopate" size="big" gradientColors={tokenomics.gradientColors}>
+            {tokenomics.icon}
+          </Label>
+        </div> */}
+
+      <Label className="text-fs rainbow" gradientColors={tokenomics.gradientColors} fontFamily="syncopate">
+        <span style={{ fontSize: 30, marginRight: 8 }}>{tokenomics.icon}</span>
         {tokenomics.title}
       </Label>
       <Label className="text-fs" color="white" size="nano">

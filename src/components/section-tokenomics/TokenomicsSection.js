@@ -96,7 +96,7 @@ const TokenomicsSection = () => {
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (
         <FlexContainer className="column w-100" gap={30} desktopPixel={1430}>
-          <FlexContainer className="align-fs wrap" style={{ rowGap: 24 }}>
+          <FlexContainer className="justify-ce wrap" style={{ rowGap: 24 }}>
             <Label
               className="rainbow"
               fontSize={65 * (width / height) > 100 ? 100 : 65 * (width / height)}
@@ -112,14 +112,6 @@ const TokenomicsSection = () => {
               fixed supply
             </Label>
           </FlexContainer>
-
-          <Label className="align-fs" color="primary" size="small" desktopStyle={{ marginTop: 32, maxWidth: 650 }}>
-            The KDX Token is used to incentivize all the liquidity stakeholders on
-            <br />
-            the Kaddex platform, while also rewarding its holders for supporting
-            <br />
-            the network
-          </Label>
         </FlexContainer>
       ) : (
         <FlexContainer className="column align-ce w-100">
@@ -150,13 +142,6 @@ const TokenomicsSection = () => {
               </Label>
             </FlexContainer>
           </FlexContainer>
-          <Label className="text-center" color="primary" size="small" desktopPixel={DESKTOP_PIXEL} style={{ marginTop: 30 }}>
-            The KDX Token is used to incentivize all the liquidity stakeholders on
-            <br />
-            the Kaddex platform, while also rewarding its holders for supporting
-            <br />
-            the network
-          </Label>
         </FlexContainer>
       )}
       <FlexContainer

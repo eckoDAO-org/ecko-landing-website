@@ -46,11 +46,12 @@ const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   return (
     <Container
       gap={50}
-      style={{ marginTop: 56 }}
+      style={{ marginBottom: 140 }}
       desktopPixel={DESKTOP_PIXEL}
       MOBILE_PIXEL={MOBILE_PIXEL}
       tabletClassName="column"
       mobileClassName="column"
+      mobileStyle={{ marginBottom: 26 }}
     >
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
