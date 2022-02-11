@@ -15,10 +15,22 @@ const Container = styled(FlexContainer)`
 
 const TeamMemberSmall = ({ DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
   const [width] = useWindowSize();
+
+  const getSize = () => {
+    if (width >= DESKTOP_PIXEL) {
+      return 'normal';
+    }
+    if (width < DESKTOP_PIXEL && width > 560) {
+      return 'small';
+    }
+    if (width < 560) {
+      return 'nano';
+    }
+  };
   return (
     <a href="/#team">
       <Container DESKTOP_PIXEL={DESKTOP_PIXEL} className="column align-ce pointer" isActive={selectedMember.id === member.id} onClick={onClick}>
-        <PhotoFrame photo={member.photo} size={width >= DESKTOP_PIXEL ? 'normal' : 'small'} />
+        <PhotoFrame photo={member.photo} size={getSize()} />
 
         <Label color={color} fontFamily="syncopate" size="normal" style={{ marginTop: 8 }}>
           {member.firstname}

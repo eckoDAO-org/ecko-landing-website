@@ -6,8 +6,8 @@ import { KaddexLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
+import NavigationItems, { NavigationItem } from '../footer/NavigationItems';
 import Hamburger from './Hamburger';
-import HeaderItems from './HeaderItems';
 
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
@@ -90,14 +90,22 @@ const Header = () => {
     <div>
       <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" id="header-section">
         <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-        {width >= 800 && <HeaderItems />}
+        {width >= 800 && (
+          <FlexContainer className="align-ce" gap={24}>
+            <NavigationItems />
+          </FlexContainer>
+        )}
         {width < 800 && <Hamburger />}
       </Container>
 
       {isSticky && (
         <Container desktopPixel={800} className="align-ce" tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
           <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-          {width >= 800 && <HeaderItems />}
+          {width >= 800 && (
+            <FlexContainer className="align-ce" gap={24}>
+              <NavigationItems />
+            </FlexContainer>
+          )}
           {width < 800 && <Hamburger />}
         </Container>
       )}

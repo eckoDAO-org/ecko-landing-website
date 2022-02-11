@@ -4,7 +4,7 @@ import {
   GovernanceIcon,
   LiquidityMiningIcon,
   MultiProtocolIcon,
-  SettlementsIcon,
+  FastestSettlementsIcon,
   StakingIcon,
   ZeroGasIcon,
 } from '../assets';
@@ -24,7 +24,7 @@ export const LIQUIDITY_MINING = {
     'LPs will have two options: 1) claim the entirety of the swapping fees (0.3%) in the pool native tokens. 2) claim rewards directly in the KDX token with a programmatic booster that will serve to attract more TVL and Volume.',
 };
 export const SETTLEMENTS = {
-  icon: <SettlementsIcon />,
+  icon: <FastestSettlementsIcon />,
   color: 'primary',
   title: 'Fastest Settlements',
   description:

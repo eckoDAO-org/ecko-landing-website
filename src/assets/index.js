@@ -28,7 +28,7 @@ export { ReactComponent as DecentralizedIcon } from './images/features/decentral
 export { ReactComponent as GovernanceIcon } from './images/features/governance.svg';
 export { ReactComponent as LiquidityMiningIcon } from './images/features/liquidity-mining.svg';
 export { ReactComponent as MultiProtocolIcon } from './images/features/multi-protocol.svg';
-export { ReactComponent as SettlementsIcon } from './images/features/settlements.svg';
+export { ReactComponent as FastestSettlementsIcon } from './images/features/fastest-settlements.svg';
 export { ReactComponent as StakingIcon } from './images/features/staking.svg';
 export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
 

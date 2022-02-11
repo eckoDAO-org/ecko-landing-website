@@ -6,14 +6,12 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import PhotoFrame from './PhotoFrame';
 
-const MOBILE_PIXEL = 560;
-
 const Container = styled(FlexContainer)`
   .social-icon {
     cursor: pointer;
     width: 32px;
     height: 32px;
-    @media (max-width: ${MOBILE_PIXEL}px) {
+    @media (max-width: ${({ MOBILE_PIXEL }) => `${MOBILE_PIXEL}px`}) {
       width: 16px;
       height: 16px;
     }
@@ -23,10 +21,17 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const TeamMember = ({ DESKTOP_PIXEL, selectedMember }) => {
+const TeamMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   const [width] = useWindowSize();
   return (
-    <Container gap={50} style={{ marginTop: 56 }} desktopPixel={DESKTOP_PIXEL} tabletClassName="column" mobileClassName="column">
+    <Container
+      gap={50}
+      style={{ marginTop: 56 }}
+      desktopPixel={DESKTOP_PIXEL}
+      MOBILE_PIXEL={MOBILE_PIXEL}
+      tabletClassName="column"
+      mobileClassName="column"
+    >
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
           <PhotoFrame photo={selectedMember.photo} size={width >= 1200 ? 'huge' : 'big'} />
@@ -36,14 +41,14 @@ const TeamMember = ({ DESKTOP_PIXEL, selectedMember }) => {
         <FlexContainer gap={24}>
           <PhotoFrame size={width >= MOBILE_PIXEL ? 'small' : 'tiny'} photo={selectedMember.photo} />
           <FlexContainer className="column justify-sa">
-            <TeamMemberHeader selectedMember={selectedMember} />
+            <TeamMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />
             <TeamMemberSocials selectedMember={selectedMember} />
           </FlexContainer>
         </FlexContainer>
       )}
 
       <FlexContainer gap={16} className="column">
-        {width >= DESKTOP_PIXEL && <TeamMemberHeader selectedMember={selectedMember} />}
+        {width >= DESKTOP_PIXEL && <TeamMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />}
 
         <Label color="white" size="normal" style={{ lineHeight: '28px' }} mobilePixel={MOBILE_PIXEL}>
           {selectedMember.description}
@@ -62,7 +67,7 @@ const TeamMemberSocials = ({ selectedMember, style }) => {
   );
 };
 
-const TeamMemberHeader = ({ selectedMember }) => {
+const TeamMemberHeader = ({ selectedMember, MOBILE_PIXEL }) => {
   return (
     <>
       <FlexContainer>

@@ -8,6 +8,8 @@ import TeamMember from './TeamMember';
 import TeamMemberSmall from './TeamMemberSmall';
 
 const DESKTOP_PIXEL = 960;
+const MOBILE_PIXEL = 560;
+
 const TeamsSection = () => {
   const [width] = useWindowSize();
   const [selectedMember, seSelectedMember] = useState(TEAM_MEMBERS[0]);
@@ -25,7 +27,7 @@ const TeamsSection = () => {
       <Label fontFamily="syncopate" size="big">
         Team
       </Label>
-      <TeamMember DESKTOP_PIXEL={DESKTOP_PIXEL} selectedMember={selectedMember} />
+      <TeamMember DESKTOP_PIXEL={DESKTOP_PIXEL} MOBILE_PIXEL={MOBILE_PIXEL} selectedMember={selectedMember} />
 
       <FlexContainer
         className="grid justify-sb"
@@ -43,6 +45,7 @@ const TeamsSection = () => {
             member={member}
             onClick={() => seSelectedMember(member)}
             DESKTOP_PIXEL={DESKTOP_PIXEL}
+            MOBILE_PIXEL={MOBILE_PIXEL}
           />
         ))}
       </FlexContainer>

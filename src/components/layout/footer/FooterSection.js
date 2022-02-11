@@ -3,11 +3,12 @@ import styled from 'styled-components/macro';
 import { FlexContainer } from '../../shared/Container';
 import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
-import { FOOTER_ABOUT, FOOTER_LEARN, FOOTER_SUPPORT } from '../../../constants/footer';
+import { FOOTER_LEARN, FOOTER_SUPPORT } from '../../../constants/footer';
 import useWindowSize from '../../../hooks/useWindowSize';
 import theme from '../../../styles/theme';
 import Socials from './Socials';
 import Copyrights from './Copyrights';
+import NavigationItems from './NavigationItems';
 
 const FooterContainer = styled(FlexContainer)`
   padding: 80px 90px;
@@ -27,7 +28,9 @@ const FooterSection = () => {
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>
-        <FooterItemsList {...FOOTER_ABOUT} />
+        <FooterItemsList title="About">
+          <NavigationItems fontSize={13} color="yellow" disableHover />
+        </FooterItemsList>
         <FlexContainer gap={80} columnGap={50} tabletClassName="column" mobileClassName="column">
           <FooterItemsList {...FOOTER_SUPPORT} />
           <FooterItemsList {...FOOTER_LEARN} />

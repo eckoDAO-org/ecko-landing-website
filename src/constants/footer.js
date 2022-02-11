@@ -3,25 +3,32 @@ export const FOOTER_ABOUT = {
   color: 'yellow',
   items: [
     {
-      text: 'Documentation',
-    },
-    {
       text: 'The Most Powerful Proof of Work DEX',
+      href: 'proof-of-dex',
     },
     {
       text: 'Unique Features',
+      href: 'features',
     },
     {
       text: 'Tokenomics',
+      href: 'tokenomics',
     },
     {
       text: 'Kaddex Roadmap',
+      href: 'roadmap',
     },
     {
       text: 'Partners',
+      href: 'partners',
+    },
+    {
+      text: 'Team',
+      href: 'team',
     },
     {
       text: 'X-Wallet',
+      link: 'https://xwallet.kaddex.com',
     },
   ],
 };
