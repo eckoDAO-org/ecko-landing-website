@@ -47,6 +47,10 @@ const ROLE_ENGINEERING = {
   short: 'ENGINEERING',
   role: 'Engineering',
 };
+const ROLE_ADVISOR = {
+  short: 'ADVISOR',
+  role: 'Advisor',
+};
 
 const DANIELE_DE_VECCHIS = {
   id: 0,
@@ -207,7 +211,7 @@ const GUSTAVO_SPELZON = {
   id: 4,
   firstname: 'Gustavo',
   lastname: 'Spelzon',
-  role: 'Smart Contracts',
+  role: ROLE_ENGINEERING.role,
   description:
     "Hello everyone! My name's Gustavo and I'm part of the smart contract development team. I'm a computer science graduate born and raised in Brazil with a strong interest in many different areas, ranging from abstract mathematics, reverse engineering, network protocols and game development, to name a few. I've been working with blockchain technology for a while now, learning about implementation details of interesting and innovative DeFi systems and making tools for interacting with those systems directly. At Kaddex, my role consists of writing, reviewing and testing the smart contracts we'll be using. I'm very thankful to be a part of this amazing team and I'll give it my all to make the DeFi dream a reality! I only drink beers if they are estupidamente gelade.",
   photo: gustavoSpelzonPhoto,
@@ -217,7 +221,7 @@ const KATE_OZTUNC = {
   id: 5,
   firstname: 'Kate',
   lastname: 'Oztunc',
-  role: 'Smart Contracts',
+  role: ROLE_ENGINEERING.role,
   description:
     "I'm Kate, a smart contract developer with Kaddex. I joined in December 2021 after the Kaddex team noticed my live streams where I was learning Pact, writing a Uniswap V2-like DEX as a learning exercise. It was an instant fit afterwards. My history with cryptocurrency goes all the way back to 2012, where I began GPU mining Bitcoin. Shortly after that, I built the very first publicly available Dogecoin casino, in 2013. I've worked with and researched into dozens of different cryptocurrencies in the past decade, written a good amount of Solidity, and my belief in Kadena and Pact is paramount. Outside of crypto, I am a programmer almost from birth, spending most of my time tinkering with code, electronics, and robots, but I also derive great joy from photography, videography, and digital art. It is so exciting to be at the forefront of DeFi, a new sector unto itself! You can reach out to me @typingkate on Twitter.",
   photo: kateOztuncPhoto,
@@ -239,7 +243,7 @@ const CARLES_ALONSO = {
   id: 19,
   firstname: 'Carles',
   lastname: 'Alonso',
-  role: ROLE_BD.role,
+  role: ROLE_ADVISOR.role,
   description:
     'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
 };
@@ -248,7 +252,7 @@ const BRANDON_CHONG = {
   id: 20,
   firstname: 'Brandon',
   lastname: 'Chong',
-  role: ROLE_BD.role,
+  role: ROLE_ADVISOR.role,
   description:
     'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
   linkedin: 'https://www.linkedin.com/in/brandonwchong/',
@@ -258,7 +262,7 @@ const EMILIY_PILLMORE = {
   id: 17,
   firstname: 'Emily',
   lastname: 'Pillmore',
-  role: ROLE_ENGINEERING.role,
+  role: ROLE_ADVISOR.role,
   description: '',
   linkedin: 'https://www.linkedin.com/in/emily-pillmore-453630ab/',
   twitter: 'https://twitter.com/bkmlep',
@@ -268,7 +272,7 @@ const FRANCESCO_MELPIGNANO = {
   id: 18,
   firstname: 'Francesco',
   lastname: 'Melpignano',
-  role: ROLE_ENGINEERING.role,
+  role: ROLE_ADVISOR.role,
   description: '',
   twitter: 'https://twitter.com/fmelp',
 };
