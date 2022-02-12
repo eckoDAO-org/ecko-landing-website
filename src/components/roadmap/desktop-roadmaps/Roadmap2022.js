@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react/cjs/react.development';
 import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
@@ -6,73 +7,73 @@ const whiteGrey = '#666666';
 
 const CONFIGURATION = {
   X_WALLET_BETA: {
-    circle: 'translate(490 190)',
+    circle: { x: 490, y: 190 },
     text: 'translate(437 255)',
     color: theme.colors.primary,
   },
   LITEPAPER: {
-    circle: 'translate(740 190)',
+    circle: { x: 740, y: 190 },
     text: 'translate(750 255)',
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
-    circle: 'translate(990 190)',
+    circle: { x: 990, y: 190 },
     text: 'translate(950 255)',
     color: theme.colors.primary,
   },
   PUBLIC_SALE: {
-    circle: 'translate(1240 190)',
+    circle: { x: 1240, y: 190 },
     text: 'translate(1200 255)',
     color: theme.colors.primary,
   },
   BRIDGED_ERC20: {
-    circle: 'translate(1490 190)',
+    circle: { x: 1490, y: 190 },
     text: 'translate(1506 255)',
     color: whiteGrey,
   },
   SWAPPING_INTERFACE: {
-    circle: 'translate(1490 381)',
+    circle: { x: 1490, y: 381 },
     text: 'translate(1499 446)',
     color: whiteGrey,
   },
   WEBSITE_V2: {
-    circle: 'translate(1240 381)',
+    circle: { x: 1240, y: 381 },
     text: 'translate(1200 446)',
     color: whiteGrey,
   },
   KDX_VAULTING_PROGRAMME: {
-    circle: 'translate(990 381)',
+    circle: { x: 990, y: 381 },
     text: 'translate(1000 446)',
     color: whiteGrey,
   },
   KADDEX_V1_FULL_LAUNCH: {
-    circle: 'translate(490 381)',
+    circle: { x: 490, y: 381 },
     text: 'translate(500 446)',
     color: '#FA41A5',
   },
   SINGLE_SIDED_LIQUIDITY: {
-    circle: 'translate(740 381)',
+    circle: { x: 740, y: 381 },
     text: 'translate(750 446)',
     color: whiteGrey,
   },
   KDX_LIQUIDITY_MINING_PROGRAMME: {
-    circle: 'translate(490 596)',
+    circle: { x: 490, y: 596 },
     text: 'translate(500 662)',
     color: whiteGrey,
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {
-    circle: 'translate(740 596)',
+    circle: { x: 740, y: 596 },
     text: 'translate(756 662)',
     color: whiteGrey,
   },
   X_WALLET_V2: {
-    circle: 'translate(990 596)',
+    circle: { x: 990, y: 596 },
     text: 'translate(950 662)',
     color: whiteGrey,
   },
   WHITEPAPER: {
-    circle: 'translate(1240 596)',
+    circle: { x: 1240, y: 596 },
     text: 'translate(1270 662)',
 
     color: whiteGrey,
@@ -84,8 +85,19 @@ const CONFIGURATION = {
 };
 
 const Roadmap2022 = () => {
+  const [node, setNode] = useState(null);
+
+  const [timer, setTimer] = useState(null);
+
+  const closePopup = () => {
+    const t = setTimeout(() => {
+      setNode(null);
+    }, 1000);
+    setTimer(t);
+  };
+
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501" style={{ overflow: 'visible' }}>
       <g id="Roadmap" transform="translate(5 -190)">
         <g id="Group_68777" data-name="Group 68777">
           <path
@@ -102,8 +114,15 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.X_WALLET_BETA.circle}
+            transform={`translate(${CONFIGURATION.X_WALLET_BETA.circle.x} ${CONFIGURATION.X_WALLET_BETA.circle.y})`}
             fill={CONFIGURATION.X_WALLET_BETA.color}
+            onMouseEnter={() => {
+              clearTimeout(timer);
+              setNode(CONFIGURATION.X_WALLET_BETA);
+            }}
+            onMouseLeave={() => {
+              closePopup();
+            }}
           />
           <text
             id="X-Wallet_Beta"
@@ -126,14 +145,14 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.LITEPAPER.circle}
+            transform={`translate(${CONFIGURATION.LITEPAPER.circle.x} ${CONFIGURATION.LITEPAPER.circle.y})`}
             fill={CONFIGURATION.LITEPAPER.color}
           />
           <text
             id="Litepaper"
             data-name="Litepaper"
             transform={CONFIGURATION.LITEPAPER.text}
-            fill={CONFIGURATION.X_WALLET_BETA.color}
+            fill={CONFIGURATION.LITEPAPER.color}
             fontSize="20"
             fontFamily={theme.fontFamily.basier}
             letterSpacing="-0.1em"
@@ -150,7 +169,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.X_WALLET_V1.circle}
+            transform={`translate(${CONFIGURATION.X_WALLET_V1.circle.x} ${CONFIGURATION.X_WALLET_V1.circle.y})`}
             fill={CONFIGURATION.X_WALLET_V1.color}
           />
           <text
@@ -174,7 +193,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.PUBLIC_SALE.circle}
+            transform={`translate(${CONFIGURATION.PUBLIC_SALE.circle.x} ${CONFIGURATION.PUBLIC_SALE.circle.y})`}
             fill={CONFIGURATION.PUBLIC_SALE.color}
           />
           <text
@@ -198,7 +217,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.BRIDGED_ERC20.circle}
+            transform={`translate(${CONFIGURATION.BRIDGED_ERC20.circle.x} ${CONFIGURATION.BRIDGED_ERC20.circle.y})`}
             fill={CONFIGURATION.BRIDGED_ERC20.color}
           />
           <text
@@ -225,7 +244,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.SWAPPING_INTERFACE.circle}
+            transform={`translate(${CONFIGURATION.SWAPPING_INTERFACE.circle.x} ${CONFIGURATION.SWAPPING_INTERFACE.circle.y})`}
             fill={CONFIGURATION.SWAPPING_INTERFACE.color}
           />
           <text
@@ -252,7 +271,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.WEBSITE_V2.circle}
+            transform={`translate(${CONFIGURATION.WEBSITE_V2.circle.x} ${CONFIGURATION.WEBSITE_V2.circle.y})`}
             fill={CONFIGURATION.WEBSITE_V2.color}
           />
           <text
@@ -276,7 +295,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.KDX_VAULTING_PROGRAMME.circle}
+            transform={`translate(${CONFIGURATION.KDX_VAULTING_PROGRAMME.circle.x} ${CONFIGURATION.KDX_VAULTING_PROGRAMME.circle.y})`}
             fill={CONFIGURATION.KDX_VAULTING_PROGRAMME.color}
           />
           <text
@@ -310,7 +329,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle}
+            transform={`translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y})`}
             fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
           />
           <g id="ring" transform={CONFIGURATION.FLAG.flag}>
@@ -343,7 +362,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle}
+            transform={`translate(${CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle.x} ${CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle.y})`}
             fill={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.color}
           />
           <text
@@ -370,7 +389,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle}
+            transform={`translate(${CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle.x} ${CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle.y})`}
             fill={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.color}
           />
           <text
@@ -397,7 +416,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.WHITEPAPER.circle}
+            transform={`translate(${CONFIGURATION.WHITEPAPER.circle.x} ${CONFIGURATION.WHITEPAPER.circle.y})`}
             fill={CONFIGURATION.WHITEPAPER.color}
           />
 
@@ -421,7 +440,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle}
+            transform={`translate(${CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle.x} ${CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle.y})`}
             fill={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.color}
           />
           <text
@@ -448,7 +467,7 @@ const Roadmap2022 = () => {
             cx="15"
             cy="15"
             r="15"
-            transform={CONFIGURATION.X_WALLET_V2.circle}
+            transform={`translate(${CONFIGURATION.X_WALLET_V2.circle.x} ${CONFIGURATION.X_WALLET_V2.circle.y})`}
             fill={CONFIGURATION.X_WALLET_V2.color}
           />
           <text
@@ -476,6 +495,19 @@ const Roadmap2022 = () => {
             strokeWidth="4"
           />
         </g>
+
+        {node && (
+          <g
+            transform={`translate(${node.circle.x - 50} ${node.circle.y + 100})`}
+            onMouseEnter={() => clearTimeout(timer)}
+            onMouseLeave={() => closePopup()}
+          >
+            <rect x="0" width="310" height="240" rx="15" />
+            <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">
+              Hello
+            </text>
+          </g>
+        )}
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">
             <path

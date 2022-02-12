@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react/cjs/react.development';
 import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
@@ -82,6 +83,8 @@ const CONFIGURATION = {
 };
 
 const MobileRoadmap2022 = () => {
+  const [hover, setHover] = useState(false);
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="376.001" height="920" viewBox="0 0 376.001 920">
       <g id="Mobile-Roadmap_2022_mobile" data-name="Roadmap 2022_mobile" transform="translate(0.001 -253)">
@@ -135,6 +138,10 @@ const MobileRoadmap2022 = () => {
           r="10"
           transform={CONFIGURATION.X_WALLET_V1.circle}
           fill={CONFIGURATION.X_WALLET_V1.color}
+          onClick={() => {
+            console.log('clic');
+            setHover(true);
+          }}
         />
         <text
           id="Mobile-X-Wallet_v1"
@@ -467,6 +474,7 @@ const MobileRoadmap2022 = () => {
           <RoadmapEllipseShadowIcon />
         </g>
       </g>
+
       {/* blue line */}
       <line
         id="Mobile-Line_585"
@@ -496,6 +504,22 @@ const MobileRoadmap2022 = () => {
         stroke={theme.colors.primary}
         strokeWidth="3"
       />
+
+      {hover && (
+        <circle
+          id="1111"
+          data-name="111"
+          cx="100"
+          cy="100"
+          r="100"
+          transform={CONFIGURATION.X_WALLET_V1.circle}
+          fill="red"
+          // onMouseOut={() => setHover(false)}
+          // onClick={() => {
+          //   setHover(false);
+          // }}
+        />
+      )}
     </svg>
   );
 };

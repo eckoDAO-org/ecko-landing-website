@@ -92,13 +92,13 @@ const Roadmap = () => {
       )}
 
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
-        <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
+        <FlexContainer style={{ minWidth: width, paddingTop: 100 }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2021.desktopImage : R_2021.mobileImage}
         </FlexContainer>
-        <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2022.id}`}>
+        <FlexContainer style={{ minWidth: width, paddingTop: 100 }} id={`roadmap-${R_2022.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2022.desktopImage : R_2022.mobileImage}
         </FlexContainer>
-        <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_ONGOING.id}`}>
+        <FlexContainer style={{ minWidth: width, paddingTop: 100 }} id={`roadmap-${R_ONGOING.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_ONGOING.desktopImage : R_ONGOING.mobileImage}
         </FlexContainer>
       </RoadmapContainer>
