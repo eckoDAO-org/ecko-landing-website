@@ -15,7 +15,7 @@ const Container = styled(FlexContainer)`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-51.5%, -62%);
     transition: opacity 0.5s;
     opacity: ${({ showVideo }) => (showVideo ? 1 : 0)};
   }
@@ -70,7 +70,7 @@ const GameBoy = () => {
 
       <video
         width={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.3 : 340}
-        height={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.4 : 320}
+        height={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.4 : 340}
         controls={showVideo}
       >
         <source src={kaddexVideo} type="video/mp4" />

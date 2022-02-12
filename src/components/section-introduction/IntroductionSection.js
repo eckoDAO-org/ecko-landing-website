@@ -9,11 +9,11 @@ const IntroductionSection = () => {
     <FlexContainer id="introduction" className="column w-100">
       <IntroductionHeader />
       <GameBoy />
-      <FlexContainer className="w-100 justify-ce mobile-only" style={{ marginTop: 25 }}>
-        <a href="/#proof-of-dex">
+      <a href="/#proof-of-dex">
+        <FlexContainer className="w-100 justify-ce mobile-only" style={{ marginTop: 25 }}>
           <ArrowsDownIcon />
-        </a>
-      </FlexContainer>
+        </FlexContainer>
+      </a>
     </FlexContainer>
   );
 };
