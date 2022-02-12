@@ -69,7 +69,7 @@ const GameBoy = () => {
       />
 
       <video
-        width={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.3 : 340}
+        width={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.32 : 340}
         height={width < theme.mediaQueries.mobilePixel ? width / 2 - (width / 2) * 0.4 : 340}
         controls={showVideo}
       >
