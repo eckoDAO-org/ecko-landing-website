@@ -23,12 +23,12 @@ const Roadmap2022 = () => {
                 <g id="Roadmap_2022" dataName="Roadmap 2022">
                 <path id="Roadmap_line" d="M-6091.943-1552.257h812.456a49.9,49.9,0,0,0,49.773-49.9v-35.175a49.9,49.9,0,0,0-49.773-49.9h-1046.4l1046.4.332a49.563,49.563,0,0,1,49.441,49.573v35.175a49.563,49.563,0,0,1-49.441,49.573h-812.456a49.9,49.9,0,0,0-49.771,49.9v38.539a49.9,49.9,0,0,0,49.771,49.9h1047.065l-1047.065-.332a49.563,49.563,0,0,1-49.441-49.573v-38.539A49.563,49.563,0,0,1-6091.943-1552.257Z" transform="translate(6324.714 5352.241)" fill="none" stroke="#fff" stroke-width="4"/>
                 </g>
-                <g id="Transition_to_a_DAO" dataName="Transition to a DAO" transform="translate(540.699 3928.259)">
-                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Liquidity  </tspan><tspan x="0" y="41">Mining Programme</tspan></text>
+                <g id="Transition_to_a_DAO" dataName="Transition to a DAO" transform="translate(590 3928.259)">
+                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Whitepaper</tspan></text>
                 <circle id="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill="#fff"/>
                 </g>
                 <g id="Transition_to_a_DAO" dataName="Transition to a DAO" transform="translate(715.699 3928.259)">
-                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Whitepaper</tspan></text>
+                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">X-Wallet v2</tspan></text>
                 <circle id="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill="#fff"/>
                 </g>
                 <g id="Transition_to_a_DAO-3" dataName="Transition to a DAO" transform="translate(830.699 3928.259)">
@@ -40,7 +40,11 @@ const Roadmap2022 = () => {
                 <text id="DEX_Whitepaper-2" dataName="DEX Whitepaper" transform="translate(-4.317 28.918)" fill="#fff" fontSize="16" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="15" xmlSpace="preserve">Kaddex v1  </tspan><tspan x="0" y="41">full launch</tspan></text>
                 <circle id="Circle-3" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-4.316 0.918)" fill="#fff"/>
                 </g>
-                <g id="Institutional_Collaboration" dataName="Institutional  Collaboration" transform="translate(274 3791.001)">
+                <g id="Pre_Launch_Public_Sale" dataName="Pre Launch  Public Sale" transform="translate(274 3791.001)">
+                <text id="Pre_Launch_Public_Sale-2" dataName="Pre Launch  Public Sale" transform="translate(-0.317 23.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Single Sided </tspan><tspan x="0" y="41">Liquidity</tspan></text>
+                <circle id="Circle-12" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.317 -0.258)" fill="#fff"/>
+                </g>
+                <g id="Institutional_Collaboration" dataName="Institutional  Collaboration" transform="translate(400 3791.001)">
                 <text id="Institutional_Collaboration-2" dataName="Institutional  Collaboration" transform="translate(0 39)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">Website v2</tspan></text>
                 <circle id="Circle-4" dataName="Circle" cx="8" cy="8" r="8" fill="#fff"/>
                 </g>
@@ -48,7 +52,7 @@ const Roadmap2022 = () => {
                 <text id="Code_Auditing-2" dataName="Code Auditing" transform="translate(0 24)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Bridged ERC-20 </tspan><tspan x="0" y="41">Token Pairs</tspan></text>
                 <circle id="Circle-5" dataName="Circle" cx="8" cy="8" r="8" fill="#fff"/>
                 </g>
-                <g id="Native_and_Bridged_ERC-20_Token_Pairs" dataName="Native and Bridged  ERC-20 Token Pairs" transform="translate(465.43 3790.591)">
+                <g id="Native_and_Bridged_ERC-20_Token_Pairs" dataName="Native and Bridged  ERC-20 Token Pairs" transform="translate(520 3790.591)">
                 <text id="Native_and_Bridged_ERC-20_Token_Pairs-2" dataName="Native and Bridged  ERC-20 Token Pairs" transform="translate(-0.43 39.41)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">3d Swapping </tspan><tspan x="0" y="26">Interface</tspan></text>
                 <circle id="Circle-6" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.43 0.41)" fill="#fff"/>
                 </g>
@@ -83,7 +87,7 @@ const Roadmap2022 = () => {
                 </g>
                 </g>
                 <g id="Pre_Launch_Public_Sale" dataName="Pre Launch  Public Sale" transform="translate(422.316 3929.259)">
-                <text id="Pre_Launch_Public_Sale-2" dataName="Pre Launch  Public Sale" transform="translate(-0.317 23.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Single Sided </tspan><tspan x="0" y="41">Liquidity</tspan></text>
+                <text id="Transition_to_a_DAO-2" dataName="Transition to a DAO" transform="translate(0.301 24.742)" fill="#fff" fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Liquidity  </tspan><tspan x="0" y="41">Mining Programme</tspan></text>
                 <circle id="Circle-12" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.317 -0.258)" fill="#fff"/>
                 </g>
             </g>
