@@ -238,32 +238,31 @@ const Roadmap2022 = () => {
           />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
-            console.log('CONFI', CONFIGURATION[config].circle);
+            const nodeConfig = CONFIGURATION[config];
             return (
               <g key={i}>
                 <circle
                   cx="15"
                   cy="15"
                   r="15"
-                  transform={`translate(${CONFIGURATION[config].circle.x} ${CONFIGURATION[config].circle.y})`}
-                  fill={CONFIGURATION[config].color}
+                  transform={`translate(${nodeConfig.circle.x} ${nodeConfig.circle.y})`}
+                  fill={nodeConfig.color}
                   onMouseEnter={() => {
-                    clearTimeout(timer);
-                    setNode(CONFIGURATION[config]);
+                    if (nodeConfig?.popup) {
+                      clearTimeout(timer);
+                      setNode(nodeConfig);
+                    }
                   }}
-                  // onMouseLeave={() => {
-                  //   closePopup();
-                  // }}
                 />
                 <text
-                  transform={`translate(${CONFIGURATION[config].text.x} ${CONFIGURATION[config].text.y})`}
-                  fill={CONFIGURATION[config].color}
+                  transform={`translate(${nodeConfig.text.x} ${nodeConfig.text.y})`}
+                  fill={nodeConfig.color}
                   fontSize="20"
                   fontFamily={theme.fontFamily.basier}
                   letterSpacing="-0.1em"
                 >
-                  {CONFIGURATION[config].text.tspan.map((tspan, i2) => (
-                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 20} fill={CONFIGURATION[config].color}>
+                  {nodeConfig.text.tspan.map((tspan, i2) => (
+                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 20} fill={nodeConfig.color}>
                       {tspan.text}
                     </tspan>
                   ))}
@@ -302,15 +301,12 @@ const Roadmap2022 = () => {
             <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
             <g transform="matrix(1 0 0 1 100 100)">
               <text x="0" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
-                {node.popup.title}
+                {node?.popup?.title}
               </text>
-              {/* <text x="0" y="0" fontSize="12" fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
-                {node.popup.description}
-              </text> */}
             </g>
 
             <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
-              {node.popup.description}
+              {node?.popup?.description}
             </text>
           </g>
         )}
