@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react/cjs/react.development';
 import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
@@ -8,81 +8,205 @@ const whiteGrey = '#666666';
 const CONFIGURATION = {
   X_WALLET_BETA: {
     circle: { x: 490, y: 190 },
-    text: 'translate(437 255)',
+    text: {
+      x: 437,
+      y: 255,
+      tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
+    },
+    popup: {
+      title: 'X-Wallet Beta',
+      description: 'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.',
+    },
     color: theme.colors.primary,
   },
   LITEPAPER: {
     circle: { x: 740, y: 190 },
-    text: 'translate(750 255)',
+    text: {
+      x: 750,
+      y: 255,
+      tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
+    },
+
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
     circle: { x: 990, y: 190 },
-    text: 'translate(950 255)',
+    text: {
+      x: 950,
+      y: 255,
+      tspan: [{ x: 0, y: 0, text: 'X-Wallet v1' }],
+    },
     color: theme.colors.primary,
   },
   PUBLIC_SALE: {
     circle: { x: 1240, y: 190 },
-    text: 'translate(1200 255)',
+    text: {
+      x: 1200,
+      y: 255,
+      tspan: [{ x: 0, y: 0, text: 'Public Sale' }],
+    },
     color: theme.colors.primary,
   },
   BRIDGED_ERC20: {
     circle: { x: 1490, y: 190 },
-    text: 'translate(1506 255)',
+    text: {
+      x: 1506,
+      y: 255,
+      tspan: [
+        { x: -73.66, y: 0, text: 'Bridged ERC-20' },
+        { x: -58.09, y: 25, text: 'Token Pairs' },
+      ],
+    },
     color: whiteGrey,
   },
   SWAPPING_INTERFACE: {
     circle: { x: 1490, y: 381 },
-    text: 'translate(1499 446)',
+    text: {
+      x: 1499,
+      y: 446,
+      tspan: [
+        { x: -58.09, y: 0, text: '3d Swapping' },
+        { x: -47.71, y: 25, text: 'Interface' },
+      ],
+    },
+    textTranslate: 'translate(1499 446)',
     color: whiteGrey,
   },
   WEBSITE_V2: {
     circle: { x: 1240, y: 381 },
-    text: 'translate(1200 446)',
+    text: {
+      x: 1200,
+      y: 446,
+      tspan: [{ x: 0, y: 0, text: 'Website v2' }],
+    },
     color: whiteGrey,
   },
   KDX_VAULTING_PROGRAMME: {
     circle: { x: 990, y: 381 },
-    text: 'translate(1000 446)',
+    text: {
+      x: 1000,
+      y: 446,
+      tspan: [
+        { x: -63.28, y: 0, text: 'KDX Vaulting' },
+        { x: -47.71, y: 25, text: 'programme' },
+        { x: -60.746, y: 50, text: 'available for early', fontSize: 13 },
+        { x: -30.012, y: 75, text: 'investors', fontSize: 13 },
+      ],
+    },
     color: whiteGrey,
   },
   KADDEX_V1_FULL_LAUNCH: {
     circle: { x: 490, y: 381 },
-    text: 'translate(500 446)',
+    text: {
+      x: 500,
+      y: 446,
+      tspan: [
+        { x: -47.71, y: 0, text: 'Kaddex v1' },
+        { x: -58.09, y: 25, text: 'full launch' },
+      ],
+    },
     color: '#FA41A5',
   },
   SINGLE_SIDED_LIQUIDITY: {
     circle: { x: 740, y: 381 },
-    text: 'translate(750 446)',
+    text: {
+      x: 750,
+      y: 446,
+      tspan: [
+        { x: -68.28, y: 0, text: 'Single Sided' },
+        { x: -47.71, y: 25, text: 'Liquidity' },
+      ],
+    },
     color: whiteGrey,
   },
   KDX_LIQUIDITY_MINING_PROGRAMME: {
     circle: { x: 490, y: 596 },
-    text: 'translate(500 662)',
+    text: {
+      x: 500,
+      y: 662,
+      tspan: [
+        { x: -68.47, y: 0, text: 'KDX Liquidity' },
+        { x: -84.04, y: 25, text: 'Mining Programme' },
+      ],
+    },
     color: whiteGrey,
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {
     circle: { x: 740, y: 596 },
-    text: 'translate(756 662)',
+    text: {
+      x: 756,
+      y: 662,
+      tspan: [
+        { x: -99.61, y: 0, text: 'Lending & borrowing' },
+        { x: -78.85, y: 25, text: 'functionalities' },
+      ],
+    },
     color: whiteGrey,
   },
   X_WALLET_V2: {
     circle: { x: 990, y: 596 },
-    text: 'translate(950 662)',
+    text: {
+      x: 950,
+      y: 662,
+      tspan: [{ x: -0, y: 0, text: 'X-Wallet v2' }],
+    },
     color: whiteGrey,
   },
   WHITEPAPER: {
     circle: { x: 1240, y: 596 },
-    text: 'translate(1270 662)',
+    text: {
+      x: 1270,
+      y: 662,
+      tspan: [{ x: -60.61, y: 0, text: 'Whitepaper' }],
+    },
 
     color: whiteGrey,
   },
-  FLAG: {
-    flag: 'translate(504 353)',
-    shadow: 'translate(484 374)',
-  },
 };
+
+const FLAG = {
+  flag: 'translate(504 353)',
+  shadow: 'translate(484 374)',
+};
+
+function svg_textMultiline() {
+  var x = 0;
+  var y = 20;
+  var width = 180;
+  var lineHeight = 10;
+
+  /* get the text */
+  var element = document.getElementById('popup-description');
+  var text = element.innerHTML;
+
+  /* split the words into array */
+  var words = text.split(' ');
+  var line = '';
+
+  /* Make a tspan for testing */
+  element.innerHTML = '<tspan id="PROCESSING">busy</tspan >';
+
+  for (var n = 0; n < words.length; n++) {
+    var testLine = line + words[n] + ' ';
+    var testElem = document.getElementById('PROCESSING');
+    /*  Add line in testElement */
+    testElem.innerHTML = testLine;
+    /* Messure textElement */
+    var metrics = testElem.getBoundingClientRect();
+    const testWidth = metrics.width;
+
+    if (testWidth > width && n > 0) {
+      element.innerHTML += '<tspan x="60" dy="' + y + '">' + line + '</tspan>';
+      line = words[n] + ' ';
+    } else {
+      line = testLine;
+    }
+  }
+
+  element.innerHTML += '<tspan x="60" dy="' + y + '">' + line + '</tspan>';
+  document.getElementById('PROCESSING').remove();
+}
 
 const Roadmap2022 = () => {
   const [node, setNode] = useState(null);
@@ -96,6 +220,12 @@ const Roadmap2022 = () => {
     setTimer(t);
   };
 
+  useEffect(() => {
+    if (node) {
+      svg_textMultiline();
+    }
+  }, [node]);
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501" style={{ overflow: 'visible' }}>
       <g id="Roadmap" transform="translate(5 -190)">
@@ -107,383 +237,40 @@ const Roadmap2022 = () => {
             fill={whiteGrey}
           />
 
-          {/* X wallet beta */}
-          <circle
-            id="Ellipse_X-Wallet_Beta"
-            data-name="Ellipse X-Wallet_Beta"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.X_WALLET_BETA.circle.x} ${CONFIGURATION.X_WALLET_BETA.circle.y})`}
-            fill={CONFIGURATION.X_WALLET_BETA.color}
-            onMouseEnter={() => {
-              clearTimeout(timer);
-              setNode(CONFIGURATION.X_WALLET_BETA);
-            }}
-            onMouseLeave={() => {
-              closePopup();
-            }}
-          />
-          <text
-            id="X-Wallet_Beta"
-            data-name="X-Wallet Beta"
-            transform={CONFIGURATION.X_WALLET_BETA.text}
-            fill={whiteGrey}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0" fill={CONFIGURATION.X_WALLET_BETA.color}>
-              X-Wallet Beta
-            </tspan>
-          </text>
-
-          {/* litepaper */}
-          <circle
-            id="Ellipse_Litepape"
-            data-name="Ellipse Litepape"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.LITEPAPER.circle.x} ${CONFIGURATION.LITEPAPER.circle.y})`}
-            fill={CONFIGURATION.LITEPAPER.color}
-          />
-          <text
-            id="Litepaper"
-            data-name="Litepaper"
-            transform={CONFIGURATION.LITEPAPER.text}
-            fill={CONFIGURATION.LITEPAPER.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-47.71" y="0">
-              Litepaper
-            </tspan>
-          </text>
-
-          {/* x wallet v1 */}
-          <circle
-            id="Ellipse_X-Wallet_v1"
-            data-name="Ellipse X-Wallet_v1"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.X_WALLET_V1.circle.x} ${CONFIGURATION.X_WALLET_V1.circle.y})`}
-            fill={CONFIGURATION.X_WALLET_V1.color}
-          />
-          <text
-            id="X-Wallet_v1"
-            data-name="X-Wallet v1"
-            transform={CONFIGURATION.X_WALLET_V1.text}
-            fill={CONFIGURATION.X_WALLET_V1.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0">
-              X-Wallet v1
-            </tspan>
-          </text>
-
-          {/* public sale */}
-          <circle
-            id="Ellipse_Public_Sale"
-            data-name="Ellipse Public_Sale"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.PUBLIC_SALE.circle.x} ${CONFIGURATION.PUBLIC_SALE.circle.y})`}
-            fill={CONFIGURATION.PUBLIC_SALE.color}
-          />
-          <text
-            id="Public_Sale"
-            data-name="Public Sale"
-            transform={CONFIGURATION.PUBLIC_SALE.text}
-            fill={CONFIGURATION.PUBLIC_SALE.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0">
-              Public Sale
-            </tspan>
-          </text>
-
-          {/* bridged erc-20 */}
-          <circle
-            id="Ellipse_Bridged_ERC_20_Token_Pairs"
-            data-name="Ellipse Bridged_ERC_20_Token_Pairs"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.BRIDGED_ERC20.circle.x} ${CONFIGURATION.BRIDGED_ERC20.circle.y})`}
-            fill={CONFIGURATION.BRIDGED_ERC20.color}
-          />
-          <text
-            id="Bridged_ERC_20_Token_Pairs"
-            data-name="Bridged ERC 20 Token Pairs"
-            transform={CONFIGURATION.BRIDGED_ERC20.text}
-            fill={CONFIGURATION.BRIDGED_ERC20.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-73.66" y="0">
-              Bridged ERC-20
-            </tspan>
-            <tspan x="-58.09" y="25">
-              Token Pairs
-            </tspan>
-          </text>
-
-          {/* 3d swapping interface */}
-          <circle
-            id="Ellipse_3d_Swapping_Interface"
-            data-name="Ellipse 3d_Swapping_Interface"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.SWAPPING_INTERFACE.circle.x} ${CONFIGURATION.SWAPPING_INTERFACE.circle.y})`}
-            fill={CONFIGURATION.SWAPPING_INTERFACE.color}
-          />
-          <text
-            id="_3d_Swapping_Interface"
-            data-name="3d Swapping Interface"
-            transform={CONFIGURATION.SWAPPING_INTERFACE.text}
-            fill={CONFIGURATION.SWAPPING_INTERFACE.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-58.09" y="0">
-              3d Swapping
-            </tspan>
-            <tspan x="-47.71" y="25">
-              Interface
-            </tspan>
-          </text>
-
-          {/* website v2 */}
-          <circle
-            id="Ellipse_Website_v2"
-            data-name="Ellipse Website_v2"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.WEBSITE_V2.circle.x} ${CONFIGURATION.WEBSITE_V2.circle.y})`}
-            fill={CONFIGURATION.WEBSITE_V2.color}
-          />
-          <text
-            id="Website_v2"
-            data-name="Website v2"
-            transform={CONFIGURATION.WEBSITE_V2.text}
-            fill={CONFIGURATION.WEBSITE_V2.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0">
-              Website v2
-            </tspan>
-          </text>
-
-          {/* kdx vaulting program */}
-          <circle
-            id="Ellipse_KDX_Vaulting_programme_available_for_early_investors"
-            data-name="Ellipse KDX_Vaulting_programme_available_for_early_investors"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.KDX_VAULTING_PROGRAMME.circle.x} ${CONFIGURATION.KDX_VAULTING_PROGRAMME.circle.y})`}
-            fill={CONFIGURATION.KDX_VAULTING_PROGRAMME.color}
-          />
-          <text
-            id="KDX_Vaulting_programme_available_for_early_investors"
-            data-name="KDX Vaulting programme available for early investors"
-            transform={CONFIGURATION.KDX_VAULTING_PROGRAMME.text}
-            fill={CONFIGURATION.KDX_VAULTING_PROGRAMME.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-          >
-            <tspan letterSpacing="-0.1em" x="-63.28" y="0">
-              KDX Vaulting
-            </tspan>
-            <tspan letterSpacing="-0.1em" x="-47.71" y="25">
-              programme
-            </tspan>
-            <tspan fontSize="13">
-              <tspan x="-74.746" y="50">
-                available for early
-              </tspan>
-              <tspan x="-40.012" y="75">
-                investors
-              </tspan>
-            </tspan>
-          </text>
-
-          {/* kaddex v1 full launch */}
-          <circle
-            id="Ellipse_Kaddex_v1_full_launch"
-            data-name="Ellipse Kaddex_v1_full_launch"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y})`}
-            fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
-          />
-          <g id="ring" transform={CONFIGURATION.FLAG.flag}>
-            <RoadmapFlagcon />
-          </g>
-          <g id="ring" transform={CONFIGURATION.FLAG.shadow}>
-            <RoadmapEllipseShadowIcon />
-          </g>
-          <text
-            id="Kaddex_v1_full_launch"
-            data-name="Kaddex v1 full launch"
-            transform={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.text}
-            fill={CONFIGURATION.KADDEX_V1_FULL_LAUNCH.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-47.71" y="0">
-              Kaddex v1
-            </tspan>
-            <tspan x="-58.09" y="25">
-              full launch
-            </tspan>
-          </text>
-
-          {/* single sided liquidityu */}
-          <circle
-            id="Ellipse_Single_Sided_Liquidity"
-            data-name="Ellipse Single_Sided_Liquidity"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle.x} ${CONFIGURATION.SINGLE_SIDED_LIQUIDITY.circle.y})`}
-            fill={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.color}
-          />
-          <text
-            id="Single_Sided_Liquidity"
-            data-name="Single Sided Liquidity"
-            transform={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.text}
-            fill={CONFIGURATION.SINGLE_SIDED_LIQUIDITY.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-63.28" y="0">
-              Single Sided
-            </tspan>
-            <tspan x="-47.71" y="25">
-              Liquidity
-            </tspan>
-          </text>
-
-          {/* kdx mining programme */}
-          <circle
-            id="Ellipse_KDX_Liquidity_Mining_Programme"
-            data-name="Ellipse KDX_Liquidity_Mining_Programme"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle.x} ${CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.circle.y})`}
-            fill={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.color}
-          />
-          <text
-            id="KDX_Liquidity_Mining_Programme"
-            data-name="KDX Liquidity Mining Programme"
-            transform={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.text}
-            fill={CONFIGURATION.KDX_LIQUIDITY_MINING_PROGRAMME.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-68.47" y="0">
-              KDX Liquidity
-            </tspan>
-            <tspan x="-84.04" y="25">
-              Mining Programme
-            </tspan>
-          </text>
-
-          {/* whitepaper */}
-          <circle
-            id="Ellipse_1199"
-            data-name="Ellipse 1199"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.WHITEPAPER.circle.x} ${CONFIGURATION.WHITEPAPER.circle.y})`}
-            fill={CONFIGURATION.WHITEPAPER.color}
-          />
-
-          <text
-            id="Whitepaper"
-            data-name="Whitepaper"
-            fill={CONFIGURATION.WHITEPAPER.color}
-            fontSize="20"
-            transform={CONFIGURATION.WHITEPAPER.text}
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-60.61" y="0">
-              Whitepaper
-            </tspan>
-          </text>
-
-          <circle
-            id="Ellipse_Lending_borrowing_functionalities"
-            data-name="Ellipse Lending_borrowing_functionalities"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle.x} ${CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.circle.y})`}
-            fill={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.color}
-          />
-          <text
-            id="Lending_borrowing_functionalities"
-            data-name="Lending &amp; borrowing functionalities"
-            transform={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.text}
-            fill={CONFIGURATION.LENDING_AND_BORROWING_FUNCTIONALITIES.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="-99.61" y="0">
-              Lending &amp; borrowing
-            </tspan>
-            <tspan x="-78.85" y="24">
-              functionalities
-            </tspan>
-          </text>
-
-          {/* x wallet v2 */}
-          <circle
-            id="Ellipse_X-Wallet_v2"
-            data-name="Ellipse X-Wallet_v2"
-            cx="15"
-            cy="15"
-            r="15"
-            transform={`translate(${CONFIGURATION.X_WALLET_V2.circle.x} ${CONFIGURATION.X_WALLET_V2.circle.y})`}
-            fill={CONFIGURATION.X_WALLET_V2.color}
-          />
-          <text
-            id="X-Wallet_v2"
-            data-name="X-Wallet v2"
-            transform={CONFIGURATION.X_WALLET_V2.text}
-            fill={CONFIGURATION.X_WALLET_V2.color}
-            fontSize="20"
-            fontFamily={theme.fontFamily.basier}
-            letterSpacing="-0.1em"
-          >
-            <tspan x="0" y="0">
-              X-Wallet v2
-            </tspan>
-          </text>
-
+          {Object.keys(CONFIGURATION).map((config, i) => {
+            console.log('CONFI', CONFIGURATION[config].circle);
+            return (
+              <g key={i}>
+                <circle
+                  cx="15"
+                  cy="15"
+                  r="15"
+                  transform={`translate(${CONFIGURATION[config].circle.x} ${CONFIGURATION[config].circle.y})`}
+                  fill={CONFIGURATION[config].color}
+                  onMouseEnter={() => {
+                    clearTimeout(timer);
+                    setNode(CONFIGURATION[config]);
+                  }}
+                  // onMouseLeave={() => {
+                  //   closePopup();
+                  // }}
+                />
+                <text
+                  transform={`translate(${CONFIGURATION[config].text.x} ${CONFIGURATION[config].text.y})`}
+                  fill={CONFIGURATION[config].color}
+                  fontSize="20"
+                  fontFamily={theme.fontFamily.basier}
+                  letterSpacing="-0.1em"
+                >
+                  {CONFIGURATION[config].text.tspan.map((tspan, i2) => (
+                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 20} fill={CONFIGURATION[config].color}>
+                      {tspan.text}
+                    </tspan>
+                  ))}
+                </text>
+              </g>
+            );
+          })}
           {/* blue line */}
           <line
             id="Line_585"
@@ -494,17 +281,36 @@ const Roadmap2022 = () => {
             stroke={theme.colors.primary}
             strokeWidth="4"
           />
+
+          {/* FLAG */}
+          <g id="ring" transform={FLAG.flag}>
+            <RoadmapFlagcon />
+          </g>
+          <g id="ring" transform={FLAG.shadow}>
+            <RoadmapEllipseShadowIcon />
+          </g>
         </g>
 
+        {/* Popup */}
         {node && (
           <g
-            transform={`translate(${node.circle.x - 50} ${node.circle.y + 100})`}
-            onMouseEnter={() => clearTimeout(timer)}
+            transform={`translate(${node.circle.x - 158} ${node.circle.y - 30})`}
+            // onMouseEnter={() => clearTimeout(timer)}
             onMouseLeave={() => closePopup()}
           >
-            <rect x="0" width="310" height="240" rx="15" />
-            <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">
-              Hello
+            <rect x="0" width="310" height="240" rx="15" fill="#293445" style={{ boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)' }} />
+            <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
+            <g transform="matrix(1 0 0 1 100 100)">
+              <text x="0" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
+                {node.popup.title}
+              </text>
+              {/* <text x="0" y="0" fontSize="12" fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
+                {node.popup.description}
+              </text> */}
+            </g>
+
+            <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
+              {node.popup.description}
             </text>
           </g>
         )}
