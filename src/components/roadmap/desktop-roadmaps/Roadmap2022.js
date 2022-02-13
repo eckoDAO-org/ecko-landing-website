@@ -15,7 +15,8 @@ const CONFIGURATION = {
     },
     popup: {
       title: 'X-Wallet Beta',
-      description: 'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.',
+      description:
+        'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
     },
     color: theme.colors.primary,
   },
@@ -26,7 +27,11 @@ const CONFIGURATION = {
       y: 255,
       tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
     },
-
+    popup: {
+      title: 'X-Wallet Beta',
+      description:
+        'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
+    },
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
@@ -68,6 +73,11 @@ const CONFIGURATION = {
         { x: -58.09, y: 0, text: '3d Swapping' },
         { x: -47.71, y: 25, text: 'Interface' },
       ],
+    },
+    popup: {
+      title: 'Swapping Interface',
+      description:
+        'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
     },
     textTranslate: 'translate(1499 446)',
     color: whiteGrey,
@@ -160,7 +170,11 @@ const CONFIGURATION = {
       y: 662,
       tspan: [{ x: -60.61, y: 0, text: 'Whitepaper' }],
     },
-
+    popup: {
+      title: 'White paper',
+      description:
+        'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
+    },
     color: whiteGrey,
   },
 };
@@ -170,12 +184,12 @@ const FLAG = {
   shadow: 'translate(484 374)',
 };
 
-function svg_textMultiline() {
+function svg_textMultiline(clb) {
   var x = 0;
   var y = 20;
   var width = 180;
   var lineHeight = 10;
-
+  let numberOfRows = 1;
   /* get the text */
   var element = document.getElementById('popup-description');
   var text = element.innerHTML;
@@ -197,21 +211,24 @@ function svg_textMultiline() {
     const testWidth = metrics.width;
 
     if (testWidth > width && n > 0) {
-      element.innerHTML += '<tspan x="60" dy="' + y + '">' + line + '</tspan>';
+      numberOfRows += 1;
+      element.innerHTML += '<tspan x="50" dy="' + y + '">' + line + '</tspan>';
       line = words[n] + ' ';
     } else {
       line = testLine;
     }
   }
 
-  element.innerHTML += '<tspan x="60" dy="' + y + '">' + line + '</tspan>';
+  element.innerHTML += '<tspan x="50" dy="' + y + '">' + line + '</tspan>';
   document.getElementById('PROCESSING').remove();
+  clb(numberOfRows);
 }
 
 const Roadmap2022 = () => {
   const [node, setNode] = useState(null);
 
   const [timer, setTimer] = useState(null);
+  const [numberOfRows, setNumberOfRows] = useState(0);
 
   const closePopup = () => {
     const t = setTimeout(() => {
@@ -222,10 +239,10 @@ const Roadmap2022 = () => {
 
   useEffect(() => {
     if (node) {
-      svg_textMultiline();
+      svg_textMultiline((v) => setNumberOfRows(v));
     }
   }, [node]);
-
+  console.log('number', numberOfRows);
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501" style={{ overflow: 'visible' }}>
       <g id="Roadmap" transform="translate(5 -190)">
@@ -291,25 +308,7 @@ const Roadmap2022 = () => {
         </g>
 
         {/* Popup */}
-        {node && (
-          <g
-            transform={`translate(${node.circle.x - 158} ${node.circle.y - 30})`}
-            // onMouseEnter={() => clearTimeout(timer)}
-            onMouseLeave={() => closePopup()}
-          >
-            <rect x="0" width="310" height="240" rx="15" fill="#293445" style={{ boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)' }} />
-            <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
-            <g transform="matrix(1 0 0 1 100 100)">
-              <text x="0" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
-                {node?.popup?.title}
-              </text>
-            </g>
 
-            <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
-              {node?.popup?.description}
-            </text>
-          </g>
-        )}
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">
             <path
@@ -321,6 +320,32 @@ const Roadmap2022 = () => {
           </g>
         </g>
       </g>
+      {node && (
+        <g
+          transform={`translate(${node.circle.x - 152} ${node.circle.y - 220})`}
+          // onMouseEnter={() => clearTimeout(timer)}
+          onMouseLeave={() => closePopup()}
+        >
+          <rect
+            x="0"
+            width="310"
+            height={`${numberOfRows > 4 ? 240 + numberOfRows * 10 : 240}`}
+            rx="15"
+            fill="#293445"
+            style={{ boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)' }}
+          />
+          <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
+          <g transform="matrix(1 0 0 1 100 95)">
+            <text x="5" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
+              {node?.popup?.title}
+            </text>
+          </g>
+
+          <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
+            {node?.popup?.description}
+          </text>
+        </g>
+      )}
     </svg>
   );
 };
