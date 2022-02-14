@@ -82,7 +82,7 @@ const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
 const KaddexMemberSocials = ({ selectedMember, style }) => {
   return (
     <FlexContainer gap={24} style={style}>
-      {selectedMember?.twitter && <TwitterIcon className="social-icon" onClick={() => window.open('', '_blank')} />}
+      {selectedMember?.twitter && <TwitterIcon className="social-icon" onClick={() => window.open(selectedMember.twitter, '_blank')} />}
       {selectedMember?.linkedin && <LinkedinIcon className="social-icon" onClick={() => window.open(selectedMember.linkedin, '_blank')} />}
     </FlexContainer>
   );

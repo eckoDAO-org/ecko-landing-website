@@ -50,6 +50,8 @@ export const FOOTER_LEARN = {
   items: [
     {
       text: 'Lite Paper',
+      href: '/kaddex litepaper.pdf',
+      target: '_blank',
     },
     {
       text: 'FAQ',

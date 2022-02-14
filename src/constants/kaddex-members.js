@@ -63,6 +63,7 @@ const DANIELE_DE_VECCHIS = {
   description:
     'Hi, I am Daniele nice to meet you all! Currently in charge of Tokenomics and many other aspects. I have a financial background with two master’s degrees: one in Business Administration from the University of Rome, Tor Vergata, and one in Economics and Finance from SDA Bocconi. I spent the initial years of my career working for one of the major companies in Italy, helping corporations expanding their activities and carrying on new investments. My main interests have always been expanding over a wide range of topics: from crypto currencies to DeFi, from liquidity mining and crop rotation to traditional finance and asset management. My DeFi adventure starts in 2018, I wrote an academic paper titled: “From Bitcoin to Augur: the first decentralized prediction market platform.” Lastly, I am very passionate about arts in every shape and form.',
   linkedin: 'https://www.linkedin.com/in/daniele-de-vecchis-799370148',
+  twitter: 'https://twitter.com/KDX_Mandrake',
   photo: danieleDeVecchisPhoto,
 };
 

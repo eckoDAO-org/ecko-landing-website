@@ -12,7 +12,7 @@ import Hamburger from './Hamburger';
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
-  padding: 2em 40px;
+  padding: 2em 50px;
 
   z-index: 10;
 

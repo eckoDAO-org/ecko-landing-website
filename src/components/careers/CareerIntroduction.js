@@ -17,13 +17,11 @@ const CareerIntroduction = () => {
       mobileStyle={{ margin: '30px 0' }}
     >
       <FlexContainer className="column" style={{ paddingRight: 64 }}>
-        <Label size="huge" className="nowrap" fontFamily="syncopate">
-          title for
-        </Label>
         <Label size="huge" fontFamily="syncopate">
+          title for
+          <br />
           careers
-        </Label>
-        <Label className="fit-content" fontFamily="syncopate" size="huge">
+          <br />
           page
         </Label>
       </FlexContainer>

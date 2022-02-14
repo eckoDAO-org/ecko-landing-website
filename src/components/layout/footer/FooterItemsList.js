@@ -9,11 +9,19 @@ const FooterItemsList = ({ title, items, color, children }) => {
         {title}
       </Label>
       {children ||
-        items.map((item, i) => (
-          <Label key={i} color={color} fontSize={13}>
-            {item.text}
-          </Label>
-        ))}
+        items.map((item, i) =>
+          item?.href ? (
+            <a href={item.href} target={item?.target}>
+              <Label key={i} color={color} fontSize={13}>
+                {item.text}
+              </Label>
+            </a>
+          ) : (
+            <Label key={i} color={color} fontSize={13}>
+              {item.text}
+            </Label>
+          )
+        )}
     </FlexContainer>
   );
 };
