@@ -110,14 +110,7 @@ const MobileRoadmap2022 = () => {
              Public Sale
             </RoadmapItemLeft>
           </div>
-          <div class='roadmap_container right'>
-          <RoadmapItemLeft>
-              KDX Vaulting Programme
-            </RoadmapItemLeft>
-            <RoadmapItemLeft regular >
-                available for early investors          
-            </RoadmapItemLeft>
-          </div>
+
           <div class='roadmap_container right'>
             <RoadmapItemRight  >Bridge ERC-20 Token Pairs</RoadmapItemRight>
           </div>
@@ -126,6 +119,14 @@ const MobileRoadmap2022 = () => {
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight  >Website v2</RoadmapItemRight>
+          </div>
+          <div class='roadmap_container right'>
+          <RoadmapItemLeft>
+              KDX Vaulting Programme
+            </RoadmapItemLeft>
+            <RoadmapItemLeft regular >
+                available for early investors          
+            </RoadmapItemLeft>
           </div>
           <div class='roadmap_container left'>
             <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
@@ -139,15 +140,15 @@ const MobileRoadmap2022 = () => {
             <RoadmapItemRight  >KDX Liquidity</RoadmapItemRight>
             <RoadmapItemRight  >Mining Programme</RoadmapItemRight>
           </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Whitepaper</RoadmapItemLeft>
+          <div class='roadmap_container right'>
+            <RoadmapItemRight  >Lending & borrowing</RoadmapItemRight>
+            <RoadmapItemRight  >functionalities</RoadmapItemRight>
           </div>
           <div class='roadmap_container right'>
             <RoadmapItemRight  >X-Wallet v2</RoadmapItemRight>
           </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >Lending & borrowing</RoadmapItemRight>
-            <RoadmapItemRight  >functionalities</RoadmapItemRight>
+          <div class='roadmap_container left'>
+            <RoadmapItemLeft  >Whitepaper</RoadmapItemLeft>
           </div>
           </div>
         </RoadmapContainer>
