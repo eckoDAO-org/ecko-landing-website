@@ -58,32 +58,27 @@ const MobileRoadmapOngoing = () => {
     return (
         <RoadmapContainer>
             <div  className='timeline_ongoing'>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft >
-             Team Formation
-            </RoadmapItemLeft>
+            <div class='roadmap_container left'>
+              <RoadmapItemLeft >
+              Multiplecode
+              </RoadmapItemLeft>
+              <RoadmapItemLeft >
+                  code-auditing          
+              </RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
-            <RoadmapItemRight >Community Sale</RoadmapItemRight>
+            <RoadmapItemRight >Team Expansion</RoadmapItemRight>
           </div>
           <div class='roadmap_container left'>
-            <RoadmapItemLeft >
-             Kaddex Beta
-            </RoadmapItemLeft>
-            <RoadmapItemLeft >
-                Live on Mainnet            
-            </RoadmapItemLeft>
+              <RoadmapItemLeft >
+              New Strategic
+              </RoadmapItemLeft>
+              <RoadmapItemLeft >
+                  Partnerships         
+              </RoadmapItemLeft>
           </div>
           <div class='roadmap_container right'>
-            <RoadmapItemRight >
-              2M TVL
-            </RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Tokenomics Deepdive</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >Website V1</RoadmapItemRight>
+            <RoadmapItemRight >DAO Transition</RoadmapItemRight>
           </div>
           </div>
         </RoadmapContainer>
