@@ -4,6 +4,7 @@ import { theme } from '../../styles/theme';
 import browserDetection from '../../utils/browserDetection';
 
 export const FlexContainer = ({
+  reference,
   className,
   desktopClassName,
   desktopPixel,
@@ -36,6 +37,7 @@ export const FlexContainer = ({
   return (
     <STYFlexContainer
       {...rest}
+      ref={reference}
       className={getClassName()}
       backgroundImage={backgroundImage}
       style={{

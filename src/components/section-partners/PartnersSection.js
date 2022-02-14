@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import { PartnersIcon } from '../../assets';
@@ -16,7 +16,6 @@ import {
   PARTNER_ZELCORE,
 } from '../../constants/partners';
 import theme from '../../styles/theme';
-import { useEffect, useState } from 'react/cjs/react.development';
 
 const PartnersContainer = styled(FlexContainer)`
   .partners-icon {

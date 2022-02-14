@@ -49,6 +49,9 @@ const STYText = styled.span`
   &.fit-content {
     width: fit-content;
   }
+  &.h-fit-content {
+    height: fit-content;
+  }
   &.uppercase {
     text-transform: uppercase;
   }

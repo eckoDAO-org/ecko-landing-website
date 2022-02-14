@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react/cjs/react.development';
 import styled from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
