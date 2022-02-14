@@ -96,7 +96,7 @@ const MobileRoadmap2022 = () => {
           fill="none"
           stroke={whiteGrey}
           strokeWidth="3"
-          strokeDasharray="8 8"
+          strokeDasharray="8"
         />
         <path
           id="Mobile-Path_44414"

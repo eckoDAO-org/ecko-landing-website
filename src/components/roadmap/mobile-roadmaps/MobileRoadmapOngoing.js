@@ -9,15 +9,16 @@ const MobileRoadmapOngoing = () => {
     <svg xmlns="http://www.w3.org/2000/svg" width="401" height="664.5" viewBox="0 0 401 664.5">
       <g id="Mobile-roadmap_Ongoing_mobile" data-name="roadmap Ongoing_mobile" transform="translate(0 -353.2)">
         <path
-          id="Mobile-Path_44414"
+          id="Path_44414"
           data-name="Path 44414"
-          d="M-700.528,853.435h330.669a20.282,20.282,0,0,0,20.331-20v-122a20,20,0,0,0-20-20h-288a20,20,0,0,1-20-20V556.7a20,20,0,0,1,20-20h288a20,20,0,0,0,20-20V401.945a20,20,0,0,0-20-20h-288a20,20,0,0,1-20-20v-107a20,20,0,0,1,20-20h358"
-          transform="translate(700.528 274.555)"
+          d="M-319.528-11.545H-679.2a20.282,20.282,0,0,0-20.331,20v71a20,20,0,0,0,20,20h288a20,20,0,0,1,20,20v93.99a20,20,0,0,1-20,20h-288a20,20,0,0,0-20,20v107.5a20,20,0,0,0,20,20h288a20,20,0,0,1,20,20v114a20,20,0,0,1-20,20h-288a20,20,0,0,0-20,20v114.5a20,20,0,0,0,20,20h288a20,20,0,0,1,20,20v124a20,20,0,0,1-20,20s-246.116.034-328.027.034"
+          transform="translate(719.527 274.555)"
           fill="none"
           stroke={whiteGrey}
-          strokeWidth="2"
+          strokeWidth="3"
           strokeDasharray="8"
         />
+
         <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="7" cy="7" r="7" transform="translate(260 804)" fill={orange} />
         <circle id="Mobile-Ellipse_1261" data-name="Ellipse 1261" cx="7" cy="7" r="7" transform="translate(260 649)" fill={orange} />
         <circle id="Mobile-Ellipse_1262" data-name="Ellipse 1262" cx="7" cy="7" r="7" transform="translate(103 649)" fill={orange} />

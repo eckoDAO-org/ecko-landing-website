@@ -34,6 +34,7 @@ const STYText = styled.span`
   }
 
   &.rainbow {
+    display: block;
     background-image: ${({ gradient, gradientColors }) => {
       if (gradient) {
         return gradient;

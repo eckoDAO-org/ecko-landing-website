@@ -12,7 +12,7 @@ import Hamburger from './Hamburger';
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
-  padding: 2em 50px;
+  padding: 2em 40px;
 
   z-index: 10;
 
@@ -32,23 +32,23 @@ const Container = styled(FlexContainer)`
 
   .kaddex-logo {
     cursor: pointer;
-    margin-right: 30%;
-    @media (max-width: 1120px) and (min-width: 1050px) {
-      margin-right: 25%;
+    margin-right: 22%;
+    @media (max-width: 1120px) and (min-width: 1060px) {
+      margin-right: 18%;
     }
-    @media (max-width: 1050px) and (min-width: 960px) {
-      margin-right: 20%;
+
+    @media (max-width: 1060px) and (min-width: 960px) {
+      margin-right: 14%;
     }
-    @media (max-width: 960px) and (min-width: 870px) {
-      margin-right: 15%;
-    }
-    @media (max-width: 870px) and (min-width: 830px) {
+
+    @media (max-width: 960px) and (min-width: 920px) {
       margin-right: 10%;
     }
-    @media (max-width: 830px) and (min-width: 800px) {
-      margin-right: 5%;
+    @media (max-width: 920px) and (min-width: 880px) {
+      margin-right: 8%;
     }
-    @media (max-width: 799px) {
+
+    @media (max-width: 880px) {
       margin-right: unset;
     }
   }
@@ -88,14 +88,14 @@ const CommonHeader = ({ className, isSticky }) => {
     });
   };
   return (
-    <Container desktopPixel={800} className={`align-ce ${className}`} tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
+    <Container desktopPixel={880} className={`align-ce ${className}`} tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
       <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-      {width >= 800 && (
+      {width >= 880 && (
         <FlexContainer className="align-ce" gap={24}>
           <NavigationItems />
         </FlexContainer>
       )}
-      {width < 800 && <Hamburger />}
+      {width < 880 && <Hamburger />}
     </Container>
   );
 };

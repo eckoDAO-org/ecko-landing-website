@@ -32,6 +32,9 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover }) => {
       <NavigationItem href="/#partners" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Partners
       </NavigationItem>
+      <NavigationItem href="/careers" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
+        Careers
+      </NavigationItem>
 
       <NavigationItem
         href="https://xwallet.kaddex.com"

@@ -8,6 +8,7 @@ import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.pn
 import { R_2021, R_2022, R_ONGOING } from '../../constants/roadmaps';
 import theme from '../../styles/theme';
 import RoadmapTabs from './RoadmapTabs';
+import Roadmap2022 from './desktop-roadmaps/Roadmap2022';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
@@ -78,7 +79,24 @@ const Roadmap = () => {
       // return () => roadmapsContainer.removeEventListener('scroll', onRoadmapScroll);
     }
   }, [selectedRoadmapId, roadmapsContainer]);
+  // const [node, setNode] = useState({ config: null, element: null });
+  // const [timer, setTimer] = useState(null);
 
+  // const closePopup = () => {
+  //   const t = setTimeout(() => {
+  //     setNode({ config: null, element: null });
+  //   }, 1000);
+  //   setTimer(t);
+  // };
+
+  // const getOffset = () => {
+  //   if (node.config.level === 0) {
+  //     return 0;
+  //   }
+  //   if (node.config.level === 2) {
+  //     return roadmapsContainer.getBoundingClientRect().height - (roadmapsContainer.getBoundingClientRect().height * 20) / 100;
+  //   }
+  // };
   return (
     <RoadmapWrapper id="roadmap" className="column scroll-mt relative" desktopPixel={1460} style={{ marginTop: 100 }}>
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
@@ -90,15 +108,31 @@ const Roadmap = () => {
       {width <= theme.mediaQueries.mobilePixel && (
         <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
-
+      {/* {node?.config && (
+        <FlexContainer
+          className="absolute"
+          style={{
+            top: 120 + 50 + 150 + getOffset(),
+            left: node.element.x,
+            width: '20%',
+            height: '20%',
+            boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)',
+            backgroundColor: '#293445',
+            borderRadius: 20,
+          }}
+          onMouseLeave={() => closePopup()}
+        >
+          {node?.config?.title}
+        </FlexContainer>
+      )} */}
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
-        <FlexContainer style={{ minWidth: width, paddingTop: 120, paddingBottom: 120 }} id={`roadmap-${R_2021.id}`}>
+        <FlexContainer style={{ minWidth: width, padding: '120px 0' }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2021.desktopImage : R_2021.mobileImage}
         </FlexContainer>
-        <FlexContainer style={{ minWidth: width, paddingTop: 120, paddingBottom: 120 }} id={`roadmap-${R_2022.id}`}>
+        <FlexContainer style={{ minWidth: width, padding: '120px 0' }} id={`roadmap-${R_2022.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2022.desktopImage : R_2022.mobileImage}
         </FlexContainer>
-        <FlexContainer style={{ minWidth: width, paddingTop: 120, paddingBottom: 120 }} id={`roadmap-${R_ONGOING.id}`}>
+        <FlexContainer style={{ minWidth: width, padding: '120px 0' }} id={`roadmap-${R_ONGOING.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_ONGOING.desktopImage : R_ONGOING.mobileImage}
         </FlexContainer>
       </RoadmapContainer>

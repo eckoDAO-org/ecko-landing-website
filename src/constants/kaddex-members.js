@@ -14,6 +14,9 @@ import kateOztuncPhoto from '../assets/images/kaddex-team/kate-oztunc.jpg';
 import grantGerberPhoto from '../assets/images/kaddex-team/grant-gerber.jpg';
 import donDAgostinoPhoto from '../assets/images/kaddex-team/don-d-agostino.jpg';
 import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.jpg';
+import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
+import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
+import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
 
 const ROLE_CFO = {
   short: 'CFO',
@@ -158,6 +161,7 @@ const ADRIAN_CARDOSO = {
   firstname: 'Adrian',
   lastname: 'Cardoso',
   role: ROLE_ENGINEERING.role,
+  photo: adrianCardosoPhoto,
   description:
     'My name is Adrian, project manager for Kaddex. I have had the pleasure of being involved with this project since its genesis, and from day one I have believed that the product, team, and innovation we have on our hands is revolutionary. I aim to guarantee a high-quality product and to assure the most efficient work-flow for our development team. I consider myself a creative, and hardworking co-worker that stands out by showing constant attention to detail. I have a unique mix of creativity, problem solving, and technical skills that guarantee value to the innovative services we pride ourselves on developing.',
   linkedin: 'https://www.linkedin.com/in/adrian-cardoso-b55183223/',
@@ -244,6 +248,7 @@ const CARLES_ALONSO = {
   firstname: 'Carles',
   lastname: 'Alonso',
   role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
+  photo: carlesAlonsoPhoto,
   description:
     'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
 };
@@ -253,6 +258,7 @@ const BRANDON_CHONG = {
   firstname: 'Brandon',
   lastname: 'Chong',
   role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
+  photo: brandonChongPhoto,
   description:
     'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
   linkedin: 'https://www.linkedin.com/in/brandonwchong/',

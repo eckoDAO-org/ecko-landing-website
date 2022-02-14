@@ -7,6 +7,7 @@ const whiteGrey = '#666666';
 
 const CONFIGURATION = {
   X_WALLET_BETA: {
+    level: 0,
     circle: { x: 490, y: 190 },
     text: {
       x: 437,
@@ -14,6 +15,7 @@ const CONFIGURATION = {
       tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
     },
     popup: {
+      y: 0,
       title: 'X-Wallet Beta',
       description:
         'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
@@ -21,6 +23,7 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   LITEPAPER: {
+    level: 0,
     circle: { x: 740, y: 190 },
     text: {
       x: 750,
@@ -28,13 +31,15 @@ const CONFIGURATION = {
       tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
     },
     popup: {
+      y: 0,
+
       title: 'X-Wallet Beta',
-      description:
-        'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
+      description: 'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.',
     },
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
+    level: 0,
     circle: { x: 990, y: 190 },
     text: {
       x: 950,
@@ -44,6 +49,7 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   PUBLIC_SALE: {
+    level: 0,
     circle: { x: 1240, y: 190 },
     text: {
       x: 1200,
@@ -53,6 +59,7 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   BRIDGED_ERC20: {
+    level: 0,
     circle: { x: 1490, y: 190 },
     text: {
       x: 1506,
@@ -65,6 +72,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   SWAPPING_INTERFACE: {
+    level: 1,
     circle: { x: 1490, y: 381 },
     text: {
       x: 1499,
@@ -75,6 +83,8 @@ const CONFIGURATION = {
       ],
     },
     popup: {
+      y: 191,
+
       title: 'Swapping Interface',
       description:
         'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
@@ -83,6 +93,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   WEBSITE_V2: {
+    level: 1,
     circle: { x: 1240, y: 381 },
     text: {
       x: 1200,
@@ -92,6 +103,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   KDX_VAULTING_PROGRAMME: {
+    level: 1,
     circle: { x: 990, y: 381 },
     text: {
       x: 1000,
@@ -103,9 +115,16 @@ const CONFIGURATION = {
         { x: -30.012, y: 75, text: 'investors', fontSize: 13 },
       ],
     },
+    popup: {
+      y: 191,
+
+      title: 'X-Wallet Beta',
+      description: 'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.',
+    },
     color: whiteGrey,
   },
   KADDEX_V1_FULL_LAUNCH: {
+    level: 1,
     circle: { x: 490, y: 381 },
     text: {
       x: 500,
@@ -118,6 +137,7 @@ const CONFIGURATION = {
     color: '#FA41A5',
   },
   SINGLE_SIDED_LIQUIDITY: {
+    level: 1,
     circle: { x: 740, y: 381 },
     text: {
       x: 750,
@@ -130,6 +150,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   KDX_LIQUIDITY_MINING_PROGRAMME: {
+    level: 2,
     circle: { x: 490, y: 596 },
     text: {
       x: 500,
@@ -143,6 +164,7 @@ const CONFIGURATION = {
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {
+    level: 2,
     circle: { x: 740, y: 596 },
     text: {
       x: 756,
@@ -155,6 +177,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   X_WALLET_V2: {
+    level: 2,
     circle: { x: 990, y: 596 },
     text: {
       x: 950,
@@ -164,6 +187,7 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   WHITEPAPER: {
+    level: 2,
     circle: { x: 1240, y: 596 },
     text: {
       x: 1270,
@@ -171,6 +195,8 @@ const CONFIGURATION = {
       tspan: [{ x: -60.61, y: 0, text: 'Whitepaper' }],
     },
     popup: {
+      y: 406,
+
       title: 'White paper',
       description:
         'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX. ',
@@ -211,8 +237,8 @@ function svg_textMultiline(clb) {
     const testWidth = metrics.width;
 
     if (testWidth > width && n > 0) {
-      numberOfRows += 1;
-      element.innerHTML += '<tspan x="50" dy="' + y + '">' + line + '</tspan>';
+      console.log('n', testLine);
+      element.innerHTML += '<tspan x="60" dy="' + y + '">' + line + '</tspan>';
       line = words[n] + ' ';
     } else {
       line = testLine;
@@ -237,12 +263,12 @@ const Roadmap2022 = () => {
     setTimer(t);
   };
 
-  useEffect(() => {
-    if (node) {
-      svg_textMultiline((v) => setNumberOfRows(v));
-    }
-  }, [node]);
-  console.log('number', numberOfRows);
+  // useEffect(() => {
+  //   if (node) {
+  //     svg_textMultiline();
+  //   }
+  // }, [node]);
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501" style={{ overflow: 'visible' }}>
       <g id="Roadmap" transform="translate(5 -190)">
@@ -259,6 +285,7 @@ const Roadmap2022 = () => {
             return (
               <g key={i}>
                 <circle
+                  id={config}
                   cx="15"
                   cy="15"
                   r="15"
@@ -319,13 +346,37 @@ const Roadmap2022 = () => {
             />
           </g>
         </g>
+
+        {node && (
+          <g
+            transform={`translate(${node.circle.x - 158} ${node.circle.y - 30})`}
+            // onMouseEnter={() => clearTimeout(timer)}
+            onMouseLeave={() => closePopup()}
+          >
+            <rect x="0" width="310" height="240" rx="15" fill="#293445" style={{ boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)' }} />
+            <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
+            <g transform="matrix(1 0 0 1 100 95)">
+              <text x="5" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
+                {node?.popup?.title}
+              </text>
+            </g>
+
+            <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
+              {node?.popup?.description}
+            </text>
+          </g>
+        )}
       </g>
-      {node && (
+      {console.log('node', node)}
+
+      {/* {node?.config && (
         <g
-          transform={`translate(${node.circle.x - 152} ${node.circle.y - 220})`}
+          transform={`translate(${node?.config.circle.x - 152} ${node?.config.circle.y - 220})`}
           // onMouseEnter={() => clearTimeout(timer)}
-          onMouseLeave={() => closePopup()}
+          // onMouseLeave={() => closePopup()}
         >
+          {console.log('element', popup)}
+          {popup}
           <rect
             x="0"
             width="310"
@@ -334,18 +385,18 @@ const Roadmap2022 = () => {
             fill="#293445"
             style={{ boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)' }}
           />
-          <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node.color} />
+          <circle cx="15" cy="15" r="15" transform="translate(158 30)" fill={node?.config.color} />
           <g transform="matrix(1 0 0 1 100 95)">
             <text x="5" y="0" fontSize="20" fill="#fff" fontFamily={theme.fontFamily.basier} letterSpacing="-0.1em">
-              {node?.popup?.title}
+              {node?.config?.popup?.title}
             </text>
           </g>
 
           <text fontSize={13} fill={theme.colors.primary} fontFamily={theme.fontFamily.basier} id="popup-description" y="130">
-            {node?.popup?.description}
+            {node?.config?.popup?.description}
           </text>
         </g>
-      )}
+      )} */}
     </svg>
   );
 };

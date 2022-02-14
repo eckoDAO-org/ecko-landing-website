@@ -8,6 +8,7 @@ const IntroductionSection = () => {
   return (
     <FlexContainer id="introduction" className="column w-100">
       <IntroductionHeader />
+
       <GameBoy />
       <a href="/#proof-of-dex">
         <FlexContainer className="w-100 justify-ce mobile-only" style={{ marginTop: 25 }}>
