@@ -43,6 +43,18 @@ const GameBoy = () => {
 
   const videoRef = useRef(null);
 
+  const getSize = () => {
+    if (width < 768) {
+      return {
+        width: '60%',
+        height: '30%',
+      };
+    }
+    return {
+      width: '60%',
+      height: '60%',
+    };
+  };
   return (
     <FlexContainer id="gameboy-container" className="relative justify-ce">
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
@@ -73,7 +85,7 @@ const GameBoy = () => {
           className="absolute"
           onClick={() => {
             modalContext.openModal({
-              content: <ReactPlayer ref={videoRef} url={kaddexVideo} playing controls width="60%" height="60%" />,
+              content: <ReactPlayer ref={videoRef} url={kaddexVideo} playing controls {...getSize()} />,
             });
           }}
         >

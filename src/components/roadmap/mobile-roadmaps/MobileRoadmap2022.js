@@ -12,7 +12,7 @@ const CONFIGURATION = {
       y: 306,
       tspan: [{ x: -51.353, y: 0, text: 'X-Wallet Beta' }],
     },
-    href: '/https://xwallet.kaddex.com/',
+    href: 'https://xwallet.kaddex.com/',
     color: theme.colors.primary,
   },
   LITEPAPER: {
@@ -33,7 +33,7 @@ const CONFIGURATION = {
       y: 417,
       tspan: [{ x: -43.568, y: 0, text: 'X-Wallet v1' }],
     },
-    href: '/https://xwallet.kaddex.com/',
+    href: 'https://xwallet.kaddex.com/',
 
     color: theme.colors.primary,
   },
