@@ -18,7 +18,13 @@ const AccordionsContainer = styled(FlexContainer)`
 
 const JobPositions = () => {
   return (
-    <FlexContainer gap={72} mobileClassName="column" style={{ marginTop: 140, padding: '0 130px' }}>
+    <FlexContainer
+      gap={72}
+      mobileClassName="column"
+      desktopStyle={{ marginTop: 140, padding: '0 130px' }}
+      tabletStyle={{ padding: '0 50px', marginTop: 50 }}
+      mobileStyle={{ padding: '0 50px', marginTop: 50 }}
+    >
       <Label className="nowrap h-fit-content" fontFamily="syncopate" size="big">
         Open Job
         <br />
@@ -28,7 +34,7 @@ const JobPositions = () => {
       <AccordionsContainer className="w-100 column">
         <Accordion title="Engineer" color="primary">
           <Label size="normal" color="primary">
-            Engineer
+            SENIOR CODING EXPERT
           </Label>
         </Accordion>
 

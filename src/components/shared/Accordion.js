@@ -15,6 +15,9 @@ const AccordionContent = styled(FlexContainer)`
   overflow: hidden;
   transition: max-height 0.3s ease;
   max-height: ${({ maxHeight }) => maxHeight || 0}px;
+  & > *:first-child {
+    margin-top: 16px;
+  }
 `;
 
 const Accordion = ({
@@ -37,7 +40,7 @@ const Accordion = ({
   return (
     <FlexContainer color={color} className="w-100 column">
       <FlexContainer
-        className={`justify-sb ${children && 'pointer'}`}
+        className={`align-ce justify-sb ${children && 'pointer'}`}
         onClick={() => {
           if (children) {
             toggleAccordion();
