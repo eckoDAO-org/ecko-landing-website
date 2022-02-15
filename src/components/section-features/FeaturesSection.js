@@ -42,7 +42,7 @@ const FeaturesSection = () => {
       </FlexContainer>
 
       {width >= 1400 && (
-        <FlexContainer className="w-100 grid justify-sb" columns="auto-fill" px={210}>
+        <FlexContainer className="w-100 justify-sb" gap={35}>
           {FEATURES.slice(1).map((feature, i) => (
             <FeatureCard key={i} feature={feature} />
           ))}
