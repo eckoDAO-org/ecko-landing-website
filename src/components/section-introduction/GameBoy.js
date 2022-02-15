@@ -8,14 +8,43 @@ import theme from '../../styles/theme';
 import ReactPlayer from 'react-player';
 import gameboy from '../../assets/images/gameboy.json';
 import kaddexVideo from '../../assets/images/kaddex-video.mp4';
-import Label from '../shared/Label';
 import { CircleBackground } from '../shared/RadiusBackground';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
+import { PlayIcon } from '../../assets';
 
 const ButtonPlayContainer = styled(FlexContainer)`
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-66%, 32%);
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) and (min-width: 500px) {
+    transform: translate(-64%, 0%);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 500px) and (min-width: 400px) {
+    transform: translate(-64%, -10%);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 400px) {
+    transform: translate(-64%, -20%);
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
 `;
 
 const lottieDefaultOptions = {
@@ -70,14 +99,14 @@ const GameBoy = () => {
 
       {showVideo && (
         <ButtonPlayContainer
-          className="absolute"
+          className="absolute pointer"
           onClick={() => {
             modalContext.openModal({
               content: <ReactPlayer ref={videoRef} url={kaddexVideo} playing controls width={width - width * 0.4} height="auto" />,
             });
           }}
         >
-          <Label>play</Label>
+          <PlayIcon />
         </ButtonPlayContainer>
       )}
     </FlexContainer>

@@ -6,6 +6,7 @@ export { ReactComponent as KaddexFooterIcon } from './images/layout/kaddex-foote
 export { ReactComponent as ArrowsDownIcon } from './images/layout/arrows-down.svg';
 export { ReactComponent as CloseIcon } from './images/layout/close-icon.svg';
 export { ReactComponent as ArrowDownIcon } from './images/layout/arrow-down.svg';
+export { ReactComponent as PlayIcon } from './images/layout/play-icon.svg';
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';
 export { ReactComponent as FluxLogo } from './images/partners/flux.svg';
