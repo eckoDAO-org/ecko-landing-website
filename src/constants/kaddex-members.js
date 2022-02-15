@@ -252,6 +252,7 @@ const CARLES_ALONSO = {
   photo: carlesAlonsoPhoto,
   description:
     'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
+  linkedin: 'https://www.linkedin.com/in/carlos-alonso-torras-2ab95270/',
 };
 
 const BRANDON_CHONG = {
@@ -270,7 +271,8 @@ const EMILIY_PILLMORE = {
   firstname: 'Emily',
   lastname: 'Pillmore',
   role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
-  description: '',
+  description:
+    'I’m Emily, an advisor for Kaddex as well as the Smart Contracts Lead for Kadena. I spend my professional career building software, writing and collaborating on a large number of open-source projects in Haskell and Scala. I am also the first CTO of the Haskell Foundation. When not programming, I try to spend my time moonlighting as a mathematician, doing work in applied Category Theory and Topology.',
   linkedin: 'https://www.linkedin.com/in/emily-pillmore-453630ab/',
   twitter: 'https://twitter.com/bkmlep',
 };
@@ -280,7 +282,8 @@ const FRANCESCO_MELPIGNANO = {
   firstname: 'Francesco',
   lastname: 'Melpignano',
   role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
-  description: '',
+  description:
+    'Hi, I’m Francesco, I recently joined as an advisor for Kaddex. I am currently running strategy and business development, and was previously an engineer, at Kadena. Before Kadena, I founded and sold a startup in the robotics space. We’re very excited to have Kaddex as our first and most successful DeFi protocol in partnership with Kadena as we aim our scalable decentralized ecosystem towards greater adoption of powerful, user-friendly dApps.',
   twitter: 'https://twitter.com/fmelp',
 };
 
