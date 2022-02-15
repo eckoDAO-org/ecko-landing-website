@@ -13,7 +13,7 @@ const STYCard = styled(FlexContainer)`
     }
   }
 
-  &:hover {
+  /* &:hover {
     .feature-title {
       text-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
     }
@@ -21,7 +21,7 @@ const STYCard = styled(FlexContainer)`
       -webkit-filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
       filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
     }
-  }
+  } */
 `;
 
 const FeatureCard = ({ feature }) => {

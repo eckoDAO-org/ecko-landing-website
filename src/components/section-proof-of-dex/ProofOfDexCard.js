@@ -18,7 +18,7 @@ const STYCard = styled(FlexContainer)`
       fill: ${({ color }) => `${getColor(color)}`};
     }
   }
-  :not(&.disabled) {
+  /* :not(&.disabled) {
     &:hover {
       .proof-title {
         text-shadow: ${({ color }) => `0 0 4px ${getColor(color)}`};
@@ -29,7 +29,7 @@ const STYCard = styled(FlexContainer)`
         filter: ${({ color }) => `drop-shadow( 0 0 3px ${getColor(color)})`};
       }
     }
-  }
+  } */
 
   @media (max-width: 1520px) {
     width: 160px;

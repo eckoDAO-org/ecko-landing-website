@@ -238,8 +238,6 @@ const Roadmap2022 = () => {
           </g>
         </g>
 
-        {/* Popup */}
-
         <g id="Group_68779" data-name="Group 68779">
           <g id="Group_68778" data-name="Group 68778">
             <path

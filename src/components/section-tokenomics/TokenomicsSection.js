@@ -17,7 +17,7 @@ const MOBILE_PIXEL = 860;
 const TokenomicsContainer = styled(FlexContainer)`
   marquee {
     position: absolute;
-    top: -300px;
+    top: -400px;
     @media (max-width: 1024px) and (min-width: ${MOBILE_PIXEL}px) {
       svg {
         width: 2100px;
@@ -85,8 +85,8 @@ const TokenomicsSection = () => {
       id="tokenomics"
       className="column relative w-100 align-ce scroll-mt"
       desktopPixel={DESKTOP_PIXEL}
-      desktopStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
-      tabletStyle={{ marginTop: 400, flexWrap: 'wrap', padding: '0 130px' }}
+      desktopStyle={{ marginTop: 600, flexWrap: 'wrap', padding: '0 130px' }}
+      tabletStyle={{ marginTop: 600, flexWrap: 'wrap', padding: '0 130px' }}
       mobileStyle={{ marginTop: 300, flexWrap: 'wrap', padding: '0 50px' }}
     >
       <marquee className="marquee" scrollamount="20">

@@ -1,13 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
-import { ModalContext } from '../../context/ModalContext';
 import useWindowSize from '../../hooks/useWindowSize';
 import Lottie from 'react-lottie';
 import { FlexContainer } from '../shared/Container';
 import theme from '../../styles/theme';
-import ReactPlayer from 'react-player';
 import gameboy from '../../assets/images/gameboy.json';
-import kaddexVideo from '../../assets/images/kaddex-video.mp4';
 import { CircleBackground } from '../shared/RadiusBackground';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 import { PlayIcon } from '../../assets';
@@ -25,21 +22,28 @@ const ButtonPlayContainer = styled(FlexContainer)`
     height: 40px;
   }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) and (min-width: 500px) {
-    transform: translate(-64%, 0%);
+    transform: translate(-63%, 0%);
     svg {
       width: 20px;
       height: 20px;
     }
   }
-  @media (max-width: 500px) and (min-width: 400px) {
-    transform: translate(-64%, -10%);
+  @media (max-width: 500px) and (min-width: 450px) {
+    transform: translate(-63%, -10%);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 450px) and (min-width: 400px) {
+    transform: translate(-57%, -14%);
     svg {
       width: 20px;
       height: 20px;
     }
   }
   @media (max-width: 400px) {
-    transform: translate(-64%, -20%);
+    transform: translate(-57%, -20%);
     svg {
       width: 15px;
       height: 15px;
@@ -60,7 +64,6 @@ const GameBoy = () => {
   const [width] = useWindowSize();
   const [lottieOptions, setLottieOptions] = useState({ isStopped: true, isPaused: true });
   const [showVideo, setShowVideo] = useState(false);
-  const modalContext = useContext(ModalContext);
 
   const setEvent = () => {
     setLottieOptions({ isStopped: false, isPaused: false });
@@ -69,8 +72,6 @@ const GameBoy = () => {
     window.addEventListener(width < theme.mediaQueries.desktopPixel ? 'scroll' : 'wheel', setEvent);
     return () => window.removeEventListener(width < theme.mediaQueries.desktopPixel ? 'scroll' : 'wheel', setEvent);
   }, [width]);
-
-  const videoRef = useRef(null);
 
   return (
     <FlexContainer id="gameboy-container" className="relative justify-ce">
@@ -101,9 +102,7 @@ const GameBoy = () => {
         <ButtonPlayContainer
           className="absolute pointer"
           onClick={() => {
-            modalContext.openModal({
-              content: <ReactPlayer ref={videoRef} url={kaddexVideo} playing controls width={width - width * 0.4} height="auto" />,
-            });
+            window.open('https://swap.kaddex.com/', '_blank');
           }}
         >
           <PlayIcon />
