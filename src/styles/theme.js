@@ -56,6 +56,7 @@ export const theme = {
     footerMinWidth: '50rem',
   },
   colors: {
+    darkBlue: '#0A0B1D',
     white: '#FFFFFF',
     primary: '#7EFBFA',
     lightBlue: '#95CFF5',

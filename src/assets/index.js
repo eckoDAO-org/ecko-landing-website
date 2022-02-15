@@ -7,6 +7,7 @@ export { ReactComponent as ArrowsDownIcon } from './images/layout/arrows-down.sv
 export { ReactComponent as CloseIcon } from './images/layout/close-icon.svg';
 export { ReactComponent as ArrowDownIcon } from './images/layout/arrow-down.svg';
 export { ReactComponent as PlayIcon } from './images/layout/play-icon.svg';
+export { ReactComponent as GoTopIcon } from './images/layout/go-top.svg';
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';
 export { ReactComponent as FluxLogo } from './images/partners/flux.svg';

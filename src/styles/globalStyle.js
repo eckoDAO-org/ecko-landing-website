@@ -28,7 +28,7 @@ export default createGlobalStyle`
       font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
       background-attachment: fixed;
       opacity: 1;
-      background-color: #0A0B1D;
+      background-color: ${({ theme: { colors } }) => colors.darkBlue};
       overflow-x: hidden;
 
       

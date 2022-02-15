@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { KaddexLogo } from '../../../assets';
@@ -53,20 +53,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const Header = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  useEffect(() => {
-    window.addEventListener('scroll', handleIsSticky);
-    return () => {
-      window.removeEventListener('scroll', handleIsSticky);
-    };
-  }, []);
-
-  const handleIsSticky = () => {
-    const scrollTop = window.scrollY;
-    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
-  };
-
+const Header = ({ isSticky }) => {
   return (
     <div>
       <CommonHeader />

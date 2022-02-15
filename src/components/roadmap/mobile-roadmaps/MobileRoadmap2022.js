@@ -195,7 +195,7 @@ const MobileRoadmap2022 = () => {
           stroke={whiteGrey}
           strokeWidth="3"
         />
-        {/* LITEPAPER */}
+
         {Object.keys(CONFIGURATION).map((config, i) => {
           const nodeConfig = CONFIGURATION[config];
           return (
