@@ -19,7 +19,7 @@ const MobileRoadmapOngoing = () => {
           strokeDasharray="8"
         />
 
-        <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="7" cy="7" r="7" transform="translate(260 804)" fill={orange} />
+        <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="10" cy="10" r="10" transform="translate(260 801)" fill={orange} />
         <circle id="Mobile-Ellipse_1261" data-name="Ellipse 1261" cx="7" cy="7" r="7" transform="translate(260 649)" fill={orange} />
         <circle id="Mobile-Ellipse_1262" data-name="Ellipse 1262" cx="7" cy="7" r="7" transform="translate(103 649)" fill={orange} />
         <circle id="Mobile-Ellipse_1223" data-name="Ellipse 1223" cx="10" cy="10" r="10" transform="translate(260 955)" fill={orange} />
@@ -78,6 +78,20 @@ const MobileRoadmapOngoing = () => {
         >
           <tspan x="-55.245" y="0">
             DAO Transition
+          </tspan>
+        </text>
+
+        <text
+          id="Mobile-Fiat_On_Ramp"
+          data-name="Fiat_On_Ramp"
+          transform="translate(280 854)"
+          fill={orange}
+          fontSize="15"
+          fontFamily={theme.fontFamily.basier}
+          letterSpacing="-0.1em"
+        >
+          <tspan x="-55.245" y="0">
+            Fiat on Ramp
           </tspan>
         </text>
       </g>
