@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
 import Lottie from 'react-lottie';
 import { FlexContainer } from '../shared/Container';
@@ -7,50 +6,6 @@ import theme from '../../styles/theme';
 import gameboy from '../../assets/images/gameboy.json';
 import { CircleBackground } from '../shared/RadiusBackground';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
-import { PlayIcon } from '../../assets';
-
-const ButtonPlayContainer = styled(FlexContainer)`
-  left: 50%;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-66%, 32%);
-  svg {
-    width: 40px;
-    height: 40px;
-  }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) and (min-width: 500px) {
-    transform: translate(-63%, 0%);
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-  @media (max-width: 500px) and (min-width: 450px) {
-    transform: translate(-63%, -10%);
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-  @media (max-width: 450px) and (min-width: 400px) {
-    transform: translate(-57%, -14%);
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-  @media (max-width: 400px) {
-    transform: translate(-57%, -20%);
-    svg {
-      width: 15px;
-      height: 15px;
-    }
-  }
-`;
-
 const lottieDefaultOptions = {
   loop: false,
   autoplay: false,
@@ -63,7 +18,6 @@ const lottieDefaultOptions = {
 const GameBoy = () => {
   const [width] = useWindowSize();
   const [lottieOptions, setLottieOptions] = useState({ isStopped: true, isPaused: true });
-  const [showVideo, setShowVideo] = useState(false);
 
   const setEvent = () => {
     setLottieOptions({ isStopped: false, isPaused: false });
@@ -92,22 +46,10 @@ const GameBoy = () => {
         eventListeners={[
           {
             eventName: 'complete',
-            callback: () => setShowVideo(true),
           },
         ]}
         style={{ width: 843, height: width >= theme.mediaQueries.mobilePixel && 556 }}
       />
-
-      {showVideo && (
-        <ButtonPlayContainer
-          className="absolute pointer"
-          onClick={() => {
-            window.open('https://swap.kaddex.com/', '_blank');
-          }}
-        >
-          <PlayIcon />
-        </ButtonPlayContainer>
-      )}
     </FlexContainer>
   );
 };

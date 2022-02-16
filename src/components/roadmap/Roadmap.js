@@ -52,20 +52,8 @@ const Roadmap = () => {
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
 
-  // const onRoadmapScroll = () => {
-  //   console.log('roadmapsContainer.scrollLeft', roadmapsContainer.scrollLeft);
-  //   if (roadmapsContainer.scrollLeft < width / 2 - width / 4) {
-  //     setSelectedRoadmapId(R_2021.id);
-  //   } else if (roadmapsContainer.scrollLeft > width * 2 - width / 6) {
-  //     setSelectedRoadmapId(R_ONGOING.id);
-  //   } else {
-  //     setSelectedRoadmapId(R_2022.id);
-  //   }
-  // };
-
   useEffect(() => {
     if (roadmapsContainer) {
-      // roadmapsContainer.addEventListener('scroll', onRoadmapScroll);
       const roadmap = document.getElementById(`roadmap-${selectedRoadmapId}`);
       roadmapsContainer.scrollTo(roadmap.offsetLeft, 0);
       if (selectedRoadmapId === R_2021.id) {
@@ -75,27 +63,9 @@ const Roadmap = () => {
       } else {
         setTranslateX(`-${TRANSLATE_X_OFFSET}px`);
       }
-      // return () => roadmapsContainer.removeEventListener('scroll', onRoadmapScroll);
     }
   }, [selectedRoadmapId, roadmapsContainer]);
-  // const [node, setNode] = useState({ config: null, element: null });
-  // const [timer, setTimer] = useState(null);
 
-  // const closePopup = () => {
-  //   const t = setTimeout(() => {
-  //     setNode({ config: null, element: null });
-  //   }, 1000);
-  //   setTimer(t);
-  // };
-
-  // const getOffset = () => {
-  //   if (node.config.level === 0) {
-  //     return 0;
-  //   }
-  //   if (node.config.level === 2) {
-  //     return roadmapsContainer.getBoundingClientRect().height - (roadmapsContainer.getBoundingClientRect().height * 20) / 100;
-  //   }
-  // };
   return (
     <RoadmapWrapper id="roadmap" gap={120} className="column scroll-mt relative" desktopPixel={1460} style={{ marginTop: 100 }}>
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
@@ -107,23 +77,7 @@ const Roadmap = () => {
       {width <= theme.mediaQueries.mobilePixel && (
         <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
-      {/* {node?.config && (
-        <FlexContainer
-          className="absolute"
-          style={{
-            top: 120 + 50 + 150 + getOffset(),
-            left: node.element.x,
-            width: '20%',
-            height: '20%',
-            boxShadow: '20px 20px 100px rgba(0, 0, 0, 0.25)',
-            backgroundColor: '#293445',
-            borderRadius: 20,
-          }}
-          onMouseLeave={() => closePopup()}
-        >
-          {node?.config?.title}
-        </FlexContainer>
-      )} */}
+
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? R_2021.desktopImage : R_2021.mobileImage}

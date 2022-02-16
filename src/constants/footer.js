@@ -1,5 +1,5 @@
 export const FOOTER_ABOUT = {
-  title: 'About',
+  title: 'ABOUT',
   color: 'yellow',
   items: [
     {
@@ -33,11 +33,11 @@ export const FOOTER_ABOUT = {
   ],
 };
 export const FOOTER_SUPPORT = {
-  title: 'Support',
+  title: 'PRODUCT',
   color: 'primary',
   items: [
     {
-      text: 'Getting Started on Kaddex',
+      text: 'Documentation',
     },
     {
       text: 'Auditing',
@@ -45,7 +45,7 @@ export const FOOTER_SUPPORT = {
   ],
 };
 export const FOOTER_LEARN = {
-  title: 'Learn',
+  title: 'LEARN',
   color: 'pink',
   items: [
     {

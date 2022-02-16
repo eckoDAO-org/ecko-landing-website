@@ -31,25 +31,8 @@ const Container = styled(FlexContainer)`
 
   .kaddex-logo {
     cursor: pointer;
-    margin-right: 22%;
-    @media (max-width: 1120px) and (min-width: 1060px) {
-      margin-right: 18%;
-    }
-
-    @media (max-width: 1060px) and (min-width: 960px) {
-      margin-right: 14%;
-    }
-
-    @media (max-width: 960px) and (min-width: 920px) {
-      margin-right: 10%;
-    }
-    @media (max-width: 920px) and (min-width: 880px) {
-      margin-right: 8%;
-    }
-
-    @media (max-width: 880px) {
-      margin-right: unset;
-    }
+    position: absolute;
+    left: 50px;
   }
 `;
 
@@ -74,7 +57,13 @@ const CommonHeader = ({ className, isSticky }) => {
     });
   };
   return (
-    <Container desktopPixel={880} className={`align-ce ${className}`} tabletClassName="justify-ce" mobileClassName="justify-ce" isSticky={isSticky}>
+    <Container
+      desktopPixel={880}
+      className={`align-ce ${width < 1150 ? 'justify-fe' : 'justify-ce'} ${className}`}
+      tabletClassName="justify-ce"
+      mobileClassName="justify-ce"
+      isSticky={isSticky}
+    >
       <KaddexLogo className="kaddex-logo" onClick={goToTop} />
       {width >= 880 && (
         <FlexContainer className="align-ce" gap={24}>

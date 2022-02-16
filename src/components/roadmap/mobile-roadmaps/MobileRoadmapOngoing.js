@@ -2,7 +2,6 @@ import React from 'react';
 import theme from '../../../styles/theme';
 
 const whiteGrey = '#666666';
-const orange = '#F4AC3C';
 
 const MobileRoadmapOngoing = () => {
   return (
@@ -19,18 +18,18 @@ const MobileRoadmapOngoing = () => {
           strokeDasharray="8"
         />
 
-        <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="10" cy="10" r="10" transform="translate(260 801)" fill={orange} />
-        <circle id="Mobile-Ellipse_1261" data-name="Ellipse 1261" cx="7" cy="7" r="7" transform="translate(260 649)" fill={orange} />
-        <circle id="Mobile-Ellipse_1262" data-name="Ellipse 1262" cx="7" cy="7" r="7" transform="translate(103 649)" fill={orange} />
-        <circle id="Mobile-Ellipse_1223" data-name="Ellipse 1223" cx="10" cy="10" r="10" transform="translate(260 955)" fill={orange} />
-        <circle id="Mobile-Ellipse_1226" data-name="Ellipse 1226" cx="10" cy="10" r="10" transform="translate(103 801)" fill={orange} />
-        <circle id="Mobile-Ellipse_1228" data-name="Ellipse 1228" cx="10" cy="10" r="10" transform="translate(103 955)" fill={orange} />
-        <circle id="Mobile-Ellipse_1255" data-name="Ellipse 1255" cx="10" cy="10" r="10" transform="translate(260 1116)" fill={orange} />
+        <circle id="Mobile-Ellipse_1221" data-name="Ellipse 1221" cx="10" cy="10" r="10" transform="translate(260 801)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1261" data-name="Ellipse 1261" cx="7" cy="7" r="7" transform="translate(260 649)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1262" data-name="Ellipse 1262" cx="7" cy="7" r="7" transform="translate(103 649)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1223" data-name="Ellipse 1223" cx="10" cy="10" r="10" transform="translate(260 955)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1226" data-name="Ellipse 1226" cx="10" cy="10" r="10" transform="translate(103 801)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1228" data-name="Ellipse 1228" cx="10" cy="10" r="10" transform="translate(103 955)" fill={theme.colors.yellow} />
+        <circle id="Mobile-Ellipse_1255" data-name="Ellipse 1255" cx="10" cy="10" r="10" transform="translate(260 1116)" fill={theme.colors.yellow} />
         <text
           id="Mobile-Team_Expansion"
           data-name="Team Expansion"
           transform="translate(270 1008)"
-          fill={orange}
+          fill={theme.colors.yellow}
           fontSize="15"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -43,7 +42,7 @@ const MobileRoadmapOngoing = () => {
           id="Mobile-New_Strategic_Partnerships"
           data-name="New Strategic Partnerships"
           transform="translate(113 1008)"
-          fill={orange}
+          fill={theme.colors.yellow}
           fontSize="15"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -58,7 +57,7 @@ const MobileRoadmapOngoing = () => {
         <text
           id="Mobile-Multiplecode-autiding"
           transform="translate(270 1169)"
-          fill={orange}
+          fill={theme.colors.yellow}
           fontSize="15"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -71,7 +70,7 @@ const MobileRoadmapOngoing = () => {
           id="Mobile-DAO_Transition"
           data-name="DAO Transition"
           transform="translate(113 854)"
-          fill={orange}
+          fill={theme.colors.yellow}
           fontSize="15"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -85,7 +84,7 @@ const MobileRoadmapOngoing = () => {
           id="Mobile-Fiat_On_Ramp"
           data-name="Fiat_On_Ramp"
           transform="translate(280 854)"
-          fill={orange}
+          fill={theme.colors.yellow}
           fontSize="15"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"

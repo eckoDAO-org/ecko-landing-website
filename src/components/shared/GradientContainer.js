@@ -5,9 +5,10 @@ const STYContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
   padding: ${({ padding = 16 }) => padding}px;
   background: ${({ theme: { backgroundContainer }, backgroundColor }) => backgroundColor || backgroundContainer};
-  border-radius: 10px;
+  border-radius: 30px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 16px;
   }
@@ -43,9 +44,9 @@ export const STYGradientBorder = styled.div`
   z-index: -10;
 `;
 
-const GradientContainer = ({ className, children, padding, gap, style, backgroundColor }) => {
+const GradientContainer = ({ className, children, padding, gap, style, backgroundColor, onClick }) => {
   return (
-    <STYContainer className={className} padding={padding} gap={gap} style={style} backgroundColor={backgroundColor}>
+    <STYContainer className={className} padding={padding} gap={gap} style={style} backgroundColor={backgroundColor} onClick={onClick}>
       <STYGradientBorder />
       {children}
     </STYContainer>

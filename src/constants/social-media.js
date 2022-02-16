@@ -1,4 +1,4 @@
-import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon } from '../assets';
+import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
 
 const TWITTER = {
   name: 'Twitter',
@@ -26,4 +26,9 @@ const TELEGRAM = {
   link: 'https://t.me/KaddeXofficial',
   icon: <TelegramIcon />,
 };
-export const SOCIAL_MEDIA = [TWITTER, DISCORD, MEDIUM, GITHUB, TELEGRAM];
+const YOUTUBE = {
+  name: 'Youtube',
+  link: 'https://www.youtube.com/channel/UCqne8XRfTGTQMr_9BXyfHBg',
+  icon: <YoutubeIcon />,
+};
+export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, MEDIUM, GITHUB, TELEGRAM];

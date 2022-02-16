@@ -18,20 +18,16 @@ const CareerIntroduction = () => {
     >
       <FlexContainer className="column" style={{ paddingRight: 64 }}>
         <Label size="huge" fontFamily="syncopate">
-          title for
+          Careers
           <br />
-          careers
-          <br />
-          page
+          at Kaddex
         </Label>
       </FlexContainer>
 
       <FlexContainer className="column" desktopStyle={{ marginLeft: 120 }} tabletStyle={{ marginTop: 25 }} mobileStyle={{ marginTop: 25 }}>
         <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'normal'} color="light-blue">
-          Lorem ipsum dolor sit amet, consectetur
-          <br />
-          adipiscing elit, sed do eiusmod tempor <br />
-          incididunt ut labore et dolore magna aliqua.
+          Join the DeFi revolution by working <br />
+          on the very first DEX built on Kadena’s Blockchain
         </Label>
       </FlexContainer>
     </FlexContainer>

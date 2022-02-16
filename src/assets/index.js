@@ -47,6 +47,7 @@ export { ReactComponent as LinkedinIcon } from './images/social-media/linkedin.s
 export { ReactComponent as MediumIcon } from './images/social-media/medium.svg';
 export { ReactComponent as TelegramIcon } from './images/social-media/telegram.svg';
 export { ReactComponent as TwitterIcon } from './images/social-media/twitter.svg';
+export { ReactComponent as YoutubeIcon } from './images/social-media/youtube.svg';
 
 // ROADMAP
 export { ReactComponent as RoadmapFlagcon } from './images/roadmap/roadmap-flag.svg';

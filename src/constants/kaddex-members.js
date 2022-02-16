@@ -17,6 +17,7 @@ import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.j
 import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
 import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
+import francescoMelpignanoPhoto from '../assets/images/kaddex-team/francesco-melpignano.jpg';
 
 const ROLE_CFO = {
   short: 'CFO',
@@ -282,6 +283,7 @@ const FRANCESCO_MELPIGNANO = {
   firstname: 'Francesco',
   lastname: 'Melpignano',
   role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
+  photo: francescoMelpignanoPhoto,
   description:
     'Hi, I’m Francesco, I recently joined as an advisor for Kaddex. I am currently running strategy and business development, and was previously an engineer, at Kadena. Before Kadena, I founded and sold a startup in the robotics space. We’re very excited to have Kaddex as our first and most successful DeFi protocol in partnership with Kadena as we aim our scalable decentralized ecosystem towards greater adoption of powerful, user-friendly dApps.',
   twitter: 'https://twitter.com/fmelp',

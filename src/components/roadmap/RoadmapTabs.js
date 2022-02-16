@@ -18,7 +18,7 @@ const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId }) =>
       <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmapId === R_2021.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_2021.id ? R_2021.color : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
           onClick={() => setSelectedRoadmapId(R_2021.id)}
         >
@@ -32,7 +32,7 @@ const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId }) =>
       >
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmapId === R_2022.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_2022.id ? R_2022.color : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
           onClick={() => setSelectedRoadmapId(R_2022.id)}
         >
@@ -42,7 +42,7 @@ const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId }) =>
       <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
         <Label
           fontFamily="syncopate"
-          color={selectedRoadmapId === R_ONGOING.id ? 'pink' : 'white'}
+          color={selectedRoadmapId === R_ONGOING.id ? R_ONGOING.color : 'white'}
           fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
           onClick={() => setSelectedRoadmapId(R_ONGOING.id)}
         >
