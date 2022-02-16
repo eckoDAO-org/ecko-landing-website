@@ -17,7 +17,6 @@ import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.j
 import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
 import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
-import francescoMelpignanoPhoto from '../assets/images/kaddex-team/francesco-melpignano.jpg';
 
 const ROLE_CFO = {
   short: 'CFO',
@@ -267,28 +266,6 @@ const BRANDON_CHONG = {
   linkedin: 'https://www.linkedin.com/in/brandonwchong/',
 };
 
-const EMILIY_PILLMORE = {
-  id: 17,
-  firstname: 'Emily',
-  lastname: 'Pillmore',
-  role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
-  description:
-    'I’m Emily, an advisor for Kaddex as well as the Smart Contracts Lead for Kadena. I spend my professional career building software, writing and collaborating on a large number of open-source projects in Haskell and Scala. I am also the first CTO of the Haskell Foundation. When not programming, I try to spend my time moonlighting as a mathematician, doing work in applied Category Theory and Topology.',
-  linkedin: 'https://www.linkedin.com/in/emily-pillmore-453630ab/',
-  twitter: 'https://twitter.com/bkmlep',
-};
-
-const FRANCESCO_MELPIGNANO = {
-  id: 18,
-  firstname: 'Francesco',
-  lastname: 'Melpignano',
-  role: `${ROLE_ADVISOR.role} - ${ROLE_ENGINEERING.role}`,
-  photo: francescoMelpignanoPhoto,
-  description:
-    'Hi, I’m Francesco, I recently joined as an advisor for Kaddex. I am currently running strategy and business development, and was previously an engineer, at Kadena. Before Kadena, I founded and sold a startup in the robotics space. We’re very excited to have Kaddex as our first and most successful DeFi protocol in partnership with Kadena as we aim our scalable decentralized ecosystem towards greater adoption of powerful, user-friendly dApps.',
-  twitter: 'https://twitter.com/fmelp',
-};
-
 export const KADDEX_TEAM_MEMBERS = [
   DANIELE_DE_VECCHIS,
   NICOLAS_RAMSRUD,
@@ -309,6 +286,4 @@ export const KADDEX_TEAM_MEMBERS = [
   KATE_OZTUNC,
   CARLES_ALONSO,
   BRANDON_CHONG,
-  EMILIY_PILLMORE,
-  FRANCESCO_MELPIGNANO,
 ];
