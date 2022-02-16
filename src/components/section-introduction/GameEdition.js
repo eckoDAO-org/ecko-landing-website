@@ -3,19 +3,19 @@ import useWindowSize from '../../hooks/useWindowSize';
 import Lottie from 'react-lottie';
 import { FlexContainer } from '../shared/Container';
 import theme from '../../styles/theme';
-import gameboy from '../../assets/images/gameboy.json';
+import gameEdition from '../../assets/images/game-edition.json';
 import { CircleBackground } from '../shared/RadiusBackground';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 const lottieDefaultOptions = {
   loop: false,
   autoplay: false,
-  animationData: gameboy,
+  animationData: gameEdition,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
 };
 
-const GameBoy = () => {
+const GameEdition = () => {
   const [width] = useWindowSize();
   const [lottieOptions, setLottieOptions] = useState({ isStopped: true, isPaused: true });
 
@@ -28,7 +28,7 @@ const GameBoy = () => {
   }, [width]);
 
   return (
-    <FlexContainer id="gameboy-container" className="relative justify-ce">
+    <FlexContainer id="game-edition-container" className="relative justify-ce">
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
       <CircleBackground
         style={{
@@ -54,4 +54,4 @@ const GameBoy = () => {
   );
 };
 
-export default GameBoy;
+export default GameEdition;

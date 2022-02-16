@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowsDownIcon } from '../../assets';
 import { FlexContainer } from '../shared/Container';
-import GameBoy from './GameBoy';
+import GameEdition from './GameEdition';
 import IntroductionHeader from './IntroductionHeader';
 
 const IntroductionSection = () => {
@@ -9,7 +9,7 @@ const IntroductionSection = () => {
     <FlexContainer id="introduction" className="column w-100">
       <IntroductionHeader />
 
-      <GameBoy />
+      <GameEdition />
       <a href="/#proof-of-dex" style={{ zIndex: 1 }}>
         <FlexContainer className="w-100 justify-ce mobile-only" style={{ marginTop: 25 }}>
           <ArrowsDownIcon />
