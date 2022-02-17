@@ -4,7 +4,7 @@ export const PROOF_DEX_SWAP = {
   key: 'SWAP',
   icon: <SwapIcon />,
   title: 'Swap',
-  description: 'Swap safely with no transaction cost',
+  description: 'Swap safely with no transaction costs',
   color: 'pink',
 };
 export const PROOF_DEX_POOL = {
