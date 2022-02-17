@@ -19,7 +19,8 @@ const CareerIntroduction = () => {
       <FlexContainer className="column" style={{ paddingRight: 64 }}>
         <Label size="huge" fontFamily="syncopate">
           Careers
-          <br />
+        </Label>
+        <Label className="nowrap" size="huge" fontFamily="syncopate">
           at Kaddex
         </Label>
       </FlexContainer>

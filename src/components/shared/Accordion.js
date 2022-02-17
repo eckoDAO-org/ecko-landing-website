@@ -4,7 +4,6 @@ import { FlexContainer } from './Container';
 import { ArrowDownIcon } from '../../assets';
 import Label from './Label';
 import { getColor } from '../../styles/theme';
-import './accordion.css';
 const Arrow = styled(ArrowDownIcon)`
   path {
     fill: ${({ color }) => getColor(color)};
