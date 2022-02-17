@@ -32,8 +32,8 @@ const GameEdition = () => {
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
       <CircleBackground
         style={{
-          width: width < theme.mediaQueries.mobilePixel ? '100%' : '90%',
-          height: width < theme.mediaQueries.mobilePixel ? 120 : 326,
+          width: '80%',
+          height: '50%',
           top: '50%',
           left: '50%',
           transform: `translate(-50%, -50%)${width < theme.mediaQueries.mobilePixel ? ' rotate(90deg)' : ''}`,
@@ -48,7 +48,13 @@ const GameEdition = () => {
             eventName: 'complete',
           },
         ]}
-        style={{ width: 843, height: width >= theme.mediaQueries.mobilePixel && 556 }}
+        style={{
+          width: width >= theme.mediaQueries.mobilePixel && '50%',
+          height: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       />
     </FlexContainer>
   );

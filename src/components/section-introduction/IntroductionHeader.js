@@ -16,7 +16,7 @@ const IntroductionHeader = () => {
       mobileClassName="column"
       desktopPixel={DESKTOP_PIXEL}
       style={{ padding: '0 50px' }}
-      desktopStyle={{ marginTop: 100 }}
+      desktopStyle={{ marginTop: 55 }}
       tabletStyle={{ marginTop: 50 }}
       mobileStyle={{ margin: '30px 0' }}
     >
@@ -44,7 +44,7 @@ const IntroductionHeader = () => {
         tabletStyle={{ marginTop: 25 }}
         mobileStyle={{ marginTop: 25 }}
       >
-        <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'normal'} color="light-blue">
+        <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'small'} color="light-blue">
           A revolutionary 0 Gas-Fee DEX.
           <br />
           Free and safe DeFi starts with

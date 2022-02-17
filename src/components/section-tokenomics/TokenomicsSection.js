@@ -15,7 +15,7 @@ const DESKTOP_PIXEL = 1700;
 const MOBILE_PIXEL = 860;
 
 const TokenomicsContainer = styled(FlexContainer)`
-  marquee {
+  /* marquee {
     position: absolute;
     top: -400px;
     @media (max-width: 1024px) and (min-width: ${MOBILE_PIXEL}px) {
@@ -31,12 +31,15 @@ const TokenomicsContainer = styled(FlexContainer)`
         height: 100px;
       }
     }
-  }
+  } */
 `;
 
 const IconContainer = styled(FlexContainer)`
   width: fit-content;
   height: 100%;
+  @media (min-width: 1200px) {
+    transform: scale(0.8);
+  }
   .tokenomics-circle {
     max-width: 919px;
     max-height: 919px;
@@ -57,6 +60,7 @@ const IconContainer = styled(FlexContainer)`
     position: absolute;
     top: 49.5%;
     left: 50.5%;
+    width: 75px;
     transform: translate(-50%, -50%);
     @media (max-width: 1400px) and (min-width: 1200px) {
       width: 60px;
@@ -85,13 +89,11 @@ const TokenomicsSection = () => {
       id="tokenomics"
       className="column relative w-100 align-ce scroll-mt"
       desktopPixel={DESKTOP_PIXEL}
-      desktopStyle={{ marginTop: 600, flexWrap: 'wrap', padding: '0 130px' }}
-      tabletStyle={{ marginTop: 600, flexWrap: 'wrap', padding: '0 130px' }}
-      mobileStyle={{ marginTop: 300, flexWrap: 'wrap', padding: '0 50px' }}
+      desktopStyle={{ marginTop: 140, flexWrap: 'wrap', padding: '0 130px' }}
+      tabletStyle={{ marginTop: 140, flexWrap: 'wrap', padding: '0 130px' }}
+      mobileStyle={{ marginTop: 50, flexWrap: 'wrap', padding: '0 50px' }}
     >
-      <marquee className="marquee" scrollamount="20">
-        <TokenomicsIcon />
-      </marquee>
+      <TokenomicsIcon style={{ width: '100%', marginBottom: 100, height: 'fit-content' }} />
 
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (
@@ -106,7 +108,7 @@ const TokenomicsSection = () => {
             >
               1,000,000,000
             </Label>
-            <Label className="align-fs" fontFamily="syncopate" size="large">
+            <Label className="align-fs text-center" fontFamily="syncopate" size="large">
               KDX tokens
               <br />
               fixed supply

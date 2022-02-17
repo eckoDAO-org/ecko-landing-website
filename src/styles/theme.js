@@ -18,7 +18,7 @@ export const getColor = (color) => {
 };
 export const configuration = {
   fontSizes: {
-    huge: { desktop: 60, tablet: 40, mobile: 25 },
+    huge: { desktop: 50, tablet: 40, mobile: 25 },
     big: { desktop: 40, tablet: 30, mobile: 20 },
     large: { desktop: 34, tablet: 28, mobile: 22 },
     medium: { desktop: 30, tablet: 25, mobile: 15 },
@@ -28,7 +28,7 @@ export const configuration = {
     nano: { desktop: 12, tablet: 10, mobile: 10 },
   },
   lineHeight: {
-    huge: { desktop: 75, tablet: 50, mobile: 31.25 },
+    huge: { desktop: 70, tablet: 50, mobile: 31.25 },
     big: { desktop: 50, tablet: 30, mobile: 25 },
     large: { desktop: 42.5, tablet: 36, mobile: 33 },
     medium: { desktop: 37.5, tablet: 30, mobile: 18.75 },

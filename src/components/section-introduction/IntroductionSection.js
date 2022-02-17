@@ -11,7 +11,7 @@ const IntroductionSection = () => {
 
       <GameEdition />
       <a href="/#proof-of-dex" style={{ zIndex: 1 }}>
-        <FlexContainer className="w-100 justify-ce mobile-only" style={{ marginTop: 25 }}>
+        <FlexContainer className="w-100 justify-ce" style={{ marginTop: 25 }}>
           <ArrowsDownIcon />
         </FlexContainer>
       </a>
