@@ -86,7 +86,7 @@ export const MULTI_PROTOCOL = {
   color: 'primary',
   title: 'Multi-Protocol',
   description:
-    'Kaddex will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about different networks, but just access value through Kaddex single platform',
+    'Kaddex will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about different networks, but just access value through Kaddex single platform.',
 };
 export const STAKING = {
   icon: <StakingIcon />,
@@ -98,7 +98,8 @@ export const STAKING = {
       &nbsp;
     </span>
   ),
-  description: 'On all swaps taking place on Kaddex. This will give holders…participating in the governance.',
+  description:
+    'KDX Stakers will earn 0.05% on all swaps taking place on Kaddex. This will give holders a simple way to earn passive income while still participating in the governance.',
 };
 export const GOVERNANCE = {
   icon: <GovernanceIcon />,

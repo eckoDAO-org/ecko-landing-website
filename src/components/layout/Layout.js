@@ -68,7 +68,6 @@ const Layout = ({ children }) => {
   };
 
   const stopTimer = () => {
-    console.log('here');
     setSeconds(0);
     clearInterval(intervalId);
   };

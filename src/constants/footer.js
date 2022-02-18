@@ -65,6 +65,9 @@ export const FOOTER_LEARN = {
       target: '_blank',
     },
     {
+      text: 'White Paper',
+    },
+    {
       text: 'FAQ',
     },
   ],
