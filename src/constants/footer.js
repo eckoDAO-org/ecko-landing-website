@@ -42,6 +42,17 @@ export const FOOTER_SUPPORT = {
     {
       text: 'Auditing',
     },
+    {
+      text: 'GitBook',
+    },
+    {
+      text: 'GitHub',
+      href: 'https://github.com/kaddex-org/',
+    },
+    {
+      text: 'X-Wallet',
+      link: 'https://xwallet.kaddex.com',
+    },
   ],
 };
 export const FOOTER_LEARN = {

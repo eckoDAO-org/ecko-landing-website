@@ -18,7 +18,7 @@ const MEDIUM = {
 };
 const GITHUB = {
   name: 'Github',
-  link: 'https://github.com/kaddex-org/home-page',
+  link: 'https://github.com/kaddex-org/',
   icon: <GithubIcon />,
 };
 const TELEGRAM = {

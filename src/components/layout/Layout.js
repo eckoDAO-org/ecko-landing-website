@@ -58,13 +58,13 @@ const Layout = ({ children }) => {
     scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
 
-  useEffect(() => {
-    if (isSticky) {
-      setTimeout(() => {
-        setIsSticky(false);
-      }, 3000);
-    }
-  }, [isSticky]);
+  // useEffect(() => {
+  //   if (isSticky) {
+  //     setTimeout(() => {
+  //       setIsSticky(false);
+  //     }, 3000);
+  //   }
+  // }, [isSticky]);
 
   const goToTop = () => {
     window.scrollTo({

@@ -13,7 +13,7 @@ const Item = styled.a`
   }
 `;
 
-const NavigationItems = ({ fontSize, color, onClick, disableHover }) => {
+const NavigationItems = ({ fontSize, color, onClick, disableHover, hideXwallet }) => {
   return (
     <>
       <NavigationItem href="/#features" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
@@ -35,16 +35,18 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover }) => {
         Careers
       </NavigationItem>
 
-      <NavigationItem
-        href="https://xwallet.kaddex.com"
-        target="_blank"
-        fontSize={fontSize}
-        color={color}
-        onClick={onClick}
-        disableHover={disableHover}
-      >
-        X-Wallet
-      </NavigationItem>
+      {!hideXwallet && (
+        <NavigationItem
+          href="https://xwallet.kaddex.com"
+          target="_blank"
+          fontSize={fontSize}
+          color={color}
+          onClick={onClick}
+          disableHover={disableHover}
+        >
+          X-Wallet
+        </NavigationItem>
+      )}
     </>
   );
 };

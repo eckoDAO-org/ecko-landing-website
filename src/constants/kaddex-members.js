@@ -164,8 +164,9 @@ const ADRIAN_CARDOSO = {
   role: ROLE_ENGINEERING.role,
   photo: adrianCardosoPhoto,
   description:
-    'My name is Adrian, project manager for Kaddex. I have had the pleasure of being involved with this project since its genesis, and from day one I have believed that the product, team, and innovation we have on our hands is revolutionary. I aim to guarantee a high-quality product and to assure the most efficient work-flow for our development team. I consider myself a creative, and hardworking co-worker that stands out by showing constant attention to detail. I have a unique mix of creativity, problem solving, and technical skills that guarantee value to the innovative services we pride ourselves on developing.',
+    "Hi, Adrian here. I'm the project manager for Kaddex, I have had the pleasure of being involved with this project since its genesis, and from day one I have believed that the product, team, and innovation we have on our hands is revolutionary. I aim to guarantee a high-quality product and to assure the most efficient work-flow for our development team. I consider myself a creative, and hardworking co-worker that stands out by showing constant attention to detail. I have a unique mix of creativity, problem solving, and technical skills that guarantee value to the innovative services we pride ourselves on developing.",
   linkedin: 'https://www.linkedin.com/in/adrian-cardoso-b55183223/',
+  twitter: 'https://twitter.com/adriancardoso',
 };
 
 const GIUSEPPE_PACE = {

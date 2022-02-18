@@ -29,7 +29,7 @@ const FooterSection = () => {
 
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>
         <FooterItemsList title="About">
-          <NavigationItems fontSize={13} color="yellow" disableHover />
+          <NavigationItems fontSize={13} color="yellow" disableHover hideXwallet />
         </FooterItemsList>
         <FlexContainer gap={80} columnGap={50} tabletClassName="column" mobileClassName="column">
           <FooterItemsList {...FOOTER_SUPPORT} />
