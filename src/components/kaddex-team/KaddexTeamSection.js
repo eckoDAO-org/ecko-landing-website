@@ -20,7 +20,7 @@ const KaddexTeamSection = () => {
       style={{ padding: '0 90px', marginTop: 150 }}
       mobileStyle={{ padding: '0 20px', marginTop: 100 }}
     >
-      <Label fontFamily="syncopate" size="big" style={{ marginBottom: 56 }}>
+      <Label fontFamily="syncopate" size="big" style={{ marginBottom: 56, marginLeft: 30 }}>
         Team
       </Label>
       {selectedMember && <TeamMember DESKTOP_PIXEL={DESKTOP_PIXEL} MOBILE_PIXEL={MOBILE_PIXEL} selectedMember={selectedMember} />}

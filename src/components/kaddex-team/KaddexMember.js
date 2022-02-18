@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { LinkedinIcon, TwitterIcon } from '../../assets';
 import useWindowSize from '../../hooks/useWindowSize';
+import theme from '../../styles/theme';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import PhotoFrame from './PhotoFrame';
@@ -45,13 +46,13 @@ const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
   };
   return (
     <Container
-      gap={50}
+      gap={width < theme.mediaQueries.mobilePixel ? 12 : 50}
       style={{ marginBottom: 140 }}
       desktopPixel={DESKTOP_PIXEL}
       MOBILE_PIXEL={MOBILE_PIXEL}
       tabletClassName="column"
       mobileClassName="column"
-      mobileStyle={{ marginBottom: 26 }}
+      mobileStyle={{ marginBottom: 40 }}
     >
       {width >= DESKTOP_PIXEL ? (
         <FlexContainer className="column align-ce">
@@ -71,7 +72,7 @@ const KaddexMember = ({ DESKTOP_PIXEL, MOBILE_PIXEL, selectedMember }) => {
       <FlexContainer gap={16} className="column">
         {width >= DESKTOP_PIXEL && <KaddexMemberHeader selectedMember={selectedMember} MOBILE_PIXEL={MOBILE_PIXEL} />}
 
-        <Label color="white" size="normal" style={{ lineHeight: '28px' }} mobilePixel={MOBILE_PIXEL}>
+        <Label color="white" size="small" mobilePixel={MOBILE_PIXEL}>
           {selectedMember.description}
         </Label>
       </FlexContainer>

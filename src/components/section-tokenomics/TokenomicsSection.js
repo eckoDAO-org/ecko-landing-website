@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
-import { TokenomicsCircleIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '../../assets';
+import { TokenomicsCircleIcon, TokenOmicsIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '../../assets';
 import Label from '../shared/Label';
 import TokenomicsCard from './TokenomicsCard';
 import { FlexContainer } from '../shared/Container';
@@ -90,10 +90,14 @@ const TokenomicsSection = () => {
       className="column relative w-100 align-ce scroll-mt"
       desktopPixel={DESKTOP_PIXEL}
       desktopStyle={{ marginTop: 140, flexWrap: 'wrap', padding: '0 130px' }}
-      tabletStyle={{ marginTop: 140, flexWrap: 'wrap', padding: '0 130px' }}
-      mobileStyle={{ marginTop: 50, flexWrap: 'wrap', padding: '0 50px' }}
+      tabletStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 130px' }}
+      mobileStyle={{ marginTop: 100, flexWrap: 'wrap', padding: '0 50px' }}
     >
-      <TokenomicsIcon style={{ width: '100%', marginBottom: 100, height: 'fit-content' }} />
+      {width < theme.mediaQueries.desktopPixel ? (
+        <TokenOmicsIcon style={{ marginBottom: 50 }} />
+      ) : (
+        <TokenomicsIcon style={{ width: '100%', marginBottom: 100, height: 'fit-content' }} />
+      )}
 
       <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%' }} alt="" />
       {width >= theme.mediaQueries.mobilePixel ? (

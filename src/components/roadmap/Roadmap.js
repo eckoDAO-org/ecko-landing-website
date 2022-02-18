@@ -68,7 +68,7 @@ const Roadmap = () => {
 
   return (
     <RoadmapWrapper id="roadmap" gap={120} className="column scroll-mt relative" desktopPixel={1460} style={{ marginTop: 100 }}>
-      <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }}>
+      <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }} mobileStyle={{ marginLeft: 50 }}>
         Kaddex
         <br />
         Roadmap

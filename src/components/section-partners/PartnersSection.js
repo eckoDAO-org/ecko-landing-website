@@ -52,7 +52,14 @@ const PartnersSection = () => {
       style={{ marginTop: 100 }}
       imageWidth={imageWidth}
     >
-      <PartnersIcon className="partners-icon" />
+      <PartnersIcon
+        className="partners-icon"
+        style={{
+          padding: width < theme.mediaQueries.mobilePixel && '0 50px',
+          marginBottom: width < theme.mediaQueries.desktopPixel && 50,
+          height: 'fit-content',
+        }}
+      />
       {width >= theme.mediaQueries.desktopPixel && (
         <>
           <FlexContainer id="first-partners-column" className="column justify-fe" gap={50} style={{ marginBottom: 50 }}>

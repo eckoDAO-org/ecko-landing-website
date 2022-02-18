@@ -39,6 +39,7 @@ export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
 export { ReactComponent as TokenomicsCircleIcon } from './images/tokenomics/tokenomics-circle.svg';
 export { ReactComponent as TokenomicsKaddexLogoIcon } from './images/tokenomics/tokenomics-kaddex-logo.svg';
 export { ReactComponent as TokenomicsIcon } from './images/tokenomics/tokenomics.svg';
+export { ReactComponent as TokenOmicsIcon } from './images/tokenomics/token-omics.svg';
 
 // SOCIAL MEDIA
 export { ReactComponent as DiscordIcon } from './images/social-media/discord.svg';
