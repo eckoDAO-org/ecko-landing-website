@@ -18,7 +18,7 @@ const RoadmapWrapper = styled(FlexContainer)`
   width: 100%;
   background-image: ${`url(${backgroundroadmap})`};
   border-radius: 60px;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 90px;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
@@ -67,7 +67,14 @@ const Roadmap = () => {
   }, [selectedRoadmapId, roadmapsContainer]);
 
   return (
-    <RoadmapWrapper id="roadmap" gap={120} className="column scroll-mt relative" desktopPixel={1460} style={{ marginTop: 100 }}>
+    <RoadmapWrapper
+      id="roadmap"
+      gap={50}
+      className="column scroll-mt relative"
+      desktopPixel={1460}
+      style={{ marginTop: 10 }}
+      tabletStyle={{ marginTop: 80 }}
+    >
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }} mobileStyle={{ marginLeft: 50 }}>
         Kaddex
         <br />
@@ -90,7 +97,12 @@ const Roadmap = () => {
         </FlexContainer>
       </RoadmapContainer>
       {width >= theme.mediaQueries.mobilePixel && (
-        <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
+        <RoadmapTabs
+          style={{ marginTop: 20 }}
+          selectedRoadmapId={selectedRoadmapId}
+          setSelectedRoadmapId={setSelectedRoadmapId}
+          translateX={translateX}
+        />
       )}
     </RoadmapWrapper>
   );

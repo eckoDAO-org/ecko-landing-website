@@ -28,7 +28,7 @@ const CircleBox = styled.div`
 
 const RadiusBackground = ({ style }) => {
   return (
-    <FlexContainer className="absolute" style={{ width: '100%', height: 1000, opacity: 0.5, zIndex: -1, ...style }}>
+    <FlexContainer className="absolute" style={{ width: '100%', height: 950, opacity: 0.5, zIndex: -1, ...style }}>
       <RadiusBox style={{ width: '200%' }} />
       <RadiusBox style={{ width: '200%', left: 143 }} />
       <RadiusBox style={{ width: '200%', left: 272 }} />

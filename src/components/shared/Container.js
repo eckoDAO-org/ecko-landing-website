@@ -67,7 +67,7 @@ export const STYFlexContainer = styled.div`
   }
 
   &.scroll-mt {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 115px;
   }
   &.align-fs {
     align-items: flex-start;

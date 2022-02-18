@@ -11,10 +11,10 @@ const TabsContainer = styled(FlexContainer)`
   transform: ${({ translateX }) => `translateX(${translateX})`};
 `;
 
-const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId }) => {
+const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId, style }) => {
   const [width] = useWindowSize();
   return (
-    <TabsContainer id="tabs-container" translateX={translateX} style={{ width }}>
+    <TabsContainer id="tabs-container" translateX={translateX} style={{ width, ...style }}>
       <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
         <Label
           fontFamily="syncopate"

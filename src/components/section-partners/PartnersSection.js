@@ -20,7 +20,7 @@ import theme from '../../styles/theme';
 const PartnersContainer = styled(FlexContainer)`
   .partners-icon {
     width: 100%;
-    padding: 0 20px;
+
     @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
       position: absolute;
       top: 80px;
@@ -52,14 +52,14 @@ const PartnersSection = () => {
       style={{ marginTop: 100 }}
       imageWidth={imageWidth}
     >
-      <PartnersIcon
-        className="partners-icon"
-        style={{
-          padding: width < theme.mediaQueries.mobilePixel && '0 50px',
-          marginBottom: width < theme.mediaQueries.desktopPixel && 50,
-          height: 'fit-content',
-        }}
-      />
+      <FlexContainer desktopPixel={1700} tabletStyle={{ padding: '0 130px', marginBottom: 80 }} mobileStyle={{ padding: '0 50px', marginBottom: 50 }}>
+        <PartnersIcon
+          className="partners-icon"
+          style={{
+            height: 'fit-content',
+          }}
+        />
+      </FlexContainer>
       {width >= theme.mediaQueries.desktopPixel && (
         <>
           <FlexContainer id="first-partners-column" className="column justify-fe" gap={50} style={{ marginBottom: 50 }}>

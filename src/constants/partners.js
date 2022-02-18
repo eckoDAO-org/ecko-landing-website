@@ -35,7 +35,7 @@ export const PARTNER_TOKENSOFT = {
   icon: <TokensoftLogo />,
   title: 'Tokensoft',
   description:
-    'wBTC and wETH will be available soon on Kaddex thanks to Tokensoft Inc. Together, it will support Kaddex in the upcoming KDX pre-launch sale.',
+    'wBTC and wETH will be available soon on Kaddex thanks to Tokensoft Inc. This will support Kaddex in the upcoming KDX pre-launch sale.',
   color: 'primary',
 };
 export const PARTNER_UFO_GAMING = {
@@ -49,7 +49,7 @@ export const PARTNER_ZELCORE = {
   icon: <ZelcoreLogo />,
   title: 'Zelcore',
   description:
-    'Zelcore will help bridge Kadena network tokens with a non-custodial multi-asset platform, it will also connect directly to Kaddex dAPP to provide easy-to-use user experience.',
+    'Zelcore will help bridge Kadena network tokens with a non-custodial multi-asset platform. It will also connect directly to Kaddex dAPP to provide a user-friendly experience',
   color: 'primary',
 };
 

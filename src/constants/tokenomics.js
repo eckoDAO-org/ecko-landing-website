@@ -1,7 +1,7 @@
 export const TOKENOMICS_VCS = {
   icon: '0%',
   title: 'VCs',
-  description: 'Kaddex believes that large buyers go against the basic principles of Decentralization.',
+  description: 'Presence of large buyers goes against the basic principles of Decentralization.',
   gradientColors: ['#FFF', '#FFF', '#FFF'],
 };
 export const TOKENOMICS_TEAM = {
@@ -13,19 +13,19 @@ export const TOKENOMICS_TEAM = {
 export const TOKENOMICS_COMMUNITY_SALES = {
   icon: '30%',
   title: 'COMMUNITY SALES',
-  description: 'The token sales will finance operations of the Kaddex team, and offer early access to KDX.',
+  description: 'The token sales will finance Kaddex operations, while offering early access to KDX.',
   gradientColors: ['#9F73BC', '#CD5BB1', '#FA45A1'],
 };
 export const TOKENOMICS_DAO_TREASURY = {
   icon: '25%',
   title: 'DAO TREASURY',
-  description: 'Pursuing a long term vision, the DAO will be allocated 25% of tokens to ensure community led development of the Kaddex ecosystem.',
+  description: 'Pursuing a long term vision, allocated with 25% of tokens to ensure community led development of the Kaddex ecosystem.',
   gradientColors: ['#EF47A8', '#F95393', '#F77078'],
 };
 export const TOKENOMICS_LIQUIDITY_MINING = {
   icon: '40%',
   title: 'LIQUIDITY MINING',
-  description: 'To ensure highly lucrative early LP boosts, Network rewards receives the largest tranche of KDX.',
+  description: 'To ensure highly lucrative LP boosts, network reward will receive the largest KDX tranche.',
   gradientColors: ['#F77772', '#F58861', '#F49E4B'],
 };
 

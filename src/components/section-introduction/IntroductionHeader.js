@@ -45,11 +45,11 @@ const IntroductionHeader = () => {
         mobileStyle={{ marginTop: 25 }}
       >
         <Label size={width < theme.mediaQueries.mobilePixel ? 'tiny' : 'small'} color="light-blue">
-          A revolutionary 0 Gas-Fee DEX.
+          A revolutionary Zero Gas-Fee DEX.
           <br />
           Free and safe DeFi starts with
           <br />
-          Kadena’s infinite scalability PoW.
+          Kadena’s Infinite PoW scalability.
         </Label>
 
         <GradientContainer
