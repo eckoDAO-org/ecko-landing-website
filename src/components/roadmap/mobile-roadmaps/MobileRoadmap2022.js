@@ -251,6 +251,7 @@ const MobileRoadmap2022 = () => {
         stroke={theme.colors.primary}
         strokeWidth="3"
       />
+      {/* curve */}
       <path
         id="Path_44414"
         data-name="Path 44414"
@@ -260,7 +261,7 @@ const MobileRoadmap2022 = () => {
         stroke={theme.colors.primary}
         strokeWidth="3"
       />
-
+      {/* line */}
       <line
         id="Mobile-Line_585"
         data-name="Line 585"
@@ -270,6 +271,26 @@ const MobileRoadmap2022 = () => {
         stroke={theme.colors.primary}
         strokeWidth="3"
       />
+      {/* curve */}
+      {/* <path
+        id="cuve_mobile"
+        d="M-657.528,99.455a20,20,0,0,0-20,20v93.99a20,20,0,0,0,20,20"
+        transform="translate(700.028 21.5)"
+        fill="none"
+        stroke={theme.colors.primary}
+        strokeWidth="3"
+      /> */}
+
+      {/* line */}
+      {/* <line
+        id="Mobile-Line_585"
+        data-name="Line 585"
+        x2="289"
+        transform="translate(42 255)"
+        fill="none"
+        stroke={theme.colors.primary}
+        strokeWidth="3"
+      /> */}
     </svg>
   );
 };

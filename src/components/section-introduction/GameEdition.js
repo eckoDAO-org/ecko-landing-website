@@ -43,11 +43,6 @@ const GameEdition = () => {
       <Lottie
         options={{ ...lottieDefaultOptions }}
         {...lottieOptions}
-        eventListeners={[
-          {
-            eventName: 'complete',
-          },
-        ]}
         style={{
           width: width >= theme.mediaQueries.mobilePixel && '50%',
           height: '50%',

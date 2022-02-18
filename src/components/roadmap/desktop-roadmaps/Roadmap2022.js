@@ -222,12 +222,33 @@ const Roadmap2022 = () => {
           <line
             id="Line_585"
             data-name="Line 585"
+            // x2="1593.5"
             x2="1275"
             transform="translate(-5 206)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"
           />
+
+          {/* curve */}
+          {/* <path
+            id="curve"
+            dataName="Path curve"
+            d="M1588,395.005a77.624,77.624,0,0,0,43.608-13.32,78.237,78.237,0,0,0,28.263-34.319A77.507,77.507,0,0,0,1666,317.005v-31a77.693,77.693,0,0,0-77.77-78v-4a82.45,82.45,0,0,1,16.514,1.666,81.161,81.161,0,0,1,29.263,12.341,81.886,81.886,0,0,1,34.338,51.471A83.059,83.059,0,0,1,1670,286.005v31a82.6,82.6,0,0,1-1.666,16.524,81.564,81.564,0,0,1-12.34,29.325,82.238,82.238,0,0,1-36.076,29.707,81.6,81.6,0,0,1-15.395,4.779A82.59,82.59,0,0,1,1588,399.005"
+            transform="translate(0 0)"
+            fill={theme.colors.primary}
+            strokeWidth="4"
+          /> */}
+          {/* line */}
+          {/* <line
+            id="Line_585"
+            dataName="Line 585"
+            x2="98"
+            transform="translate(1491 397)"
+            fill="none"
+            stroke={theme.colors.primary}
+            strokeWidth="4"
+          /> */}
 
           {/* FLAG */}
           <g id="ring" transform={FLAG.flag}>
