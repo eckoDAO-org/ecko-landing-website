@@ -31,21 +31,23 @@ const Container = styled(FlexContainer)`
 
   .kaddex-logo {
     cursor: pointer;
-    position: absolute;
-    left: 50px;
+    @media (min-width: 880px) {
+      position: absolute;
+      left: 50px;
+    }
   }
 `;
 
-const Header = ({ isSticky }) => {
+const Header = ({ isSticky, stopTimer, startTimer }) => {
   return (
     <div>
       <CommonHeader />
-      <CommonHeader className="sticky" isSticky={isSticky} />
+      <CommonHeader className="sticky" isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
     </div>
   );
 };
 
-const CommonHeader = ({ className, isSticky }) => {
+const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   const history = useHistory();
   const [width] = useWindowSize();
 
@@ -59,10 +61,12 @@ const CommonHeader = ({ className, isSticky }) => {
   return (
     <Container
       desktopPixel={880}
-      className={`align-ce ${width < 1150 ? 'justify-fe' : 'justify-ce'} ${className}`}
+      className={`align-ce justify-ce ${className}`}
       tabletClassName="justify-ce"
       mobileClassName="justify-ce"
       isSticky={isSticky}
+      onMouseEnter={stopTimer}
+      onMouseLeave={startTimer}
     >
       <KaddexLogo className="kaddex-logo" onClick={goToTop} />
       {width >= 880 && (
