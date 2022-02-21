@@ -154,8 +154,8 @@ const Roadmap2021 = () => {
           </tspan>
         </text>
         <text
-          id="Kaddex_Beta_available_for_early_investors"
-          data-name="Kaddex Beta available for early investors"
+          id="Kaddex_Beta"
+          data-name="Kaddex Beta"
           transform="translate(-7552 5459)"
           fill={theme.colors.primary}
           fontSize="20"
@@ -164,14 +164,6 @@ const Roadmap2021 = () => {
         >
           <tspan x="-58.09" y="0">
             Kaddex Beta
-          </tspan>
-          <tspan fontSize="13">
-            <tspan x="-64.746" y="25">
-              available for early
-            </tspan>
-            <tspan x="-31.012" y="50">
-              investors
-            </tspan>
           </tspan>
         </text>
         <text

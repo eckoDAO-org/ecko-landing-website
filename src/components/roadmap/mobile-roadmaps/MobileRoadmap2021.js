@@ -138,8 +138,8 @@ const MobileRoadmap2021 = () => {
         <circle id="Mobile-Ellipse_1259" data-name="Ellipse 1259" cx="10" cy="10" r="10" transform="translate(260 363)" fill={theme.colors.primary} />
         <circle id="Mobile-Ellipse_1260" data-name="Ellipse 1260" cx="10" cy="10" r="10" transform="translate(103 363)" fill={theme.colors.primary} />
         <text
-          id="Mobile-Kaddex_Beta_Available_for_early_investors"
-          data-name="Kaddex Beta Available for early investors"
+          id="Mobile-Kaddex_Beta"
+          data-name="Kaddex Beta"
           transform="translate(270 416)"
           fill={theme.colors.primary}
           fontSize="15"
@@ -148,14 +148,6 @@ const MobileRoadmap2021 = () => {
         >
           <tspan x="-43.568" y="0">
             Kaddex Beta
-          </tspan>
-          <tspan fontSize="10">
-            <tspan x="-34.235" y="20">
-              Available for
-            </tspan>
-            <tspan x="-39.425" y="40">
-              early investors
-            </tspan>
           </tspan>
         </text>
         <text

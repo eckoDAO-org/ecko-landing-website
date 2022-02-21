@@ -73,7 +73,7 @@ const NICOLAS_RAMSRUD = {
   lastname: 'Ramsrud',
   role: ROLE_CPO.role,
   description:
-    "Hey everyone! I'm Nicolas, the COO here at Kaddex. I’m here to help revolutionize the DeFi ecosystem by bringing this simple-to-use, gas-free, lightning fast, PoW-backed decentralized exchange to reality. I am a physicist by training with a love for cryptography and blockchain technologies. The majority of my career has been spent leading engineering teams that build hardware and software business systems for use in aerospace manufacturing. For the past 5 years, I have been closely following the cryptocurrency ecosystem, studying the technology as it evolved. Since 2017, this passion ultimately resulted in working with several blockchain projects as a technical writer and business development consultant.",
+    "Hey everyone! I'm Nicolas, the CPO here at Kaddex. I’m here to help revolutionize the DeFi ecosystem by bringing this simple-to-use, gas-free, lightning fast, PoW-backed decentralized exchange to reality. I am a physicist by training with a love for cryptography and blockchain technologies. The majority of my career has been spent leading engineering teams that build hardware and software business systems for use in aerospace manufacturing. For the past 5 years, I have been closely following the cryptocurrency ecosystem, studying the technology as it evolved. Since 2017, this passion ultimately resulted in working with several blockchain projects as a technical writer and business development consultant.",
   linkedin: 'https://www.linkedin.com/in/nicolas-ramsrud-34104337/',
   twitter: 'https://twitter.com/NicolasRamsrud',
   photo: nicolasRamsrudPhoto,
