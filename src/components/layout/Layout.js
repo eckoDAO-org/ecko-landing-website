@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import Header from './header/Header';
 import FooterSection from './footer/FooterSection';
 import introductionBackground from '../../assets/images/backgrounds/introduction-background.png';
 import { FlexContainer } from '../shared/Container';
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { ROUTE_INDEX } from '../../router/routes';
-import { useEffect, useState } from 'react/cjs/react.development';
 import { GoTopIcon } from '../../assets';
+import { useLocation } from 'react-router-dom';
 
 const MainContent = styled.div`
   height: 100%;
