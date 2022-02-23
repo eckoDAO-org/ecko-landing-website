@@ -65,10 +65,6 @@ export const theme = {
     grey: '#879BA8',
   },
   fontFamily: {
-    regular: 'montserrat-regular',
-    italic: 'montserrat-italic',
-    bold: 'montserrat-bold',
-    boldItalic: 'montserrat-bold-italic',
     syncopate: 'syncopate-bold',
     'syncopate-regular': 'syncopate-regular',
     basier: 'basier-square-mono-regular',

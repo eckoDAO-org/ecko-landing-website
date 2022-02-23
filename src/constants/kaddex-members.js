@@ -17,6 +17,7 @@ import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.j
 import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
 import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
+import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jpg';
 
 const ROLE_CFO = {
   short: 'CFO',
@@ -68,7 +69,7 @@ const DANIELE_DE_VECCHIS = {
 };
 
 const NICOLAS_RAMSRUD = {
-  id: 1,
+  id: 10,
   firstname: 'Nicolas',
   lastname: 'Ramsrud',
   role: ROLE_CPO.role,
@@ -80,7 +81,7 @@ const NICOLAS_RAMSRUD = {
 };
 
 const ANDREA_TULLI = {
-  id: 2,
+  id: 20,
   firstname: 'Andrea',
   lastname: 'Tulli',
   role: ROLE_BD.role,
@@ -92,7 +93,7 @@ const ANDREA_TULLI = {
 };
 
 const GRANT_GERBGER = {
-  id: 13,
+  id: 130,
   firstname: 'Grant',
   lastname: 'Gerber',
   role: ROLE_CGO.role,
@@ -104,7 +105,7 @@ const GRANT_GERBGER = {
 };
 
 const STEVE_D_AGOSTINO = {
-  id: 12,
+  id: 120,
   firstname: 'Steve',
   lastname: "D'Agostino",
   role: ROLE_CMO.role,
@@ -115,7 +116,7 @@ const STEVE_D_AGOSTINO = {
 };
 
 const COSIMO_BELLINI = {
-  id: 11,
+  id: 110,
   firstname: 'Cosimo',
   lastname: 'Bellini',
   role: ROLE_DESIGN.role,
@@ -126,7 +127,7 @@ const COSIMO_BELLINI = {
 };
 
 const DON_D_AGOSTINO = {
-  id: 14,
+  id: 140,
   firstname: 'Don',
   lastname: "D'Agostino",
   role: ROLE_MARKETING.role,
@@ -137,7 +138,7 @@ const DON_D_AGOSTINO = {
 };
 
 const CONRAD_BENJAMIN = {
-  id: 15,
+  id: 150,
   firstname: 'Conrad',
   lastname: 'Benjamin',
   role: ROLE_MARKETING.role,
@@ -148,7 +149,7 @@ const CONRAD_BENJAMIN = {
 };
 
 const ZEKE_TELL = {
-  id: 16,
+  id: 160,
   firstname: 'Zeke',
   lastname: 'Tell',
   role: ROLE_MARKETING.role,
@@ -158,7 +159,7 @@ const ZEKE_TELL = {
 };
 
 const ADRIAN_CARDOSO = {
-  id: 3,
+  id: 30,
   firstname: 'Adrian',
   lastname: 'Cardoso',
   role: ROLE_ENGINEERING.role,
@@ -170,7 +171,7 @@ const ADRIAN_CARDOSO = {
 };
 
 const GIUSEPPE_PACE = {
-  id: 6,
+  id: 60,
   firstname: 'Giuseppe',
   lastname: 'Pace',
   role: ROLE_ENGINEERING.role,
@@ -181,7 +182,7 @@ const GIUSEPPE_PACE = {
 };
 
 const GUGLIELMO_SPORTELLI = {
-  id: 8,
+  id: 80,
   firstname: 'Guglielmo',
   lastname: 'Sportelli',
   role: ROLE_ENGINEERING.role,
@@ -192,7 +193,7 @@ const GUGLIELMO_SPORTELLI = {
 };
 
 const FELICE_ANGELINI = {
-  id: 9,
+  id: 90,
   firstname: 'Felice',
   lastname: 'Angelini',
   role: ROLE_ENGINEERING.role,
@@ -203,7 +204,7 @@ const FELICE_ANGELINI = {
 };
 
 const ANTONIO_SEMERARO = {
-  id: 7,
+  id: 70,
   firstname: 'Antonio',
   lastname: 'Semeraro',
   role: ROLE_ENGINEERING.role,
@@ -214,7 +215,7 @@ const ANTONIO_SEMERARO = {
 };
 
 const GUSTAVO_SPELZON = {
-  id: 4,
+  id: 40,
   firstname: 'Gustavo',
   lastname: 'Spelzon',
   role: ROLE_ENGINEERING.role,
@@ -224,7 +225,7 @@ const GUSTAVO_SPELZON = {
 };
 
 const KATE_OZTUNC = {
-  id: 5,
+  id: 50,
   firstname: 'Kate',
   lastname: 'Oztunc',
   role: ROLE_ENGINEERING.role,
@@ -235,7 +236,7 @@ const KATE_OZTUNC = {
 };
 
 const AGOSTINO_NAPPO = {
-  id: 10,
+  id: 100,
   firstname: 'Agostino',
   lastname: 'Nappo',
   role: ROLE_ENGINEERING.role,
@@ -246,7 +247,7 @@ const AGOSTINO_NAPPO = {
 };
 
 const CARLES_ALONSO = {
-  id: 19,
+  id: 190,
   firstname: 'Carles',
   lastname: 'Alonso',
   role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
@@ -257,7 +258,7 @@ const CARLES_ALONSO = {
 };
 
 const BRANDON_CHONG = {
-  id: 20,
+  id: 200,
   firstname: 'Brandon',
   lastname: 'Chong',
   role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
@@ -265,6 +266,16 @@ const BRANDON_CHONG = {
   description:
     'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
   linkedin: 'https://www.linkedin.com/in/brandonwchong/',
+};
+const ARIEL_SERRANONI = {
+  id: 41,
+  firstname: 'Ariel',
+  lastname: 'Serranoni',
+  role: `${ROLE_ENGINEERING.role}`,
+  photo: arielSerranoniPhoto,
+  description:
+    'I am Ariel, a brazilian applied mathematician currently living in São Paulo. Coming from an academic background, I’m specially interested in modelling and analyzing optimization, graph theory, and learning problems. I consider myself as a passionate learner who loves testing out cool and innovative ideas. Having experienced the birth of DeFi from the investor’s perspective, I’m joining the smart contracts team at Kaddex to help as developer and  bring some fresh ideas into the space. I strongly believe in Chainweb as long-term security and scalability blockchain solution and It is truly an honor to be a part of this revolution.',
+  linkedin: 'https://www.linkedin.com/in/ariel-serranoni-1b762815a/',
 };
 
 export const KADDEX_TEAM_MEMBERS = [
@@ -287,4 +298,5 @@ export const KADDEX_TEAM_MEMBERS = [
   KATE_OZTUNC,
   CARLES_ALONSO,
   BRANDON_CHONG,
+  ARIEL_SERRANONI,
 ];

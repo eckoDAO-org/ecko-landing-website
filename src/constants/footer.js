@@ -48,10 +48,12 @@ export const FOOTER_SUPPORT = {
     {
       text: 'GitHub',
       href: 'https://github.com/kaddex-org/',
+      target: '_blank',
     },
     {
       text: 'X-Wallet',
-      link: 'https://xwallet.kaddex.com',
+      href: 'https://xwallet.kaddex.com',
+      target: '_blank',
     },
   ],
 };
