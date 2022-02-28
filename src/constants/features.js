@@ -36,7 +36,7 @@ export const LIQUIDITY_MINING = {
     <span>
       LPs will have two options:
       <br />
-      1) Claiming the entirety of the swapping fees (0.3%) in the pool native tokens.
+      1) Claiming 0.25% of the swapping fees in the pool native tokens.
       <br />
       2) Claiming the rewards in KDX tokens with a programmatic booster.
     </span>

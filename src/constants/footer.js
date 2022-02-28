@@ -44,6 +44,8 @@ export const FOOTER_SUPPORT = {
     },
     {
       text: 'GitBook',
+      href: 'https://kaddexofficial.gitbook.io/kdx-intro/',
+      target: '_blank',
     },
     {
       text: 'GitHub',
