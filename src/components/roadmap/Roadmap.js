@@ -8,6 +8,12 @@ import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.pn
 import { R_2021, R_2022, R_ONGOING } from '../../constants/roadmaps';
 import theme from '../../styles/theme';
 import RoadmapTabs from './RoadmapTabs';
+import Roadmap2021 from './desktop-roadmaps/Roadmap2021';
+import MobileRoadmap2021 from './mobile-roadmaps/MobileRoadmap2021';
+import Roadmap2022 from './desktop-roadmaps/Roadmap2022';
+import MobileRoadmap2022 from './mobile-roadmaps/MobileRoadmap2022';
+import RoadmapOngoing from './desktop-roadmaps/RoadmapOngoing';
+import MobileRoadmapOngoing from './mobile-roadmaps/MobileRoadmapOngoing';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
@@ -36,7 +42,7 @@ const RoadmapContainer = styled(FlexContainer)`
     }
   }
 
-  svg {
+  .roadmap-desktop {
     min-width: 100%;
     max-width: 100%;
     height: auto;
@@ -87,13 +93,17 @@ const Roadmap = () => {
 
       <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
-          {width >= theme.mediaQueries.mobilePixel ? R_2021.desktopImage : R_2021.mobileImage}
+          {width >= theme.mediaQueries.mobilePixel ? <Roadmap2021 className="roadmap-desktop" /> : <MobileRoadmap2021 color={R_2021.color} />}
         </FlexContainer>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2022.id}`}>
-          {width >= theme.mediaQueries.mobilePixel ? R_2022.desktopImage : R_2022.mobileImage}
+          {width >= theme.mediaQueries.mobilePixel ? <Roadmap2022 className="roadmap-desktop" /> : <MobileRoadmap2022 color={R_2022.color} />}
         </FlexContainer>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_ONGOING.id}`}>
-          {width >= theme.mediaQueries.mobilePixel ? R_ONGOING.desktopImage : R_ONGOING.mobileImage}
+          {width >= theme.mediaQueries.mobilePixel ? (
+            <RoadmapOngoing className="roadmap-desktop" />
+          ) : (
+            <MobileRoadmapOngoing color={R_ONGOING.color} />
+          )}
         </FlexContainer>
       </RoadmapContainer>
       {width >= theme.mediaQueries.mobilePixel && (

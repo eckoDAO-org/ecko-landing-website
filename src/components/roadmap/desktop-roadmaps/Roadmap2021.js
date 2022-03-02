@@ -1,9 +1,9 @@
 import React from 'react';
 import theme from '../../../styles/theme';
 
-const Roadmap2021 = () => {
+const Roadmap2021 = ({ className }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1760" height="501" viewBox="0 0 1760 501">
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="1760" height="501" viewBox="0 0 1760 501">
       <g id="Roadmap_OLD" data-name="Roadmap OLD" transform="translate(8153 -5396.5)">
         <g id="Group_69201" data-name="Group 69201" transform="translate(-8217 4768)">
           <g id="Group_69198" data-name="Group 69198" opacity="0.1">

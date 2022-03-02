@@ -170,9 +170,16 @@ const FLAG = {
   shadow: 'translate(484 374)',
 };
 
-const Roadmap2022 = () => {
+const Roadmap2022 = ({ className }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1743.17" height="501" viewBox="0 0 1743.17 501" style={{ overflow: 'visible' }}>
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="1743.17"
+      height="501"
+      viewBox="0 0 1743.17 501"
+      style={{ overflow: 'visible' }}
+    >
       <g id="Roadmap" transform="translate(5 -190)">
         <g id="Group_68777" data-name="Group 68777">
           <path
