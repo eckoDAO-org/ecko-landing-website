@@ -91,7 +91,7 @@ const Roadmap = () => {
         <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
 
-      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }}>
+      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }} mobileStyle={{ minHeight: 600 }}>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? <Roadmap2021 className="roadmap-desktop" /> : <MobileRoadmap2021 color={R_2021.color} />}
         </FlexContainer>

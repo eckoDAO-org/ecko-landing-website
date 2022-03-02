@@ -5,6 +5,61 @@ import { getColor } from '../../../styles/theme';
 import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 
+const Line = styled(FlexContainer)`
+  position: absolute;
+  border-left: 3px solid #fff;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 25%;
+    background: ${({ color }) => getColor(color)};
+    top: 0;
+    bottom: 0;
+    left: -3px;
+  }
+`;
+
+const MobileRoadmap2022 = ({ color }) => {
+  return (
+    <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }}>
+      <Line color={color} />
+      {Object.values(CONFIGURATION)
+        .sort((a, b) => a.position - b.position)
+        .map((value, i) => {
+          return (
+            <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2, marginTop: value.isMain && 20 }}>
+              <div
+                style={{
+                  position: 'relative',
+                  height: 16,
+                  width: 16,
+                  background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
+                  borderRadius: '50%',
+                }}
+              >
+                {value?.isMain && <RoadmapFlagcon style={{ position: 'absolute', width: 40, left: 3, bottom: 8, zIndex: 4 }} />}
+              </div>
+
+              <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
+                {value?.text?.map((tspan, j) => (
+                  <Label key={j} fontSize={tspan.fontSize || 15} color={value.isCompleted ? color : 'white'}>
+                    {tspan.text}
+                  </Label>
+                ))}
+              </FlexContainer>
+            </FlexContainer>
+          );
+        })}
+    </FlexContainer>
+  );
+};
+
+export default MobileRoadmap2022;
+
 const CONFIGURATION = {
   X_WALLET_BETA: {
     position: 0,
@@ -89,52 +144,3 @@ const CONFIGURATION = {
     isCompleted: false,
   },
 };
-
-const RoadmapContainer = styled(FlexContainer)`
-  position: relative;
-  width: 100%;
-  padding: 20px 0px;
-  ::after {
-    content: '';
-    position: absolute;
-    width: 3px;
-    background: ${({ color }) => `linear-gradient(to bottom, ${getColor(color)}  25%, #ffffff 25%)`};
-    top: 0;
-    bottom: 0;
-    left: 35px;
-  }
-`;
-
-const MobileRoadmap2022 = ({ color }) => {
-  return (
-    <RoadmapContainer className="column justify-sb" color={color}>
-      {Object.values(CONFIGURATION).map((value, i) => {
-        return (
-          <FlexContainer style={{ paddingLeft: 29, zIndex: 2, marginTop: value.isMain && 20 }}>
-            <div
-              style={{
-                position: 'relative',
-                height: 16,
-                width: 16,
-                background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
-                borderRadius: '50%',
-              }}
-            >
-              {value?.isMain && <RoadmapFlagcon style={{ position: 'absolute', width: 40, left: 3, bottom: 8, zIndex: 4 }} />}
-            </div>
-
-            <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
-              {value?.text?.map((tspan, j) => (
-                <Label key={j} fontSize={tspan.fontSize || 15} color={value.isCompleted ? color : 'white'}>
-                  {tspan.text}
-                </Label>
-              ))}
-            </FlexContainer>
-          </FlexContainer>
-        );
-      })}
-    </RoadmapContainer>
-  );
-};
-
-export default MobileRoadmap2022;
