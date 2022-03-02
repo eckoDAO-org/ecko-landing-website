@@ -72,14 +72,14 @@ const CONFIGURATION = {
   },
   _2M_TVL: {
     position: 3,
-    text: [{ text: '2M TVL"' }],
+    text: [{ text: '2M TVL' }],
   },
   KADDEX_BETA: {
     position: 4,
-    text: [{ text: 'Kaddex Beta"' }],
+    text: [{ text: 'Kaddex Beta' }],
   },
   COMMUNITY_SALE: {
     position: 5,
-    text: [{ text: 'Community Sale"' }],
+    text: [{ text: 'Community Sale' }],
   },
 };

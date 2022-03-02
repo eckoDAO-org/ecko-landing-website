@@ -33,9 +33,9 @@ const RoadmapWrapper = styled(FlexContainer)`
 `;
 
 const RoadmapContainer = styled(FlexContainer)`
-  overflow-x: auto;
-  overflow-y: hidden;
   width: 100%;
+  transition: transform 0.5s;
+  transform: ${({ translateXRoadmap }) => `translateX(${-translateXRoadmap}px)`};
   @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
     & > *:first-child {
       margin-left: 90px;
@@ -53,15 +53,15 @@ const Roadmap = () => {
   const [width] = useWindowSize();
   const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
   const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
+  const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
 
   const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2022.id);
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
-
   useEffect(() => {
     if (roadmapsContainer) {
       const roadmap = document.getElementById(`roadmap-${selectedRoadmapId}`);
-      roadmapsContainer.scrollTo(roadmap.offsetLeft, 0);
+      setTranslateXRoadmap(roadmap.offsetLeft);
       if (selectedRoadmapId === R_2021.id) {
         setTranslateX(`calc(50% - ${TRANSLATE_X_OFFSET}px)`);
       } else if (selectedRoadmapId === R_ONGOING.id) {
@@ -91,7 +91,7 @@ const Roadmap = () => {
         <RoadmapTabs selectedRoadmapId={selectedRoadmapId} setSelectedRoadmapId={setSelectedRoadmapId} translateX={translateX} />
       )}
 
-      <RoadmapContainer className="hide-scrollbar" id="roadmaps-container" style={{ width }} mobileStyle={{ minHeight: 600 }}>
+      <RoadmapContainer id="roadmaps-container" style={{ width }} mobileStyle={{ minHeight: 600 }} translateXRoadmap={translateXRoadmap}>
         <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
           {width >= theme.mediaQueries.mobilePixel ? <Roadmap2021 className="roadmap-desktop" /> : <MobileRoadmap2021 color={R_2021.color} />}
         </FlexContainer>

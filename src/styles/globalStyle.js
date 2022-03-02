@@ -7,6 +7,10 @@ export default createGlobalStyle`
       box-sizing: inherit;
     }
 
+    /* remove mobile highlight on tap */
+    div {
+    -webkit-tap-highlight-color: transparent;
+    }
     *:focus {
       outline: none;
     }

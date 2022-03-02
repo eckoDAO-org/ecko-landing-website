@@ -31,7 +31,15 @@ const MobileRoadmap2022 = ({ color }) => {
         .sort((a, b) => a.position - b.position)
         .map((value, i) => {
           return (
-            <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2, marginTop: value.isMain && 20 }}>
+            <FlexContainer
+              key={i}
+              style={{ paddingLeft: 28.5, zIndex: 2, marginTop: value.isMain && 20 }}
+              onClick={() => {
+                if (value.href) {
+                  window.open(value.href, '_blank');
+                }
+              }}
+            >
               <div
                 style={{
                   position: 'relative',
