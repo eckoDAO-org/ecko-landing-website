@@ -54,7 +54,7 @@ const MobileRoadmap2022 = ({ color }) => {
 
               <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
                 {value?.text?.map((tspan, j) => (
-                  <Label key={j} fontSize={tspan.fontSize || 15} color={value.isCompleted ? color : 'white'}>
+                  <Label key={j} fontSize={tspan.fontSize || 15} color={value?.isMain ? 'pink' : value.isCompleted ? color : 'white'}>
                     {tspan.text}
                   </Label>
                 ))}

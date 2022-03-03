@@ -27,14 +27,15 @@ const FooterSection = () => {
     >
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
-      <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }}>
-        <FooterItemsList title="About">
-          <NavigationItems fontSize={13} color="yellow" disableHover hideXwallet />
-        </FooterItemsList>
-        <FlexContainer gap={80} columnGap={50} tabletClassName="column" mobileClassName="column">
+      <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }} tabletClassName="column" mobileClassName="column">
+        <FlexContainer gap={80} columnGap={50}>
+          <FooterItemsList title="About">
+            <NavigationItems fontSize={13} color="yellow" disableHover hideXwallet />
+          </FooterItemsList>
           <FooterItemsList {...FOOTER_SUPPORT} />
-          <FooterItemsList {...FOOTER_LEARN} />
         </FlexContainer>
+
+        <FooterItemsList {...FOOTER_LEARN} />
       </FlexContainer>
 
       {width >= theme.mediaQueries.desktopPixel && <Socials />}
