@@ -78,8 +78,8 @@ const Roadmap = () => {
       gap={50}
       className="column scroll-mt relative"
       desktopPixel={1460}
-      style={{ marginTop: 10 }}
       tabletStyle={{ marginTop: 80 }}
+      mobileStyle={{ marginTop: 80 }}
     >
       <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }} mobileStyle={{ marginLeft: 50 }}>
         Kaddex
