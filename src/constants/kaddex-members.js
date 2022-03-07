@@ -18,6 +18,8 @@ import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
 import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
 import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jpg';
+import francescoMelpignanoPhoto from '../assets/images/kaddex-team/francesco-melpignano.jpg';
+import emilyPillmorePhoto from '../assets/images/kaddex-team/emily-pillmore.jpg';
 
 const ROLE_CFO = {
   short: 'CFO',
@@ -54,6 +56,14 @@ const ROLE_ENGINEERING = {
 const ROLE_ADVISOR = {
   short: 'ADVISOR',
   role: 'Advisor',
+};
+const CEO_KDA_ECO = {
+  short: 'CEO KDA Eco',
+  role: 'CEO of Kadena Eco',
+};
+const SMART_CONTRACT_EXPERT = {
+  short: 'Smart Contract Expert',
+  role: 'Smart Contract Expert',
 };
 
 const DANIELE_DE_VECCHIS = {
@@ -271,11 +281,27 @@ const ARIEL_SERRANONI = {
   id: 41,
   firstname: 'Ariel',
   lastname: 'Serranoni',
-  role: `${ROLE_ENGINEERING.role}`,
+  role: ROLE_ENGINEERING.role,
   photo: arielSerranoniPhoto,
   description:
     'I am Ariel, a brazilian applied mathematician currently living in São Paulo. Coming from an academic background, I’m specially interested in modelling and analyzing optimization, graph theory, and learning problems. I consider myself as a passionate learner who loves testing out cool and innovative ideas. Having experienced the birth of DeFi from the investor’s perspective, I’m joining the smart contracts team at Kaddex to help as developer and  bring some fresh ideas into the space. I strongly believe in Chainweb as long-term security and scalability blockchain solution and It is truly an honor to be a part of this revolution.',
   linkedin: 'https://www.linkedin.com/in/ariel-serranoni-1b762815a/',
+};
+const FRANCESCO_MELPIGNANO = {
+  id: 210,
+  firstname: 'Francesco',
+  lastname: 'Melpignano',
+  role: CEO_KDA_ECO.role,
+  photo: francescoMelpignanoPhoto,
+  disabled: true,
+};
+const EMILY_PILLMORE = {
+  id: 220,
+  firstname: 'Emily',
+  lastname: 'Pillmore',
+  role: SMART_CONTRACT_EXPERT.role,
+  photo: emilyPillmorePhoto,
+  disabled: true,
 };
 
 export const KADDEX_TEAM_MEMBERS = [
@@ -299,4 +325,6 @@ export const KADDEX_TEAM_MEMBERS = [
   CARLES_ALONSO,
   BRANDON_CHONG,
   ARIEL_SERRANONI,
+  FRANCESCO_MELPIGNANO,
+  EMILY_PILLMORE,
 ];

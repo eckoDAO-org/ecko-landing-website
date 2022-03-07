@@ -13,7 +13,7 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const KaddexMemberSmall = ({ gradientColors, DESKTOP_PIXEL, selectedMember, member, color, onClick }) => {
+const KaddexMemberSmall = ({ gradientColors, DESKTOP_PIXEL, selectedMember, member, onClick }) => {
   const [width] = useWindowSize();
 
   const getSize = () => {
@@ -32,7 +32,7 @@ const KaddexMemberSmall = ({ gradientColors, DESKTOP_PIXEL, selectedMember, memb
     <a href="/#team">
       <Container
         DESKTOP_PIXEL={DESKTOP_PIXEL}
-        className="column align-ce pointer"
+        className="column align-ce"
         isActive={!selectedMember || selectedMember?.id === member.id}
         onClick={onClick}
       >

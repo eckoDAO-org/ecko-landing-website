@@ -32,7 +32,9 @@ const KaddexTeamSection = () => {
             gradientColors={colors[i]}
             member={member}
             selectedMember={selectedMember}
-            onClick={() => seSelectedMember(member)}
+            onClick={() => {
+              seSelectedMember(member);
+            }}
             DESKTOP_PIXEL={DESKTOP_PIXEL}
             MOBILE_PIXEL={MOBILE_PIXEL}
           />
@@ -64,6 +66,7 @@ const colors = [
   ['#ECBB89', '#F1C587'],
   ['#F1C587', '#F7CE85'],
   ['#F7CE85', '#F7EA99'],
+  ['#F7EA99', '#F7EF99'],
 ];
 
 export default KaddexTeamSection;
