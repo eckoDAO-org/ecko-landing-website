@@ -32,10 +32,15 @@ const JobPositions = () => {
       </Label>
 
       <AccordionsContainer className="w-100 column">
-        <Accordion title="Engineer" color="primary">
+        <Accordion title="Engineering" color="primary">
           <a href="Kaddex Coding Expert.pdf" target="_blank'">
             <Label size="normal" color="primary">
               SENIOR CODING EXPERT
+            </Label>
+          </a>
+          <a href="Kaddex SERVER ARCHITECT_ADMINISTRATOR.pdf" target="_blank'">
+            <Label size="normal" color="primary">
+              SERVER ARCHITECT-ADMINISTRATOR
             </Label>
           </a>
         </Accordion>
