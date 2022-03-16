@@ -16,7 +16,7 @@ export const PARTNER_FLUX = {
 export const PARTNER_GENESIS_BLOCK = {
   icon: <GenesisBlockLogo />,
   title: 'Genesis Block',
-  description: 'Official legal advisory firm.',
+  description: 'Strategic advisory and engineering.',
   color: 'yellow',
 };
 export const PARTNER_ROBOSWAP = {

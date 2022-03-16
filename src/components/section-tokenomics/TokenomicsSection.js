@@ -95,7 +95,7 @@ const TokenomicsSection = () => {
             <Label className="align-fs text-center" fontFamily="syncopate" size="large">
               KDX tokens
               <br />
-              fixed supply
+              max supply
             </Label>
           </FlexContainer>
         </FlexContainer>
@@ -124,7 +124,7 @@ const TokenomicsSection = () => {
               <Label className="align-fs nowrap" fontFamily="syncopate" fontSize={22} style={{ lineHeight: '33px' }}>
                 KDX tokens
                 <br />
-                fixed supply
+                max supply
               </Label>
             </FlexContainer>
           </FlexContainer>

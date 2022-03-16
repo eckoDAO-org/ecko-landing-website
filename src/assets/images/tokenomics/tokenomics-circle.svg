@@ -1,90 +1,110 @@
-<svg width="883" height="883" viewBox="0 0 883 883" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="104" y="104" width="675" height="675">
-<circle cx="441.499" cy="441.501" r="336" transform="rotate(-157.043 441.499 441.501)" fill="#C4C4C4"/>
-<circle cx="441.499" cy="441.501" r="336" transform="rotate(-157.043 441.499 441.501)" stroke="white"/>
-<circle cx="441.499" cy="441.501" r="336" transform="rotate(-157.043 441.499 441.501)" stroke="white"/>
+<svg width="981" height="981" viewBox="0 0 981 981" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="116" y="116" width="749" height="749">
+<circle cx="490.5" cy="490.5" r="373.689" transform="rotate(-157.043 490.5 490.5)" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="373.689" transform="rotate(-157.043 490.5 490.5)" stroke="white"/>
+<circle cx="490.5" cy="490.5" r="373.689" transform="rotate(-157.043 490.5 490.5)" stroke="white"/>
 </mask>
 <g mask="url(#mask0_1855_2994)">
 <g filter="url(#filter0_b_1855_2994)">
-<circle cx="441.499" cy="441.501" r="336.5" transform="rotate(-157.043 441.499 441.501)" fill="white" fill-opacity="0.01"/>
-<circle cx="441.499" cy="441.501" r="335" transform="rotate(-157.043 441.499 441.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<circle cx="441.499" cy="441.501" r="335" transform="rotate(-157.043 441.499 441.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="374.189" transform="rotate(-157.043 490.5 490.5)" fill="white" fill-opacity="0.01"/>
+<circle cx="490.5" cy="490.5" r="372.689" transform="rotate(-157.043 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="372.689" transform="rotate(-157.043 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
 </g>
-<mask id="mask1_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-22" y="-82" width="465" height="837">
-<path d="M439.23 448.141L309.543 754.307L208.627 752.829L-21.6429 405.508L442.379 -81.0419L439.23 448.141Z" fill="#C4C4C4"/>
+<mask id="mask1_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-25" y="-91" width="517" height="930">
+<path d="M487.976 497.884L343.764 838.342L231.545 836.698L-24.5157 450.476L491.478 -90.5679L487.976 497.884Z" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask1_1855_2994)">
-<circle cx="441.499" cy="441.501" r="332.5" transform="rotate(-157.043 441.499 441.501)" stroke="url(#paint0_linear_1855_2994)" stroke-width="8"/>
+<circle cx="490.5" cy="490.5" r="370.189" transform="rotate(-157.043 490.5 490.5)" stroke="url(#paint0_linear_1855_2994)" stroke-width="8"/>
 </g>
 </g>
-<mask id="mask2_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="176" y="176" width="531" height="532">
-<circle cx="441.5" cy="441.5" r="265" transform="rotate(90.1975 441.5 441.5)" fill="#C4C4C4"/>
-<circle cx="441.5" cy="441.5" r="265" transform="rotate(90.1975 441.5 441.5)" stroke="white"/>
-<circle cx="441.5" cy="441.5" r="265" transform="rotate(90.1975 441.5 441.5)" stroke="white"/>
+<mask id="mask2_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="193" y="193" width="595" height="595">
+<circle cx="490.5" cy="490.5" r="296.926" transform="rotate(90.1975 490.5 490.5)" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="296.926" transform="rotate(90.1975 490.5 490.5)" stroke="white"/>
+<circle cx="490.5" cy="490.5" r="296.926" transform="rotate(90.1975 490.5 490.5)" stroke="white"/>
 </mask>
 <g mask="url(#mask2_1855_2994)">
-<circle cx="441.5" cy="441.5" r="264" transform="rotate(90.1975 441.5 441.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<circle cx="441.5" cy="441.5" r="264" transform="rotate(90.1975 441.5 441.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<mask id="mask3_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="294" y="441" width="525" height="353">
-<path d="M442.5 441.024L781 442.171L818.678 535.801L631.446 747.657L294 794L442.5 441.024Z" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="295.926" transform="rotate(90.1975 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="295.926" transform="rotate(90.1975 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask3_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="325" y="489" width="589" height="397">
+<path d="M491.619 489.967L862.5 616L913.033 596.141L703.286 833.472L325.262 885.388L491.619 489.967Z" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask3_1855_2994)">
-<circle cx="441.5" cy="441.5" r="261.5" transform="rotate(90.1975 441.5 441.5)" stroke="url(#paint1_linear_1855_2994)" stroke-width="8"/>
+<circle cx="490.5" cy="490.5" r="293.426" transform="rotate(90.1975 490.5 490.5)" stroke="url(#paint1_linear_1855_2994)" stroke-width="8"/>
 </g>
 </g>
-<mask id="mask4_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="246" y="246" width="391" height="391">
-<circle cx="441.5" cy="441.501" r="194" transform="rotate(23.1287 441.5 441.501)" fill="#C4C4C4"/>
-<circle cx="441.5" cy="441.501" r="194" transform="rotate(23.1287 441.5 441.501)" stroke="white"/>
-<circle cx="441.5" cy="441.501" r="194" transform="rotate(23.1287 441.5 441.501)" stroke="white"/>
+<mask id="mask4_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="255" y="255" width="471" height="471">
+<circle cx="490.5" cy="490.5" r="234.039" transform="rotate(23.1287 490.5 490.5)" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="234.039" transform="rotate(23.1287 490.5 490.5)" stroke="white"/>
+<circle cx="490.5" cy="490.5" r="234.039" transform="rotate(23.1287 490.5 490.5)" stroke="white"/>
 </mask>
 <g mask="url(#mask4_1855_2994)">
-<circle cx="441.5" cy="441.501" r="193" transform="rotate(23.1287 441.5 441.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<circle cx="441.5" cy="441.501" r="193" transform="rotate(23.1287 441.5 441.501)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<mask id="mask5_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="443" y="129" width="336" height="319">
-<path d="M443.789 434.867L574.395 129.092L675.306 130.873L778.5 448L443.789 434.867Z" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="233.039" transform="rotate(23.1287 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="233.039" transform="rotate(23.1287 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask5_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="493" y="115" width="388" height="514">
+<path d="M493.26 482.501L763.5 207.5L772.437 115.927L881 628.5L493.26 482.501Z" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask5_1855_2994)">
-<circle cx="441.5" cy="441.501" r="190.5" transform="rotate(23.1287 441.5 441.501)" stroke="url(#paint2_linear_1855_2994)" stroke-width="8"/>
+<circle cx="490.499" cy="490.5" r="230.539" transform="rotate(23.1287 490.499 490.5)" stroke="url(#paint2_linear_1855_2994)" stroke-width="8"/>
 </g>
 </g>
-<mask id="mask6_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="325" y="325" width="233" height="234">
-<circle cx="441.5" cy="441.5" r="116" fill="#C4C4C4"/>
-<circle cx="441.5" cy="441.5" r="116" stroke="white"/>
-<circle cx="441.5" cy="441.5" r="116" stroke="white"/>
+<mask id="mask6_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="318" y="318" width="345" height="345">
+<circle cx="490.5" cy="490.5" r="171.107" transform="rotate(23.1287 490.5 490.5)" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="171.107" transform="rotate(23.1287 490.5 490.5)" stroke="white"/>
+<circle cx="490.5" cy="490.5" r="171.107" transform="rotate(23.1287 490.5 490.5)" stroke="white"/>
 </mask>
 <g mask="url(#mask6_1855_2994)">
-<circle cx="441.5" cy="441.5" r="115" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<circle cx="441.5" cy="441.5" r="115" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
-<mask id="mask7_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="441" y="64" width="151" height="371">
-<path d="M441 434.5V102L534.5 64.0005L591.5 112.5L441 434.5Z" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="170.107" transform="rotate(23.1287 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="170.107" transform="rotate(23.1287 490.5 490.5)" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask7_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="492" y="214" width="205" height="271">
+<path d="M492.519 484.648L607.752 214.862L696.786 216.433L696.786 278.5L492.519 484.648Z" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask7_1855_2994)">
-<circle cx="441.5" cy="441.5" r="112.5" stroke="url(#paint3_linear_1855_2994)" stroke-width="8"/>
+<circle cx="490.499" cy="490.5" r="167.607" transform="rotate(23.1287 490.499 490.5)" stroke="url(#paint3_linear_1855_2994)" stroke-width="8"/>
+</g>
+</g>
+<mask id="mask8_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="387" y="387" width="207" height="207">
+<circle cx="490.5" cy="490.5" r="102.288" fill="#C4C4C4"/>
+<circle cx="490.5" cy="490.5" r="102.288" stroke="white"/>
+<circle cx="490.5" cy="490.5" r="102.288" stroke="white"/>
+</mask>
+<g mask="url(#mask8_1855_2994)">
+<circle cx="490.5" cy="490.5" r="101.288" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<circle cx="490.5" cy="490.5" r="101.288" stroke="#95CEF5" stroke-opacity="0.3" stroke-width="3"/>
+<mask id="mask9_1855_2994" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="490" y="157" width="133" height="328">
+<path d="M490.059 484.324V190.96L572.554 157.432L622.845 200.224L490.059 484.324Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask9_1855_2994)">
+<circle cx="490.5" cy="490.5" r="98.7879" stroke="url(#paint4_linear_1855_2994)" stroke-width="8"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_b_1855_2994" x="20.9121" y="20.9137" width="841.174" height="841.174" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_b_1855_2994" x="32.2139" y="32.2151" width="916.571" height="916.57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImage" stdDeviation="42"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1855_2994"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1855_2994" result="shape"/>
 </filter>
-<linearGradient id="paint0_linear_1855_2994" x1="308.385" y1="-1082.06" x2="441.499" y2="778.001" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1855_2994" x1="342.476" y1="-1203.7" x2="490.5" y2="864.689" gradientUnits="userSpaceOnUse">
 <stop stop-color="#04C9E4"/>
 <stop offset="0.479167" stop-color="#FA41A5"/>
 <stop offset="1" stop-color="#F3BD2F"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1855_2994" x1="492.556" y1="-279.791" x2="532.268" y2="809.19" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_1855_2994" x1="547.695" y1="-317.527" x2="592.183" y2="902.405" gradientUnits="userSpaceOnUse">
 <stop stop-color="#04C9E4"/>
 <stop offset="0.479167" stop-color="#FA41A5"/>
 <stop offset="1" stop-color="#F3BD2F"/>
 </linearGradient>
-<linearGradient id="paint2_linear_1855_2994" x1="353.58" y1="234.388" x2="883.5" y2="457.001" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_1855_2994" x1="384.48" y1="240.752" x2="1023.49" y2="509.191" gradientUnits="userSpaceOnUse">
 <stop stop-color="#04C9E4"/>
 <stop offset="0.479167" stop-color="#FA41A5"/>
 <stop offset="1" stop-color="#F3BD2F"/>
 </linearGradient>
-<linearGradient id="paint3_linear_1855_2994" x1="441.5" y1="325" x2="441.5" y2="558" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint3_linear_1855_2994" x1="412.927" y1="307.765" x2="880.475" y2="504.176" gradientUnits="userSpaceOnUse">
+<stop stop-color="#04C9E4"/>
+<stop offset="0.479167" stop-color="#FA41A5"/>
+<stop offset="1" stop-color="#F3BD2F"/>
+</linearGradient>
+<linearGradient id="paint4_linear_1855_2994" x1="490.5" y1="387.712" x2="490.5" y2="593.288" gradientUnits="userSpaceOnUse">
 <stop stop-color="#04C9E4"/>
 <stop offset="0.479167" stop-color="#FA41A5"/>
 <stop offset="1" stop-color="#F3BD2F"/>
