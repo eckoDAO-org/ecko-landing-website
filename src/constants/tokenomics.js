@@ -34,7 +34,7 @@ export const TOKENOMICS_DAO_TREASURY = {
 export const TOKENOMICS_LIQUIDITY_MINING = {
   icon: '40%',
   title: 'LIQUIDITY MINING',
-  description: 'To ensure highly lucrative LP boosts, network reward will receive the largest KDX tranche.',
+  description: 'To ensure highly lucrative LP boosts, network rewards will receive the largest KDX tranche.',
   gradientColors: ['#F77772', '#F58861', '#F49E4B'],
 };
 
