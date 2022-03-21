@@ -25,29 +25,31 @@ const JobPositions = () => {
       tabletStyle={{ padding: '0 50px', marginTop: 50 }}
       mobileStyle={{ padding: '0 50px', marginTop: 50 }}
     >
-      <Label className="nowrap h-fit-content" fontFamily="syncopate" size="big">
-        Open Job
-        <br />
-        position
-      </Label>
-
       <AccordionsContainer className="w-100 column">
-        <Accordion title="Engineering" color="primary">
+        <Accordion title="Community" gradient={['#549CCF', '#718DC8', '#8C7DC1']}>
+          <a href="" target="_blank'">
+            <Label size="normal" color="white">
+              CONTENT CREATOR
+            </Label>
+          </a>
+        </Accordion>
+
+        <Accordion title="Engineering" gradient={['#8C7DC1', '#E54DAA', '#F9588F']}>
           <a href="Kaddex Coding Expert.pdf" target="_blank'">
-            <Label size="normal" color="primary">
+            <Label size="normal" color="white">
               SENIOR CODING EXPERT
             </Label>
           </a>
           <a href="Kaddex SERVER ARCHITECT_ADMINISTRATOR.pdf" target="_blank'">
-            <Label size="normal" color="primary">
+            <Label size="normal" color="white">
               SERVER ARCHITECT-ADMINISTRATOR
             </Label>
           </a>
         </Accordion>
 
-        <Accordion title="Marketing" color="pink" />
+        <Accordion title="Marketing" gradient={['#F9588F', '#F86781', '#F77772']} />
 
-        <Accordion title="Business Development" color="yellow" />
+        <Accordion title="Business Development" color="white" gradient={['#F77772', '#F58861', '#F49E4B']} />
       </AccordionsContainer>
     </FlexContainer>
   );

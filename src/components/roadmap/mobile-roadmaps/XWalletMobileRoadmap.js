@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RoadmapFlagcon } from '../../../assets';
 import { getColor } from '../../../styles/theme';
 import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
@@ -23,7 +22,7 @@ const Line = styled(FlexContainer)`
   }
 `;
 
-const MobileRoadmap2022 = ({ color }) => {
+const XWalletMobileRoadmap = ({ color }) => {
   return (
     <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }}>
       <Line color={color} />
@@ -48,9 +47,7 @@ const MobileRoadmap2022 = ({ color }) => {
                   background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
                   borderRadius: '50%',
                 }}
-              >
-                {value?.isMain && <RoadmapFlagcon style={{ position: 'absolute', width: 40, left: 3, bottom: 8, zIndex: 4 }} />}
-              </div>
+              ></div>
 
               <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
                 {value?.text?.map((tspan, j) => (
@@ -66,89 +63,89 @@ const MobileRoadmap2022 = ({ color }) => {
   );
 };
 
-export default MobileRoadmap2022;
+export default XWalletMobileRoadmap;
 
 const CONFIGURATION = {
-  X_WALLET_BETA: {
+  BETA_RELEASE: {
     position: 0,
-    text: [{ text: 'X-Wallet Beta' }],
-    href: 'https://xwallet.kaddex.com/',
-    isCompleted: true,
-  },
-  LITEPAPER: {
-    position: 1,
-    text: [{ text: 'Litepaper' }],
-    href: '/kaddex litepaper.pdf',
-
+    text: [{ text: 'Beta release' }],
     isCompleted: true,
   },
   X_WALLET_V1: {
-    position: 2,
+    position: 1,
     text: [{ text: 'X-Wallet v1' }],
-    href: 'https://xwallet.kaddex.com/',
 
     isCompleted: true,
   },
-  PUBLIC_SALE: {
+  GOOGLE_CHROME_STORE: {
+    position: 2,
+    text: [{ text: 'Google Chrome Store' }],
+
+    isCompleted: true,
+  },
+  KADDEX_INTEGRATION: {
     position: 3,
-    text: [{ text: 'Public Sale' }],
+    text: [{ text: 'Kaddex Integration' }],
     isCompleted: true,
   },
-  BRIDGED_ERC20: {
+  KD_LAUNCH_INTEGRATION: {
     position: 4,
-    text: [{ text: 'Bridged ERC-20 Token Pairs' }],
-    isCompleted: false,
+    text: [{ text: 'KDLaunch integration' }],
+    isCompleted: true,
   },
-  SWAPPING_INTERFACE: {
+  _10k_DOWNLOADS: {
     position: 5,
-    text: [{ text: '3d Swapping Interface' }],
-
+    text: [{ text: '10,000 Downloads' }],
     isCompleted: false,
   },
-  WEBSITE_V2: {
+  FIAT_ON_RAMP: {
     position: 6,
-    text: [{ text: 'Website v2' }],
+    text: [{ text: 'Fiat on Ramp' }],
     isCompleted: false,
   },
 
-  KDX_VAULTING_PROGRAMME: {
+  FIAT_OFF_RAMP: {
     position: 7,
-    text: [{ text: 'KDX Vaulting programme' }, { text: 'Available for early investors', fontSize: 10 }],
+    text: [{ text: 'Fiat off Ramp' }],
 
     isCompleted: false,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
-    position: 9,
-    text: [{ text: 'Kaddex v1 full launch' }],
-    isCompleted: false,
-    isMain: true,
-  },
-  SINGLE_SIDED_LIQUIDITY: {
+  MOBILE_APP: {
     position: 8,
-    text: [{ text: 'Single Sided Liquidity' }],
+    text: [{ text: 'Mobile app' }],
     isCompleted: false,
   },
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
+  BAND_REFRESH: {
+    position: 9,
+    text: [{ text: 'Brand Refresh' }],
+    isCompleted: false,
+  },
+  SWAP_FUNTIONALITY: {
     position: 11,
-    text: [{ text: 'KDX Liquidity Mining Programme' }],
+    text: [{ text: 'Swap Functionality' }],
     isCompleted: false,
   },
 
-  LENDING_AND_BORROWING_FUNCTIONALITIES: {
+  SDK_EASY_INTEGRATION_KIT: {
     position: 12,
-    text: [{ text: 'Lending & borrowing functionalities' }],
+    text: [{ text: 'SDK easy integration kit' }],
     isCompleted: false,
   },
-  X_WALLET_V2: {
+  NFTs_INTEGRATION: {
     position: 13,
+    text: [{ text: 'NFTs integration' }],
+    isCompleted: false,
+  },
+
+  X_WALLET_V2: {
+    position: 14,
     text: [{ text: 'X-Wallet v2' }],
     isCompleted: false,
   },
-  WHITEPAPER: {
-    position: 14,
-    text: [{ text: 'Whitepaper' }],
-
+  AUDITING: {
+    position: 15,
+    text: [{ text: 'Auditing' }],
     isCompleted: false,
   },
 };

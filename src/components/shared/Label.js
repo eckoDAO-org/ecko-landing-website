@@ -107,6 +107,7 @@ const Label = ({
   tabletStyle,
   mobileStyle,
   onClick,
+  withShade,
 }) => {
   const [width] = useWindowSize();
 
@@ -129,7 +130,7 @@ const Label = ({
       id={id}
       gradient={gradient}
       className={getClassName()}
-      color={getColor(color)}
+      color={withShade ? `${getColor(color)}99` : getColor(color)}
       fontSize={fontSize}
       size={size}
       onClick={onClick}

@@ -11,44 +11,52 @@ const TabsContainer = styled(FlexContainer)`
   transform: ${({ translateX }) => `translateX(${translateX})`};
 `;
 
-const RoadmapTabs = ({ translateX, selectedRoadmapId, setSelectedRoadmapId, style }) => {
+const RoadmapTabs = ({ showLabels, translateX, selectedRoadmapId, setSelectedRoadmapId, style }) => {
   const [width] = useWindowSize();
   return (
     <TabsContainer id="tabs-container" translateX={translateX} style={{ width, ...style }}>
-      <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
-        <Label
-          fontFamily="syncopate"
-          color={selectedRoadmapId === R_2021.id ? R_2021.color : 'white'}
-          fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmapId(R_2021.id)}
-        >
-          {R_2021.id}
+      {showLabels ? (
+        <>
+          <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
+            <Label
+              fontFamily="syncopate"
+              color={selectedRoadmapId === R_2021.id ? R_2021.color : 'white'}
+              fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
+              onClick={() => setSelectedRoadmapId(R_2021.id)}
+            >
+              {R_2021.id}
+            </Label>
+          </FlexContainer>
+          <FlexContainer
+            className="justify-ce"
+            id={`tab-${R_2022.id}`}
+            style={{ minWidth: width <= theme.mediaQueries.mobilePixel ? width - 100 : width - 400 }}
+          >
+            <Label
+              fontFamily="syncopate"
+              color={selectedRoadmapId === R_2022.id ? R_2022.color : 'white'}
+              fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
+              onClick={() => setSelectedRoadmapId(R_2022.id)}
+            >
+              {R_2022.id}
+            </Label>
+          </FlexContainer>
+          <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
+            <Label
+              fontFamily="syncopate"
+              color={selectedRoadmapId === R_ONGOING.id ? R_ONGOING.color : 'white'}
+              fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
+              onClick={() => setSelectedRoadmapId(R_ONGOING.id)}
+            >
+              {R_ONGOING.id}
+            </Label>
+          </FlexContainer>
+        </>
+      ) : (
+        <Label fontFamily="syncopate" fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}>
+          &nbsp;{' '}
         </Label>
-      </FlexContainer>
-      <FlexContainer
-        className="justify-ce"
-        id={`tab-${R_2022.id}`}
-        style={{ minWidth: width <= theme.mediaQueries.mobilePixel ? width - 100 : width - 400 }}
-      >
-        <Label
-          fontFamily="syncopate"
-          color={selectedRoadmapId === R_2022.id ? R_2022.color : 'white'}
-          fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmapId(R_2022.id)}
-        >
-          {R_2022.id}
-        </Label>
-      </FlexContainer>
-      <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
-        <Label
-          fontFamily="syncopate"
-          color={selectedRoadmapId === R_ONGOING.id ? R_ONGOING.color : 'white'}
-          fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
-          onClick={() => setSelectedRoadmapId(R_ONGOING.id)}
-        >
-          {R_ONGOING.id}
-        </Label>
-      </FlexContainer>
+      )}
     </TabsContainer>
   );
 };
