@@ -53,8 +53,8 @@ const RoadmapTabs = ({ showLabels, translateX, selectedRoadmapId, setSelectedRoa
           </FlexContainer>
         </>
       ) : (
-        <Label fontFamily="syncopate" fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}>
-          &nbsp;{' '}
+        <Label color="primary" fontFamily="syncopate" fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}>
+          2022
         </Label>
       )}
     </TabsContainer>
