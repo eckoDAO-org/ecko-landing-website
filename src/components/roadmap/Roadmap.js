@@ -62,7 +62,7 @@ const KaddexRoadmapContainer = styled(FlexContainer)`
 
 const Roadmap = () => {
   const [width] = useWindowSize();
-  const [roadmap, setRoadmap] = useState('kaddex');
+  const [roadmapType, setRoadmapType] = useState('kaddex');
   const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
   const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
   const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
@@ -72,6 +72,7 @@ const Roadmap = () => {
   const roadmapsContainer = document.getElementById('roadmaps-container');
   useEffect(() => {
     const roadmap = document.getElementById(`roadmap-${selectedRoadmapId}`);
+
     if (roadmapsContainer && roadmap) {
       setTranslateXRoadmap(roadmap.offsetLeft);
       if (selectedRoadmapId === R_2021.id) {
@@ -96,12 +97,16 @@ const Roadmap = () => {
       <FlexContainer className="w-100 justify-sb">
         <Label
           size="big"
-          withShade={roadmap !== 'kaddex'}
+          withShade={roadmapType !== 'kaddex'}
           color="white"
           fontFamily="syncopate"
           style={{ marginLeft: 90 }}
           mobileStyle={{ marginLeft: 50 }}
-          onClick={() => setRoadmap('kaddex')}
+          onClick={() => {
+            setTranslateXRoadmap(width + 80);
+            setSelectedRoadmapId(R_2022.id);
+            setRoadmapType('kaddex');
+          }}
         >
           Kaddex
           <br />
@@ -111,11 +116,14 @@ const Roadmap = () => {
         <Label
           size="big"
           color="white"
-          withShade={roadmap !== 'x-wallet'}
+          withShade={roadmapType !== 'x-wallet'}
           fontFamily="syncopate"
           style={{ marginRight: 90 }}
           mobileStyle={{ marginRight: 50 }}
-          onClick={() => setRoadmap('x-wallet')}
+          onClick={() => {
+            setTranslateX('-64px');
+            setRoadmapType('x-wallet');
+          }}
         >
           X-Wallet
           <br />
@@ -124,14 +132,14 @@ const Roadmap = () => {
       </FlexContainer>
       {width < theme.mediaQueries.mobilePixel && (
         <RoadmapTabs
-          showLabels={roadmap === 'kaddex'}
+          showLabels={roadmapType === 'kaddex'}
           selectedRoadmapId={selectedRoadmapId}
           setSelectedRoadmapId={setSelectedRoadmapId}
           translateX={translateX}
         />
       )}
 
-      {roadmap === 'kaddex' ? (
+      {roadmapType === 'kaddex' ? (
         <RoadmapContainer id="roadmaps-container" style={{ width }} mobileStyle={{ minHeight: 600 }} translateXRoadmap={translateXRoadmap}>
           <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2021.id}`}>
             {width >= theme.mediaQueries.mobilePixel ? <Roadmap2021 className="roadmap-desktop" /> : <MobileRoadmap2021 color={R_2021.color} />}
@@ -155,7 +163,7 @@ const Roadmap = () => {
       {width >= theme.mediaQueries.mobilePixel && (
         <RoadmapTabs
           style={{ marginTop: 20 }}
-          showLabels={roadmap === 'kaddex'}
+          showLabels={roadmapType === 'kaddex'}
           selectedRoadmapId={selectedRoadmapId}
           setSelectedRoadmapId={setSelectedRoadmapId}
           translateX={translateX}

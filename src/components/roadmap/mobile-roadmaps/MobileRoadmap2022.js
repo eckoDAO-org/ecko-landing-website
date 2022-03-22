@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 25%;
+    height: 75%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -97,38 +97,45 @@ const CONFIGURATION = {
   BRIDGED_ERC20: {
     position: 4,
     text: [{ text: 'Bridged ERC-20 Token Pairs' }],
-    isCompleted: false,
+    isCompleted: true,
   },
   SWAPPING_INTERFACE: {
     position: 5,
     text: [{ text: '3d Swapping Interface' }],
 
-    isCompleted: false,
+    isCompleted: true,
   },
   WEBSITE_V2: {
     position: 6,
     text: [{ text: 'Website v2' }],
-    isCompleted: false,
+    isCompleted: true,
   },
 
   KDX_VAULTING_PROGRAMME: {
     position: 7,
     text: [{ text: 'KDX Vaulting programme' }, { text: 'Available for early investors', fontSize: 10 }],
 
-    isCompleted: false,
+    isCompleted: true,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
-    position: 9,
-    text: [{ text: 'Kaddex v1 full launch' }],
-    isCompleted: false,
-    isMain: true,
-  },
   SINGLE_SIDED_LIQUIDITY: {
     position: 8,
     text: [{ text: 'Single Sided Liquidity' }],
-    isCompleted: false,
+    isCompleted: true,
   },
+  STAKING: {
+    position: 9,
+    text: [{ text: 'Staking' }],
+    isCompleted: true,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    position: 10,
+    text: [{ text: 'Kaddex v1 full launch' }],
+    isCompleted: true,
+    isMain: true,
+  },
+
   KDX_LIQUIDITY_MINING_PROGRAMME: {
     position: 11,
     text: [{ text: 'KDX Liquidity Mining Programme' }],
@@ -140,11 +147,7 @@ const CONFIGURATION = {
     text: [{ text: 'Lending & borrowing functionalities' }],
     isCompleted: false,
   },
-  X_WALLET_V2: {
-    position: 13,
-    text: [{ text: 'X-Wallet v2' }],
-    isCompleted: false,
-  },
+
   WHITEPAPER: {
     position: 14,
     text: [{ text: 'Whitepaper' }],

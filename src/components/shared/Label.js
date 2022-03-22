@@ -46,6 +46,9 @@ const STYText = styled.span`
     background-clip: text;
   }
 
+  &.flex {
+    display: flex;
+  }
   &.fit-content {
     width: fit-content;
   }

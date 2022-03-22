@@ -14,7 +14,7 @@ const TabsContainer = styled(FlexContainer)`
 const RoadmapTabs = ({ showLabels, translateX, selectedRoadmapId, setSelectedRoadmapId, style }) => {
   const [width] = useWindowSize();
   return (
-    <TabsContainer id="tabs-container" translateX={translateX} style={{ width, ...style }}>
+    <TabsContainer className={!showLabels && 'justify-ce'} id="tabs-container" translateX={translateX} style={{ width, ...style }}>
       {showLabels ? (
         <>
           <FlexContainer className="justify-fe" id={`tab-${R_2021.id}`}>
@@ -53,9 +53,15 @@ const RoadmapTabs = ({ showLabels, translateX, selectedRoadmapId, setSelectedRoa
           </FlexContainer>
         </>
       ) : (
-        <Label color="primary" fontFamily="syncopate" fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}>
-          2022
-        </Label>
+        <FlexContainer
+          className="justify-ce"
+          id={`tab-${R_2022.id}`}
+          style={{ minWidth: width <= theme.mediaQueries.mobilePixel ? width - 100 : width - 400, marginLeft: 80 }}
+        >
+          <Label color="primary" fontFamily="syncopate" fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}>
+            2022
+          </Label>
+        </FlexContainer>
       )}
     </TabsContainer>
   );
