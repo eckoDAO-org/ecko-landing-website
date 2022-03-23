@@ -103,7 +103,7 @@ const Roadmap = () => {
           style={{ marginLeft: 90 }}
           mobileStyle={{ marginLeft: 50 }}
           onClick={() => {
-            setTranslateXRoadmap(width + 90);
+            setTranslateXRoadmap(width + (width >= theme.mediaQueries.desktopPixel ? 90 : 0));
             setSelectedRoadmapId(R_2022.id);
             setRoadmapType('kaddex');
           }}
@@ -121,7 +121,7 @@ const Roadmap = () => {
           style={{ marginRight: 90 }}
           mobileStyle={{ marginRight: 50 }}
           onClick={() => {
-            setTranslateX('-64px');
+            setTranslateX((width >= theme.mediaQueries.desktopPixel ? 90 : 0) ? '-64px' : '-50px');
             setRoadmapType('x-wallet');
           }}
         >
