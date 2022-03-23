@@ -103,7 +103,7 @@ const Roadmap = () => {
           style={{ marginLeft: 90 }}
           mobileStyle={{ marginLeft: 50 }}
           onClick={() => {
-            setTranslateXRoadmap(width + 80);
+            setTranslateXRoadmap(width + 90);
             setSelectedRoadmapId(R_2022.id);
             setRoadmapType('kaddex');
           }}
