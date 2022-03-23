@@ -5,7 +5,7 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import Stripes from '../shared/Stripes';
 import ProofOfDexCard from './ProofOfDexCard';
-import { PROOF_DEX, PROOF_DEX_LENDING, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_SWAP } from '../../constants/proof-dex';
+import { PROOF_DEX, PROOF_DEX_FARM, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_SWAP } from '../../constants/proof-dex';
 
 const DESKTOP_PIXEL = 1300;
 
@@ -53,7 +53,7 @@ const ProofOfDexSection = () => {
                 ))}
               </FlexContainer>
               <FlexContainer gap={18}>
-                {[PROOF_DEX_STAKE, PROOF_DEX_LENDING].map((proofDex, i) => (
+                {[PROOF_DEX_STAKE, PROOF_DEX_FARM].map((proofDex, i) => (
                   <ProofOfDexCard key={i} proofDex={proofDex} />
                 ))}
               </FlexContainer>

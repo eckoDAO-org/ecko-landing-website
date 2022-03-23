@@ -1,4 +1,4 @@
-import { LendingIcon, PoolIcon, StakeIcon, SwapIcon } from '../assets';
+import { FarmIcon, PoolIcon, StakeIcon, SwapIcon } from '../assets';
 
 export const PROOF_DEX_SWAP = {
   key: 'SWAP',
@@ -19,16 +19,16 @@ export const PROOF_DEX_STAKE = {
   icon: <StakeIcon />,
   title: 'Stake',
   description: 'Stake KDX and earn 0.05% on all trades',
-  color: 'grey',
+  color: 'primary',
   className: 'disabled',
 };
-export const PROOF_DEX_LENDING = {
-  key: 'LENDING',
-  icon: <LendingIcon />,
-  title: 'Lend',
-  description: 'Leverage on our upcoming DeFi Tools',
-  color: 'grey',
+export const PROOF_DEX_FARM = {
+  key: 'FARM',
+  icon: <FarmIcon />,
+  title: 'Farm',
+  description: 'Access the KDX liquidity mining program',
+  color: 'white',
   className: 'disabled',
 };
 
-export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_LENDING];
+export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_FARM];

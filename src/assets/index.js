@@ -23,7 +23,7 @@ export { ReactComponent as PartnersIcon } from './images/partners/partners.svg';
 export { ReactComponent as SwapIcon } from './images/proof-dex/swap.svg';
 export { ReactComponent as PoolIcon } from './images/proof-dex/pool.svg';
 export { ReactComponent as StakeIcon } from './images/proof-dex/stake.svg';
-export { ReactComponent as LendingIcon } from './images/proof-dex/lending.svg';
+export { ReactComponent as FarmIcon } from './images/proof-dex/farm.svg';
 
 // FEATURES
 export { ReactComponent as DaoIcon } from './images/features/dao.svg';
