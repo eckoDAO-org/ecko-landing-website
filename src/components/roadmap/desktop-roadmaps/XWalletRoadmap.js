@@ -65,7 +65,7 @@ const CONFIGURATION = {
     text: {
       x: 1499,
       y: 446,
-      tspan: [{ x: -58.09, y: 0, text: '10,000 Downloads' }],
+      tspan: [{ x: -68.09, y: 0, text: '10,000 Downloads' }],
     },
 
     color: whiteGrey,
@@ -112,7 +112,7 @@ const CONFIGURATION = {
     text: {
       x: 500,
       y: 662,
-      tspan: [{ x: -68.47, y: 0, text: 'Swap Functionality' }],
+      tspan: [{ x: -95.47, y: 0, text: 'Swap Functionality' }],
     },
     color: whiteGrey,
   },
@@ -134,7 +134,7 @@ const CONFIGURATION = {
     text: {
       x: 950,
       y: 662,
-      tspan: [{ x: -0, y: 0, text: 'NFTs integration' }],
+      tspan: [{ x: -25, y: 0, text: 'NFTs integration' }],
     },
     color: whiteGrey,
   },
@@ -143,7 +143,7 @@ const CONFIGURATION = {
     text: {
       x: 1270,
       y: 662,
-      tspan: [{ x: -60.61, y: 0, text: 'X-Wallet v2' }],
+      tspan: [{ x: -70.61, y: 0, text: 'X-Wallet v2' }],
     },
 
     color: whiteGrey,
