@@ -132,7 +132,7 @@ const Label = ({
     <STYText
       id={id}
       gradient={gradient}
-      className={getClassName()}
+      className={`${fontFamily === 'syncopate' ? 'uppercase' : ''} ${getClassName()}`}
       color={withShade ? `${getColor(color)}99` : getColor(color)}
       fontSize={fontSize}
       size={size}
