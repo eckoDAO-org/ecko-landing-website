@@ -1,56 +1,47 @@
-import { ArchitechLogo, FluxLogo, GenesisBlockLogo, RoboswapLogo, SpotLogo, TokensoftLogo, UfoGamingLogo, ZelcoreLogo } from '../assets';
+import { ArchitechLogo, FluxLogo, GenesisBlockLogo, RoboswapLogo, TokensoftLogo, UfoGamingLogo, ZelcoreLogo } from '../assets';
 
 export const PARTNER_ARCHITECH = {
   icon: <ArchitechLogo />,
   title: 'Architech',
-  description:
-    'Architech is leading the development and design of the GUI, providing a user-friendly and absolutely innovative interface within the DEXes universe.',
+  description: 'Lead supporter for Kaddex UI/UX innovations.',
   color: 'pink',
 };
 export const PARTNER_FLUX = {
   icon: <FluxLogo />,
   title: 'Flux',
-  description: 'The Flux infrastructure will empower Kaddex with all the benefits of being Web 3.0 ready - decentralized, scalable, and resilient.',
-  color: 'pink',
+  description: 'The Flux infrastructure will empower Kaddex to a true web 3.0 protocol.',
+  color: 'yellow',
 };
 export const PARTNER_GENESIS_BLOCK = {
   icon: <GenesisBlockLogo />,
   title: 'Genesis Block',
   description: 'Strategic advisory and engineering.',
-  color: 'yellow',
+  color: 'primary',
 };
 export const PARTNER_ROBOSWAP = {
   icon: <RoboswapLogo />,
   title: 'Roboswap',
-  description: 'Roboswap is building the Software Development Kit for the Kaddex swap contract.',
+  description: 'Official builder of the X-Swap Software Development Kit',
   color: 'primary',
 };
-export const PARTNER_SPOT = {
-  icon: <SpotLogo />,
-  title: 'Spot',
-  description: 'Spot is engaged in the development of the Kaddex DAO.',
-  color: 'yellow',
-};
+
 export const PARTNER_TOKENSOFT = {
   icon: <TokensoftLogo />,
   title: 'Tokensoft',
-  description:
-    'wBTC and wETH will be available soon on Kaddex thanks to Tokensoft Inc. This will support Kaddex in the upcoming KDX pre-launch sale.',
+  description: 'Pre-launch sale and wrapped asset strategic partner.',
   color: 'primary',
 };
 export const PARTNER_UFO_GAMING = {
   icon: <UfoGamingLogo />,
   title: 'UFO Gaming',
-  description:
-    'Kaddex will assist in the development of Fractal (an UFO Gaming in-house Cross-Chain DEX and AMM). This hub will showcase trending Metaverse related items and assets.',
+  description: 'Stay tuned, anything can happen at any time with UFO Gaming.',
   color: 'yellow',
 };
 export const PARTNER_ZELCORE = {
   icon: <ZelcoreLogo />,
   title: 'Zelcore',
-  description:
-    'Zelcore will help bridge Kadena network tokens with a non-custodial multi-asset platform. It will also connect directly to Kaddex dAPP to provide a user-friendly experience',
-  color: 'primary',
+  description: 'Unique direct access to Kaddex and Kadena bridged tokens.',
+  color: 'yellow',
 };
 
 export const PARTNERS = [
@@ -60,6 +51,5 @@ export const PARTNERS = [
   PARTNER_FLUX,
   PARTNER_GENESIS_BLOCK,
   PARTNER_TOKENSOFT,
-  PARTNER_SPOT,
   PARTNER_ROBOSWAP,
 ];
