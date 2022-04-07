@@ -291,7 +291,7 @@ const FRANCESCO_MELPIGNANO = {
   id: 210,
   firstname: 'Francesco',
   lastname: 'Melpignano',
-  role: CEO_KDA_ECO.role,
+  role: `${ROLE_ADVISOR.role} - ${CEO_KDA_ECO.role}`,
   photo: francescoMelpignanoPhoto,
   disabled: true,
 };
@@ -299,7 +299,7 @@ const EMILY_PILLMORE = {
   id: 220,
   firstname: 'Emily',
   lastname: 'Pillmore',
-  role: SMART_CONTRACT_EXPERT.role,
+  role: `${ROLE_ADVISOR.role} - ${SMART_CONTRACT_EXPERT.role}`,
   photo: emilyPillmorePhoto,
   disabled: true,
 };

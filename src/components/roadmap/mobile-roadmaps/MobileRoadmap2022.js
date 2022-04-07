@@ -91,7 +91,7 @@ const CONFIGURATION = {
   },
   PUBLIC_SALE: {
     position: 3,
-    text: [{ text: 'Public Sale' }],
+    text: [{ text: 'Public Sale' }, { text: 'Sold out', fontSize: 10 }],
     isCompleted: true,
   },
   BRIDGED_ERC20: {
@@ -138,7 +138,7 @@ const CONFIGURATION = {
 
   KDX_LIQUIDITY_MINING_PROGRAMME: {
     position: 11,
-    text: [{ text: 'KDX Liquidity Mining Programme' }],
+    text: [{ text: 'KDX Liquidity Mining 2.0' }],
     isCompleted: false,
   },
 

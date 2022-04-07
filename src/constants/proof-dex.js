@@ -26,7 +26,7 @@ export const PROOF_DEX_FARM = {
   key: 'FARM',
   icon: <FarmIcon />,
   title: 'Farm',
-  description: 'Access the KDX liquidity mining program',
+  description: 'Access KDX liquidity mining 2.0',
   color: 'white',
   className: 'disabled',
 };

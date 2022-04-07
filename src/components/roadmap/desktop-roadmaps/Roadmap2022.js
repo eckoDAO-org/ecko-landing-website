@@ -42,7 +42,10 @@ const CONFIGURATION = {
     text: {
       x: 1200,
       y: 255,
-      tspan: [{ x: 0, y: 0, text: 'Public Sale' }],
+      tspan: [
+        { x: 0, y: 0, text: 'Public Sale' },
+        { x: 30, y: 25, text: 'Sold out', fontSize: 13 },
+      ],
     },
     color: theme.colors.primary,
   },
@@ -137,7 +140,7 @@ const CONFIGURATION = {
       y: 662,
       tspan: [
         { x: -68.47, y: 0, text: 'KDX Liquidity' },
-        { x: -84.04, y: 25, text: 'Mining Programme' },
+        { x: -54.47, y: 25, text: 'Mining 2.0' },
       ],
     },
     color: whiteGrey,
@@ -150,7 +153,7 @@ const CONFIGURATION = {
       y: 662,
       tspan: [
         { x: -39.61, y: 0, text: 'Lending & borrowing' },
-        { x: -10.85, y: 25, text: 'functionalities' },
+        { x: -14.85, y: 25, text: 'functionalities' },
       ],
     },
     color: whiteGrey,
