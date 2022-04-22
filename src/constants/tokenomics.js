@@ -11,14 +11,14 @@ export const TOKENOMICS_TEAM = {
   gradientColors: ['#08C6E2', '#1FBADD', '#549CCF'],
 };
 export const TOKENOMICS_BURN = {
-  icon: '8.8%',
+  icon: '9.6%',
   title: 'BURN',
   description: 'A large portion of the overall token supply has been burnt to increase the overall KDX scarcity.',
   gradientColors: ['#549CCF', '#718DC8', '#8C7DC1'],
 };
 
 export const TOKENOMICS_COMMUNITY_SALES = {
-  icon: '21.2%',
+  icon: '22%',
   title: 'COMMUNITY SALES',
   description: 'The token sales will finance Kaddex operations, while offering early access to KDX.',
   gradientColors: ['#8C7DC1', '#E54DAA', '#F9588F'],
