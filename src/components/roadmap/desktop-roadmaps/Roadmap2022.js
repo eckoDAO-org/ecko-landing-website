@@ -247,7 +247,7 @@ const Roadmap2022 = ({ className }) => {
           />
 
           {/* line */}
-          <line id="Line_585" dataName="Line 585" x2="140" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+          <line id="Line_585" dataName="Line 585" x2="400" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];

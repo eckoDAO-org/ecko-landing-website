@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 75%;
+    height: 82%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
