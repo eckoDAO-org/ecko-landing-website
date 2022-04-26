@@ -143,7 +143,7 @@ const CONFIGURATION = {
         { x: -54.47, y: 25, text: 'Mining 2.0' },
       ],
     },
-    color: whiteGrey,
+    color: theme.colors.primary,
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {

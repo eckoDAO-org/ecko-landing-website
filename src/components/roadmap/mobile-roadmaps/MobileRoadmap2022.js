@@ -139,7 +139,7 @@ const CONFIGURATION = {
   KDX_LIQUIDITY_MINING_PROGRAMME: {
     position: 11,
     text: [{ text: 'KDX Liquidity Mining 2.0' }],
-    isCompleted: false,
+    isCompleted: true,
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {

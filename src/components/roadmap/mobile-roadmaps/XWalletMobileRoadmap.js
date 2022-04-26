@@ -96,7 +96,7 @@ const CONFIGURATION = {
   _10k_DOWNLOADS: {
     position: 5,
     text: [{ text: '10,000 Downloads' }],
-    isCompleted: false,
+    isCompleted: true,
   },
   FIAT_ON_RAMP: {
     position: 6,
