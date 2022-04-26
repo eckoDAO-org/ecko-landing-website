@@ -66,7 +66,8 @@ const colors = [
   ['#ECBB89', '#F1C587'],
   ['#F1C587', '#F7CE85'],
   ['#F7CE85', '#F7EA99'],
-  ['#F7EA99', '#F7EF99'],
+  ['#F7EA99', '#F8EF99'],
+  ['#F8EF99', '#F9FE99'],
 ];
 
 export default KaddexTeamSection;

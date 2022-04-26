@@ -20,11 +20,8 @@ import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg'
 import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jpg';
 import francescoMelpignanoPhoto from '../assets/images/kaddex-team/francesco-melpignano.jpg';
 import emilyPillmorePhoto from '../assets/images/kaddex-team/emily-pillmore.jpg';
+import franciscoMirandaPhoto from '../assets/images/kaddex-team/francisco-miranda.jpg';
 
-const ROLE_CFO = {
-  short: 'CFO',
-  role: 'Chief Financial Officer',
-};
 const ROLE_CPO = {
   short: 'CPO',
   role: 'Chief Product Officer',
@@ -70,7 +67,7 @@ const DANIELE_DE_VECCHIS = {
   id: 0,
   firstname: 'Daniele',
   lastname: 'De Vecchis',
-  role: ROLE_CFO.role,
+  role: 'Mandrake',
   description:
     'Hi, I am Daniele nice to meet you all! Currently in charge of Tokenomics and many other aspects. I have a financial background with two master’s degrees: one in Business Administration from the University of Rome, Tor Vergata, and one in Economics and Finance from SDA Bocconi. I spent the initial years of my career working for one of the major companies in Italy, helping corporations expanding their activities and carrying on new investments. My main interests have always been expanding over a wide range of topics: from crypto currencies to DeFi, from liquidity mining and crop rotation to traditional finance and asset management. My DeFi adventure starts in 2018, I wrote an academic paper titled: “From Bitcoin to Augur: the first decentralized prediction market platform.” Lastly, I am very passionate about arts in every shape and form.',
   linkedin: 'https://www.linkedin.com/in/daniele-de-vecchis-799370148',
@@ -304,6 +301,16 @@ const EMILY_PILLMORE = {
   disabled: true,
 };
 
+const FRANCISCO_MIRANDA = {
+  id: 41,
+  firstname: 'Francisco',
+  lastname: 'Miranda',
+  role: ROLE_ENGINEERING.role,
+  photo: franciscoMirandaPhoto,
+  description:
+    'I am Francisco, a Data Science and Statistics student from São Paulo - Brazil. I’d dare to describe myself as a data lover, because I’m passionate not only with learning problems, but also with learning from problems, enjoying the mindblowing insights data has to offer for those willing to dive into it. In my scuba kit you’re likely to find statistical and machine learning models, with some flavours of computacional simulation and data visualization techniques. As an intern at the smart contracts team, I expect to learn a lot and also collaborate with the ongoing web revolution at Kaddex, bringing data into innovative solutions to improve community’s experience.',
+};
+
 export const KADDEX_TEAM_MEMBERS = [
   DANIELE_DE_VECCHIS,
   NICOLAS_RAMSRUD,
@@ -327,4 +334,5 @@ export const KADDEX_TEAM_MEMBERS = [
   ARIEL_SERRANONI,
   FRANCESCO_MELPIGNANO,
   EMILY_PILLMORE,
+  FRANCISCO_MIRANDA,
 ];
