@@ -111,6 +111,7 @@ const Label = ({
   mobileStyle,
   onClick,
   withShade,
+  dangerouslySetInnerHTML,
 }) => {
   const [width] = useWindowSize();
 
@@ -131,6 +132,7 @@ const Label = ({
   return (
     <STYText
       id={id}
+      dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       gradient={gradient}
       className={`${fontFamily === 'syncopate' ? 'uppercase' : ''} ${getClassName()}`}
       color={withShade ? `${getColor(color)}99` : getColor(color)}
