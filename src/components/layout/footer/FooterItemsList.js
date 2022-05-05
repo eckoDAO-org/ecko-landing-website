@@ -17,7 +17,7 @@ const FooterItemsList = ({ title, items, color, children }) => {
               </Label>
             </a>
           ) : (
-            <Label key={i} color={color} fontSize={13}>
+            <Label key={i} color={color} withShade={item?.disabled} fontSize={13}>
               {item.text}
             </Label>
           )

@@ -69,9 +69,16 @@ export const FOOTER_LEARN = {
       target: '_blank',
     },
     {
+      text: 'Liquidty Mining 2.0',
+      href: '/liquidity mining 2.0.pdf',
+      target: '_blank',
+    },
+    {
+      disabled: true,
       text: 'White Paper',
     },
     {
+      disabled: true,
       text: 'FAQ',
     },
   ],
