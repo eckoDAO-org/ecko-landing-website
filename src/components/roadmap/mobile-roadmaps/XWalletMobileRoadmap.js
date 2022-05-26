@@ -14,7 +14,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 37%;
+    height: 55%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -101,24 +101,23 @@ const CONFIGURATION = {
   FIAT_ON_RAMP: {
     position: 6,
     text: [{ text: 'Fiat on Ramp' }],
-    isCompleted: false,
-  },
-
-  FIAT_OFF_RAMP: {
-    position: 7,
-    text: [{ text: 'Fiat off Ramp' }],
-
-    isCompleted: false,
+    isCompleted: true,
   },
 
   MOBILE_APP: {
-    position: 8,
+    position: 7,
     text: [{ text: 'Mobile app' }],
-    isCompleted: false,
+    isCompleted: true,
   },
   BAND_REFRESH: {
-    position: 9,
+    position: 8,
     text: [{ text: 'Brand Refresh' }],
+    isCompleted: true,
+  },
+  FIAT_OFF_RAMP: {
+    position: 9,
+    text: [{ text: 'Fiat off Ramp' }],
+
     isCompleted: false,
   },
   SWAP_FUNTIONALITY: {

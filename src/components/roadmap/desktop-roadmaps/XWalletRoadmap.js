@@ -77,34 +77,41 @@ const CONFIGURATION = {
       y: 446,
       tspan: [{ x: 0, y: 0, text: 'Fiat on Ramp' }],
     },
-    color: whiteGrey,
+    color: theme.colors.primary,
   },
-  FIAT_OFF_RAMP: {
+
+  BAND_REFRESH: {
     circle: { x: 990, y: 381 },
+
     text: {
       x: 1000,
       y: 446,
-      tspan: [{ x: -63.28, y: 0, text: 'Fiat off Ramp' }],
-    },
 
-    color: whiteGrey,
+      tspan: [{ x: -63.28, y: 0, text: 'Brand Refresh' }],
+    },
+    color: theme.colors.primary,
   },
+
   MOBILE_APP: {
+    circle: { x: 740, y: 381 },
+
+    text: {
+      x: 770,
+      y: 446,
+
+      tspan: [{ x: -68.28, y: 0, text: 'Mobile app' }],
+    },
+    color: theme.colors.primary,
+  },
+
+  FIAT_OFF_RAMP: {
     circle: { x: 490, y: 381 },
     text: {
       x: 500,
       y: 446,
-      tspan: [{ x: -47.71, y: 0, text: 'Mobile app' }],
+      tspan: [{ x: -47.71, y: 0, text: 'Fiat off Ramp' }],
     },
-    color: whiteGrey,
-  },
-  BAND_REFRESH: {
-    circle: { x: 740, y: 381 },
-    text: {
-      x: 750,
-      y: 446,
-      tspan: [{ x: -68.28, y: 0, text: 'Brand Refresh' }],
-    },
+
     color: whiteGrey,
   },
   SWAP_FUNTIONALITY: {
@@ -238,15 +245,7 @@ const XWalletRoadmap = ({ className }) => {
 
           {/* blue line */}
 
-          <line
-            id="Line_585"
-            dataName="Line 585"
-            x2="100"
-            transform="translate(1490 397)"
-            fill="none"
-            stroke={theme.colors.primary}
-            strokeWidth="4"
-          />
+          <line id="Line_585" dataName="Line 585" x2="820" transform="translate(770 397)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
         </g>
 
         <g id="Group_68779" data-name="Group 68779">
