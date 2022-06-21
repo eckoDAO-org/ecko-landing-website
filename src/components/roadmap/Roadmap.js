@@ -108,25 +108,6 @@ const Roadmap = () => {
             setRoadmapType('kaddex');
           }}
         >
-          Kaddex
-          <br />
-          Roadmap
-        </Label>
-
-        <Label
-          size="big"
-          color="white"
-          withShade={roadmapType !== 'x-wallet'}
-          fontFamily="syncopate"
-          style={{ marginRight: 90 }}
-          mobileStyle={{ marginRight: 50 }}
-          onClick={() => {
-            setTranslateX((width >= theme.mediaQueries.desktopPixel ? 90 : 0) ? '-64px' : '-50px');
-            setRoadmapType('x-wallet');
-          }}
-        >
-          X-Wallet
-          <br />
           Roadmap
         </Label>
       </FlexContainer>

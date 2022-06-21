@@ -44,7 +44,7 @@ const CONFIGURATION = {
       y: 255,
       tspan: [
         { x: 0, y: 0, text: 'Public Sale' },
-        { x: 30, y: 25, text: 'Sold out', fontSize: 13 },
+        { x: 30, y: 25, fontSize: 13 },
       ],
     },
     color: theme.colors.primary,
@@ -116,27 +116,18 @@ const CONFIGURATION = {
     text: {
       x: 500,
       y: 446,
-      tspan: [{ x: -29.71, y: 0, text: 'Staking' }],
+      tspan: [
+        { x: -50, y: 0, text: 'KDX Staking ' },
+        { x: -17.71, y: 25, text: 'Tool' },
+      ],
     },
     color: theme.colors.primary,
   },
-  KADDEX_V1_FULL_LAUNCH: {
+
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
     circle: { x: 490, y: 596 },
     text: {
       x: 500,
-      y: 662,
-      tspan: [
-        { x: -47.71, y: 0, text: 'Kaddex v1' },
-        { x: -58.09, y: 25, text: 'full launch' },
-      ],
-    },
-    color: '#FA41A5',
-  },
-
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
-    circle: { x: 740, y: 596 },
-    text: {
-      x: 756,
       y: 662,
       tspan: [
         { x: -68.47, y: 0, text: 'KDX Liquidity' },
@@ -144,6 +135,19 @@ const CONFIGURATION = {
       ],
     },
     color: theme.colors.primary,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    circle: { x: 740, y: 596 },
+    text: {
+      x: 756,
+      y: 662,
+      tspan: [
+        { x: -47.71, y: 0, text: 'Kaddex v1' },
+        { x: -58.09, y: 25, text: 'full launch' },
+      ],
+    },
+    color: '#FA41A5',
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {
@@ -172,8 +176,8 @@ const CONFIGURATION = {
 };
 
 const FLAG = {
-  flag: 'translate(504 566)',
-  shadow: 'translate(484 590)',
+  flag: 'translate(753 566)',
+  shadow: 'translate(735 590)',
 };
 
 const Roadmap2022 = ({ className }) => {

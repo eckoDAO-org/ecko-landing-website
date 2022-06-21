@@ -91,7 +91,7 @@ const CONFIGURATION = {
   },
   PUBLIC_SALE: {
     position: 3,
-    text: [{ text: 'Public Sale' }, { text: 'Sold out', fontSize: 10 }],
+    text: [{ text: 'Public Sale' }],
     isCompleted: true,
   },
   BRIDGED_ERC20: {
@@ -125,21 +125,21 @@ const CONFIGURATION = {
   },
   STAKING: {
     position: 9,
-    text: [{ text: 'Staking' }],
+    text: [{ text: 'KDX Staking Tool' }],
+    isCompleted: true,
+  },
+
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    position: 10,
+    text: [{ text: 'KDX Liquidity Mining 2.0' }],
     isCompleted: true,
   },
 
   KADDEX_V1_FULL_LAUNCH: {
-    position: 10,
+    position: 11,
     text: [{ text: 'Kaddex v1 full launch' }],
     isCompleted: true,
     isMain: true,
-  },
-
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
-    position: 11,
-    text: [{ text: 'KDX Liquidity Mining 2.0' }],
-    isCompleted: true,
   },
 
   LENDING_AND_BORROWING_FUNCTIONALITIES: {

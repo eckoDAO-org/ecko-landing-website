@@ -14,8 +14,6 @@ import kateOztuncPhoto from '../assets/images/kaddex-team/kate-oztunc.jpg';
 import grantGerberPhoto from '../assets/images/kaddex-team/grant-gerber.jpg';
 import donDAgostinoPhoto from '../assets/images/kaddex-team/don-d-agostino.jpg';
 import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.jpg';
-import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
-import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
 import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jpg';
 import emilyPillmorePhoto from '../assets/images/kaddex-team/emily-pillmore.jpg';
@@ -201,7 +199,7 @@ const FELICE_ANGELINI = {
   lastname: 'Angelini',
   role: ROLE_ENGINEERING.role,
   description:
-    'My name is Felice. I am a computer science enthusiast and have been working as a software engineer for Kaddex since project launch. I am extremely passionate about the crypto world and DeFi products, and strongly believe Kaddex will be a huge success along with other early developments built on Kadena. I am a creative person, curious and dedicated to my work, passionate about innovative technologies and an avid reader. Pasta, racing motorbikes and girls is my trilemma.',
+    'My name is Felice. I am a computer science enthusiast and have been working as a software engineer for Kaddex since project launch. I am extremely passionate about the crypto world and DeFi products, and strongly believe Kaddex will be a huge success along with other early developments built on Kadena. I am a creative person, curious and dedicated to my work, passionate about innovative technologies and an avid reader. Rock Music, racing motorbikes and girls is my trilemma.',
   photo: feliceAngeliniPhoto,
   linkedin: 'https://www.linkedin.com/in/felice-angelini-16a9401a3/',
 };
@@ -249,27 +247,6 @@ const AGOSTINO_NAPPO = {
   linkedin: 'https://www.linkedin.com/in/agostino-nappo-a67b40182/',
 };
 
-const CARLES_ALONSO = {
-  id: 190,
-  firstname: 'Carles',
-  lastname: 'Alonso',
-  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
-  photo: carlesAlonsoPhoto,
-  description:
-    'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
-  linkedin: 'https://www.linkedin.com/in/carlos-alonso-torras-2ab95270/',
-};
-
-const BRANDON_CHONG = {
-  id: 200,
-  firstname: 'Brandon',
-  lastname: 'Chong',
-  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
-  photo: brandonChongPhoto,
-  description:
-    'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
-  linkedin: 'https://www.linkedin.com/in/brandonwchong/',
-};
 const ARIEL_SERRANONI = {
   id: 41,
   firstname: 'Ariel',
@@ -318,8 +295,6 @@ export const KADDEX_TEAM_MEMBERS = [
   AGOSTINO_NAPPO,
   GUSTAVO_SPELZON,
   KATE_OZTUNC,
-  CARLES_ALONSO,
-  BRANDON_CHONG,
   ARIEL_SERRANONI,
   EMILY_PILLMORE,
   FRANCISCO_MIRANDA,
