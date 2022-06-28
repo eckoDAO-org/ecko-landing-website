@@ -9,7 +9,6 @@ import guglielmoSportelliPhoto from '../assets/images/kaddex-team/guglielmo-spor
 import feliceAngeliniPhoto from '../assets/images/kaddex-team/felice-angelini.jpg';
 import antonioSemeraroPhoto from '../assets/images/kaddex-team/antonio-semeraro.jpg';
 import gustavoSpelzonPhoto from '../assets/images/kaddex-team/gustavo-spelzon.jpg';
-import agostinoNappoPhoto from '../assets/images/kaddex-team/agostino-nappo.jpg';
 import kateOztuncPhoto from '../assets/images/kaddex-team/kate-oztunc.jpg';
 import grantGerberPhoto from '../assets/images/kaddex-team/grant-gerber.jpg';
 import donDAgostinoPhoto from '../assets/images/kaddex-team/don-d-agostino.jpg';
@@ -236,17 +235,6 @@ const KATE_OZTUNC = {
   twitter: 'https://twitter.com/typingkate',
 };
 
-const AGOSTINO_NAPPO = {
-  id: 100,
-  firstname: 'Agostino',
-  lastname: 'Nappo',
-  role: ROLE_ENGINEERING.role,
-  description:
-    "Hi everyone! I'm Agostino, I have a bachelor degree in computer science and I'm a Kaddex developer. When i discovered this project, I knew I found the place to be able to develop my skill set at its maximum capacity and I viewed my entry into Kaddex as the perfect combination of my passions since childhood, cutting edge technologies, crypto and computer science. Prior to joining the Kaddex team in November 2021, I spent 3 years as a front-end developer with NodeJS and ReactJS, where I built up a comprehensive proficiency in JavaScript. I apply my attention to detail and focus to every project, and view each one as a personal challenge and an opportunity to learn and to hone my skillset.",
-  photo: agostinoNappoPhoto,
-  linkedin: 'https://www.linkedin.com/in/agostino-nappo-a67b40182/',
-};
-
 const ARIEL_SERRANONI = {
   id: 41,
   firstname: 'Ariel',
@@ -292,7 +280,6 @@ export const KADDEX_TEAM_MEMBERS = [
   GUGLIELMO_SPORTELLI,
   FELICE_ANGELINI,
   ANTONIO_SEMERARO,
-  AGOSTINO_NAPPO,
   GUSTAVO_SPELZON,
   KATE_OZTUNC,
   ARIEL_SERRANONI,
