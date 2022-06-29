@@ -6,6 +6,7 @@ import AboutList from '../components/layout/footer/AboutList';
 import LearnList from '../components/layout/footer/LearnList';
 import SupportList from '../components/layout/footer/SupportList';
 import { ITEM_LINKS } from '../constants/itemLinks';
+import { ROUTE_PRIVACY_POLICY } from '../router/routes';
 import './MainContainer.css';
 
 const Container = styled.div`
@@ -166,7 +167,18 @@ const FooterSection = () => {
           />
           <BottomContainer>
             <KaddexLogo />
-            <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
+            <PrivacyElement
+              style={{ cursor: 'pointer' }}
+              onClick={() =>
+                window.open(
+                  ROUTE_PRIVACY_POLICY,
+                  '_blank',
+                  'noopener,noreferrer'
+                )
+              }
+            >
+              ©2022, Privacy Policy
+            </PrivacyElement>
           </BottomContainer>
         </FooterBottomContainer>
       </FooterContainer>
