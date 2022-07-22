@@ -1,5 +1,36 @@
-<svg width="113" height="100" viewBox="0 0 113 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M92.4717 87.5117H36.5342V99.4065H113" fill="#FFA900"/>
-<path d="M49.2783 0.205496L63.7986 0L63.6813 0.234634L113 99.406L92.5455 87.2618L56.4841 14.7068L49.2783 0.205496Z" fill="#39FFFC"/>
-<path d="M63.6047 0.234703L63.7218 0H49.1266L49.2273 0.205557L0 99.406H14.3897L56.4198 14.7198L63.6047 0.234703Z" fill="#ED1CB5"/>
+<svg id="Group_76165" data-name="Group 76165" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.077" height="229.887" viewBox="0 0 257.077 229.887">
+  <defs>
+    <linearGradient id="linear-gradient-tokenomics-logo" x1="0.551" y1="0.499" x2="1.089" y2="0.485" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="orange"/>
+      <stop offset="1" stop-color="#076c95"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-tokenomics-logo-2" x1="-0.331" y1="0.264" x2="1.087" y2="0.669" gradientUnits="objectBoundingBox">
+      <stop offset="0.14" stop-color="#bc0050"/>
+      <stop offset="0.19" stop-color="#a12569"/>
+      <stop offset="0.28" stop-color="#7b588b"/>
+      <stop offset="0.36" stop-color="#5a84aa"/>
+      <stop offset="0.45" stop-color="#3faac3"/>
+      <stop offset="0.55" stop-color="#28c9d8"/>
+      <stop offset="0.64" stop-color="#16e1e9"/>
+      <stop offset="0.75" stop-color="#0af2f4"/>
+      <stop offset="0.86" stop-color="#02fcfb"/>
+      <stop offset="1" stop-color="#00fffd"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_68654" data-name="Group 68654" transform="translate(82.139 201.596)">
+    <g id="Group_68653" data-name="Group 68653" transform="translate(0)">
+      <path id="Path_41688" data-name="Path 41688" d="M552.914,676.566A4.607,4.607,0,0,0,548.872,674H427.4a4.608,4.608,0,0,0-4.607,4.608V700.27a2.02,2.02,0,0,0,2.02,2.02H565.726Z" transform="translate(-422.794 -674)" fill="url(#linear-gradient-tokenomics-logo)"/>
+    </g>
+  </g>
+  <g id="Group_68657" data-name="Group 68657" transform="translate(128.436)">
+    <g id="Group_68656" data-name="Group 68656" transform="translate(0)">
+      <path id="Path_41689" data-name="Path 41689" d="M548.7,239,660.759,465.917a2.021,2.021,0,0,1-1.758,2.85H628.831L540.521,291.178" transform="translate(-532.296 -239)" fill="#00fffd"/>
+      <path id="Path_67147" data-name="Path 67147" d="M538.945,239l33.364,67.394-16.975,34.071L523,275.355a4.634,4.634,0,0,1,0-4.041Z" transform="translate(-522.538 -239)" fill="url(#linear-gradient-tokenomics-logo-2)"/>
+    </g>
+  </g>
+  <g id="Group_68660" data-name="Group 68660" transform="translate(0)">
+    <g id="Group_68659" data-name="Group 68659" transform="translate(0)">
+      <path id="Path_41690" data-name="Path 41690" d="M356.04,241.577a4.608,4.608,0,0,1,4.042-2.546h30.494l-.263.525L373.641,273,276.763,467.463A2.022,2.022,0,0,1,275,468.554H250.31a4.608,4.608,0,0,1-4.042-6.649Z" transform="translate(-245.791 -239.03)" fill="#ff00b9"/>
+    </g>
+  </g>
 </svg>

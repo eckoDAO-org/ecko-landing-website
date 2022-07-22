@@ -1,3 +1,5 @@
+import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from '../router/routes';
+
 export const FOOTER_ABOUT = {
   title: 'ABOUT',
   color: 'yellow',
@@ -38,13 +40,7 @@ export const FOOTER_SUPPORT = {
   items: [
     {
       text: 'Documentation',
-    },
-    {
-      text: 'Auditing',
-    },
-    {
-      text: 'GitBook',
-      href: 'https://kaddexofficial.gitbook.io/kdx-intro/',
+      href: 'https://docs.kaddex.com/',
       target: '_blank',
     },
     {
@@ -74,12 +70,14 @@ export const FOOTER_LEARN = {
       target: '_blank',
     },
     {
-      disabled: true,
-      text: 'White Paper',
+      text: 'Privacy Policy',
+      href: ROUTE_PRIVACY_POLICY,
+      target: '_blank',
     },
     {
-      disabled: true,
-      text: 'FAQ',
+      text: 'Terms of Use',
+      href: ROUTE_TERMS_OF_USE,
+      target: '_blank',
     },
   ],
 };

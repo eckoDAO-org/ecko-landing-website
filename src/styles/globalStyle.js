@@ -94,4 +94,8 @@ export default createGlobalStyle`
         display: none !important;
       }
     }
+
+    .pointer {
+      cursor: pointer;
+    }
 `;

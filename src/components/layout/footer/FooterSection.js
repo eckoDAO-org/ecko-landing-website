@@ -9,6 +9,7 @@ import Socials from './Socials';
 import Copyrights from './Copyrights';
 import NavigationItems from './NavigationItems';
 import MailchimpFormContainer from './MailchimpFormContainer';
+import { NccLogo } from '../../../assets';
 
 const FooterSection = () => {
   const [width] = useWindowSize();
@@ -39,6 +40,20 @@ const FooterSection = () => {
       {width >= theme.mediaQueries.desktopPixel && (
         <FlexContainer className="column" gap={16}>
           <Socials /> <MailchimpFormContainer />
+          <div
+            style={{
+              height: '100%',
+              display: 'flex',
+              alignItems: 'self-end',
+            }}
+          >
+            <NccLogo
+              className="pointer"
+              onClick={() => {
+                window.open(`https://drive.google.com/file/d/1shHQ5ssADcJE4DOAOH2YXxnn9EoMtBJu/view?usp=sharing`, '_blank', 'noopener,noreferrer');
+              }}
+            />
+          </div>
         </FlexContainer>
       )}
 
@@ -46,6 +61,13 @@ const FooterSection = () => {
         <FlexContainer className="column align-ce" style={{ marginTop: 70 }} gap={20}>
           <Socials />
           <MailchimpFormContainer />
+          <NccLogo
+            className="pointer"
+            style={{ marginTop: 14 }}
+            onClick={() => {
+              window.open(`https://drive.google.com/file/d/1shHQ5ssADcJE4DOAOH2YXxnn9EoMtBJu/view?usp=sharing`, '_blank', 'noopener,noreferrer');
+            }}
+          />
           <Copyrights />
         </FlexContainer>
       )}

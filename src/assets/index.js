@@ -9,6 +9,7 @@ export { ReactComponent as ArrowDownIcon } from './images/layout/arrow-down.svg'
 export { ReactComponent as ArrowRightIcon } from './images/layout/arrow-right.svg';
 export { ReactComponent as PlayIcon } from './images/layout/play-icon.svg';
 export { ReactComponent as GoTopIcon } from './images/layout/go-top.svg';
+export { ReactComponent as NccLogo } from './images/layout/ncc-logo.svg';
 //PARTNER
 export { ReactComponent as ArchitechLogo } from './images/partners/architech.svg';
 export { ReactComponent as FluxLogo } from './images/partners/flux.svg';
