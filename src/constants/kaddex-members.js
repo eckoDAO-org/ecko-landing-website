@@ -19,6 +19,10 @@ import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jp
 import emilyPillmorePhoto from '../assets/images/kaddex-team/emily-pillmore.jpg';
 import franciscoMirandaPhoto from '../assets/images/kaddex-team/francisco-miranda.jpg';
 
+const ROLE_CEO = {
+  short: 'CEO',
+  role: ' Chief Executive Officer',
+};
 const ROLE_CPO = {
   short: 'CPO',
   role: 'Chief Product Officer',
@@ -77,9 +81,9 @@ const NICOLAS_RAMSRUD = {
   id: 10,
   firstname: 'Nicolas',
   lastname: 'Ramsrud',
-  role: ROLE_CPO.role,
+  role: ROLE_CEO.role,
   description:
-    "Hey everyone! I'm Nicolas, the CPO here at Kaddex. I’m here to help revolutionize the DeFi ecosystem by bringing this simple-to-use, gas-free, lightning fast, PoW-backed decentralized exchange to reality. I am a physicist by training with a love for cryptography and blockchain technologies. The majority of my career has been spent leading engineering teams that build hardware and software business systems for use in aerospace manufacturing. For the past 5 years, I have been closely following the cryptocurrency ecosystem, studying the technology as it evolved. Since 2017, this passion ultimately resulted in working with several blockchain projects as a technical writer and business development consultant.",
+    "Hey everyone! I'm Nicolas, the CEO here at Kaddex. I’m here to help revolutionize the DeFi ecosystem by bringing this simple-to-use, gas-free, lightning fast, PoW-backed decentralized exchange to reality. I am a physicist by training with a love for cryptography and blockchain technologies. The majority of my career has been spent leading engineering teams that build hardware and software business systems for use in aerospace manufacturing. For the past 5 years, I have been closely following the cryptocurrency ecosystem, studying the technology as it evolved. Since 2017, this passion ultimately resulted in working with several blockchain projects as a technical writer and business development consultant.",
   linkedin: 'https://www.linkedin.com/in/nicolas-ramsrud-34104337/',
   twitter: 'https://twitter.com/NicolasRamsrud',
   photo: nicolasRamsrudPhoto,
