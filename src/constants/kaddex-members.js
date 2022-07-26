@@ -89,6 +89,16 @@ const NICOLAS_RAMSRUD = {
   photo: nicolasRamsrudPhoto,
 };
 
+const BERTRAND_CAFFI = {
+  id: 11,
+  firstname: 'Bertrand',
+  lastname: 'Caffi',
+  role: ROLE_COO.role,
+  description:
+    'Hi everyone! I am Bertrand Caffi, COO of Kaddex. Previously I was leading the Kadena Business Development Team, funding critical infrastructure, kickstarting hypergrowth and providing resources for developers and other participants to grow the Kadena ecosystem. I am a growth operator with transversal Web3 and Web2 skills, always looking for shortcuts and how to maximize performance. Prior to blockchain and cryptocurrencies I have a track record of helping Web2 startups on fundraising and scaling their operations. I am looking forward to building the Kaddex platform and ecosystem, bringing safe DeFi with Web2 usability and scalability to Kadena and Web3.',
+  photo: bertrandCaffiPhoto,
+};
+
 const ANDREA_TULLI = {
   id: 20,
   firstname: 'Andrea',
@@ -122,16 +132,6 @@ const STEVE_D_AGOSTINO = {
     "Hi everyone! I am Steven D'Agostino, CMO of Kaddex. I am an experienced marketer with a 7 plus year history of working in tech and crypto. I have worked in social media marketing management roles as well as within the publishing industry. I am a strong marketing professional with extensive knowledge of social media, blockchain and fintech. Additionally, I have a Master of Arts focused on Music Education from Columbia University. Previous roles have included marketing at Cointelegraph, OKCoin, CMO of Ethernity. I’m looking forward to building the Kaddex platform and ecosystem and spreading the Kaddex mission far and wide!",
   photo: steveDAgostinoPhoto,
   linkedin: 'https://www.linkedin.com/in/steven-d-agostino-7108965b/',
-};
-
-const BERTRAND_CAFFI = {
-  id: 130,
-  firstname: 'Bertrand',
-  lastname: 'Caffi',
-  role: ROLE_COO.role,
-  description:
-    'Hi everyone! I am Bertrand Caffi, COO of Kaddex. Previously I was leading the Kadena Business Development Team, funding critical infrastructure, kickstarting hypergrowth and providing resources for developers and other participants to grow the Kadena ecosystem. I am a growth operator with transversal Web3 and Web2 skills, always looking for shortcuts and how to maximize performance. Prior to blockchain and cryptocurrencies I have a track record of helping Web2 startups on fundraising and scaling their operations. I am looking forward to building the Kaddex platform and ecosystem, bringing safe DeFi with Web2 usability and scalability to Kadena and Web3.',
-  photo: bertrandCaffiPhoto,
 };
 
 const COSIMO_BELLINI = {
@@ -287,10 +287,10 @@ const FRANCISCO_MIRANDA = {
 export const KADDEX_TEAM_MEMBERS = [
   DANIELE_DE_VECCHIS,
   NICOLAS_RAMSRUD,
+  BERTRAND_CAFFI,
   ANDREA_TULLI,
   GRANT_GERBGER,
   STEVE_D_AGOSTINO,
-  BERTRAND_CAFFI,
   COSIMO_BELLINI,
   DON_D_AGOSTINO,
   CONRAD_BENJAMIN,
