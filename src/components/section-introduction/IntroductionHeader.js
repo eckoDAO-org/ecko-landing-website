@@ -21,19 +21,21 @@ const IntroductionHeader = () => {
       mobileStyle={{ margin: '30px 0' }}
     >
       <FlexContainer className="column" desktopStyle={{ paddingRight: 64 }}>
-        <Label size="huge" className="nowrap" fontFamily="syncopate">
-          the evolution
-        </Label>
         <Label size="huge" fontFamily="syncopate">
-          of defi on
+          End-to-end decentralized
         </Label>
-        <Label
-          className="rainbow fit-content"
-          gradient="linear-gradient(102deg, #61CFE8 0%, #9580B9 33%, #E37480 55%, #ED8473 70%, #F7D186 100%)"
-          fontFamily="syncopate"
-          size="huge"
-        >
-          Kadena
+        <Label size="huge" desktopClassName="nowrap" mobileClassName="column align-fs" fontFamily="syncopate">
+          trading on{' '}
+          <Label
+            desktopStyle={{ marginLeft: 20 }}
+            tabletStyle={{ marginLeft: 20 }}
+            className="rainbow fit-content"
+            gradient="linear-gradient(102deg, #61CFE8 0%, #9580B9 33%, #E37480 55%, #ED8473 70%, #F7D186 100%)"
+            fontFamily="syncopate"
+            size="huge"
+          >
+            Kadena
+          </Label>
         </Label>
       </FlexContainer>
 

@@ -82,6 +82,9 @@ const STYText = styled.span`
   &.nowrap {
     white-space: nowrap;
   }
+  &.column {
+    flex-direction: column;
+  }
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
