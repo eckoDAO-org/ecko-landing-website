@@ -135,22 +135,22 @@ const CONFIGURATION = {
     isCompleted: true,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
+  NCC_AUDITING: {
     position: 11,
+    text: [{ text: 'NCC Auditing' }],
+    isCompleted: true,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    position: 12,
     text: [{ text: 'Kaddex v1 full launch' }],
     isCompleted: true,
     isMain: true,
   },
 
-  LENDING_AND_BORROWING_FUNCTIONALITIES: {
-    position: 12,
-    text: [{ text: 'Lending & borrowing functionalities' }],
-    isCompleted: false,
-  },
-
-  WHITEPAPER: {
+  PAIR_CREATION_TOOL: {
     position: 14,
-    text: [{ text: 'Whitepaper' }],
+    text: [{ text: 'Pair creation tool' }],
 
     isCompleted: false,
   },

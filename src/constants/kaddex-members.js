@@ -18,15 +18,17 @@ import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg'
 import arielSerranoniPhoto from '../assets/images/kaddex-team/ariel-serranoni.jpg';
 import emilyPillmorePhoto from '../assets/images/kaddex-team/emily-pillmore.jpg';
 import franciscoMirandaPhoto from '../assets/images/kaddex-team/francisco-miranda.jpg';
+import carlesAlonsoPhoto from '../assets/images/kaddex-team/carles-alonso.jpg';
+import brandonChongPhoto from '../assets/images/kaddex-team/brandon-chong.jpg';
 
 const ROLE_CEO = {
   short: 'CEO',
   role: ' Chief Executive Officer',
 };
-const ROLE_CPO = {
-  short: 'CPO',
-  role: 'Chief Product Officer',
-};
+// const ROLE_CPO = {
+//   short: 'CPO',
+//   role: 'Chief Product Officer',
+// };
 const ROLE_BD = {
   short: 'BD',
   role: 'Business Development',
@@ -265,6 +267,28 @@ const ARIEL_SERRANONI = {
   linkedin: 'https://www.linkedin.com/in/ariel-serranoni-1b762815a/',
 };
 
+const CARLES_ALONSO = {
+  id: 190,
+  firstname: 'Carles',
+  lastname: 'Alonso',
+  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
+  photo: carlesAlonsoPhoto,
+  description:
+    'Hi team - my name is Carlos, Advisor for Kaddex. I have been a professional fintech investor for the last 2 years, working for a firm that has been making investments in DeFi for over 5 years. It now has an investment vehicle exclusively dedicated to it. As such, I have gained significant appreciation for DeFi’s disruptive potential, particularly in emerging markets, where it is already circumventing chronic inefficiencies in financial systems to empower millions of underserved people. As a former entrepreneur, I will help support the operational needs of Kaddex, on top of opening significant connectivity via my international exposure to the DeFi and fintech investor communities. I believe in the technological differentiation of the Kadena blockchain and am excited for the Kaddex’s specific use case. ',
+  linkedin: 'https://www.linkedin.com/in/carlos-alonso-torras-2ab95270/',
+};
+
+const BRANDON_CHONG = {
+  id: 200,
+  firstname: 'Brandon',
+  lastname: 'Chong',
+  role: `${ROLE_ADVISOR.role} - ${ROLE_BD.role}`,
+  photo: brandonChongPhoto,
+  description:
+    'Hi everyone – I’m Brandon, Advisor for Kaddex. I have been closely following the DeFi ecosystem over the past 6 years – first from a regulatory and ecosystem building perspective from my time with the FinTech steering committee of the Singapore government, and now as a Partner at our venture capital firm, where we back exceptional teams with game-changing technologies across the globe. The core thesis of the Kaddex platform is an extremely attractive one; it enables a truly no-compromise solution to some of the most acute pain points faced by other exchanges. I look forward to its imminent public launch and shaping the future of our community as we know it.',
+  linkedin: 'https://www.linkedin.com/in/brandonwchong/',
+};
+
 const EMILY_PILLMORE = {
   id: 220,
   firstname: 'Emily',
@@ -303,6 +327,8 @@ export const KADDEX_TEAM_MEMBERS = [
   GUSTAVO_SPELZON,
   KATE_OZTUNC,
   ARIEL_SERRANONI,
+  CARLES_ALONSO,
+  BRANDON_CHONG,
   EMILY_PILLMORE,
   FRANCISCO_MIRANDA,
 ];

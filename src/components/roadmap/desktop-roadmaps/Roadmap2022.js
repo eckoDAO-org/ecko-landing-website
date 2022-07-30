@@ -137,38 +137,39 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
+  NCC_AUDITING: {
     circle: { x: 740, y: 596 },
     text: {
       x: 756,
       y: 662,
-      tspan: [
-        { x: -47.71, y: 0, text: 'Kaddex v1' },
-        { x: -58.09, y: 25, text: 'full launch' },
-      ],
+      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
     },
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
 
-  LENDING_AND_BORROWING_FUNCTIONALITIES: {
+  KADDEX_V1_FULL_LAUNCH: {
     circle: { x: 990, y: 596 },
     text: {
       x: 950,
       y: 662,
       tspan: [
-        { x: -39.61, y: 0, text: 'Lending & borrowing' },
-        { x: -14.85, y: 25, text: 'functionalities' },
+        { x: 8.61, y: 0, text: 'Kaddex v1' },
+        { x: 0, y: 25, text: 'full launch' },
       ],
     },
-    color: whiteGrey,
+
+    color: '#FA41A5',
   },
 
-  WHITEPAPER: {
+  PAIR_TOOL: {
     circle: { x: 1240, y: 596 },
     text: {
       x: 1270,
       y: 662,
-      tspan: [{ x: -60.61, y: 0, text: 'Whitepaper' }],
+      tspan: [
+        { x: -80.61, y: 0, text: 'Pair Creation' },
+        { x: -45.61, y: 25, text: ' tool' },
+      ],
     },
 
     color: whiteGrey,
@@ -176,8 +177,8 @@ const CONFIGURATION = {
 };
 
 const FLAG = {
-  flag: 'translate(753 566)',
-  shadow: 'translate(735 590)',
+  flag: 'translate(1003 567)',
+  shadow: 'translate(985 590)',
 };
 
 const Roadmap2022 = ({ className }) => {
@@ -251,7 +252,7 @@ const Roadmap2022 = ({ className }) => {
           />
 
           {/* line */}
-          <line id="Line_585" dataName="Line 585" x2="400" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+          <line id="Line_585" dataName="Line 585" x2="630" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];
