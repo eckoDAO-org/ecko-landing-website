@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import { FlexContainer } from '../shared/Container';
 import theme from '../../styles/theme';
 import gameEdition from '../../assets/images/game-edition.json';
@@ -41,8 +41,12 @@ const GameEdition = () => {
       />
 
       <Lottie
-        options={{ ...lottieDefaultOptions }}
-        {...lottieOptions}
+        animationData={lottieDefaultOptions.animationData}
+        loop={lottieDefaultOptions.loop}
+        autoPlay={lottieDefaultOptions.autoplay}
+        rendererSettings={lottieDefaultOptions.rendererSettings}
+        isPaused={lottieOptions.isPaused}
+        isStopped={lottieOptions.isStopped}
         style={{
           width: width >= theme.mediaQueries.mobilePixel && '50%',
           height: '50%',
