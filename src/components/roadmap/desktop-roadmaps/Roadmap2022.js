@@ -1,142 +1,307 @@
 import React from 'react';
-import styled from 'styled-components';
-import { TokenomicsRing2 } from '../../../assets';
-
+import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
-const Container = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
+const whiteGrey = '#666666';
 
-`;
+const CONFIGURATION = {
+  X_WALLET_BETA: {
+    circle: { x: 490, y: 190 },
+    text: {
+      x: 437,
+      y: 255,
+      tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
+    },
+    href: 'https://xwallet.kaddex.com/',
+    color: theme.colors.primary,
+  },
+  LITEPAPER: {
+    circle: { x: 740, y: 190 },
+    text: {
+      x: 750,
+      y: 255,
+      tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
+    },
+    href: '/kaddex litepaper.pdf',
 
-const MiningProgram = ({completed}) => (
-    <g id="Mining Program" dataName="Mining Program" transform="translate(422.316 3929.259)">
-    <text id="Mining Program" dataName="Mining Program" transform="translate(0.301 24.742)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Liquidity  </tspan><tspan x="0" y="41">Mining Programme</tspan></text>
-    <circle id="Circle-12" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.317 -0.258)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const Whitepaper = ({completed}) => (
-    <g id="Whitepaper" dataName="Whitepaper" transform="translate(920 3928.259)">
-    <text id="Whitepaper" dataName="Whitepaper" transform="translate(0.301 24.742)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Whitepaper</tspan></text>
-    <circle id="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const XWalletV2 = ({completed}) => (
-    <g id="XWalletV2" dataName="XWalletV2" transform="translate(800 3928.259)">
-    <text id="XWalletV2" dataName="XWalletV2" transform="translate(0.301 24.742)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">X-Wallet v2</tspan></text>
-    <circle id="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const LendingBorrowing = ({completed}) => (
-    <g id="LendingBorrowing" dataName="LendingBorrowing" transform="translate(600 3928.259)">
-    <text id="LendingBorrowing" dataName="LendingBorrowing" transform="translate(0.301 24.742)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Lending &amp; borrowing </tspan><tspan x="0" y="41">functionalities</tspan></text>
-    <circle id="Circle-2" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.742)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const KaddexFullLaunch = ({completed}) => (
-    <g id="KaddexFullLaunch" dataName="KaddexFullLaunch" transform="translate(274.317 3928.083)">
-    <text id="KaddexFullLaunch" dataName="KaddexFullLaunch" transform="translate(-4.317 28.918)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="15" xmlSpace="preserve">Kaddex v1  </tspan><tspan x="0" y="41">full launch</tspan></text>
-    <circle id="Circle-3" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-4.316 0.918)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const SingleSideLiquidity = ({completed}) => (
-    <g id="SingleSideLiquidity" dataName="SingleSideLiquidity" transform="translate(274 3791.001)">
-    <text id="SingleSideLiquidity" dataName="SingleSideLiquidity" transform="translate(-0.317 23.742)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Single Sided </tspan><tspan x="0" y="41">Liquidity</tspan></text>
-    <circle id="Circle-12" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.317 -0.258)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const WebsiteV2 = ({completed}) => (
-    <g id="WebsiteV2WebsiteV2" dataName="WebsiteV2WebsiteV2" transform="translate(620 3790.591)">
-    <text id="WebsiteV2WebsiteV2" dataName="WebsiteV2WebsiteV2" transform="translate(0 39)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">Website v2</tspan></text>
-    <circle id="Circle-4" dataName="Circle" cx="8" cy="8" r="8" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const BridgeErc20 = ({completed}) => (
-    <g id="BridgeErc20" dataName="BridgeErc20" transform="translate(870.525 3790.591)">
-    <text id="BridgeErc20" dataName="BridgeErc20" transform="translate(0 24)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Bridged ERC-20 </tspan><tspan x="0" y="41">Token Pairs</tspan></text>
-    <circle id="Circle-5" dataName="Circle" cx="8" cy="8" r="8" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const Swapping3d = ({completed}) => (
-    <g id="Swapping3d" dataName="Swapping3d" transform="translate(740 3791.001)">
-    <text id="Swapping3d" dataName="Swapping3d" transform="translate(-0.43 39.41)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">3d Swapping </tspan><tspan x="0" y="26">Interface</tspan></text>
-    <circle id="Circle-6" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-0.43 0.41)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const VaultingProgramme = ({completed}) => (
-    <g id="VaultingProgramme" dataName="VaultingProgramme" transform="translate(430 3791.001)">
-    <text id="VaultingProgramme" dataName="VaultingProgramme" transform="translate(-38.525 24.408)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">KDX Vaulting Programme </tspan><tspan x="0" y="41" fontFamily={theme.fontFamily.regular} font-weight="400">available for early investors</tspan></text>
-    <circle id="Circle-7" dataName="Circle" cx="8" cy="8" r="8" transform="translate(-38.525 0.41)" fill={completed ? "#ec1bb4" : "#fff"} />
-    </g>
-)
-const PublicSale = ({completed}) => (
-    <g id="PublicSale" dataName="PublicSale" transform="translate(830.699 3655.569)">
-    <text id="PublicSale" dataName="PublicSale" transform="translate(0.301 24.432)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">Public Sale</tspan></text>
-    <circle id="Circle-8" dataName="Circle" cx="8" cy="8" r="8" transform="translate(0.301 0.432)" fill={completed ? "#ec1bb4" : "#fff"}/>
-    </g>
-)
-const XWalletv1 = ({completed}) => (
-    <g id="X-wallet-v1" dataName="X-wallet-v1" transform="translate(655.422 3655.569)">
-    <text id="X-wallet-v1" dataName="X-wallet-v1" transform="translate(-0.421 24.432)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="15">X-Wallet v1</tspan></text>
-    <g id="Circle-9" dataName="Circle" transform="translate(-0.422 0.432)" fill={completed ? "#ec1bb4" : "#fff"} stroke="#ec1bb4" stroke-width="8">
-        <circle cx="8" cy="8" r="8" stroke="none"/>
-        <circle cx="8" cy="8" r="4" fill="none"/>
-    </g>
-    </g>
-)
-const Litepaper = ({completed}) => (
-    <g id="Litepaper" dataName="Litepaper" transform="translate(460.596 3655.569)">
-    <text id="Litepaper" dataName="Litepaper" transform="translate(0.406 39.432)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" fontFamily={theme.fontFamily.bold} font-weight="500"><tspan x="0" y="0">Litepaper</tspan></text>
-    <g id="Circle-10" dataName="Circle" transform="translate(0.405 0.432)" fill={completed ? "#ec1bb4" : "#fff"} stroke="#ec1bb4" stroke-width="8">
-        <circle cx="8" cy="8" r="8" stroke="none"/>
-        <circle cx="8" cy="8" r="4" fill="none"/>
-    </g>
-    </g>
-)
-const XWalletBeta = ({completed}) => (
-    <g id="Kaddex_Beta_on_MainNet" dataName="Kaddex Beta on MainNet" transform="translate(274.317 3655.569)">
-    <text id="Kaddex_Beta_on_MainNet-2" dataName="Kaddex Beta on MainNet" transform="translate(-0.317 39.432)" fill={completed ? "#ec1bb4" : "#fff"} fontSize="16" font-family={theme.fontFamily.bold} font-weight="700"><tspan x="0" y="0">X-Wallet Beta</tspan></text>
-    <g id="Circle-11" dataName="Circle" transform="translate(-0.317 0.432)" fill={completed ? "#ec1bb4" : "#fff"} stroke={completed ? "#ec1bb4" : "#fff"} stroke-width="8">
-        <circle cx="8" cy="8" r="8" stroke="none"/>
-        <circle cx="8" cy="8" r="4" fill="none"/>
-    </g>
-    </g>
-)
+    color: theme.colors.primary,
+  },
+  X_WALLET_V1: {
+    circle: { x: 990, y: 190 },
+    text: {
+      x: 950,
+      y: 255,
+      tspan: [{ x: 0, y: 0, text: 'X-Wallet v1' }],
+    },
+    href: 'https://xwallet.kaddex.com/',
 
-const Roadmap2022 = () => {
-    return (
-        <Container>   
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1800.837" height="550" viewBox="0 0 1291.837 369.157">
+    color: theme.colors.primary,
+  },
+  PUBLIC_SALE: {
+    circle: { x: 1240, y: 190 },
+    text: {
+      x: 1200,
+      y: 255,
+      tspan: [
+        { x: 0, y: 0, text: 'Public Sale' },
+        { x: 30, y: 25, fontSize: 13 },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+  BRIDGED_ERC20: {
+    circle: { x: 1490, y: 190 },
+    text: {
+      x: 1506,
+      y: 255,
+      tspan: [
+        { x: -73.66, y: 0, text: 'Bridged ERC-20' },
+        { x: -58.09, y: 25, text: 'Token Pairs' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+  SWAPPING_INTERFACE: {
+    circle: { x: 1490, y: 381 },
+    text: {
+      x: 1499,
+      y: 446,
+      tspan: [
+        { x: -58.09, y: 0, text: '3d Swapping' },
+        { x: -47.71, y: 25, text: 'Interface' },
+      ],
+    },
 
-            <g id="_2022" dataName="2022" transform="translate(12 -3656.001)">
-                <g id="ring" transform="translate(230 3920)" >
-                    <TokenomicsRing2/>
-                </g>
-                <MiningProgram/>
-                <g id="Roadmap_2022" dataName="Roadmap 2022">
-                <path id="Roadmap_line" d="M-6091.943-1552.257h812.456a49.9,49.9,0,0,0,49.773-49.9v-35.175a49.9,49.9,0,0,0-49.773-49.9h-1046.4l1046.4.332a49.563,49.563,0,0,1,49.441,49.573v35.175a49.563,49.563,0,0,1-49.441,49.573h-812.456a49.9,49.9,0,0,0-49.771,49.9v38.539a49.9,49.9,0,0,0,49.771,49.9h1047.065l-1047.065-.332a49.563,49.563,0,0,1-49.441-49.573v-38.539A49.563,49.563,0,0,1-6091.943-1552.257Z" transform="translate(6324.714 5352.241)" fill="none" stroke="#fff" stroke-width="4"/>
-                </g>
-                <Whitepaper/>
-                <XWalletV2/>
-                <LendingBorrowing/>
-                <KaddexFullLaunch/>
-                <SingleSideLiquidity/>
-                <WebsiteV2/>
-                <BridgeErc20/>
-                <Swapping3d/>
-                <VaultingProgramme/>
-                <line id="Active" x2="850" transform="translate(-12 3665.001)" fill="none" stroke="#ec1bb4" stroke-width="5"/>
-                <PublicSale completed/>
-                <XWalletv1 completed/>
-                <Litepaper completed/>
-                <XWalletBeta completed/>
+    color: theme.colors.primary,
+  },
+  WEBSITE_V2: {
+    circle: { x: 1240, y: 381 },
+    text: {
+      x: 1200,
+      y: 446,
+      tspan: [{ x: 0, y: 0, text: 'Website v2' }],
+    },
+    color: theme.colors.primary,
+  },
+  KDX_VAULTING_PROGRAMME: {
+    circle: { x: 990, y: 381 },
+    text: {
+      x: 1000,
+      y: 446,
+      tspan: [
+        { x: -63.28, y: 0, text: 'KDX Vaulting' },
+        { x: -47.71, y: 25, text: 'programme' },
+        { x: -60.746, y: 50, text: 'available for early', fontSize: 13 },
+        { x: -30.012, y: 75, text: 'investors', fontSize: 13 },
+      ],
+    },
 
+    color: theme.colors.primary,
+  },
+  SINGLE_SIDED_LIQUIDITY: {
+    circle: { x: 740, y: 381 },
+    text: {
+      x: 750,
+      y: 446,
+      tspan: [
+        { x: -68.28, y: 0, text: 'Single Sided' },
+        { x: -47.71, y: 25, text: 'Liquidity' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  STAKING: {
+    circle: { x: 490, y: 381 },
+    text: {
+      x: 500,
+      y: 446,
+      tspan: [
+        { x: -50, y: 0, text: 'KDX Staking ' },
+        { x: -17.71, y: 25, text: 'Tool' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    circle: { x: 490, y: 596 },
+    text: {
+      x: 500,
+      y: 662,
+      tspan: [
+        { x: -68.47, y: 0, text: 'KDX Liquidity' },
+        { x: -54.47, y: 25, text: 'Mining 2.0' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  NCC_AUDITING: {
+    circle: { x: 740, y: 596 },
+    text: {
+      x: 756,
+      y: 662,
+      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
+    },
+    color: theme.colors.primary,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    circle: { x: 990, y: 596 },
+    text: {
+      x: 950,
+      y: 662,
+      tspan: [
+        { x: 8.61, y: 0, text: 'Kaddex v1' },
+        { x: 0, y: 25, text: 'full launch' },
+      ],
+    },
+
+    color: '#FA41A5',
+  },
+
+  PAIR_TOOL: {
+    circle: { x: 1240, y: 596 },
+    text: {
+      x: 1270,
+      y: 662,
+      tspan: [
+        { x: -80.61, y: 0, text: 'Pair Creation' },
+        { x: -45.61, y: 25, text: ' tool' },
+      ],
+    },
+
+    color: whiteGrey,
+  },
+};
+
+const FLAG = {
+  flag: 'translate(1003 567)',
+  shadow: 'translate(985 590)',
+};
+
+const Roadmap2022 = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="1743.17"
+      height="501"
+      viewBox="0 0 1743.17 501"
+      style={{ overflow: 'visible' }}
+    >
+      <g id="Roadmap" transform="translate(5 -190)">
+        <g id="Group_68777" data-name="Group 68777">
+          <path
+            id="Path_43816"
+            data-name="Path 43816"
+            d="M1263.5,613.005H369a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005H1588a77.624,77.624,0,0,0,43.608-13.32,78.237,78.237,0,0,0,28.263-34.319A77.507,77.507,0,0,0,1666,317.005v-31a77.693,77.693,0,0,0-77.77-78H289L-5,208v-4l294,.005H1588.23a82.45,82.45,0,0,1,16.514,1.666,81.161,81.161,0,0,1,29.263,12.341,81.886,81.886,0,0,1,34.338,51.471A83.059,83.059,0,0,1,1670,286.005v31a82.6,82.6,0,0,1-1.666,16.524,81.564,81.564,0,0,1-12.34,29.325,82.238,82.238,0,0,1-36.076,29.707,81.6,81.6,0,0,1-15.395,4.779A82.59,82.59,0,0,1,1588,399.005H369a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005h894.5Z"
+            fill={whiteGrey}
+          />
+
+          <g id="Group_68779" data-name="Group 68779">
+            <g id="Group_68778" data-name="Group 68778">
+              <path
+                id="Path_43817"
+                data-name="Path 43817"
+                d="M1738.17,612h-6.049v-2h6.049Zm-14.049,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Zm-16,0h-8v-2h8Z"
+                fill={whiteGrey}
+              />
             </g>
-            </svg>
-        </Container>
-    );
+          </g>
+
+          {/* blue line */}
+          <line
+            id="Line_585"
+            data-name="Line 585"
+            x2="1593.5"
+            transform="translate(-5 206)"
+            fill="none"
+            stroke={theme.colors.primary}
+            strokeWidth="4"
+          />
+
+          {/* curve */}
+          <path
+            id="curve"
+            dataName="Path curve"
+            d="M1588,395.005a77.624,77.624,0,0,0,43.608-13.32,78.237,78.237,0,0,0,28.263-34.319A77.507,77.507,0,0,0,1666,317.005v-31a77.693,77.693,0,0,0-77.77-78v-4a82.45,82.45,0,0,1,16.514,1.666,81.161,81.161,0,0,1,29.263,12.341,81.886,81.886,0,0,1,34.338,51.471A83.059,83.059,0,0,1,1670,286.005v31a82.6,82.6,0,0,1-1.666,16.524,81.564,81.564,0,0,1-12.34,29.325,82.238,82.238,0,0,1-36.076,29.707,81.6,81.6,0,0,1-15.395,4.779A82.59,82.59,0,0,1,1588,399.005"
+            transform="translate(0 0)"
+            fill={theme.colors.primary}
+            strokeWidth="4"
+          />
+          {/* line */}
+
+          <line
+            id="Line_585"
+            dataName="Line 585"
+            x2="1230"
+            transform="translate(365 397)"
+            fill="none"
+            stroke={theme.colors.primary}
+            strokeWidth="4"
+          />
+          {/* curve */}
+          <path
+            id="Path_43816"
+            data-name="Path 43816"
+            d="M369,613.005a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005c.023-.017,0,4,0,4a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005Z"
+            transform="translate(0 0)"
+            fill={theme.colors.primary}
+          />
+
+          {/* line */}
+          <line id="Line_585" dataName="Line 585" x2="630" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+
+          {Object.keys(CONFIGURATION).map((config, i) => {
+            const nodeConfig = CONFIGURATION[config];
+            return (
+              <g
+                key={i}
+                style={{ cursor: nodeConfig.href ? 'pointer' : 'default' }}
+                onClick={() => {
+                  if (nodeConfig.href) {
+                    window.open(nodeConfig.href, '_blank');
+                  }
+                }}
+              >
+                <circle
+                  id={config}
+                  cx="15"
+                  cy="15"
+                  r="15"
+                  transform={`translate(${nodeConfig.circle.x} ${nodeConfig.circle.y})`}
+                  fill={nodeConfig.color}
+                />
+                <text
+                  transform={`translate(${nodeConfig.text.x} ${nodeConfig.text.y})`}
+                  fill={nodeConfig.color}
+                  fontSize="20"
+                  fontFamily={theme.fontFamily.basier}
+                  letterSpacing="-0.1em"
+                >
+                  {nodeConfig.text.tspan.map((tspan, i2) => (
+                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 20} fill={nodeConfig.color}>
+                      {tspan.text}
+                    </tspan>
+                  ))}
+                </text>
+              </g>
+            );
+          })}
+
+          {/* FLAG */}
+          <g id="ring" transform={FLAG.flag}>
+            <RoadmapFlagcon />
+          </g>
+          <g id="ring" transform={FLAG.shadow}>
+            <RoadmapEllipseShadowIcon />
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
 };
 
 export default Roadmap2022;

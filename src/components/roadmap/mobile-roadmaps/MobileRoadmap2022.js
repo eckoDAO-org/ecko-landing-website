@@ -1,158 +1,157 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import  TokenomicsRing  from '../../../assets/images/tokenomics/token_ring_2.svg';
-import theme from '../../../styles/theme';
+import styled from 'styled-components';
+import { RoadmapFlagcon } from '../../../assets';
+import { getColor } from '../../../styles/theme';
+import { FlexContainer } from '../../shared/Container';
+import Label from '../../shared/Label';
 
-const RoadmapContainer = styled.div`
-.timeline_2022 {
-  position: relative;
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-.timeline_2022::after {
-  content: '';
+const Line = styled(FlexContainer)`
   position: absolute;
-  width: 3px;
-  background: linear-gradient(to bottom, #ec1bb4 24%,#FFFFFF 24%);
+  border-left: 3px solid #fff;
   top: 0;
   bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-}
-
-
-@media (max-width: 768px) {
-  .timeline_2022::after {
-    left: 90px;
-  }
-}
-
-.image{
-  background-repeat: no-repeat;
-  background-position-x: 30%;
-}
-`;
-
-const RoadmapItemLeft = styled.p`
-  text-align: right;
-  margin-right: 40px;
-  ${({regular})=>{
-    if(regular) return css`
-      font: normal normal normal 16px/24px ${theme.fontFamily.regular};
-      margin-top:-10px;
-    `
-    else return css`
-          font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-    `
-  }}
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    ${({regular})=>{
-    if(regular) return css`
-      font: normal normal normal 16px ${theme.fontFamily.regular};
-    `
-    else return css`
-          font: normal normal bold 16px ${theme.fontFamily.bold};
-    `
-  }}
-    margin-left: 40px;
-    text-align: left;
-  }
-`;
-const RoadmapItemRight = styled.p`
-  text-align: left;
-  margin-left: 40px;
-  ${({regular})=>{
-    if(regular) return css`
-      font: normal normal normal 16px/24px ${theme.fontFamily.regular};
-      margin-top:-10px;
-    `
-    else return css`
-          font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-    `
-  }}
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-     ${({regular})=>{
-    if(regular) return css`
-      font: normal normal normal 16px ${theme.fontFamily.regular};
-    `
-    else return css`
-          font: normal normal bold 16px ${theme.fontFamily.bold};
-    `
-  }}
+  left: 35px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 82%;
+    background: ${({ color }) => getColor(color)};
+    top: 0;
+    bottom: 0;
+    left: -3px;
   }
 `;
 
+const MobileRoadmap2022 = ({ color }) => {
+  return (
+    <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }}>
+      <Line color={color} />
+      {Object.values(CONFIGURATION)
+        .sort((a, b) => a.position - b.position)
+        .map((value, i) => {
+          return (
+            <FlexContainer
+              key={i}
+              style={{ paddingLeft: 28.5, zIndex: 2, marginTop: value.isMain && 20 }}
+              onClick={() => {
+                if (value.href) {
+                  window.open(value.href, '_blank');
+                }
+              }}
+            >
+              <div
+                style={{
+                  position: 'relative',
+                  height: 16,
+                  width: 16,
+                  background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
+                  borderRadius: '50%',
+                }}
+              >
+                {value?.isMain && <RoadmapFlagcon style={{ position: 'absolute', width: 40, left: 3, bottom: 8, zIndex: 4 }} />}
+              </div>
 
-const MobileRoadmap2022 = () => {
-    return (
-        <RoadmapContainer>
-            <div  className='timeline_2022'>
-          <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft className='completed'>
-              X-Wallet Beta
-            </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container_completed left'>
-            <RoadmapItemLeft className='completed'>
-               Litepaper
-            </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container_completed right'>
-            <RoadmapItemRight className='completed'>X-Wallet v1</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container_completed left'>
-          <RoadmapItemLeft className='completed'>
-             Public Sale
-            </RoadmapItemLeft>
-          </div>
-
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >Bridge ERC-20 Token Pairs</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  >3d Swapping interface</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >Website v2</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container right'>
-          <RoadmapItemLeft>
-              KDX Vaulting Programme
-            </RoadmapItemLeft>
-            <RoadmapItemLeft regular >
-                available for early investors          
-            </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Single Sided</RoadmapItemLeft>
-            <RoadmapItemLeft  >Liquidity</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container left image'  style={{ backgroundImage: `url(${TokenomicsRing})` }}>
-            <RoadmapItemLeft  >Kaddex v1</RoadmapItemLeft>
-            <RoadmapItemLeft  >full launch</RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >KDX Liquidity</RoadmapItemRight>
-            <RoadmapItemRight  >Mining Programme</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >Lending & borrowing</RoadmapItemRight>
-            <RoadmapItemRight  >functionalities</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight  >X-Wallet v2</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-            <RoadmapItemLeft  >Whitepaper</RoadmapItemLeft>
-          </div>
-          </div>
-        </RoadmapContainer>
-    );
+              <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
+                {value?.text?.map((tspan, j) => (
+                  <Label key={j} fontSize={tspan.fontSize || 15} color={value?.isMain ? 'pink' : value.isCompleted ? color : 'white'}>
+                    {tspan.text}
+                  </Label>
+                ))}
+              </FlexContainer>
+            </FlexContainer>
+          );
+        })}
+    </FlexContainer>
+  );
 };
 
 export default MobileRoadmap2022;
+
+const CONFIGURATION = {
+  X_WALLET_BETA: {
+    position: 0,
+    text: [{ text: 'X-Wallet Beta' }],
+    href: 'https://xwallet.kaddex.com/',
+    isCompleted: true,
+  },
+  LITEPAPER: {
+    position: 1,
+    text: [{ text: 'Litepaper' }],
+    href: '/kaddex litepaper.pdf',
+
+    isCompleted: true,
+  },
+  X_WALLET_V1: {
+    position: 2,
+    text: [{ text: 'X-Wallet v1' }],
+    href: 'https://xwallet.kaddex.com/',
+
+    isCompleted: true,
+  },
+  PUBLIC_SALE: {
+    position: 3,
+    text: [{ text: 'Public Sale' }],
+    isCompleted: true,
+  },
+  BRIDGED_ERC20: {
+    position: 4,
+    text: [{ text: 'Bridged ERC-20 Token Pairs' }],
+    isCompleted: true,
+  },
+  SWAPPING_INTERFACE: {
+    position: 5,
+    text: [{ text: '3d Swapping Interface' }],
+
+    isCompleted: true,
+  },
+  WEBSITE_V2: {
+    position: 6,
+    text: [{ text: 'Website v2' }],
+    isCompleted: true,
+  },
+
+  KDX_VAULTING_PROGRAMME: {
+    position: 7,
+    text: [{ text: 'KDX Vaulting programme' }, { text: 'Available for early investors', fontSize: 10 }],
+
+    isCompleted: true,
+  },
+
+  SINGLE_SIDED_LIQUIDITY: {
+    position: 8,
+    text: [{ text: 'Single Sided Liquidity' }],
+    isCompleted: true,
+  },
+  STAKING: {
+    position: 9,
+    text: [{ text: 'KDX Staking Tool' }],
+    isCompleted: true,
+  },
+
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    position: 10,
+    text: [{ text: 'KDX Liquidity Mining 2.0' }],
+    isCompleted: true,
+  },
+
+  NCC_AUDITING: {
+    position: 11,
+    text: [{ text: 'NCC Auditing' }],
+    isCompleted: true,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    position: 12,
+    text: [{ text: 'Kaddex v1 full launch' }],
+    isCompleted: true,
+    isMain: true,
+  },
+
+  PAIR_CREATION_TOOL: {
+    position: 14,
+    text: [{ text: 'Pair creation tool' }],
+
+    isCompleted: false,
+  },
+};

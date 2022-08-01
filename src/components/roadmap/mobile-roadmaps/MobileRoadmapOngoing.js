@@ -1,88 +1,69 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../../../styles/theme';
+import { getColor } from '../../../styles/theme';
+import { FlexContainer } from '../../shared/Container';
+import Label from '../../shared/Label';
 
-const RoadmapContainer = styled.div`
-.timeline_ongoing {
-  position: relative;
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-.timeline_ongoing::after {
-  content: '';
+const Line = styled(FlexContainer)`
   position: absolute;
-  width: 3px;
-  background: linear-gradient(to top, #ffffff 0%, #FFFFFF 68%);
+  border-left: 3px dashed ${({ color }) => getColor(color)};
   top: 0;
   bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-}
-
-
-@media (max-width: 768px) {
-  .timeline_ongoing::after {
-    left: 90px;
-  }
-}
+  left: 35px;
 `;
 
-const RoadmapItemLeft = styled.p`
-  text-align: right;
-  margin-right: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
+const MobileRoadmapOngoing = ({ color }) => {
+  return (
+    <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }} color={color}>
+      <Line color={color} />
+      {[...Object.values(CONFIGURATION).sort((a, b) => a.position - b.position)].concat([...Array(7).fill()]).map((value, i) => {
+        return (
+          <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2 }}>
+            <div
+              style={{
+                position: 'relative',
+                height: 16,
+                width: 16,
+                background: getColor(color),
+                borderRadius: '50%',
+              }}
+            />
 
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-    margin-left: 40px;
-    text-align: left;
-  }
-`;
-
-const RoadmapItemRight = styled.p`
-  text-align: left;
-  margin-left: 40px;
-  font: normal normal bold 16px/24px ${theme.fontFamily.bold};
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 16px ${theme.fontFamily.bold};
-  }
-`;
-
-
-const MobileRoadmapOngoing = () => {
-    return (
-        <RoadmapContainer>
-            <div  className='timeline_ongoing'>
-            <div class='roadmap_container left'>
-              <RoadmapItemLeft >
-              Multiplecode
-              </RoadmapItemLeft>
-              <RoadmapItemLeft >
-                  code-auditing          
-              </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight >Team Expansion</RoadmapItemRight>
-          </div>
-          <div class='roadmap_container left'>
-              <RoadmapItemLeft >
-              New Strategic
-              </RoadmapItemLeft>
-              <RoadmapItemLeft >
-                  Partnerships         
-              </RoadmapItemLeft>
-          </div>
-          <div class='roadmap_container right'>
-            <RoadmapItemRight >DAO Transition</RoadmapItemRight>
-          </div>
-          </div>
-        </RoadmapContainer>
-    );
+            <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
+              {value?.text?.map((tspan, j) => (
+                <Label key={j} fontSize={tspan.fontSize || 15} color={color}>
+                  {tspan.text}
+                </Label>
+              ))}
+            </FlexContainer>
+          </FlexContainer>
+        );
+      })}
+    </FlexContainer>
+  );
 };
 
 export default MobileRoadmapOngoing;
+
+const CONFIGURATION = {
+  MULTIPLE_AUDITING: {
+    position: 0,
+    text: [{ text: 'Multiplecode autiding' }],
+  },
+  TEAM_EXPANSION: {
+    position: 1,
+    text: [{ text: 'Team Expansion' }],
+  },
+  NEW_STRATEGIC_PARTNERSHIPS: {
+    position: 2,
+    text: [{ text: 'New Strategic Partnerships' }],
+  },
+  DAO_TRANSITION: {
+    position: 3,
+    text: [{ text: 'DAO Transition' }],
+  },
+  FIAT_ON_RAMP: {
+    position: 4,
+    text: [{ text: 'Fiat On Ramp' }],
+  },
+};

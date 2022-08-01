@@ -7,6 +7,10 @@ export default createGlobalStyle`
       box-sizing: inherit;
     }
 
+    /* remove mobile highlight on tap */
+    div {
+    -webkit-tap-highlight-color: transparent;
+    }
     *:focus {
       outline: none;
     }
@@ -24,26 +28,28 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       line-height: inherit;
-      /* overflow: auto; */
       min-width: 0;
-      font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-      color: ${({ theme: { colors } }) => colors.primary};
-      background: linear-gradient(122deg, #070610 0%, #4C125A 100%);
+      font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
       background-attachment: fixed;
-      /* background: -webkit-gradient(linear, left top, left bottom, from(#070610), to(#4C125A)) fixed; */
       opacity: 1;
-      
-      
+      background-color: ${({ theme: { colors } }) => colors.darkBlue};
+      overflow-x: hidden;
+
       
     };
 
     #root {
       height: 100%;
+      overflow: hidden;
       & > div:first-child {
         display: flex;
         flex-flow: column;
         height: 100%;
       }
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .ui.input>input {
@@ -66,16 +72,30 @@ export default createGlobalStyle`
     }
 
     .desktop-none {
-      @media (min-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel + 1}px`}) {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+        display: none !important;
+      }
+    }
+
+    .desktop-only {
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
         display: none !important;
       }
     }
 
     .mobile-none {
-      @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
         display: none !important;
       }
+    }
+
+    .mobile-only {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+        display: none !important;
+      }
+    }
+
+    .pointer {
+      cursor: pointer;
     }
 `;

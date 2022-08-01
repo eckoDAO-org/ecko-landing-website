@@ -1,41 +1,24 @@
-import React from "react";
-import styled from "styled-components/macro";
-import "./MainContainer.css";
-import IntroductionSection from "./IntroductionSection";
-import RoadmapSection from "./RoadmapSection";
-import FeatureSection from "./FeaturesSection";
-import ProofDexContainer from "./ProofDexContainer";
-import DiscordContainer from "./DiscordContainer";
-import TokenomicsContainer from "./TokenomicsContainer";
-import PartnersSection from "./PartnersSection";
-
-const OuterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  /* padding: 30px; */
-  padding-bottom: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0;
-  }
-  /* overflow: auto; */
-`;
+import React from 'react';
+import IntroductionSection from '../components/section-introduction/IntroductionSection';
+import FeaturesSection from '../components/section-features/FeaturesSection';
+import TokenomicsSection from '../components/section-tokenomics/TokenomicsSection';
+import PartnersSection from '../components/section-partners/PartnersSection';
+import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
+import Roadmap from '../components/roadmap/Roadmap';
+import { FlexContainer } from '../components/shared/Container';
+import KaddexTeamSection from '../components/kaddex-team/KaddexTeamSection';
 
 const MainContainer = () => {
   return (
-    <OuterContainer>
+    <FlexContainer className="column">
       <IntroductionSection />
-      <ProofDexContainer />
-      <FeatureSection />
-      <DiscordContainer />
-      <TokenomicsContainer />
-      <RoadmapSection />
+      <ProofOfDexSection />
+      <FeaturesSection />
+      <TokenomicsSection />
+      <Roadmap />
+      <KaddexTeamSection />
       <PartnersSection />
-    </OuterContainer>
+    </FlexContainer>
   );
 };
 

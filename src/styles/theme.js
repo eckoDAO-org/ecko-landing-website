@@ -1,3 +1,44 @@
+export const getColor = (color) => {
+  switch (color) {
+    case 'white':
+      return theme.colors.white;
+    case 'primary':
+      return theme.colors.primary;
+    case 'light-blue':
+      return theme.colors.lightBlue;
+    case 'pink':
+      return theme.colors.pink;
+    case 'yellow':
+      return theme.colors.yellow;
+    case 'grey':
+      return theme.colors.grey;
+    default:
+      return '#ffffff';
+  }
+};
+export const configuration = {
+  fontSizes: {
+    huge: { desktop: 50, tablet: 40, mobile: 25 },
+    big: { desktop: 40, tablet: 30, mobile: 20 },
+    large: { desktop: 34, tablet: 28, mobile: 22 },
+    medium: { desktop: 30, tablet: 25, mobile: 15 },
+    normal: { desktop: 20, tablet: 16, mobile: 13 },
+    small: { desktop: 15, tablet: 13, mobile: 13 },
+    tiny: { desktop: 13, tablet: 10, mobile: 10 },
+    nano: { desktop: 12, tablet: 10, mobile: 10 },
+  },
+  lineHeight: {
+    huge: { desktop: 70, tablet: 50, mobile: 31.25 },
+    big: { desktop: 50, tablet: 30, mobile: 25 },
+    large: { desktop: 42.5, tablet: 36, mobile: 33 },
+    medium: { desktop: 37.5, tablet: 30, mobile: 18.75 },
+    normal: { desktop: 35, tablet: 30, mobile: 17.5 },
+    small: { desktop: 26.25, tablet: 30, mobile: 17.5 },
+    tiny: { desktop: 22.75, tablet: 30, mobile: 17.5 },
+    nano: { desktop: 21, tablet: 20, mobile: 17.5 },
+  },
+};
+
 export const theme = {
   layout: {
     desktopWidth: '80%',
@@ -15,22 +56,20 @@ export const theme = {
     footerMinWidth: '50rem',
   },
   colors: {
-    primary: '#3A4750',
-    border: '#ECEBEC',
-    pink: '#D20790',
-    purple: '#240b2f',
+    darkBlue: '#0A0B1D',
     white: '#FFFFFF',
-    purpleKDX: '#471155',
+    primary: '#7EFBFA',
+    lightBlue: '#95CFF5',
+    pink: '#DA3DB0',
+    yellow: '#F4AC3C',
+    grey: '#879BA8',
   },
   fontFamily: {
-    regular: 'montserrat-regular',
-    italic: 'montserrat-italic',
-    bold: 'montserrat-bold',
-    boldItalic: 'montserrat-bold-italic',
+    syncopate: 'syncopate-bold',
+    'syncopate-regular': 'syncopate-regular',
+    basier: 'basier-square-mono-regular',
   },
-  inputTokenWidth: 78,
-  inputSelectButtonWidth: 81,
-  buttonBackgroundGradient: 'transparent',
+  ...configuration,
 };
 
 export default theme;
