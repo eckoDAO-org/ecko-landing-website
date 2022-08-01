@@ -11,7 +11,7 @@ export const PROOF_DEX_POOL = {
   key: 'POOL',
   icon: <PoolIcon />,
   title: 'Pool',
-  description: 'Provide liquidity for any SPL token',
+  description: 'Provide liquidity for any pair',
   color: 'yellow',
 };
 export const PROOF_DEX_STAKE = {
