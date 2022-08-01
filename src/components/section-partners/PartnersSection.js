@@ -9,6 +9,7 @@ import {
   PARTNER_ARCHITECH,
   PARTNER_FLUX,
   PARTNER_GENESIS_BLOCK,
+  PARTNER_HYPERCENT,
   PARTNER_ROBOSWAP,
   PARTNER_TOKENSOFT,
   PARTNER_UFO_GAMING,
@@ -61,8 +62,8 @@ const PartnersSection = () => {
       </FlexContainer>
       {width >= theme.mediaQueries.desktopPixel && (
         <>
-          <FlexContainer id="first-partners-column" className="column justify-ce " gap={50} style={{ marginBottom: 50 }}>
-            {[PARTNER_ARCHITECH].map((partner, i) => (
+          <FlexContainer id="first-partners-column" className="column justify-ce " gap={50} style={{ marginTop: 400 }}>
+            {[PARTNER_ARCHITECH, PARTNER_HYPERCENT].map((partner, i) => (
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>

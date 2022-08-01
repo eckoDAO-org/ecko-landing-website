@@ -1,4 +1,4 @@
-import { ArchitechLogo, FluxLogo, GenesisBlockLogo, RoboswapLogo, TokensoftLogo, UfoGamingLogo, ZelcoreLogo } from '../assets';
+import { ArchitechLogo, FluxLogo, GenesisBlockLogo, HypercentLogo, RoboswapLogo, TokensoftLogo, UfoGamingLogo, ZelcoreLogo } from '../assets';
 
 export const PARTNER_ARCHITECH = {
   icon: <ArchitechLogo />,
@@ -43,8 +43,15 @@ export const PARTNER_ZELCORE = {
   description: 'Unique direct access to Kaddex and Kadena bridged tokens.',
   color: 'yellow',
 };
+export const PARTNER_HYPERCENT = {
+  icon: <HypercentLogo />,
+  title: 'Hypercent',
+  description: 'Hypercent will serve as the official Kaddex onboarding platform to identify new projects entering the ecosystem.',
+  color: 'pink',
+};
 
 export const PARTNERS = [
+  PARTNER_HYPERCENT,
   PARTNER_ARCHITECH,
   PARTNER_UFO_GAMING,
   PARTNER_ZELCORE,

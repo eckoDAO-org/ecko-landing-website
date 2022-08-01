@@ -19,6 +19,7 @@ export { ReactComponent as SpotLogo } from './images/partners/spot.svg';
 export { ReactComponent as TokensoftLogo } from './images/partners/tokensoft.svg';
 export { ReactComponent as UfoGamingLogo } from './images/partners/ufo-gaming.svg';
 export { ReactComponent as ZelcoreLogo } from './images/partners/zelcore.svg';
+export { ReactComponent as HypercentLogo } from './images/partners/hypercent.svg';
 export { ReactComponent as PartnersIcon } from './images/partners/partners.svg';
 
 // PROOF DEX
