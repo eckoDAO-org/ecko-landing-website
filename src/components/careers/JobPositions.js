@@ -27,11 +27,9 @@ const JobPositions = () => {
     >
       <AccordionsContainer className="w-100 column">
         <Accordion title="Community" gradient={['#549CCF', '#718DC8', '#8C7DC1']}>
-          <a href="" target="_blank'">
-            <Label size="normal" color="white">
-              CONTENT CREATOR
-            </Label>
-          </a>
+          <Label size="normal" color="white">
+            CONTENT CREATOR
+          </Label>
         </Accordion>
 
         <Accordion title="Engineering" gradient={['#8C7DC1', '#E54DAA', '#F9588F']}>
