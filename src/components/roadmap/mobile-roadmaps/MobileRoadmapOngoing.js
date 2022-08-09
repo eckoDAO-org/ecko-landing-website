@@ -48,7 +48,7 @@ export default MobileRoadmapOngoing;
 const CONFIGURATION = {
   MULTIPLE_AUDITING: {
     position: 0,
-    text: [{ text: 'Multiplecode autiding' }],
+    text: [{ text: 'Multiplecode auditing' }],
   },
   TEAM_EXPANSION: {
     position: 1,

@@ -135,8 +135,8 @@ const RoadmapOngoing = ({ className }) => {
           </tspan>
         </text>
         <text
-          id="Multiplecode_autiding"
-          data-name="Multiplecode autiding"
+          id="Multiplecode_auditing"
+          data-name="Multiplecode auditing"
           transform="translate(651.5 471)"
           fill={theme.colors.yellow}
           fontSize="20"
@@ -144,7 +144,7 @@ const RoadmapOngoing = ({ className }) => {
           letterSpacing="-0.1em"
         >
           <tspan x="-103.28" y="0">
-            Multiplecode autiding
+            Multiplecode auditing
           </tspan>
         </text>
       </g>

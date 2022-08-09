@@ -5,6 +5,7 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
 const STYCard = styled(FlexContainer)`
+  cursor: pointer;
   width: 210px;
   padding: 105px 20px 125px 20px;
   border: ${({ color }) => `1px solid ${getColor(color)}`};
@@ -44,7 +45,11 @@ const STYCard = styled(FlexContainer)`
 
 const ProofOfDexCard = ({ proofDex }) => {
   return (
-    <STYCard className={`column align-ce ${proofDex.className}`} color={proofDex.color}>
+    <STYCard
+      className={`column align-ce ${proofDex.className}`}
+      color={proofDex.color}
+      onClick={() => window.open(proofDex.link, '_blank', 'noopener,noreferrer')}
+    >
       <div>{proofDex.icon}</div>
       <Label
         className="proof-title text-center"
