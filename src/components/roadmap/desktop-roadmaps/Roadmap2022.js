@@ -4,22 +4,34 @@ import theme from '../../../styles/theme';
 
 const whiteGrey = '#666666';
 
+const ROW_ELEMENT_OFFSET = 198.3;
+const ROW_CIRCLE_X_START = 300;
+const SECOND_ROW_CIRCLE_X_START = 300;
+const THIRD_ROW_CIRCLE_X_START = 300;
+const FIRST_ROW_CIRCLE_Y = 190;
+const SECOND_ROW_CIRCLE_Y = 381;
+const THIRD_ROW_CIRCLE_Y = 596;
+const FIRST_ROW_TEXT_Y = 255;
+const SECOND_ROW_TEXT_Y = 446;
+const THIRD_ROW_TEXT_Y = 662;
+
 const CONFIGURATION = {
+  //FIRST ROW
   X_WALLET_BETA: {
-    circle: { x: 490, y: 190 },
+    circle: { x: ROW_CIRCLE_X_START, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 437,
-      y: 255,
+      x: ROW_CIRCLE_X_START - 60,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
     },
     href: 'https://xwallet.kaddex.com/',
     color: theme.colors.primary,
   },
   LITEPAPER: {
-    circle: { x: 740, y: 190 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 750,
-      y: 255,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 15,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
     },
     href: '/kaddex litepaper.pdf',
@@ -27,10 +39,10 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
-    circle: { x: 990, y: 190 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 950,
-      y: 255,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 45,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'X-Wallet v1' }],
     },
     href: 'https://xwallet.kaddex.com/',
@@ -38,10 +50,10 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   PUBLIC_SALE: {
-    circle: { x: 1240, y: 190 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 1200,
-      y: 255,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 - 40,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [
         { x: 0, y: 0, text: 'Public Sale' },
         { x: 30, y: 25, fontSize: 13 },
@@ -50,10 +62,10 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   BRIDGED_ERC20: {
-    circle: { x: 1490, y: 190 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 1506,
-      y: 255,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 20,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [
         { x: -73.66, y: 0, text: 'Bridged ERC-20' },
         { x: -58.09, y: 25, text: 'Token Pairs' },
@@ -62,10 +74,10 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   SWAPPING_INTERFACE: {
-    circle: { x: 1490, y: 381 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 1499,
-      y: 446,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 20,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [
         { x: -58.09, y: 0, text: '3d Swapping' },
         { x: -47.71, y: 25, text: 'Interface' },
@@ -75,19 +87,20 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   WEBSITE_V2: {
-    circle: { x: 1240, y: 381 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: 1200,
-      y: 446,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 - 30,
+      y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'Website v2' }],
     },
     color: theme.colors.primary,
   },
+  //SECOND ROW
   KDX_VAULTING_PROGRAMME: {
-    circle: { x: 990, y: 381 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 1000,
-      y: 446,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 20,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -63.28, y: 0, text: 'KDX Vaulting' },
         { x: -47.71, y: 25, text: 'programme' },
@@ -99,10 +112,10 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   SINGLE_SIDED_LIQUIDITY: {
-    circle: { x: 740, y: 381 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 750,
-      y: 446,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 20,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -68.28, y: 0, text: 'Single Sided' },
         { x: -47.71, y: 25, text: 'Liquidity' },
@@ -112,10 +125,10 @@ const CONFIGURATION = {
   },
 
   STAKING: {
-    circle: { x: 490, y: 381 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 500,
-      y: 446,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 10,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -50, y: 0, text: 'KDX Staking ' },
         { x: -17.71, y: 25, text: 'Tool' },
@@ -125,10 +138,10 @@ const CONFIGURATION = {
   },
 
   KDX_LIQUIDITY_MINING_PROGRAMME: {
-    circle: { x: 490, y: 596 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 500,
-      y: 662,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 15,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -68.47, y: 0, text: 'KDX Liquidity' },
         { x: -54.47, y: 25, text: 'Mining 2.0' },
@@ -138,20 +151,20 @@ const CONFIGURATION = {
   },
 
   NCC_AUDITING: {
-    circle: { x: 740, y: 596 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 756,
-      y: 662,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 15,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
     },
     color: theme.colors.primary,
   },
 
   KADDEX_V1_FULL_LAUNCH: {
-    circle: { x: 990, y: 596 },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: 950,
-      y: 662,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET - 40,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: 8.61, y: 0, text: 'Kaddex v1' },
         { x: 0, y: 25, text: 'full launch' },
@@ -161,24 +174,86 @@ const CONFIGURATION = {
     color: '#FA41A5',
   },
 
-  PAIR_TOOL: {
-    circle: { x: 1240, y: 596 },
+  MULTIHOPS_SWAP: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: 1270,
-      y: 662,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 20,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [{ x: -80.61, y: 0, text: 'Multihops swap' }],
+    },
+    color: whiteGrey,
+  },
+  COMMUNITY_POOLS: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 15,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [{ x: -80.61, y: 0, text: 'Community pools' }],
+    },
+    color: whiteGrey,
+  },
+
+  SINGLE_SIDE_ALL_PAIRS: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 27,
+      y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: -80.61, y: 0, text: 'Pair Creation' },
-        { x: -45.61, y: 25, text: ' tool' },
+        { x: -80.61, y: 0, text: 'Single-sided ' },
+        { x: -65.61, y: 25, text: 'Liquidity' },
+        { x: -55.012, y: 45, text: 'for all pairs', fontSize: 13 },
       ],
     },
+    color: whiteGrey,
+  },
 
+  REMOVE_LIQUIDITY_SINGLE_SIDE: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 65,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: -80.61, y: 0, text: 'Remove' },
+        { x: -110.61, y: 25, text: 'Single-sided' },
+        { x: -100.61, y: 52, text: ' liquidity' },
+      ],
+    },
+    color: whiteGrey,
+  },
+  MOBILE_CAPABILITIES: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [{ x: -80.61, y: 0, text: 'Mobile capabilities ' }],
+    },
+    color: whiteGrey,
+  },
+
+  VOTING_POWER_LIQUIDITY_PROVIDERS: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 30,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: -80.61, y: 0, text: 'Voting Power' },
+        { x: -90.61, y: 25, text: ' for Liquidity Providers', fontSize: 13 },
+      ],
+    },
     color: whiteGrey,
   },
 };
 
+// Multihops swap
+// Community pools
+// Single-sided liquidity for all pairs
+// Remove Single-sided liquidity
+// Mobile capabilities
+// Voting Power for Liquidity Providers
+
 const FLAG = {
-  flag: 'translate(1003 567)',
-  shadow: 'translate(985 590)',
+  flag: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x + 13} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 28})`,
+  shadow: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x - 5} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 5})`,
 };
 
 const Roadmap2022 = ({ className }) => {
@@ -236,8 +311,8 @@ const Roadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="1230"
-            transform="translate(365 397)"
+            x2="1065"
+            transform="translate(525 397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"
@@ -248,11 +323,11 @@ const Roadmap2022 = ({ className }) => {
             data-name="Path 43816"
             d="M369,613.005a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005c.023-.017,0,4,0,4a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005Z"
             transform="translate(0 0)"
-            fill={theme.colors.primary}
+            fill={whiteGrey}
           />
 
           {/* line */}
-          <line id="Line_585" dataName="Line 585" x2="630" transform="translate(367 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+          <line id="Line_585" dataName="Line 585" x2="1150" transform="translate(367 611)" fill="none" stroke={whiteGrey} strokeWidth="4" />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];

@@ -12,7 +12,6 @@ import {
   PARTNER_HYPERCENT,
   PARTNER_ROBOSWAP,
   PARTNER_TOKENSOFT,
-  PARTNER_UFO_GAMING,
   PARTNER_ZELCORE,
 } from '../../constants/partners';
 import theme from '../../styles/theme';
