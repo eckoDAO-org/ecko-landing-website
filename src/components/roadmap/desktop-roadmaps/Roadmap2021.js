@@ -26,58 +26,57 @@ const Roadmap2021 = ({ className }) => {
         <circle
           id="Ellipse_1126"
           data-name="Ellipse 1126"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7536 5830) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7536 5825) rotate(180)"
           fill={theme.colors.primary}
         />
         <circle
           id="Ellipse_1127"
           data-name="Ellipse 1127"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7536 5424) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7536 5419) rotate(180)"
           fill={theme.colors.primary}
         />
         <circle
           id="Ellipse_1128"
           data-name="Ellipse 1128"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7184 5424) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7184 5419) rotate(180)"
           fill={theme.colors.primary}
         />
         <circle
           id="Ellipse_1129"
           data-name="Ellipse 1129"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7536 5615) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7536 5610) rotate(180)"
           fill={theme.colors.primary}
         />
         <circle
           id="Ellipse_1130"
           data-name="Ellipse 1130"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7888 5424) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7888 5419) rotate(180)"
           fill={theme.colors.primary}
         />
         <circle
           id="Ellipse_1131"
           data-name="Ellipse 1131"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(-7888 5615) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(-7888 5610) rotate(180)"
           fill={theme.colors.primary}
         />
-        <circle id="Ellipse_1132" data-name="Ellipse 1132" cx="15" cy="15" r="15" transform="translate(-7918 5394)" fill={theme.colors.primary} />
         <g id="Group_68807" data-name="Group 68807" transform="translate(-8202 4768)">
           <path id="Path_43921" data-name="Path 43921" d="M303,1047l-4-2v4Z" fill={theme.colors.primary} />
           <path id="Path_43922" data-name="Path 43922" d="M309,1047l-4-2v4Z" fill={theme.colors.primary} />
@@ -143,9 +142,9 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="_2M_TVL"
           data-name="2M TVL"
-          transform="translate(-7935 5459)"
+          transform="translate(-7925 5449)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -156,9 +155,9 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="Kaddex_Beta"
           data-name="Kaddex Beta"
-          transform="translate(-7552 5459)"
+          transform="translate(-7535 5449)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -169,9 +168,9 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="Community_Sale"
           data-name="Community Sale"
-          transform="translate(-7199 5459)"
+          transform="translate(-7176 5449)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -182,9 +181,9 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="Tokenomics_Deepdive"
           data-name="Tokenomics Deepdive"
-          transform="translate(-7902 5650)"
+          transform="translate(-7890 5640)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -198,9 +197,9 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="Website_v1"
           data-name="Website v1"
-          transform="translate(-7551 5650)"
+          transform="translate(-7535 5640)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -211,16 +210,16 @@ const Roadmap2021 = ({ className }) => {
         <text
           id="Team_Formation"
           data-name="Team Formation"
-          transform="translate(-7551 5865)"
+          transform="translate(-7541 5855)"
           fill={theme.colors.primary}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
           <tspan x="-21.76" y="0">
             Team
           </tspan>
-          <tspan x="-47.71" y="25">
+          <tspan x="-42.71" y="25">
             Formation
           </tspan>
         </text>

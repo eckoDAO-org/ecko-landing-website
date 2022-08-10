@@ -6,21 +6,19 @@ const whiteGrey = '#666666';
 
 const ROW_ELEMENT_OFFSET = 198.3;
 const ROW_CIRCLE_X_START = 300;
-const SECOND_ROW_CIRCLE_X_START = 300;
-const THIRD_ROW_CIRCLE_X_START = 300;
-const FIRST_ROW_CIRCLE_Y = 190;
-const SECOND_ROW_CIRCLE_Y = 381;
-const THIRD_ROW_CIRCLE_Y = 596;
-const FIRST_ROW_TEXT_Y = 255;
-const SECOND_ROW_TEXT_Y = 446;
-const THIRD_ROW_TEXT_Y = 662;
+const FIRST_ROW_CIRCLE_Y = 195;
+const SECOND_ROW_CIRCLE_Y = 386;
+const THIRD_ROW_CIRCLE_Y = 601;
+const FIRST_ROW_TEXT_Y = 245;
+const SECOND_ROW_TEXT_Y = 436;
+const THIRD_ROW_TEXT_Y = 652;
 
 const CONFIGURATION = {
   //FIRST ROW
   X_WALLET_BETA: {
     circle: { x: ROW_CIRCLE_X_START, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START - 60,
+      x: ROW_CIRCLE_X_START - 50,
       y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
     },
@@ -30,7 +28,7 @@ const CONFIGURATION = {
   LITEPAPER: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 15,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 20,
       y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
     },
@@ -41,7 +39,7 @@ const CONFIGURATION = {
   X_WALLET_V1: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 45,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
       y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'X-Wallet v1' }],
     },
@@ -64,11 +62,11 @@ const CONFIGURATION = {
   BRIDGED_ERC20: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 20,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 25,
       y: FIRST_ROW_TEXT_Y,
       tspan: [
         { x: -73.66, y: 0, text: 'Bridged ERC-20' },
-        { x: -58.09, y: 25, text: 'Token Pairs' },
+        { x: -62.09, y: 25, text: 'Token Pairs' },
       ],
     },
     color: theme.colors.primary,
@@ -89,7 +87,7 @@ const CONFIGURATION = {
   WEBSITE_V2: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 - 30,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 - 32,
       y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'Website v2' }],
     },
@@ -103,9 +101,9 @@ const CONFIGURATION = {
       y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -63.28, y: 0, text: 'KDX Vaulting' },
-        { x: -47.71, y: 25, text: 'programme' },
-        { x: -60.746, y: 50, text: 'available for early', fontSize: 13 },
-        { x: -30.012, y: 75, text: 'investors', fontSize: 13 },
+        { x: -52.71, y: 25, text: 'programme' },
+        { x: -73.746, y: 50, text: 'available for early', fontSize: 13 },
+        { x: -43.012, y: 70, text: 'investors', fontSize: 13 },
       ],
     },
 
@@ -114,11 +112,12 @@ const CONFIGURATION = {
   SINGLE_SIDED_LIQUIDITY: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 20,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 25,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
-        { x: -68.28, y: 0, text: 'Single Sided' },
-        { x: -47.71, y: 25, text: 'Liquidity' },
+        { x: -68.28, y: 0, text: 'Single-sided' },
+        { x: -71.71, y: 25, text: 'Add Liquidity' },
+        { x: -38.71, y: 45, text: 'KDA/KDX', fontSize: 13 },
       ],
     },
     color: theme.colors.primary,
@@ -127,11 +126,11 @@ const CONFIGURATION = {
   STAKING: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 10,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 12,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -50, y: 0, text: 'KDX Staking ' },
-        { x: -17.71, y: 25, text: 'Tool' },
+        { x: -19.71, y: 25, text: 'Tool' },
       ],
     },
     color: theme.colors.primary,
@@ -140,11 +139,11 @@ const CONFIGURATION = {
   KDX_LIQUIDITY_MINING_PROGRAMME: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 15,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 21,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -68.47, y: 0, text: 'KDX Liquidity' },
-        { x: -54.47, y: 25, text: 'Mining 2.0' },
+        { x: -56.47, y: 25, text: 'Mining 2.0' },
       ],
     },
     color: theme.colors.primary,
@@ -153,7 +152,7 @@ const CONFIGURATION = {
   NCC_AUDITING: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 15,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 20,
       y: SECOND_ROW_TEXT_Y,
       tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
     },
@@ -177,31 +176,31 @@ const CONFIGURATION = {
   MULTIHOPS_SWAP: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 20,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 30,
       y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -80.61, y: 0, text: 'Multihops swap' }],
+      tspan: [{ x: -80.61, y: 0, text: 'Multihops Swap' }],
     },
     color: whiteGrey,
   },
   COMMUNITY_POOLS: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 15,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 27,
       y: THIRD_ROW_TEXT_Y,
       tspan: [{ x: -80.61, y: 0, text: 'Community pools' }],
     },
     color: whiteGrey,
   },
 
-  SINGLE_SIDE_ALL_PAIRS: {
+  ADD_SINGLE_SIDE_ALL_PAIRS: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 27,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 37,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: -80.61, y: 0, text: 'Single-sided ' },
-        { x: -65.61, y: 25, text: 'Liquidity' },
-        { x: -55.012, y: 45, text: 'for all pairs', fontSize: 13 },
+        { x: -80.61, y: 0, text: 'Single-sided' },
+        { x: -83.61, y: 25, text: 'Add Liquidity' },
+        { x: -70.012, y: 45, text: 'for all pairs', fontSize: 13 },
       ],
     },
     color: whiteGrey,
@@ -210,12 +209,11 @@ const CONFIGURATION = {
   REMOVE_LIQUIDITY_SINGLE_SIDE: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 65,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 38,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: -80.61, y: 0, text: 'Remove' },
-        { x: -110.61, y: 25, text: 'Single-sided' },
-        { x: -100.61, y: 52, text: ' liquidity' },
+        { x: -80.61, y: 0, text: 'Single-Sided' },
+        { x: -95.61, y: 25, text: 'Remove Liquidity' },
       ],
     },
     color: whiteGrey,
@@ -223,9 +221,12 @@ const CONFIGURATION = {
   MOBILE_CAPABILITIES: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 65,
       y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -80.61, y: 0, text: 'Mobile capabilities ' }],
+      tspan: [
+        { x: -80.61, y: 0, text: 'Mobile' },
+        { x: -103.61, y: 25, text: 'Capabilities' },
+      ],
     },
     color: whiteGrey,
   },
@@ -233,11 +234,11 @@ const CONFIGURATION = {
   VOTING_POWER_LIQUIDITY_PROVIDERS: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 30,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 40,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
         { x: -80.61, y: 0, text: 'Voting Power' },
-        { x: -90.61, y: 25, text: ' for Liquidity Providers', fontSize: 13 },
+        { x: -112.61, y: 25, text: ' for Liquidity Providers', fontSize: 13 },
       ],
     },
     color: whiteGrey,
@@ -252,8 +253,8 @@ const CONFIGURATION = {
 // Voting Power for Liquidity Providers
 
 const FLAG = {
-  flag: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x + 13} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 28})`,
-  shadow: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x - 5} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 5})`,
+  flag: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x + 8} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 32})`,
+  shadow: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x - 12} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 10})`,
 };
 
 const Roadmap2022 = ({ className }) => {
@@ -311,8 +312,8 @@ const Roadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="1065"
-            transform="translate(525 397)"
+            x2="1072"
+            transform="translate(518 397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"
@@ -343,21 +344,21 @@ const Roadmap2022 = ({ className }) => {
               >
                 <circle
                   id={config}
-                  cx="15"
-                  cy="15"
-                  r="15"
+                  cx="10"
+                  cy="10"
+                  r="10"
                   transform={`translate(${nodeConfig.circle.x} ${nodeConfig.circle.y})`}
                   fill={nodeConfig.color}
                 />
                 <text
                   transform={`translate(${nodeConfig.text.x} ${nodeConfig.text.y})`}
                   fill={nodeConfig.color}
-                  fontSize="20"
+                  fontSize="16"
                   fontFamily={theme.fontFamily.basier}
                   letterSpacing="-0.1em"
                 >
                   {nodeConfig.text.tspan.map((tspan, i2) => (
-                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 20} fill={nodeConfig.color}>
+                    <tspan key={i2} x={tspan.x} y={tspan.y} fontSize={tspan.fontSize || 16} fill={nodeConfig.color}>
                       {tspan.text}
                     </tspan>
                   ))}
