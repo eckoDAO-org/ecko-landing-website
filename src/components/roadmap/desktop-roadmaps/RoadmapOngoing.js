@@ -15,64 +15,63 @@ const RoadmapOngoing = ({ className }) => {
         <circle
           id="Ellipse_1115"
           data-name="Ellipse 1115"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(666 221) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(666 216) rotate(180)"
           fill={theme.colors.yellow}
         />
         <circle
           id="Ellipse_1116"
           data-name="Ellipse 1116"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(314 30) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(314 25) rotate(180)"
           fill={theme.colors.yellow}
         />
         <circle
           id="Ellipse_1117"
           data-name="Ellipse 1117"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(314 221) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(314 216) rotate(180)"
           fill={theme.colors.yellow}
         />
-        <circle id="Ellipse_1118" data-name="Ellipse 1118" cx="15" cy="15" r="15" transform="translate(284)" fill={theme.colors.yellow} />
         <circle
           id="Ellipse_1111"
           data-name="Ellipse 1111"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(666 436) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(666 431) rotate(180)"
           fill={theme.colors.yellow}
         />
         <circle
           id="Ellipse_1112"
           data-name="Ellipse 1112"
-          cx="15"
-          cy="15"
-          r="15"
-          transform="translate(661 30) rotate(180)"
+          cx="10"
+          cy="10"
+          r="10"
+          transform="translate(661 25) rotate(180)"
           fill={theme.colors.yellow}
         />
         <circle
           id="Ellipse_1113"
           data-name="Ellipse 1113"
-          cx="10"
-          cy="10"
-          r="10"
+          cx="8"
+          cy="8"
+          r="8"
           transform="translate(1013 25) rotate(180)"
           fill={theme.colors.yellow}
         />
         <circle
           id="Ellipse_1114"
           data-name="Ellipse 1114"
-          cx="10"
-          cy="10"
-          r="10"
+          cx="8"
+          cy="8"
+          r="8"
           transform="translate(1365 25) rotate(180)"
           fill={theme.colors.yellow}
         />
@@ -80,9 +79,9 @@ const RoadmapOngoing = ({ className }) => {
         <text
           id="DAO_Transition"
           data-name="DAO Transition"
-          transform="translate(225.5 65)"
+          transform="translate(245.5 55)"
           fill={theme.colors.yellow}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -94,9 +93,9 @@ const RoadmapOngoing = ({ className }) => {
         <text
           id="Fiat_On_Ramp"
           data-name="Fiat On Ramp"
-          transform="translate(585.5 65)"
+          transform="translate(600.5 55)"
           fill={theme.colors.yellow}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -108,9 +107,9 @@ const RoadmapOngoing = ({ className }) => {
         <text
           id="New_Strategic_Partnerships"
           data-name="New Strategic Partnerships"
-          transform="translate(299.5 256)"
+          transform="translate(315 246)"
           fill={theme.colors.yellow}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -124,9 +123,9 @@ const RoadmapOngoing = ({ className }) => {
         <text
           id="Team_Expansion"
           data-name="Team Expansion"
-          transform="translate(651.5 256)"
+          transform="translate(671.5 246)"
           fill={theme.colors.yellow}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
@@ -137,9 +136,9 @@ const RoadmapOngoing = ({ className }) => {
         <text
           id="Multiplecode_auditing"
           data-name="Multiplecode auditing"
-          transform="translate(651.5 471)"
+          transform="translate(670.5 461)"
           fill={theme.colors.yellow}
-          fontSize="20"
+          fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >

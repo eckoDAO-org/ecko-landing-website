@@ -6,7 +6,7 @@ import PartnersSection from '../components/section-partners/PartnersSection';
 import ProofOfDexSection from '../components/section-proof-of-dex/ProofOfDexSection';
 import Roadmap from '../components/roadmap/Roadmap';
 import { FlexContainer } from '../components/shared/Container';
-import KaddexTeamSection from '../components/kaddex-team/KaddexTeamSection';
+//import KaddexTeamSection from '../components/kaddex-team/KaddexTeamSection';
 
 const MainContainer = () => {
   return (
@@ -16,7 +16,7 @@ const MainContainer = () => {
       <FeaturesSection />
       <TokenomicsSection />
       <Roadmap />
-      <KaddexTeamSection />
+      {/* <KaddexTeamSection /> */}
       <PartnersSection />
     </FlexContainer>
   );

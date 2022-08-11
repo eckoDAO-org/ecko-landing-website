@@ -12,7 +12,6 @@ import {
   PARTNER_HYPERCENT,
   PARTNER_ROBOSWAP,
   PARTNER_TOKENSOFT,
-  PARTNER_UFO_GAMING,
   PARTNER_ZELCORE,
 } from '../../constants/partners';
 import theme from '../../styles/theme';
@@ -67,8 +66,8 @@ const PartnersSection = () => {
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
-          <FlexContainer className="column justify-fe" gap={50}>
-            {[PARTNER_ZELCORE, PARTNER_FLUX, PARTNER_UFO_GAMING].map((partner, i) => (
+          <FlexContainer className="column justify-fe" gap={50} style={{ marginBottom: 600 }}>
+            {[PARTNER_ZELCORE, PARTNER_FLUX].map((partner, i) => (
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>

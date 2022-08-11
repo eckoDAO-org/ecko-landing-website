@@ -11,7 +11,6 @@ import bertrandCaffiPhoto from '../assets/images/kaddex-team/bertrand-caffi.jpg'
 import antonioSemeraroPhoto from '../assets/images/kaddex-team/antonio-semeraro.jpg';
 import gustavoSpelzonPhoto from '../assets/images/kaddex-team/gustavo-spelzon.jpg';
 import kateOztuncPhoto from '../assets/images/kaddex-team/kate-oztunc.jpg';
-import grantGerberPhoto from '../assets/images/kaddex-team/grant-gerber.jpg';
 import donDAgostinoPhoto from '../assets/images/kaddex-team/don-d-agostino.jpg';
 import steveDAgostinoPhoto from '../assets/images/kaddex-team/steve-d-agostino.jpg';
 import adrianCardosoPhoto from '../assets/images/kaddex-team/adrian-cardoso.jpg';
@@ -32,10 +31,6 @@ const ROLE_CEO = {
 const ROLE_BD = {
   short: 'BD',
   role: 'Business Development',
-};
-const ROLE_CGO = {
-  short: 'CGO',
-  role: 'Chief Governance Officer',
 };
 const ROLE_CMO = {
   short: 'CMO',
@@ -111,18 +106,6 @@ const ANDREA_TULLI = {
   linkedin: 'https://www.linkedin.com/in/andrea-tulli-0916111b6/',
 
   photo: andreaTulliPhoto,
-};
-
-const GRANT_GERBGER = {
-  id: 130,
-  firstname: 'Grant',
-  lastname: 'Gerber',
-  role: ROLE_CGO.role,
-  description:
-    'Hey everyone! My name is Grant Gerber, Aka KDX Frogman, I run Community for Kaddex! I manage the social channels, communications, and have been working closely with the rest of the team to design a powerful and robust governance system. My background is in communications, with an emphasis on community management in dynamic environments. I have worked on a few other DeFi projects and DAOs such as Fei Protocol on the community side of things and have been semi involved in crypto since 2018. I firmly believe that DeFi and DAO’s are a means to revolutionize how we think about work and the future of management. My main interest in DeFi is truly democratizing the governance process through trust signaling, and deterministically recognizing meaningful contributions. Too often systems only recognize those already in power and not the ones who seek to create positive change, I will change that! Outside of Kaddex you can find me spinning records (I’m not DJ Kaddex), working on vintage motorbikes and vehicles, and helping to build the metaverse!',
-  photo: grantGerberPhoto,
-  linkedin: 'https://www.linkedin.com/in/grantgerber/',
-  twitter: 'https://twitter.com/KDX_Frogman',
 };
 
 const STEVE_D_AGOSTINO = {
@@ -313,7 +296,6 @@ export const KADDEX_TEAM_MEMBERS = [
   NICOLAS_RAMSRUD,
   BERTRAND_CAFFI,
   ANDREA_TULLI,
-  GRANT_GERBGER,
   STEVE_D_AGOSTINO,
   COSIMO_BELLINI,
   DON_D_AGOSTINO,
