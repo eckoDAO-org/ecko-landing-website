@@ -24,10 +24,10 @@ export const FOOTER_ABOUT = {
       text: 'Partners',
       href: 'partners',
     },
-    {
-      text: 'Team',
-      href: 'team',
-    },
+    // {
+    //   text: 'Team',
+    //   href: 'team',
+    // },
     {
       text: 'X-Wallet',
       link: 'https://xwallet.kaddex.com',

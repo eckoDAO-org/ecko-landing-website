@@ -25,9 +25,9 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover, hideXwallet }
       <NavigationItem href="/#roadmap" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Roadmap
       </NavigationItem>
-      <NavigationItem href="/#team" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
+      {/* <NavigationItem href="/#team" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Team
-      </NavigationItem>
+      </NavigationItem> */}
       <NavigationItem href="/#partners" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Partners
       </NavigationItem>
