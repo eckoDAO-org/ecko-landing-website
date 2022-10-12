@@ -150,14 +150,14 @@ const CONFIGURATION = {
 
   MULTIHOPS_SWAP: {
     position: 13,
-    text: [{ text: 'Multihops swap' }],
+    text: [{ text: 'Community pools' }],
 
     isCompleted: false,
   },
 
   COMMUNITY_POOLS: {
     position: 14,
-    text: [{ text: 'Community pools' }],
+    text: [{ text: 'Multihops swap' }],
 
     isCompleted: false,
   },

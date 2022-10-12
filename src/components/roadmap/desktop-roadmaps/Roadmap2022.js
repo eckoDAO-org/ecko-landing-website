@@ -178,7 +178,7 @@ const CONFIGURATION = {
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 30,
       y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -80.61, y: 0, text: 'Multihops Swap' }],
+      tspan: [{ x: -88.61, y: 0, text: 'Community pools' }],
     },
     color: whiteGrey,
   },
@@ -187,7 +187,7 @@ const CONFIGURATION = {
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 27,
       y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -80.61, y: 0, text: 'Community pools' }],
+      tspan: [{ x: -76.61, y: 0, text: 'Multihops Swap' }],
     },
     color: whiteGrey,
   },
