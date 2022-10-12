@@ -65,13 +65,13 @@ export const FOOTER_LEARN = {
       target: '_blank',
     },
     {
-      text: 'Liquidity Mining 1.0',
-      href: '/liquidity-mining-1.0.pdf',
+      text: 'Liquidity Mining 2.0',
+      href: '/liquidity-mining-2.0.pdf',
       target: '_blank',
     },
     {
-      text: 'Liquidity Mining 2.0',
-      href: '/liquidity-mining-2.0.pdf',
+      text: 'KDX Multiplier Preview',
+      href: '/kdx-multiplier-preview.pdf',
       target: '_blank',
     },
     {
