@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 68%;
+    height: 72%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -147,45 +147,40 @@ const CONFIGURATION = {
     isCompleted: true,
   },
 
-  MULTIHOPS_SWAP: {
+  COMMUNITY_POOLS: {
     position: 13,
     text: [{ text: 'Community pools' }],
-    isCompleted: false,
+    isCompleted: true,
     isMain: true,
   },
 
-  COMMUNITY_POOLS: {
+  MULTIHOPS_SWAP: {
     position: 14,
     text: [{ text: 'Multihops swap' }],
-
     isCompleted: false,
   },
 
   SINGLE_SIDE_ALL_PAIRS: {
     position: 15,
     text: [{ text: 'Single-sided liquidity for all pairs' }],
-
     isCompleted: false,
   },
 
   REMOVE_LIQUIDITY_SINGLE_SIDE: {
     position: 16,
     text: [{ text: 'Remove Single-sided liquidity' }],
-
     isCompleted: false,
   },
 
   MOBILE_CAPABILITIES: {
     position: 17,
     text: [{ text: 'Mobile capabilities' }],
-
     isCompleted: false,
   },
 
   VOTING_POWER_LIQUIDITY_PROVIDERS: {
     position: 17,
     text: [{ text: 'Voting Power for Liquidity Providers' }],
-
     isCompleted: false,
   },
 };
