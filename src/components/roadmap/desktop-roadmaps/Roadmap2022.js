@@ -170,24 +170,25 @@ const CONFIGURATION = {
       ],
     },
 
+    color: theme.colors.primary,
+  },
+
+  COMMUNITY_POOLS: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 27,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [{ x: -76.61, y: 0, text: 'Community pools' }],
+    },
     color: '#FA41A5',
   },
 
   MULTIHOPS_SWAP: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 30,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -88.61, y: 0, text: 'Community pools' }],
-    },
-    color: whiteGrey,
-  },
-  COMMUNITY_POOLS: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 27,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 30,
       y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -76.61, y: 0, text: 'Multihops Swap' }],
+      tspan: [{ x: -88.61, y: 0, text: 'Multihops Swap' }],
     },
     color: whiteGrey,
   },
@@ -253,8 +254,8 @@ const CONFIGURATION = {
 // Voting Power for Liquidity Providers
 
 const FLAG = {
-  flag: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x + 8} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 32})`,
-  shadow: `translate(${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.x - 12} ${CONFIGURATION.KADDEX_V1_FULL_LAUNCH.circle.y - 10})`,
+  flag: `translate(${CONFIGURATION.COMMUNITY_POOLS.circle.x + 8} ${CONFIGURATION.COMMUNITY_POOLS.circle.y - 32})`,
+  shadow: `translate(${CONFIGURATION.COMMUNITY_POOLS.circle.x - 12} ${CONFIGURATION.COMMUNITY_POOLS.circle.y - 10})`,
 };
 
 const Roadmap2022 = ({ className }) => {
@@ -312,8 +313,8 @@ const Roadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="1072"
-            transform="translate(518 397)"
+            x2="1221"
+            transform="translate(368 397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"
@@ -324,11 +325,22 @@ const Roadmap2022 = ({ className }) => {
             data-name="Path 43816"
             d="M369,613.005a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005c.023-.017,0,4,0,4a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005Z"
             transform="translate(0 0)"
-            fill={whiteGrey}
+            fill={theme.colors.primary}
           />
 
           {/* line */}
-          <line id="Line_585" dataName="Line 585" x2="1150" transform="translate(367 611)" fill="none" stroke={whiteGrey} strokeWidth="4" />
+          <line id="Line_585" dataName="Line 585" x2="1150" transform="translate(370 611)" fill="none" stroke={whiteGrey} strokeWidth="4" />
+
+          {/*blue line */}
+          <line
+            id="Line_585"
+            dataName="Line 585"
+            x2="136"
+            transform="translate(368.7 611)"
+            fill="none"
+            stroke={theme.colors.primary}
+            strokeWidth="4"
+          />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];

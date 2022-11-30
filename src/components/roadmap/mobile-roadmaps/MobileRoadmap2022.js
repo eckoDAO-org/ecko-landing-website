@@ -145,14 +145,13 @@ const CONFIGURATION = {
     position: 12,
     text: [{ text: 'Kaddex v1 full launch' }],
     isCompleted: true,
-    isMain: true,
   },
 
   MULTIHOPS_SWAP: {
     position: 13,
     text: [{ text: 'Community pools' }],
-
     isCompleted: false,
+    isMain: true,
   },
 
   COMMUNITY_POOLS: {
