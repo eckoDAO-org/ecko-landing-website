@@ -114,7 +114,7 @@ const CONFIGURATION = {
 
   AUDIT: {
     position: 7,
-    text: [{ text: 'Audit' }],
+    text: [{ text: 'Secondary Audit' }],
     isCompleted: false,
   },
   DAO_PORTAL_V1_TESTING: {

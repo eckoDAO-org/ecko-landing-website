@@ -113,7 +113,7 @@ const CONFIGURATION = {
     text: {
       x: ROW_CIRCLE_X_START + 40,
       y: SECOND_ROW_TEXT_Y,
-      tspan: [{ x: -50.61, y: 0, text: 'Audit' }],
+      tspan: [{ x: -92.61, y: 0, text: 'Secondary Audit' }],
     },
     color: whiteGrey,
   },
