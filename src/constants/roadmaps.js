@@ -17,6 +17,12 @@ export const R_2022 = {
   id: '2022',
   color: 'primary',
 };
+export const R_2023 = {
+  desktopImage: <Roadmap2022 />,
+  mobileImage: <MobileRoadmap2022 />,
+  id: '2023',
+  color: 'primary',
+};
 export const R_ONGOING = {
   desktopImage: <RoadmapOngoing />,
   mobileImage: <MobileRoadmapOngoing />,
@@ -24,4 +30,4 @@ export const R_ONGOING = {
   color: 'yellow',
 };
 
-export const ROADMAPS = [R_2021, R_2022, R_ONGOING];
+export const ROADMAPS = [R_2021, R_2022, R_2023, R_ONGOING];

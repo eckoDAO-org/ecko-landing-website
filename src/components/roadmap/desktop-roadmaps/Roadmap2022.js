@@ -1,11 +1,10 @@
 import React from 'react';
-import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
 const whiteGrey = '#666666';
 
-const ROW_ELEMENT_OFFSET = 198.3;
-const ROW_CIRCLE_X_START = 300;
+const ROW_ELEMENT_OFFSET = 250;
+const ROW_CIRCLE_X_START = 450;
 const FIRST_ROW_CIRCLE_Y = 195;
 const SECOND_ROW_CIRCLE_Y = 386;
 const THIRD_ROW_CIRCLE_Y = 601;
@@ -71,11 +70,14 @@ const CONFIGURATION = {
     },
     color: theme.colors.primary,
   },
+
+  //SECOND ROW
+
   SWAPPING_INTERFACE: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: FIRST_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 20,
-      y: FIRST_ROW_TEXT_Y,
+      x: ROW_CIRCLE_X_START + 20,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -58.09, y: 0, text: '3d Swapping' },
         { x: -47.71, y: 25, text: 'Interface' },
@@ -85,84 +87,19 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   WEBSITE_V2: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: FIRST_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 - 32,
-      y: FIRST_ROW_TEXT_Y,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET - 32,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'Website v2' }],
-    },
-    color: theme.colors.primary,
-  },
-  //SECOND ROW
-  KDX_VAULTING_PROGRAMME: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 20,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -63.28, y: 0, text: 'KDX Vaulting' },
-        { x: -52.71, y: 25, text: 'programme' },
-        { x: -73.746, y: 50, text: 'available for early', fontSize: 13 },
-        { x: -43.012, y: 70, text: 'investors', fontSize: 13 },
-      ],
-    },
-
-    color: theme.colors.primary,
-  },
-  SINGLE_SIDED_LIQUIDITY: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 25,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -68.28, y: 0, text: 'Single-sided' },
-        { x: -71.71, y: 25, text: 'Add Liquidity' },
-        { x: -38.71, y: 45, text: 'KDA/KDX', fontSize: 13 },
-      ],
-    },
-    color: theme.colors.primary,
-  },
-
-  STAKING: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 12,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -50, y: 0, text: 'KDX Staking ' },
-        { x: -19.71, y: 25, text: 'Tool' },
-      ],
-    },
-    color: theme.colors.primary,
-  },
-
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 21,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -68.47, y: 0, text: 'KDX Liquidity' },
-        { x: -56.47, y: 25, text: 'Mining 2.0' },
-      ],
-    },
-    color: theme.colors.primary,
-  },
-
-  NCC_AUDITING: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 20,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
     },
     color: theme.colors.primary,
   },
 
   KADDEX_V1_FULL_LAUNCH: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET - 40,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: 8.61, y: 0, text: 'Kaddex v1' },
@@ -173,89 +110,83 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
 
-  COMMUNITY_POOLS: {
+  NCC_AUDITING: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 20,
+      y: SECOND_ROW_TEXT_Y,
+      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
+    },
+    color: theme.colors.primary,
+  },
+
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 21,
+      y: SECOND_ROW_TEXT_Y,
+      tspan: [
+        { x: -68.47, y: 0, text: 'KDX Liquidity' },
+        { x: -56.47, y: 25, text: 'Mining 2.0' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  //THIRD ROW
+
+  STAKING: {
+    circle: { x: ROW_CIRCLE_X_START, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + 12,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: -50, y: 0, text: 'KDX Staking ' },
+        { x: -19.71, y: 25, text: 'Tool' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  SINGLE_SIDED_LIQUIDITY: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 27,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 25,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: -68.28, y: 0, text: 'Single-sided' },
+        { x: -71.71, y: 25, text: 'Add Liquidity' },
+        { x: -38.71, y: 45, text: 'KDA/KDX', fontSize: 13 },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  KDX_VAULTING_PROGRAMME: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 24,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: -63.28, y: 0, text: 'KDX Vaulting' },
+        { x: -52.71, y: 25, text: 'programme' },
+        { x: -73.746, y: 50, text: 'available for early', fontSize: 13 },
+        { x: -43.012, y: 70, text: 'investors', fontSize: 13 },
+      ],
+    },
+
+    color: theme.colors.primary,
+  },
+
+  COMMUNITY_POOLS: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 27,
       y: THIRD_ROW_TEXT_Y,
       tspan: [{ x: -76.61, y: 0, text: 'Community pools' }],
     },
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
-
-  MULTIHOPS_SWAP: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 30,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [{ x: -88.61, y: 0, text: 'Multihops Swap' }],
-    },
-    color: whiteGrey,
-  },
-
-  ADD_SINGLE_SIDE_ALL_PAIRS: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 37,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [
-        { x: -80.61, y: 0, text: 'Single-sided' },
-        { x: -83.61, y: 25, text: 'Add Liquidity' },
-        { x: -70.012, y: 45, text: 'for all pairs', fontSize: 13 },
-      ],
-    },
-    color: whiteGrey,
-  },
-
-  REMOVE_LIQUIDITY_SINGLE_SIDE: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 38,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [
-        { x: -80.61, y: 0, text: 'Single-Sided' },
-        { x: -95.61, y: 25, text: 'Remove Liquidity' },
-      ],
-    },
-    color: whiteGrey,
-  },
-  MOBILE_CAPABILITIES: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 5 + 65,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [
-        { x: -80.61, y: 0, text: 'Mobile' },
-        { x: -103.61, y: 25, text: 'Capabilities' },
-      ],
-    },
-    color: whiteGrey,
-  },
-
-  VOTING_POWER_LIQUIDITY_PROVIDERS: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 6 + 40,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [
-        { x: -80.61, y: 0, text: 'Voting Power' },
-        { x: -112.61, y: 25, text: ' for Liquidity Providers', fontSize: 13 },
-      ],
-    },
-    color: whiteGrey,
-  },
-};
-
-// Multihops swap
-// Community pools
-// Single-sided liquidity for all pairs
-// Remove Single-sided liquidity
-// Mobile capabilities
-// Voting Power for Liquidity Providers
-
-const FLAG = {
-  flag: `translate(${CONFIGURATION.COMMUNITY_POOLS.circle.x + 8} ${CONFIGURATION.COMMUNITY_POOLS.circle.y - 32})`,
-  shadow: `translate(${CONFIGURATION.COMMUNITY_POOLS.circle.x - 12} ${CONFIGURATION.COMMUNITY_POOLS.circle.y - 10})`,
 };
 
 const Roadmap2022 = ({ className }) => {
@@ -335,7 +266,7 @@ const Roadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="136"
+            x2="1370"
             transform="translate(368.7 611)"
             fill="none"
             stroke={theme.colors.primary}
@@ -378,14 +309,6 @@ const Roadmap2022 = ({ className }) => {
               </g>
             );
           })}
-
-          {/* FLAG */}
-          <g id="ring" transform={FLAG.flag}>
-            <RoadmapFlagcon />
-          </g>
-          <g id="ring" transform={FLAG.shadow}>
-            <RoadmapEllipseShadowIcon />
-          </g>
         </g>
       </g>
     </svg>

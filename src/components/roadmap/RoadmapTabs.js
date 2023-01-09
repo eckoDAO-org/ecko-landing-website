@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { R_2021, R_2022, R_ONGOING } from '../../constants/roadmaps';
+import { R_2021, R_2022, R_2023, R_ONGOING } from '../../constants/roadmaps';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 import { FlexContainer } from '../shared/Container';
@@ -39,6 +39,20 @@ const RoadmapTabs = ({ showLabels, translateX, selectedRoadmapId, setSelectedRoa
               onClick={() => setSelectedRoadmapId(R_2022.id)}
             >
               {R_2022.id}
+            </Label>
+          </FlexContainer>
+          <FlexContainer
+            className="justify-fs"
+            id={`tab-${R_2023.id}`}
+            style={{ marginRight: width <= theme.mediaQueries.mobilePixel ? (width - 100 - 100) / 2 : (width - 400 - 266) / 2 }}
+          >
+            <Label
+              fontFamily="syncopate"
+              color={selectedRoadmapId === R_2023.id ? R_2023.color : 'white'}
+              fontSize={width >= theme.mediaQueries.mobilePixel ? 80 : 30}
+              onClick={() => setSelectedRoadmapId(R_2023.id)}
+            >
+              {R_2023.id}
             </Label>
           </FlexContainer>
           <FlexContainer className="justify-fs" id={`tab-${R_ONGOING.id}`}>
