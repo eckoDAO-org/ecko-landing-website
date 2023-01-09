@@ -28,18 +28,21 @@ const MobileRoadmap2021 = ({ color }) => {
       <Line color={color} />
       {Object.values(CONFIGURATION)
         .sort((a, b) => a.position - b.position)
+        .concat([...Array(6).fill()])
         .map((value, i) => {
           return (
             <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2 }}>
-              <div
-                style={{
-                  position: 'relative',
-                  height: 16,
-                  width: 16,
-                  background: getColor(color),
-                  borderRadius: '50%',
-                }}
-              />
+              {value?.text && (
+                <div
+                  style={{
+                    position: 'relative',
+                    height: 16,
+                    width: 16,
+                    background: getColor(color),
+                    borderRadius: '50%',
+                  }}
+                />
+              )}
 
               <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
                 {value?.text?.map((tspan, j) => (

@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 100%;
+    height: 8%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -23,7 +23,7 @@ const Line = styled(FlexContainer)`
   }
 `;
 
-const MobileRoadmap2022 = ({ color }) => {
+const MobileRoadmap2023 = ({ color }) => {
   return (
     <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }}>
       <Line color={color} />
@@ -66,90 +66,75 @@ const MobileRoadmap2022 = ({ color }) => {
   );
 };
 
-export default MobileRoadmap2022;
+export default MobileRoadmap2023;
 
 const CONFIGURATION = {
-  X_WALLET_BETA: {
+  MOBILE_NATIVE: {
     position: 0,
-    text: [{ text: 'X-Wallet Beta' }],
-    href: 'https://xwallet.kaddex.com/',
+    text: [{ text: 'Mobile-native Swaps on X-Wallet' }],
     isCompleted: true,
+    isMain: true,
   },
-  LITEPAPER: {
+
+  MULTIHOPS_SWAP: {
     position: 1,
-    text: [{ text: 'Litepaper' }],
-    href: '/kaddex litepaper.pdf',
-
-    isCompleted: true,
+    text: [{ text: 'Multihop Swaps' }],
+    isCompleted: false,
   },
-  X_WALLET_V1: {
+
+  SINGLE_SIDE_ALL_PAIRS: {
     position: 2,
-    text: [{ text: 'X-Wallet v1' }],
-    href: 'https://xwallet.kaddex.com/',
-
-    isCompleted: true,
+    text: [{ text: 'Add/Remove Single-sided liquidity' }, { text: 'for all pairs', fontSize: 10 }],
+    isCompleted: false,
   },
-  PUBLIC_SALE: {
+
+  API_DATA_ANALYTICS: {
     position: 3,
-    text: [{ text: 'Public Sale' }],
-    isCompleted: true,
+    text: [{ text: 'API Data Analytics V1' }],
+    isCompleted: false,
   },
-  BRIDGED_ERC20: {
+
+  VOTING_POWER: {
     position: 4,
-    text: [{ text: 'Bridged ERC-20 Token Pairs' }],
-    isCompleted: true,
+    text: [{ text: 'Voting Power' }, { text: 'for Liquidity providers', fontSize: 10 }],
+    isCompleted: false,
   },
-  SWAPPING_INTERFACE: {
+
+  ECO_GROWTH: {
     position: 5,
-    text: [{ text: '3d Swapping Interface' }],
-
-    isCompleted: true,
+    text: [{ text: 'Major ecosystem growth announcement' }],
+    isCompleted: false,
   },
-  WEBSITE_V2: {
+
+  MULTIPLIER_AVAILABLE: {
     position: 6,
-    text: [{ text: 'Website v2' }],
-    isCompleted: true,
+    text: [{ text: '$KDX Multiplier available' }, { text: 'for all pairs', fontSize: 10 }],
+    isCompleted: false,
   },
 
-  KDX_VAULTING_PROGRAMME: {
+  AUDIT: {
     position: 7,
-    text: [{ text: 'KDX Vaulting programme' }, { text: 'Available for early investors', fontSize: 10 }],
-
-    isCompleted: true,
+    text: [{ text: 'Secondary Audit' }],
+    isCompleted: false,
   },
-
-  SINGLE_SIDED_LIQUIDITY: {
+  DAO_PORTAL_V1_TESTING: {
     position: 8,
-    text: [{ text: 'Single Sided Liquidity' }],
-    isCompleted: true,
+    text: [{ text: 'KaddexDAO Portal V1' }, { text: 'Testing', fontSize: 10 }],
+    isCompleted: false,
   },
-  STAKING: {
+  DAO_PORTAL_V1_BETA: {
     position: 9,
-    text: [{ text: 'KDX Staking Tool' }],
-    isCompleted: true,
+    text: [{ text: 'KaddexDAO Portal V1' }, { text: 'BETA', fontSize: 10 }],
+    isCompleted: false,
   },
-
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
+  CEX: {
     position: 10,
-    text: [{ text: 'KDX Liquidity Mining 2.0' }],
-    isCompleted: true,
+    text: [{ text: 'CEX listing' }],
+    isCompleted: false,
   },
-
-  NCC_AUDITING: {
+  KADDEX_2_TESTING: {
     position: 11,
-    text: [{ text: 'NCC Auditing' }],
-    isCompleted: true,
-  },
-
-  KADDEX_V1_FULL_LAUNCH: {
-    position: 12,
-    text: [{ text: 'Kaddex v1 full launch' }],
-    isCompleted: true,
-  },
-
-  COMMUNITY_POOLS: {
-    position: 13,
-    text: [{ text: 'Community pools' }],
-    isCompleted: true,
+    text: [{ text: 'Kaddex 2.0' }, { text: 'Testing Environment', fontSize: 10 }],
+    isCompleted: false,
   },
 };
