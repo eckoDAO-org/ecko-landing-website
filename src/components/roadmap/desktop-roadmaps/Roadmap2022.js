@@ -74,9 +74,9 @@ const CONFIGURATION = {
   //SECOND ROW
 
   SWAPPING_INTERFACE: {
-    circle: { x: ROW_CIRCLE_X_START, y: SECOND_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + 20,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 20,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -58.09, y: 0, text: '3d Swapping' },
@@ -87,72 +87,36 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
   WEBSITE_V2: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET - 32,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 - 32,
       y: SECOND_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'Website v2' }],
     },
     color: theme.colors.primary,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
+  KDX_VAULTING_PROGRAMME: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 24,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
-        { x: 8.61, y: 0, text: 'Kaddex v1' },
-        { x: 0, y: 25, text: 'full launch' },
+        { x: -63.28, y: 0, text: 'KDX Vaulting' },
+        { x: -52.71, y: 25, text: 'programme' },
+        { x: -73.746, y: 50, text: 'available for early', fontSize: 13 },
+        { x: -43.012, y: 70, text: 'investors', fontSize: 13 },
       ],
     },
 
-    color: theme.colors.primary,
-  },
-
-  NCC_AUDITING: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 20,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
-    },
-    color: theme.colors.primary,
-  },
-
-  KDX_LIQUIDITY_MINING_PROGRAMME: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: SECOND_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4 + 21,
-      y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -68.47, y: 0, text: 'KDX Liquidity' },
-        { x: -56.47, y: 25, text: 'Mining 2.0' },
-      ],
-    },
-    color: theme.colors.primary,
-  },
-
-  //THIRD ROW
-
-  STAKING: {
-    circle: { x: ROW_CIRCLE_X_START, y: THIRD_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + 12,
-      y: THIRD_ROW_TEXT_Y,
-      tspan: [
-        { x: -50, y: 0, text: 'KDX Staking ' },
-        { x: -19.71, y: 25, text: 'Tool' },
-      ],
-    },
     color: theme.colors.primary,
   },
 
   SINGLE_SIDED_LIQUIDITY: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 25,
-      y: THIRD_ROW_TEXT_Y,
+      y: SECOND_ROW_TEXT_Y,
       tspan: [
         { x: -68.28, y: 0, text: 'Single-sided' },
         { x: -71.71, y: 25, text: 'Add Liquidity' },
@@ -162,16 +126,51 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
 
-  KDX_VAULTING_PROGRAMME: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
+  STAKING: {
+    circle: { x: ROW_CIRCLE_X_START, y: SECOND_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 24,
+      x: ROW_CIRCLE_X_START + 12,
+      y: SECOND_ROW_TEXT_Y,
+      tspan: [
+        { x: -50, y: 0, text: 'KDX Staking ' },
+        { x: -19.71, y: 25, text: 'Tool' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  //THIRD ROW
+  KDX_LIQUIDITY_MINING_PROGRAMME: {
+    circle: { x: ROW_CIRCLE_X_START, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + 21,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: -63.28, y: 0, text: 'KDX Vaulting' },
-        { x: -52.71, y: 25, text: 'programme' },
-        { x: -73.746, y: 50, text: 'available for early', fontSize: 13 },
-        { x: -43.012, y: 70, text: 'investors', fontSize: 13 },
+        { x: -68.47, y: 0, text: 'KDX Liquidity' },
+        { x: -56.47, y: 25, text: 'Mining 2.0' },
+      ],
+    },
+    color: theme.colors.primary,
+  },
+
+  NCC_AUDITING: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 20,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
+    },
+    color: theme.colors.primary,
+  },
+
+  KADDEX_V1_FULL_LAUNCH: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
+      y: THIRD_ROW_TEXT_Y,
+      tspan: [
+        { x: 8.61, y: 0, text: 'Kaddex v1' },
+        { x: 0, y: 25, text: 'full launch' },
       ],
     },
 
