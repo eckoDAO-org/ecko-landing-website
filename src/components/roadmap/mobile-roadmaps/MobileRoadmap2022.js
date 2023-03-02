@@ -71,21 +71,21 @@ export default MobileRoadmap2022;
 const CONFIGURATION = {
   X_WALLET_BETA: {
     position: 0,
-    text: [{ text: 'X-Wallet Beta' }],
-    href: 'https://xwallet.kaddex.com/',
+    text: [{ text: 'eckoWALLET Beta' }],
+    href: 'https://wallet.ecko.finance/',
     isCompleted: true,
   },
   LITEPAPER: {
     position: 1,
     text: [{ text: 'Litepaper' }],
-    href: '/kaddex litepaper.pdf',
+    href: '/eckoDEX litepaper.pdf',
 
     isCompleted: true,
   },
   X_WALLET_V1: {
     position: 2,
-    text: [{ text: 'X-Wallet v1' }],
-    href: 'https://xwallet.kaddex.com/',
+    text: [{ text: 'eckoWALLET v1' }],
+    href: 'https://wallet.ecko.finance/',
 
     isCompleted: true,
   },
@@ -141,9 +141,9 @@ const CONFIGURATION = {
     isCompleted: true,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
+  ECKODEX_V1_FULL_LAUNCH: {
     position: 12,
-    text: [{ text: 'Kaddex v1 full launch' }],
+    text: [{ text: 'eckoDEX v1 full launch' }],
     isCompleted: true,
   },
 

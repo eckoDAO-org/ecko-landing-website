@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { KaddexLogo } from '../../../assets';
+import { EckoDEXLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import { FlexContainer } from '../../shared/Container';
@@ -29,7 +29,7 @@ const Container = styled(FlexContainer)`
     backdrop-filter: blur(10px);
   }
 
-  .kaddex-logo {
+  .eckoDEX-logo {
     cursor: pointer;
     @media (min-width: 880px) {
       position: absolute;
@@ -60,7 +60,7 @@ const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   };
   return (
     <Container
-      desktopPixel={880}
+      desktopPixel={972}
       className={`align-ce justify-ce ${className}`}
       tabletClassName="justify-ce"
       mobileClassName="justify-ce"
@@ -68,13 +68,13 @@ const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
     >
-      <KaddexLogo className="kaddex-logo" onClick={goToTop} />
-      {width >= 880 && (
+      <EckoDEXLogo className="eckoDEX-logo" onClick={goToTop} />
+      {width >= 972 && (
         <FlexContainer className="align-ce" gap={24}>
           <NavigationItems />
         </FlexContainer>
       )}
-      {width < 880 && <Hamburger />}
+      {width < 972 && <Hamburger />}
     </Container>
   );
 };

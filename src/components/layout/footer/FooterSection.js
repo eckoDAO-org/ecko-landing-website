@@ -29,7 +29,7 @@ const FooterSection = () => {
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }} tabletClassName="column" mobileClassName="column">
         <FlexContainer gap={80} columnGap={50}>
           <FooterItemsList title="About">
-            <NavigationItems fontSize={13} color="yellow" disableHover hideXwallet />
+            <NavigationItems fontSize={13} color="yellow" disableHover hideWallet hideDAO />
           </FooterItemsList>
           <FooterItemsList {...FOOTER_SUPPORT} />
         </FlexContainer>
@@ -47,12 +47,7 @@ const FooterSection = () => {
               alignItems: 'self-end',
             }}
           >
-            <NccLogo
-              className="pointer"
-              onClick={() => {
-                window.open(`https://drive.google.com/file/d/1shHQ5ssADcJE4DOAOH2YXxnn9EoMtBJu/view?usp=sharing`, '_blank', 'noopener,noreferrer');
-              }}
-            />
+            <NccLogo />
           </div>
         </FlexContainer>
       )}
@@ -61,13 +56,7 @@ const FooterSection = () => {
         <FlexContainer className="column align-ce" style={{ marginTop: 70 }} gap={20}>
           <Socials />
           <MailchimpFormContainer />
-          <NccLogo
-            className="pointer"
-            style={{ marginTop: 14 }}
-            onClick={() => {
-              window.open(`https://drive.google.com/file/d/1shHQ5ssADcJE4DOAOH2YXxnn9EoMtBJu/view?usp=sharing`, '_blank', 'noopener,noreferrer');
-            }}
-          />
+          <NccLogo style={{ marginTop: 14 }} />
           <Copyrights />
         </FlexContainer>
       )}

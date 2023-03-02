@@ -38,7 +38,7 @@ const FeaturesSection = () => {
             mobileStyle={{ marginTop: 35 }}
           >
             Lightining speed, at zero cost, on Kadena’s secure infinite scalability. Have a look at the most innovative and game-changing
-            characteristics that make Kaddex a never-seen before DEX.
+            characteristics that make eckoDEX a never-seen before DEX.
           </Label>
         </FlexContainer>
         {width >= DESKTOP_PIXEL && <FeatureCard feature={ZERO_GAS} />}

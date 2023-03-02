@@ -77,9 +77,9 @@ const CONFIGURATION = {
     position: 3,
     text: [{ text: '2M TVL' }],
   },
-  KADDEX_BETA: {
+  ECKODEX_BETA: {
     position: 4,
-    text: [{ text: 'Kaddex Beta' }],
+    text: [{ text: 'eckoDEX Beta' }],
   },
   COMMUNITY_SALE: {
     position: 5,

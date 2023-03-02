@@ -17,17 +17,17 @@ export const TOKENOMICS_BURN = {
   gradientColors: ['#549CCF', '#718DC8', '#8C7DC1'],
 };
 
-export const TOKENOMICS_COMMUNITY_SALES = {
+export const TOKENOMICS_COMMUNITY = {
   icon: '20%',
-  title: 'COMMUNITY SALES',
-  description: 'The token sales will finance Kaddex operations, while offering early access to KDX.',
+  title: 'COMMUNITY',
+  description: 'The token sales will finance eckoDAO’s operations, while offering early access to $KDX.',
   gradientColors: ['#8C7DC1', '#E54DAA', '#F9588F'],
 };
 
 export const TOKENOMICS_DAO_TREASURY = {
   icon: '25%',
   title: 'DAO TREASURY',
-  description: 'Pursuing a long term vision, allocated with 25% of tokens to ensure community led development of the Kaddex ecosystem.',
+  description: 'Pursuing a long term vision, allocated with 25% of tokens to ensure community led development of the eckoDEX ecosystem.',
   gradientColors: ['#F9588F', '#F86781', '#F77772'],
 };
 
@@ -42,7 +42,7 @@ export const TOKENOMICS = [
   TOKENOMICS_VCS,
   TOKENOMICS_TEAM,
   TOKENOMICS_BURN,
-  TOKENOMICS_COMMUNITY_SALES,
+  TOKENOMICS_COMMUNITY,
   TOKENOMICS_DAO_TREASURY,
   TOKENOMICS_LIQUIDITY_MINING,
 ];

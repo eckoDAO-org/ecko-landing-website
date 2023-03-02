@@ -17,11 +17,11 @@ const CONFIGURATION = {
   X_WALLET_BETA: {
     circle: { x: ROW_CIRCLE_X_START, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START - 50,
+      x: ROW_CIRCLE_X_START - 54,
       y: FIRST_ROW_TEXT_Y,
-      tspan: [{ x: 0, y: 0, text: 'X-Wallet Beta' }],
+      tspan: [{ x: 0, y: 0, text: 'eckoWALLET Beta' }],
     },
-    href: 'https://xwallet.kaddex.com/',
+    href: 'https://wallet.ecko.finance/',
     color: theme.colors.primary,
   },
   LITEPAPER: {
@@ -31,18 +31,18 @@ const CONFIGURATION = {
       y: FIRST_ROW_TEXT_Y,
       tspan: [{ x: -47.71, y: 0, text: 'Litepaper' }],
     },
-    href: '/kaddex litepaper.pdf',
+    href: '/eckoDEX litepaper.pdf',
 
     color: theme.colors.primary,
   },
   X_WALLET_V1: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
     text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 46,
       y: FIRST_ROW_TEXT_Y,
-      tspan: [{ x: 0, y: 0, text: 'X-Wallet v1' }],
+      tspan: [{ x: 0, y: 0, text: 'eckoWALLET v1' }],
     },
-    href: 'https://xwallet.kaddex.com/',
+    href: 'https://wallet.ecko.finance/',
 
     color: theme.colors.primary,
   },
@@ -163,14 +163,14 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
 
-  KADDEX_V1_FULL_LAUNCH: {
+  ECKODEX_V1_FULL_LAUNCH: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: THIRD_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 - 40,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: 8.61, y: 0, text: 'Kaddex v1' },
-        { x: 0, y: 25, text: 'full launch' },
+        { x: 8, y: 0, text: 'eckoDEX v1' },
+        { x: 4, y: 25, text: 'full launch' },
       ],
     },
 

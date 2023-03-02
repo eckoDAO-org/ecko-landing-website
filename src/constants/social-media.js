@@ -1,34 +1,29 @@
-import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
+import { DiscordIcon, GithubIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
 
 const TWITTER = {
   name: 'Twitter',
-  link: 'https://twitter.com/kaddexofficial',
+  link: 'https://twitter.com/eckoDAO',
   icon: <TwitterIcon />,
 };
 const DISCORD = {
   name: 'Discord',
-  link: 'https://discord.gg/QSJpHRFDcv',
+  link: 'https://discord.com/invite/eckodao',
   icon: <DiscordIcon />,
 };
 
-const MEDIUM = {
-  name: 'Medium',
-  link: 'https://medium.com/kaddex',
-  icon: <MediumIcon />,
-};
 const GITHUB = {
   name: 'Github',
-  link: 'https://github.com/kaddex-org/',
+  link: 'https://github.com/eckoDAO-org/ecko-landing-website',
   icon: <GithubIcon />,
 };
 const TELEGRAM = {
   name: 'Telegram',
-  link: 'https://t.me/KaddeXofficial',
+  link: 'https://t.me/eckoDAO',
   icon: <TelegramIcon />,
 };
 const YOUTUBE = {
   name: 'Youtube',
-  link: 'https://www.youtube.com/channel/UCqne8XRfTGTQMr_9BXyfHBg',
+  link: 'https://www.youtube.com/@eckodao',
   icon: <YoutubeIcon />,
 };
-export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, MEDIUM, GITHUB, TELEGRAM];
+export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, GITHUB, TELEGRAM];

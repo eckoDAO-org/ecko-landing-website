@@ -21,7 +21,7 @@ const CareerIntroduction = () => {
           Careers
         </Label>
         <Label className="nowrap" size="huge" fontFamily="syncopate">
-          at Kaddex
+          at eckoDEX
         </Label>
       </FlexContainer>
 

@@ -6,7 +6,7 @@ export const PROOF_DEX_SWAP = {
   title: 'Swap',
   description: 'Swap safely with no transaction costs',
   color: 'pink',
-  link: 'https://swap.kaddex.com',
+  link: 'https://swap.ecko.finance',
 };
 export const PROOF_DEX_POOL = {
   key: 'POOL',
@@ -14,16 +14,16 @@ export const PROOF_DEX_POOL = {
   title: 'Pool',
   description: 'Provide liquidity for any pair',
   color: 'yellow',
-  link: 'https://swap.kaddex.com/liquidity/add-liquidity-double-sided',
+  link: 'https://swap.ecko.finance/liquidity/add-liquidity-double-sided',
 };
 export const PROOF_DEX_STAKE = {
-  key: 'STAKE',
+  key: 'VOTE',
   icon: <StakeIcon />,
-  title: 'Stake',
-  description: 'Stake KDX and earn 0.05% on all trades',
+  title: 'Vote',
+  description: 'KDX holders lock to gain voting power, and get rewarded.',
   color: 'primary',
   className: 'disabled',
-  link: 'https://swap.kaddex.com/stake',
+  link: 'https://swap.ecko.finance/stake',
 };
 export const PROOF_DEX_FARM = {
   key: 'FARM',
@@ -32,7 +32,7 @@ export const PROOF_DEX_FARM = {
   description: 'Access KDX liquidity mining 2.0',
   color: 'white',
   className: 'disabled',
-  link: 'https://swap.kaddex.com/liquidity/rewards',
+  link: 'https://swap.ecko.finance/liquidity/rewards',
 };
 
 export const PROOF_DEX = [PROOF_DEX_SWAP, PROOF_DEX_POOL, PROOF_DEX_STAKE, PROOF_DEX_FARM];

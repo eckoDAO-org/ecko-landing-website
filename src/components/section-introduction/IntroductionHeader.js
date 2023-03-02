@@ -63,7 +63,7 @@ const IntroductionHeader = () => {
             zIndex: 10,
           }}
           onClick={() => {
-            window.open('https://swap.kaddex.com/', '_blank');
+            window.open('https://swap.ecko.finance/', '_blank');
           }}
         >
           <FlexContainer className="w-100 h-100 justify-ce align-ce pointer">

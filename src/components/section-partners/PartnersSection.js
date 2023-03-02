@@ -8,10 +8,11 @@ import {
   PARTNERS,
   PARTNER_ARCHITECH,
   PARTNER_FLUX,
-  PARTNER_GENESIS_BLOCK,
+  PARTNER_ARKADE,
+  PARTNER_CFDB,
   PARTNER_HYPERCENT,
   PARTNER_ROBOSWAP,
-  PARTNER_TOKENSOFT,
+  PARTNER_KADEFI,
   PARTNER_ZELCORE,
 } from '../../constants/partners';
 import theme from '../../styles/theme';
@@ -66,13 +67,13 @@ const PartnersSection = () => {
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
-          <FlexContainer className="column justify-fe" gap={50} style={{ marginBottom: 600 }}>
-            {[PARTNER_ZELCORE, PARTNER_FLUX].map((partner, i) => (
+          <FlexContainer className="column justify-fe" gap={50} style={{ marginBottom: 100 }}>
+            {[PARTNER_ZELCORE, PARTNER_FLUX, PARTNER_ARKADE].map((partner, i) => (
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>
           <FlexContainer className="column" gap={50} style={{ marginBottom: 250 }}>
-            {[PARTNER_TOKENSOFT, PARTNER_GENESIS_BLOCK, PARTNER_ROBOSWAP].map((partner, i) => (
+            {[PARTNER_KADEFI, PARTNER_CFDB, PARTNER_ROBOSWAP].map((partner, i) => (
               <PartnerCard key={i} partner={partner} />
             ))}
           </FlexContainer>

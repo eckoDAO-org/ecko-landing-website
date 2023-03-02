@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 8%;
+    height: 24%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -71,38 +71,38 @@ export default MobileRoadmap2023;
 const CONFIGURATION = {
   MOBILE_NATIVE: {
     position: 0,
-    text: [{ text: 'Mobile-native Swaps on X-Wallet' }],
+    text: [{ text: 'Mobile-native Swaps on eckoWALLET' }],
+    isCompleted: true,
+  },
+
+  SINGLE_SIDE_ALL_PAIRS: {
+    position: 1,
+    text: [{ text: 'Add/Remove Single-sided liquidity' }, { text: 'for all pairs', fontSize: 10 }],
+    isCompleted: true,
+  },
+
+  ECO_GROWTH: {
+    position: 2,
+    text: [{ text: 'Major ecosystem growth ' }, { text: 'announcement: Introducing “eckoDAO”' }],
     isCompleted: true,
     isMain: true,
   },
 
   MULTIHOPS_SWAP: {
-    position: 1,
+    position: 3,
     text: [{ text: 'Multihop Swaps' }],
     isCompleted: false,
   },
 
-  SINGLE_SIDE_ALL_PAIRS: {
-    position: 2,
-    text: [{ text: 'Add/Remove Single-sided liquidity' }, { text: 'for all pairs', fontSize: 10 }],
-    isCompleted: false,
-  },
-
   API_DATA_ANALYTICS: {
-    position: 3,
+    position: 4,
     text: [{ text: 'API Data Analytics V1' }],
     isCompleted: false,
   },
 
   VOTING_POWER: {
-    position: 4,
-    text: [{ text: 'Voting Power' }, { text: 'for Liquidity providers', fontSize: 10 }],
-    isCompleted: false,
-  },
-
-  ECO_GROWTH: {
     position: 5,
-    text: [{ text: 'Major ecosystem growth announcement' }],
+    text: [{ text: 'Voting Power' }, { text: 'for Liquidity providers', fontSize: 10 }],
     isCompleted: false,
   },
 
@@ -119,12 +119,12 @@ const CONFIGURATION = {
   },
   DAO_PORTAL_V1_TESTING: {
     position: 8,
-    text: [{ text: 'KaddexDAO Portal V1' }, { text: 'Testing', fontSize: 10 }],
+    text: [{ text: 'eckoDAO Portal V1' }, { text: 'Testing', fontSize: 10 }],
     isCompleted: false,
   },
   DAO_PORTAL_V1_BETA: {
     position: 9,
-    text: [{ text: 'KaddexDAO Portal V1' }, { text: 'BETA', fontSize: 10 }],
+    text: [{ text: 'eckoDAO Portal V1' }, { text: 'BETA', fontSize: 10 }],
     isCompleted: false,
   },
   CEX: {
@@ -132,9 +132,9 @@ const CONFIGURATION = {
     text: [{ text: 'CEX listing' }],
     isCompleted: false,
   },
-  KADDEX_2_TESTING: {
+  ECKODEX_2_TESTING: {
     position: 11,
-    text: [{ text: 'Kaddex 2.0' }, { text: 'Testing Environment', fontSize: 10 }],
+    text: [{ text: 'eckoDEX 2.0' }, { text: 'Testing Environment', fontSize: 10 }],
     isCompleted: false,
   },
 };

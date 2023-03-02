@@ -13,7 +13,7 @@ const Item = styled.a`
   }
 `;
 
-const NavigationItems = ({ fontSize, color, onClick, disableHover, hideXwallet }) => {
+const NavigationItems = ({ fontSize, color, onClick, disableHover, hideWallet, hideDAO }) => {
   return (
     <>
       <NavigationItem href="/#features" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
@@ -25,26 +25,44 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover, hideXwallet }
       <NavigationItem href="/#roadmap" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Roadmap
       </NavigationItem>
-      {/* <NavigationItem href="/#team" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
-        Team
-      </NavigationItem> */}
       <NavigationItem href="/#partners" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
         Partners
       </NavigationItem>
-      <NavigationItem href="/careers" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
-        Careers
+
+      <NavigationItem
+        href="https://blog.ecko.finance"
+        target="_blank"
+        fontSize={fontSize}
+        color={color}
+        onClick={onClick}
+        disableHover={disableHover}
+      >
+        Blog
       </NavigationItem>
 
-      {!hideXwallet && (
+      {!hideWallet && (
         <NavigationItem
-          href="https://xwallet.kaddex.com"
+          href="https://wallet.ecko.finance"
           target="_blank"
           fontSize={fontSize}
           color={color}
           onClick={onClick}
           disableHover={disableHover}
         >
-          X-Wallet
+          eckoWALLET
+        </NavigationItem>
+      )}
+
+      {!hideDAO && (
+        <NavigationItem
+          href="https://dao.ecko.finance"
+          target="_blank"
+          fontSize={fontSize}
+          color={color}
+          onClick={onClick}
+          disableHover={disableHover}
+        >
+          eckoDAO
         </NavigationItem>
       )}
     </>
@@ -65,7 +83,7 @@ export const NavigationItem = ({ id, className, href, children, fontSize, color,
       onMouseLeave={() => setHover(false)}
     >
       <>
-        <Label className="capitalize" size="small" color={color} fontSize={fontSize}>
+        <Label size="small" color={color} fontSize={fontSize}>
           {children}
         </Label>
         {!disableHover && <div className="underline"></div>}

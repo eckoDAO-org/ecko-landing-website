@@ -18,7 +18,7 @@ const CONFIGURATION = {
     text: {
       x: 750,
       y: 255,
-      tspan: [{ x: -47.71, y: 0, text: 'X-Wallet v1' }],
+      tspan: [{ x: -47.71, y: 0, text: 'eckoWALLET v1' }],
     },
 
     color: theme.colors.primary,
@@ -36,13 +36,13 @@ const CONFIGURATION = {
 
     color: theme.colors.primary,
   },
-  KADDEX_INTEGRATION: {
+  ECKODEX_INTEGRATION: {
     circle: { x: 1240, y: 190 },
     text: {
       x: 1200,
       y: 255,
       tspan: [
-        { x: 30, y: 0, text: 'Kaddex' },
+        { x: 30, y: 0, text: 'eckoDEX' },
         { x: 0, y: 25, text: 'Integration' },
       ],
     },
@@ -150,7 +150,7 @@ const CONFIGURATION = {
     text: {
       x: 1270,
       y: 662,
-      tspan: [{ x: -70.61, y: 0, text: 'X-Wallet v2' }],
+      tspan: [{ x: -70.61, y: 0, text: 'eckoWALLET v2' }],
     },
 
     color: whiteGrey,

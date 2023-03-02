@@ -17,7 +17,7 @@ export const FOOTER_ABOUT = {
       href: 'tokenomics',
     },
     {
-      text: 'Kaddex Roadmap',
+      text: 'eckoDEX Roadmap',
       href: 'roadmap',
     },
     {
@@ -29,8 +29,8 @@ export const FOOTER_ABOUT = {
     //   href: 'team',
     // },
     {
-      text: 'X-Wallet',
-      link: 'https://xwallet.kaddex.com',
+      text: 'eckoWALLET',
+      link: 'https://wallet.ecko.finance',
     },
   ],
 };
@@ -40,17 +40,22 @@ export const FOOTER_SUPPORT = {
   items: [
     {
       text: 'Documentation',
-      href: 'https://docs.kaddex.com/',
+      href: 'https://docs.ecko.finance/eckodex/welcome/introduction',
       target: '_blank',
     },
     {
       text: 'GitHub',
-      href: 'https://github.com/kaddex-org/',
+      href: 'https://github.com/eckoDAO-org/ecko-landing-website',
       target: '_blank',
     },
     {
-      text: 'X-Wallet',
-      href: 'https://xwallet.kaddex.com',
+      text: 'eckoWALLET',
+      href: 'https://wallet.ecko.finance',
+      target: '_blank',
+    },
+    {
+      text: 'eckoDAO',
+      href: 'https://dao.ecko.finance',
       target: '_blank',
     },
   ],
@@ -61,7 +66,7 @@ export const FOOTER_LEARN = {
   items: [
     {
       text: 'Lite Paper',
-      href: '/kaddex litepaper.pdf',
+      href: '/litepaper-eckoDEX.pdf',
       target: '_blank',
     },
     {

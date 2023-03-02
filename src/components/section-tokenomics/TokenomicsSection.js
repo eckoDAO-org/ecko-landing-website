@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
-import { TokenomicsCircleIcon, TokenOmicsIcon, TokenomicsIcon, TokenomicsKaddexLogoIcon } from '../../assets';
+import { TokenomicsCircleIcon, TokenOmicsIcon, TokenomicsIcon, TokenomicsEckoLogoIcon } from '../../assets';
 import Label from '../shared/Label';
 import TokenomicsCard from './TokenomicsCard';
 import { FlexContainer } from '../shared/Container';
@@ -153,7 +153,7 @@ const TokenomicsSection = () => {
         </FlexContainer>
         <IconContainer className="relative">
           <TokenomicsCircleIcon className="tokenomics-circle" />
-          <TokenomicsKaddexLogoIcon className="tokenomics-triangle" />
+          <TokenomicsEckoLogoIcon className="tokenomics-triangle" />
         </IconContainer>
       </FlexContainer>
     </FlexContainer>

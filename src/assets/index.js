@@ -1,8 +1,7 @@
 export { ReactComponent as HamburgerIcon } from './images/layout/hamburger.svg';
-export { ReactComponent as KaddexLogo } from './images/layout/kaddex-logo.svg';
+export { ReactComponent as EckoDEXLogo } from './images/layout/eckoDEX.svg';
 export { ReactComponent as StripeIcon } from './images/layout/stripes.svg';
-export { ReactComponent as KaddexLogoFooterIcon } from './images/layout/kaddex-logo-footer.svg';
-export { ReactComponent as KaddexFooterIcon } from './images/layout/kaddex-footer.svg';
+export { ReactComponent as EckoDexLogoFooterIcon } from './images/layout/eckoDEX-footer.svg';
 export { ReactComponent as ArrowsDownIcon } from './images/layout/arrows-down.svg';
 export { ReactComponent as CloseIcon } from './images/layout/close-icon.svg';
 export { ReactComponent as ArrowDownIcon } from './images/layout/arrow-down.svg';
@@ -17,6 +16,10 @@ export { ReactComponent as GenesisBlockLogo } from './images/partners/genesis-bl
 export { ReactComponent as RoboswapLogo } from './images/partners/roboswap.svg';
 export { ReactComponent as SpotLogo } from './images/partners/spot.svg';
 export { ReactComponent as TokensoftLogo } from './images/partners/tokensoft.svg';
+export { ReactComponent as KadefiLogo } from './images/partners/kadefi.svg';
+export { ReactComponent as CfdbLogo } from './images/partners/cfdb.svg';
+export { ReactComponent as ArkadeLogo } from './images/partners/arkade.svg';
+
 export { ReactComponent as UfoGamingLogo } from './images/partners/ufo-gaming.svg';
 export { ReactComponent as ZelcoreLogo } from './images/partners/zelcore.svg';
 export { ReactComponent as HypercentLogo } from './images/partners/hypercent.svg';
@@ -40,7 +43,7 @@ export { ReactComponent as ZeroGasIcon } from './images/features/zero-gas.svg';
 
 // TOKENOMICS
 export { ReactComponent as TokenomicsCircleIcon } from './images/tokenomics/tokenomics-circle.svg';
-export { ReactComponent as TokenomicsKaddexLogoIcon } from './images/tokenomics/tokenomics-kaddex-logo.svg';
+export { ReactComponent as TokenomicsEckoLogoIcon } from './images/tokenomics/logo_eckoDEX.svg';
 export { ReactComponent as TokenomicsIcon } from './images/tokenomics/tokenomics.svg';
 export { ReactComponent as TokenOmicsIcon } from './images/tokenomics/token-omics.svg';
 

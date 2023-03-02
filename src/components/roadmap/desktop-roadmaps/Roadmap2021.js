@@ -154,15 +154,15 @@ const Roadmap2021 = ({ className }) => {
         </text>
         <text
           id="Kaddex_Beta"
-          data-name="Kaddex Beta"
+          data-name="eckoDEX Beta"
           transform="translate(-7535 5449)"
           fill={theme.colors.primary}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
         >
-          <tspan x="-58.09" y="0">
-            Kaddex Beta
+          <tspan x="-62.09" y="0">
+            eckoDEX Beta
           </tspan>
         </text>
         <text

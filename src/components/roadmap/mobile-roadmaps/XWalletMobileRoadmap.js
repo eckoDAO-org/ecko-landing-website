@@ -73,7 +73,7 @@ const CONFIGURATION = {
   },
   X_WALLET_V1: {
     position: 1,
-    text: [{ text: 'X-Wallet v1' }],
+    text: [{ text: 'eckoWALLET v1' }],
 
     isCompleted: true,
   },
@@ -83,9 +83,9 @@ const CONFIGURATION = {
 
     isCompleted: true,
   },
-  KADDEX_INTEGRATION: {
+  ECKODEX_INTEGRATION: {
     position: 3,
-    text: [{ text: 'Kaddex Integration' }],
+    text: [{ text: 'eckoDEX Integration' }],
     isCompleted: true,
   },
   KD_LAUNCH_INTEGRATION: {
@@ -139,7 +139,7 @@ const CONFIGURATION = {
 
   X_WALLET_V2: {
     position: 14,
-    text: [{ text: 'X-Wallet v2' }],
+    text: [{ text: 'eckoWALLET v2' }],
     isCompleted: false,
   },
   AUDITING: {

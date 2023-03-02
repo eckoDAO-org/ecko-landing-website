@@ -1,0 +1,19 @@
+<svg id="Group_86657" data-name="Group 86657" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="276.93" height="229.89" viewBox="0 0 276.93 229.89">
+  <defs>
+    <linearGradient id="linear-gradient-eckodex" x1="-0.044" y1="0.5" x2="1.021" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffd21e"/>
+      <stop offset="1" stop-color="orange"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-eckodex-2" x1="0.247" y1="-0.049" x2="0.724" y2="0.986" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0faffa"/>
+      <stop offset="1" stop-color="aqua"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-eckodex-3" x1="0.886" y1="-0.049" x2="-1.038" y2="2.689" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff00a7"/>
+      <stop offset="0.966" stop-color="#686bf0"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_73367" data-name="Path 73367" d="M1684.741-1330.868v-43.293h97.585l21.574,43.293Z" transform="translate(-1574.165 1560.755)" fill="url(#linear-gradient-eckodex)"/>
+  <path id="Path_73368" data-name="Path 73368" d="M1735.118-1466.627h-48.253l113.676,229.89h48.391Z" transform="translate(-1572.003 1466.627)" fill="url(#linear-gradient-eckodex-2)"/>
+  <path id="Path_73369" data-name="Path 73369" d="M1793.061-1466.627l-24.224,48.508L1678.3-1236.741h-48.359L1744.7-1466.627Z" transform="translate(-1629.946 1466.627)" fill="url(#linear-gradient-eckodex-3)"/>
+</svg>

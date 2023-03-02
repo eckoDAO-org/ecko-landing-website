@@ -33,12 +33,12 @@ const JobPositions = () => {
         </Accordion>
 
         <Accordion title="Engineering" gradient={['#8C7DC1', '#E54DAA', '#F9588F']}>
-          <a href="Kaddex Coding Expert.pdf" target="_blank'">
+          <a href="eckoDEX Coding Expert.pdf" target="_blank'">
             <Label size="normal" color="white">
               SENIOR CODING EXPERT
             </Label>
           </a>
-          <a href="Kaddex SERVER ARCHITECT_ADMINISTRATOR.pdf" target="_blank'">
+          <a href="eckoDEX SERVER ARCHITECT_ADMINISTRATOR.pdf" target="_blank'">
             <Label size="normal" color="white">
               SERVER ARCHITECT-ADMINISTRATOR
             </Label>

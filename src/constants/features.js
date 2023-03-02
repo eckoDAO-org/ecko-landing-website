@@ -66,7 +66,7 @@ export const DAO = {
     </span>
   ),
   description:
-    'The Kaddex DAO will play a large role in Kaddex operations, controlling the parameters for individual pools. The DAO will have a strong focus on ecosystem development, working towards Kadena’s blockchain overall growth.',
+    'eckoDAO will play a large role in eckoDEX operations, controlling the parameters for individual pools. The DAO will have a strong focus on ecosystem development, working towards Kadena’s blockchain overall growth.',
 };
 export const DECENTRALIZED = {
   icon: <DecentralizedIcon />,
@@ -86,27 +86,21 @@ export const MULTI_PROTOCOL = {
   color: 'primary',
   title: 'Multi-Protocol',
   description:
-    'Kaddex will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about different networks, but just access value through Kaddex single platform.',
+    'eckoDEX will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about different networks, but just access value through eckoDEX single platform.',
 };
 export const STAKING = {
   icon: <StakingIcon />,
   color: 'pink',
-  title: (
-    <span>
-      Staking
-      <br />
-      &nbsp;
-    </span>
-  ),
+  title: 'Governance Mining',
   description:
-    'KDX Stakers will earn 0.05% on all swaps taking place on Kaddex. This will give holders a simple way to earn passive income while still participating in the governance.',
+    'KDX Token holders can stake their tokens to gain voting power for governance participation, incentivizing long-term network success. Governance Mining participants receive 0.05% of swaps to encourage continued locking and increase voting power.',
 };
 export const GOVERNANCE = {
   icon: <GovernanceIcon />,
   color: 'yellow',
   title: 'Governance',
   description:
-    'Kaddex is built on community, our governance system will give the users control of network incentives, protocol mechanics, and pool rewards, all while maintaining our approach to safe DeFi.',
+    'eckoDEX is built on community, our governance system will give the users control of network incentives, protocol mechanics, and pool rewards, all while maintaining our approach to safe DeFi.',
 };
 
 export const FEATURES = [ZERO_GAS, LIQUIDITY_MINING, SETTLEMENTS, DAO, DECENTRALIZED, MULTI_PROTOCOL, STAKING];
