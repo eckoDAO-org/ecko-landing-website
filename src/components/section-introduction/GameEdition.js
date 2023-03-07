@@ -4,16 +4,17 @@ import { FlexContainer } from '../shared/Container';
 import theme from '../../styles/theme';
 import { CircleBackground } from '../shared/RadiusBackground';
 import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
-import gameboy_eckoDEX from '../../assets/images/game-edition/gameboy_eckoDEX.png';
+import Lottie from 'lottie-react';
+import gameEditionNew from '../../assets/images/game-edition-new.json';
 
-/* const lottieDefaultOptions = {
+const lottieDefaultOptions = {
   loop: false,
   autoplay: false,
-  animationData: gameEdition,
+  animationData: gameEditionNew,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
-}; */
+};
 
 const GameEdition = () => {
   const [width] = useWindowSize();
@@ -39,13 +40,8 @@ const GameEdition = () => {
           transform: `translate(-50%, -50%)${width < theme.mediaQueries.mobilePixel ? ' rotate(90deg)' : ''}`,
         }}
       />
-      <img
-        src={gameboy_eckoDEX}
-        style={{ position: 'relative', width: width >= theme.mediaQueries.mobilePixel ? '50%' : '100%', height: '50%' }}
-        alt="game-edition"
-      />
 
-      {/* <Lottie
+      <Lottie
         animationData={lottieDefaultOptions.animationData}
         loop={lottieDefaultOptions.loop}
         autoPlay={lottieDefaultOptions.autoplay}
@@ -59,7 +55,7 @@ const GameEdition = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-      /> */}
+      />
     </FlexContainer>
   );
 };
