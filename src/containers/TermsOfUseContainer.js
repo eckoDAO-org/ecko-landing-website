@@ -56,7 +56,7 @@ const TermsOfUseContainer = () => {
           Acceptance of the Terms of Use
         </Label>
         <Label fontSize={20} fontFamily="medium">
-          <p>
+          <p style={{ wordBreak: 'break-word' }}>
             These terms of use are entered into by and between you and eckoDAO, a Swiss non-profit association and their affiliates (collectively, “
             <strong>eckoDEX,</strong>” “<strong>we,</strong>” or “<strong>us</strong>”). The following terms and conditions, together with any
             documents they expressly incorporate by reference (collectively, “<strong>Terms of Use</strong>”), govern your access to and use of
