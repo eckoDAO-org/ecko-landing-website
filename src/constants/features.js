@@ -93,7 +93,7 @@ export const STAKING = {
   color: 'pink',
   title: 'Governance Mining',
   description:
-    'KDX Token holders can stake their tokens to gain voting power for governance participation, incentivizing long-term network success. Governance Mining participants receive 0.05% of swaps to encourage continued locking and increase voting power.',
+    'KDX Token holders can participate in Governance Mining to gain voting power for governance participation, incentivizing long-term network success. Governance Mining participants receive 0.05% of swaps to encourage continued locking and increase voting power.',
 };
 export const GOVERNANCE = {
   icon: <GovernanceIcon />,
