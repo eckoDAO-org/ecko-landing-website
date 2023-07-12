@@ -55,7 +55,7 @@ const CONFIGURATION = {
         { x: -118, y: 45, text: 'Introducing “eckoDAO”' },
       ],
     },
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
 
   MULTIHOPS_SWAP: {
@@ -68,7 +68,7 @@ const CONFIGURATION = {
         { x: -40.61, y: 25, text: 'Swaps' },
       ],
     },
-    color: whiteGrey,
+    color: '#FA41A5',
   },
 
   //second row
@@ -178,8 +178,8 @@ const CONFIGURATION = {
 };
 
 const FLAG = {
-  flag: `translate(${CONFIGURATION.ECO_GROWTH.circle.x + 8} ${CONFIGURATION.ECO_GROWTH.circle.y - 32})`,
-  shadow: `translate(${CONFIGURATION.ECO_GROWTH.circle.x - 12} ${CONFIGURATION.ECO_GROWTH.circle.y - 10})`,
+  flag: `translate(${CONFIGURATION.MULTIHOPS_SWAP.circle.x + 8} ${CONFIGURATION.MULTIHOPS_SWAP.circle.y - 32})`,
+  shadow: `translate(${CONFIGURATION.MULTIHOPS_SWAP.circle.x - 12} ${CONFIGURATION.MULTIHOPS_SWAP.circle.y - 10})`,
 };
 
 const Roadmap2023 = ({ className }) => {
@@ -211,7 +211,7 @@ const Roadmap2023 = ({ className }) => {
       </g>
 
       {/*blue line */}
-      <line id="Line_585" dataName="Line 585" x2="1140" transform="translate(0 421)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+      <line id="Line_585" dataName="Line 585" x2="1454" transform="translate(0 421)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
 
       {Object.keys(CONFIGURATION).map((config, i) => {
         const nodeConfig = CONFIGURATION[config];
