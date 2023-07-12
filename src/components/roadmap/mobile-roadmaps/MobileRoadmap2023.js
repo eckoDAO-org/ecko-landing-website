@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 24%;
+    height: 35%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -85,13 +85,13 @@ const CONFIGURATION = {
     position: 2,
     text: [{ text: 'Major ecosystem growth ' }, { text: 'announcement: Introducing “eckoDAO”' }],
     isCompleted: true,
-    isMain: true,
   },
 
   MULTIHOPS_SWAP: {
     position: 3,
     text: [{ text: 'Multihop Swaps' }],
-    isCompleted: false,
+    isCompleted: true,
+    isMain: true,
   },
 
   API_DATA_ANALYTICS: {
