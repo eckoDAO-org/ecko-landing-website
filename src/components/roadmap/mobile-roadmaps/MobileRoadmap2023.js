@@ -87,7 +87,7 @@ const CONFIGURATION = {
     isCompleted: true,
   },
 
-  MULTIHOPS_SWAP: {
+  MULTIHOP_SWAP: {
     position: 3,
     text: [{ text: 'Multihop Swaps' }],
     isCompleted: true,

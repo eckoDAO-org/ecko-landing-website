@@ -58,14 +58,14 @@ const CONFIGURATION = {
     color: theme.colors.primary,
   },
 
-  MULTIHOPS_SWAP: {
+  MULTIHOP_SWAP: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: THIRD_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 30,
       y: THIRD_ROW_TEXT_Y,
       tspan: [
-        { x: -55.61, y: 0, text: 'Multihops' },
-        { x: -40.61, y: 25, text: 'Swaps' },
+        { x: -52.61, y: 0, text: 'Multihop' },
+        { x: -38.61, y: 25, text: 'Swaps' },
       ],
     },
     color: '#FA41A5',
@@ -178,8 +178,8 @@ const CONFIGURATION = {
 };
 
 const FLAG = {
-  flag: `translate(${CONFIGURATION.MULTIHOPS_SWAP.circle.x + 8} ${CONFIGURATION.MULTIHOPS_SWAP.circle.y - 32})`,
-  shadow: `translate(${CONFIGURATION.MULTIHOPS_SWAP.circle.x - 12} ${CONFIGURATION.MULTIHOPS_SWAP.circle.y - 10})`,
+  flag: `translate(${CONFIGURATION.MULTIHOP_SWAP.circle.x + 8} ${CONFIGURATION.MULTIHOP_SWAP.circle.y - 32})`,
+  shadow: `translate(${CONFIGURATION.MULTIHOP_SWAP.circle.x - 12} ${CONFIGURATION.MULTIHOP_SWAP.circle.y - 10})`,
 };
 
 const Roadmap2023 = ({ className }) => {
