@@ -21,6 +21,7 @@ const GoTopButton = styled.div`
   line-height: 0;
   opacity: 0.8;
   cursor: pointer;
+  margin-right: 60px;
 
   transition: all 0.5s ease;
   animation: smoothOut 1s;
