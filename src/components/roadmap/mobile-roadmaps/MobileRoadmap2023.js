@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 35%;
+    height: 53%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -91,50 +91,50 @@ const CONFIGURATION = {
     position: 3,
     text: [{ text: 'Multihop Swaps' }],
     isCompleted: true,
+  },
+
+  ECKOGOV_DEVNET: {
+    position: 4,
+    text: [{ text: 'eckoGOV - Devnet' }],
+    isCompleted: true,
+  },
+
+  FUSION_BRIDGE_LIVE: {
+    position: 5,
+    text: [{ text: 'Fusion Bridge Live - zUSD listing' }],
+    isCompleted: true,
     isMain: true,
   },
 
-  API_DATA_ANALYTICS: {
-    position: 4,
-    text: [{ text: 'API Data Analytics V1' }],
-    isCompleted: false,
-  },
-
-  VOTING_POWER: {
-    position: 5,
-    text: [{ text: 'Voting Power' }, { text: 'for Liquidity providers', fontSize: 10 }],
-    isCompleted: false,
-  },
-
-  MULTIPLIER_AVAILABLE: {
+  ECKOGOV_TESTNET: {
     position: 6,
-    text: [{ text: '$KDX Multiplier available' }, { text: 'for all pairs', fontSize: 10 }],
+    text: [{ text: 'eckoGOV - Testnet' }],
     isCompleted: false,
   },
 
-  AUDIT: {
+  ECKO_DASHBOARD: {
     position: 7,
-    text: [{ text: 'Secondary Audit' }],
+    text: [{ text: 'eckoDASHBOARD - NEW analytics' }],
     isCompleted: false,
   },
-  DAO_PORTAL_V1_TESTING: {
+  ECKOGOV_MAINNET: {
     position: 8,
-    text: [{ text: 'eckoDAO Portal V1' }, { text: 'Testing', fontSize: 10 }],
-    isCompleted: false,
-  },
-  DAO_PORTAL_V1_BETA: {
-    position: 9,
-    text: [{ text: 'eckoDAO Portal V1' }, { text: 'BETA', fontSize: 10 }],
+    text: [{ text: 'eckoGOV - Mainnet' }],
     isCompleted: false,
   },
   CEX: {
-    position: 10,
+    position: 9,
     text: [{ text: 'CEX listing' }],
     isCompleted: false,
   },
-  ECKODEX_2_TESTING: {
+  ECKO_GROWTH_2: {
+    position: 10,
+    text: [{ text: 'Major ecosystem growth ' }, { text: 'announcement: Coming soon!' }],
+    isCompleted: false,
+  },
+  ECKODEX_2: {
     position: 11,
-    text: [{ text: 'eckoDEX 2.0' }, { text: 'Testing Environment', fontSize: 10 }],
+    text: [{ text: 'eckoDEX 2.0' }],
     isCompleted: false,
   },
 };

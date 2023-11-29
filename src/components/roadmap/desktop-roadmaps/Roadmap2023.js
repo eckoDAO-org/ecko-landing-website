@@ -68,92 +68,70 @@ const CONFIGURATION = {
         { x: -38.61, y: 25, text: 'Swaps' },
       ],
     },
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
 
   //second row
 
-  API_DATA_ANALYTICS: {
+  ECKOGOV_DEVNET: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 65,
       y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -68.61, y: 0, text: 'API' },
-        { x: -118.61, y: 25, text: 'Data Analytics V1' },
-      ],
+      tspan: [{ x: -122, y: 0, text: 'eckoGOV - Devnet' }],
     },
-    color: whiteGrey,
+    color: theme.colors.primary,
   },
 
-  VOTING_POWER_LIQUIDITY_PROVIDERS: {
+  FUSION_BRIDGE_LIVE: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: SECOND_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 40,
       y: SECOND_ROW_TEXT_Y,
       tspan: [
-        { x: -94.61, y: 0, text: 'Voting Power for' },
-        { x: -104.61, y: 25, text: 'Liquidity Providers' },
+        { x: -106.61, y: 0, text: 'Fusion Bridge Live -' },
+        { x: -80.61, y: 25, text: 'zUSD listing' },
       ],
     },
-    color: whiteGrey,
+    color: '#FA41A5',
   },
 
-  MULTIPLIER_AVAILABLE: {
+  ECKOGOV_TESTNET: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: SECOND_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 40,
       y: SECOND_ROW_TEXT_Y,
-      tspan: [
-        { x: -90.61, y: 0, text: '$KDX Multiplier' },
-        { x: -63.61, y: 25, text: 'available' },
-        { x: -68.61, y: 45, text: 'for all pairs', fontSize: 13 },
-      ],
+      tspan: [{ x: -102, y: 0, text: 'eckoGOV - Testnet' }],
     },
     color: whiteGrey,
   },
-  AUDIT: {
+  ECKO_DASHBOARD: {
     circle: { x: ROW_CIRCLE_X_START, y: SECOND_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + 40,
       y: SECOND_ROW_TEXT_Y,
-      tspan: [{ x: -92.61, y: 0, text: 'Secondary Audit' }],
+      tspan: [
+        { x: -85.61, y: 0, text: 'eckoDASHBOARD -' },
+        { x: -78.61, y: 25, text: 'NEW analytics' },
+      ],
     },
     color: whiteGrey,
   },
 
   // third row (top)
-  DAO_PORTAL_V1_TESTING: {
+  ECKOGOV_MAINNET: {
     circle: { x: ROW_CIRCLE_X_START, y: FIRST_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + 40,
       y: FIRST_ROW_TEXT_Y,
-      tspan: [
-        { x: -60.61, y: 0, text: 'eckoDAO' },
-        { x: -66.61, y: 25, text: 'Portal V1' },
-        { x: -52.61, y: 45, text: 'Testing', fontSize: 13 },
-      ],
+      tspan: [{ x: -102, y: 0, text: 'eckoGOV - Mainnet' }],
     },
     color: whiteGrey,
   },
-  DAO_PORTAL_V1_BETA: {
+  CEX: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: FIRST_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET + 40,
-      y: FIRST_ROW_TEXT_Y,
-      tspan: [
-        { x: -60.61, y: 0, text: 'eckoDAO' },
-        { x: -66.61, y: 25, text: 'Portal V1' },
-        { x: -40.61, y: 45, text: 'BETA', fontSize: 13 },
-      ],
-    },
-    color: whiteGrey,
-  },
-
-  CEX: {
-    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
-    text: {
-      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 40,
       y: FIRST_ROW_TEXT_Y,
       tspan: [
         { x: -43.61, y: 0, text: 'CEX' },
@@ -163,23 +141,34 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
 
-  ECKODEX_2_TESTING: {
+  ECKO_GROWTH_2: {
+    circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
+    text: {
+      x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2 + 40,
+      y: FIRST_ROW_TEXT_Y,
+      tspan: [
+        { x: -88.61, y: 0, text: 'Major ecosystem' },
+        { x: -103.61, y: 25, text: 'growth announcement:' },
+        { x: -74.61, y: 50, text: 'Coming soon!' },
+      ],
+    },
+    color: whiteGrey,
+  },
+
+  ECKODEX_2: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: FIRST_ROW_CIRCLE_Y },
     text: {
       x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3 + 40,
       y: FIRST_ROW_TEXT_Y,
-      tspan: [
-        { x: -70.61, y: 0, text: 'eckoDEX 2.0' },
-        { x: -83.61, y: 25, text: 'Testing Environment', fontSize: 13 },
-      ],
+      tspan: [{ x: -80.61, y: 0, text: 'eckoDEX 2.0' }],
     },
     color: whiteGrey,
   },
 };
 
 const FLAG = {
-  flag: `translate(${CONFIGURATION.MULTIHOP_SWAP.circle.x + 8} ${CONFIGURATION.MULTIHOP_SWAP.circle.y - 32})`,
-  shadow: `translate(${CONFIGURATION.MULTIHOP_SWAP.circle.x - 12} ${CONFIGURATION.MULTIHOP_SWAP.circle.y - 10})`,
+  flag: `translate(${CONFIGURATION.FUSION_BRIDGE_LIVE.circle.x + 8} ${CONFIGURATION.FUSION_BRIDGE_LIVE.circle.y - 32})`,
+  shadow: `translate(${CONFIGURATION.FUSION_BRIDGE_LIVE.circle.x - 12} ${CONFIGURATION.FUSION_BRIDGE_LIVE.circle.y - 10})`,
 };
 
 const Roadmap2023 = ({ className }) => {
@@ -210,8 +199,20 @@ const Roadmap2023 = ({ className }) => {
         </g>
       </g>
 
+      {/* curve */}
+      <path
+        id="Path_43816"
+        data-name="Path 43816"
+        d="M369,613.005a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005c.023-.017,0,4,0,4a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005Z"
+        transform="translate(1962, 818.3) rotate(180 0 0)"
+        fill={theme.colors.primary}
+      />
+
       {/*blue line */}
-      <line id="Line_585" dataName="Line 585" x2="1454" transform="translate(0 421)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+      <line id="Line_585" dataName="Line 585" x2="1596" transform="translate(0 421)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+
+      {/*blue line */}
+      <line id="Line_585" dataName="Line 585" x2="458" transform="translate(1136 207.5)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
 
       {Object.keys(CONFIGURATION).map((config, i) => {
         const nodeConfig = CONFIGURATION[config];
