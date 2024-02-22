@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 100%;
+    height: 8%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -23,7 +23,7 @@ const Line = styled(FlexContainer)`
   }
 `;
 
-const MobileRoadmap2023 = ({ color }) => {
+const MobileRoadmap2024 = ({ color }) => {
   return (
     <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }}>
       <Line color={color} />
@@ -34,7 +34,7 @@ const MobileRoadmap2023 = ({ color }) => {
           return i < 6 ? (
             <FlexContainer
               key={i}
-              style={{ paddingLeft: 28.5, zIndex: 2, marginTop: value.isMain && 20 }}
+              style={{ paddingLeft: 28.5, zIndex: 2, marginTop: value?.isMain && 20 }}
               onClick={() => {
                 if (value.href) {
                   window.open(value.href, '_blank');
@@ -69,42 +69,39 @@ const MobileRoadmap2023 = ({ color }) => {
   );
 };
 
-export default MobileRoadmap2023;
+export default MobileRoadmap2024;
 
 const CONFIGURATION = {
-  MOBILE_NATIVE: {
+  ECKOGOV_TESTNET: {
     position: 0,
-    text: [{ text: 'Mobile-native Swaps on eckoWALLET' }],
+    text: [{ text: 'eckoGOV - Testnet' }],
     isCompleted: true,
+    isMain: true,
   },
 
-  SINGLE_SIDE_ALL_PAIRS: {
+  ECKO_DASHBOARD: {
     position: 1,
-    text: [{ text: 'Add/Remove Single-sided liquidity' }, { text: 'for all pairs', fontSize: 10 }],
-    isCompleted: true,
+    text: [{ text: 'eckoDASHBOARD - NEW analytics' }],
+    isCompleted: false,
   },
-
-  ECO_GROWTH: {
+  ECKOGOV_MAINNET: {
     position: 2,
-    text: [{ text: 'Major ecosystem growth ' }, { text: 'announcement: Introducing “eckoDAO”' }],
-    isCompleted: true,
+    text: [{ text: 'eckoGOV - Mainnet' }],
+    isCompleted: false,
   },
-
-  MULTIHOP_SWAP: {
+  CEX: {
     position: 3,
-    text: [{ text: 'Multihop Swaps' }],
-    isCompleted: true,
+    text: [{ text: 'CEX listing' }],
+    isCompleted: false,
   },
-
-  ECKOGOV_DEVNET: {
+  ECKO_GROWTH_2: {
     position: 4,
-    text: [{ text: 'eckoGOV - Devnet' }],
-    isCompleted: true,
+    text: [{ text: 'Major ecosystem growth ' }, { text: 'announcement: Coming soon!' }],
+    isCompleted: false,
   },
-
-  FUSION_BRIDGE_LIVE: {
+  ECKODEX_2: {
     position: 5,
-    text: [{ text: 'Fusion Bridge Live - zUSD listing' }],
-    isCompleted: true,
+    text: [{ text: 'eckoDEX 2.0' }],
+    isCompleted: false,
   },
 };

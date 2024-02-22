@@ -1,5 +1,6 @@
 import Roadmap2021 from '../components/roadmap/desktop-roadmaps/Roadmap2021';
 import Roadmap2022 from '../components/roadmap/desktop-roadmaps/Roadmap2022';
+import Roadmap2024 from '../components/roadmap/desktop-roadmaps/Roadmap2024';
 import RoadmapOngoing from '../components/roadmap/desktop-roadmaps/RoadmapOngoing';
 import MobileRoadmap2021 from '../components/roadmap/mobile-roadmaps/MobileRoadmap2021';
 import MobileRoadmap2022 from '../components/roadmap/mobile-roadmaps/MobileRoadmap2022';
@@ -23,6 +24,12 @@ export const R_2023 = {
   id: '2023',
   color: 'primary',
 };
+export const R_2024 = {
+  desktopImage: <Roadmap2024 />,
+  mobileImage: <MobileRoadmap2022 />,
+  id: '2024',
+  color: 'primary',
+};
 export const R_ONGOING = {
   desktopImage: <RoadmapOngoing />,
   mobileImage: <MobileRoadmapOngoing />,
@@ -30,4 +37,4 @@ export const R_ONGOING = {
   color: 'yellow',
 };
 
-export const ROADMAPS = [R_2021, R_2022, R_2023, R_ONGOING];
+export const ROADMAPS = [R_2021, R_2022, R_2023, R_2024, R_ONGOING];

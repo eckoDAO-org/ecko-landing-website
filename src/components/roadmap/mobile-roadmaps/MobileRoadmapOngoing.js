@@ -16,7 +16,7 @@ const MobileRoadmapOngoing = ({ color }) => {
   return (
     <FlexContainer className="column justify-sb relative w-100" style={{ padding: '20px 0' }} color={color}>
       <Line color={color} />
-      {[...Object.values(CONFIGURATION).sort((a, b) => a.position - b.position)].concat([...Array(7).fill()]).map((value, i) => {
+      {[...Object.values(CONFIGURATION).sort((a, b) => a.position - b.position)].concat([...Array(5).fill()]).map((value, i) => {
         return (
           <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2 }}>
             {value?.text && (

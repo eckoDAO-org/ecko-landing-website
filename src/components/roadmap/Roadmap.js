@@ -5,7 +5,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.png';
-import { R_2021, R_2022, R_2023, R_ONGOING } from '../../constants/roadmaps';
+import { R_2021, R_2022, R_2023, R_2024, R_ONGOING } from '../../constants/roadmaps';
 import theme from '../../styles/theme';
 import RoadmapTabs from './RoadmapTabs';
 import Roadmap2021 from './desktop-roadmaps/Roadmap2021';
@@ -18,6 +18,8 @@ import XWalletRoadmap from './desktop-roadmaps/XWalletRoadmap';
 import XWalletMobileRoadmap from './mobile-roadmaps/XWalletMobileRoadmap';
 import MobileRoadmap2023 from './mobile-roadmaps/MobileRoadmap2023';
 import Roadmap2023 from './desktop-roadmaps/Roadmap2023';
+import Roadmap2024 from './desktop-roadmaps/Roadmap2024';
+import MobileRoadmap2024 from './mobile-roadmaps/MobileRoadmap2024';
 
 const RoadmapWrapper = styled(FlexContainer)`
   background: #101123;
@@ -69,7 +71,7 @@ const Roadmap = () => {
   const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
   const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
 
-  const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2023.id);
+  const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2024.id);
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
   useEffect(() => {
@@ -81,8 +83,10 @@ const Roadmap = () => {
         setTranslateX(`calc(50% - ${TRANSLATE_X_OFFSET}px)`);
       } else if (selectedRoadmapId === R_2023.id) {
         setTranslateX(`calc(-50% - ${TRANSLATE_X_OFFSET}px)`);
-      } else if (selectedRoadmapId === R_ONGOING.id) {
+      } else if (selectedRoadmapId === R_2024.id) {
         setTranslateX(`calc(-90% - ${TRANSLATE_X_OFFSET}px)`);
+      } else if (selectedRoadmapId === R_ONGOING.id) {
+        setTranslateX(`calc(-130% - ${TRANSLATE_X_OFFSET}px)`);
       } else {
         setTranslateX(`-${TRANSLATE_X_OFFSET}px`);
       }
@@ -107,9 +111,9 @@ const Roadmap = () => {
           style={{ marginLeft: 90 }}
           mobileStyle={{ marginLeft: 50 }}
           onClick={() => {
-            if (selectedRoadmapId !== R_2023.id) {
+            if (selectedRoadmapId !== R_2024.id) {
               setTranslateXRoadmap(width + (width >= theme.mediaQueries.desktopPixel ? 90 : 0));
-              setSelectedRoadmapId(R_2023.id);
+              setSelectedRoadmapId(R_2024.id);
               setRoadmapType('kaddex');
             }
           }}
@@ -136,6 +140,9 @@ const Roadmap = () => {
           </FlexContainer>
           <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2023.id}`}>
             {width >= theme.mediaQueries.mobilePixel ? <Roadmap2023 className="roadmap-desktop" /> : <MobileRoadmap2023 color={R_2023.color} />}
+          </FlexContainer>
+          <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_2024.id}`}>
+            {width >= theme.mediaQueries.mobilePixel ? <Roadmap2024 className="roadmap-desktop" /> : <MobileRoadmap2024 color={R_2024.color} />}
           </FlexContainer>
           <FlexContainer style={{ minWidth: width }} id={`roadmap-${R_ONGOING.id}`}>
             {width >= theme.mediaQueries.mobilePixel ? (

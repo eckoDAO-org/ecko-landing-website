@@ -28,7 +28,7 @@ const MobileRoadmap2021 = ({ color }) => {
       <Line color={color} />
       {Object.values(CONFIGURATION)
         .sort((a, b) => a.position - b.position)
-        .concat([...Array(6).fill()])
+        .concat([...Array(3).fill()])
         .map((value, i) => {
           return (
             <FlexContainer key={i} style={{ paddingLeft: 29, zIndex: 2 }}>
