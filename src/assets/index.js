@@ -34,7 +34,6 @@ export { ReactComponent as FarmIcon } from './images/proof-dex/farm.svg';
 // FEATURES
 export { ReactComponent as DaoIcon } from './images/features/dao.svg';
 export { ReactComponent as DecentralizedIcon } from './images/features/decentralized.svg';
-export { ReactComponent as GovernanceIcon } from './images/features/governance.svg';
 export { ReactComponent as LiquidityMiningIcon } from './images/features/liquidity-mining.svg';
 export { ReactComponent as MultiProtocolIcon } from './images/features/multi-protocol.svg';
 export { ReactComponent as FastestSettlementsIcon } from './images/features/fastest-settlements.svg';

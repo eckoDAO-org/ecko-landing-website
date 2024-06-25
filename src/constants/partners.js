@@ -23,20 +23,20 @@ export const PARTNER_CFDB = {
   icon: <CfdbLogo />,
   title: 'CFDB',
   description: 'Strategic and legal advisory.',
-  color: 'primary',
+  color: 'salmon',
 };
 export const PARTNER_ROBOSWAP = {
   icon: <RoboswapLogo />,
   title: 'Roboswap',
   description: 'Official builder of the eckoDEX Software Development Kit.',
-  color: 'primary',
+  color: 'salmon',
 };
 
 export const PARTNER_KADEFI = {
   icon: <KadefiLogo />,
   title: 'Kadefi',
   description: 'Enpowering the DEX with professional trading tools and charts.',
-  color: 'primary',
+  color: 'salmon',
 };
 export const PARTNER_UFO_GAMING = {
   icon: <UfoGamingLogo />,

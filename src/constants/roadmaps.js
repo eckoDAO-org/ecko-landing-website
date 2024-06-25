@@ -10,31 +10,31 @@ export const R_2021 = {
   desktopImage: <Roadmap2021 />,
   mobileImage: <MobileRoadmap2021 />,
   id: '2021',
-  color: 'primary',
+  color: 'yellow',
 };
 export const R_2022 = {
   desktopImage: <Roadmap2022 />,
   mobileImage: <MobileRoadmap2022 />,
   id: '2022',
-  color: 'primary',
+  color: 'yellow',
 };
 export const R_2023 = {
   desktopImage: <Roadmap2022 />,
   mobileImage: <MobileRoadmap2022 />,
   id: '2023',
-  color: 'primary',
+  color: 'yellow',
 };
 export const R_2024 = {
   desktopImage: <Roadmap2024 />,
   mobileImage: <MobileRoadmap2022 />,
   id: '2024',
-  color: 'primary',
+  color: 'yellow',
 };
 export const R_ONGOING = {
   desktopImage: <RoadmapOngoing />,
   mobileImage: <MobileRoadmapOngoing />,
   id: 'ongoing',
-  color: 'yellow',
+  color: 'salmon',
 };
 
 export const ROADMAPS = [R_2021, R_2022, R_2023, R_2024, R_ONGOING];

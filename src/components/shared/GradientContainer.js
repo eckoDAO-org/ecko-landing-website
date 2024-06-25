@@ -29,11 +29,9 @@ const STYContainer = styled.div`
 
 export const STYGradientBorder = styled.div`
   border-radius: 30px; /*1*/
-  border: 1px solid transparent; /*2*/
-  background: linear-gradient(90deg, #04c9e4, #fa41a5, #f3bd2f) border-box; /*3*/
-  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: source-out !important; /*5'*/
-  mask-composite: exclude !important; /*5*/
+  border: 1px solid white; /*2*/
+  background: transparent; /*3*/
+
   position: absolute;
   top: 0px;
   left: 0px;

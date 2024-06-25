@@ -30,7 +30,7 @@ const IntroductionHeader = () => {
             desktopStyle={{ marginLeft: 20 }}
             tabletStyle={{ marginLeft: 20 }}
             className="rainbow fit-content"
-            gradient="linear-gradient(102deg, #61CFE8 0%, #9580B9 33%, #E37480 55%, #ED8473 70%, #F7D186 100%)"
+            gradient="linear-gradient(150deg, #FFC600 -20%, #FF00B8 70%)"
             fontFamily="syncopate"
             size="huge"
           >
@@ -67,7 +67,7 @@ const IntroductionHeader = () => {
           }}
         >
           <FlexContainer className="w-100 h-100 justify-ce align-ce pointer">
-            <Label className="rainbow" size="small" fontFamily="syncopate">
+            <Label size="small" fontFamily="syncopate">
               LAUNCH App
             </Label>
           </FlexContainer>

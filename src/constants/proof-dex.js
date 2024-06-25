@@ -21,7 +21,7 @@ export const PROOF_DEX_STAKE = {
   icon: <StakeIcon />,
   title: 'Vote',
   description: 'KDX holders lock to gain voting power, and get rewarded.',
-  color: 'primary',
+  color: 'salmon',
   className: 'disabled',
   link: 'https://swap.ecko.finance/stake',
 };
@@ -30,7 +30,7 @@ export const PROOF_DEX_FARM = {
   icon: <FarmIcon />,
   title: 'Farm',
   description: 'Access KDX liquidity mining 2.0',
-  color: 'white',
+  color: 'grey',
   className: 'disabled',
   link: 'https://swap.ecko.finance/liquidity/rewards',
 };

@@ -1,13 +1,4 @@
-import {
-  DaoIcon,
-  DecentralizedIcon,
-  GovernanceIcon,
-  LiquidityMiningIcon,
-  MultiProtocolIcon,
-  FastestSettlementsIcon,
-  StakingIcon,
-  ZeroGasIcon,
-} from '../assets';
+import { DaoIcon, DecentralizedIcon, LiquidityMiningIcon, MultiProtocolIcon, FastestSettlementsIcon, StakingIcon, ZeroGasIcon } from '../assets';
 
 export const ZERO_GAS = {
   icon: <ZeroGasIcon />,
@@ -44,7 +35,7 @@ export const LIQUIDITY_MINING = {
 };
 export const SETTLEMENTS = {
   icon: <FastestSettlementsIcon />,
-  color: 'primary',
+  color: 'salmon',
   title: (
     <span>
       Fastest
@@ -83,7 +74,7 @@ export const DECENTRALIZED = {
 };
 export const MULTI_PROTOCOL = {
   icon: <MultiProtocolIcon />,
-  color: 'primary',
+  color: 'salmon',
   title: 'Multi-Protocol',
   description:
     'eckoDEX will be the only multi-protocol DEX with native decentralised bridges, leading to a future where users won’t have to even think about different networks, but just access value through eckoDEX single platform.',
@@ -94,13 +85,6 @@ export const STAKING = {
   title: 'Governance Mining',
   description:
     'KDX Token holders can participate in Governance Mining to gain voting power for governance participation, incentivizing long-term network success. Governance Mining participants receive 0.05% of swaps to encourage continued locking and increase voting power.',
-};
-export const GOVERNANCE = {
-  icon: <GovernanceIcon />,
-  color: 'yellow',
-  title: 'Governance',
-  description:
-    'eckoDEX is built on community, our governance system will give the users control of network incentives, protocol mechanics, and pool rewards, all while maintaining our approach to safe DeFi.',
 };
 
 export const FEATURES = [ZERO_GAS, LIQUIDITY_MINING, SETTLEMENTS, DAO, DECENTRALIZED, MULTI_PROTOCOL, STAKING];

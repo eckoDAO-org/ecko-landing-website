@@ -60,7 +60,6 @@ const ProofOfDexSection = () => {
             </FlexContainer>
           )}
         </FlexContainer>
-        <Stripes mobileIconStyle={{ width: 84.51, height: 87 }} />
       </STYCard>
     </FlexContainer>
   );

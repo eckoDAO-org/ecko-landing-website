@@ -39,7 +39,7 @@ const STYText = styled.span`
       if (gradient) {
         return gradient;
       }
-      return `linear-gradient(94.39deg,${gradientColors[0]} 0.84%, ${gradientColors[1]} 44.14%, ${gradientColors[2]} 90.22%)`;
+      return `linear-gradient(92.37deg,${gradientColors[0]} 28.58%, ${gradientColors[1]} 177.54%)`;
     }};
     color: transparent;
     -webkit-background-clip: text;

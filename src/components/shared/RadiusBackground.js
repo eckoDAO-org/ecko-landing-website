@@ -16,7 +16,9 @@ const CircleBox = styled.div`
   height: 100%;
   width: 100%;
   border: 1px solid transparent; /*2*/
-  background: linear-gradient(90deg, #55bade, #cf7098, #f7cb79) border-box; /*3*/
+  background: ${({ theme: { colors } }) => `linear-gradient(170deg, ${colors.grey}, ${colors.grey}) border-box;`}; /*3*/
+  /* background: linear-gradient(170deg, #ffd300, #ff00b8) border-box; */
+
   -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: source-out !important; /*5'*/
   mask-composite: exclude !important; /*5*/

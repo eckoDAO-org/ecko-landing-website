@@ -12,6 +12,8 @@ export const getColor = (color) => {
       return theme.colors.yellow;
     case 'grey':
       return theme.colors.grey;
+    case 'salmon':
+      return theme.colors.salmon;
     default:
       return '#ffffff';
   }
@@ -60,9 +62,10 @@ export const theme = {
     white: '#FFFFFF',
     primary: '#7EFBFA',
     lightBlue: '#95CFF5',
-    pink: '#DA3DB0',
-    yellow: '#F4AC3C',
-    grey: '#879BA8',
+    pink: '#FF00B8',
+    yellow: '#FFB31C',
+    grey: '#92A7BA',
+    salmon: '#FF5B7E',
   },
   fontFamily: {
     syncopate: 'syncopate-bold',

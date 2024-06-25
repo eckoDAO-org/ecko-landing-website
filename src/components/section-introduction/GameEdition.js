@@ -3,9 +3,8 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import theme from '../../styles/theme';
 import { CircleBackground } from '../shared/RadiusBackground';
-import tokenomicsBackground from '../../assets/images/backgrounds/gradient-background.png';
 import Lottie from 'lottie-react';
-import gameEditionNew from '../../assets/images/game-edition-new.json';
+import gameEditionNew from '../../assets/images/game-edition-new-version.json';
 
 const lottieDefaultOptions = {
   loop: false,
@@ -30,7 +29,6 @@ const GameEdition = () => {
 
   return (
     <FlexContainer id="game-edition-container" className="relative justify-ce">
-      <img src={tokenomicsBackground} style={{ position: 'absolute', height: 740, width: '100%', top: -50 }} alt="" />
       <CircleBackground
         style={{
           width: '80%',
