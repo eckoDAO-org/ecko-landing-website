@@ -7,7 +7,7 @@ import Label from '../../shared/Label';
 
 const Line = styled(FlexContainer)`
   position: absolute;
-  border-left: 3px solid #fff;
+  border-left: ${({ theme: { colors } }) => `3px solid ${colors.grey}`};
   top: 0;
   bottom: 0;
   left: 35px;
@@ -46,7 +46,7 @@ const MobileRoadmap2024 = ({ color }) => {
                   position: 'relative',
                   height: 16,
                   width: 16,
-                  background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
+                  background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'grey'),
                   borderRadius: '50%',
                 }}
               >
@@ -55,7 +55,7 @@ const MobileRoadmap2024 = ({ color }) => {
 
               <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
                 {value?.text?.map((tspan, j) => (
-                  <Label key={j} fontSize={tspan.fontSize || 15} color={value?.isMain ? 'pink' : value.isCompleted ? color : 'white'}>
+                  <Label key={j} fontSize={tspan.fontSize || 15} color={value?.isMain ? 'pink' : value.isCompleted ? color : 'grey'}>
                     {tspan.text}
                   </Label>
                 ))}

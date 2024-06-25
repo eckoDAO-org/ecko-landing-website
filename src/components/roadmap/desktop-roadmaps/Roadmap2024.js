@@ -2,7 +2,7 @@ import React from 'react';
 import theme from '../../../styles/theme';
 import { RoadmapEllipseShadowIcon, RoadmapFlagcon } from '../../../assets';
 
-const whiteGrey = '#666666';
+const whiteGrey = theme.colors.grey;
 
 const ROW_ELEMENT_OFFSET = 636;
 const ROW_CIRCLE_X_START = 580;
@@ -124,7 +124,7 @@ const Roadmap2024 = ({ className }) => {
           </g>
 
           {/* blue line */}
-          <line id="Line_585" data-name="Line 585" x2="600" transform="translate(-5 206)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+          <line id="Line_585" data-name="Line 585" x2="600" transform="translate(-5 206)" fill="none" stroke={theme.colors.yellow} strokeWidth="4" />
 
           {/* curve */}
           {/* <path
@@ -171,6 +171,7 @@ const Roadmap2024 = ({ className }) => {
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];
+            console.log('🚀 log --> nodeConfig:', nodeConfig);
             return (
               <g
                 key={i}

@@ -88,7 +88,7 @@ const TokenomicsSection = () => {
               fontSize={65 * (width / height) > 100 ? 100 : 65 * (width / height)}
               fontFamily="syncopate"
               desktopStyle={{ width: 'fit-content', marginRight: 40 }}
-              gradientColors={['#b766b6', '#f95197', '#f68861']}
+              gradient="linear-gradient(165deg, #FFC600 -30%, #FF00B8 70%)"
             >
               1,000,000,000
             </Label>
@@ -106,7 +106,7 @@ const TokenomicsSection = () => {
               className="rainbow block"
               fontSize={170}
               fontFamily="syncopate"
-              gradientColors={['#b766b6', '#f95197', '#f68861']}
+              gradientColors={['#ff00b8', '#ff00b8', '#ff00b8']}
               style={{ height: 136 }}
             >
               1
@@ -117,7 +117,7 @@ const TokenomicsSection = () => {
                 fontSize={50}
                 fontFamily="syncopate"
                 desktopStyle={{ width: 'fit-content' }}
-                gradientColors={['#b766b6', '#f95197', '#f68861']}
+                gradientColors={['#ff00b8', '#ff00b8', '#ff00b8']}
               >
                 bln
               </Label>

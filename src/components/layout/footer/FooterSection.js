@@ -29,7 +29,7 @@ const FooterSection = () => {
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }} tabletClassName="column" mobileClassName="column">
         <FlexContainer gap={80} columnGap={50}>
           <FooterItemsList title="About">
-            <NavigationItems fontSize={13} color="yellow" disableHover hideWallet hideDAO />
+            <NavigationItems fontSize={13} color="grey" disableHover hideWallet hideDAO />
           </FooterItemsList>
           <FooterItemsList {...FOOTER_SUPPORT} />
         </FlexContainer>
@@ -60,7 +60,6 @@ const FooterSection = () => {
           <Copyrights />
         </FlexContainer>
       )}
-      <Stripes iconStyle={{ height: 112, width: 115 }} />
     </FlexContainer>
   );
 };

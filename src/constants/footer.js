@@ -2,7 +2,7 @@ import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from '../router/routes';
 
 export const FOOTER_ABOUT = {
   title: 'ABOUT',
-  color: 'yellow',
+  color: 'grey',
   items: [
     {
       text: 'The Most Powerful Proof of Work DEX',
@@ -36,11 +36,11 @@ export const FOOTER_ABOUT = {
 };
 export const FOOTER_SUPPORT = {
   title: 'PRODUCT',
-  color: 'primary',
+  color: 'grey',
   items: [
     {
       text: 'Documentation',
-      href: 'https://docs.ecko.finance/eckodex/welcome/introduction',
+      href: 'https://docs.ecko.finance/eckodao/welcome/introduction',
       target: '_blank',
     },
     {
@@ -62,7 +62,7 @@ export const FOOTER_SUPPORT = {
 };
 export const FOOTER_LEARN = {
   title: 'LEARN',
-  color: 'pink',
+  color: 'grey',
   items: [
     {
       text: 'Lite Paper',

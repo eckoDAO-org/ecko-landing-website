@@ -30,7 +30,7 @@ const FeaturesSection = () => {
           </Label>
           <Label
             className="align-fs"
-            color="primary"
+            color="grey"
             size="small"
             desktopPixel={DESKTOP_PIXEL}
             desktopStyle={{ marginTop: 16, maxWidth: 584 }}

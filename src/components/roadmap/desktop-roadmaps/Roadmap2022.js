@@ -1,7 +1,7 @@
 import React from 'react';
 import theme from '../../../styles/theme';
 
-const whiteGrey = '#666666';
+const whiteGrey = theme.colors.grey;
 
 const ROW_ELEMENT_OFFSET = 250;
 const ROW_CIRCLE_X_START = 450;
@@ -22,7 +22,7 @@ const CONFIGURATION = {
       tspan: [{ x: 0, y: 0, text: 'eckoWALLET Beta' }],
     },
     href: 'https://wallet.ecko.finance/',
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
   LITEPAPER: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET, y: FIRST_ROW_CIRCLE_Y },
@@ -33,7 +33,7 @@ const CONFIGURATION = {
     },
     href: '/eckoDEX litepaper.pdf',
 
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
   X_WALLET_V1: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 2, y: FIRST_ROW_CIRCLE_Y },
@@ -44,7 +44,7 @@ const CONFIGURATION = {
     },
     href: 'https://wallet.ecko.finance/',
 
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
   PUBLIC_SALE: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: FIRST_ROW_CIRCLE_Y },
@@ -56,7 +56,7 @@ const CONFIGURATION = {
         { x: 30, y: 25, fontSize: 13 },
       ],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
   BRIDGED_ERC20: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 4, y: FIRST_ROW_CIRCLE_Y },
@@ -68,7 +68,7 @@ const CONFIGURATION = {
         { x: -62.09, y: 25, text: 'Token Pairs' },
       ],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   //SECOND ROW
@@ -84,7 +84,7 @@ const CONFIGURATION = {
       ],
     },
 
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
   WEBSITE_V2: {
     circle: { x: ROW_CIRCLE_X_START + ROW_ELEMENT_OFFSET * 3, y: SECOND_ROW_CIRCLE_Y },
@@ -93,7 +93,7 @@ const CONFIGURATION = {
       y: SECOND_ROW_TEXT_Y,
       tspan: [{ x: 0, y: 0, text: 'Website v2' }],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   KDX_VAULTING_PROGRAMME: {
@@ -109,7 +109,7 @@ const CONFIGURATION = {
       ],
     },
 
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   SINGLE_SIDED_LIQUIDITY: {
@@ -123,7 +123,7 @@ const CONFIGURATION = {
         { x: -38.71, y: 45, text: 'KDA/KDX', fontSize: 13 },
       ],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   STAKING: {
@@ -136,7 +136,7 @@ const CONFIGURATION = {
         { x: -19.71, y: 25, text: 'Tool' },
       ],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   //THIRD ROW
@@ -150,7 +150,7 @@ const CONFIGURATION = {
         { x: -56.47, y: 25, text: 'Mining 2.0' },
       ],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   NCC_AUDITING: {
@@ -160,7 +160,7 @@ const CONFIGURATION = {
       y: THIRD_ROW_TEXT_Y,
       tspan: [{ x: -63.71, y: 0, text: 'NCC Auditing' }],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   ECKODEX_V1_FULL_LAUNCH: {
@@ -174,7 +174,7 @@ const CONFIGURATION = {
       ],
     },
 
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 
   COMMUNITY_POOLS: {
@@ -184,7 +184,7 @@ const CONFIGURATION = {
       y: THIRD_ROW_TEXT_Y,
       tspan: [{ x: -76.61, y: 0, text: 'Community pools' }],
     },
-    color: theme.colors.primary,
+    color: theme.colors.yellow,
   },
 };
 
@@ -225,7 +225,7 @@ const Roadmap2022 = ({ className }) => {
             x2="1593.5"
             transform="translate(-5 206)"
             fill="none"
-            stroke={theme.colors.primary}
+            stroke={theme.colors.yellow}
             strokeWidth="4"
           />
 
@@ -235,27 +235,19 @@ const Roadmap2022 = ({ className }) => {
             dataName="Path curve"
             d="M1588,395.005a77.624,77.624,0,0,0,43.608-13.32,78.237,78.237,0,0,0,28.263-34.319A77.507,77.507,0,0,0,1666,317.005v-31a77.693,77.693,0,0,0-77.77-78v-4a82.45,82.45,0,0,1,16.514,1.666,81.161,81.161,0,0,1,29.263,12.341,81.886,81.886,0,0,1,34.338,51.471A83.059,83.059,0,0,1,1670,286.005v31a82.6,82.6,0,0,1-1.666,16.524,81.564,81.564,0,0,1-12.34,29.325,82.238,82.238,0,0,1-36.076,29.707,81.6,81.6,0,0,1-15.395,4.779A82.59,82.59,0,0,1,1588,399.005"
             transform="translate(0 0)"
-            fill={theme.colors.primary}
+            fill={theme.colors.yellow}
             strokeWidth="4"
           />
           {/* line */}
 
-          <line
-            id="Line_585"
-            dataName="Line 585"
-            x2="1221"
-            transform="translate(368 397)"
-            fill="none"
-            stroke={theme.colors.primary}
-            strokeWidth="4"
-          />
+          <line id="Line_585" dataName="Line 585" x2="1221" transform="translate(368 397)" fill="none" stroke={theme.colors.yellow} strokeWidth="4" />
           {/* curve */}
           <path
             id="Path_43816"
             data-name="Path 43816"
             d="M369,613.005a82.6,82.6,0,0,1-16.524-1.666A81.569,81.569,0,0,1,323.151,599a82.231,82.231,0,0,1-29.707-36.076,81.611,81.611,0,0,1-4.779-15.4A82.6,82.6,0,0,1,287,531.005v-54a82.6,82.6,0,0,1,1.666-16.524,81.568,81.568,0,0,1,12.34-29.325,82.231,82.231,0,0,1,36.076-29.707,81.61,81.61,0,0,1,15.4-4.779A82.6,82.6,0,0,1,369,395.005c.023-.017,0,4,0,4a77.624,77.624,0,0,0-43.609,13.32,78.235,78.235,0,0,0-28.262,34.319A77.512,77.512,0,0,0,291,477.005v54a77.624,77.624,0,0,0,13.32,43.609,78.236,78.236,0,0,0,34.319,28.262A77.513,77.513,0,0,0,369,609.005Z"
             transform="translate(0 0)"
-            fill={theme.colors.primary}
+            fill={theme.colors.yellow}
           />
 
           {/* line */}
@@ -268,7 +260,7 @@ const Roadmap2022 = ({ className }) => {
             x2="1370"
             transform="translate(368.7 611)"
             fill="none"
-            stroke={theme.colors.primary}
+            stroke={theme.colors.yellow}
             strokeWidth="4"
           />
 

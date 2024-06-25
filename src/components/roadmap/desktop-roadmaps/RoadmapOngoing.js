@@ -1,6 +1,6 @@
 import React from 'react';
 import { theme } from '../../../styles/theme';
-const whiteGrey = '#666666';
+const whiteGrey = `${theme.colors.grey}90`;
 const RoadmapOngoing = ({ className }) => {
   return (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" width="1816.5" height="501" viewBox="0 0 1816.5 501">
@@ -18,7 +18,7 @@ const RoadmapOngoing = ({ className }) => {
           cy="10"
           r="10"
           transform="translate(666 216) rotate(180)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
         />
         <circle
           id="Ellipse_1116"
@@ -27,7 +27,7 @@ const RoadmapOngoing = ({ className }) => {
           cy="10"
           r="10"
           transform="translate(314 25) rotate(180)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
         />
         <circle
           id="Ellipse_1117"
@@ -36,7 +36,7 @@ const RoadmapOngoing = ({ className }) => {
           cy="10"
           r="10"
           transform="translate(314 216) rotate(180)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
         />
         <circle
           id="Ellipse_1111"
@@ -45,7 +45,7 @@ const RoadmapOngoing = ({ className }) => {
           cy="10"
           r="10"
           transform="translate(666 431) rotate(180)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
         />
         <circle
           id="Ellipse_1112"
@@ -54,14 +54,14 @@ const RoadmapOngoing = ({ className }) => {
           cy="10"
           r="10"
           transform="translate(666 25) rotate(180)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
         />
 
         <text
           id="DAO_Transition"
           data-name="DAO Transition"
           transform="translate(245.5 55)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -74,7 +74,7 @@ const RoadmapOngoing = ({ className }) => {
           id="Fiat_On_Ramp"
           data-name="Fiat On Ramp"
           transform="translate(600.5 55)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -87,7 +87,7 @@ const RoadmapOngoing = ({ className }) => {
           id="New_Strategic_Partnerships"
           data-name="New Strategic Partnerships"
           transform="translate(315 246)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -103,7 +103,7 @@ const RoadmapOngoing = ({ className }) => {
           id="Team_Expansion"
           data-name="Team Expansion"
           transform="translate(671.5 246)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
@@ -116,7 +116,7 @@ const RoadmapOngoing = ({ className }) => {
           id="Multiplecode_auditing"
           data-name="Multiplecode auditing"
           transform="translate(670.5 461)"
-          fill={theme.colors.yellow}
+          fill={theme.colors.salmon}
           fontSize="16"
           fontFamily={theme.fontFamily.basier}
           letterSpacing="-0.1em"
